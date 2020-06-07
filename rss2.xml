@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>SEISAMUSE</title>
+    <link>http://www.seis-jun.xyz/</link>
+    
+    <image>
+      <url>http://www.seis-jun.xyz/icon.png</url>
+      <title>SEISAMUSE</title>
+      <link>http://www.seis-jun.xyz/</link>
+    </image>
+    
+    <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
+    
+    <description>地震学技术</description>
+    <pubDate>Sat, 06 Jun 2020 06:28:36 GMT</pubDate>
+    <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>不继续搬迁网易博客了</title>
+      <link>http://www.seis-jun.xyz/2020/06/05/2020060513/</link>
+      <guid>http://www.seis-jun.xyz/2020/06/05/2020060513/</guid>
+      <pubDate>Fri, 05 Jun 2020 05:50:38 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&amp;emsp;&amp;emsp;那个网易博客太多私人的话题和内容就不往这里搬了。自己也不是明星，八卦什么的也不值钱。这里还是用来记好玩的吧。&lt;/p&gt;
+      
+      </description>
+      
+      
+      <comments>http://www.seis-jun.xyz/2020/06/05/2020060513/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>历史和反演</title>
+      <link>http://www.seis-jun.xyz/2020/06/05/2020060500/</link>
+      <guid>http://www.seis-jun.xyz/2020/06/05/2020060500/</guid>
+      <pubDate>Thu, 04 Jun 2020 16:57:47 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&amp;emsp;&amp;emsp;研一的时候上过一节外系的选修课。现在已经想不起来是什么课了。那为啥我还记得这个课呢？&lt;/p&gt;
+      
+      </description>
+      
+      
+      <comments>http://www.seis-jun.xyz/2020/06/05/2020060500/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Eric的趣事</title>
+      <link>http://www.seis-jun.xyz/2020/06/04/2020060401/</link>
+      <guid>http://www.seis-jun.xyz/2020/06/04/2020060401/</guid>
+      <pubDate>Wed, 03 Jun 2020 17:00:58 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&amp;emsp;&amp;emsp;记录一下儿子好玩的事情，以免以后忘记了。以后他看到应该会觉得好玩吧。&lt;/p&gt;
+      
+      </description>
+      
+      
+      <comments>http://www.seis-jun.xyz/2020/06/04/2020060401/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>网易博客迁移</title>
+      <link>http://www.seis-jun.xyz/2020/06/03/2020060323/</link>
+      <guid>http://www.seis-jun.xyz/2020/06/03/2020060323/</guid>
+      <pubDate>Wed, 03 Jun 2020 15:23:36 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&amp;emsp;&amp;emsp;今天想到自己在网易上的博客。翻出来一看，乖乖人家网易在2018年就把博客给停了。估计是看我不在上面更新了，伤心欲绝了吧。笑。&lt;/p&gt;
+      
+      </description>
+      
+      
+      <comments>http://www.seis-jun.xyz/2020/06/03/2020060323/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>关于写日记</title>
+      <link>http://www.seis-jun.xyz/2020/06/03/20200603/</link>
+      <guid>http://www.seis-jun.xyz/2020/06/03/20200603/</guid>
+      <pubDate>Wed, 03 Jun 2020 14:54:38 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&amp;emsp;&amp;emsp;好久都没有写日记的习惯了。今天勉强写一些吧。&lt;/p&gt;
+      
+      </description>
+      
+      
+      <comments>http://www.seis-jun.xyz/2020/06/03/20200603/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>关于文章，你得比灌水的人“更奸”</title>
+      <link>http://www.seis-jun.xyz/2020/06/02/about-paper/</link>
+      <guid>http://www.seis-jun.xyz/2020/06/02/about-paper/</guid>
+      <pubDate>Mon, 01 Jun 2020 18:20:56 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;因为文章比较少一度还挺苦恼。&lt;/p&gt;
+      
+      </description>
+      
+      
+      <comments>http://www.seis-jun.xyz/2020/06/02/about-paper/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>如何备份hexo</title>
+      <link>http://www.seis-jun.xyz/2020/05/31/how-to-backup/</link>
+      <guid>http://www.seis-jun.xyz/2020/05/31/how-to-backup/</guid>
+      <pubDate>Sun, 31 May 2020 05:52:53 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;要是换了电脑网站怎么办？那当然是需要备份的了。u盘什么的，网盘什么的也不错。不过搜到大神的&lt;a href=&quot;https://notes.doublemine.me/2015-04-06-%E5%A4%87%E4%BB%BDHexo%E5%8D%9A%E5%AE%A2%E6%BA%90%E6%96%87%E4%BB%B6.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;博文&lt;/a&gt;介绍说放到githup的repo里面就可以了。于是试了一下，果然可以啊。步骤如下：&lt;/p&gt;
+&lt;h2 id=&quot;创建github的repository&quot;&gt;&lt;a href=&quot;#创建github的repository&quot; class=&quot;headerlink&quot; title=&quot;创建github的repository&quot;&gt;&lt;/a&gt;创建github的repository&lt;/h2&gt;&lt;p&gt;创建一个和你的hexo目录一样的repo。我的就是hexo。在hexo主目录下执行如下命令：&lt;/p&gt;
+      
+      </description>
+      
+      
+      <comments>http://www.seis-jun.xyz/2020/05/31/how-to-backup/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>hexo免密发布</title>
+      <link>http://www.seis-jun.xyz/2020/05/31/no-passwd-for-deploy/</link>
+      <guid>http://www.seis-jun.xyz/2020/05/31/no-passwd-for-deploy/</guid>
+      <pubDate>Sat, 30 May 2020 19:23:55 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;每次发布都得输入用户名和密码，挺麻烦费事。网上&lt;a href=&quot;https://blog.csdn.net/hhgggggg/article/details/77853665&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;大神&lt;/a&gt;可真多，搜搜就能解决。和ssh登录服务器类似，步骤如下：&lt;/p&gt;
+      
+      </description>
+      
+      
+      <comments>http://www.seis-jun.xyz/2020/05/31/no-passwd-for-deploy/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>hexo图片显示</title>
+      <link>http://www.seis-jun.xyz/2020/05/31/picture-view/</link>
+      <guid>http://www.seis-jun.xyz/2020/05/31/picture-view/</guid>
+      <pubDate>Sat, 30 May 2020 18:26:29 GMT</pubDate>
+      <description>
+      
+        
+        
+          
+          
+            &lt;p&gt;网站上没有图片是不行的，无图无真相。解决办法在&lt;a href=&quot;https://blog.csdn.net/qq_38148394/article/details/79997971&quot; target=&quot;_blank&quot;
+          
+        
+      
+      </description>
+      
+      
+      <comments>http://www.seis-jun.xyz/2020/05/31/picture-view/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>hexo next开启打赏</title>
+      <link>http://www.seis-jun.xyz/2020/05/31/donation/</link>
+      <guid>http://www.seis-jun.xyz/2020/05/31/donation/</guid>
+      <pubDate>Sat, 30 May 2020 18:04:57 GMT</pubDate>
+      <description>
+      
+        
+        
+          
+          
+            &lt;p&gt;厚颜无耻的开始想要打赏。如何配置打赏呢？原来next是有打赏的选项字段的。直接修改主题配置文件如下：&lt;br&gt;&lt;img src=&quot;donate.png&quot;
+          
+        
+      
+      </description>
+      
+      
+      <comments>http://www.seis-jun.xyz/2020/05/31/donation/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>next网站字数统计</title>
+      <link>http://www.seis-jun.xyz/2020/05/31/word-count/</link>
+      <guid>http://www.seis-jun.xyz/2020/05/31/word-count/</guid>
+      <pubDate>Sat, 30 May 2020 17:29:36 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;想给网站显示字数统计，搜到&lt;a href=&quot;https://www.jianshu.com/p/baea8c95e39b&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;这里&lt;/a&gt;。根据说明开始设置。结果网站都差点挂掉。检查了好久也没有发现问题，以为玩完了。然后马上开始重新建hexo。结果还是有问题。后来终于发现在网站设置文件插入功能字段时误插到其他字段导致出错。注销以后问题就修复了。然后又搜索到&lt;a href=&quot;https://blog.csdn.net/mqdxiaoxiao/article/details/93670772&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;这里&lt;/a&gt;。没想到搞定了，使用的插件是hexo-symbols-count-time。设置步骤如下：&lt;/p&gt;
+      
+      </description>
+      
+      
+      <comments>http://www.seis-jun.xyz/2020/05/31/word-count/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>tmp</title>
+      <link>http://www.seis-jun.xyz/2020/05/31/tmp/</link>
+      <guid>http://www.seis-jun.xyz/2020/05/31/tmp/</guid>
+      <pubDate>Sat, 30 May 2020 17:29:36 GMT</pubDate>
+      <description>
+      
+        
+        
+          
+          
+            &lt;p&gt;&amp;emsp;&amp;emsp;&lt;/p&gt;
+&lt;p&gt;发布网站  &lt;a href=&quot;http://www.seis-jun.xyz&quot;&gt;www.seis-jun.xyz&lt;/a&gt; 
+          
+        
+      
+      </description>
+      
+      
+      <comments>http://www.seis-jun.xyz/2020/05/31/tmp/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>文章意见回复</title>
+      <link>http://www.seis-jun.xyz/2020/05/30/reply-to-review/</link>
+      <guid>http://www.seis-jun.xyz/2020/05/30/reply-to-review/</guid>
+      <pubDate>Fri, 29 May 2020 17:21:16 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;SCI文章是否得以发表，生杀大权很大一部分都在peer reviewer手上。文章投出去如果收到了审稿人意见，那么恭喜，机会大大的有。那么如何回复审稿人意见就是关键了。下面是一些要点。&lt;/p&gt;
+      
+      </description>
+      
+      
+      <comments>http://www.seis-jun.xyz/2020/05/30/reply-to-review/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>这个网站是怎么来的</title>
+      <link>http://www.seis-jun.xyz/2020/05/26/hello-world/</link>
+      <guid>http://www.seis-jun.xyz/2020/05/26/hello-world/</guid>
+      <pubDate>Mon, 25 May 2020 17:21:16 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;目的：心血来潮，漫无目的。&lt;br&gt;方法：利用Hexo+Github构建。&lt;br&gt;花费：1块钱用于腾讯云买域名+6块用于阿里云买域名+宝宝睡了之后的晚上。&lt;br&gt;用途：好记性不如烂笔头。用手敲敲还可锻炼一下。&lt;br&gt;时间：2020年5月26日晚。&lt;br&gt;步骤：参见&lt;a href=&quot;https://cloud.tencent.com/developer/article/1423783&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;这里&lt;/a&gt;，具体如下：&lt;/p&gt;
+      
+      </description>
+      
+      
+      <comments>http://www.seis-jun.xyz/2020/05/26/hello-world/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>跟伴</title>
+      <link>http://www.seis-jun.xyz/2015/11/01/201511010820/</link>
+      <guid>http://www.seis-jun.xyz/2015/11/01/201511010820/</guid>
+      <pubDate>Sun, 01 Nov 2015 00:20:59 GMT</pubDate>
+      <description>
+      
+        
+        
+          
+          
+            &lt;p&gt;&amp;emsp;&amp;emsp;这是一种路上游荡的魂魄。&lt;/p&gt;
+&lt;p&gt;&amp;emsp;&amp;emsp;因为生前性格孤僻十分孤单，没有一个朋友，所以容易走极端。遇到人生的重大挫折没有地方需求帮助，没有人来帮忙分担，最后在绝望中选择各种手段结束自己的生命。&lt;/p&gt;
+&lt;p&gt;&amp;emsp;&amp;ems
+          
+        
+      
+      </description>
+      
+      
+      <comments>http://www.seis-jun.xyz/2015/11/01/201511010820/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>启程去玛雅一</title>
+      <link>http://www.seis-jun.xyz/2015/11/01/201511010818/</link>
+      <guid>http://www.seis-jun.xyz/2015/11/01/201511010818/</guid>
+      <pubDate>Sun, 01 Nov 2015 00:18:22 GMT</pubDate>
+      <description>
+      
+        
+        
+          
+          
+            &lt;p&gt;&amp;emsp;&amp;emsp;“你不是开玩笑吧蕊。。。哈哈哈。。。”电话那头尖叫起来：“真的替你感到高兴啊。。。”&lt;/p&gt;
+&lt;p&gt;&amp;emsp;&amp;emsp;“谢谢你萱萱”，蕊高兴的说到，仿佛两只小熊一同分享着超甜的蜜。&lt;/p&gt;
+&lt;p&gt;&amp;emsp;&amp;emsp;“找到财宝可不要忘了我啊
+          
+        
+      
+      </description>
+      
+      
+      <comments>http://www.seis-jun.xyz/2015/11/01/201511010818/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>血色乎浪漫</title>
+      <link>http://www.seis-jun.xyz/2015/11/01/2015110108/</link>
+      <guid>http://www.seis-jun.xyz/2015/11/01/2015110108/</guid>
+      <pubDate>Sun, 01 Nov 2015 00:17:27 GMT</pubDate>
+      <description>
+      
+        
+        
+          
+          
+            &lt;p&gt;&amp;emsp;&amp;emsp;人活着该削平自己将自己融入社会大染缸，还是该看清事实从中跳出来，或者该坚持自我暴力抵抗，还是怀揣着希望守护自己的安全岛？&lt;/p&gt;
+&lt;p&gt;&amp;emsp;&amp;emsp;《血色浪漫》里面所演绎的人生几乎统统都是悲剧。剧中毫不夸张甚至说是完全真实的展示了几乎社会
+          
+        
+      
+      </description>
+      
+      
+      <comments>http://www.seis-jun.xyz/2015/11/01/2015110108/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>乱2</title>
+      <link>http://www.seis-jun.xyz/2015/07/08/2015070811/</link>
+      <guid>http://www.seis-jun.xyz/2015/07/08/2015070811/</guid>
+      <pubDate>Wed, 08 Jul 2015 03:07:54 GMT</pubDate>
+      <description>
+      
+        
+        
+          
+          
+            &lt;p&gt;&amp;emsp;&amp;emsp;弯弯曲曲的阳光直直的照进屋外，熟睡的我高兴地蹦起来落在了天花板。窗台上留下了10年以后我的脚印。我重重的摔在软绵绵的岩石上，像蹦极一样来回颠簸。一只尖叫的青蛙从结冰的湖面窜出，湖面结了一个窟窿，天空泛起直直的嶙峋波纹。半空中横陈着的乐者手舞足蹈的吹奏
+          
+        
+      
+      </description>
+      
+      
+      <comments>http://www.seis-jun.xyz/2015/07/08/2015070811/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Win7下格掉Linux盘无法启动windows</title>
+      <link>http://www.seis-jun.xyz/2013/12/24/2013122401/</link>
+      <guid>http://www.seis-jun.xyz/2013/12/24/2013122401/</guid>
+      <pubDate>Mon, 23 Dec 2013 17:40:27 GMT</pubDate>
+      <description>
+      
+        
+        
+          
+          
+            &lt;p&gt;&amp;emsp;&amp;emsp;在win7下用系统的磁盘管理工具把原来的fedora14给格了，然后重启就只能进入grub，试了安装盘修复也不行。&lt;/p&gt;
+&lt;p&gt;在grub中输入命令：&lt;/p&gt;
+&lt;figure class=&quot;highlight
+          
+        
+      
+      </description>
+      
+      
+      <comments>http://www.seis-jun.xyz/2013/12/24/2013122401/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>雾霾齐步走</title>
+      <link>http://www.seis-jun.xyz/2013/12/09/2013120921/</link>
+      <guid>http://www.seis-jun.xyz/2013/12/09/2013120921/</guid>
+      <pubDate>Mon, 09 Dec 2013 13:49:19 GMT</pubDate>
+      <description>
+      
+        
+        
+          
+          
+            &lt;p&gt;&amp;emsp;&amp;emsp;据传，雾霾的妈妈叫他回去吃饭了。&lt;/p&gt;
+&lt;p&gt;&amp;emsp;&amp;emsp;连续几天各大新闻媒体都在大肆报道华北华东的雾霾天气，中央打响了雾霾攻坚战。发言人说：污染主要来自于急功近利的工业生产。我们很有进步，现在每个省市都毫不隐瞒地向人民群众公布具体的污
+          
+        
+      
+      </description>
+      
+      
+      <comments>http://www.seis-jun.xyz/2013/12/09/2013120921/#disqus_thread</comments>
+    </item>
+    
+  </channel>
+</rss>
