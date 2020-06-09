@@ -182,6 +182,21 @@
     </item>
     
     <item>
+      <title>next网站字数统计</title>
+      <link>http://www.seis-jun.xyz/posts/22869</link>
+      <guid>http://www.seis-jun.xyz/posts/22869</guid>
+      <pubDate>Sat, 30 May 2020 17:29:36 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;想给网站显示字数统计，搜到&lt;a href=&quot;https://www.jianshu.com/p/baea8c95e39b&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;这里&lt;/a&gt;。根据说明开始设置。结果网站都差点挂掉。检查了好久也没有发现问题，以为玩完了。然后马上开始重新建hexo。结果还是有问题。后来终于发现在网站设置文件插入功能字段时误插到其他字段导致出错。注销以后问题就修复了。然后又搜索到&lt;a href=&quot;https://blog.csdn.net/mqdxiaoxiao/article/details/93670772&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;这里&lt;/a&gt;。没想到搞定了，使用的插件是hexo-symbols-count-time。设置步骤如下：&lt;/p&gt;
+      
+      </description>
+      
+      
+      <comments>http://www.seis-jun.xyz/posts/22869#disqus_thread</comments>
+    </item>
+    
+    <item>
       <title>tmp</title>
       <link>http://www.seis-jun.xyz/posts/28269</link>
       <guid>http://www.seis-jun.xyz/posts/28269</guid>
@@ -201,21 +216,6 @@
       
       
       <comments>http://www.seis-jun.xyz/posts/28269#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>next网站字数统计</title>
-      <link>http://www.seis-jun.xyz/posts/22869</link>
-      <guid>http://www.seis-jun.xyz/posts/22869</guid>
-      <pubDate>Sat, 30 May 2020 17:29:36 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;想给网站显示字数统计，搜到&lt;a href=&quot;https://www.jianshu.com/p/baea8c95e39b&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;这里&lt;/a&gt;。根据说明开始设置。结果网站都差点挂掉。检查了好久也没有发现问题，以为玩完了。然后马上开始重新建hexo。结果还是有问题。后来终于发现在网站设置文件插入功能字段时误插到其他字段导致出错。注销以后问题就修复了。然后又搜索到&lt;a href=&quot;https://blog.csdn.net/mqdxiaoxiao/article/details/93670772&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;这里&lt;/a&gt;。没想到搞定了，使用的插件是hexo-symbols-count-time。设置步骤如下：&lt;/p&gt;
-      
-      </description>
-      
-      
-      <comments>http://www.seis-jun.xyz/posts/22869#disqus_thread</comments>
     </item>
     
     <item>
