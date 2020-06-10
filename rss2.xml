@@ -15,7 +15,7 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>地震学技术</description>
-    <pubDate>Wed, 10 Jun 2020 12:19:49 GMT</pubDate>
+    <pubDate>Wed, 10 Jun 2020 16:18:31 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -25,7 +25,7 @@
       <pubDate>Wed, 10 Jun 2020 03:18:16 GMT</pubDate>
       <description>
       
-        &lt;p&gt;&amp;emsp;&amp;emsp;虽然是想记笔记，写一些技术性的东西。然而现在为止好像还没有干什么正事。那我对这个做了些什么呢？干了这些：&lt;/p&gt;
+        &lt;p&gt;&amp;emsp;&amp;emsp;原本是想记笔记，写一些技术性的东西。然而现在为止好像还没有干啥正事。那我对这个博客做了些什么呢？干了这些：&lt;/p&gt;
       
       </description>
       
@@ -197,21 +197,6 @@
     </item>
     
     <item>
-      <title>next网站字数统计</title>
-      <link>http://www.seis-jun.xyz/2020/05/31/word-count/</link>
-      <guid>http://www.seis-jun.xyz/2020/05/31/word-count/</guid>
-      <pubDate>Sat, 30 May 2020 17:29:36 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;想给网站显示字数统计，搜到&lt;a href=&quot;https://www.jianshu.com/p/baea8c95e39b&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;这里&lt;/a&gt;。根据说明开始设置。结果网站都差点挂掉。检查了好久也没有发现问题，以为玩完了。然后马上开始重新建hexo。结果还是有问题。后来终于发现在网站设置文件插入功能字段时误插到其他字段导致出错。注销以后问题就修复了。然后又搜索到&lt;a href=&quot;https://blog.csdn.net/mqdxiaoxiao/article/details/93670772&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;这里&lt;/a&gt;。没想到搞定了，使用的插件是hexo-symbols-count-time。设置步骤如下：&lt;/p&gt;
-      
-      </description>
-      
-      
-      <comments>http://www.seis-jun.xyz/2020/05/31/word-count/#disqus_thread</comments>
-    </item>
-    
-    <item>
       <title>tmp</title>
       <link>http://www.seis-jun.xyz/2020/05/31/tmp/</link>
       <guid>http://www.seis-jun.xyz/2020/05/31/tmp/</guid>
@@ -231,6 +216,21 @@
       
       
       <comments>http://www.seis-jun.xyz/2020/05/31/tmp/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>next网站字数统计</title>
+      <link>http://www.seis-jun.xyz/2020/05/31/word-count/</link>
+      <guid>http://www.seis-jun.xyz/2020/05/31/word-count/</guid>
+      <pubDate>Sat, 30 May 2020 17:29:36 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;想给网站显示字数统计，搜到&lt;a href=&quot;https://www.jianshu.com/p/baea8c95e39b&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;这里&lt;/a&gt;。根据说明开始设置。结果网站都差点挂掉。检查了好久也没有发现问题，以为玩完了。然后马上开始重新建hexo。结果还是有问题。后来终于发现在网站设置文件插入功能字段时误插到其他字段导致出错。注销以后问题就修复了。然后又搜索到&lt;a href=&quot;https://blog.csdn.net/mqdxiaoxiao/article/details/93670772&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;这里&lt;/a&gt;。没想到搞定了，使用的插件是hexo-symbols-count-time。设置步骤如下：&lt;/p&gt;
+      
+      </description>
+      
+      
+      <comments>http://www.seis-jun.xyz/2020/05/31/word-count/#disqus_thread</comments>
     </item>
     
     <item>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2020-06-10T12:19:49.034Z</updated>
+  <updated>2020-06-10T16:18:31.936Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -21,11 +21,11 @@
     <link href="http://www.seis-jun.xyz/2020/06/10/what-did-I-do-to-this-blog/"/>
     <id>http://www.seis-jun.xyz/2020/06/10/what-did-I-do-to-this-blog/</id>
     <published>2020-06-10T03:18:16.000Z</published>
-    <updated>2020-06-10T12:19:49.034Z</updated>
+    <updated>2020-06-10T16:18:31.936Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&amp;emsp;&amp;emsp;虽然是想记笔记，写一些技术性的东西。然而现在为止好像还没有干什么正事。那我对这个做了些什么呢？干了这些：&lt;/p&gt;
+      &lt;p&gt;&amp;emsp;&amp;emsp;原本是想记笔记，写一些技术性的东西。然而现在为止好像还没有干啥正事。那我对这个博客做了些什么呢？干了这些：&lt;/p&gt;
     
     </summary>
     
@@ -271,29 +271,6 @@
   </entry>
   
   <entry>
-    <title>next网站字数统计</title>
-    <link href="http://www.seis-jun.xyz/2020/05/31/word-count/"/>
-    <id>http://www.seis-jun.xyz/2020/05/31/word-count/</id>
-    <published>2020-05-30T17:29:36.000Z</published>
-    <updated>2020-06-09T15:40:56.828Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;想给网站显示字数统计，搜到&lt;a href=&quot;https://www.jianshu.com/p/baea8c95e39b&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;这里&lt;/a&gt;。根据说明开始设置。结果网站都差点挂掉。检查了好久也没有发现问题，以为玩完了。然后马上开始重新建hexo。结果还是有问题。后来终于发现在网站设置文件插入功能字段时误插到其他字段导致出错。注销以后问题就修复了。然后又搜索到&lt;a href=&quot;https://blog.csdn.net/mqdxiaoxiao/article/details/93670772&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;这里&lt;/a&gt;。没想到搞定了，使用的插件是hexo-symbols-count-time。设置步骤如下：&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="web" scheme="http://www.seis-jun.xyz/categories/web/"/>
-    
-    
-      <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
-    
-      <category term="next" scheme="http://www.seis-jun.xyz/tags/next/"/>
-    
-  </entry>
-  
-  <entry>
     <title>tmp</title>
     <link href="http://www.seis-jun.xyz/2020/05/31/tmp/"/>
     <id>http://www.seis-jun.xyz/2020/05/31/tmp/</id>
@@ -318,6 +295,29 @@
     
     
       <category term="乱笔" scheme="http://www.seis-jun.xyz/tags/%E4%B9%B1%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>next网站字数统计</title>
+    <link href="http://www.seis-jun.xyz/2020/05/31/word-count/"/>
+    <id>http://www.seis-jun.xyz/2020/05/31/word-count/</id>
+    <published>2020-05-30T17:29:36.000Z</published>
+    <updated>2020-06-09T15:40:56.828Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;想给网站显示字数统计，搜到&lt;a href=&quot;https://www.jianshu.com/p/baea8c95e39b&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;这里&lt;/a&gt;。根据说明开始设置。结果网站都差点挂掉。检查了好久也没有发现问题，以为玩完了。然后马上开始重新建hexo。结果还是有问题。后来终于发现在网站设置文件插入功能字段时误插到其他字段导致出错。注销以后问题就修复了。然后又搜索到&lt;a href=&quot;https://blog.csdn.net/mqdxiaoxiao/article/details/93670772&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;这里&lt;/a&gt;。没想到搞定了，使用的插件是hexo-symbols-count-time。设置步骤如下：&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="web" scheme="http://www.seis-jun.xyz/categories/web/"/>
+    
+    
+      <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
+    
+      <category term="next" scheme="http://www.seis-jun.xyz/tags/next/"/>
     
   </entry>
   
