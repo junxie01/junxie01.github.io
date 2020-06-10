@@ -15,8 +15,23 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>地震学技术</description>
-    <pubDate>Tue, 09 Jun 2020 15:40:56 GMT</pubDate>
+    <pubDate>Wed, 10 Jun 2020 04:54:19 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>我对这个博客做了什么</title>
+      <link>http://www.seis-jun.xyz/2020/06/10/what-did-I-do-to-this-blog/</link>
+      <guid>http://www.seis-jun.xyz/2020/06/10/what-did-I-do-to-this-blog/</guid>
+      <pubDate>Wed, 10 Jun 2020 03:18:16 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&amp;emsp;&amp;emsp;虽然是想记笔记，写一些技术性的东西。然而现在为止好像还没有干什么正事。那我对这个做了些什么呢？干了这些：&lt;/p&gt;
+      
+      </description>
+      
+      
+      <comments>http://www.seis-jun.xyz/2020/06/10/what-did-I-do-to-this-blog/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>不继续搬迁网易博客了</title>
@@ -150,7 +165,7 @@
         
           
           
-            &lt;p&gt;网站上没有图片是不行的，无图无真相。解决办法在&lt;a href=&quot;https://blog.csdn.net/qq_38148394/article/details/79997971&quot; target=&quot;_blank&quot;
+            &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;网站上没有图片是不行的，无图无真相。解决办法在&lt;a
           
         
       
@@ -171,7 +186,7 @@
         
           
           
-            &lt;p&gt;厚颜无耻的开始想要打赏。如何配置打赏呢？原来next是有打赏的选项字段的。直接修改主题配置文件如下：&lt;br&gt;&lt;img src=&quot;donate.png&quot;
+            &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot;
           
         
       
@@ -192,8 +207,8 @@
         
           
           
-            &lt;p&gt;&amp;emsp;&amp;emsp;&lt;/p&gt;
-&lt;p&gt;发布网站  &lt;a href=&quot;http://www.seis-jun.xyz&quot;&gt;www.seis-jun.xyz&lt;/a&gt; 
+            &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;&lt;/p&gt;
+&lt;p&gt;发布网站  &lt;a
           
         
       
@@ -259,9 +274,7 @@
         
           
           
-            &lt;p&gt;&amp;emsp;&amp;emsp;这是一种路上游荡的魂魄。&lt;/p&gt;
-&lt;p&gt;&amp;emsp;&amp;emsp;因为生前性格孤僻十分孤单，没有一个朋友，所以容易走极端。遇到人生的重大挫折没有地方需求帮助，没有人来帮忙分担，最后在绝望中选择各种手段结束自己的生命。&lt;/p&gt;
-&lt;p&gt;&amp;emsp;&amp;ems
+            &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot;
           
         
       
@@ -282,9 +295,7 @@
         
           
           
-            &lt;p&gt;&amp;emsp;&amp;emsp;“你不是开玩笑吧蕊。。。哈哈哈。。。”电话那头尖叫起来：“真的替你感到高兴啊。。。”&lt;/p&gt;
-&lt;p&gt;&amp;emsp;&amp;emsp;“谢谢你萱萱”，蕊高兴的说到，仿佛两只小熊一同分享着超甜的蜜。&lt;/p&gt;
-&lt;p&gt;&amp;emsp;&amp;emsp;“找到财宝可不要忘了我啊
+            &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot;
           
         
       
@@ -305,8 +316,7 @@
         
           
           
-            &lt;p&gt;&amp;emsp;&amp;emsp;人活着该削平自己将自己融入社会大染缸，还是该看清事实从中跳出来，或者该坚持自我暴力抵抗，还是怀揣着希望守护自己的安全岛？&lt;/p&gt;
-&lt;p&gt;&amp;emsp;&amp;emsp;《血色浪漫》里面所演绎的人生几乎统统都是悲剧。剧中毫不夸张甚至说是完全真实的展示了几乎社会
+            &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot;
           
         
       
@@ -327,7 +337,7 @@
         
           
           
-            &lt;p&gt;&amp;emsp;&amp;emsp;弯弯曲曲的阳光直直的照进屋外，熟睡的我高兴地蹦起来落在了天花板。窗台上留下了10年以后我的脚印。我重重的摔在软绵绵的岩石上，像蹦极一样来回颠簸。一只尖叫的青蛙从结冰的湖面窜出，湖面结了一个窟窿，天空泛起直直的嶙峋波纹。半空中横陈着的乐者手舞足蹈的吹奏
+            &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot;
           
         
       
@@ -348,9 +358,7 @@
         
           
           
-            &lt;p&gt;&amp;emsp;&amp;emsp;在win7下用系统的磁盘管理工具把原来的fedora14给格了，然后重启就只能进入grub，试了安装盘修复也不行。&lt;/p&gt;
-&lt;p&gt;在grub中输入命令：&lt;/p&gt;
-&lt;figure class=&quot;highlight
+            &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot;
           
         
       
@@ -358,28 +366,6 @@
       
       
       <comments>http://www.seis-jun.xyz/2013/12/24/2013122401/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>雾霾齐步走</title>
-      <link>http://www.seis-jun.xyz/2013/12/09/2013120921/</link>
-      <guid>http://www.seis-jun.xyz/2013/12/09/2013120921/</guid>
-      <pubDate>Mon, 09 Dec 2013 13:49:19 GMT</pubDate>
-      <description>
-      
-        
-        
-          
-          
-            &lt;p&gt;&amp;emsp;&amp;emsp;据传，雾霾的妈妈叫他回去吃饭了。&lt;/p&gt;
-&lt;p&gt;&amp;emsp;&amp;emsp;连续几天各大新闻媒体都在大肆报道华北华东的雾霾天气，中央打响了雾霾攻坚战。发言人说：污染主要来自于急功近利的工业生产。我们很有进步，现在每个省市都毫不隐瞒地向人民群众公布具体的污
-          
-        
-      
-      </description>
-      
-      
-      <comments>http://www.seis-jun.xyz/2013/12/09/2013120921/#disqus_thread</comments>
     </item>
     
   </channel>
