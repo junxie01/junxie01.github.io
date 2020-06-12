@@ -15,7 +15,7 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>地震学技术</description>
-    <pubDate>Thu, 11 Jun 2020 14:33:18 GMT</pubDate>
+    <pubDate>Thu, 11 Jun 2020 15:36:56 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -106,21 +106,6 @@
       
       
       <comments>http://www.seis-jun.xyz/2020/06/03/20200603/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>关于文章，你得比灌水的人“更奸”</title>
-      <link>http://www.seis-jun.xyz/2020/06/02/about-paper/</link>
-      <guid>http://www.seis-jun.xyz/2020/06/02/about-paper/</guid>
-      <pubDate>Mon, 01 Jun 2020 18:20:56 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;因为文章比较少一度还挺苦恼。&lt;/p&gt;
-      
-      </description>
-      
-      
-      <comments>http://www.seis-jun.xyz/2020/06/02/about-paper/#disqus_thread</comments>
     </item>
     
     <item>
@@ -365,6 +350,21 @@
       
       
       <comments>http://www.seis-jun.xyz/2013/12/09/2013120921/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>花卷</title>
+      <link>http://www.seis-jun.xyz/2012/04/01/2012040119/</link>
+      <guid>http://www.seis-jun.xyz/2012/04/01/2012040119/</guid>
+      <pubDate>Sun, 01 Apr 2012 11:29:36 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&amp;emsp;&amp;emsp;晚饭时，实验室只剩师妹了。她的一卡通忽然找不找，约莫买东西时落在了黑超。我说没事，要是找不着，我请吧。时间是17：40。快到东苑的时候，师妹说先去找她的卡。我建议和她一起去，以免找不到卡没法吃饭。但是一个东西突然钻进了我的脑袋，那就是：花卷。&lt;/p&gt;
+      
+      </description>
+      
+      
+      <comments>http://www.seis-jun.xyz/2012/04/01/2012040119/#disqus_thread</comments>
     </item>
     
   </channel>

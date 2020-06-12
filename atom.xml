@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2020-06-11T14:33:18.923Z</updated>
+  <updated>2020-06-11T15:36:56.225Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://www.seis-jun.xyz/2020/06/10/what-did-I-do-to-this-blog/"/>
     <id>http://www.seis-jun.xyz/2020/06/10/what-did-I-do-to-this-blog/</id>
     <published>2020-06-10T03:18:16.000Z</published>
-    <updated>2020-06-11T14:33:18.923Z</updated>
+    <updated>2020-06-11T15:36:56.225Z</updated>
     
     <summary type="html">
     
@@ -145,27 +145,6 @@
     
     
       <category term="日记" scheme="http://www.seis-jun.xyz/tags/%E6%97%A5%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于文章，你得比灌水的人“更奸”</title>
-    <link href="http://www.seis-jun.xyz/2020/06/02/about-paper/"/>
-    <id>http://www.seis-jun.xyz/2020/06/02/about-paper/</id>
-    <published>2020-06-01T18:20:56.000Z</published>
-    <updated>2020-06-11T02:34:12.197Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;因为文章比较少一度还挺苦恼。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
-    
-    
-      <category term="paper" scheme="http://www.seis-jun.xyz/tags/paper/"/>
     
   </entry>
   
@@ -502,6 +481,29 @@
     
     
       <category term="乱笔" scheme="http://www.seis-jun.xyz/tags/%E4%B9%B1%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>花卷</title>
+    <link href="http://www.seis-jun.xyz/2012/04/01/2012040119/"/>
+    <id>http://www.seis-jun.xyz/2012/04/01/2012040119/</id>
+    <published>2012-04-01T11:29:36.000Z</published>
+    <updated>2020-06-11T02:34:12.046Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&amp;emsp;&amp;emsp;晚饭时，实验室只剩师妹了。她的一卡通忽然找不找，约莫买东西时落在了黑超。我说没事，要是找不着，我请吧。时间是17：40。快到东苑的时候，师妹说先去找她的卡。我建议和她一起去，以免找不到卡没法吃饭。但是一个东西突然钻进了我的脑袋，那就是：花卷。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="网易迁移" scheme="http://www.seis-jun.xyz/categories/%E7%BD%91%E6%98%93%E8%BF%81%E7%A7%BB/"/>
+    
+    
+      <category term="日记" scheme="http://www.seis-jun.xyz/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+      <category term="命题作文" scheme="http://www.seis-jun.xyz/tags/%E5%91%BD%E9%A2%98%E4%BD%9C%E6%96%87/"/>
     
   </entry>
   
