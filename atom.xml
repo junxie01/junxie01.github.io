@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2020-06-12T15:00:48.812Z</updated>
+  <updated>2020-06-12T15:55:40.907Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -17,11 +17,32 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>sed插入和删除匹配行</title>
+    <link href="http://www.seis-jun.xyz/2020/06/12/learn-sed/"/>
+    <id>http://www.seis-jun.xyz/2020/06/12/learn-sed/</id>
+    <published>2020-06-12T15:09:54.000Z</published>
+    <updated>2020-06-12T15:55:40.907Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&amp;emsp;&amp;emsp;sed功能非常强大，利用来处理文本文件不要太爽。要是能熟练掌握，在文本江湖简直随心所欲，无往而不利。我自然也想学学，不过入坑awk有点久。通常习惯了一种方式以后就难以醉心到另一种。这也大概是因为少林72绝技一般人练不了多种的原因吧。一般人也很难精通多个领域。这两天在配置这个博客时遇到一些要对所有post处理的步骤。于是就尝试了sed的用法。倒是很方便。例如：&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="http://www.seis-jun.xyz/categories/Linux/"/>
+    
+    
+      <category term="sed" scheme="http://www.seis-jun.xyz/tags/sed/"/>
+    
+  </entry>
+  
+  <entry>
     <title>我对这个博客做了什么</title>
     <link href="http://www.seis-jun.xyz/2020/06/10/what-did-I-do-to-this-blog/"/>
     <id>http://www.seis-jun.xyz/2020/06/10/what-did-I-do-to-this-blog/</id>
     <published>2020-06-10T03:18:16.000Z</published>
-    <updated>2020-06-12T15:00:48.812Z</updated>
+    <updated>2020-06-12T15:56:13.767Z</updated>
     
     <summary type="html">
     
@@ -42,7 +63,7 @@
     <link href="http://www.seis-jun.xyz/2020/06/05/2020060513/"/>
     <id>http://www.seis-jun.xyz/2020/06/05/2020060513/</id>
     <published>2020-06-05T05:50:38.000Z</published>
-    <updated>2020-06-11T02:34:12.187Z</updated>
+    <updated>2020-06-12T15:56:13.764Z</updated>
     
     <summary type="html">
     
@@ -63,7 +84,7 @@
     <link href="http://www.seis-jun.xyz/2020/06/05/2020060500/"/>
     <id>http://www.seis-jun.xyz/2020/06/05/2020060500/</id>
     <published>2020-06-04T16:57:47.000Z</published>
-    <updated>2020-06-11T02:34:12.181Z</updated>
+    <updated>2020-06-12T15:56:13.761Z</updated>
     
     <summary type="html">
     
@@ -86,7 +107,7 @@
     <link href="http://www.seis-jun.xyz/2020/06/04/2020060401/"/>
     <id>http://www.seis-jun.xyz/2020/06/04/2020060401/</id>
     <published>2020-06-03T17:00:58.000Z</published>
-    <updated>2020-06-11T02:34:12.176Z</updated>
+    <updated>2020-06-12T15:56:13.758Z</updated>
     
     <summary type="html">
     
@@ -107,7 +128,7 @@
     <link href="http://www.seis-jun.xyz/2020/06/03/2020060323/"/>
     <id>http://www.seis-jun.xyz/2020/06/03/2020060323/</id>
     <published>2020-06-03T15:23:36.000Z</published>
-    <updated>2020-06-11T02:34:12.161Z</updated>
+    <updated>2020-06-12T15:56:13.750Z</updated>
     
     <summary type="html">
     
@@ -132,7 +153,7 @@
     <link href="http://www.seis-jun.xyz/2020/06/03/20200603/"/>
     <id>http://www.seis-jun.xyz/2020/06/03/20200603/</id>
     <published>2020-06-03T14:54:38.000Z</published>
-    <updated>2020-06-11T02:34:12.169Z</updated>
+    <updated>2020-06-12T15:56:13.753Z</updated>
     
     <summary type="html">
     
@@ -153,7 +174,7 @@
     <link href="http://www.seis-jun.xyz/2020/05/31/how-to-backup/"/>
     <id>http://www.seis-jun.xyz/2020/05/31/how-to-backup/</id>
     <published>2020-05-31T05:52:53.000Z</published>
-    <updated>2020-06-11T02:34:12.226Z</updated>
+    <updated>2020-06-12T15:56:13.785Z</updated>
     
     <summary type="html">
     
@@ -175,7 +196,7 @@
     <link href="http://www.seis-jun.xyz/2020/05/31/no-passwd-for-deploy/"/>
     <id>http://www.seis-jun.xyz/2020/05/31/no-passwd-for-deploy/</id>
     <published>2020-05-30T19:23:55.000Z</published>
-    <updated>2020-06-11T02:34:12.233Z</updated>
+    <updated>2020-06-12T15:56:13.789Z</updated>
     
     <summary type="html">
     
@@ -196,7 +217,7 @@
     <link href="http://www.seis-jun.xyz/2020/05/31/picture-view/"/>
     <id>http://www.seis-jun.xyz/2020/05/31/picture-view/</id>
     <published>2020-05-30T18:26:29.000Z</published>
-    <updated>2020-06-11T02:34:12.238Z</updated>
+    <updated>2020-06-12T15:56:13.792Z</updated>
     
     <summary type="html">
     
@@ -225,7 +246,7 @@
     <link href="http://www.seis-jun.xyz/2020/05/31/donation/"/>
     <id>http://www.seis-jun.xyz/2020/05/31/donation/</id>
     <published>2020-05-30T18:04:57.000Z</published>
-    <updated>2020-06-11T02:34:12.210Z</updated>
+    <updated>2020-06-12T15:56:13.776Z</updated>
     
     <summary type="html">
     
@@ -254,7 +275,7 @@
     <link href="http://www.seis-jun.xyz/2020/05/31/word-count/"/>
     <id>http://www.seis-jun.xyz/2020/05/31/word-count/</id>
     <published>2020-05-30T17:29:36.000Z</published>
-    <updated>2020-06-11T02:34:12.255Z</updated>
+    <updated>2020-06-12T15:56:13.799Z</updated>
     
     <summary type="html">
     
@@ -277,7 +298,7 @@
     <link href="http://www.seis-jun.xyz/2020/05/30/reply-to-review/"/>
     <id>http://www.seis-jun.xyz/2020/05/30/reply-to-review/</id>
     <published>2020-05-29T17:21:16.000Z</published>
-    <updated>2020-06-11T02:34:12.243Z</updated>
+    <updated>2020-06-12T15:56:13.796Z</updated>
     
     <summary type="html">
     
@@ -298,7 +319,7 @@
     <link href="http://www.seis-jun.xyz/2020/05/26/hello-world/"/>
     <id>http://www.seis-jun.xyz/2020/05/26/hello-world/</id>
     <published>2020-05-25T17:21:16.000Z</published>
-    <updated>2020-06-11T02:34:12.219Z</updated>
+    <updated>2020-06-12T15:56:13.781Z</updated>
     
     <summary type="html">
     
@@ -321,7 +342,7 @@
     <link href="http://www.seis-jun.xyz/2015/11/01/201511010820/"/>
     <id>http://www.seis-jun.xyz/2015/11/01/201511010820/</id>
     <published>2015-11-01T00:20:59.000Z</published>
-    <updated>2020-06-11T02:34:12.145Z</updated>
+    <updated>2020-06-12T15:56:13.743Z</updated>
     
     <summary type="html">
     
@@ -350,7 +371,7 @@
     <link href="http://www.seis-jun.xyz/2015/11/01/201511010818/"/>
     <id>http://www.seis-jun.xyz/2015/11/01/201511010818/</id>
     <published>2015-11-01T00:18:22.000Z</published>
-    <updated>2020-06-11T02:34:12.134Z</updated>
+    <updated>2020-06-12T15:56:13.740Z</updated>
     
     <summary type="html">
     
@@ -377,7 +398,7 @@
     <link href="http://www.seis-jun.xyz/2015/11/01/2015110108/"/>
     <id>http://www.seis-jun.xyz/2015/11/01/2015110108/</id>
     <published>2015-11-01T00:17:27.000Z</published>
-    <updated>2020-06-11T02:34:12.155Z</updated>
+    <updated>2020-06-12T15:56:13.746Z</updated>
     
     <summary type="html">
     
@@ -406,7 +427,7 @@
     <link href="http://www.seis-jun.xyz/2015/07/08/2015070811/"/>
     <id>http://www.seis-jun.xyz/2015/07/08/2015070811/</id>
     <published>2015-07-08T03:07:54.000Z</published>
-    <updated>2020-06-11T02:34:12.093Z</updated>
+    <updated>2020-06-12T15:56:13.735Z</updated>
     
     <summary type="html">
     
@@ -435,7 +456,7 @@
     <link href="http://www.seis-jun.xyz/2013/12/24/2013122401/"/>
     <id>http://www.seis-jun.xyz/2013/12/24/2013122401/</id>
     <published>2013-12-23T17:40:27.000Z</published>
-    <updated>2020-06-11T02:34:12.062Z</updated>
+    <updated>2020-06-12T15:56:13.732Z</updated>
     
     <summary type="html">
     
@@ -462,7 +483,7 @@
     <link href="http://www.seis-jun.xyz/2013/12/09/2013120921/"/>
     <id>http://www.seis-jun.xyz/2013/12/09/2013120921/</id>
     <published>2013-12-09T13:49:19.000Z</published>
-    <updated>2020-06-11T02:34:12.053Z</updated>
+    <updated>2020-06-12T15:56:13.729Z</updated>
     
     <summary type="html">
     
@@ -481,29 +502,6 @@
     
     
       <category term="乱笔" scheme="http://www.seis-jun.xyz/tags/%E4%B9%B1%E7%AC%94/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>花卷</title>
-    <link href="http://www.seis-jun.xyz/2012/04/01/2012040119/"/>
-    <id>http://www.seis-jun.xyz/2012/04/01/2012040119/</id>
-    <published>2012-04-01T11:29:36.000Z</published>
-    <updated>2020-06-11T02:34:12.046Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&amp;emsp;&amp;emsp;晚饭时，实验室只剩师妹了。她的一卡通忽然找不找，约莫买东西时落在了黑超。我说没事，要是找不着，我请吧。时间是17：40。快到东苑的时候，师妹说先去找她的卡。我建议和她一起去，以免找不到卡没法吃饭。但是一个东西突然钻进了我的脑袋，那就是：花卷。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="网易迁移" scheme="http://www.seis-jun.xyz/categories/%E7%BD%91%E6%98%93%E8%BF%81%E7%A7%BB/"/>
-    
-    
-      <category term="日记" scheme="http://www.seis-jun.xyz/tags/%E6%97%A5%E8%AE%B0/"/>
-    
-      <category term="命题作文" scheme="http://www.seis-jun.xyz/tags/%E5%91%BD%E9%A2%98%E4%BD%9C%E6%96%87/"/>
     
   </entry>
   

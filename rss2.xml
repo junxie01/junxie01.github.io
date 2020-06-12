@@ -15,8 +15,23 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>地震学技术</description>
-    <pubDate>Fri, 12 Jun 2020 15:00:48 GMT</pubDate>
+    <pubDate>Fri, 12 Jun 2020 15:55:40 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>sed插入和删除匹配行</title>
+      <link>http://www.seis-jun.xyz/2020/06/12/learn-sed/</link>
+      <guid>http://www.seis-jun.xyz/2020/06/12/learn-sed/</guid>
+      <pubDate>Fri, 12 Jun 2020 15:09:54 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&amp;emsp;&amp;emsp;sed功能非常强大，利用来处理文本文件不要太爽。要是能熟练掌握，在文本江湖简直随心所欲，无往而不利。我自然也想学学，不过入坑awk有点久。通常习惯了一种方式以后就难以醉心到另一种。这也大概是因为少林72绝技一般人练不了多种的原因吧。一般人也很难精通多个领域。这两天在配置这个博客时遇到一些要对所有post处理的步骤。于是就尝试了sed的用法。倒是很方便。例如：&lt;/p&gt;
+      
+      </description>
+      
+      
+      <comments>http://www.seis-jun.xyz/2020/06/12/learn-sed/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>我对这个博客做了什么</title>
@@ -350,21 +365,6 @@
       
       
       <comments>http://www.seis-jun.xyz/2013/12/09/2013120921/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>花卷</title>
-      <link>http://www.seis-jun.xyz/2012/04/01/2012040119/</link>
-      <guid>http://www.seis-jun.xyz/2012/04/01/2012040119/</guid>
-      <pubDate>Sun, 01 Apr 2012 11:29:36 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;&amp;emsp;&amp;emsp;晚饭时，实验室只剩师妹了。她的一卡通忽然找不找，约莫买东西时落在了黑超。我说没事，要是找不着，我请吧。时间是17：40。快到东苑的时候，师妹说先去找她的卡。我建议和她一起去，以免找不到卡没法吃饭。但是一个东西突然钻进了我的脑袋，那就是：花卷。&lt;/p&gt;
-      
-      </description>
-      
-      
-      <comments>http://www.seis-jun.xyz/2012/04/01/2012040119/#disqus_thread</comments>
     </item>
     
   </channel>

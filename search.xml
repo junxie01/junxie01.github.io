@@ -91,6 +91,24 @@
       </tags>
   </entry>
   <entry>
+    <title>星期五</title>
+    <url>/2009/04/10/2009041021/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;好久没有坐过电梯了，今天，腿实在疼的不行了，所以还是坐电梯了。</p>
+<p>&emsp;&emsp;地毯上写着星期五。</p>
+<p>&emsp;&emsp;看到星期五就想到了：鲁宾逊漂流记，黑色星期五，今晚有电影，今晚12点才熄灯，今晚算是周末的开始了，今晚会玩游戏，会玩到很晚，今天是十五，月亮很圆，今天是小姑的生日。</p>
+<p>&emsp;&emsp;不过最重要的是：快要毕业了。</p>
+<p>&emsp;&emsp;可是似乎我还有好多大学应该做的事没有做：谈恋爱，在网吧包夜打游戏，找份兼职做，打打架……</p>
+<p>&emsp;&emsp;前天健身了，很累，晚上感冒了，现在全身都没有力，感觉好没有动力和意义。忽然又想起刚才和老妈打电话。我提到了跳楼的家伙，老妈火了，说道，傻帽，人生这么美好，跳楼？是不是那根筋搭错了？</p>
+<p>&emsp;&emsp;对啊，接着玩，玩到有力气为止</p>
+]]></content>
+      <categories>
+        <category>网易迁移</category>
+      </categories>
+      <tags>
+        <tag>某日记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>外婆外公的故事</title>
     <url>/2009/02/17/2009021713/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="大面的由来"><a href="#大面的由来" class="headerlink" title="大面的由来"></a>大面的由来</h2><p>&emsp;&emsp;我们所在的那个镇叫做大面铺。外公外婆几十年来几乎没有离开那个镇上百里。</p>
@@ -107,24 +125,6 @@
         <tag>乱笔</tag>
         <tag>外公</tag>
         <tag>外婆</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>星期五</title>
-    <url>/2009/04/10/2009041021/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;好久没有坐过电梯了，今天，腿实在疼的不行了，所以还是坐电梯了。</p>
-<p>&emsp;&emsp;地毯上写着星期五。</p>
-<p>&emsp;&emsp;看到星期五就想到了：鲁宾逊漂流记，黑色星期五，今晚有电影，今晚12点才熄灯，今晚算是周末的开始了，今晚会玩游戏，会玩到很晚，今天是十五，月亮很圆，今天是小姑的生日。</p>
-<p>&emsp;&emsp;不过最重要的是：快要毕业了。</p>
-<p>&emsp;&emsp;可是似乎我还有好多大学应该做的事没有做：谈恋爱，在网吧包夜打游戏，找份兼职做，打打架……</p>
-<p>&emsp;&emsp;前天健身了，很累，晚上感冒了，现在全身都没有力，感觉好没有动力和意义。忽然又想起刚才和老妈打电话。我提到了跳楼的家伙，老妈火了，说道，傻帽，人生这么美好，跳楼？是不是那根筋搭错了？</p>
-<p>&emsp;&emsp;对啊，接着玩，玩到有力气为止</p>
-]]></content>
-      <categories>
-        <category>网易迁移</category>
-      </categories>
-      <tags>
-        <tag>某日记</tag>
       </tags>
   </entry>
   <entry>
@@ -650,6 +650,25 @@
       </tags>
   </entry>
   <entry>
+    <title>Win7下格掉Linux盘无法启动windows</title>
+    <url>/2013/12/24/2013122401/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;在win7下用系统的磁盘管理工具把原来的fedora14给格了，然后重启就只能进入grub，试了安装盘修复也不行。</p>
+<p>在grub中输入命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">grub&gt;rootnoverify (hd0,0) </span><br><span class="line">grub&gt;makeactive </span><br><span class="line">grub&gt;chainloader +1</span><br><span class="line">&#96;&#96;&#96; </span><br><span class="line"></span><br><span class="line">然后</span><br></pre></td></tr></table></figure>
+<p>grub&gt;boot</p>
+<pre><code>
+奏效。进入了windows。然后下载clear mbr （还原清新畅快的mbr，大概格掉了grub）
+
+然后大功告成。
+</code></pre>]]></content>
+      <categories>
+        <category>网易迁移</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>雾霾齐步走</title>
     <url>/2013/12/09/2013120921/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;据传，雾霾的妈妈叫他回去吃饭了。</p>
@@ -676,22 +695,16 @@
       </tags>
   </entry>
   <entry>
-    <title>Win7下格掉Linux盘无法启动windows</title>
-    <url>/2013/12/24/2013122401/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;在win7下用系统的磁盘管理工具把原来的fedora14给格了，然后重启就只能进入grub，试了安装盘修复也不行。</p>
-<p>在grub中输入命令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">grub&gt;rootnoverify (hd0,0) </span><br><span class="line">grub&gt;makeactive </span><br><span class="line">grub&gt;chainloader +1</span><br><span class="line">&#96;&#96;&#96; </span><br><span class="line"></span><br><span class="line">然后</span><br></pre></td></tr></table></figure>
-<p>grub&gt;boot</p>
-<pre><code>
-奏效。进入了windows。然后下载clear mbr （还原清新畅快的mbr，大概格掉了grub）
-
-然后大功告成。
-</code></pre>]]></content>
+    <title>乱2</title>
+    <url>/2015/07/08/2015070811/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;弯弯曲曲的阳光直直的照进屋外，熟睡的我高兴地蹦起来落在了天花板。窗台上留下了10年以后我的脚印。我重重的摔在软绵绵的岩石上，像蹦极一样来回颠簸。一只尖叫的青蛙从结冰的湖面窜出，湖面结了一个窟窿，天空泛起直直的嶙峋波纹。半空中横陈着的乐者手舞足蹈的吹奏着口中的琵琶，一只只曼妙的如箭的音符射向四周，箭尖着地处开出了美丽的蝴蝶。我泛舟湖底，领略着满天的繁星。一对鱼儿在空中划着拳，输了的那位颐指气使，赢了的那位红了双腮。忽然一阵微风袭来，将我卷进了透明的电话簿。可怜那船儿被卷成了一颗树苗。我花了一立方的时间睁开眼，发现树苗上结满了刀子。我摘下其中熟透了的一把，割下了我的一只脚趾。我将我剩下的部分扔进了雷电，那只脚趾开始慢慢的发了芽。</p>
+]]></content>
       <categories>
         <category>网易迁移</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
+        <tag>乱笔</tag>
+        <tag>杂</tag>
       </tags>
   </entry>
   <entry>
@@ -712,19 +725,6 @@
       <tags>
         <tag>某日记</tag>
         <tag>血色浪漫</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>乱2</title>
-    <url>/2015/07/08/2015070811/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;弯弯曲曲的阳光直直的照进屋外，熟睡的我高兴地蹦起来落在了天花板。窗台上留下了10年以后我的脚印。我重重的摔在软绵绵的岩石上，像蹦极一样来回颠簸。一只尖叫的青蛙从结冰的湖面窜出，湖面结了一个窟窿，天空泛起直直的嶙峋波纹。半空中横陈着的乐者手舞足蹈的吹奏着口中的琵琶，一只只曼妙的如箭的音符射向四周，箭尖着地处开出了美丽的蝴蝶。我泛舟湖底，领略着满天的繁星。一对鱼儿在空中划着拳，输了的那位颐指气使，赢了的那位红了双腮。忽然一阵微风袭来，将我卷进了透明的电话簿。可怜那船儿被卷成了一颗树苗。我花了一立方的时间睁开眼，发现树苗上结满了刀子。我摘下其中熟透了的一把，割下了我的一只脚趾。我将我剩下的部分扔进了雷电，那只脚趾开始慢慢的发了芽。</p>
-]]></content>
-      <categories>
-        <category>网易迁移</category>
-      </categories>
-      <tags>
-        <tag>乱笔</tag>
-        <tag>杂</tag>
       </tags>
   </entry>
   <entry>
@@ -817,6 +817,36 @@
       </categories>
       <tags>
         <tag>web</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>sed插入和删除匹配行</title>
+    <url>/2020/06/12/learn-sed/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;sed功能非常强大，利用来处理文本文件不要太爽。要是能熟练掌握，在文本江湖简直随心所欲，无往而不利。我自然也想学学，不过入坑awk有点久。通常习惯了一种方式以后就难以醉心到另一种。这也大概是因为少林72绝技一般人练不了多种的原因吧。一般人也很难精通多个领域。这两天在配置这个博客时遇到一些要对所有post处理的步骤。于是就尝试了sed的用法。倒是很方便。例如：</p>
+<a id="more"></a>
+
+<ol>
+<li>匹配包含date行，在该行后添加copyright: true。</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sed -i <span class="string">'/date/a\copyright: true'</span> a.md</span><br></pre></td></tr></table></figure>
+<p>在行前添加就把a换做i。</p>
+<ol start="2">
+<li>删除包含copyright的行。</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sed -i <span class="string">'/copyright/d'</span> a.md</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>批量处理就这样。</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> md <span class="keyword">in</span> *md</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">   sed -i <span class="string">'/copyright/d'</span> <span class="variable">$md</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;题外话，是不是觉得我找抽啊，插入了copyright之后又删掉。说来话长。我怕有人copy了我的东西不打声招呼，于是就想申明一下许可权益啊版权信息啊什么的（申明之后别人爱拿还得拿）。于是搜索到<a href="https://juejin.im/post/5c7dd8675188251b6406e7b5" target="_blank" rel="noopener">上仙</a>那里，根据教程开始弄。过程中就得来个批量处理，用sed添加copyright。结果出来还不错。可谁知那个“署名”前面的cc图标老时乱码（一个叉）。哎呀，我这个暴脾气（洁癖），如何受得了。于是就搜啊搜，怎么才能显示出来呢？结果，啥办法没有。最后只能根据另一位<a href="https://wylu.me/posts/e0424f3f/" target="_blank" rel="noopener">上神</a>的教程重新弄了一个简单的主题默认的版权信息。然后就得批处理copyright。啊，世界安静了。</p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>sed</tag>
       </tags>
   </entry>
   <entry>
@@ -1026,7 +1056,7 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="variable">$git</span> pull origin master</span><br></pre></td></tr></table></figure>
 
 <h2 id="自动推送-备份"><a href="#自动推送-备份" class="headerlink" title="自动推送/备份"></a>自动推送/备份</h2><p>那位牛人博主还有一篇博文<a href="https://notes.doublemine.me/2015-07-06-%E8%87%AA%E5%8A%A8%E5%A4%87%E4%BB%BDHexo%E5%8D%9A%E5%AE%A2%E6%BA%90%E6%96%87%E4%BB%B6.html" target="_blank" rel="noopener">利用nodejs脚本自动备份</a>。我不太懂，省得麻烦。干脆写一个bash脚本(例如do_deploy_push.bash)就可以解决这些问题。脚本如下:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo cl &amp;&amp; hexo g &amp;&amp; hexo d</span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">"backup hexo at `date` "</span></span><br><span class="line">copyright: <span class="literal">true</span></span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo cl &amp;&amp; hexo g &amp;&amp; hexo d</span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">"backup hexo at `date` "</span></span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
 <p>在hexo主目录下面运行 bash do_deploy_push.bash就大功告成了。</p>
 ]]></content>
       <categories>
