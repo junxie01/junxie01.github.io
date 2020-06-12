@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2020-06-12T15:56:52.477Z</updated>
+  <updated>2020-06-12T16:01:29.811Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -21,11 +21,11 @@
     <link href="http://www.seis-jun.xyz/2020/06/12/learn-sed/"/>
     <id>http://www.seis-jun.xyz/2020/06/12/learn-sed/</id>
     <published>2020-06-12T15:09:54.000Z</published>
-    <updated>2020-06-12T15:56:52.477Z</updated>
+    <updated>2020-06-12T16:01:29.811Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&amp;emsp;&amp;emsp;sed功能非常强大，利用来处理文本文件不要太爽。要是能熟练掌握，在文本江湖简直随心所欲，无往而不利。我自然也想学学，不过入坑awk有点久。通常习惯了一种方式以后就难以醉心到另一种。这也大概是因为少林72绝技一般人练不了多种的原因吧。一般人也很难精通多个领域。这两天在配置这个博客时遇到一些要对所有post处理的步骤。于是就尝试了sed的用法。倒是很方便。例如：&lt;/p&gt;
+      &lt;p&gt;&amp;emsp;&amp;emsp;sed功能非常强大，利用来处理文本文件不要太爽。要是能熟练掌握，在文本江湖简直随心所欲，无往而不利。我自然也想学学，不过入坑awk有点久。通常习惯了一种方式以后就难以醉心到另一种。这也大约是少林72绝技一般和尚难同时融汇多种的原因吧。一般人也很难精通多个领域。这两天在配置这个博客时遇到一些要对所有post处理的步骤。于是就尝试了sed的用法。倒是很方便。例如：&lt;/p&gt;
     
     </summary>
     
