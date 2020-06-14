@@ -246,17 +246,11 @@
     <link href="http://www.seis-jun.xyz/2020/05/31/donation/"/>
     <id>http://www.seis-jun.xyz/2020/05/31/donation/</id>
     <published>2020-05-30T18:04:57.000Z</published>
-    <updated>2020-06-12T15:56:52.485Z</updated>
+    <updated>2020-06-14T16:41:16.803Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot;
-        
-      
+      &lt;p&gt;厚颜无耻的开始想要打赏。如何配置打赏呢？原来next是有打赏的选项字段的。直接修改主题配置文件如下：&lt;/p&gt;
     
     </summary>
     
