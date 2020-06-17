@@ -162,8 +162,14 @@ live2d:
 #
 # 20200610
 plugins:
-  -hexo-reference
-  -hexo-generate-feed
+  hexo-reference
+  hexo-generate-feed
+  hexo-generator-baidu-sitemap
+  hexo-generator-sitemap
+baidusitemap:
+  path: baidusitemap.xml
+sitemap:
+  path: sitemap.xml
 # 20200610
 # hexo-tag-cloud
 tag_cloud:
