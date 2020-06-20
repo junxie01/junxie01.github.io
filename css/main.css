@@ -1238,7 +1238,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #6bb857;
+  background: #7d8fcc;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2391,20 +2391,6 @@ ul.breadcrumb li + li:last-child {
   padding: 25px;
   -webkit-box-shadow: 5px 5px 20px rgba(202,203,203,0.5);
   -moz-box-shadow: 5px 5px 20px rgba(202,203,204,0.5);
-}
-body {
-  background: url("https://source.unsplash.com/random/1600x900?wallpapers");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 50% 50%;
-}
-.main-inner {
-  background: #fff;
-  opacity: 0.2;
-}
-.header-inner {
-  opacity: 0.2;
 }
 .header {
   margin: 0 auto;
