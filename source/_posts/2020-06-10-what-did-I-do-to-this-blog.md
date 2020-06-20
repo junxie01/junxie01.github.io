@@ -27,6 +27,7 @@ date: 2020-06-10 11:18:16
 
 8. 添加google广告到post里[^6]。
 
+9. 加动态背景图片[^7]。
 
 [^1]:https://github.com/kchen0x/hexo-reference
 [^2]:https://blog.csdn.net/as480133937/article/details/100138838
@@ -34,4 +35,4 @@ date: 2020-06-10 11:18:16
 [^4]:https://github.com/theme-next/hexo-symbols-count-time
 [^5]:https://wylu.me/posts/e0424f3f/
 [^6]:https://juejin.im/post/5c95d230e51d45124e35cef6#comment
-
+[^7]:https://blog.diqigan.cn/posts/add-background-picture-for-next.html 
