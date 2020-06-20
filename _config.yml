@@ -179,6 +179,11 @@ tag_cloud:
     outlineColor: '#E2E1D1'
     maxSpeed: 0.1 
 
+# 20200621
+lazyload:
+  enable: true
+  onlypost: false
+  loadingImg: 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
