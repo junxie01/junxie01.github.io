@@ -27,7 +27,7 @@ date: 2020-06-10 11:18:16
 
 8. 添加google广告到post里[^6]。
 
-9. 加动态背景图片[^7]。
+9. 加动态背景图片[^7]。动态图片感觉太慢了。我在百度下了一个，有阳光森林，人，牛。感觉还不错。
 
 [^1]:https://github.com/kchen0x/hexo-reference
 [^2]:https://blog.csdn.net/as480133937/article/details/100138838
