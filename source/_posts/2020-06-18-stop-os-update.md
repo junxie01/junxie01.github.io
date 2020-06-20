@@ -1,5 +1,5 @@
 ---
-title: 如何让Elementray OS取消自动更新检查
+title: 如何让Elementary OS取消自动更新检查
 categories: Linux
 tags:
   - Linux
