@@ -137,6 +137,7 @@ google_adsense:
   ## siderbar_enable ??????建立??????後才??????到
   siderbar_enable: true # 是否
   siderbar_data_ad_slot: 9164326074 #  slot
+
 # 20200609
 live2d:
   enable: true
@@ -147,9 +148,7 @@ live2d:
   tagMode: false
   log: false
   model:
-    scale: 1
     use: live2d-widget-mode-hijiki
-#    #use: live2d-widget-mode-shizuku
   display:
     position: left
     width: 100
@@ -157,8 +156,9 @@ live2d:
   mobile:
     show: true
   react:
-    opacityDefault: 0.9 # 默认透明度
-    opacityOnHover: 0.5 # 鼠标移上透明度
+    opacity: 0.7
+#    opacityDefault: 0.9 # 默认透明度
+#    opacityOnHover: 0.5 # 鼠标移上透明度
 #
 # 20200610
 plugins:
