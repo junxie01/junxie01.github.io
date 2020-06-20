@@ -139,7 +139,7 @@ google_adsense:
   siderbar_data_ad_slot: 9164326074 #  slot
 # 20200609
 live2d:
-  enable: false
+  enable: true
   scriptFrom: local
   pluginRootPath: live2dw/
   pluginJsPath: lib/
