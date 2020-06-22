@@ -41,9 +41,9 @@ step 2: Create a database ( in mysql )
 ```
 /usr/local/mysql/bin/mysqladmin status
 ```
-If it is not, run mysqld\_safe to start it: 
+If it is not, run mysqld_safe to start it: 
 ```
-sudo /usr/local/mysql/bin/mysqld\_safe &
+sudo /usr/local/mysql/bin/mysqld_safe &
 ```
 
 2. Set a password for the "root" account on your database server. 
@@ -58,7 +58,7 @@ sudo /usr/local/mysql/bin/mysqld\_safe &
 
 ```
 create database wikidb;
-GRANT ALL ON my\_wiki.* TO 'new_mysql_user'@'localhost';
+GRANT ALL ON my_wiki.* TO 'new_mysql_user'@'localhost';
 grant index, create, select, insert, update, delete, alter, lock tables on wikidb.* to 'wikiuser'@'localhost' identified by 'password’;
 ```
 problem? sometimes this message may show up: 
@@ -71,18 +71,18 @@ In my case, I found a solvation:
 ```
 sudo mysql -u root
 use mysql;
-update user set plugin='mysql\_native\_password' where User='root';
+update user set plugin='mysql_native_password' where User='root';
 flush privileges;
 quit
 reboot
 ```
 
-step3: go to 127.0.0.1/mediawiki, follow the steps.
+step3: go to 127.0.0.1/mediawiki in your browser, follow the steps.
 
 ## Back up wikidb:
 All information are restored in mySQL database, so backup it with command:
 ```
-mysqldump -u[user] -p[password] [databasename] > [dump\_name]
+mysqldump -u[user] -p[password] [databasename] > [dump_name]
 ```
 In my case, it goes like:
 ```
@@ -101,7 +101,7 @@ This means to run backup command in the noon every Monday.
 ## Restore a wikidb in a new computer:
 If you move in to another computer, after installing the mediawiki, run the following commend to restore the backup one.
 ```
-mysql -u[user] -p[password] [database_name] < [dump\_name]
+mysql -u[user] -p[password] [database_name] < [dump_name]
 ```
 In my case, it is:
 ```
