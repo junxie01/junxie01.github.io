@@ -181,8 +181,8 @@ tag_cloud:
 
 # 20200621
 lazyload:
-  enable: true
-  onlypost: false
+  enable: false
+  onlypost: true
   loadingImg: 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
