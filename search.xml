@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>寂寞</title>
+    <url>/2006/06/11/2006061115/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;一只小鼠死了,我很伤心.当听知他的死时,我差点落泪,但是泪水只在眼里转了一转,并没有流下来.我不懂我是怎么了?难到我的良心已在这浊世当中损失殆尽？还是我堕落了？</p>
+]]></content>
+      <categories>
+        <category>网易迁移</category>
+      </categories>
+      <tags>
+        <tag>某日记</tag>
+        <tag>这是啥</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>阿甘</title>
     <url>/2006/11/24/2006112420/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;记得第一次看阿甘正传时，我流泪了！</p>
@@ -20,19 +33,6 @@
       <tags>
         <tag>某日记</tag>
         <tag>阿甘</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>寂寞</title>
-    <url>/2006/06/11/2006061115/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;一只小鼠死了,我很伤心.当听知他的死时,我差点落泪,但是泪水只在眼里转了一转,并没有流下来.我不懂我是怎么了?难到我的良心已在这浊世当中损失殆尽？还是我堕落了？</p>
-]]></content>
-      <categories>
-        <category>网易迁移</category>
-      </categories>
-      <tags>
-        <tag>某日记</tag>
-        <tag>这是啥</tag>
       </tags>
   </entry>
   <entry>
@@ -637,23 +637,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Win7下格掉Linux盘无法启动windows</title>
-    <url>/2013/12/24/2013122401/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;在win7下用系统的磁盘管理工具把原来的fedora14给格了，然后重启就只能进入grub，试了安装盘修复也不行。</p>
-<p>在grub中输入命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">grub&gt;rootnoverify (hd0,0) </span><br><span class="line">grub&gt;makeactive </span><br><span class="line">grub&gt;chainloader +1</span><br><span class="line">grub&gt;boot</span><br></pre></td></tr></table></figure>
-
-<p>&emsp;&emsp;奏效。进入了windows。然后下载clear mbr （还原清新畅快的mbr，大概格掉了grub）。</p>
-<p>然后大功告成。</p>
-]]></content>
-      <categories>
-        <category>网易迁移</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>雾霾齐步走</title>
     <url>/2013/12/09/2013120921/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;据传，雾霾的妈妈叫他回去吃饭了。</p>
@@ -677,6 +660,23 @@
       </categories>
       <tags>
         <tag>乱笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Win7下格掉Linux盘无法启动windows</title>
+    <url>/2013/12/24/2013122401/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;在win7下用系统的磁盘管理工具把原来的fedora14给格了，然后重启就只能进入grub，试了安装盘修复也不行。</p>
+<p>在grub中输入命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">grub&gt;rootnoverify (hd0,0) </span><br><span class="line">grub&gt;makeactive </span><br><span class="line">grub&gt;chainloader +1</span><br><span class="line">grub&gt;boot</span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;奏效。进入了windows。然后下载clear mbr （还原清新畅快的mbr，大概格掉了grub）。</p>
+<p>然后大功告成。</p>
+]]></content>
+      <categories>
+        <category>网易迁移</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
