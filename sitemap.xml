@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.seis-jun.xyz/2020/06/22/mediawiki/</loc>
+    
+    <lastmod>2020-06-22T02:42:33.692Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.seis-jun.xyz/2020/06/18/stop-os-update/</loc>
     
     <lastmod>2020-06-20T17:01:46.666Z</lastmod>
@@ -142,14 +149,14 @@
   </url>
   
   <url>
-    <loc>http://www.seis-jun.xyz/2015/11/01/201511010818/</loc>
+    <loc>http://www.seis-jun.xyz/2015/11/01/2015110108/</loc>
     
     <lastmod>2020-06-12T15:56:52.475Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.seis-jun.xyz/2015/11/01/2015110108/</loc>
+    <loc>http://www.seis-jun.xyz/2015/11/01/201511010818/</loc>
     
     <lastmod>2020-06-12T15:56:52.475Z</lastmod>
     
@@ -254,13 +261,6 @@
   </url>
   
   <url>
-    <loc>http://www.seis-jun.xyz/2010/01/12/2010011223/</loc>
-    
-    <lastmod>2020-06-12T15:56:52.463Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.seis-jun.xyz/2010/01/04/2010010420/</loc>
     
     <lastmod>2020-06-12T15:56:52.463Z</lastmod>
@@ -268,14 +268,21 @@
   </url>
   
   <url>
-    <loc>http://www.seis-jun.xyz/2009/12/23/2009122319/</loc>
+    <loc>http://www.seis-jun.xyz/2010/01/12/2010011223/</loc>
+    
+    <lastmod>2020-06-12T15:56:52.463Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.seis-jun.xyz/2010/01/01/2010010110/</loc>
     
     <lastmod>2020-06-12T15:56:52.462Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.seis-jun.xyz/2010/01/01/2010010110/</loc>
+    <loc>http://www.seis-jun.xyz/2009/12/23/2009122319/</loc>
     
     <lastmod>2020-06-12T15:56:52.462Z</lastmod>
     

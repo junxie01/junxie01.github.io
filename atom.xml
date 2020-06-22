@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2020-06-20T15:09:10.971Z</updated>
+  <updated>2020-06-22T02:42:33.692Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>How to install and backup mediawiki</title>
+    <link href="http://www.seis-jun.xyz/2020/06/22/mediawiki/"/>
+    <id>http://www.seis-jun.xyz/2020/06/22/mediawiki/</id>
+    <published>2020-06-22T02:18:19.000Z</published>
+    <updated>2020-06-22T02:42:33.692Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Meidawiki is a good tool to organise the information and knowledge. I even use it to keep some notes. My first mediawiki was established like in 2012. There are some important informations in my database. Therefore I hope to keep it and run it in every Laptop. This blog keeps the steps on how to install and backup it.&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="http://www.seis-jun.xyz/categories/Linux/"/>
+    
+    
+      <category term="wiki" scheme="http://www.seis-jun.xyz/tags/wiki/"/>
+    
+  </entry>
   
   <entry>
     <title>hexo next首页文章加框</title>
@@ -457,35 +478,6 @@
       <category term="某日记" scheme="http://www.seis-jun.xyz/tags/%E6%9F%90%E6%97%A5%E8%AE%B0/"/>
     
       <category term="血色浪漫" scheme="http://www.seis-jun.xyz/tags/%E8%A1%80%E8%89%B2%E6%B5%AA%E6%BC%AB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>乱2</title>
-    <link href="http://www.seis-jun.xyz/2015/07/08/2015070811/"/>
-    <id>http://www.seis-jun.xyz/2015/07/08/2015070811/</id>
-    <published>2015-07-08T03:07:54.000Z</published>
-    <updated>2020-06-12T15:56:52.474Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="网易迁移" scheme="http://www.seis-jun.xyz/categories/%E7%BD%91%E6%98%93%E8%BF%81%E7%A7%BB/"/>
-    
-    
-      <category term="乱笔" scheme="http://www.seis-jun.xyz/tags/%E4%B9%B1%E7%AC%94/"/>
-    
-      <category term="杂" scheme="http://www.seis-jun.xyz/tags/%E6%9D%82/"/>
     
   </entry>
   
