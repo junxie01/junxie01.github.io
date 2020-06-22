@@ -36,8 +36,8 @@
 <meta property="article:published_time" content="2009-08-12T13:16:00.000Z">
 <meta property="article:modified_time" content="2020-06-12T15:56:52.459Z">
 <meta property="article:author" content="Jun Xie">
-<meta property="article:tag" content="电影">
 <meta property="article:tag" content="日记">
+<meta property="article:tag" content="电影">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://www.seis-jun.xyz/2009/08/12/200908122116/">
@@ -373,8 +373,8 @@
       <footer class="post-footer">
 
           <div class="post-tags">
-              <a href="/tags/%E7%94%B5%E5%BD%B1/" rel="tag"># 电影</a>
               <a href="/tags/%E6%97%A5%E8%AE%B0/" rel="tag"># 日记</a>
+              <a href="/tags/%E7%94%B5%E5%BD%B1/" rel="tag"># 电影</a>
           </div>
 <div>
       
@@ -576,8 +576,8 @@
         mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
         seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
         snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
-        document.getElementById("timeDate").innerHTML = "This blog has been safely running for "+dnum+" days ";
-        document.getElementById("times").innerHTML = hnum + " hours " + mnum + " minutes " + snum + " seconds";
+        document.getElementById("timeDate").innerHTML = "Running safely: "+dnum+" d ";
+        document.getElementById("times").innerHTML = hnum + " h " + mnum + " m " + snum + " s";
     }
 setInterval("createtime()",250);
 </script>
