@@ -31,6 +31,8 @@ date: 2020-06-10 11:18:16
 
 10. 侧边栏圆角[^8]。
 
+11. 运行时间[^9]。
+
 [^1]:https://github.com/kchen0x/hexo-reference
 [^2]:https://blog.csdn.net/as480133937/article/details/100138838
 [^3]:https://blog.csdn.net/Aoman_Hao/article/details/89416634
@@ -39,3 +41,4 @@ date: 2020-06-10 11:18:16
 [^6]:https://juejin.im/post/5c95d230e51d45124e35cef6#comment
 [^7]:https://blog.diqigan.cn/posts/add-background-picture-for-next.html 
 [^8]:http://eternalzttz.com/hexo-next.html
+[^9]:https://www.93bok.com/Hexo网站运行时间添加/
