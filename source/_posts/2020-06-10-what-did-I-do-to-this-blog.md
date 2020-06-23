@@ -16,7 +16,13 @@ date: 2020-06-10 11:18:16
 
 2. 插入脚注[^1]。 
 
-3. 隐藏网页底部 powered By Hexo[^2]。
+3. 隐藏网页底部 powered By Hexo[^2]。但事实上next已经集成了这个功能，直接在next/_config.yml里将powered改为false就可以了，像这样：
+```
+footer：
+   xxx
+   powered: false
+   xxx
+```
 
 4. 设置网站图标[^2]。
 
