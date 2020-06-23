@@ -12,11 +12,13 @@ date: 2020-06-10 11:18:16
 &emsp;&emsp;原本是想记笔记，写一些技术性的东西。然而现在为止好像还没有干啥正事。那我对这个博客做了些什么呢？干了这些：
 <!-- more -->
 
-1. 重新下载了一次next主题，重新配置了一遍。之前不知道从哪里下载的一个山寨版还是啥的，应该是老版本，很多东西都没有。所以重新下载了最新版本。折腾了好久。对了，还干了好多无用功。网上搜来的很多教程版本都比较老。别马上按着别人的办法干，先看看主题的配置文件，或官方的文档。
+## 重新下载了一次next主题
+重新配置了一遍。之前不知道从哪里下载的一个山寨版还是啥的，应该是老版本，很多东西都没有。所以重新下载了最新版本。折腾了好久。对了，还干了好多无用功。网上搜来的很多教程版本都比较老。别马上按着别人的办法干，先看看主题的配置文件，或官方的文档。
 
-2. 插入脚注[^1]。 
+## 插入脚注[^1]。 
 
-3. 隐藏网页底部 powered By Hexo[^2]。但事实上next已经集成了这个功能，直接在next/_config.yml里将powered改为false就可以了，像这样：
+## 隐藏网页底部 powered By Hexo[^2]。
+但事实上next已经集成了这个功能，直接在next/_config.yml里将powered改为false就可以了，像这样：
 ```
 footer：
    xxx
@@ -24,7 +26,8 @@ footer：
    xxx
 ```
 
-4. 设置网站图标[^2]。最终要的是找到自己喜欢的图片放在next/source/images里，然后在next/_config.yml里这样干就好了：
+## 设置网站图标[^2]。
+最重要的是找到自己喜欢的图片放在next/source/images里，然后在next/_config.yml里这样干就好了：
 ```
 favicon:
   small: /images/j-icon-16x16.png
@@ -34,15 +37,17 @@ favicon:
 
 ```
 
-5. 设置标签云。按照这位大仙[^3]的操作弄好了标签云，但是发现它不在正中啊。于是找到了tag cloud的[github](https://github.com/MikeCoder/hexo-tag-cloud)。里面有一句：
+## 设置标签云。
+按照这位大仙[^3]的操作弄好了标签云，但是发现它不在正中啊。于是找到了tag cloud的[github](https://github.com/MikeCoder/hexo-tag-cloud)。里面有一句：
 ```
 <canvas width="250" height="250" id="resCanvas" style="width:100%">
 ```
 那个100%前面是一个冒号，而大仙[^3]写做等号。我发现等号就偏右边，冒号就在正中，很奇怪。
 
-6. 字数和阅读时长统计[^4]。
+## 字数和阅读时长统计[^4]。
 
-7. 添加版权信息。根据此大仙[^5]的说明弄好了以后，发现署名”前面的cc图标老是乱码（一个叉）。那怎么可以，弄了半天没弄好。结果人家next已经集成了。在next/_config.yml里面这样就好了。
+## 添加版权信息。
+根据此大仙[^5]的说明弄好了以后，发现署名”前面的cc图标老是乱码（一个叉）。那怎么可以，弄了半天没弄好。结果人家next已经集成了。在next/_config.yml里面这样就好了。
 ```
 creative_commons:
   license: by-nc-sa
@@ -51,13 +56,33 @@ creative_commons:
   language:
 ```
 
-8. 添加google广告到post里[^6]。
+## 添加google广告到post里[^6]。
 
-9. 加动态背景图片[^7]。动态图片感觉太慢了。我在百度下了一个，有阳光森林，人，牛。感觉还不错，希望不要侵权。
+## 加动态背景图片[^7]。
+动态图片感觉太慢了。我在百度下了一个，有阳光森林，人，牛。感觉还不错，希望不要侵权。
 
-10. 侧边栏圆角[^8]。
-
-11. 运行时间[^9]。
+## 侧边栏圆角[^8]。
+我的Scheme选的是Pisces，所以先在next/source/css/_variables/Pisces.styl里面改一下变量```
+$border-radius                    = 5px;
+```
+然后到next/source/css/_schemes/Pisces/_layout.styl里面的.header-inner(对应菜单栏)字段改
+```
+border-radius: $border-radius;
+```
+在.content-wrap(对应文章页面)字段改
+```
+border-radius: $border-radius;
+```
+如此改完，然后......不对劲。在主页菜单栏和文章页面确实变圆角了，然而站点概况不是圆角。然而往下拖动，直到看不到菜单栏的时候，站点概况就变圆角了，不能忍。所以可能还要改siderbar字段。可惜_layout.styl里面木有。诶，我发现有next/source/css/_schemes/Pisces/_sidebar.styl文件。打开看。果然找到了。.sidebar字段是没有border-radius变量的，于是我添加了
+```
+border-radius: $border-radius;
+```
+除此以外，还看到了.sidebar-inner字段。也一并改了。这下就大功告成了。忘了说。这些字段的另一个变量是background，把它替换成
+```
+background: rgba(255,255,255,0.9);
+```
+就可以让博客变透明了。
+## 运行时间[^9]。
 
 [^1]:https://github.com/kchen0x/hexo-reference
 [^2]:https://blog.csdn.net/as480133937/article/details/100138838
