@@ -1,9 +1,10 @@
 ---
 title: 我对这个博客做了什么
 categories:
-  - 网站
-tags:
   - web
+tags:
+  - hexo
+  - next
 abbrlink: 58531
 date: 2020-06-10 11:18:16
 ---
