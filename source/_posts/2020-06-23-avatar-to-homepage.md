@@ -19,7 +19,7 @@ date: 2020-06-23 09:58:16
        alt="{{ author }}" />
 + </a>
 ```
-&emsp;&emsp;于是我也这么干。但是，然而，怎么我的sidebar.swig没有这个avatar.gif的语句呢。瞎折腾也明白。后来试了一下：
+&emsp;&emsp;于是我也这么干。但是，然而，怎么我的sidebar.swig没有这个avatar.gif的语句呢。瞎折腾半天也没明白。后来试了一下：
 ```
 find . -name sidebar*
 ```
