@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2020-06-22T02:49:36.818Z</updated>
+  <updated>2020-06-23T02:06:52.315Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo next点击头像回到主页</title>
+    <link href="http://www.seis-jun.xyz/2020/06/23/avatar-to-homepage/"/>
+    <id>http://www.seis-jun.xyz/2020/06/23/avatar-to-homepage/</id>
+    <published>2020-06-23T01:58:16.000Z</published>
+    <updated>2020-06-23T02:06:52.315Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&amp;emsp;&amp;emsp;有了头像以后，看到头像一般就想点一点，点击了可以回到主页不是挺好的吗。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="web" scheme="http://www.seis-jun.xyz/categories/web/"/>
+    
+    
+      <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
+    
+      <category term="hexo" scheme="http://www.seis-jun.xyz/tags/hexo/"/>
+    
+      <category term="next" scheme="http://www.seis-jun.xyz/tags/next/"/>
+    
+  </entry>
   
   <entry>
     <title>How to install and backup mediawiki</title>
@@ -271,9 +296,9 @@
     
     
     
-      <category term="hexo" scheme="http://www.seis-jun.xyz/tags/hexo/"/>
-    
       <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
+    
+      <category term="hexo" scheme="http://www.seis-jun.xyz/tags/hexo/"/>
     
   </entry>
   
@@ -449,35 +474,6 @@
     
     
       <category term="乱笔" scheme="http://www.seis-jun.xyz/tags/%E4%B9%B1%E7%AC%94/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>血色乎浪漫</title>
-    <link href="http://www.seis-jun.xyz/2015/11/01/2015110108/"/>
-    <id>http://www.seis-jun.xyz/2015/11/01/2015110108/</id>
-    <published>2015-11-01T00:17:27.000Z</published>
-    <updated>2020-06-12T15:56:52.475Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="网易迁移" scheme="http://www.seis-jun.xyz/categories/%E7%BD%91%E6%98%93%E8%BF%81%E7%A7%BB/"/>
-    
-    
-      <category term="某日记" scheme="http://www.seis-jun.xyz/tags/%E6%9F%90%E6%97%A5%E8%AE%B0/"/>
-    
-      <category term="血色浪漫" scheme="http://www.seis-jun.xyz/tags/%E8%A1%80%E8%89%B2%E6%B5%AA%E6%BC%AB/"/>
     
   </entry>
   
