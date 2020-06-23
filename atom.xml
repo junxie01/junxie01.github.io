@@ -33,11 +33,11 @@
       <category term="web" scheme="http://www.seis-jun.xyz/categories/web/"/>
     
     
-      <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
-    
       <category term="hexo" scheme="http://www.seis-jun.xyz/tags/hexo/"/>
     
       <category term="next" scheme="http://www.seis-jun.xyz/tags/next/"/>
+    
+      <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
     
   </entry>
   
@@ -132,7 +132,7 @@
     <link href="http://www.seis-jun.xyz/2020/06/10/what-did-I-do-to-this-blog/"/>
     <id>http://www.seis-jun.xyz/2020/06/10/what-did-I-do-to-this-blog/</id>
     <published>2020-06-10T03:18:16.000Z</published>
-    <updated>2020-06-22T06:52:28.615Z</updated>
+    <updated>2020-06-23T02:29:41.920Z</updated>
     
     <summary type="html">
     
@@ -141,10 +141,12 @@
     </summary>
     
     
-      <category term="网站" scheme="http://www.seis-jun.xyz/categories/%E7%BD%91%E7%AB%99/"/>
+      <category term="web" scheme="http://www.seis-jun.xyz/categories/web/"/>
     
     
-      <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
+      <category term="hexo" scheme="http://www.seis-jun.xyz/tags/hexo/"/>
+    
+      <category term="next" scheme="http://www.seis-jun.xyz/tags/next/"/>
     
   </entry>
   
@@ -296,9 +298,9 @@
     
     
     
-      <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
-    
       <category term="hexo" scheme="http://www.seis-jun.xyz/tags/hexo/"/>
+    
+      <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
     
   </entry>
   
@@ -325,9 +327,9 @@
       <category term="web" scheme="http://www.seis-jun.xyz/categories/web/"/>
     
     
-      <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
-    
       <category term="next" scheme="http://www.seis-jun.xyz/tags/next/"/>
+    
+      <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
     
   </entry>
   
@@ -348,9 +350,9 @@
       <category term="web" scheme="http://www.seis-jun.xyz/categories/web/"/>
     
     
-      <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
-    
       <category term="next" scheme="http://www.seis-jun.xyz/tags/next/"/>
+    
+      <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
     
   </entry>
   
@@ -371,9 +373,9 @@
       <category term="web" scheme="http://www.seis-jun.xyz/categories/web/"/>
     
     
-      <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
-    
       <category term="next" scheme="http://www.seis-jun.xyz/tags/next/"/>
+    
+      <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
     
   </entry>
   
@@ -415,9 +417,9 @@
       <category term="web" scheme="http://www.seis-jun.xyz/categories/web/"/>
     
     
-      <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
-    
       <category term="next" scheme="http://www.seis-jun.xyz/tags/next/"/>
+    
+      <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
     
   </entry>
   
