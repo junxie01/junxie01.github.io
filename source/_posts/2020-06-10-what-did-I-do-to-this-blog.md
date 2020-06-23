@@ -67,7 +67,8 @@ creative_commons:
 动态图片感觉太慢了。我在百度下了一个，有阳光森林，人，牛。感觉还不错，希望不要侵权。
 
 ## 侧边栏圆角
-搜索到这位大神[^8]。我的Scheme选的是Pisces，所以先在next/source/css/_variables/Pisces.styl里面改一下变量```
+搜索到这位大神[^8]。我的Scheme选的是Pisces，所以先在next/source/css/_variables/Pisces.styl里面改一下变量
+```
 $border-radius                    = 5px;
 ```
 然后到next/source/css/_schemes/Pisces/_layout.styl里面的.header-inner(对应菜单栏)字段改
