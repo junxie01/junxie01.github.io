@@ -111,7 +111,7 @@
     <link href="http://www.seis-jun.xyz/2020/06/12/learn-sed/"/>
     <id>http://www.seis-jun.xyz/2020/06/12/learn-sed/</id>
     <published>2020-06-12T15:09:54.000Z</published>
-    <updated>2020-06-13T06:45:13.208Z</updated>
+    <updated>2020-06-23T09:07:25.324Z</updated>
     
     <summary type="html">
     
@@ -123,7 +123,13 @@
       <category term="Linux" scheme="http://www.seis-jun.xyz/categories/Linux/"/>
     
     
+      <category term="hexo" scheme="http://www.seis-jun.xyz/tags/hexo/"/>
+    
+      <category term="next" scheme="http://www.seis-jun.xyz/tags/next/"/>
+    
       <category term="sed" scheme="http://www.seis-jun.xyz/tags/sed/"/>
+    
+      <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
     
   </entry>
   

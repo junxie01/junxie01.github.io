@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://www.seis-jun.xyz/2020/06/12/learn-sed/</loc>
+    <lastmod>2020-06-23</lastmod>
+  </url>  <url>
     <loc>http://www.seis-jun.xyz/2020/06/10/what-did-I-do-to-this-blog/</loc>
     <lastmod>2020-06-23</lastmod>
   </url>  <url>
@@ -21,9 +24,6 @@
   </url>  <url>
     <loc>http://www.seis-jun.xyz/2020/05/31/donation/</loc>
     <lastmod>2020-06-14</lastmod>
-  </url>  <url>
-    <loc>http://www.seis-jun.xyz/2020/06/12/learn-sed/</loc>
-    <lastmod>2020-06-13</lastmod>
   </url>  <url>
     <loc>http://www.seis-jun.xyz/2020/05/31/word-count/</loc>
     <lastmod>2020-06-12</lastmod>
@@ -52,10 +52,10 @@
     <loc>http://www.seis-jun.xyz/2020/06/05/2020060500/</loc>
     <lastmod>2020-06-12</lastmod>
   </url>  <url>
-    <loc>http://www.seis-jun.xyz/2020/06/03/2020060323/</loc>
+    <loc>http://www.seis-jun.xyz/2020/06/04/2020060401/</loc>
     <lastmod>2020-06-12</lastmod>
   </url>  <url>
-    <loc>http://www.seis-jun.xyz/2020/06/04/2020060401/</loc>
+    <loc>http://www.seis-jun.xyz/2020/06/03/2020060323/</loc>
     <lastmod>2020-06-12</lastmod>
   </url>  <url>
     <loc>http://www.seis-jun.xyz/2020/06/03/20200603/</loc>
@@ -70,10 +70,10 @@
     <loc>http://www.seis-jun.xyz/2015/11/01/201511010818/</loc>
     <lastmod>2020-06-12</lastmod>
   </url>  <url>
-    <loc>http://www.seis-jun.xyz/2013/12/09/2013120921/</loc>
+    <loc>http://www.seis-jun.xyz/2015/07/08/2015070811/</loc>
     <lastmod>2020-06-12</lastmod>
   </url>  <url>
-    <loc>http://www.seis-jun.xyz/2015/07/08/2015070811/</loc>
+    <loc>http://www.seis-jun.xyz/2013/12/09/2013120921/</loc>
     <lastmod>2020-06-12</lastmod>
   </url>  <url>
     <loc>http://www.seis-jun.xyz/2012/04/01/2012040119/</loc>
@@ -124,10 +124,10 @@
     <loc>http://www.seis-jun.xyz/2010/01/01/2010010110/</loc>
     <lastmod>2020-06-12</lastmod>
   </url>  <url>
-    <loc>http://www.seis-jun.xyz/2009/12/14/2009121418/</loc>
+    <loc>http://www.seis-jun.xyz/2009/12/19/2009121913/</loc>
     <lastmod>2020-06-12</lastmod>
   </url>  <url>
-    <loc>http://www.seis-jun.xyz/2009/12/19/2009121913/</loc>
+    <loc>http://www.seis-jun.xyz/2009/12/14/2009121418/</loc>
     <lastmod>2020-06-12</lastmod>
   </url>  <url>
     <loc>http://www.seis-jun.xyz/2009/10/30/2009103019/</loc>
@@ -136,10 +136,10 @@
     <loc>http://www.seis-jun.xyz/2009/11/20/2009112021/</loc>
     <lastmod>2020-06-12</lastmod>
   </url>  <url>
-    <loc>http://www.seis-jun.xyz/2009/08/18/2009081813/</loc>
+    <loc>http://www.seis-jun.xyz/2009/08/12/200908122116/</loc>
     <lastmod>2020-06-12</lastmod>
   </url>  <url>
-    <loc>http://www.seis-jun.xyz/2009/08/12/200908122116/</loc>
+    <loc>http://www.seis-jun.xyz/2009/08/18/2009081813/</loc>
     <lastmod>2020-06-12</lastmod>
   </url>  <url>
     <loc>http://www.seis-jun.xyz/2009/08/12/2009081221/</loc>
