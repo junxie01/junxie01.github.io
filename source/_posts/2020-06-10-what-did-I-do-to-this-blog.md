@@ -39,7 +39,7 @@ favicon:
 
 ```
 
-## 设置标签云。
+## 设置标签云
 按照这位大仙[^3]的操作弄好了标签云，但是发现它不在正中啊。于是找到了tag cloud的[github](https://github.com/MikeCoder/hexo-tag-cloud)。里面有一句：
 ```
 <canvas width="250" height="250" id="resCanvas" style="width:100%">
@@ -49,7 +49,7 @@ favicon:
 ## 字数和阅读时长统计
 请参见[^4]。
 
-## 添加版权信息。
+## 添加版权信息
 根据此大仙[^5]的说明弄好了以后，发现署名”前面的cc图标老是乱码（一个叉）。那怎么可以，弄了半天没弄好。结果人家next已经集成了。在next/_config.yml里面这样就好了。
 ```
 creative_commons:
