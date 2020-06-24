@@ -115,6 +115,13 @@ pretty_urls:
 
 设置请查看{% post_link frame 这篇文章 %}
 
+## 封面模式
+参见[^11]。下载这个插件：
+```
+npm install --save hexo-less
+```
+然后作用与<!--more-->类似，但<!--less-->前面的部分不会显示到文章主题部分。
+
 
  [^1]:https://github.com/kchen0x/hexo-reference
  [^2]:https://blog.csdn.net/as480133937/article/details/100138838
@@ -126,3 +133,4 @@ pretty_urls:
  [^8]:http://eternalzttz.com/hexo-next.html
  [^9]:https://www.93bok.com/Hexo网站运行时间添加/
 [^10]:https://github.com/Rozbo/hexo-abbrlink
+[^11]:https://github.com/fuchen/hexo-less
