@@ -127,9 +127,9 @@
     
       <category term="next" scheme="http://www.seis-jun.xyz/tags/next/"/>
     
-      <category term="sed" scheme="http://www.seis-jun.xyz/tags/sed/"/>
-    
       <category term="hexo" scheme="http://www.seis-jun.xyz/tags/hexo/"/>
+    
+      <category term="sed" scheme="http://www.seis-jun.xyz/tags/sed/"/>
     
   </entry>
   
@@ -138,7 +138,7 @@
     <link href="http://www.seis-jun.xyz/posts/58531/"/>
     <id>http://www.seis-jun.xyz/posts/58531/</id>
     <published>2020-06-10T03:18:16.000Z</published>
-    <updated>2020-06-24T16:57:21.112Z</updated>
+    <updated>2020-06-24T17:05:15.288Z</updated>
     
     <summary type="html">
     
@@ -196,7 +196,7 @@
 &lt;h2 id=&quot;封面模式&quot;&gt;&lt;a href=&quot;#封面模式&quot; class=&quot;headerlink&quot; title=&quot;封面模式&quot;&gt;&lt;/a&gt;封面模式&lt;/h2&gt;&lt;p&gt;参见&lt;sup id=&quot;fnref:11&quot;&gt;&lt;a href=&quot;#fn:11&quot; rel=&quot;footnote&quot;&gt;&lt;span class=&quot;hint--top hint--error hint--medium hint--rounded hint--bounce&quot; aria-label=&quot;https://github.com/fuchen/hexo-less
 &quot;&gt;[11]&lt;/span&gt;&lt;/a&gt;&lt;/sup&gt;。下载这个插件：&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;npm install --save hexo-less&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;然后作用与&lt;!--more--&gt;类似，但
+&lt;p&gt;然后作用与’&lt;!--more--&gt;‘类似，但’
     
     </summary>
     
