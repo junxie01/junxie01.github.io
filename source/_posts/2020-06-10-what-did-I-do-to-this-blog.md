@@ -88,9 +88,35 @@ border-radius: $border-radius;
 background: rgba(255,255,255,0.9);
 ```
 就可以让博客变透明了。
+
 ## 运行时间
-参见[^9]。
+
+参见[^9]。找到/next/layout/_partials/footer.swig，在里面添加：
+```
+<div>
+<span id="timeDate">Loading days...</span><span id="times">Loading sec....</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("05/26/2020 00:00:00");
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "Running safely for: "+dnum+" d ";
+        document.getElementById("times").innerHTML = hnum + " h " + mnum + " m " + snum + " s";
+    }
+setInterval("createtime()",250);
+</script>
+</div>
+```
+本来大神[^9]是写的中文，但我的出来是乱码，就改成了英文了。
+
 ## 永久链接permalink
+
 参见[^10]。首先安装程序：
 ```
 npm install hexo-abbrlink --save
