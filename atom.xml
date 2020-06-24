@@ -226,7 +226,7 @@
     <link href="http://www.seis-jun.xyz/2020/06/03/2020060323/"/>
     <id>http://www.seis-jun.xyz/2020/06/03/2020060323/</id>
     <published>2020-06-03T15:23:36.000Z</published>
-    <updated>2020-06-12T15:56:52.478Z</updated>
+    <updated>2020-06-24T03:10:12.933Z</updated>
     
     <summary type="html">
     
@@ -237,8 +237,6 @@
     
       <category term="日记" scheme="http://www.seis-jun.xyz/categories/%E6%97%A5%E8%AE%B0/"/>
     
-    
-      <category term="日记" scheme="http://www.seis-jun.xyz/tags/%E6%97%A5%E8%AE%B0/"/>
     
       <category term="博客" scheme="http://www.seis-jun.xyz/tags/%E5%8D%9A%E5%AE%A2/"/>
     
@@ -434,7 +432,7 @@
     <link href="http://www.seis-jun.xyz/2015/11/01/201511010820/"/>
     <id>http://www.seis-jun.xyz/2015/11/01/201511010820/</id>
     <published>2015-11-01T00:20:59.000Z</published>
-    <updated>2020-06-12T15:56:52.476Z</updated>
+    <updated>2020-06-24T03:13:16.734Z</updated>
     
     <summary type="html">
     
@@ -449,10 +447,8 @@
     </summary>
     
     
-      <category term="网易迁移" scheme="http://www.seis-jun.xyz/categories/%E7%BD%91%E6%98%93%E8%BF%81%E7%A7%BB/"/>
+      <category term="乱笔" scheme="http://www.seis-jun.xyz/categories/%E4%B9%B1%E7%AC%94/"/>
     
-    
-      <category term="乱笔" scheme="http://www.seis-jun.xyz/tags/%E4%B9%B1%E7%AC%94/"/>
     
       <category term="妖怪" scheme="http://www.seis-jun.xyz/tags/%E5%A6%96%E6%80%AA/"/>
     
@@ -463,7 +459,7 @@
     <link href="http://www.seis-jun.xyz/2015/11/01/201511010818/"/>
     <id>http://www.seis-jun.xyz/2015/11/01/201511010818/</id>
     <published>2015-11-01T00:18:22.000Z</published>
-    <updated>2020-06-12T15:56:52.475Z</updated>
+    <updated>2020-06-24T03:13:09.075Z</updated>
     
     <summary type="html">
     
@@ -478,10 +474,8 @@
     </summary>
     
     
-      <category term="网易迁移" scheme="http://www.seis-jun.xyz/categories/%E7%BD%91%E6%98%93%E8%BF%81%E7%A7%BB/"/>
+      <category term="乱笔" scheme="http://www.seis-jun.xyz/categories/%E4%B9%B1%E7%AC%94/"/>
     
-    
-      <category term="乱笔" scheme="http://www.seis-jun.xyz/tags/%E4%B9%B1%E7%AC%94/"/>
     
   </entry>
   
