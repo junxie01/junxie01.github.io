@@ -113,7 +113,7 @@ pretty_urls:
 
 ## 首页文章加框
 
-设置请查看{% post_link frame 这篇文章 %}
+设置请查看{% post_link frame %}
 
 ## 封面模式
 参见[^11]。下载这个插件：
