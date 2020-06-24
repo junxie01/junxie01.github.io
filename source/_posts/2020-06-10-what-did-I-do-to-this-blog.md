@@ -120,7 +120,17 @@ pretty_urls:
 ```
 npm install --save hexo-less
 ```
-然后作用与<!--more-->类似，但<!--less-->前面的部分不会显示到文章主题部分。
+然后作用与'<!--more-->'类似，但'<!--less-->'前面的部分不会显示到文章主题部分。
+
+## 站内引用语法
+这样:
+```
+{% post_link post_name %}
+```
+出来默认是博文题目，或者自己取个名字。
+```
+{% post_link post_name 点击查看%}
+```
 
 
  [^1]:https://github.com/kchen0x/hexo-reference
