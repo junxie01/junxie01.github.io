@@ -108,19 +108,21 @@ pretty_urls:
 ```
 大功搞成。
 
-//## 站内引用。
-//{% post_link avatar-to-homepage 点击这里查看这篇文章 %}
-
 ## 点击头像回到主页
-{% post_link avatar-to-homepage 点击这里查看这篇文章 %}
+设置请查看{% post_link avatar-to-homepage 这篇文章 %}
 
-[^1]:https://github.com/kchen0x/hexo-reference
-[^2]:https://blog.csdn.net/as480133937/article/details/100138838
-[^3]:https://blog.csdn.net/Aoman_Hao/article/details/89416634
-[^4]:https://github.com/theme-next/hexo-symbols-count-time
-[^5]:https://wylu.me/posts/e0424f3f/
-[^6]:https://juejin.im/post/5c95d230e51d45124e35cef6#comment
-[^7]:https://blog.diqigan.cn/posts/add-background-picture-for-next.html 
-[^8]:http://eternalzttz.com/hexo-next.html
-[^9]:https://www.93bok.com/Hexo网站运行时间添加/
-[^10]:https://hexo.io/zh-cn/docs/permalinks.html
+## 首页文章加框
+
+设置请查看{% post_link frame 这篇文章 %}
+
+
+ [^1]:https://github.com/kchen0x/hexo-reference
+ [^2]:https://blog.csdn.net/as480133937/article/details/100138838
+ [^3]:https://blog.csdn.net/Aoman_Hao/article/details/89416634
+ [^4]:https://github.com/theme-next/hexo-symbols-count-time
+ [^5]:https://wylu.me/posts/e0424f3f/
+ [^6]:https://juejin.im/post/5c95d230e51d45124e35cef6#comment
+ [^7]:https://blog.diqigan.cn/posts/add-background-picture-for-next.html 
+ [^8]:http://eternalzttz.com/hexo-next.html
+ [^9]:https://www.93bok.com/Hexo网站运行时间添加/
+[^10]:https://github.com/Rozbo/hexo-abbrlink
