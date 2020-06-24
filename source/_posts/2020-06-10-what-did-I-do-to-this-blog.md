@@ -90,6 +90,23 @@ background: rgba(255,255,255,0.9);
 就可以让博客变透明了。
 ## 运行时间
 参见[^9]。
+## 永久链接permalink
+参见[^10]。首先安装程序：
+```
+npm install hexo-abbrlink --save
+```
+然后在_config.yml中设置：
+```
+permalink: posts/:abbrlink/
+abbrlink:
+  alg: crc32
+  rep: hex
+permalink_defaults:
+pretty_urls:
+  trailing_index: false # Set to false to remove trailing 'index.html' from permalinks
+  trailing_html: false # Set to false to remove trailing '.html' from permalinks
+```
+大功搞成。
 
 [^1]:https://github.com/kchen0x/hexo-reference
 [^2]:https://blog.csdn.net/as480133937/article/details/100138838
@@ -100,3 +117,4 @@ background: rgba(255,255,255,0.9);
 [^7]:https://blog.diqigan.cn/posts/add-background-picture-for-next.html 
 [^8]:http://eternalzttz.com/hexo-next.html
 [^9]:https://www.93bok.com/Hexo网站运行时间添加/
+[^10]:https://hexo.io/zh-cn/docs/permalinks.html
