@@ -108,6 +108,9 @@ pretty_urls:
 ```
 大功搞成。
 
+## 站内引用。
+{% post_link 2020-06-23-avatar-to-homepage 点击这里查看这篇文章 %}
+
 [^1]:https://github.com/kchen0x/hexo-reference
 [^2]:https://blog.csdn.net/as480133937/article/details/100138838
 [^3]:https://blog.csdn.net/Aoman_Hao/article/details/89416634
