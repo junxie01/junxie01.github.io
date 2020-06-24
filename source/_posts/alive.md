@@ -1,8 +1,7 @@
 ---
 title: 活着or霸王别姬
-categories: 网易迁移
+categories: 杂
 tags:
-  - 杂
   - 电影
   - 活着
   - 霸王别姬
