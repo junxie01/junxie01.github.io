@@ -8,7 +8,9 @@ subtitle: 'Jun Xie的博客'
 description: '地震学技术'
 keywords:
 author: Jun Xie
-language: zh-CN
+language: 
+  - zh-CN
+  - en
 timezone: ''
 
 # URL
