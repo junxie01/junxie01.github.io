@@ -127,9 +127,9 @@
     
       <category term="next" scheme="http://www.seis-jun.xyz/tags/next/"/>
     
-      <category term="hexo" scheme="http://www.seis-jun.xyz/tags/hexo/"/>
-    
       <category term="sed" scheme="http://www.seis-jun.xyz/tags/sed/"/>
+    
+      <category term="hexo" scheme="http://www.seis-jun.xyz/tags/hexo/"/>
     
   </entry>
   
@@ -138,7 +138,7 @@
     <link href="http://www.seis-jun.xyz/posts/58531/"/>
     <id>http://www.seis-jun.xyz/posts/58531/</id>
     <published>2020-06-10T03:18:16.000Z</published>
-    <updated>2020-06-24T16:46:26.241Z</updated>
+    <updated>2020-06-24T16:57:21.112Z</updated>
     
     <summary type="html">
     
@@ -192,7 +192,7 @@
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;permalink: posts&amp;#x2F;:abbrlink&amp;#x2F;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;abbrlink:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  alg: crc32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  rep: hex&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;permalink_defaults:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pretty_urls:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  trailing_index: false # Set to false to remove trailing &amp;#39;index.html&amp;#39; from permalinks&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  trailing_html: false # Set to false to remove trailing &amp;#39;.html&amp;#39; from permalinks&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;大功搞成。&lt;/p&gt;
 &lt;h2 id=&quot;点击头像回到主页&quot;&gt;&lt;a href=&quot;#点击头像回到主页&quot; class=&quot;headerlink&quot; title=&quot;点击头像回到主页&quot;&gt;&lt;/a&gt;点击头像回到主页&lt;/h2&gt;&lt;p&gt;设置请查看&lt;a href=&quot;/posts/26129/&quot; title=&quot;这篇文章&quot;&gt;这篇文章&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;首页文章加框&quot;&gt;&lt;a href=&quot;#首页文章加框&quot; class=&quot;headerlink&quot; title=&quot;首页文章加框&quot;&gt;&lt;/a&gt;首页文章加框&lt;/h2&gt;&lt;p&gt;设置请查看&lt;a href=&quot;/posts/33070/&quot; title=&quot;这篇文章&quot;&gt;这篇文章&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;首页文章加框&quot;&gt;&lt;a href=&quot;#首页文章加框&quot; class=&quot;headerlink&quot; title=&quot;首页文章加框&quot;&gt;&lt;/a&gt;首页文章加框&lt;/h2&gt;&lt;p&gt;设置请查看&lt;a href=&quot;/posts/33070/&quot; title=&quot;hexo next首页文章加框&quot;&gt;hexo next首页文章加框&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;封面模式&quot;&gt;&lt;a href=&quot;#封面模式&quot; class=&quot;headerlink&quot; title=&quot;封面模式&quot;&gt;&lt;/a&gt;封面模式&lt;/h2&gt;&lt;p&gt;参见&lt;sup id=&quot;fnref:11&quot;&gt;&lt;a href=&quot;#fn:11&quot; rel=&quot;footnote&quot;&gt;&lt;span class=&quot;hint--top hint--error hint--medium hint--rounded hint--bounce&quot; aria-label=&quot;https://github.com/fuchen/hexo-less
 &quot;&gt;[11]&lt;/span&gt;&lt;/a&gt;&lt;/sup&gt;。下载这个插件：&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;npm install --save hexo-less&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
