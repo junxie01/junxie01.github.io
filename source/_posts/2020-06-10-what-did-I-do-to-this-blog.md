@@ -12,7 +12,7 @@ date: 2020-06-10 11:18:16
 &emsp;&emsp;原本是想记笔记，写一些技术性的东西。然而现在为止好像还没有干啥正事。那我对这个博客做了些什么呢？干了这些：
 <!-- more -->
 
-## 主题安装
+## 重新配置 
 按{% post_link how-I-build-this-web 这个步骤 %}重新配置了一遍。之前不知道从哪里下载的一个山寨版还是啥的，应该是老版本，很多东西都没有。所以重新下载了最新版本。折腾了好久。对了，还干了好多无用功。网上搜来的很多教程版本都比较老。别马上按着别人的办法干，先看看主题的配置文件，或官方的文档。
 
 ## 插入脚注
@@ -104,6 +104,23 @@ creative_commons:
 ## 点击头像回到主页
 设置请查看{% post_link avatar-to-homepage 这篇文章 %}
 
+## 永久链接permalink
+参见[^10]。首先安装程序：
+```
+npm install hexo-abbrlink --save
+```
+然后在_config.yml中设置：
+```
+permalink: posts/:abbrlink/
+abbrlink:
+  alg: crc32
+  rep: hex
+permalink_defaults:
+pretty_urls:
+  trailing_index: false # Set to false to remove trailing 'index.html' from permalinks
+  trailing_html: false # Set to false to remove trailing '.html' from permalinks
+```
+
 ## footer添加运行时间
 
 参见[^9]。找到/next/layout/_partials/footer.swig，在里面添加：
@@ -131,30 +148,12 @@ setInterval("createtime()",250);
 本来大神[^9]是写的中文，但我的出来是乱码，就改成了英文了。
 
 
-## 永久链接permalink
-
-参见[^10]。首先安装程序：
-```
-npm install hexo-abbrlink --save
-```
-然后在_config.yml中设置：
-```
-permalink: posts/:abbrlink/
-abbrlink:
-  alg: crc32
-  rep: hex
-permalink_defaults:
-pretty_urls:
-  trailing_index: false # Set to false to remove trailing 'index.html' from permalinks
-  trailing_html: false # Set to false to remove trailing '.html' from permalinks
-```
-大功搞成。
 
 ## 字数和阅读时长统计
 请参见[^4]，或者请查看{% post_link word-count %}。
 
 
-## 添加google广告到post里
+## 添加google广告到post
 参见[^6]。
 
 ## 隐藏网页底部 powered By Hexo
