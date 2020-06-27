@@ -18,25 +18,19 @@ date: 2020-06-10 11:18:16
 ## 插入脚注
 请参见此神仙[^1]。 
 
-## 隐藏网页底部 powered By Hexo
-股沟出此大神[^2]的方法。
-但事实上next已经集成了这个功能，直接在next/_config.yml里将powered改为false就可以了，像这样：
+## 封面模式
+参见[^11]。下载这个插件：
 ```
-footer：
-   xxx
-   powered: false
-   xxx
+npm install --save hexo-less
 ```
-
-## 设置网站图标
-同样来自这位大神[^2]。最重要的是找到自己喜欢的图片放在next/source/images里，然后在next/_config.yml里这样干就好了：
+语法是在封面后面加上
 ```
-favicon:
-  small: /images/j-icon-16x16.png
-  medium: /images/j-icon-32x32.png
-  apple_touch_icon: /images/icon.png
-  safari_pinned_tab: /images/icon.png
-
+<!--less-->
+```
+这样前面的部分不会显示到文章主题部分。可以搞一张图片就完美了。
+```
+![封面](图片地址)
+<!--less->
 ```
 
 ## 设置标签云
@@ -45,26 +39,6 @@ favicon:
 <canvas width="250" height="250" id="resCanvas" style="width:100%">
 ```
 那个100%前面是一个冒号，而大仙[^3]写做等号。我发现等号就偏右边，冒号就在正中，很奇怪。
-
-## 字数和阅读时长统计
-请参见[^4]。
-
-## 添加版权信息
-根据此大仙[^5]的说明弄好了以后，发现署名”前面的cc图标老是乱码（一个叉）。那怎么可以，弄了半天没弄好。结果人家next已经集成了。在next/_config.yml里面这样就好了。
-```
-creative_commons:
-  license: by-nc-sa
-  sidebar: true
-  post: true
-  language:
-```
-
-## 添加google广告到post里
-参见[^6]。
-
-## 加动态背景图片
-根据这位大仙[^7]的方法弄的。
-动态图片感觉太慢了。我在百度下了一个，有阳光森林，人，牛。感觉还不错，希望不要侵权。
 
 ## 侧边栏圆角
 搜索到这位大神[^8]。我的Scheme选的是Pisces，所以先在next/source/css/_variables/Pisces.styl里面改一下变量
@@ -89,7 +63,48 @@ background: rgba(255,255,255,0.9);
 ```
 就可以让博客变透明了。
 
-## 运行时间
+## 站内引用语法
+这样:
+```
+{% post_link post_name %}
+```
+出来默认是博文题目，或者自己取个名字。
+```
+{% post_link post_name 点击查看%}
+```
+
+## 设置网站图标
+同样来自这位大神[^2]。最重要的是找到自己喜欢的图片放在next/source/images里，然后在next/_config.yml里这样干就好了：
+```
+favicon:
+  small: /images/j-icon-16x16.png
+  medium: /images/j-icon-32x32.png
+  apple_touch_icon: /images/icon.png
+  safari_pinned_tab: /images/icon.png
+
+```
+
+## 首页文章加框
+设置请查看{% post_link frame %}
+
+## 添加版权信息
+根据此大仙[^5]的说明弄好了以后，发现署名”前面的cc图标老是乱码（一个叉）。那怎么可以，弄了半天没弄好。结果人家next已经集成了。在next/_config.yml里面这样就好了。
+```
+creative_commons:
+  license: by-nc-sa
+  sidebar: true
+  post: true
+  language:
+```
+
+## 加动态背景图片
+根据这位大仙[^7]的方法弄的。
+动态图片感觉太慢了。我在百度下了一个，有阳光森林，人，牛。感觉还不错，希望不要侵权。
+
+## 点击头像回到主页
+设置请查看{% post_link avatar-to-homepage 这篇文章 %}
+
+## footer添加运行时间
 
 参见[^9]。找到/next/layout/_partials/footer.swig，在里面添加：
 ```
@@ -115,6 +130,7 @@ setInterval("createtime()",250);
 ```
 本来大神[^9]是写的中文，但我的出来是乱码，就改成了英文了。
 
+
 ## 永久链接permalink
 
 参见[^10]。首先安装程序：
@@ -134,37 +150,23 @@ pretty_urls:
 ```
 大功搞成。
 
-## 点击头像回到主页
-设置请查看{% post_link avatar-to-homepage 这篇文章 %}
+## 字数和阅读时长统计
+请参见[^4]，或者请查看{% post_link word-count %}。
 
-## 首页文章加框
 
-设置请查看{% post_link frame %}
+## 添加google广告到post里
+参见[^6]。
 
-## 封面模式
-参见[^11]。下载这个插件：
+## 隐藏网页底部 powered By Hexo
+股沟出此大神[^2]的方法。
+但事实上next已经集成了这个功能，直接在next/_config.yml里将powered改为false就可以了，像这样：
 ```
-npm install --save hexo-less
-```
-语法是在封面后面加上
-```
-<!--less-->
-```
-这样前面的部分不会显示到文章主题部分。可以搞一张图片就完美了。
-```
-![封面](图片地址)
-<!--less->
+footer：
+   xxx
+   powered: false
+   xxx
 ```
 
-## 站内引用语法
-这样:
-```
-{% post_link post_name %}
-```
-出来默认是博文题目，或者自己取个名字。
-```
-{% post_link post_name 点击查看%}
-```
 
 
  [^1]:https://github.com/kchen0x/hexo-reference
