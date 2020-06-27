@@ -18,8 +18,8 @@
   
   <entry>
     <title>hexo next点击头像回到主页</title>
-    <link href="http://www.seis-jun.xyz/posts/26129/"/>
-    <id>http://www.seis-jun.xyz/posts/26129/</id>
+    <link href="http://www.seis-jun.xyz/avatar-to-homepage"/>
+    <id>http://www.seis-jun.xyz/avatar-to-homepage</id>
     <published>2020-06-23T01:58:16.000Z</published>
     <updated>2020-06-23T07:06:04.235Z</updated>
     
@@ -43,8 +43,8 @@
   
   <entry>
     <title>How to install and backup mediawiki</title>
-    <link href="http://www.seis-jun.xyz/posts/10861/"/>
-    <id>http://www.seis-jun.xyz/posts/10861/</id>
+    <link href="http://www.seis-jun.xyz/mediawiki"/>
+    <id>http://www.seis-jun.xyz/mediawiki</id>
     <published>2020-06-22T02:18:19.000Z</published>
     <updated>2020-06-22T02:49:36.818Z</updated>
     
@@ -64,8 +64,8 @@
   
   <entry>
     <title>hexo next首页文章加框</title>
-    <link href="http://www.seis-jun.xyz/posts/33070/"/>
-    <id>http://www.seis-jun.xyz/posts/33070/</id>
+    <link href="http://www.seis-jun.xyz/frame"/>
+    <id>http://www.seis-jun.xyz/frame</id>
     <published>2020-06-20T14:42:59.000Z</published>
     <updated>2020-06-20T15:09:10.971Z</updated>
     
@@ -87,8 +87,8 @@
   
   <entry>
     <title>如何让Elementary OS取消自动更新检查</title>
-    <link href="http://www.seis-jun.xyz/posts/47982/"/>
-    <id>http://www.seis-jun.xyz/posts/47982/</id>
+    <link href="http://www.seis-jun.xyz/stop-os-update"/>
+    <id>http://www.seis-jun.xyz/stop-os-update</id>
     <published>2020-06-18T02:24:18.000Z</published>
     <updated>2020-06-20T17:01:46.666Z</updated>
     
@@ -108,8 +108,8 @@
   
   <entry>
     <title>sed插入和删除匹配行</title>
-    <link href="http://www.seis-jun.xyz/posts/51976/"/>
-    <id>http://www.seis-jun.xyz/posts/51976/</id>
+    <link href="http://www.seis-jun.xyz/learn-sed"/>
+    <id>http://www.seis-jun.xyz/learn-sed</id>
     <published>2020-06-12T15:09:54.000Z</published>
     <updated>2020-06-23T09:07:37.185Z</updated>
     
@@ -135,8 +135,8 @@
   
   <entry>
     <title>我对这个博客做了什么</title>
-    <link href="http://www.seis-jun.xyz/posts/58531/"/>
-    <id>http://www.seis-jun.xyz/posts/58531/</id>
+    <link href="http://www.seis-jun.xyz/what-did-I-do-to-this-blog"/>
+    <id>http://www.seis-jun.xyz/what-did-I-do-to-this-blog</id>
     <published>2020-06-10T03:18:16.000Z</published>
     <updated>2020-06-27T05:47:07.127Z</updated>
     
@@ -158,8 +158,8 @@
   
   <entry>
     <title>不继续搬迁网易博客了</title>
-    <link href="http://www.seis-jun.xyz/posts/12006/"/>
-    <id>http://www.seis-jun.xyz/posts/12006/</id>
+    <link href="http://www.seis-jun.xyz/2020060513"/>
+    <id>http://www.seis-jun.xyz/2020060513</id>
     <published>2020-06-05T05:50:38.000Z</published>
     <updated>2020-06-12T15:56:52.480Z</updated>
     
@@ -179,8 +179,8 @@
   
   <entry>
     <title>历史和反演</title>
-    <link href="http://www.seis-jun.xyz/posts/52263/"/>
-    <id>http://www.seis-jun.xyz/posts/52263/</id>
+    <link href="http://www.seis-jun.xyz/history-and-inversion"/>
+    <id>http://www.seis-jun.xyz/history-and-inversion</id>
     <published>2020-06-04T16:57:47.000Z</published>
     <updated>2020-06-12T15:56:52.479Z</updated>
     
@@ -202,8 +202,8 @@
   
   <entry>
     <title>Eric的趣事</title>
-    <link href="http://www.seis-jun.xyz/posts/14404/"/>
-    <id>http://www.seis-jun.xyz/posts/14404/</id>
+    <link href="http://www.seis-jun.xyz/2020060401"/>
+    <id>http://www.seis-jun.xyz/2020060401</id>
     <published>2020-06-03T17:00:58.000Z</published>
     <updated>2020-06-12T15:56:52.478Z</updated>
     
@@ -223,8 +223,8 @@
   
   <entry>
     <title>网易博客迁移</title>
-    <link href="http://www.seis-jun.xyz/posts/23445/"/>
-    <id>http://www.seis-jun.xyz/posts/23445/</id>
+    <link href="http://www.seis-jun.xyz/2020060323"/>
+    <id>http://www.seis-jun.xyz/2020060323</id>
     <published>2020-06-03T15:23:36.000Z</published>
     <updated>2020-06-24T03:10:12.933Z</updated>
     
@@ -246,8 +246,8 @@
   
   <entry>
     <title>关于写日记</title>
-    <link href="http://www.seis-jun.xyz/posts/60083/"/>
-    <id>http://www.seis-jun.xyz/posts/60083/</id>
+    <link href="http://www.seis-jun.xyz/20200603"/>
+    <id>http://www.seis-jun.xyz/20200603</id>
     <published>2020-06-03T14:54:38.000Z</published>
     <updated>2020-06-12T15:56:52.477Z</updated>
     
@@ -267,8 +267,8 @@
   
   <entry>
     <title>如何备份hexo</title>
-    <link href="http://www.seis-jun.xyz/posts/61239/"/>
-    <id>http://www.seis-jun.xyz/posts/61239/</id>
+    <link href="http://www.seis-jun.xyz/how-to-backup"/>
+    <id>http://www.seis-jun.xyz/how-to-backup</id>
     <published>2020-05-31T05:52:53.000Z</published>
     <updated>2020-06-12T15:56:52.486Z</updated>
     
@@ -289,8 +289,8 @@
   
   <entry>
     <title>hexo免密发布</title>
-    <link href="http://www.seis-jun.xyz/posts/55505/"/>
-    <id>http://www.seis-jun.xyz/posts/55505/</id>
+    <link href="http://www.seis-jun.xyz/no-passwd-for-deploy"/>
+    <id>http://www.seis-jun.xyz/no-passwd-for-deploy</id>
     <published>2020-05-30T19:23:55.000Z</published>
     <updated>2020-06-12T15:56:52.487Z</updated>
     
@@ -310,8 +310,8 @@
   
   <entry>
     <title>hexo图片显示</title>
-    <link href="http://www.seis-jun.xyz/posts/25823/"/>
-    <id>http://www.seis-jun.xyz/posts/25823/</id>
+    <link href="http://www.seis-jun.xyz/picture-view"/>
+    <id>http://www.seis-jun.xyz/picture-view</id>
     <published>2020-05-30T18:26:29.000Z</published>
     <updated>2020-06-12T15:56:52.487Z</updated>
     
@@ -339,8 +339,8 @@
   
   <entry>
     <title>hexo next开启打赏</title>
-    <link href="http://www.seis-jun.xyz/posts/14072/"/>
-    <id>http://www.seis-jun.xyz/posts/14072/</id>
+    <link href="http://www.seis-jun.xyz/donation"/>
+    <id>http://www.seis-jun.xyz/donation</id>
     <published>2020-05-30T18:04:57.000Z</published>
     <updated>2020-06-14T16:41:16.803Z</updated>
     
@@ -362,8 +362,8 @@
   
   <entry>
     <title>next网站字数统计</title>
-    <link href="http://www.seis-jun.xyz/posts/22869/"/>
-    <id>http://www.seis-jun.xyz/posts/22869/</id>
+    <link href="http://www.seis-jun.xyz/word-count"/>
+    <id>http://www.seis-jun.xyz/word-count</id>
     <published>2020-05-30T17:29:36.000Z</published>
     <updated>2020-06-12T15:56:52.489Z</updated>
     
@@ -385,8 +385,8 @@
   
   <entry>
     <title>文章意见回复</title>
-    <link href="http://www.seis-jun.xyz/posts/64628/"/>
-    <id>http://www.seis-jun.xyz/posts/64628/</id>
+    <link href="http://www.seis-jun.xyz/reply-to-review"/>
+    <id>http://www.seis-jun.xyz/reply-to-review</id>
     <published>2020-05-29T17:21:16.000Z</published>
     <updated>2020-06-12T15:56:52.488Z</updated>
     
@@ -406,8 +406,8 @@
   
   <entry>
     <title>这个网站是怎么来的</title>
-    <link href="http://www.seis-jun.xyz/posts/25921/"/>
-    <id>http://www.seis-jun.xyz/posts/25921/</id>
+    <link href="http://www.seis-jun.xyz/how-I-build-this-web"/>
+    <id>http://www.seis-jun.xyz/how-I-build-this-web</id>
     <published>2020-05-25T17:21:16.000Z</published>
     <updated>2020-06-12T15:56:52.486Z</updated>
     
@@ -429,8 +429,8 @@
   
   <entry>
     <title>跟伴</title>
-    <link href="http://www.seis-jun.xyz/posts/42749/"/>
-    <id>http://www.seis-jun.xyz/posts/42749/</id>
+    <link href="http://www.seis-jun.xyz/201511010820"/>
+    <id>http://www.seis-jun.xyz/201511010820</id>
     <published>2015-11-01T00:20:59.000Z</published>
     <updated>2020-06-24T03:13:16.734Z</updated>
     
@@ -456,8 +456,8 @@
   
   <entry>
     <title>启程去玛雅一</title>
-    <link href="http://www.seis-jun.xyz/posts/47069/"/>
-    <id>http://www.seis-jun.xyz/posts/47069/</id>
+    <link href="http://www.seis-jun.xyz/201511010818"/>
+    <id>http://www.seis-jun.xyz/201511010818</id>
     <published>2015-11-01T00:18:22.000Z</published>
     <updated>2020-06-24T03:13:09.075Z</updated>
     
