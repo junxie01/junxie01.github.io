@@ -1,39 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>寂寞</title>
-    <url>/posts/64007/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;一只小鼠死了,我很伤心.当听知他的死时,我差点落泪,但是泪水只在眼里转了一转,并没有流下来.我不懂我是怎么了?难到我的良心已在这浊世当中损失殆尽？还是我堕落了？</p>
-]]></content>
-      <categories>
-        <category>某日记</category>
-      </categories>
-      <tags>
-        <tag>这是啥</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>阿甘</title>
-    <url>/posts/44237/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;记得第一次看阿甘正传时，我流泪了！</p>
-<p>&emsp;&emsp;阿甘的妈妈临死前，对阿甘说的话我开始觉得奇怪，同学告诉我说：她是用她自己的语言来让她的儿子明白……</p>
-<p>&emsp;&emsp;阿甘的妻子死的时候，她问阿甘跑步都看到了什么？阿甘说看到了美丽的山谷，看到了平静的湖水，看到了天地相接……她说要是她也在就好了！阿甘说：You were!（你一直和我在一起）</p>
-<p>&emsp;&emsp;虽说我也和阿甘一样笨，但却没有他那样的运气！</p>
-<p>&emsp;&emsp;运气？</p>
-<p>&emsp;&emsp;哈！</p>
-<p>&emsp;&emsp;世上哪儿来的运气？</p>
-<p>&emsp;&emsp;究其原因，阿甘并不是靠运气，而是靠一颗执著的心！我不能把他的心移植到我的胸腔内。但是我拥有我自己的心！</p>
-<p>&emsp;&emsp;相信执著的我也会像阿甘一样在人生的路上走得更远！</p>
-<p>&emsp;&emsp;加油啊！</p>
-]]></content>
-      <categories>
-        <category>某日记</category>
-      </categories>
-      <tags>
-        <tag>阿甘</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>好快刀</title>
     <url>/posts/17668/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;在我还没有来得及目送最后一屡夕晖之前，夜已悄悄的笼罩下来。从地底下蒸出的水汽弥散开来，烟雾弥漫的街道像是通往地府的黄泉路。路上行人不多，偶尔路过一个，像是久死的干尸，摇摇晃晃地往地府赶去。只有几只青蛙的叫声证明这还是人间。 </p>
@@ -52,6 +19,18 @@
       </categories>
       <tags>
         <tag>杂</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>寂寞</title>
+    <url>/posts/64007/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;一只小鼠死了,我很伤心.当听知他的死时,我差点落泪,但是泪水只在眼里转了一转,并没有流下来.我不懂我是怎么了?难到我的良心已在这浊世当中损失殆尽？还是我堕落了？</p>
+]]></content>
+      <categories>
+        <category>某日记</category>
+      </categories>
+      <tags>
+        <tag>这是啥</tag>
       </tags>
   </entry>
   <entry>
@@ -85,6 +64,27 @@
       </categories>
       <tags>
         <tag>杂</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>阿甘</title>
+    <url>/posts/44237/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;记得第一次看阿甘正传时，我流泪了！</p>
+<p>&emsp;&emsp;阿甘的妈妈临死前，对阿甘说的话我开始觉得奇怪，同学告诉我说：她是用她自己的语言来让她的儿子明白……</p>
+<p>&emsp;&emsp;阿甘的妻子死的时候，她问阿甘跑步都看到了什么？阿甘说看到了美丽的山谷，看到了平静的湖水，看到了天地相接……她说要是她也在就好了！阿甘说：You were!（你一直和我在一起）</p>
+<p>&emsp;&emsp;虽说我也和阿甘一样笨，但却没有他那样的运气！</p>
+<p>&emsp;&emsp;运气？</p>
+<p>&emsp;&emsp;哈！</p>
+<p>&emsp;&emsp;世上哪儿来的运气？</p>
+<p>&emsp;&emsp;究其原因，阿甘并不是靠运气，而是靠一颗执著的心！我不能把他的心移植到我的胸腔内。但是我拥有我自己的心！</p>
+<p>&emsp;&emsp;相信执著的我也会像阿甘一样在人生的路上走得更远！</p>
+<p>&emsp;&emsp;加油啊！</p>
+]]></content>
+      <categories>
+        <category>某日记</category>
+      </categories>
+      <tags>
+        <tag>阿甘</tag>
       </tags>
   </entry>
   <entry>
@@ -275,22 +275,6 @@
       </categories>
   </entry>
   <entry>
-    <title>Dloc</title>
-    <url>/posts/13497/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;我似乎又dloc了。我不是故意的。大概是因为上周末晚饭过后出去转了一转，还有昨晚也吹了吹冷风的缘故。</p>
-<p>&emsp;&emsp;Dloc对于我是司空见惯的了。我几乎没有什么大的病痛，除了初三摔断手壁，高三给自己狗咬到。dloc这种事情不到一个月就会有。或许是因为抵抗力差了些吧！老妈说我小时候三天两头就住院了，能挺过来还挺不容易。</p>
-<p>&emsp;&emsp;从小到大我记得的dloc症状大概就只有两种发展类型。一种就是狂流鼻涕，另一种是先喉咙痛，然后狂流鼻涕。</p>
-<p>&emsp;&emsp;几乎每次快到考试的时候就会dloc。我有时会怀疑是考试综合症。老妈说头发长了就会“变狗”。变狗的意思就是dloc，生病。我甚至想过用科学的方法来合理头发长了与dloc的关系。比如头发长了，免疫系统更新较慢等等。因为正如老妈讲的，每次我的头发长的时候都会dloc，但是我却找不到他们之间的关系。 </p>
-<p>&emsp;&emsp;记得最清楚的一次感冒考试是高一考数学。因为经受了初中老师的关于考试时间的观念，不管有没有把试卷做完都应该坐到考试结束。那天dloc正进入严重时期，爆发期。考试到一半的时候，我准备的纸巾已经被我的鼻涕吸完了。好吧，这的确比较恶心，随后当然就没有办法咯。我用一只手写着卷子，另一手拧着鼻子。那次的考试似乎有点简单，大家纷纷都提前离场了。大概提早了半个多小时，考场里面几乎就只有我和另外一个同学了。我仍然坚持着。坚持着把时间坐够。最后，监考老师说，你们还交不交的啊，不交我走了。要知道那个时候离考试结束还有十多分钟呢！我们只好把试卷交了。结束我拧鼻子的痛苦。</p>
-<p>&emsp;&emsp;食堂的苦瓜从来都没有炒熟过，苦的难以下咽。自从尝了第一次以后我便没有吃过第二次。如果食堂师傅做的苦瓜能有老妈做的那么好就太棒了。有一次dloc居然影响到了我的味觉，吃东西都没有味道。于是我就打了平时不敢吃的苦瓜。</p>
-<p>&emsp;&emsp;其实dloc对于现在的我一点影响都没有，除了可以成为我不去实验室的借口。</p>
-<p>&emsp;&emsp;也许dloc还能一点一点得侵蚀人的大脑，让人变得更傻。</p>
-]]></content>
-      <categories>
-        <category>日记</category>
-      </categories>
-  </entry>
-  <entry>
     <title>旧年</title>
     <url>/posts/48930/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;我本应该在09年年末做一个年终总结的，但是因为各种原因，以及自己的犹豫不绝和薄弱的意志才拖到现在。</p>
@@ -355,26 +339,6 @@
       <tags>
         <tag>饭后感</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>红色</title>
-    <url>/posts/25994/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;红色是我比较喜欢的一种颜色，或者说我个人比较喜欢红色的东西，但是红色内裤除外。</p>
-<p>&emsp;&emsp;新年的前一天，vincent调侃的问道：“明年是谁的本命年啊？”我居然傻到附和，举起了手。接下来便是不想听到的：“记得一定要穿红色内裤，可以辟邪的……”</p>
-<p>&emsp;&emsp;“可是我没有红色内裤，明天我就去买……”我还假装开心的应道。不过后来真的没有买。</p>
-<p>&emsp;&emsp;今天早上起床后兴高采烈的跑下楼去实验室。结果在下到一楼的时候一脚就踏空了，全身的重量集中在歪向一遍的右脚。顿时痛得我差点叫出声来。那种痛没有办法形容，总之你会巴望着受伤的脚长在别人腿上，就算自己能飞起来也不能减轻一丁点儿痛楚，当然那个时候你不可能想到飞。唯一能想的就是，一定没事，一定没事，千万不要伤到骨头。我撑着拐角的扶手悬空了一回会儿，然后有80%的把握没有伤到骨头。回宿舍呢，还是去实验室？回宿舍还有五楼要爬，我可爬不动；去实验室骑车，只需要下一层楼，然后骑车，还好，还能坚持，况且还有课要上；但是，要不要去医院？以前也偶尔崴到脚，不过不会有多严重，崴了一会儿就能好。但是这次能够感觉到不是一时半会儿就痊愈的。</p>
-<p>&emsp;&emsp;下午上完课，脚还在痛，要是烙下病根儿可不好。要不要去看医生呢？七上八下说要的，他预支了一次惩罚我的机会让我去看。既然处于一番好意，那我就只好遵命，犯了一次规去找vincent帮忙送我去医院看脚。</p>
-<p>&emsp;&emsp;悲剧的事情发生了。vincent骑自行车不会载人，况且我的自行车没有后座。让vincent去借车，结果问到最后，就借到老大的那辆女士小轮永久，后轮没有气。有打气的地方，可是坐上去连腿都伸不直。于是打电话找有正常的车会载人的小平，可是电话那头只有一个说着标准普通话，通知我会短信通知机主的女士的声音，估计小平又去陪女朋友了。打电话找大胡，大胡的电话通了，嘟了半天，就是没有人接，估计又是去打球去了。打电话给小白，对了，小白的自行车也没有后座。对还有二毛。电话通了，二毛还在西区上课。不过人挺好的，接通电话说20分钟后就回来。</p>
-<p>&emsp;&emsp;我踱着脚，时而跳两步和vincent在大楼大厅里面等二毛。忽然就想起今年是本命年，然后话题就转到了红内裤。</p>
-<p>&emsp;&emsp;然后我明白了一个道理，命这种事情，信则灵，不信就没什么了。真不巧啊，我有点信了。</p>
-<p>&emsp;&emsp;医院5点30关门。二毛明明说20分钟到的，结果等了半个多小时。然后来了个电话说，你们再等7、8分钟，刚才我的车链子掉了，刚刚修好，马上就过来。等他回来的时候已经五点过十多分了。不过还算赶的紧，去医院放射科拍片的时候，医生刚刚关机器。还好那医生人挺好的，愿意帮我重开。大概挂科处，放射科，外科，收费处，还有买药窗口今天接待的最后一个人就是我了。不幸中的万幸就是，没有伤到骨头，嘿嘿。</p>
-<p>&emsp;&emsp;准备从此窝在宿舍，再窝上一个星期。应该用冷水泡脚还是热水？小白说，热水，还热情地帮我打了水。泡起来的确舒服。泡完脚手机来了几条短信。短信1：阿细，要先用冷水敷，然后再用热水泡。短信2：今晚9点组会，请准时参加。天呐！</p>
-<p>&emsp;&emsp;我在想我的人品是不是和手机的那个什么积分一样，过年就清零了。哎～</p>
-<p>&emsp;&emsp;多攒点人品，嗯！加油……</p>
-]]></content>
-      <categories>
-        <category>日记</category>
-      </categories>
   </entry>
   <entry>
     <title>流水三</title>
@@ -466,29 +430,6 @@
       </tags>
   </entry>
   <entry>
-    <title>这个寒假</title>
-    <url>/posts/10743/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;我不知道外婆说的那种天上飞的大鸟wa到底是一种什么鸟类，在我们家那边这种鸟与天气是很有关系的。当看到天上有wa飞过时，外婆就会念起谚语：一wa晴，二wa雨，三wa四wa就下大雨。我是这么理解的：一只wa表示一个独身主义的人。他想做什么就做什么，无拘无束，毫无牵绊，所以他的世界一马平川，他的天自然是晴空万里。两只wa表示一男一女，他们之间的缠绵纠葛，感天动地，使得天感动的哭了，感动的哭不会有很多泪，所以是小雨。至于三个四个人的恋情，那就是复杂难讲，对谁都是伤透了心，老天不大哭一场，他们几个人的泪也够下一场大雨了。</p>
-<p>&emsp;&emsp;还没有说到这个寒假对不对？不急，马上就说了。这个寒假是我自己说话最多的一次，是接收信息最多的一次，经历最多的一次。先不提老妈因为更年期（也许是更年期吧）的缘故唠叨得老爸有奋起反抗的可怕征兆，以及年近50的老妈仍然不听劝阻的去上那伤身的班，还有亲戚们的明里暗里的攀比争斗，还有处在青春期的表弟表妹对各自家庭的叛逆作为和对人生意义的懵懂等等，说到重点了，因为认识L（抱歉，关于名字，我只能说那么多了。），我的这个寒假过得格外的丰富。</p>
-<p>&emsp;&emsp;通常一个能把别人看透的人在别人眼里会有两种角色。第一种是敌人。因为他看透了我们，却又隐藏的很深，我们会觉得这人心怀城府，恐怖至极。第二种是很好很好的朋友。因为他看透了你，却对你坦白，包容你，对你直言不讳，你会觉得不用说话就已经倾诉了衷肠。L属于第二种。L有一种艺术鉴赏家有的才能，她可以通过鉴赏一件艺术品的形态特征，与作者进行心灵的沟通。我的心灵雕琢的外表（尤其是眼睛，有句话叫做相由心生。）一下子就被她看穿了，毫无保留的。L对我来讲就像是长江一样，我是指她带给我的东西。而对于L我就是一个忠实的听众，这是我最在行的了。但是这样是不行的，我得变得唠叨起来，因为老了以后如果你不讲话，是没有人陪你玩的。</p>
-<p>&emsp;&emsp;凭着毫无感情经历想把L从上一段感情纠葛中解救出来的我，似乎又犯了错误了。我应该学着像今天看到的那句论语中说的一样：己所不欲，勿施于人。我和她在人生观爱情观上有很多分歧。我一直试着灌输给她我的片面观点，感觉只有我的才是对的。现在想想，L的那句话说的不错啊，爱情是有多种模式的，我们不能不允许其存在。存在就有一定的道理。</p>
-<p>&emsp;&emsp;离家的那天，不小心又翻开了高中时候的纪念册。我仔细阅读了好多同学的留言。那些高中时候的美好回忆又泛滥于心。现在觉得当时的自己真的太傻（现在也是），一点儿都不懂得观察人，不懂人际交往（现在也不懂），生活在自己的世界。大家给我的评语总是很好，很出色。从他们眼里我看到一个完美的自己（事实我是一塌糊涂呀），当然说好话的人多数与我只是泛泛之交了。作为一个正真的朋友是应该不管好坏都会对彼此讲的。</p>
-<p>&emsp;&emsp;对L我想说的是，那种关于鉴赏艺术作品的才能许多时候因为作者与鉴赏者之间的经历阅历不同，身处的环境不同，思想境界的不同是可能会出偏差的。最终导致的结果是，让人容易活在自己思维创造的世界，得不到真相。其次，知识的多样性是不可或缺的，但是如果一个人只是涉猎广，没有钻研，没有建树是不行的，季羡林老先生也持同样的观点。</p>
-<p>&emsp;&emsp;我在理解什么是爱情的时候，真的太片面了些。因为爱情必须是相互的。爱可以是一个人的事情，是程度很深的喜欢，是想占有独享，就如想得到一个苹果；也是一种仰慕对方为对方考虑为对方着想的强烈情感。爱一个人，除了想得到他，更重要的还是让他过得幸福，得到自由。生命诚可贵，爱情价更高，若为自由故，二者皆可抛。马克思说：“爱情的本质是男女之间基于一定的物质条件和共同的人生理想，在内心对对方的最真挚的仰慕，并渴望成为终身伴侣的强烈、稳定、专一的感情。”爱情是对于我是多么复杂的东西啊，呵呵！</p>
-<p>&emsp;&emsp;我现在又是一只wa了，我的世界又变得晴空万里。那些该来的就顺其自然的让他来吧，不用强求，但也不要妥协。时间是最好的良药。</p>
-]]></content>
-      <categories>
-        <category>日记</category>
-      </categories>
-      <tags>
-        <tag>wa</tag>
-        <tag>爱情</tag>
-        <tag>看透</tag>
-        <tag>一个人</tag>
-        <tag>纠葛</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>愿逝者安息</title>
     <url>/posts/37262/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;刚刚得知高中好友母亲去世的消息，内心有太多东西哽咽着。我不懂得如何安慰人，以至于好友母亲病重中都没有给于他足够的关怀和支持。做人做到这个份上算是老差劲的了。</p>
@@ -510,6 +451,26 @@
       </tags>
   </entry>
   <entry>
+    <title>红色</title>
+    <url>/posts/25994/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;红色是我比较喜欢的一种颜色，或者说我个人比较喜欢红色的东西，但是红色内裤除外。</p>
+<p>&emsp;&emsp;新年的前一天，vincent调侃的问道：“明年是谁的本命年啊？”我居然傻到附和，举起了手。接下来便是不想听到的：“记得一定要穿红色内裤，可以辟邪的……”</p>
+<p>&emsp;&emsp;“可是我没有红色内裤，明天我就去买……”我还假装开心的应道。不过后来真的没有买。</p>
+<p>&emsp;&emsp;今天早上起床后兴高采烈的跑下楼去实验室。结果在下到一楼的时候一脚就踏空了，全身的重量集中在歪向一遍的右脚。顿时痛得我差点叫出声来。那种痛没有办法形容，总之你会巴望着受伤的脚长在别人腿上，就算自己能飞起来也不能减轻一丁点儿痛楚，当然那个时候你不可能想到飞。唯一能想的就是，一定没事，一定没事，千万不要伤到骨头。我撑着拐角的扶手悬空了一回会儿，然后有80%的把握没有伤到骨头。回宿舍呢，还是去实验室？回宿舍还有五楼要爬，我可爬不动；去实验室骑车，只需要下一层楼，然后骑车，还好，还能坚持，况且还有课要上；但是，要不要去医院？以前也偶尔崴到脚，不过不会有多严重，崴了一会儿就能好。但是这次能够感觉到不是一时半会儿就痊愈的。</p>
+<p>&emsp;&emsp;下午上完课，脚还在痛，要是烙下病根儿可不好。要不要去看医生呢？七上八下说要的，他预支了一次惩罚我的机会让我去看。既然处于一番好意，那我就只好遵命，犯了一次规去找vincent帮忙送我去医院看脚。</p>
+<p>&emsp;&emsp;悲剧的事情发生了。vincent骑自行车不会载人，况且我的自行车没有后座。让vincent去借车，结果问到最后，就借到老大的那辆女士小轮永久，后轮没有气。有打气的地方，可是坐上去连腿都伸不直。于是打电话找有正常的车会载人的小平，可是电话那头只有一个说着标准普通话，通知我会短信通知机主的女士的声音，估计小平又去陪女朋友了。打电话找大胡，大胡的电话通了，嘟了半天，就是没有人接，估计又是去打球去了。打电话给小白，对了，小白的自行车也没有后座。对还有二毛。电话通了，二毛还在西区上课。不过人挺好的，接通电话说20分钟后就回来。</p>
+<p>&emsp;&emsp;我踱着脚，时而跳两步和vincent在大楼大厅里面等二毛。忽然就想起今年是本命年，然后话题就转到了红内裤。</p>
+<p>&emsp;&emsp;然后我明白了一个道理，命这种事情，信则灵，不信就没什么了。真不巧啊，我有点信了。</p>
+<p>&emsp;&emsp;医院5点30关门。二毛明明说20分钟到的，结果等了半个多小时。然后来了个电话说，你们再等7、8分钟，刚才我的车链子掉了，刚刚修好，马上就过来。等他回来的时候已经五点过十多分了。不过还算赶的紧，去医院放射科拍片的时候，医生刚刚关机器。还好那医生人挺好的，愿意帮我重开。大概挂科处，放射科，外科，收费处，还有买药窗口今天接待的最后一个人就是我了。不幸中的万幸就是，没有伤到骨头，嘿嘿。</p>
+<p>&emsp;&emsp;准备从此窝在宿舍，再窝上一个星期。应该用冷水泡脚还是热水？小白说，热水，还热情地帮我打了水。泡起来的确舒服。泡完脚手机来了几条短信。短信1：阿细，要先用冷水敷，然后再用热水泡。短信2：今晚9点组会，请准时参加。天呐！</p>
+<p>&emsp;&emsp;我在想我的人品是不是和手机的那个什么积分一样，过年就清零了。哎～</p>
+<p>&emsp;&emsp;多攒点人品，嗯！加油……</p>
+]]></content>
+      <categories>
+        <category>日记</category>
+      </categories>
+  </entry>
+  <entry>
     <title>成都印象</title>
     <url>/posts/62880/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;我想说说我对成都的印象。因为我毕竟也是一个成都人。我是在这儿出生长大学习的,经历的不多,耳濡目染的却不少。有句话叫做少不如蜀,老不出川。意思就是讲成都很好,年少时呆在成都,人就不会奋斗单图享乐了,而老了以后就在这里养老吧,还出去干什么呢?当然成都也不是所有的都好完了哈。</p>
@@ -525,6 +486,29 @@
         <tag>打牌</tag>
         <tag>盆地</tag>
         <tag>茶铺</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>这个寒假</title>
+    <url>/posts/10743/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;我不知道外婆说的那种天上飞的大鸟wa到底是一种什么鸟类，在我们家那边这种鸟与天气是很有关系的。当看到天上有wa飞过时，外婆就会念起谚语：一wa晴，二wa雨，三wa四wa就下大雨。我是这么理解的：一只wa表示一个独身主义的人。他想做什么就做什么，无拘无束，毫无牵绊，所以他的世界一马平川，他的天自然是晴空万里。两只wa表示一男一女，他们之间的缠绵纠葛，感天动地，使得天感动的哭了，感动的哭不会有很多泪，所以是小雨。至于三个四个人的恋情，那就是复杂难讲，对谁都是伤透了心，老天不大哭一场，他们几个人的泪也够下一场大雨了。</p>
+<p>&emsp;&emsp;还没有说到这个寒假对不对？不急，马上就说了。这个寒假是我自己说话最多的一次，是接收信息最多的一次，经历最多的一次。先不提老妈因为更年期（也许是更年期吧）的缘故唠叨得老爸有奋起反抗的可怕征兆，以及年近50的老妈仍然不听劝阻的去上那伤身的班，还有亲戚们的明里暗里的攀比争斗，还有处在青春期的表弟表妹对各自家庭的叛逆作为和对人生意义的懵懂等等，说到重点了，因为认识L（抱歉，关于名字，我只能说那么多了。），我的这个寒假过得格外的丰富。</p>
+<p>&emsp;&emsp;通常一个能把别人看透的人在别人眼里会有两种角色。第一种是敌人。因为他看透了我们，却又隐藏的很深，我们会觉得这人心怀城府，恐怖至极。第二种是很好很好的朋友。因为他看透了你，却对你坦白，包容你，对你直言不讳，你会觉得不用说话就已经倾诉了衷肠。L属于第二种。L有一种艺术鉴赏家有的才能，她可以通过鉴赏一件艺术品的形态特征，与作者进行心灵的沟通。我的心灵雕琢的外表（尤其是眼睛，有句话叫做相由心生。）一下子就被她看穿了，毫无保留的。L对我来讲就像是长江一样，我是指她带给我的东西。而对于L我就是一个忠实的听众，这是我最在行的了。但是这样是不行的，我得变得唠叨起来，因为老了以后如果你不讲话，是没有人陪你玩的。</p>
+<p>&emsp;&emsp;凭着毫无感情经历想把L从上一段感情纠葛中解救出来的我，似乎又犯了错误了。我应该学着像今天看到的那句论语中说的一样：己所不欲，勿施于人。我和她在人生观爱情观上有很多分歧。我一直试着灌输给她我的片面观点，感觉只有我的才是对的。现在想想，L的那句话说的不错啊，爱情是有多种模式的，我们不能不允许其存在。存在就有一定的道理。</p>
+<p>&emsp;&emsp;离家的那天，不小心又翻开了高中时候的纪念册。我仔细阅读了好多同学的留言。那些高中时候的美好回忆又泛滥于心。现在觉得当时的自己真的太傻（现在也是），一点儿都不懂得观察人，不懂人际交往（现在也不懂），生活在自己的世界。大家给我的评语总是很好，很出色。从他们眼里我看到一个完美的自己（事实我是一塌糊涂呀），当然说好话的人多数与我只是泛泛之交了。作为一个正真的朋友是应该不管好坏都会对彼此讲的。</p>
+<p>&emsp;&emsp;对L我想说的是，那种关于鉴赏艺术作品的才能许多时候因为作者与鉴赏者之间的经历阅历不同，身处的环境不同，思想境界的不同是可能会出偏差的。最终导致的结果是，让人容易活在自己思维创造的世界，得不到真相。其次，知识的多样性是不可或缺的，但是如果一个人只是涉猎广，没有钻研，没有建树是不行的，季羡林老先生也持同样的观点。</p>
+<p>&emsp;&emsp;我在理解什么是爱情的时候，真的太片面了些。因为爱情必须是相互的。爱可以是一个人的事情，是程度很深的喜欢，是想占有独享，就如想得到一个苹果；也是一种仰慕对方为对方考虑为对方着想的强烈情感。爱一个人，除了想得到他，更重要的还是让他过得幸福，得到自由。生命诚可贵，爱情价更高，若为自由故，二者皆可抛。马克思说：“爱情的本质是男女之间基于一定的物质条件和共同的人生理想，在内心对对方的最真挚的仰慕，并渴望成为终身伴侣的强烈、稳定、专一的感情。”爱情是对于我是多么复杂的东西啊，呵呵！</p>
+<p>&emsp;&emsp;我现在又是一只wa了，我的世界又变得晴空万里。那些该来的就顺其自然的让他来吧，不用强求，但也不要妥协。时间是最好的良药。</p>
+]]></content>
+      <categories>
+        <category>日记</category>
+      </categories>
+      <tags>
+        <tag>wa</tag>
+        <tag>爱情</tag>
+        <tag>看透</tag>
+        <tag>一个人</tag>
+        <tag>纠葛</tag>
       </tags>
   </entry>
   <entry>
@@ -570,6 +554,64 @@
       </tags>
   </entry>
   <entry>
+    <title>花卷</title>
+    <url>/posts/6813/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;晚饭时，实验室只剩师妹了。她的一卡通忽然找不找，约莫买东西时落在了黑超。我说没事，要是找不着，我请吧。时间是17：40。快到东苑的时候，师妹说先去找她的卡。我建议和她一起去，以免找不到卡没法吃饭。但是一个东西突然钻进了我的脑袋，那就是：花卷。</p>
+<a id="more"></a>
+
+<p>&emsp;&emsp;师妹我得要先去买花卷，要不然待会儿就卖完了……但是你没卡吃饭……我对师妹说。她说，好的，没事，你先去吧，我带了钱。我想可能师妹并不知道有什么花卷是非买不可的。昨天和师弟一起吃晚饭，问到我为什么要去二楼，我说我要买花卷，当作早餐。师弟说，他不喜欢带回去，第二天吃冷的东西就不好了。他问，师兄你为什么不每天早点起床到食堂买早点吃呢？我笑了，然后什么都没有说……</p>
+<p>&emsp;&emsp;娘子在年后胆结石发作，剧痛使她彻夜不能安寝，还间杂腹泻和呕吐。第二天奄奄一息的娘子被我们带到了传说中的做保胆取石的最好的医院去做手术。被一颗小小的黄绿色恶魔精灵折磨的生不如死的娘子心理和身理都脆弱的像块悬挂的冰块。从娘子被推进手术室到接下来的15个小时，我的心也是一直悬着的。当然，手术并没有做那么久，只有3个多小时。只是这三个小时都不见人，只能希望什么事都不会发生。只在那时才体会到电视剧中主角眼睁睁自己的亲人被送进手术室，然后自己在走廊里除了焦急等待以外什么都不能做的如热锅上的蚂蚁心理。只不过走廊里的热锅蚂蚁不是一只，是好多只。从手术室出来有12个小时娘子都必须要忍痛和困保持清醒，以免做过手术的部位粘连。然后我就一个劲儿的在娘子耳边唠叨不停，估计娘子耳朵也成茧几次，然后又被共振掉几次了。实在抱歉啊。</p>
+<p>&emsp;&emsp;虽说只是个小手术，却签了好多的恐怖的协议，自愿承担各种风险；况且是第一次被推进手术室，还被人动了刀子开了肚子。不过总算是顺利的进行了手术，取出了结石。娘子也认为那个小小的东西就是一个妖怪。几天以后娘子出院了，不过瘦了好几圈，比之前少了20多斤。</p>
+<p>&emsp;&emsp;从此，娘子再也不能大鱼大肉，连饭菜里面多一丝辣椒末也会让肚子难受，胆处生疼。馋坏了本来见好吃就吃的从不忌口的我家娘子，害的她只能每天吃清淡异常的饭菜，然后逛美食博客以慰馋心，苦了一个为麻辣美食而生的胃。另外，患了胆结石是需要少食多餐的，早餐尤其重要。</p>
+<p>&emsp;&emsp;我们试过早餐吃馒头还有汤圆。馒头总是没味，干瘪，难以下咽。汤圆就更不行，试过一次，娘子吃后就犯疼。对比了好多，我们还是决定吃花卷吧。因为花卷还是挺香挺有味的，比起馒头来。对了，可能你要问：为什么不吃面条？大概也许你没有吃过除盐以外什么都不放的面条吧。然而，早上起来买的街上的花卷不但个子小，而且就像得了白化病一样，吃着好不安心。所以决定每天晚饭时从食堂带几个回去，第二天早上热了吃。</p>
+<p>&emsp;&emsp;得了这胆的毛病，娘子身心受了好多的摧残。很多的痛我也无法替她分担，以至于好多的事都没有替娘子考虑周全。只怪我做事马虎啊。需要向娘子道歉之处甚多。盼娘子容我好好的改。</p>
+<p>&emsp;&emsp;希望娘子慢慢好起来。可以快快乐乐健健康康开开心心的做自己喜欢做的事情。</p>
+<p>&emsp;&emsp;阿门。</p>
+]]></content>
+      <categories>
+        <category>日记</category>
+      </categories>
+      <tags>
+        <tag>命题作文</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Win7下格掉Linux盘无法启动windows</title>
+    <url>/posts/60954/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;在win7下用系统的磁盘管理工具把原来的fedora14给格了，然后重启就只能进入grub，试了安装盘修复也不行。</p>
+<p>在grub中输入命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">grub&gt;rootnoverify (hd0,0) </span><br><span class="line">grub&gt;makeactive </span><br><span class="line">grub&gt;chainloader +1</span><br><span class="line">grub&gt;boot</span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;奏效。进入了windows。然后下载clear mbr （还原清新畅快的mbr，大概格掉了grub）。</p>
+<p>然后大功告成。</p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>grub</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>血色乎浪漫</title>
+    <url>/posts/53953/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;人活着该削平自己将自己融入社会大染缸，还是该看清事实从中跳出来，或者该坚持自我暴力抵抗，还是怀揣着希望守护自己的安全岛？</p>
+<p>&emsp;&emsp;《血色浪漫》里面所演绎的人生几乎统统都是悲剧。剧中毫不夸张甚至说是完全真实的展示了几乎社会所有阶层人的艰苦历程（不管是心灵的还是肉身的。），尽管我们不敢说自己能完全体会到其他阶层人的艰辛和苦难，也不能全体会他们的心情。不过作为一个观影的旁观者，作为一个血色的参与者，我们能感受到的是那种骨子里的无奈。“阶层”，这个词说起来如此顺口，但听起来却如此刺耳。这是出生在中国大地的人们一出生就有的东西，烙在骨头上，烂在骨髓里头的东西。“阶层”演化和包装下成为如今的“拼爹”。李奎勇说的那个时代自己能干的大概和自己的爹干的差不多。大概就是这个意思吧。我已经不想去讨论这个社会变态到什么样子（又或者变态的只是我）。</p>
+<p>&emsp;&emsp;主人公钟跃民有个“好爹”所以遇事都有权贵相扶。但他终究没有超人的能力能够与这个变态的恶魔抗争。然而这些变态的特质与他的自由的人生价值观（这是他的么？不是每个人都有的么？）相背离。他选择的路是不屈服，但却无作为。这个恶魔无处不在，只要与人打交道，他就来骚扰你，甚至吃了你。在现实生活中，钟跃民无处遁形，他只能逃避。逃到隔壁沙漠，人越少越好。然后最好还有一批被这个社会排斥并且定义为罪无可恕的恶徒可以作为他发泄情绪的消遣对象。他无法让自己屈服于怪兽的淫威，甚至连与怪兽有关的人都成为他惧怕的对象，所以他几乎不可能“接受”任何人（朋友除外哦）。</p>
+<p>&emsp;&emsp;宁伟是个危险分子， 我们每个人身上大概都有像宁伟性格这样的不安分情绪。面对变态社会的侵蚀，他的作为是奋力的充满暴力的反抗斗争。就像被变态的父母养大的孩子孕育出的暴戾性格。只要给它合适的契机他就会破壳而出，势不可挡的占据你的全部。不过剧末告诉我们一个残酷的事实：不管你有多暴力，那个变态的恶魔终究会把你像蚂蚁一样捏得粉碎，连骨灰都不剩下。</p>
+<p>&emsp;&emsp;大多数出现在剧中的人无非都是平凡的小市民，农民，工人。面对猛兽，他们并没有十足的精神洁癖，没有表现出臣服并且屈居人下的怨念。又或者因为他们的精神领地被恶魔消磨殆尽。他们有的只是一副孱弱的驱壳，经受着怪物实施的各种残酷的刑罚，按部就班的服刑着妖魔的窑役。</p>
+<p>&emsp;&emsp;这个妖魔势力过于强大，我们都不能逃脱，更没有力量去战胜。然而于众人的道路中，我们愿选择怀揣希望的活法。就像郑桐与蒋碧云。不管这个希望是自欺欺人还是一片渺茫，尽管在削平了自己成为恶魔的狗腿子的人的眼里他们是傻的可爱，蠢的可怜。但只要有固执的希望扎根，他们过的尽快清苦，但却乐在其中。 </p>
+<p>&emsp;&emsp;有一种情是慰藉，是救命稻草，那就是友情。钟跃民什么都想抛弃，唯独友情伴随其左右。可能如果周晓白不牵挂，李奎勇不出现，宁伟不出事，高钥不守候，钟可能会提早出家修行。不，也许是因为李奎勇去世，宁伟赴黄泉才促使钟对社会丧失了希望。友谊无价那是因为没有负担。又或者双方彼此都是被欺压的奴隶，一起生活就像出生入死的战友。然而这种好的战友，好的精神慰藉是可遇而不可求的。</p>
+<p>&emsp;&emsp;生活并不可怕，有了恶魔才慎人。恶魔在世为生活涂上了血色。怀揣着希望于血色中找寻浪漫。</p>
+]]></content>
+      <categories>
+        <category>某日记</category>
+      </categories>
+      <tags>
+        <tag>血色浪漫</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>雾霾齐步走</title>
     <url>/posts/35510/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;据传，雾霾的妈妈叫他回去吃饭了。</p>
@@ -596,45 +638,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Win7下格掉Linux盘无法启动windows</title>
-    <url>/posts/60954/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;在win7下用系统的磁盘管理工具把原来的fedora14给格了，然后重启就只能进入grub，试了安装盘修复也不行。</p>
-<p>在grub中输入命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">grub&gt;rootnoverify (hd0,0) </span><br><span class="line">grub&gt;makeactive </span><br><span class="line">grub&gt;chainloader +1</span><br><span class="line">grub&gt;boot</span><br></pre></td></tr></table></figure>
-
-<p>&emsp;&emsp;奏效。进入了windows。然后下载clear mbr （还原清新畅快的mbr，大概格掉了grub）。</p>
-<p>然后大功告成。</p>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>grub</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>花卷</title>
-    <url>/posts/6813/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;晚饭时，实验室只剩师妹了。她的一卡通忽然找不找，约莫买东西时落在了黑超。我说没事，要是找不着，我请吧。时间是17：40。快到东苑的时候，师妹说先去找她的卡。我建议和她一起去，以免找不到卡没法吃饭。但是一个东西突然钻进了我的脑袋，那就是：花卷。</p>
-<a id="more"></a>
-
-<p>&emsp;&emsp;师妹我得要先去买花卷，要不然待会儿就卖完了……但是你没卡吃饭……我对师妹说。她说，好的，没事，你先去吧，我带了钱。我想可能师妹并不知道有什么花卷是非买不可的。昨天和师弟一起吃晚饭，问到我为什么要去二楼，我说我要买花卷，当作早餐。师弟说，他不喜欢带回去，第二天吃冷的东西就不好了。他问，师兄你为什么不每天早点起床到食堂买早点吃呢？我笑了，然后什么都没有说……</p>
-<p>&emsp;&emsp;娘子在年后胆结石发作，剧痛使她彻夜不能安寝，还间杂腹泻和呕吐。第二天奄奄一息的娘子被我们带到了传说中的做保胆取石的最好的医院去做手术。被一颗小小的黄绿色恶魔精灵折磨的生不如死的娘子心理和身理都脆弱的像块悬挂的冰块。从娘子被推进手术室到接下来的15个小时，我的心也是一直悬着的。当然，手术并没有做那么久，只有3个多小时。只是这三个小时都不见人，只能希望什么事都不会发生。只在那时才体会到电视剧中主角眼睁睁自己的亲人被送进手术室，然后自己在走廊里除了焦急等待以外什么都不能做的如热锅上的蚂蚁心理。只不过走廊里的热锅蚂蚁不是一只，是好多只。从手术室出来有12个小时娘子都必须要忍痛和困保持清醒，以免做过手术的部位粘连。然后我就一个劲儿的在娘子耳边唠叨不停，估计娘子耳朵也成茧几次，然后又被共振掉几次了。实在抱歉啊。</p>
-<p>&emsp;&emsp;虽说只是个小手术，却签了好多的恐怖的协议，自愿承担各种风险；况且是第一次被推进手术室，还被人动了刀子开了肚子。不过总算是顺利的进行了手术，取出了结石。娘子也认为那个小小的东西就是一个妖怪。几天以后娘子出院了，不过瘦了好几圈，比之前少了20多斤。</p>
-<p>&emsp;&emsp;从此，娘子再也不能大鱼大肉，连饭菜里面多一丝辣椒末也会让肚子难受，胆处生疼。馋坏了本来见好吃就吃的从不忌口的我家娘子，害的她只能每天吃清淡异常的饭菜，然后逛美食博客以慰馋心，苦了一个为麻辣美食而生的胃。另外，患了胆结石是需要少食多餐的，早餐尤其重要。</p>
-<p>&emsp;&emsp;我们试过早餐吃馒头还有汤圆。馒头总是没味，干瘪，难以下咽。汤圆就更不行，试过一次，娘子吃后就犯疼。对比了好多，我们还是决定吃花卷吧。因为花卷还是挺香挺有味的，比起馒头来。对了，可能你要问：为什么不吃面条？大概也许你没有吃过除盐以外什么都不放的面条吧。然而，早上起来买的街上的花卷不但个子小，而且就像得了白化病一样，吃着好不安心。所以决定每天晚饭时从食堂带几个回去，第二天早上热了吃。</p>
-<p>&emsp;&emsp;得了这胆的毛病，娘子身心受了好多的摧残。很多的痛我也无法替她分担，以至于好多的事都没有替娘子考虑周全。只怪我做事马虎啊。需要向娘子道歉之处甚多。盼娘子容我好好的改。</p>
-<p>&emsp;&emsp;希望娘子慢慢好起来。可以快快乐乐健健康康开开心心的做自己喜欢做的事情。</p>
-<p>&emsp;&emsp;阿门。</p>
-]]></content>
-      <categories>
-        <category>日记</category>
-      </categories>
-      <tags>
-        <tag>命题作文</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>乱2</title>
     <url>/posts/36882/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;弯弯曲曲的阳光直直的照进屋外，熟睡的我高兴地蹦起来落在了天花板。窗台上留下了10年以后我的脚印。我重重的摔在软绵绵的岩石上，像蹦极一样来回颠簸。一只尖叫的青蛙从结冰的湖面窜出，湖面结了一个窟窿，天空泛起直直的嶙峋波纹。半空中横陈着的乐者手舞足蹈的吹奏着口中的琵琶，一只只曼妙的如箭的音符射向四周，箭尖着地处开出了美丽的蝴蝶。我泛舟湖底，领略着满天的繁星。一对鱼儿在空中划着拳，输了的那位颐指气使，赢了的那位红了双腮。忽然一阵微风袭来，将我卷进了透明的电话簿。可怜那船儿被卷成了一颗树苗。我花了一立方的时间睁开眼，发现树苗上结满了刀子。我摘下其中熟透了的一把，割下了我的一只脚趾。我将我剩下的部分扔进了雷电，那只脚趾开始慢慢的发了芽。</p>
@@ -644,25 +647,6 @@
       </categories>
       <tags>
         <tag>杂</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>血色乎浪漫</title>
-    <url>/posts/53953/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;人活着该削平自己将自己融入社会大染缸，还是该看清事实从中跳出来，或者该坚持自我暴力抵抗，还是怀揣着希望守护自己的安全岛？</p>
-<p>&emsp;&emsp;《血色浪漫》里面所演绎的人生几乎统统都是悲剧。剧中毫不夸张甚至说是完全真实的展示了几乎社会所有阶层人的艰苦历程（不管是心灵的还是肉身的。），尽管我们不敢说自己能完全体会到其他阶层人的艰辛和苦难，也不能全体会他们的心情。不过作为一个观影的旁观者，作为一个血色的参与者，我们能感受到的是那种骨子里的无奈。“阶层”，这个词说起来如此顺口，但听起来却如此刺耳。这是出生在中国大地的人们一出生就有的东西，烙在骨头上，烂在骨髓里头的东西。“阶层”演化和包装下成为如今的“拼爹”。李奎勇说的那个时代自己能干的大概和自己的爹干的差不多。大概就是这个意思吧。我已经不想去讨论这个社会变态到什么样子（又或者变态的只是我）。</p>
-<p>&emsp;&emsp;主人公钟跃民有个“好爹”所以遇事都有权贵相扶。但他终究没有超人的能力能够与这个变态的恶魔抗争。然而这些变态的特质与他的自由的人生价值观（这是他的么？不是每个人都有的么？）相背离。他选择的路是不屈服，但却无作为。这个恶魔无处不在，只要与人打交道，他就来骚扰你，甚至吃了你。在现实生活中，钟跃民无处遁形，他只能逃避。逃到隔壁沙漠，人越少越好。然后最好还有一批被这个社会排斥并且定义为罪无可恕的恶徒可以作为他发泄情绪的消遣对象。他无法让自己屈服于怪兽的淫威，甚至连与怪兽有关的人都成为他惧怕的对象，所以他几乎不可能“接受”任何人（朋友除外哦）。</p>
-<p>&emsp;&emsp;宁伟是个危险分子， 我们每个人身上大概都有像宁伟性格这样的不安分情绪。面对变态社会的侵蚀，他的作为是奋力的充满暴力的反抗斗争。就像被变态的父母养大的孩子孕育出的暴戾性格。只要给它合适的契机他就会破壳而出，势不可挡的占据你的全部。不过剧末告诉我们一个残酷的事实：不管你有多暴力，那个变态的恶魔终究会把你像蚂蚁一样捏得粉碎，连骨灰都不剩下。</p>
-<p>&emsp;&emsp;大多数出现在剧中的人无非都是平凡的小市民，农民，工人。面对猛兽，他们并没有十足的精神洁癖，没有表现出臣服并且屈居人下的怨念。又或者因为他们的精神领地被恶魔消磨殆尽。他们有的只是一副孱弱的驱壳，经受着怪物实施的各种残酷的刑罚，按部就班的服刑着妖魔的窑役。</p>
-<p>&emsp;&emsp;这个妖魔势力过于强大，我们都不能逃脱，更没有力量去战胜。然而于众人的道路中，我们愿选择怀揣希望的活法。就像郑桐与蒋碧云。不管这个希望是自欺欺人还是一片渺茫，尽管在削平了自己成为恶魔的狗腿子的人的眼里他们是傻的可爱，蠢的可怜。但只要有固执的希望扎根，他们过的尽快清苦，但却乐在其中。 </p>
-<p>&emsp;&emsp;有一种情是慰藉，是救命稻草，那就是友情。钟跃民什么都想抛弃，唯独友情伴随其左右。可能如果周晓白不牵挂，李奎勇不出现，宁伟不出事，高钥不守候，钟可能会提早出家修行。不，也许是因为李奎勇去世，宁伟赴黄泉才促使钟对社会丧失了希望。友谊无价那是因为没有负担。又或者双方彼此都是被欺压的奴隶，一起生活就像出生入死的战友。然而这种好的战友，好的精神慰藉是可遇而不可求的。</p>
-<p>&emsp;&emsp;生活并不可怕，有了恶魔才慎人。恶魔在世为生活涂上了血色。怀揣着希望于血色中找寻浪漫。</p>
-]]></content>
-      <categories>
-        <category>某日记</category>
-      </categories>
-      <tags>
-        <tag>血色浪漫</tag>
       </tags>
   </entry>
   <entry>
@@ -739,27 +723,6 @@
       </categories>
   </entry>
   <entry>
-    <title>历史和反演</title>
-    <url>/posts/52263/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;研一的时候上过一节外系的选修课。现在已经想不起来是什么课了。那为啥我还记得这个课呢？</p>
-<a id="more"></a>
-
-<p>&emsp;&emsp;有两个原因，第一，课上有一个女生的眼睛比较好看。这千万不要被老婆发现了。笑。另一个重要原因就是老师布置了一个讨论作业。</p>
-<p>&emsp;&emsp;说是十年前有一个地区要建垃圾处理场。政府的意思是要建，大部分群众的意见是不建。具体老师让我们讨论什么记不太清了。我起来回答，第一，群众是愚昧的；第二，历史就像反演一样。过了十年了，当时的很多事情我们是不清楚的。有个同学起来反驳我说，历史怎么是不清楚的呢？历史资料是很清楚的啊。</p>
-<p>&emsp;&emsp;其实历史就和地震学反演一样。我们记录的资料只是历史当中的很小一部分。就像地球物理里的观测资料，台站稀疏，资料就少。另外历史是人记录的，难免带有感情色彩，主观因素。就像地震仪器会有仪器响应。知道了仪器响应还可以反卷积掉，那人为因素怎么定量，如何扣除？</p>
-<p>&emsp;&emsp;历史是无法回去重新观摩的，就像是地下介质的结构基本没有办法挖进去一探究竟。以记录到的少量资料想要去描绘大的历史图景，与反演地下介质结构一样，是具有非唯一性的。因而我们并不知道真正的历史是什么样的？</p>
-<p>&emsp;&emsp;地震学反演和历史是一样的。忽然想到一个可怕的比喻－－历史就像是任人打扮的小姑娘。由于这个非唯一性，大家拿到了一部分资料就可以按照自己的理解，站在自己的角度，根据自己的学识，经验，立场去解释历史。地震学反演不也是这样吗？你拿到一部分资料来做一个反演，反演出结构，给一通解释。他也可以。要是解释的人位高权重，或者权威泰斗，那大伙儿就信了。但是真的就是这样的吗？</p>
-<p>&emsp;&emsp;那谁说的，没有一个模型是对的，只有有些是有用的，是有参考价值的。</p>
-]]></content>
-      <categories>
-        <category>乱笔</category>
-      </categories>
-      <tags>
-        <tag>反演</tag>
-        <tag>历史</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>这个网站是怎么来的</title>
     <url>/posts/25921/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>目的：心血来潮，漫无目的。<br>方法：利用Hexo+Github构建。<br>花费：1块钱用于腾讯云买域名+6块用于阿里云买域名+宝宝睡了之后的晚上。<br>用途：好记性不如烂笔头。用手敲敲还可锻炼一下。<br>时间：2020年5月26日晚。<br>步骤：参见<a href="https://cloud.tencent.com/developer/article/1423783" target="_blank" rel="noopener">这里</a>，具体如下：</p>
@@ -787,12 +750,82 @@
       </tags>
   </entry>
   <entry>
+    <title>历史和反演</title>
+    <url>/posts/52263/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;研一的时候上过一节外系的选修课。现在已经想不起来是什么课了。那为啥我还记得这个课呢？</p>
+<a id="more"></a>
+
+<p>&emsp;&emsp;有两个原因，第一，课上有一个女生的眼睛比较好看。这千万不要被老婆发现了。笑。另一个重要原因就是老师布置了一个讨论作业。</p>
+<p>&emsp;&emsp;说是十年前有一个地区要建垃圾处理场。政府的意思是要建，大部分群众的意见是不建。具体老师让我们讨论什么记不太清了。我起来回答，第一，群众是愚昧的；第二，历史就像反演一样。过了十年了，当时的很多事情我们是不清楚的。有个同学起来反驳我说，历史怎么是不清楚的呢？历史资料是很清楚的啊。</p>
+<p>&emsp;&emsp;其实历史就和地震学反演一样。我们记录的资料只是历史当中的很小一部分。就像地球物理里的观测资料，台站稀疏，资料就少。另外历史是人记录的，难免带有感情色彩，主观因素。就像地震仪器会有仪器响应。知道了仪器响应还可以反卷积掉，那人为因素怎么定量，如何扣除？</p>
+<p>&emsp;&emsp;历史是无法回去重新观摩的，就像是地下介质的结构基本没有办法挖进去一探究竟。以记录到的少量资料想要去描绘大的历史图景，与反演地下介质结构一样，是具有非唯一性的。因而我们并不知道真正的历史是什么样的？</p>
+<p>&emsp;&emsp;地震学反演和历史是一样的。忽然想到一个可怕的比喻－－历史就像是任人打扮的小姑娘。由于这个非唯一性，大家拿到了一部分资料就可以按照自己的理解，站在自己的角度，根据自己的学识，经验，立场去解释历史。地震学反演不也是这样吗？你拿到一部分资料来做一个反演，反演出结构，给一通解释。他也可以。要是解释的人位高权重，或者权威泰斗，那大伙儿就信了。但是真的就是这样的吗？</p>
+<p>&emsp;&emsp;那谁说的，没有一个模型是对的，只有有些是有用的，是有参考价值的。</p>
+]]></content>
+      <categories>
+        <category>乱笔</category>
+      </categories>
+      <tags>
+        <tag>反演</tag>
+        <tag>历史</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>sed插入和删除匹配行</title>
+    <url>/posts/51976/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;sed功能非常强大，利用来处理文本文件不要太爽。要是能熟练掌握，在文本江湖简直随心所欲，无往而不利。我自然也想学学，不过入坑awk有点久。通常习惯了一种方式以后就难以醉心到另一种。这也大约是少林72绝技一般和尚难同时融汇多种的原因吧。一般人也很难精通多个领域。这两天在配置这个博客时遇到一些要对所有post处理的步骤。于是就尝试了sed的用法。倒是很方便。例如：</p>
+<a id="more"></a>
+
+<ol>
+<li>匹配包含date行，在该行后添加copyright: true。</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sed -i <span class="string">'/date/a\copyright: true'</span> a.md</span><br></pre></td></tr></table></figure>
+<p>在行前添加就把a换做i。</p>
+<ol start="2">
+<li>删除包含copyright的行。</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sed -i <span class="string">'/copyright/d'</span> a.md</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>批量处理就这样。</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> md <span class="keyword">in</span> *md</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">   sed -i <span class="string">'/copyright/d'</span> <span class="variable">$md</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;题外话，是不是觉得我找抽啊，插入了copyright之后又删掉。说来话长。我怕有人copy了我的东西不打声招呼，于是就想申明一下许可权益啊版权信息啊什么的（申明之后别人爱拿还得拿）。于是搜索到<a href="https://juejin.im/post/5c7dd8675188251b6406e7b5" target="_blank" rel="noopener">上仙</a>那里，根据教程开始弄。过程中就得来个批量处理，用sed添加copyright。结果出来还不错。可谁知那个“署名”前面的cc图标老是乱码（一个叉）。哎呀，我这个暴脾气（洁癖），如何受得了。于是就搜啊搜，怎么才能显示出来呢？结果，啥办法没有。最后只能根据另一位<a href="https://wylu.me/posts/e0424f3f/" target="_blank" rel="noopener">上神</a>的教程重新弄了一个简单的主题默认的版权信息。然后就得批处理copyright。啊，世界安静了。</p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>next</tag>
+        <tag>web</tag>
+        <tag>sed</tag>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何让Elementary OS取消自动更新检查</title>
+    <url>/posts/47982/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;我的HP笔记本上的Linux系统安装的是Elementary OS。这是个基于Ubuntu的注重界面美观的系统。是挺漂亮的，但几乎每天那个引用中心都会跳出来，帮我检查更新。</p>
+<a id="more"></a>
+<p><img data-src="app.png" alt="应用中心"><br>&emsp;&emsp;这很烦人，尤其是还有出错，不能忍。所以必须让它停止自己更新啊。解决办法是这样。在文件/etc/apt/apt.conf.d/10periodic中将第一行的1改为0，成这样：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">APT::Periodic::Update-Package-Lists &quot;0&quot;;</span><br><span class="line">APT::Periodic::Download-Upgradeable-Packages &quot;0&quot;;</span><br><span class="line">APT::Periodic::AutocleanInterval &quot;0&quot;;</span><br></pre></td></tr></table></figure>
+<p>0表示false，自然就不帮您自动更新了。</p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>我对这个博客做了什么</title>
     <url>/posts/58531/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;原本是想记笔记，写一些技术性的东西。然而现在为止好像还没有干啥正事。那我对这个博客做了些什么呢？干了这些：</p>
 <a id="more"></a>
 
-<h2 id="重新下载了一次next主题"><a href="#重新下载了一次next主题" class="headerlink" title="重新下载了一次next主题"></a>重新下载了一次next主题</h2><p>按<a href="/posts/25921/" title="这个步骤">这个步骤</a>重新配置了一遍。之前不知道从哪里下载的一个山寨版还是啥的，应该是老版本，很多东西都没有。所以重新下载了最新版本。折腾了好久。对了，还干了好多无用功。网上搜来的很多教程版本都比较老。别马上按着别人的办法干，先看看主题的配置文件，或官方的文档。</p>
+<h2 id="主题安装"><a href="#主题安装" class="headerlink" title="主题安装"></a>主题安装</h2><p>按<a href="/posts/25921/" title="这个步骤">这个步骤</a>重新配置了一遍。之前不知道从哪里下载的一个山寨版还是啥的，应该是老版本，很多东西都没有。所以重新下载了最新版本。折腾了好久。对了，还干了好多无用功。网上搜来的很多教程版本都比较老。别马上按着别人的办法干，先看看主题的配置文件，或官方的文档。</p>
 <h2 id="插入脚注"><a href="#插入脚注" class="headerlink" title="插入脚注"></a>插入脚注</h2><p>请参见此神仙<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="https://github.com/kchen0x/hexo-reference
  ">[1]</span></a></sup>。 </p>
 <h2 id="封面模式"><a href="#封面模式" class="headerlink" title="封面模式"></a>封面模式</h2><p>参见<sup id="fnref:11"><a href="#fn:11" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="https://github.com/fuchen/hexo-less
@@ -865,55 +898,6 @@
       <tags>
         <tag>next</tag>
         <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>sed插入和删除匹配行</title>
-    <url>/posts/51976/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;sed功能非常强大，利用来处理文本文件不要太爽。要是能熟练掌握，在文本江湖简直随心所欲，无往而不利。我自然也想学学，不过入坑awk有点久。通常习惯了一种方式以后就难以醉心到另一种。这也大约是少林72绝技一般和尚难同时融汇多种的原因吧。一般人也很难精通多个领域。这两天在配置这个博客时遇到一些要对所有post处理的步骤。于是就尝试了sed的用法。倒是很方便。例如：</p>
-<a id="more"></a>
-
-<ol>
-<li>匹配包含date行，在该行后添加copyright: true。</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sed -i <span class="string">'/date/a\copyright: true'</span> a.md</span><br></pre></td></tr></table></figure>
-<p>在行前添加就把a换做i。</p>
-<ol start="2">
-<li>删除包含copyright的行。</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sed -i <span class="string">'/copyright/d'</span> a.md</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>批量处理就这样。</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> md <span class="keyword">in</span> *md</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">   sed -i <span class="string">'/copyright/d'</span> <span class="variable">$md</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
-
-<p>&emsp;&emsp;题外话，是不是觉得我找抽啊，插入了copyright之后又删掉。说来话长。我怕有人copy了我的东西不打声招呼，于是就想申明一下许可权益啊版权信息啊什么的（申明之后别人爱拿还得拿）。于是搜索到<a href="https://juejin.im/post/5c7dd8675188251b6406e7b5" target="_blank" rel="noopener">上仙</a>那里，根据教程开始弄。过程中就得来个批量处理，用sed添加copyright。结果出来还不错。可谁知那个“署名”前面的cc图标老是乱码（一个叉）。哎呀，我这个暴脾气（洁癖），如何受得了。于是就搜啊搜，怎么才能显示出来呢？结果，啥办法没有。最后只能根据另一位<a href="https://wylu.me/posts/e0424f3f/" target="_blank" rel="noopener">上神</a>的教程重新弄了一个简单的主题默认的版权信息。然后就得批处理copyright。啊，世界安静了。</p>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>next</tag>
-        <tag>web</tag>
-        <tag>hexo</tag>
-        <tag>sed</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>如何让Elementary OS取消自动更新检查</title>
-    <url>/posts/47982/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;我的HP笔记本上的Linux系统安装的是Elementary OS。这是个基于Ubuntu的注重界面美观的系统。是挺漂亮的，但几乎每天那个引用中心都会跳出来，帮我检查更新。</p>
-<a id="more"></a>
-<p><img data-src="app.png" alt="应用中心"><br>&emsp;&emsp;这很烦人，尤其是还有出错，不能忍。所以必须让它停止自己更新啊。解决办法是这样。在文件/etc/apt/apt.conf.d/10periodic中将第一行的1改为0，成这样：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">APT::Periodic::Update-Package-Lists &quot;0&quot;;</span><br><span class="line">APT::Periodic::Download-Upgradeable-Packages &quot;0&quot;;</span><br><span class="line">APT::Periodic::AutocleanInterval &quot;0&quot;;</span><br></pre></td></tr></table></figure>
-<p>0表示false，自然就不帮您自动更新了。</p>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -1128,21 +1112,6 @@
       </tags>
   </entry>
   <entry>
-    <title>hexo next开启打赏</title>
-    <url>/posts/14072/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>厚颜无耻的开始想要打赏。如何配置打赏呢？原来next是有打赏的选项字段的。直接修改主题配置文件如下：</p>
-<a id="more"></a>
-<p><img data-src="donate.png" alt="打赏字段"><br>然后把微信和支付宝的二维码图片放在/themes/next/source/images中。然后就大功告成了。</p>
-]]></content>
-      <categories>
-        <category>web</category>
-      </categories>
-      <tags>
-        <tag>next</tag>
-        <tag>web</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>活着or霸王别姬</title>
     <url>/posts/37347/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;先看的《活着》，然后看了《霸王别姬》。因为这两部电影被同寝室室友予以高度的评价，甚至说是中国最优秀的电影。所以就看了。</p>
@@ -1162,33 +1131,20 @@
       </tags>
   </entry>
   <entry>
-    <title>hexo免密发布</title>
-    <url>/posts/55505/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>每次发布都得输入用户名和密码，挺麻烦费事。网上<a href="https://blog.csdn.net/hhgggggg/article/details/77853665" target="_blank" rel="noopener">大神</a>可真多，搜搜就能解决。和ssh登录服务器类似，步骤如下：</p>
-<a id="more"></a>
-<h2 id="生成SSH密钥"><a href="#生成SSH密钥" class="headerlink" title="生成SSH密钥"></a>生成SSH密钥</h2><p>使用ssh-kergen生成密钥：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ssh</span>-keygen -t rsa -C <span class="string">"junxie01@gmail.com"</span></span><br></pre></td></tr></table></figure>
-
-<p>一路enter就行了。生成的秘钥在主目录的.ssh/id_rsa.pub中。复制一下。</p>
-<h2 id="添加Github项目的Deploy-keys"><a href="#添加Github项目的Deploy-keys" class="headerlink" title="添加Github项目的Deploy keys"></a>添加Github项目的Deploy keys</h2><p>在项目junxie01.github.io点击settings–&gt;Deploy keys–&gt;Add deploy key.把拷贝好的秘钥粘贴在这里。然后勾选可写。</p>
-<p>测试是否配置成功。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ssh</span> -T git@github.com</span><br></pre></td></tr></table></figure>
-<p>如果出现如下内容则表示配置成功。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Hi junxie01&#x2F;junxie01.github.io! You&#39;ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure>
-
-<h2 id="网站设置文件设置"><a href="#网站设置文件设置" class="headerlink" title="网站设置文件设置"></a>网站设置文件设置</h2><p>在网站设置文件deploy字段设置：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:junxie01&#x2F;junxie01.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-<p>好了，发布网站时hexo d就不用输入用户名和密码了。大功告成。</p>
-<h2 id="Git自带配置文件"><a href="#Git自带配置文件" class="headerlink" title="Git自带配置文件"></a>Git自带配置文件</h2><p>这个方法是针对github的，配置好了推送克隆什么的都万事大吉了。是这位大神<a href="https://www.jianshu.com/p/28efda0555bb" target="_blank" rel="noopener">博文</a>里看到的。里面介绍了两种方法，我用的是第一种，因为它看起来更简单。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git config --global credential.helper store</span><br></pre></td></tr></table></figure>
-<p>如果有多个账号什么的去掉–global就好了。为安全性着想还要给store设置一个时限。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global credential.helper <span class="string">'cache --timeout=3600'</span></span><br></pre></td></tr></table></figure>
-<p>这个我就没有管了。问题不大吧。</p>
+    <title>Dloc</title>
+    <url>/posts/13497/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;我似乎又dloc了。我不是故意的。大概是因为上周末晚饭过后出去转了一转，还有昨晚也吹了吹冷风的缘故。</p>
+<p>&emsp;&emsp;Dloc对于我是司空见惯的了。我几乎没有什么大的病痛，除了初三摔断手壁，高三给自己狗咬到。dloc这种事情不到一个月就会有。或许是因为抵抗力差了些吧！老妈说我小时候三天两头就住院了，能挺过来还挺不容易。</p>
+<p>&emsp;&emsp;从小到大我记得的dloc症状大概就只有两种发展类型。一种就是狂流鼻涕，另一种是先喉咙痛，然后狂流鼻涕。</p>
+<p>&emsp;&emsp;几乎每次快到考试的时候就会dloc。我有时会怀疑是考试综合症。老妈说头发长了就会“变狗”。变狗的意思就是dloc，生病。我甚至想过用科学的方法来合理头发长了与dloc的关系。比如头发长了，免疫系统更新较慢等等。因为正如老妈讲的，每次我的头发长的时候都会dloc，但是我却找不到他们之间的关系。 </p>
+<p>&emsp;&emsp;记得最清楚的一次感冒考试是高一考数学。因为经受了初中老师的关于考试时间的观念，不管有没有把试卷做完都应该坐到考试结束。那天dloc正进入严重时期，爆发期。考试到一半的时候，我准备的纸巾已经被我的鼻涕吸完了。好吧，这的确比较恶心，随后当然就没有办法咯。我用一只手写着卷子，另一手拧着鼻子。那次的考试似乎有点简单，大家纷纷都提前离场了。大概提早了半个多小时，考场里面几乎就只有我和另外一个同学了。我仍然坚持着。坚持着把时间坐够。最后，监考老师说，你们还交不交的啊，不交我走了。要知道那个时候离考试结束还有十多分钟呢！我们只好把试卷交了。结束我拧鼻子的痛苦。</p>
+<p>&emsp;&emsp;食堂的苦瓜从来都没有炒熟过，苦的难以下咽。自从尝了第一次以后我便没有吃过第二次。如果食堂师傅做的苦瓜能有老妈做的那么好就太棒了。有一次dloc居然影响到了我的味觉，吃东西都没有味道。于是我就打了平时不敢吃的苦瓜。</p>
+<p>&emsp;&emsp;其实dloc对于现在的我一点影响都没有，除了可以成为我不去实验室的借口。</p>
+<p>&emsp;&emsp;也许dloc还能一点一点得侵蚀人的大脑，让人变得更傻。</p>
 ]]></content>
-      <tags>
-        <tag>web</tag>
-        <tag>hexo</tag>
-      </tags>
+      <categories>
+        <category>日记</category>
+      </categories>
   </entry>
   <entry>
     <title>hexo图片显示</title>
@@ -1232,6 +1188,50 @@
       </categories>
       <tags>
         <tag>web</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo next开启打赏</title>
+    <url>/posts/14072/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>厚颜无耻的开始想要打赏。如何配置打赏呢？原来next是有打赏的选项字段的。直接修改主题配置文件如下：</p>
+<a id="more"></a>
+<p><img data-src="donate.png" alt="打赏字段"><br>然后把微信和支付宝的二维码图片放在/themes/next/source/images中。然后就大功告成了。</p>
+]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>next</tag>
+        <tag>web</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo免密发布</title>
+    <url>/posts/55505/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>每次发布都得输入用户名和密码，挺麻烦费事。网上<a href="https://blog.csdn.net/hhgggggg/article/details/77853665" target="_blank" rel="noopener">大神</a>可真多，搜搜就能解决。和ssh登录服务器类似，步骤如下：</p>
+<a id="more"></a>
+<h2 id="生成SSH密钥"><a href="#生成SSH密钥" class="headerlink" title="生成SSH密钥"></a>生成SSH密钥</h2><p>使用ssh-kergen生成密钥：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ssh</span>-keygen -t rsa -C <span class="string">"junxie01@gmail.com"</span></span><br></pre></td></tr></table></figure>
+
+<p>一路enter就行了。生成的秘钥在主目录的.ssh/id_rsa.pub中。复制一下。</p>
+<h2 id="添加Github项目的Deploy-keys"><a href="#添加Github项目的Deploy-keys" class="headerlink" title="添加Github项目的Deploy keys"></a>添加Github项目的Deploy keys</h2><p>在项目junxie01.github.io点击settings–&gt;Deploy keys–&gt;Add deploy key.把拷贝好的秘钥粘贴在这里。然后勾选可写。</p>
+<p>测试是否配置成功。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ssh</span> -T git@github.com</span><br></pre></td></tr></table></figure>
+<p>如果出现如下内容则表示配置成功。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Hi junxie01&#x2F;junxie01.github.io! You&#39;ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure>
+
+<h2 id="网站设置文件设置"><a href="#网站设置文件设置" class="headerlink" title="网站设置文件设置"></a>网站设置文件设置</h2><p>在网站设置文件deploy字段设置：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:junxie01&#x2F;junxie01.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<p>好了，发布网站时hexo d就不用输入用户名和密码了。大功告成。</p>
+<h2 id="Git自带配置文件"><a href="#Git自带配置文件" class="headerlink" title="Git自带配置文件"></a>Git自带配置文件</h2><p>这个方法是针对github的，配置好了推送克隆什么的都万事大吉了。是这位大神<a href="https://www.jianshu.com/p/28efda0555bb" target="_blank" rel="noopener">博文</a>里看到的。里面介绍了两种方法，我用的是第一种，因为它看起来更简单。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git config --global credential.helper store</span><br></pre></td></tr></table></figure>
+<p>如果有多个账号什么的去掉–global就好了。为安全性着想还要给store设置一个时限。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global credential.helper <span class="string">'cache --timeout=3600'</span></span><br></pre></td></tr></table></figure>
+<p>这个我就没有管了。问题不大吧。</p>
+]]></content>
+      <tags>
+        <tag>web</tag>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
