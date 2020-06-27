@@ -1,5 +1,5 @@
 ---
-title: Win7下格掉Linux盘无法启动windows
+title: Win7下格掉Linux盘如何启动windows
 categories:
   - Linux
 tags:

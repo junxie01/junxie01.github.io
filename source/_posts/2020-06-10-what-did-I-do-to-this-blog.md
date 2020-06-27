@@ -85,7 +85,7 @@ favicon:
 ```
 
 ## 首页文章加框
-设置请查看{% post_link frame %}
+设置请查看{% post_link how-to-add-frame-in-hexo-next %}
 
 ## 添加版权信息
 根据此大仙[^5]的说明弄好了以后，发现署名”前面的cc图标老是乱码（一个叉）。那怎么可以，弄了半天没弄好。结果人家next已经集成了。在next/_config.yml里面这样就好了。
