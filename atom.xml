@@ -25,7 +25,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;/.xyz//spec.png&quot; alt=&quot;时间轴&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;img data-src=&quot;spec.png&quot; alt=&quot;时间轴&quot;&gt;&lt;/p&gt;
     
     </summary>
     
