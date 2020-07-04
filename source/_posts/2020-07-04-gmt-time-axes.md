@@ -1,11 +1,12 @@
 ---
 title: gmt画时间轴
-date: 2020-07-04 16:06:35
 categories:
   - gmt
 tags:
   - linux
   - axes
+abbrlink: b974c9ed
+date: 2020-07-04 16:06:35
 ---
 ![时间轴](spec.png)
 <!-- less -->
@@ -22,4 +23,4 @@ tags:
 gmt set FORMAT_DATE_MAP jjj
 ```
 &emsp;&emsp;然后在B选项用-Bsxa10D。
-[^1]gmt版本为5.4.3，运行系统为ElmentaryOS 4.15.0-107-generic.
+[^1]:gmt版本为5.4.3，运行系统为ElmentaryOS 4.15.0-107-generic.
