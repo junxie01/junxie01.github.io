@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2020-06-23T07:06:04.235Z</updated>
+  <updated>2020-07-04T17:12:49.058Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>gmt画时间轴</title>
+    <link href="http://www.seis-jun.xyz/gmt-time-axes"/>
+    <id>http://www.seis-jun.xyz/gmt-time-axes</id>
+    <published>2020-07-04T08:06:35.000Z</published>
+    <updated>2020-07-04T17:12:49.058Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/.xyz//spec.png&quot; alt=&quot;时间轴&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="gmt" scheme="http://www.seis-jun.xyz/categories/gmt/"/>
+    
+    
+      <category term="linux" scheme="http://www.seis-jun.xyz/tags/linux/"/>
+    
+      <category term="axes" scheme="http://www.seis-jun.xyz/tags/axes/"/>
+    
+  </entry>
   
   <entry>
     <title>hexo next点击头像回到主页</title>
@@ -451,31 +474,6 @@
     
     
       <category term="妖怪" scheme="http://www.seis-jun.xyz/tags/%E5%A6%96%E6%80%AA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>启程去玛雅一</title>
-    <link href="http://www.seis-jun.xyz/%E5%90%AF%E7%A8%8B%E5%8E%BB%E7%8E%9B%E9%9B%85"/>
-    <id>http://www.seis-jun.xyz/%E5%90%AF%E7%A8%8B%E5%8E%BB%E7%8E%9B%E9%9B%85</id>
-    <published>2015-11-01T00:18:22.000Z</published>
-    <updated>2020-06-24T03:13:09.075Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="乱笔" scheme="http://www.seis-jun.xyz/categories/%E4%B9%B1%E7%AC%94/"/>
-    
     
   </entry>
   
