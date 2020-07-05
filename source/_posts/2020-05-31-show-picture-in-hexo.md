@@ -25,4 +25,7 @@ permalink: :year/:month/:day/:title/
 ```
 permalink: :title.html
 ```
-结果图片怎么都显示不了。最后还得改回来。
+结果图片怎么都显示不了。果然permalink和post_assrt_folder是相互影响的。最后还得改回来。结果又不行了。将node_modules/hexo-asset-image/index.js替换一下[^1]然后才行。不懂js的语法，要是懂的话改以来应该还是比较容易的吧。
+
+
+[^1]:https://blog.csdn.net/xjm850552586/article/details/84101345
