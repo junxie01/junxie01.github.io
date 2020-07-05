@@ -26,15 +26,15 @@
   </script>
 <script data-ad-client="ca-pub-7228454655210783" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
-  <meta name="description" content="&amp;emsp;&amp;emsp;我们常常要看信号的振幅谱来进行分析，那傅里叶变换就必不可少。如果水平不错你可以试着自己写。当然有很多已经写好的包，非常方便，例如这里要讲到的fft[1]。">
+  <meta name="description" content="&amp;emsp;&amp;emsp;我们常常要看信号的振幅谱来进行分析，那傅里叶变换就必不可少。如果水平不错你可以试着自己写。当然有很多已经写好的包，非常方便，例如这里要讲到的fftw[1]。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何调用fftw进行Fast Fourier Transform">
 <meta property="og:url" content="http://www.seis-jun.xyz/how-to-use-fftw">
 <meta property="og:site_name" content="SEISAMUSE">
-<meta property="og:description" content="&amp;emsp;&amp;emsp;我们常常要看信号的振幅谱来进行分析，那傅里叶变换就必不可少。如果水平不错你可以试着自己写。当然有很多已经写好的包，非常方便，例如这里要讲到的fft[1]。">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;我们常常要看信号的振幅谱来进行分析，那傅里叶变换就必不可少。如果水平不错你可以试着自己写。当然有很多已经写好的包，非常方便，例如这里要讲到的fftw[1]。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-07-05T10:21:16.000Z">
-<meta property="article:modified_time" content="2020-07-05T11:10:42.103Z">
+<meta property="article:modified_time" content="2020-07-05T11:14:30.471Z">
 <meta property="article:author" content="Jun Xie">
 <meta name="twitter:card" content="summary">
 
@@ -249,7 +249,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-07-05 18:21:16 / 修改时间：19:10:42" itemprop="dateCreated datePublished" datetime="2020-07-05T18:21:16+08:00">2020-07-05</time>
+              <time title="创建时间：2020-07-05 18:21:16 / 修改时间：19:14:30" itemprop="dateCreated datePublished" datetime="2020-07-05T18:21:16+08:00">2020-07-05</time>
             </span>
 
           
@@ -279,7 +279,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>2.4k</span>
+              <span>2.5k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -298,7 +298,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;我们常常要看信号的振幅谱来进行分析，那傅里叶变换就必不可少。如果水平不错你可以试着自己写。当然有很多已经写好的包，非常方便，例如这里要讲到的fft<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="http://www.fftw.org/
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;我们常常要看信号的振幅谱来进行分析，那傅里叶变换就必不可少。如果水平不错你可以试着自己写。当然有很多已经写好的包，非常方便，例如这里要讲到的fftw<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="http://www.fftw.org/
 ">[1]</span></a></sup>。</p>
 <a id="more"></a>
 
@@ -308,7 +308,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">module globe_data</span><br><span class="line">integer,parameter :: nmax&#x3D;2000000,nstmax&#x3D;1000</span><br><span class="line">real(4),dimension(4,2):: fre</span><br><span class="line">real(4),allocatable,dimension(:,:):: sig,sigo</span><br><span class="line">real(4),allocatable,dimension(:) :: sigt</span><br><span class="line">real :: dt</span><br><span class="line">real(8) :: dom</span><br><span class="line">integer :: halfn</span><br><span class="line">integer :: ncom,comb,npts</span><br><span class="line">integer :: nn,npow,nk,nf</span><br><span class="line">complex(8),allocatable,dimension(:,:):: seisout</span><br><span class="line">complex(8),parameter:: czero&#x3D;(0.0d0,0.0d0)</span><br><span class="line">integer,parameter :: FFTW_ESTIMATE&#x3D;64,FFTW_MEASURE&#x3D;1</span><br><span class="line">integer,parameter :: FFTW_FORWARD&#x3D;-1,FFTW_BACKWARD&#x3D;1</span><br><span class="line">integer(8) :: plan,plan1,plan2,plan3</span><br><span class="line">end module</span><br></pre></td></tr></table></figure>
 <p>编译需要一个makefile：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">FC&#x3D;gfortran</span><br><span class="line">FFLAG&#x3D;-lfftw3 -I &#x2F;usr&#x2F;include -L &#x2F;usr&#x2F;lib64 -fbounds-check</span><br><span class="line">objects&#x3D;call_fft.o sacio.o globe_data.o</span><br><span class="line">all:sacio.mod globe_data.mod call_fft</span><br><span class="line">.f.o:</span><br><span class="line">	$(FC) $(FFLAG) $&lt; -c</span><br><span class="line">%.o:%.f90</span><br><span class="line">	$(FC) $(FFLAG) $&lt; -c </span><br><span class="line">sacio.mod:sacio.f90</span><br><span class="line">	$(FC) $&lt; -c</span><br><span class="line">globe_data.mod:globe_data.f90</span><br><span class="line">	$(FC) $&lt; -c</span><br><span class="line">call_fft:$(objects)</span><br><span class="line">	$(FC) $^ -o $@ $(FFLAG) -lm</span><br><span class="line">clean:</span><br><span class="line">	-rm *.o *.mod</span><br></pre></td></tr></table></figure>
-<p>注意这里要加上-lfftw3表示调用fftw，-I给定fftw头的路径，-L给定fftw的lib。如果是按照默认路径安装的fftw，那一般都不用指定-I和-L，因为默认路径一般已经包含在编译环境里了。<br>好了大功告成了。</p>
+<p>注意这里要加上-lfftw3表示调用fftw，-I给定fftw头的路径，-L给定fftw的lib。如果是按照默认路径安装的fftw，那一般都不用指定-I和-L，因为默认路径一般已经包含在编译环境里了。<br>好了大功告成了，但不保证拷贝下来就能运行通过哦。有问题发邮件吧，我们再交流^_^</p>
 <div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">http://www.fftw.org/<a href="#fnref:1" rev="footnote"> ↩</a></span></li></ol></div></div>
     </div>
 
