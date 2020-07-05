@@ -25,7 +25,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;/p://www.seis-jun.xyz/spec.png&quot; alt=&quot;gmt 时间轴&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;/://www.seis-jun.xyz/spec.png&quot; alt=&quot;gmt 时间轴&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -58,9 +58,9 @@
     
       <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
     
-      <category term="next" scheme="http://www.seis-jun.xyz/tags/next/"/>
-    
       <category term="hexo" scheme="http://www.seis-jun.xyz/tags/hexo/"/>
+    
+      <category term="next" scheme="http://www.seis-jun.xyz/tags/next/"/>
     
   </entry>
   
@@ -148,9 +148,9 @@
     
       <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
     
-      <category term="next" scheme="http://www.seis-jun.xyz/tags/next/"/>
-    
       <category term="hexo" scheme="http://www.seis-jun.xyz/tags/hexo/"/>
+    
+      <category term="next" scheme="http://www.seis-jun.xyz/tags/next/"/>
     
       <category term="sed" scheme="http://www.seis-jun.xyz/tags/sed/"/>
     
@@ -173,9 +173,9 @@
       <category term="web" scheme="http://www.seis-jun.xyz/categories/web/"/>
     
     
-      <category term="next" scheme="http://www.seis-jun.xyz/tags/next/"/>
-    
       <category term="hexo" scheme="http://www.seis-jun.xyz/tags/hexo/"/>
+    
+      <category term="next" scheme="http://www.seis-jun.xyz/tags/next/"/>
     
   </entry>
   
