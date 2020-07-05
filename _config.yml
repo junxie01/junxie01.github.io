@@ -20,7 +20,7 @@ root: /
 # 20200609
 permalink: :year/:month/:day/:title/
 #permalink: posts/:abbrlink/
-#permalink: :title.html
+permalink: :title.html
 permalink_defaults:
 abbrlink:
   alg: crc32
