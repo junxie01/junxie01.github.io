@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2020-07-05T11:14:30.471Z</updated>
+  <updated>2020-07-08T14:48:21.908Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何访问google</title>
+    <link href="http://www.seis-jun.xyz/how-to-access-google"/>
+    <id>http://www.seis-jun.xyz/how-to-access-google</id>
+    <published>2020-07-08T14:30:01.000Z</published>
+    <updated>2020-07-08T14:48:21.908Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&amp;emsp;&amp;emsp;Google产品尤其是Google scholar非常的方便，对于我这种有完美主义倾向，不喜欢山寨的人来讲真的太必要了。但是由于某些原因，在国内上不了google怎么办呢？&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>如何调用fftw进行Fast Fourier Transform</title>
@@ -442,29 +459,6 @@
     
     
       <category term="paper" scheme="http://www.seis-jun.xyz/tags/paper/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>这个网站是怎么来的</title>
-    <link href="http://www.seis-jun.xyz/how-I-build-this-web"/>
-    <id>http://www.seis-jun.xyz/how-I-build-this-web</id>
-    <published>2020-05-25T17:21:16.000Z</published>
-    <updated>2020-06-12T15:56:52.486Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;目的：心血来潮，漫无目的。&lt;br&gt;方法：利用Hexo+Github构建。&lt;br&gt;花费：1块钱用于腾讯云买域名+6块用于阿里云买域名+宝宝睡了之后的晚上。&lt;br&gt;用途：好记性不如烂笔头。用手敲敲还可锻炼一下。&lt;br&gt;时间：2020年5月26日晚。&lt;br&gt;步骤：参见&lt;a href=&quot;https://cloud.tencent.com/developer/article/1423783&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;这里&lt;/a&gt;，具体如下：&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="web" scheme="http://www.seis-jun.xyz/categories/web/"/>
-    
-    
-      <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
-    
-      <category term="next" scheme="http://www.seis-jun.xyz/tags/next/"/>
     
   </entry>
   
