@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2020-07-08T14:48:21.908Z</updated>
+  <updated>2020-07-10T10:50:07.370Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -17,11 +17,32 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>现代人的智商在退步</title>
+    <link href="http://www.seis-jun.xyz/IQ-decrease"/>
+    <id>http://www.seis-jun.xyz/IQ-decrease</id>
+    <published>2020-07-10T09:10:54.000Z</published>
+    <updated>2020-07-10T10:50:07.370Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/IQ-decrease/iq.jpg&quot; alt=&quot;智商捉急&quot;&gt;&lt;br&gt;图片来自一篇2018年PANS期刊的&lt;a href=&quot;https://www.pnas.org/content/115/26/6674?fbclid=IwAR3CVcH75ppH836xV4c5s99p11421Puo6ljF9hlQtg7kcRcXDa9_mdPSfU0&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;文章&lt;/a&gt;.&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="杂" scheme="http://www.seis-jun.xyz/categories/%E6%9D%82/"/>
+    
+    
+      <category term="乱" scheme="http://www.seis-jun.xyz/tags/%E4%B9%B1/"/>
+    
+  </entry>
+  
+  <entry>
     <title>如何访问google</title>
     <link href="http://www.seis-jun.xyz/how-to-access-google"/>
     <id>http://www.seis-jun.xyz/how-to-access-google</id>
     <published>2020-07-08T14:30:01.000Z</published>
-    <updated>2020-07-08T14:48:21.908Z</updated>
+    <updated>2020-07-08T14:48:39.680Z</updated>
     
     <summary type="html">
     
@@ -438,27 +459,6 @@
       <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
     
       <category term="next" scheme="http://www.seis-jun.xyz/tags/next/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>文章意见回复</title>
-    <link href="http://www.seis-jun.xyz/how-to-reply-to-reviewer"/>
-    <id>http://www.seis-jun.xyz/how-to-reply-to-reviewer</id>
-    <published>2020-05-29T17:21:16.000Z</published>
-    <updated>2020-06-12T15:56:52.488Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;SCI文章是否得以发表，生杀大权很大一部分都在peer reviewer手上。文章投出去如果收到了审稿人意见，那么恭喜，机会大大的有。那么如何回复审稿人意见就是关键了。下面是一些要点。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
-    
-    
-      <category term="paper" scheme="http://www.seis-jun.xyz/tags/paper/"/>
     
   </entry>
   
