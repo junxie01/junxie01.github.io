@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2020-07-10T10:50:15.058Z</updated>
+  <updated>2020-07-21T16:40:47.612Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -17,6 +17,27 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>稍稍盘点地幔过渡带研究进展</title>
+    <link href="http://www.seis-jun.xyz/mantle-transition-zone"/>
+    <id>http://www.seis-jun.xyz/mantle-transition-zone</id>
+    <published>2020-07-21T15:04:45.000Z</published>
+    <updated>2020-07-21T16:40:47.612Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img data-src=&quot;Picture1.png&quot; alt=&quot;地幔过渡带&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
+    
+    
+      <category term="过渡带" scheme="http://www.seis-jun.xyz/tags/%E8%BF%87%E6%B8%A1%E5%B8%A6/"/>
+    
+  </entry>
+  
+  <entry>
     <title>现代人的智商在退步</title>
     <link href="http://www.seis-jun.xyz/IQ-decrease"/>
     <id>http://www.seis-jun.xyz/IQ-decrease</id>
@@ -25,7 +46,7 @@
     
     <summary type="html">
     
-      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&lt;img src=&quot;/IQ-decrease/iq.jpg&quot; alt=&quot;智商捉急&quot;&gt;&lt;br&gt;图片来自一篇2018年PANS期刊的&lt;a href=&quot;https://www.pnas.org/content/115/26/6674?fbclid=IwAR3CVcH75ppH836xV4c5s99p11421Puo6ljF9hlQtg7kcRcXDa9_mdPSfU0&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;文章&lt;/a&gt;.&lt;/p&gt;
+      &lt;p&gt;&lt;img data-src=&quot;iq.jpg&quot; alt=&quot;智商捉急&quot;&gt;&lt;br&gt;图片来自一篇2018年PANS期刊的&lt;a href=&quot;https://www.pnas.org/content/115/26/6674?fbclid=IwAR3CVcH75ppH836xV4c5s99p11421Puo6ljF9hlQtg7kcRcXDa9_mdPSfU0&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;文章&lt;/a&gt;.&lt;/p&gt;
     
     </summary>
     
@@ -81,7 +102,7 @@
     
     <summary type="html">
     
-      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&lt;img src=&quot;/gmt-time-axes/spec.png&quot; alt=&quot;gmt 时间轴&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;img data-src=&quot;spec.png&quot; alt=&quot;gmt 时间轴&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -426,29 +447,6 @@
     <summary type="html">
     
       &lt;p&gt;厚颜无耻的开始想要打赏。如何配置打赏呢？原来next是有打赏的选项字段的。直接修改主题配置文件如下：&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="web" scheme="http://www.seis-jun.xyz/categories/web/"/>
-    
-    
-      <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
-    
-      <category term="next" scheme="http://www.seis-jun.xyz/tags/next/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>next网站字数统计</title>
-    <link href="http://www.seis-jun.xyz/word-count"/>
-    <id>http://www.seis-jun.xyz/word-count</id>
-    <published>2020-05-30T17:29:36.000Z</published>
-    <updated>2020-06-12T15:56:52.489Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;想给网站显示字数统计，搜到&lt;a href=&quot;https://www.jianshu.com/p/baea8c95e39b&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;这里&lt;/a&gt;。根据说明开始设置。结果网站都差点挂掉。检查了好久也没有发现问题，以为玩完了。然后马上开始重新建hexo。结果还是有问题。后来终于发现在网站设置文件插入功能字段时误插到其他字段导致出错。注销以后问题就修复了。然后又搜索到&lt;a href=&quot;https://blog.csdn.net/mqdxiaoxiao/article/details/93670772&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;这里&lt;/a&gt;。没想到搞定了，使用的插件是hexo-symbols-count-time。设置步骤如下：&lt;/p&gt;
     
     </summary>
     
