@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2020-07-22T03:04:12.902Z</updated>
+  <updated>2020-07-28T18:52:44.985Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>基于宽频带背景噪声面波的美国三维上地幔横波速度结构模型</title>
+    <link href="http://www.seis-jun.xyz/US-upper-mantle-vs-model"/>
+    <id>http://www.seis-jun.xyz/US-upper-mantle-vs-model</id>
+    <published>2020-07-28T18:30:10.000Z</published>
+    <updated>2020-07-28T18:52:44.985Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/US-upper-mantle-vs-model/figure5.png&quot; alt=&quot;Maps of Vs structure in the upper mantle and major geological units modified from Fenneman (1917). The color bar labels are V S in km/s (top) and perturbation in percentage (bottom).&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
+    
+    
+      <category term="model" scheme="http://www.seis-jun.xyz/tags/model/"/>
+    
+  </entry>
   
   <entry>
     <title>稍稍盘点地幔过渡带研究进展</title>
@@ -424,29 +445,6 @@
           &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;网站上没有图片是不行的，无图无真相。解决办法在&lt;a
         
       
-    
-    </summary>
-    
-    
-      <category term="web" scheme="http://www.seis-jun.xyz/categories/web/"/>
-    
-    
-      <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
-    
-      <category term="next" scheme="http://www.seis-jun.xyz/tags/next/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo next开启打赏</title>
-    <link href="http://www.seis-jun.xyz/reward-configuration"/>
-    <id>http://www.seis-jun.xyz/reward-configuration</id>
-    <published>2020-05-30T18:04:57.000Z</published>
-    <updated>2020-06-14T16:41:16.803Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;厚颜无耻的开始想要打赏。如何配置打赏呢？原来next是有打赏的选项字段的。直接修改主题配置文件如下：&lt;/p&gt;
     
     </summary>
     
