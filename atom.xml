@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2020-07-30T17:39:14.221Z</updated>
+  <updated>2020-07-31T15:26:50.418Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何在elementaryOS下让gmt支持中文</title>
+    <link href="http://www.seis-jun.xyz/how-to-configure-chinese-for-gmt"/>
+    <id>http://www.seis-jun.xyz/how-to-configure-chinese-for-gmt</id>
+    <published>2020-07-31T15:03:04.000Z</published>
+    <updated>2020-07-31T15:26:50.418Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&amp;emsp;&amp;emsp;有些时候用gmt画图需要添加一些中文标注。之前在fedora里用gmt4的时候配置过一次。现在用的是elementaryOS+gmt5.4.3怎么配置中文呢？&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="gmt" scheme="http://www.seis-jun.xyz/categories/gmt/"/>
+    
+    
+      <category term="中文" scheme="http://www.seis-jun.xyz/tags/%E4%B8%AD%E6%96%87/"/>
+    
+  </entry>
   
   <entry>
     <title>基于宽频带背景噪声面波的美国三维上地幔横波速度结构模型</title>
@@ -426,35 +447,6 @@
       <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
     
       <category term="hexo" scheme="http://www.seis-jun.xyz/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo图片显示</title>
-    <link href="http://www.seis-jun.xyz/show-picture-in-hexo"/>
-    <id>http://www.seis-jun.xyz/show-picture-in-hexo</id>
-    <published>2020-05-30T18:26:29.000Z</published>
-    <updated>2020-07-05T06:51:31.107Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;网站上没有图片是不行的，无图无真相。解决办法在&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="web" scheme="http://www.seis-jun.xyz/categories/web/"/>
-    
-    
-      <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
-    
-      <category term="next" scheme="http://www.seis-jun.xyz/tags/next/"/>
     
   </entry>
   
