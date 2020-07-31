@@ -30,7 +30,7 @@ STHeiti-Regular--UniGB-UTF8-H 0.700 1
 STKaiti-Regular--UniGB-UTF8-H 0.700 1
 ```
 &emsp;&emsp;用gmt pstext -L就可以看到添加的四中字体：
-[gmt pstext -L显示的新添加4中字体](pstext.png)
+![gmt pstext -L显示的新添加4种字体](pstext.png)
 &emsp;&emsp;然后就大功告成了。
 
 [^1]:https://www.cnblogs.com/gisalameda/p/6840662.html
