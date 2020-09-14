@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2020-07-31T15:52:16.224Z</updated>
+  <updated>2020-09-14T09:09:33.571Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>怎么计算理论的NCF？</title>
+    <link href="http://www.seis-jun.xyz/how-to-calculate-synthetic-NCF"/>
+    <id>http://www.seis-jun.xyz/how-to-calculate-synthetic-NCF</id>
+    <published>2020-09-14T07:55:31.000Z</published>
+    <updated>2020-09-14T09:09:33.571Z</updated>
+    
+    <summary type="html">
+    
+      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&lt;img src=&quot;/how-to-calculate-synthetic-NCF/source_dis.png&quot; alt=&quot;Distribution of ambient noise sources (100-300 s) (Ermert et al., 2017 )&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>如何在elementaryOS下让gmt支持中文</title>
@@ -46,7 +63,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;/US-upper-mantle-vs-model/figure5.png&quot; alt=&quot;Maps of Vs structure in the upper mantle and major geological units modified from Fenneman (1917). The color bar labels are V S in km/s (top) and perturbation in percentage (bottom).&quot;&gt;&lt;/p&gt;
+      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&lt;img src=&quot;/US-upper-mantle-vs-model/figure5.png&quot; alt=&quot;Maps of Vs structure in the upper mantle and major geological units modified from Fenneman (1917). The color bar labels are V S in km/s (top) and perturbation in percentage (bottom).&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -67,7 +84,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;/mantle-transition-zone/Picture1.png&quot; alt=&quot;地幔过渡带&quot;&gt;&lt;/p&gt;
+      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&lt;img src=&quot;/mantle-transition-zone/Picture1.png&quot; alt=&quot;地幔过渡带&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -88,7 +105,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;/IQ-decrease/iq.jpg&quot; alt=&quot;智商捉急&quot;&gt;&lt;br&gt;图片来自一篇2018年PANS期刊的&lt;a href=&quot;https://www.pnas.org/content/115/26/6674?fbclid=IwAR3CVcH75ppH836xV4c5s99p11421Puo6ljF9hlQtg7kcRcXDa9_mdPSfU0&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;文章&lt;/a&gt;.&lt;/p&gt;
+      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&lt;img src=&quot;/IQ-decrease/iq.jpg&quot; alt=&quot;智商捉急&quot;&gt;&lt;br&gt;图片来自一篇2018年PANS期刊的&lt;a href=&quot;https://www.pnas.org/content/115/26/6674?fbclid=IwAR3CVcH75ppH836xV4c5s99p11421Puo6ljF9hlQtg7kcRcXDa9_mdPSfU0&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;文章&lt;/a&gt;.&lt;/p&gt;
     
     </summary>
     
@@ -144,7 +161,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;/gmt-time-axes/spec.png&quot; alt=&quot;gmt 时间轴&quot;&gt;&lt;/p&gt;
+      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&lt;img src=&quot;/gmt-time-axes/spec.png&quot; alt=&quot;gmt 时间轴&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -426,27 +443,6 @@
     
     
       <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo免密发布</title>
-    <link href="http://www.seis-jun.xyz/passwd-free-for-deployment"/>
-    <id>http://www.seis-jun.xyz/passwd-free-for-deployment</id>
-    <published>2020-05-30T19:23:55.000Z</published>
-    <updated>2020-06-12T15:56:52.487Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;每次发布都得输入用户名和密码，挺麻烦费事。网上&lt;a href=&quot;https://blog.csdn.net/hhgggggg/article/details/77853665&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;大神&lt;/a&gt;可真多，搜搜就能解决。和ssh登录服务器类似，步骤如下：&lt;/p&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
-    
-      <category term="hexo" scheme="http://www.seis-jun.xyz/tags/hexo/"/>
     
   </entry>
   
