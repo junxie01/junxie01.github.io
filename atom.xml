@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2020-09-14T09:09:33.571Z</updated>
+  <updated>2020-09-14T09:17:15.578Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -21,11 +21,11 @@
     <link href="http://www.seis-jun.xyz/how-to-calculate-synthetic-NCF"/>
     <id>http://www.seis-jun.xyz/how-to-calculate-synthetic-NCF</id>
     <published>2020-09-14T07:55:31.000Z</published>
-    <updated>2020-09-14T09:09:33.571Z</updated>
+    <updated>2020-09-14T09:17:15.578Z</updated>
     
     <summary type="html">
     
-      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&lt;img src=&quot;/how-to-calculate-synthetic-NCF/source_dis.png&quot; alt=&quot;Distribution of ambient noise sources (100-300 s) (Ermert et al., 2017 )&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;/how-to-calculate-synthetic-NCF/source_dis.png&quot; alt=&quot;Distribution of ambient noise sources (100-300 s) (Ermert et al., 2017 )&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -63,7 +63,7 @@
     
     <summary type="html">
     
-      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&lt;img src=&quot;/US-upper-mantle-vs-model/figure5.png&quot; alt=&quot;Maps of Vs structure in the upper mantle and major geological units modified from Fenneman (1917). The color bar labels are V S in km/s (top) and perturbation in percentage (bottom).&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;/US-upper-mantle-vs-model/figure5.png&quot; alt=&quot;Maps of Vs structure in the upper mantle and major geological units modified from Fenneman (1917). The color bar labels are V S in km/s (top) and perturbation in percentage (bottom).&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -84,7 +84,7 @@
     
     <summary type="html">
     
-      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&lt;img src=&quot;/mantle-transition-zone/Picture1.png&quot; alt=&quot;地幔过渡带&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;/mantle-transition-zone/Picture1.png&quot; alt=&quot;地幔过渡带&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -105,7 +105,7 @@
     
     <summary type="html">
     
-      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&lt;img src=&quot;/IQ-decrease/iq.jpg&quot; alt=&quot;智商捉急&quot;&gt;&lt;br&gt;图片来自一篇2018年PANS期刊的&lt;a href=&quot;https://www.pnas.org/content/115/26/6674?fbclid=IwAR3CVcH75ppH836xV4c5s99p11421Puo6ljF9hlQtg7kcRcXDa9_mdPSfU0&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;文章&lt;/a&gt;.&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;/IQ-decrease/iq.jpg&quot; alt=&quot;智商捉急&quot;&gt;&lt;br&gt;图片来自一篇2018年PANS期刊的&lt;a href=&quot;https://www.pnas.org/content/115/26/6674?fbclid=IwAR3CVcH75ppH836xV4c5s99p11421Puo6ljF9hlQtg7kcRcXDa9_mdPSfU0&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;文章&lt;/a&gt;.&lt;/p&gt;
     
     </summary>
     
@@ -161,7 +161,7 @@
     
     <summary type="html">
     
-      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&lt;img src=&quot;/gmt-time-axes/spec.png&quot; alt=&quot;gmt 时间轴&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;/gmt-time-axes/spec.png&quot; alt=&quot;gmt 时间轴&quot;&gt;&lt;/p&gt;
     
     </summary>
     
