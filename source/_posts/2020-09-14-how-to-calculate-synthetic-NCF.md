@@ -3,10 +3,10 @@ title: 怎么计算理论的NCF？
 abbrlink: ce006a34
 date: 2020-09-14 15:55:31
 categories:
-  -work
+  - work
 tags:
-  -sem
-  -NCF
+  - sem
+  - NCF
 ---
 ![Distribution of ambient noise sources (100-300 s) (Ermert et al., 2017 )](source_dis.png)
 <!-- less -->
