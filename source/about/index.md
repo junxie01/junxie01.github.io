@@ -22,7 +22,7 @@ comments: false
 ## 文章列表
 
 1. Xie, J., Risheng Chu, Sidao Ni.(2020), Evaluating global tomography models with antipodal ambient noise cross correlation functions, JGR, in revision
-21. Baolong Zhang, Xiangfang Zeng, Vernon F. Cormier (2020), Validity of Resolving the 785 km Discontinuity in the Lower Mantle with P′P′ PrecursorsSeismological Research Letters.
+2. Baolong Zhang, Xiangfang Zeng, Vernon F. Cormier (2020), Validity of Resolving the 785 km Discontinuity in the Lower Mantle with P′P′ PrecursorsSeismological Research Letters.
 20. Ping Ping, Risheng Chu, Yu Zhang, Jun Xie, (2020), Enhancing Signal-to-Noise Ratios of High-Frequency Rayleigh Waves Extracted from Ambient Seismic Noises in Topographic Region, Bulletin of the Seismological Society of America.
 19. Xie, J., Sidao Ni, Chu Risheng.(2020), Relocation of the June 17th, 2017 Nuugaatsiaq (Greenland) landside based on Green’s functions from ambient seismic noise,Journal of Geophysical Research: Solid Earth, 125(5).
 18. Aizhi Guo, Sidao Ni, Jun Xie, et al. (2019), Millimerter-level ultra-long period multiple earth-circling surface waves retrieved from dense high-rate GPS network, Earth and Planetary Science Letters.
