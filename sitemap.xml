@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.seis-jun.xyz/about/</loc>
+    
+    <lastmod>2020-09-29T05:33:34.095Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.seis-jun.xyz/how-to-download-video-from-internet</loc>
     
     <lastmod>2020-09-25T09:04:19.369Z</lastmod>
@@ -460,13 +467,6 @@
     <loc>http://www.seis-jun.xyz/tags/</loc>
     
     <lastmod>2020-06-07T15:07:46.247Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.seis-jun.xyz/about/</loc>
-    
-    <lastmod>2020-06-07T15:07:37.887Z</lastmod>
     
   </url>
   
