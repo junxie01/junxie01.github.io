@@ -24,4 +24,8 @@ you-get 视频网址
 ```
 ffmpeg -i input.flv -c copy output.mp4
 ```
-&emsp;&emsp;哈，大工告成。
+&emsp;&emsp;下载下来的视频太长了，想要剪切出其中的片段咋办？像这样：
+```
+ffmpeg -ss 00:00:05 -t 00:00:10 -i input.mp4 -q 0 output.mp4
+```
+&emsp;&emsp;就可以从5秒开始剪出10秒的片段。哈，大功告成。
