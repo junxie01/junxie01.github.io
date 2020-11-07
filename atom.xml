@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2020-10-04T16:03:37.222Z</updated>
+  <updated>2020-11-07T09:25:01.316Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>20201107日记</title>
+    <link href="http://www.seis-jun.xyz/about-anti-paper"/>
+    <id>http://www.seis-jun.xyz/about-anti-paper</id>
+    <published>2020-11-07T08:56:45.000Z</published>
+    <updated>2020-11-07T09:25:01.316Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&amp;emsp;&amp;emsp;文章的审稿意见见天又双叒叕下来了，值得记录一下。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="日记" scheme="http://www.seis-jun.xyz/categories/%E6%97%A5%E8%AE%B0/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>如何下载网上的视频</title>
@@ -427,27 +446,6 @@
       <category term="博客" scheme="http://www.seis-jun.xyz/tags/%E5%8D%9A%E5%AE%A2/"/>
     
       <category term="网易" scheme="http://www.seis-jun.xyz/tags/%E7%BD%91%E6%98%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于写日记</title>
-    <link href="http://www.seis-jun.xyz/about-diary"/>
-    <id>http://www.seis-jun.xyz/about-diary</id>
-    <published>2020-06-03T14:54:38.000Z</published>
-    <updated>2020-06-12T15:56:52.477Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&amp;emsp;&amp;emsp;好久都没有写日记的习惯了。今天勉强写一些吧。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="日记" scheme="http://www.seis-jun.xyz/categories/%E6%97%A5%E8%AE%B0/"/>
-    
-    
-      <category term="日记" scheme="http://www.seis-jun.xyz/tags/%E6%97%A5%E8%AE%B0/"/>
     
   </entry>
   
