@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2020-11-11T02:32:23.645Z</updated>
+  <updated>2020-11-19T06:33:06.702Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于瘾</title>
+    <link href="http://www.seis-jun.xyz/addiction"/>
+    <id>http://www.seis-jun.xyz/addiction</id>
+    <published>2020-11-19T06:07:30.000Z</published>
+    <updated>2020-11-19T06:33:06.702Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&amp;emsp;&amp;emsp;什么是瘾？&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="乱" scheme="http://www.seis-jun.xyz/categories/%E4%B9%B1/"/>
+    
+    
+      <category term="乱" scheme="http://www.seis-jun.xyz/tags/%E4%B9%B1/"/>
+    
+  </entry>
   
   <entry>
     <title>文章第三轮大修</title>
@@ -423,29 +444,6 @@
     
     
       <category term="儿子" scheme="http://www.seis-jun.xyz/tags/%E5%84%BF%E5%AD%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网易博客迁移</title>
-    <link href="http://www.seis-jun.xyz/wangyi-blog-transfer"/>
-    <id>http://www.seis-jun.xyz/wangyi-blog-transfer</id>
-    <published>2020-06-03T15:23:36.000Z</published>
-    <updated>2020-06-24T03:10:12.933Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&amp;emsp;&amp;emsp;今天想到自己在网易上的博客。翻出来一看，乖乖人家网易在2018年就把博客给停了。估计是看我不在上面更新了，伤心欲绝了吧。笑。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="日记" scheme="http://www.seis-jun.xyz/categories/%E6%97%A5%E8%AE%B0/"/>
-    
-    
-      <category term="博客" scheme="http://www.seis-jun.xyz/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
-      <category term="网易" scheme="http://www.seis-jun.xyz/tags/%E7%BD%91%E6%98%93/"/>
     
   </entry>
   
