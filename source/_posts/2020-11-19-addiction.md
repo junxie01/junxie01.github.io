@@ -1,9 +1,9 @@
 ---
 title: 关于瘾
 categories:
-  - 乱
+  - 杂
 tags:
-  - 乱
+  - 瘾
 abbrlink: 7f26de1c
 date: 2020-11-19 14:07:30
 ---
