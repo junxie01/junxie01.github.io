@@ -7,7 +7,7 @@ tags:
 abbrlink: dea40c8a
 date: 2020-11-20 23:27:46
 ---
-&emsp;&emsp;传输数据到服务器使用FileZilla程序是比较方便和稳定的。只是Linux下需要编译安装一下，那还不易热儿，那就安装呗。然而安装过程让人迷糊，复杂程度让人难忘，特此记录一下。遗憾的是，到现在为止，该程序仍然没有安装成功。
+&emsp;&emsp;本地到服务器的数据传输使用FileZilla程序比较方便和稳定。只是Linux下需要编译安装该程序，那还不易热儿，那就安装呗。然而安装过程让人迷糊，复杂程度让人难忘，特此记录一下。遗憾的是，花了我两天时间，到现在为止，该程序仍然没有安装成功。
 <!-- more -->
 &emsp;&emsp;首先在<https://filezilla-project.org/>下载了个可执行程序---显然是运行不了的。仔细看发现是在debian10.0下编译的。我的系统是Fedora和Elementary OS5，两个都运行不了。然后下载了源程序FileZilla_3.51.0_src.tar.bz2。
 &emsp;&emsp;解压，安装filezilla-3.51.0，编译过程出错，显示没有安装libfilezilla。
