@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2020-11-19T07:43:58.904Z</updated>
+  <updated>2020-11-20T15:53:00.485Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何安装FileZilla</title>
+    <link href="http://www.seis-jun.xyz/how-to-install-filezilla"/>
+    <id>http://www.seis-jun.xyz/how-to-install-filezilla</id>
+    <published>2020-11-20T15:27:46.000Z</published>
+    <updated>2020-11-20T15:53:00.485Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&amp;emsp;&amp;emsp;为了要传输数据到服务器需要安装FileZilla程序，那还不易热儿，那就安装呗。然而安装过程让人难忘，不得不记录一下。惭愧的是，仍然还没有搞定。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="http://www.seis-jun.xyz/categories/Linux/"/>
+    
+    
+      <category term="filezilla" scheme="http://www.seis-jun.xyz/tags/filezilla/"/>
+    
+  </entry>
   
   <entry>
     <title>关于瘾</title>
@@ -423,27 +444,6 @@
       <category term="反演" scheme="http://www.seis-jun.xyz/tags/%E5%8F%8D%E6%BC%94/"/>
     
       <category term="历史" scheme="http://www.seis-jun.xyz/tags/%E5%8E%86%E5%8F%B2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Eric的趣事</title>
-    <link href="http://www.seis-jun.xyz/funny-thing-about-Eric"/>
-    <id>http://www.seis-jun.xyz/funny-thing-about-Eric</id>
-    <published>2020-06-03T17:00:58.000Z</published>
-    <updated>2020-06-12T15:56:52.478Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&amp;emsp;&amp;emsp;记录一下儿子好玩的事情，以免以后忘记了。以后他看到应该会觉得好玩吧。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="日记" scheme="http://www.seis-jun.xyz/categories/%E6%97%A5%E8%AE%B0/"/>
-    
-    
-      <category term="儿子" scheme="http://www.seis-jun.xyz/tags/%E5%84%BF%E5%AD%90/"/>
     
   </entry>
   
