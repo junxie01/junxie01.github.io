@@ -1,5 +1,5 @@
 ---
-title: 如何安装FileZilla
+title: 为啥要这样安装FileZilla
 categories:
   - Linux
 tags:
@@ -7,9 +7,9 @@ tags:
 abbrlink: dea40c8a
 date: 2020-11-20 23:27:46
 ---
-&emsp;&emsp;为了要传输数据到服务器需要安装FileZilla程序，那还不易热儿，那就安装呗。然而安装过程让人难忘，不得不记录一下。惭愧的是，仍然还没有搞定。
+&emsp;&emsp;为了要传输数据到服务器需要安装FileZilla程序，那还不易热儿，那就安装呗。然而安装过程让人难忘，不得不记录一下。遗憾的是，到现在仍然还没有搞定。
 <!-- more -->
-&emsp;&emsp;首先在https://filezilla-project.org/下载了个可执行程序---显然是运行不了的。仔细看发现是在debian10.0下编译的。我的系统是Fedora和Elementary OS5，两个都运行不了。然后下载了源程序FileZilla_3.51.0_src.tar.bz2。
+&emsp;&emsp;首先在(https://filezilla-project.org/)下载了个可执行程序---显然是运行不了的。仔细看发现是在debian10.0下编译的。我的系统是Fedora和Elementary OS5，两个都运行不了。然后下载了源程序FileZilla_3.51.0_src.tar.bz2。
 &emsp;&emsp;解压，安装filezilla-3.51.0，编译过程出错，显示没有安装libfilezilla。
 &emsp;&emsp;于是下载libfilezilla-0.25.0.tar.bz2，解压，安装libfilezilla-0.25.0，编译过程出错，显示没有安装有nettle。
 &emsp;&emsp;于是下载nettle-3.6.tar.gz，解压编译安装nettle-3.6一次通过。
