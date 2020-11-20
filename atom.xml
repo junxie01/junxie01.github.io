@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2020-11-20T15:53:00.485Z</updated>
+  <updated>2020-11-20T15:59:29.744Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -17,15 +17,15 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>如何安装FileZilla</title>
+    <title>为啥要这样安装FileZilla</title>
     <link href="http://www.seis-jun.xyz/how-to-install-filezilla"/>
     <id>http://www.seis-jun.xyz/how-to-install-filezilla</id>
     <published>2020-11-20T15:27:46.000Z</published>
-    <updated>2020-11-20T15:53:00.485Z</updated>
+    <updated>2020-11-20T15:59:29.744Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&amp;emsp;&amp;emsp;为了要传输数据到服务器需要安装FileZilla程序，那还不易热儿，那就安装呗。然而安装过程让人难忘，不得不记录一下。惭愧的是，仍然还没有搞定。&lt;/p&gt;
+      &lt;p&gt;&amp;emsp;&amp;emsp;为了要传输数据到服务器需要安装FileZilla程序，那还不易热儿，那就安装呗。然而安装过程让人难忘，不得不记录一下。遗憾的是，到现在仍然还没有搞定。&lt;/p&gt;
     
     </summary>
     
@@ -107,7 +107,7 @@
     
     <summary type="html">
     
-      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&lt;img src=&quot;/how-to-calculate-synthetic-NCF/source_dis.png&quot; alt=&quot;Distribution of ambient noise sources (100-300 s) (Ermert et al., 2017 )&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;/how-to-calculate-synthetic-NCF/source_dis.png&quot; alt=&quot;Distribution of ambient noise sources (100-300 s) (Ermert et al., 2017 )&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -151,7 +151,7 @@
     
     <summary type="html">
     
-      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&lt;img src=&quot;/US-upper-mantle-vs-model/figure5.png&quot; alt=&quot;Maps of Vs structure in the upper mantle and major geological units modified from Fenneman (1917). The color bar labels are V S in km/s (top) and perturbation in percentage (bottom).&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;/US-upper-mantle-vs-model/figure5.png&quot; alt=&quot;Maps of Vs structure in the upper mantle and major geological units modified from Fenneman (1917). The color bar labels are V S in km/s (top) and perturbation in percentage (bottom).&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -172,7 +172,7 @@
     
     <summary type="html">
     
-      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&lt;img src=&quot;/mantle-transition-zone/Picture1.png&quot; alt=&quot;地幔过渡带&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;/mantle-transition-zone/Picture1.png&quot; alt=&quot;地幔过渡带&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -193,7 +193,7 @@
     
     <summary type="html">
     
-      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&lt;img src=&quot;/IQ-decrease/iq.jpg&quot; alt=&quot;智商捉急&quot;&gt;&lt;br&gt;图片来自一篇2018年PANS期刊的&lt;a href=&quot;https://www.pnas.org/content/115/26/6674?fbclid=IwAR3CVcH75ppH836xV4c5s99p11421Puo6ljF9hlQtg7kcRcXDa9_mdPSfU0&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;文章&lt;/a&gt;.&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;/IQ-decrease/iq.jpg&quot; alt=&quot;智商捉急&quot;&gt;&lt;br&gt;图片来自一篇2018年PANS期刊的&lt;a href=&quot;https://www.pnas.org/content/115/26/6674?fbclid=IwAR3CVcH75ppH836xV4c5s99p11421Puo6ljF9hlQtg7kcRcXDa9_mdPSfU0&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;文章&lt;/a&gt;.&lt;/p&gt;
     
     </summary>
     
@@ -249,7 +249,7 @@
     
     <summary type="html">
     
-      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&lt;img src=&quot;/gmt-time-axes/spec.png&quot; alt=&quot;gmt 时间轴&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;/gmt-time-axes/spec.png&quot; alt=&quot;gmt 时间轴&quot;&gt;&lt;/p&gt;
     
     </summary>
     
