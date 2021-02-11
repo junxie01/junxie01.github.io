@@ -1,11 +1,13 @@
 ---
-title: happy_new_year
+title: 新年快乐
 abbrlink: eac80072
 date: 2021-02-12 00:37:36
 categories:
+  - 日记
 tags:
+  - 日记
 ---
-![接收](acce.png)
+![文章接收](acce.png)
 <!-- less -->
 &emsp;&emsp;各位新年快乐。
 &emsp;&emsp;我不是针对谁，我是说在座各位的模型都有问题。开玩笑的，别当真。
