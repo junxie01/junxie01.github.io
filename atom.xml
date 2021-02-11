@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2020-11-20T16:28:16.479Z</updated>
+  <updated>2021-02-11T16:47:41.553Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>happy_new_year</title>
+    <link href="http://www.seis-jun.xyz/happy-new-year"/>
+    <id>http://www.seis-jun.xyz/happy-new-year</id>
+    <published>2021-02-11T16:37:36.000Z</published>
+    <updated>2021-02-11T16:47:41.553Z</updated>
+    
+    <summary type="html">
+    
+      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&lt;img src=&quot;/happy-new-year/acce.png&quot; alt=&quot;接收&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>为啥要这样安装FileZilla</title>
@@ -421,29 +438,6 @@
     
     
       <category term="杂" scheme="http://www.seis-jun.xyz/tags/%E6%9D%82/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>历史和反演</title>
-    <link href="http://www.seis-jun.xyz/history-and-inversion"/>
-    <id>http://www.seis-jun.xyz/history-and-inversion</id>
-    <published>2020-06-04T16:57:47.000Z</published>
-    <updated>2020-06-12T15:56:52.479Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&amp;emsp;&amp;emsp;研一的时候上过一节外系的选修课。现在已经想不起来是什么课了。那为啥我还记得这个课呢？&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="乱笔" scheme="http://www.seis-jun.xyz/categories/%E4%B9%B1%E7%AC%94/"/>
-    
-    
-      <category term="反演" scheme="http://www.seis-jun.xyz/tags/%E5%8F%8D%E6%BC%94/"/>
-    
-      <category term="历史" scheme="http://www.seis-jun.xyz/tags/%E5%8E%86%E5%8F%B2/"/>
     
   </entry>
   
