@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2021-02-11T16:53:14.033Z</updated>
+  <updated>2021-03-02T07:28:44.115Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>安装完fedora32以后的</title>
+    <link href="http://www.seis-jun.xyz/after-fedora32"/>
+    <id>http://www.seis-jun.xyz/after-fedora32</id>
+    <published>2021-03-02T06:54:16.000Z</published>
+    <updated>2021-03-02T07:28:44.115Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&amp;emsp;&amp;emsp;话说这台工作站已经有点“老了”，于是重新买了一台，美滋滋。5分钟安装了个fedora32，记录一下干了些啥。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="-- Linux" scheme="http://www.seis-jun.xyz/categories/Linux/"/>
+    
+    
+      <category term="-- 日记" scheme="http://www.seis-jun.xyz/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>新年快乐</title>
@@ -421,27 +442,6 @@
       <category term="next" scheme="http://www.seis-jun.xyz/tags/next/"/>
     
       <category term="hexo" scheme="http://www.seis-jun.xyz/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>不继续搬迁网易博客了</title>
-    <link href="http://www.seis-jun.xyz/no-more-blog-transfer"/>
-    <id>http://www.seis-jun.xyz/no-more-blog-transfer</id>
-    <published>2020-06-05T05:50:38.000Z</published>
-    <updated>2020-06-12T15:56:52.480Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&amp;emsp;&amp;emsp;那个网易博客太多私人的话题和内容就不往这里搬了。自己也不是明星，八卦什么的也不值钱。这里还是用来记好玩的吧。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="杂" scheme="http://www.seis-jun.xyz/categories/%E6%9D%82/"/>
-    
-    
-      <category term="杂" scheme="http://www.seis-jun.xyz/tags/%E6%9D%82/"/>
     
   </entry>
   
