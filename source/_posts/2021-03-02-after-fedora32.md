@@ -1,5 +1,5 @@
 ---
-title: 安装完fedora32以后的
+title: 安装完fedora32之后
 categories: '-- Linux'
 tags: '-- 日记'
 abbrlink: 186eae32
