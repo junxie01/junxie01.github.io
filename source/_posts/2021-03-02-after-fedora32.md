@@ -1,7 +1,9 @@
 ---
 title: 安装完fedora32之后
-categories: '-- Linux'
-tags: '-- 日记'
+categories: 
+  - Linux
+tags: 
+  - 日记
 abbrlink: 186eae32
 date: 2021-03-02 14:54:16
 ---
