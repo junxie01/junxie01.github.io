@@ -31,7 +31,17 @@ sudo hostnamectl set-hostname zbook7 --static
 dnf copr enable genericmappingtools/gmt
 dnf install gmt
 ```
+## gmt6中文支持
+在这篇日志{% post_link how-to-configure-chinese-for-gmt %}里有对gmt中文支持的说明。然而现在安装的是fedora32，ghostscript的cidmap文件不一样，搞不定啊。于是按照[GMT中文社区](https://docs.gmt-china.org/)的说明，运行了[cjk-gs-integrate.pl](raw.githubusercontent.com/texjporg/cjk-gs-support/master/cjk-gs-integrate.pl)脚本之后果然可以用中文了。
 
+然而，如文档所说，gs果然不能用了。然后运行sudo perl cjk-gs-integrate.pl --remove，结果gs还是用不了。
+按照以前的经验，那就删掉ghostscript然后重装。于是运行了：
+```
+sudo dnf remove ghostscript
+```
+结果删除了一大堆东西，包括gmt等等，然后一一重装。
+回想在运行cjk-gs-integrate.pl脚本的时候有看到/usr/share/ghostscript/Resource/Init/cidmap*等文件信息出现。
+于是将这个文件当作以往编辑中文字体配置文件的方法:{% post_link how-to-configure-chinese-for-gmt %}，于是就OK了。
 ## 安装npm
 在[这里](https://nodejs.org/en/download/)下载，然后安装。本来是想安装hexo，所以来安装这个软件。结果hexo一直搞不定。暂时就不理他了。
 
