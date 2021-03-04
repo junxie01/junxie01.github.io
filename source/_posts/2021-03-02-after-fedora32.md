@@ -32,7 +32,7 @@ dnf copr enable genericmappingtools/gmt
 dnf install gmt
 ```
 ## gmt6中文支持
-在这篇日志{% post_link how-to-configure-chinese-for-gmt %}里有对gmt中文支持的说明。然而现在安装的是fedora32，ghostscript的cidmap文件不一样，搞不定啊。于是按照[GMT中文社区](https://docs.gmt-china.org/)的说明，运行了[cjk-gs-integrate.pl](raw.githubusercontent.com/texjporg/cjk-gs-support/master/cjk-gs-integrate.pl)脚本之后果然可以用中文了。
+在这篇日志{% post_link how-to-configure-chinese-for-gmt %}里有对gmt中文支持的说明。然而现在安装的是fedora32，ghostscript的cidmap文件不一样，搞不定啊。于是按照[GMT中文社区](https://docs.gmt-china.org/)的说明，运行了[cjk-gs-integrate.pl](http://raw.githubusercontent.com/texjporg/cjk-gs-support/master/cjk-gs-integrate.pl)脚本之后果然可以用中文了。
 
 然而，如文档所说，gs果然不能用了。然后运行sudo perl cjk-gs-integrate.pl --remove，结果gs还是用不了。
 按照以前的经验，那就删掉ghostscript然后重装。于是运行了：
