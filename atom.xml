@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2021-03-04T07:00:37.154Z</updated>
+  <updated>2021-03-08T08:22:13.631Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一起看星星</title>
+    <link href="http://www.seis-jun.xyz/sky-and-universe"/>
+    <id>http://www.seis-jun.xyz/sky-and-universe</id>
+    <published>2021-03-08T07:28:20.000Z</published>
+    <updated>2021-03-08T08:22:13.631Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/sky-and-universe/ghost.png&quot; alt=&quot;幽灵？人鱼？&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="杂" scheme="http://www.seis-jun.xyz/categories/%E6%9D%82/"/>
+    
+    
+      <category term="杂" scheme="http://www.seis-jun.xyz/tags/%E6%9D%82/"/>
+    
+  </entry>
   
   <entry>
     <title>安装完fedora32之后</title>
@@ -419,29 +440,6 @@
       <category term="hexo" scheme="http://www.seis-jun.xyz/tags/hexo/"/>
     
       <category term="sed" scheme="http://www.seis-jun.xyz/tags/sed/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>我对这个博客做了什么</title>
-    <link href="http://www.seis-jun.xyz/what-did-I-do-to-this-blog"/>
-    <id>http://www.seis-jun.xyz/what-did-I-do-to-this-blog</id>
-    <published>2020-06-10T03:18:16.000Z</published>
-    <updated>2020-06-27T06:10:43.228Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&amp;emsp;&amp;emsp;原本是想记笔记，写一些技术性的东西。然而现在为止好像还没有干啥正事。那我对这个博客做了些什么呢？干了这些：&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="web" scheme="http://www.seis-jun.xyz/categories/web/"/>
-    
-    
-      <category term="next" scheme="http://www.seis-jun.xyz/tags/next/"/>
-    
-      <category term="hexo" scheme="http://www.seis-jun.xyz/tags/hexo/"/>
     
   </entry>
   
