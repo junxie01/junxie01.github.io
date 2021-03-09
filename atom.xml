@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2021-03-09T00:00:02.580Z</updated>
+  <updated>2021-03-09T07:54:41.115Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>bash里如何循环读取文件</title>
+    <link href="http://www.seis-jun.xyz/read-file-bash"/>
+    <id>http://www.seis-jun.xyz/read-file-bash</id>
+    <published>2021-03-09T07:51:21.000Z</published>
+    <updated>2021-03-09T07:54:41.115Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&amp;emsp;&amp;emsp;Bash操作简单，可以处理简单的计算等。有些时候会遇到文件的读取问题，那如何对文件进行循环逐行读取呢？&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="http://www.seis-jun.xyz/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://www.seis-jun.xyz/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>一起看星星</title>
@@ -413,33 +434,6 @@
     
     
       <category term="Linux" scheme="http://www.seis-jun.xyz/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>sed插入和删除匹配行</title>
-    <link href="http://www.seis-jun.xyz/learn-sed"/>
-    <id>http://www.seis-jun.xyz/learn-sed</id>
-    <published>2020-06-12T15:09:54.000Z</published>
-    <updated>2020-06-23T09:07:37.185Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&amp;emsp;&amp;emsp;sed功能非常强大，利用来处理文本文件不要太爽。要是能熟练掌握，在文本江湖简直随心所欲，无往而不利。我自然也想学学，不过入坑awk有点久。通常习惯了一种方式以后就难以醉心到另一种。这也大约是少林72绝技一般和尚难同时融汇多种的原因吧。一般人也很难精通多个领域。这两天在配置这个博客时遇到一些要对所有post处理的步骤。于是就尝试了sed的用法。倒是很方便。例如：&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Linux" scheme="http://www.seis-jun.xyz/categories/Linux/"/>
-    
-    
-      <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
-    
-      <category term="next" scheme="http://www.seis-jun.xyz/tags/next/"/>
-    
-      <category term="hexo" scheme="http://www.seis-jun.xyz/tags/hexo/"/>
-    
-      <category term="sed" scheme="http://www.seis-jun.xyz/tags/sed/"/>
     
   </entry>
   
