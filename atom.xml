@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2021-04-01T08:14:41.856Z</updated>
+  <updated>2021-07-23T07:53:06.804Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>重新安装Elementary OS系统</title>
+    <link href="http://www.seis-jun.xyz/install-elementary-os-again"/>
+    <id>http://www.seis-jun.xyz/install-elementary-os-again</id>
+    <published>2021-07-23T07:44:13.000Z</published>
+    <updated>2021-07-23T07:53:06.804Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&amp;emsp;&amp;emsp;之前买的新电脑Zbook还行，安装了fedora 32（见&lt;a href=&quot;/after-fedora32.html&quot; title=&quot;安装完fedora32之后&quot;&gt;安装完fedora32之后&lt;/a&gt;）以后结果发现各种问题。包括，不能安装sac，rdseed，hexo，wikimedia。一气之下就安装回了Elementary OS。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="http://www.seis-jun.xyz/categories/Linux/"/>
+    
+    
+      <category term="日记" scheme="http://www.seis-jun.xyz/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>power spectral density</title>
@@ -84,7 +105,7 @@
     <link href="http://www.seis-jun.xyz/after-fedora32"/>
     <id>http://www.seis-jun.xyz/after-fedora32</id>
     <published>2021-03-02T06:54:16.000Z</published>
-    <updated>2021-03-04T07:00:37.154Z</updated>
+    <updated>2021-07-23T07:52:27.544Z</updated>
     
     <summary type="html">
     
@@ -411,29 +432,6 @@
     
     
       <category term="wiki" scheme="http://www.seis-jun.xyz/tags/wiki/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo next首页文章加框</title>
-    <link href="http://www.seis-jun.xyz/how-to-add-frame-in-hexo-next"/>
-    <id>http://www.seis-jun.xyz/how-to-add-frame-in-hexo-next</id>
-    <published>2020-06-20T14:42:59.000Z</published>
-    <updated>2020-06-20T15:09:10.971Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&amp;emsp;&amp;emsp;我的博客首页的文章列表一直是连起来的，看起来不爽。因而一直在搜索如何加边框，搜出来的是如何添加文章边框阴影效果。看起来也对。于是就开始照猫画虎。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="web" scheme="http://www.seis-jun.xyz/categories/web/"/>
-    
-    
-      <category term="hexo" scheme="http://www.seis-jun.xyz/tags/hexo/"/>
-    
-      <category term="blog" scheme="http://www.seis-jun.xyz/tags/blog/"/>
     
   </entry>
   

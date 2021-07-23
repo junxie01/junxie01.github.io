@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.seis-jun.xyz/install-elementary-os-again</loc>
+    
+    <lastmod>2021-07-23T07:53:06.804Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.seis-jun.xyz/after-fedora32</loc>
+    
+    <lastmod>2021-07-23T07:52:27.544Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.seis-jun.xyz/pdf</loc>
     
     <lastmod>2021-04-01T08:14:41.856Z</lastmod>
@@ -19,13 +33,6 @@
     <loc>http://www.seis-jun.xyz/read-file-bash</loc>
     
     <lastmod>2021-03-09T07:54:48.084Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.seis-jun.xyz/after-fedora32</loc>
-    
-    <lastmod>2021-03-04T07:00:37.154Z</lastmod>
     
   </url>
   
