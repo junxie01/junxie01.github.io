@@ -27,14 +27,14 @@
 <script data-ad-client="ca-pub-7228454655210783" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
   <meta property="og:type" content="article">
-<meta property="og:title" content="power spectral density">
+<meta property="og:title" content="Power Spectral Density">
 <meta property="og:url" content="http://www.seis-jun.xyz/pdf">
 <meta property="og:site_name" content="SEISAMUSE">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://service.iris.edu/mustang/noise-pdf/1/query?target=IU.ANMO.00.BHZ.M&starttime=2013-12-01&endtime=2013-12-31&format=plot">
 <meta property="og:image" content="https://i.loli.net/2021/03/29/rLfmZ1hWNleQKC8.png">
 <meta property="article:published_time" content="2021-03-29T06:52:08.000Z">
-<meta property="article:modified_time" content="2021-04-01T08:14:41.856Z">
+<meta property="article:modified_time" content="2021-07-25T09:14:54.731Z">
 <meta property="article:author" content="Jun Xie">
 <meta property="article:tag" content="work">
 <meta name="twitter:card" content="summary">
@@ -53,7 +53,7 @@
   };
 </script>
 
-  <title>power spectral density | SEISAMUSE</title>
+  <title>Power Spectral Density | SEISAMUSE</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168057869-1"></script>
     <script data-pjax>
@@ -240,7 +240,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          power spectral density
+          Power Spectral Density
         </h1>
 
         <div class="post-meta">
@@ -257,7 +257,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-04-01 16:14:41" itemprop="dateModified" datetime="2021-04-01T16:14:41+08:00">2021-04-01</time>
+                <time title="修改时间：2021-07-25 17:14:54" itemprop="dateModified" datetime="2021-07-25T17:14:54+08:00">2021-07-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -315,7 +315,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p><img data-src="http://service.iris.edu/mustang/noise-pdf/1/query?target=IU.ANMO.00.BHZ.M&starttime=2013-12-01&endtime=2013-12-31&format=plot" alt><br>&emsp;&emsp;封面图是IRIS提供的查看台站能量谱密度图，网址见<a href="http://service.iris.edu/mustang/noise-pdf/1/query?target=IU.ANMO.00.BHZ.M&starttime=2013-12-01&endtime=2013-12-31&format=plot">mustang</a>.<br>&emsp;&emsp;咱们也得会啊，要不然怎么分析自己的数据？于是按照MacNamara and Buland (2004)的文章给的公式自己编了一个程序。同样计算了ANMO台2013年12月竖直分量BHZ的能量谱密度，是这个样子：<br><img data-src="https://i.loli.net/2021/03/29/rLfmZ1hWNleQKC8.png" alt="自己算的ANMO台BHZ分量2013年12月能量谱密度"><br>&emsp;&emsp;对比看来好像形状差不多了，但是。。。怎么我算出来的比IRIS的整体高了20分贝呢？<br>&emsp;&emsp;后来明白了，是公式里dt的原因。我是除的dt，其实应该是乘。乘上dt就对了，开森。</p>
+        <p><img data-src="http://service.iris.edu/mustang/noise-pdf/1/query?target=IU.ANMO.00.BHZ.M&starttime=2013-12-01&endtime=2013-12-31&format=plot" alt><br>&emsp;&emsp;封面图是IRIS提供的查看台站能量谱密度图，网址见<a href="http://service.iris.edu/mustang/noise-pdf/1/query?target=IU.ANMO.00.BHZ.M&starttime=2013-12-01&endtime=2013-12-31&format=plot">mustang</a>.<br>&emsp;&emsp;咱们也得会啊，要不然怎么分析自己的数据？于是按照MacNamara and Buland (2004)的文章给的公式自己编了一个程序。同样计算了ANMO台2013年12月竖直分量BHZ的能量谱密度，是这个样子：<br><img data-src="https://i.loli.net/2021/03/29/rLfmZ1hWNleQKC8.png" alt="自己算的ANMO台BHZ分量2013年12月能量谱密度"><br>&emsp;&emsp;对比看来好像形状差不多了，但是。。。怎么我算出来的比IRIS的整体高了20分贝呢？<br>&emsp;&emsp;后来明白了，是公式里dt的原因。我是除的dt，其实应该是乘。乘上dt就对了，开森。</p>
     </div>
 
     
@@ -352,7 +352,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://www.seis-jun.xyz/pdf" title="power spectral density">http://www.seis-jun.xyz/pdf</a>
+    <a href="http://www.seis-jun.xyz/pdf" title="Power Spectral Density">http://www.seis-jun.xyz/pdf</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！

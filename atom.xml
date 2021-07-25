@@ -38,15 +38,15 @@
   </entry>
   
   <entry>
-    <title>power spectral density</title>
+    <title>Power Spectral Density</title>
     <link href="http://www.seis-jun.xyz/pdf"/>
     <id>http://www.seis-jun.xyz/pdf</id>
     <published>2021-03-29T06:52:08.000Z</published>
-    <updated>2021-04-01T08:14:41.856Z</updated>
+    <updated>2021-07-25T09:14:54.731Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img data-src=&quot;https://i.loli.net/2021/03/29/OXQhg3SjozrPT6e.png&quot; alt=&quot;ANMO台2013年12月的能量谱密度&quot;&gt;&lt;/p&gt;
+      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&lt;img data-src=&quot;https://i.loli.net/2021/03/29/OXQhg3SjozrPT6e.png&quot; alt=&quot;ANMO台2013年12月的能量谱密度&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -88,7 +88,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img data-src=&quot;https://i.loli.net/2021/03/08/8G6ODBE3FbZa4U2.png&quot; alt=&quot;幽灵？人鱼？&quot;&gt;&lt;/p&gt;
+      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&lt;img data-src=&quot;https://i.loli.net/2021/03/08/8G6ODBE3FbZa4U2.png&quot; alt=&quot;幽灵？人鱼？&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -130,7 +130,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img data-src=&quot;acce.png&quot; alt=&quot;文章接收&quot;&gt;&lt;/p&gt;
+      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&lt;img data-src=&quot;acce.png&quot; alt=&quot;文章接收&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -233,7 +233,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img data-src=&quot;source_dis.png&quot; alt=&quot;Distribution of ambient noise sources (100-300 s) (Ermert et al., 2017 )&quot;&gt;&lt;/p&gt;
+      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&lt;img data-src=&quot;source_dis.png&quot; alt=&quot;Distribution of ambient noise sources (100-300 s) (Ermert et al., 2017 )&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -277,7 +277,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img data-src=&quot;figure5.png&quot; alt=&quot;Maps of Vs structure in the upper mantle and major geological units modified from Fenneman (1917). The color bar labels are V S in km/s (top) and perturbation in percentage (bottom).&quot;&gt;&lt;/p&gt;
+      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&lt;img data-src=&quot;figure5.png&quot; alt=&quot;Maps of Vs structure in the upper mantle and major geological units modified from Fenneman (1917). The color bar labels are V S in km/s (top) and perturbation in percentage (bottom).&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -298,7 +298,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img data-src=&quot;Picture1.png&quot; alt=&quot;地幔过渡带&quot;&gt;&lt;/p&gt;
+      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&lt;img data-src=&quot;Picture1.png&quot; alt=&quot;地幔过渡带&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -319,7 +319,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img data-src=&quot;iq.jpg&quot; alt=&quot;智商捉急&quot;&gt;&lt;br&gt;图片来自一篇2018年PANS期刊的&lt;a href=&quot;https://www.pnas.org/content/115/26/6674?fbclid=IwAR3CVcH75ppH836xV4c5s99p11421Puo6ljF9hlQtg7kcRcXDa9_mdPSfU0&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;文章&lt;/a&gt;.&lt;/p&gt;
+      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&lt;img data-src=&quot;iq.jpg&quot; alt=&quot;智商捉急&quot;&gt;&lt;br&gt;图片来自一篇2018年PANS期刊的&lt;a href=&quot;https://www.pnas.org/content/115/26/6674?fbclid=IwAR3CVcH75ppH836xV4c5s99p11421Puo6ljF9hlQtg7kcRcXDa9_mdPSfU0&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;文章&lt;/a&gt;.&lt;/p&gt;
     
     </summary>
     
@@ -375,7 +375,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img data-src=&quot;spec.png&quot; alt=&quot;gmt 时间轴&quot;&gt;&lt;/p&gt;
+      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&lt;img data-src=&quot;spec.png&quot; alt=&quot;gmt 时间轴&quot;&gt;&lt;/p&gt;
     
     </summary>
     
