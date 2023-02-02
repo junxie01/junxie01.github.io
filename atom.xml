@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2021-07-23T08:44:59.000Z</updated>
+  <updated>2023-02-02T02:33:55.279Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>linux_in_window11</title>
+    <link href="http://www.seis-jun.xyz/linux-in-window11"/>
+    <id>http://www.seis-jun.xyz/linux-in-window11</id>
+    <published>2023-02-02T02:24:28.000Z</published>
+    <updated>2023-02-02T02:33:55.279Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://smms.app/image/duDT4hmjf7wrNKc&quot; alt=&quot;Win11下Linux错误&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>重新安装Elementary OS系统</title>
@@ -411,27 +428,6 @@
       <category term="next" scheme="http://www.seis-jun.xyz/tags/next/"/>
     
       <category term="hexo" scheme="http://www.seis-jun.xyz/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>How to install and backup mediawiki</title>
-    <link href="http://www.seis-jun.xyz/install-and-backup-mediawiki"/>
-    <id>http://www.seis-jun.xyz/install-and-backup-mediawiki</id>
-    <published>2020-06-22T02:18:19.000Z</published>
-    <updated>2020-06-22T02:49:36.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Meidawiki is a good tool to organise the information and knowledge. I even use it to keep some notes. My first mediawiki was established like in 2012. There are some important informations in my database. Therefore I hope to keep it and run it in every Laptop. This blog keeps the steps on how to install and backup it.&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Linux" scheme="http://www.seis-jun.xyz/categories/Linux/"/>
-    
-    
-      <category term="wiki" scheme="http://www.seis-jun.xyz/tags/wiki/"/>
     
   </entry>
   
