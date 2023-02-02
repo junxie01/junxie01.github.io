@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2023-02-02T03:06:19.277Z</updated>
+  <updated>2023-02-02T13:36:33.795Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>更新Ubuntu的软件源</title>
+    <link href="http://www.seis-jun.xyz/update-ubuntu-source"/>
+    <id>http://www.seis-jun.xyz/update-ubuntu-source</id>
+    <published>2023-02-02T09:10:28.000Z</published>
+    <updated>2023-02-02T13:36:33.795Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://cdn.icon-icons.com/icons2/2235/PNG/512/ubuntu_os_logo_icon_134675.png&quot; alt=&quot;Ubuntu&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Window11安装Linux出错</title>
@@ -409,31 +426,6 @@
       <category term="linux" scheme="http://www.seis-jun.xyz/tags/linux/"/>
     
       <category term="axes" scheme="http://www.seis-jun.xyz/tags/axes/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo next点击头像回到主页</title>
-    <link href="http://www.seis-jun.xyz/avatar-to-homepage"/>
-    <id>http://www.seis-jun.xyz/avatar-to-homepage</id>
-    <published>2020-06-23T01:58:16.000Z</published>
-    <updated>2020-06-23T07:06:04.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&amp;emsp;&amp;emsp;有了头像以后，看到头像一般就想点一点，点击了可以回到主页不是挺好的吗。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="web" scheme="http://www.seis-jun.xyz/categories/web/"/>
-    
-    
-      <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
-    
-      <category term="next" scheme="http://www.seis-jun.xyz/tags/next/"/>
-    
-      <category term="hexo" scheme="http://www.seis-jun.xyz/tags/hexo/"/>
     
   </entry>
   
