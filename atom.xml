@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2023-02-02T02:33:55.279Z</updated>
+  <updated>2023-02-02T02:47:31.601Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>linux_in_window11</title>
+    <title>Window11安装Linux出错</title>
     <link href="http://www.seis-jun.xyz/linux-in-window11"/>
     <id>http://www.seis-jun.xyz/linux-in-window11</id>
     <published>2023-02-02T02:24:28.000Z</published>
-    <updated>2023-02-02T02:33:55.279Z</updated>
+    <updated>2023-02-02T02:47:31.601Z</updated>
     
     <summary type="html">
     
@@ -30,6 +30,8 @@
     </summary>
     
     
+    
+      <category term="window linux" scheme="http://www.seis-jun.xyz/tags/window-linux/"/>
     
   </entry>
   
