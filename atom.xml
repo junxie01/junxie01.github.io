@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2023-02-02T02:47:31.601Z</updated>
+  <updated>2023-02-02T02:55:20.821Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -21,17 +21,21 @@
     <link href="http://www.seis-jun.xyz/linux-in-window11"/>
     <id>http://www.seis-jun.xyz/linux-in-window11</id>
     <published>2023-02-02T02:24:28.000Z</published>
-    <updated>2023-02-02T02:47:31.601Z</updated>
+    <updated>2023-02-02T02:55:20.821Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;https://smms.app/image/duDT4hmjf7wrNKc&quot; alt=&quot;Win11下Linux错误&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2023/02/02/duDT4hmjf7wrNKc.png&quot; alt=&quot;Win11下Linux错误&quot;&gt;&lt;/p&gt;
     
     </summary>
     
     
+      <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
     
-      <category term="window linux" scheme="http://www.seis-jun.xyz/tags/window-linux/"/>
+    
+      <category term="linux" scheme="http://www.seis-jun.xyz/tags/linux/"/>
+    
+      <category term="window" scheme="http://www.seis-jun.xyz/tags/window/"/>
     
   </entry>
   
@@ -61,7 +65,7 @@
     <link href="http://www.seis-jun.xyz/pdf"/>
     <id>http://www.seis-jun.xyz/pdf</id>
     <published>2021-03-29T06:52:08.000Z</published>
-    <updated>2021-07-25T09:14:54.000Z</updated>
+    <updated>2023-02-02T02:55:22.053Z</updated>
     
     <summary type="html">
     
