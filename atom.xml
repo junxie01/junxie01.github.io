@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2023-02-02T13:56:37.697Z</updated>
+  <updated>2023-02-03T05:43:03.543Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>打开Microsoft Store错误代码:0x80131500</title>
+    <link href="http://www.seis-jun.xyz/microsoft-store-not-working"/>
+    <id>http://www.seis-jun.xyz/microsoft-store-not-working</id>
+    <published>2023-02-03T05:15:13.000Z</published>
+    <updated>2023-02-03T05:43:03.543Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2023/02/03/GAmtVJk9nrWMUjp.png&quot; alt=&quot;Microsoft store&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
+    
+    
+      <category term="computer" scheme="http://www.seis-jun.xyz/tags/computer/"/>
+    
+      <category term="microsoft" scheme="http://www.seis-jun.xyz/tags/microsoft/"/>
+    
+  </entry>
   
   <entry>
     <title>更新Ubuntu的软件源</title>
@@ -403,29 +426,6 @@
     </summary>
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>gmt画时间轴</title>
-    <link href="http://www.seis-jun.xyz/gmt-time-axes"/>
-    <id>http://www.seis-jun.xyz/gmt-time-axes</id>
-    <published>2020-07-04T08:06:35.000Z</published>
-    <updated>2020-07-04T18:06:27.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;/gmt-time-axes/spec.png&quot; alt=&quot;gmt 时间轴&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="gmt" scheme="http://www.seis-jun.xyz/categories/gmt/"/>
-    
-    
-      <category term="linux" scheme="http://www.seis-jun.xyz/tags/linux/"/>
-    
-      <category term="axes" scheme="http://www.seis-jun.xyz/tags/axes/"/>
     
   </entry>
   
