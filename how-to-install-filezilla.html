@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.2.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/j-icon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/j-icon-16x16.png">
+  <link rel="mask-icon" href="/images/icon.png" color="#222">
+  <meta name="google-site-verification" content="google7b56233b0c90910d.html">
+  <meta name="baidu-site-verification" content="l7XxPhR6zN">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.seis-jun.xyz","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="&emsp;&emsp;本地到服务器的数据传输使用FileZilla程序比较方便和稳定。只是Linux下需要编译安装该程序，那还不易热儿，那就安装呗。然而安装过程让人迷糊，复杂程度让人难忘，特此记录一下。遗憾的是，花了我两天时间，到现在为止，该程序仍然没有安装成功。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="为啥要这样安装FileZilla">
+<meta property="og:url" content="http://www.seis-jun.xyz/how-to-install-filezilla">
+<meta property="og:site_name" content="SEISAMUSE">
+<meta property="og:description" content="&emsp;&emsp;本地到服务器的数据传输使用FileZilla程序比较方便和稳定。只是Linux下需要编译安装该程序，那还不易热儿，那就安装呗。然而安装过程让人迷糊，复杂程度让人难忘，特此记录一下。遗憾的是，花了我两天时间，到现在为止，该程序仍然没有安装成功。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-11-20T15:27:46.000Z">
+<meta property="article:modified_time" content="2024-05-26T14:17:36.847Z">
+<meta property="article:author" content="Jun Xie">
+<meta property="article:tag" content="filezilla">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://www.seis-jun.xyz/how-to-install-filezilla.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://www.seis-jun.xyz/how-to-install-filezilla","path":"how-to-install-filezilla.html","title":"为啥要这样安装FileZilla"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>为啥要这样安装FileZilla | SEISAMUSE</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168057869-1"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-168057869-1","only_pageview":false,"measure_protocol_api_secret":null}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+  <script src="/js/third-party/analytics/baidu-analytics.js"></script>
+  <script async src="https://hm.baidu.com/hm.js?0723cf651cbf165b63377fccb701c171"></script>
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">SEISAMUSE</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Jun Xie的博客</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Jun Xie"
+      src="/images/seisamuse.png">
+  <p class="site-author-name" itemprop="name">Jun Xie</p>
+  <div class="site-description" itemprop="description">地震学技术</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">73</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">55</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.seis-jun.xyz/how-to-install-filezilla">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/seisamuse.png">
+      <meta itemprop="name" content="Jun Xie">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SEISAMUSE">
+      <meta itemprop="description" content="地震学技术">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="为啥要这样安装FileZilla | SEISAMUSE">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          为啥要这样安装FileZilla
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-11-20 23:27:46" itemprop="dateCreated datePublished" datetime="2020-11-20T23:27:46+08:00">2020-11-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-05-26 22:17:36" itemprop="dateModified" datetime="2024-05-26T22:17:36+08:00">2024-05-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.5k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;本地到服务器的数据传输使用FileZilla程序比较方便和稳定。只是Linux下需要编译安装该程序，那还不易热儿，那就安装呗。然而安装过程让人迷糊，复杂程度让人难忘，特此记录一下。遗憾的是，花了我两天时间，到现在为止，该程序仍然没有安装成功。</p>
+<span id="more"></span>
+<p>&emsp;&emsp;首先在<a target="_blank" rel="noopener" href="https://filezilla-project.org/">https://filezilla-project.org/</a>下载了个可执行程序—显然是运行不了的。仔细看发现是在debian10.0下编译的。我的系统是Fedora和Elementary OS5，两个都运行不了。然后下载了源程序FileZilla_3.51.0_src.tar.bz2。<br>&emsp;&emsp;解压，安装filezilla-3.51.0，编译过程出错，显示没有安装libfilezilla。<br>&emsp;&emsp;于是下载libfilezilla-0.25.0.tar.bz2，解压，安装libfilezilla-0.25.0，编译过程出错，显示没有安装有nettle。<br>&emsp;&emsp;于是下载nettle-3.6.tar.gz，解压编译安装nettle-3.6一次通过。<br>&emsp;&emsp;然后在libfilezilla-0.25.0下预编译，出错，显示：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">configure: error: hogweed 3.3 greater was not found. You can get it from https://www.lysator.liu.se/~nisse/nettle/</span><br></pre></td></tr></table></figure>
+<p>&emsp;&emsp;于是重装nettle-3.6</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">./configure --enable-mini-gmp</span><br><span class="line">make</span><br><span class="line">make check</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
+<p>&emsp;&emsp;安装成功，然后在libfilezilla-0.25.0下预编译，出错，显示：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">configure: error: GnuTLS 3.5.8 or greater was not found. You can get it from https://gnutls.org/</span><br></pre></td></tr></table></figure>
+<p>&emsp;&emsp;然后下载gnutls-3.6.15.tar.xz，解压gnutls-3.6.15编译出错，显示：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">configure: error: </span><br><span class="line">***</span><br><span class="line">*** gmp was not found.</span><br></pre></td></tr></table></figure>
+<p>&emsp;&emsp;然后下载gmp-6.1.0.tar.bz2，解压gmp-6.1.0，编译安装完成。回到gnutls-3.6.15再次编译出错，显示：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">configure: error: </span><br><span class="line">  ***</span><br><span class="line">  *** Libtasn1 4.9 was not found. To use the included one, use --with-included-libtasn1</span><br></pre></td></tr></table></figure>
+<p>&emsp;&emsp;然后下载libtasn1-4.9.tar.gz，解压libtasn1-4.9，编译出错，显示：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">ASN1.c: In <span class="keyword">function</span> <span class="string">&#x27;_asn1_yyparse&#x27;</span>:</span><br><span class="line">ASN1.y:152:47: error: <span class="string">&#x27;__builtin___snprintf_chk&#x27;</span> output may be truncated before the last format character [-Werror=format-truncation=]</span><br><span class="line"> neg_num : <span class="string">&#x27;-&#x27;</span> NUM     &#123;snprintf($$,sizeof($$),<span class="string">&quot;-%s&quot;</span>,<span class="variable">$2</span>);&#125;</span><br><span class="line">                                               ^~~~~</span><br><span class="line">In file included from /usr/include/stdio.h:862:0,</span><br><span class="line">                 from ./int.h:31,</span><br><span class="line">                 from ASN1.y:30:</span><br><span class="line">/usr/include/x86_64-linux-gnu/bits/stdio2.h:64:10: note: <span class="string">&#x27;__builtin___snprintf_chk&#x27;</span> output between 2 and 66 bytes into a destination of size 65</span><br><span class="line">   <span class="built_in">return</span> __builtin___snprintf_chk (__s, __n, __USE_FORTIFY_LEVEL - 1,</span><br><span class="line">          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span><br><span class="line">        __bos (__s), __fmt, __va_arg_pack ());</span><br><span class="line">        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span><br><span class="line">ASN1.y:164:47: error: <span class="string">&#x27;__builtin___snprintf_chk&#x27;</span> output may be truncated before the last format character [-Werror=format-truncation=]</span><br><span class="line">                 | <span class="string">&#x27;-&#x27;</span> NUM        &#123;snprintf($$,sizeof($$),<span class="string">&quot;-%s&quot;</span>,<span class="variable">$2</span>);&#125;</span><br><span class="line">                                               ^~~~~</span><br><span class="line">In file included from /usr/include/stdio.h:862:0,</span><br><span class="line">                 from ./int.h:31,</span><br><span class="line">                 from ASN1.y:30:</span><br><span class="line">/usr/include/x86_64-linux-gnu/bits/stdio2.h:64:10: note: <span class="string">&#x27;__builtin___snprintf_chk&#x27;</span> output between 2 and 66 bytes into a destination of size 65</span><br><span class="line">   <span class="built_in">return</span> __builtin___snprintf_chk (__s, __n, __USE_FORTIFY_LEVEL - 1,</span><br><span class="line">          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span><br><span class="line">        __bos (__s), __fmt, __va_arg_pack ());</span><br><span class="line">        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span><br><span class="line">cc1: all warnings being treated as errors</span><br><span class="line">Makefile:1112: recipe <span class="keyword">for</span> target <span class="string">&#x27;ASN1.lo&#x27;</span> failed</span><br><span class="line">make[2]: *** [ASN1.lo] Error 1</span><br><span class="line">make[2]: Leaving directory <span class="string">&#x27;/home/junxie/Downloads/libtasn1-4.9/lib&#x27;</span></span><br><span class="line">Makefile:1176: recipe <span class="keyword">for</span> target <span class="string">&#x27;check-recursive&#x27;</span> failed</span><br><span class="line">make[1]: *** [check-recursive] Error 1</span><br><span class="line">make[1]: Leaving directory <span class="string">&#x27;/home/junxie/Downloads/libtasn1-4.9/lib&#x27;</span></span><br><span class="line">Makefile:1009: recipe <span class="keyword">for</span> target <span class="string">&#x27;check-recursive&#x27;</span> failed</span><br><span class="line">make: *** [check-recursive] Error 1</span><br></pre></td></tr></table></figure>
+<p>&emsp;&emsp;至此，我已几近崩溃，已经不知道自己在哪儿，是要干啥。网上已经几乎找不到相关问题词条，估计还没有人遇到过这些问题。<br>&emsp;&emsp;很想吐槽一下Linux。虽然用户可以随心所欲DIY，但是起点似乎有点太高。所谓的DIY也不过是把好多人写的代码集合在自己电脑上编译，源代码长什么样我虽然比较关心，但哪有时间闲情和精力去看？<br>&emsp;&emsp;像我这种需要用到Linux方便处理大量数据和程序编译的便利，又需要用到现成较为成熟程序包编译而不可得的情况，属实尴尬。<br>&emsp;&emsp;我又想到了Python。这个脚本语言似乎厉害透顶，几乎所有人都在学，都在用。人们纷纷把以往用fortran，C写的代码转成python或者用python给他们穿身衣服、塑个金身，显得高大上，自诩又为代码社区立功劳。可结果用起来嘛，一言难尽。某些脚本只能用python2运行，另一些又只能用python3。有些程序首次用还总告诉你某某module找不到。安装起来还常常不成功。使用起来十分不友好。真是让人头疼、恼火、焦躁。也不知大家是怎么喜欢上的。只能怪自己太菜，还没对python开窍吧。<br>&emsp;&emsp;谁能指条明路？</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/filezilla/" rel="tag"># filezilla</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/addiction" rel="prev" title="关于瘾">
+                  <i class="fa fa-angle-left"></i> 关于瘾
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/happy-new-year" rel="next" title="新年快乐">
+                  新年快乐 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2020 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Jun Xie</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">80k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">1:13</span>
+  </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.umd.js" integrity="sha256-a+H7FYzJv6oU2hfsfDGM2Ohw/cR9v+hPfxHCLdmCrE8=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script><script src="/js/pjax.js"></script>
+
+  
+
+
+
+  <script src="/js/third-party/fancybox.js"></script>
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

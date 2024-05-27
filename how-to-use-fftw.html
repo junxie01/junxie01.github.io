@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.2.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/j-icon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/j-icon-16x16.png">
+  <link rel="mask-icon" href="/images/icon.png" color="#222">
+  <meta name="google-site-verification" content="google7b56233b0c90910d.html">
+  <meta name="baidu-site-verification" content="l7XxPhR6zN">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.seis-jun.xyz","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="&emsp;&emsp;我们常常要看信号的振幅谱来进行分析，那傅里叶变换就必不可少。如果水平不错你可以试着自己写。当然有很多已经写好的包，非常方便，例如这里要讲到的fftw[1]。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何调用fftw进行Fast Fourier Transform">
+<meta property="og:url" content="http://www.seis-jun.xyz/how-to-use-fftw">
+<meta property="og:site_name" content="SEISAMUSE">
+<meta property="og:description" content="&emsp;&emsp;我们常常要看信号的振幅谱来进行分析，那傅里叶变换就必不可少。如果水平不错你可以试着自己写。当然有很多已经写好的包，非常方便，例如这里要讲到的fftw[1]。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-07-05T10:21:16.000Z">
+<meta property="article:modified_time" content="2024-05-26T14:17:36.846Z">
+<meta property="article:author" content="Jun Xie">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://www.seis-jun.xyz/how-to-use-fftw.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://www.seis-jun.xyz/how-to-use-fftw","path":"how-to-use-fftw.html","title":"如何调用fftw进行Fast Fourier Transform"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>如何调用fftw进行Fast Fourier Transform | SEISAMUSE</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168057869-1"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-168057869-1","only_pageview":false,"measure_protocol_api_secret":null}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+  <script src="/js/third-party/analytics/baidu-analytics.js"></script>
+  <script async src="https://hm.baidu.com/hm.js?0723cf651cbf165b63377fccb701c171"></script>
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">SEISAMUSE</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Jun Xie的博客</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Jun Xie"
+      src="/images/seisamuse.png">
+  <p class="site-author-name" itemprop="name">Jun Xie</p>
+  <div class="site-description" itemprop="description">地震学技术</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">73</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">55</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.seis-jun.xyz/how-to-use-fftw">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/seisamuse.png">
+      <meta itemprop="name" content="Jun Xie">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SEISAMUSE">
+      <meta itemprop="description" content="地震学技术">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="如何调用fftw进行Fast Fourier Transform | SEISAMUSE">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          如何调用fftw进行Fast Fourier Transform
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-07-05 18:21:16" itemprop="dateCreated datePublished" datetime="2020-07-05T18:21:16+08:00">2020-07-05</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-05-26 22:17:36" itemprop="dateModified" datetime="2024-05-26T22:17:36+08:00">2024-05-26</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;我们常常要看信号的振幅谱来进行分析，那傅里叶变换就必不可少。如果水平不错你可以试着自己写。当然有很多已经写好的包，非常方便，例如这里要讲到的fftw<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="http://www.fftw.org/
+">[1]</span></a></sup>。</p>
+<span id="more"></span>
+
+<p>&emsp;&emsp;他的用法其实人家<a target="_blank" rel="noopener" href="http://www.fftw.org/">主页</a>说明文档讲的很清楚。我这里就记录一下怎么用之来对sac文件进行读取并计算fft。程序是用fortran写的，C的话可以参考fftw说明文档。<br>首先把主程序贴出来：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">program main</span><br><span class="line">use globe_data  // 全局变量</span><br><span class="line">use sacio       // sac 头变量</span><br><span class="line">implicit none</span><br><span class="line">integer i,nerr,itest</span><br><span class="line">character (180) :: sacfile,tmp</span><br><span class="line">type(sac_head) :: sachead</span><br><span class="line">complex(8),allocatable,dimension(:) :: s1,s2</span><br><span class="line">if (iargc().ne.2)stop &#x27;Usage: fft sacfile &#x27;</span><br><span class="line">call getarg(1,sacfile)    // 读参数到sacfile，即sac 文件</span><br><span class="line">call read_sachead(trim(sacfile),sachead,nerr) //读sac文件头变量</span><br><span class="line">npts=sachead%npts</span><br><span class="line">dt=sachead%delta</span><br><span class="line">nn=2</span><br><span class="line">npow=1</span><br><span class="line">do while(nn.le.npts)</span><br><span class="line">   nn=nn*2</span><br><span class="line">   npow=npow+1</span><br><span class="line">enddo</span><br><span class="line">nk=nn/2+1</span><br><span class="line">halfn=20</span><br><span class="line">dom=dble(1.0/nn/dt)</span><br><span class="line">allocate(sig(nn,3))</span><br><span class="line">call read_sac(trim(sacfile), sig(:,1),sachead,nerr) //读sac文件数据到sig(:,1)</span><br><span class="line">allocate(s1(nn),s2(nn))</span><br><span class="line">s1=czero</span><br><span class="line">s1(1:npts)=dcmplx(dble(sig(1:npts,1)),0.0d0)</span><br><span class="line">call dfftw_plan_dft_1d(plan,nn,s1,s2,FFTW_FORWARD, FFTW_ESTIMATE)</span><br><span class="line">call dfftw_execute(plan)</span><br><span class="line">call dfftw_destroy_plan(plan)</span><br><span class="line">sachead%npts=nk</span><br><span class="line">sig(:,1)=real(dreal(s2))</span><br><span class="line">call write_sac(trim(sacfile)//&#x27;_fft&#x27;,sig(:,1),sachead,nerr) ! problem with nerr=-1</span><br><span class="line">deallocate(sig,s1,s2)</span><br><span class="line">end program</span><br></pre></td></tr></table></figure>
+<p>这里sig(:,:)是个二维数组，其实用一维的就够了哈。<br>sacio.f90 是一个module，定义了sac文件的头，并含有sac读写程序。需要的话给我发信息，或者邮件^_^。<br>globe_data.f90也是一个module，定义了全局变量：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">module globe_data</span><br><span class="line">integer,parameter :: nmax=2000000,nstmax=1000</span><br><span class="line">real(4),dimension(4,2):: fre</span><br><span class="line">real(4),allocatable,dimension(:,:):: sig,sigo</span><br><span class="line">real(4),allocatable,dimension(:) :: sigt</span><br><span class="line">real :: dt</span><br><span class="line">real(8) :: dom</span><br><span class="line">integer :: halfn</span><br><span class="line">integer :: ncom,comb,npts</span><br><span class="line">integer :: nn,npow,nk,nf</span><br><span class="line">complex(8),allocatable,dimension(:,:):: seisout</span><br><span class="line">complex(8),parameter:: czero=(0.0d0,0.0d0)</span><br><span class="line">integer,parameter :: FFTW_ESTIMATE=64,FFTW_MEASURE=1</span><br><span class="line">integer,parameter :: FFTW_FORWARD=-1,FFTW_BACKWARD=1</span><br><span class="line">integer(8) :: plan,plan1,plan2,plan3</span><br><span class="line">end module</span><br></pre></td></tr></table></figure>
+<p>编译需要一个makefile：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">FC=gfortran</span><br><span class="line">FFLAG=-lfftw3 -I /usr/include -L /usr/lib64 -fbounds-check</span><br><span class="line">objects=call_fft.o sacio.o globe_data.o</span><br><span class="line">all:sacio.mod globe_data.mod call_fft</span><br><span class="line">.f.o:</span><br><span class="line">	$(FC) $(FFLAG) $&lt; -c</span><br><span class="line">%.o:%.f90</span><br><span class="line">	$(FC) $(FFLAG) $&lt; -c </span><br><span class="line">sacio.mod:sacio.f90</span><br><span class="line">	$(FC) $&lt; -c</span><br><span class="line">globe_data.mod:globe_data.f90</span><br><span class="line">	$(FC) $&lt; -c</span><br><span class="line">call_fft:$(objects)</span><br><span class="line">	$(FC) $^ -o $@ $(FFLAG) -lm</span><br><span class="line">clean:</span><br><span class="line">	-rm *.o *.mod </span><br></pre></td></tr></table></figure>
+<p>注意这里要加上-lfftw3表示调用fftw，-I给定fftw头的路径，-L给定fftw的lib。如果是按照默认路径安装的fftw，那一般都不用指定-I和-L，因为默认路径一般已经包含在编译环境里了。<br>好了大功告成了，但不保证拷贝下来就能运行通过哦。有问题发邮件吧，我们再交流^_^</p>
+<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">http://www.fftw.org/<a href="#fnref:1" rev="footnote"> ↩</a></span></li></ol></div></div>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/gmt-time-axes" rel="prev" title="gmt画时间轴">
+                  <i class="fa fa-angle-left"></i> gmt画时间轴
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/how-to-access-google" rel="next" title="如何访问google">
+                  如何访问google <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2020 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Jun Xie</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">80k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">1:13</span>
+  </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.umd.js" integrity="sha256-a+H7FYzJv6oU2hfsfDGM2Ohw/cR9v+hPfxHCLdmCrE8=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script><script src="/js/pjax.js"></script>
+
+  
+
+
+
+  <script src="/js/third-party/fancybox.js"></script>
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
