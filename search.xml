@@ -828,6 +828,21 @@
       </tags>
   </entry>
   <entry>
+    <title>hexo next开启打赏</title>
+    <url>/reward-configuration.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>厚颜无耻的开始想要打赏。如何配置打赏呢？原来next是有打赏的选项字段的。直接修改主题配置文件如下：</p>
+<span id="more"></span>
+<p><img src="/donate.png" alt="打赏字段"><br>然后把微信和支付宝的二维码图片放在&#x2F;themes&#x2F;next&#x2F;source&#x2F;images中。然后就大功告成了。</p>
+]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>web</tag>
+        <tag>next</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>hexo图片显示</title>
     <url>/show-picture-in-hexo.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>网站上没有图片是不行的，无图无真相。解决办法在<a href="https://blog.csdn.net/qq_38148394/article/details/79997971">这里</a>，主要是利用了插件hexo-assrt-image。所以先安装这个插件：</p>
@@ -864,11 +879,19 @@
       </tags>
   </entry>
   <entry>
-    <title>hexo next开启打赏</title>
-    <url>/reward-configuration.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>厚颜无耻的开始想要打赏。如何配置打赏呢？原来next是有打赏的选项字段的。直接修改主题配置文件如下：</p>
+    <title>next网站字数统计</title>
+    <url>/word-count.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>想给网站显示字数统计，搜到<a href="https://www.jianshu.com/p/baea8c95e39b">这里</a>。根据说明开始设置。结果网站都差点挂掉。检查了好久也没有发现问题，以为玩完了。然后马上开始重新建hexo。结果还是有问题。后来终于发现在网站设置文件插入功能字段时误插到其他字段导致出错。注销以后问题就修复了。然后又搜索到<a href="https://blog.csdn.net/mqdxiaoxiao/article/details/93670772">这里</a>。没想到搞定了，使用的插件是hexo-symbols-count-time。设置步骤如下：</p>
 <span id="more"></span>
-<p><img src="/donate.png" alt="打赏字段"><br>然后把微信和支付宝的二维码图片放在&#x2F;themes&#x2F;next&#x2F;source&#x2F;images中。然后就大功告成了。</p>
+<h2 id="1-安装插件"><a href="#1-安装插件" class="headerlink" title="1. 安装插件"></a>1. 安装插件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-symbols-count-time --save</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-配置文件设置"><a href="#2-配置文件设置" class="headerlink" title="2. 配置文件设置"></a>2. 配置文件设置</h2><p>在网站配置文件中加入如下字段：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line">  symbols: true                # 文章字数统计</span><br><span class="line">  time: true                   # 文章阅读时长</span><br><span class="line">  total_symbols: true          # 站点总字数统计</span><br><span class="line">  total_time: true             # 站点总阅读时长</span><br><span class="line">  exclude_codeblock: false     # 排除代码字数统计</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-主题配置文件设置"><a href="#3-主题配置文件设置" class="headerlink" title="3. 主题配置文件设置"></a>3. 主题配置文件设置</h2><p>在主题配置文件加入如下字段：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Post wordcount display settings</span><br><span class="line"># Dependencies: https://github.com/theme-next/hexo-symbols-count-time</span><br><span class="line">symbols_count_time:</span><br><span class="line">  separated_meta: true     # 是否另起一行（true的话不和发表时间等同一行）</span><br><span class="line">  item_text_post: true     # 首页文章统计数量前是否显示文字描述（本文字数、阅读时长）</span><br><span class="line">  item_text_total: false   # 页面底部统计数量前是否显示文字描述（站点总字数、站点阅读时长）</span><br><span class="line">  awl: 4                   # Average Word Length</span><br><span class="line">  wpm: 275                 # Words Per Minute（每分钟阅读词数）</span><br><span class="line">  suffix: mins</span><br></pre></td></tr></table></figure>
+
+<p>然后大功告成。</p>
 ]]></content>
       <categories>
         <category>web</category>
@@ -897,29 +920,6 @@
       </categories>
       <tags>
         <tag>日记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>next网站字数统计</title>
-    <url>/word-count.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>想给网站显示字数统计，搜到<a href="https://www.jianshu.com/p/baea8c95e39b">这里</a>。根据说明开始设置。结果网站都差点挂掉。检查了好久也没有发现问题，以为玩完了。然后马上开始重新建hexo。结果还是有问题。后来终于发现在网站设置文件插入功能字段时误插到其他字段导致出错。注销以后问题就修复了。然后又搜索到<a href="https://blog.csdn.net/mqdxiaoxiao/article/details/93670772">这里</a>。没想到搞定了，使用的插件是hexo-symbols-count-time。设置步骤如下：</p>
-<span id="more"></span>
-<h2 id="1-安装插件"><a href="#1-安装插件" class="headerlink" title="1. 安装插件"></a>1. 安装插件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-symbols-count-time --save</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-配置文件设置"><a href="#2-配置文件设置" class="headerlink" title="2. 配置文件设置"></a>2. 配置文件设置</h2><p>在网站配置文件中加入如下字段：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line">  symbols: true                # 文章字数统计</span><br><span class="line">  time: true                   # 文章阅读时长</span><br><span class="line">  total_symbols: true          # 站点总字数统计</span><br><span class="line">  total_time: true             # 站点总阅读时长</span><br><span class="line">  exclude_codeblock: false     # 排除代码字数统计</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-主题配置文件设置"><a href="#3-主题配置文件设置" class="headerlink" title="3. 主题配置文件设置"></a>3. 主题配置文件设置</h2><p>在主题配置文件加入如下字段：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Post wordcount display settings</span><br><span class="line"># Dependencies: https://github.com/theme-next/hexo-symbols-count-time</span><br><span class="line">symbols_count_time:</span><br><span class="line">  separated_meta: true     # 是否另起一行（true的话不和发表时间等同一行）</span><br><span class="line">  item_text_post: true     # 首页文章统计数量前是否显示文字描述（本文字数、阅读时长）</span><br><span class="line">  item_text_total: false   # 页面底部统计数量前是否显示文字描述（站点总字数、站点阅读时长）</span><br><span class="line">  awl: 4                   # Average Word Length</span><br><span class="line">  wpm: 275                 # Words Per Minute（每分钟阅读词数）</span><br><span class="line">  suffix: mins</span><br></pre></td></tr></table></figure>
-
-<p>然后大功告成。</p>
-]]></content>
-      <categories>
-        <category>web</category>
-      </categories>
-      <tags>
-        <tag>web</tag>
-        <tag>next</tag>
       </tags>
   </entry>
   <entry>
@@ -1338,7 +1338,7 @@
   <entry>
     <title>基于宽频带背景噪声面波的美国三维上地幔横波速度结构模型</title>
     <url>/US-upper-mantle-vs-model.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;利用宽频带的背景噪声面波做了美国三维上地幔横波速度结构，该工作做了x年。我不会告诉你这项工作做了多久，说出来都害sao。文章终于在2018年发表，文章链接在<a href="https://link.springer.com/article/10.1007/s00024-018-1881-2">这里</a>，如果有需要可以找我要全文。<br>&emsp;&emsp;做模型真的是需要大量细致的工作。这篇文章的主要贡献是表明只用背景噪声面波也可以做的比较深，比较准，另外就是为community提供了一个新的模型。怎奈自己的地质背景太差，看不到啥突出的科学问题，还被审稿人批评说，‘你做的啥工作啊，像本科生的作业。’心塞。师兄说的对，应该多向可能对你的工作感兴趣的人请教，例如动力学方向的人啊之类的。<br>&emsp;&emsp;老板建议把这个模型挂在<a href="https://ds.iris.edu/ds/products/emc-earthmodels/">IRIS EMC</a>里头，推广推广，让大伙儿都用用。我觉得不错，于是今天终于把它放到了IRIS里面。点击<a href="https://ds.iris.edu/ds/products/emc-us-upper-mantle-vsxiechuyang2018/">这里</a>就可以看到我的模型了。里面有netcdf格式的数据可以下载。如果有需要可以找我要更细致的结果。<br>&emsp;&emsp;IRIS EMC需要的是netcdf格式的模型数据。IRIS有提供把txt文本格式的模型转换成netcdf的<a href="https://github.com/iris-edu/emc-tools">python脚本</a>。另外向IRIS EMC提交模型的要求也可以这他们的<a href="https://ds.iris.edu/ds/products/emc-contributionguide/">网页</a>看到，按照他们的要求把netcdf文件准备好，然后写一个说明文档一并发送给<a href="mailto:&#x70;&#114;&#x6f;&#x64;&#117;&#99;&#x74;&#64;&#x69;&#114;&#x69;&#115;&#46;&#119;&#x61;&#x73;&#104;&#x69;&#110;&#x67;&#116;&#x6f;&#110;&#46;&#101;&#x64;&#117;">&#x70;&#114;&#x6f;&#x64;&#117;&#99;&#x74;&#64;&#x69;&#114;&#x69;&#115;&#46;&#119;&#x61;&#x73;&#104;&#x69;&#110;&#x67;&#116;&#x6f;&#110;&#46;&#101;&#x64;&#117;</a>就完事了。<br>&emsp;&emsp;netcdf是2进制文件。要查看其头段信息的话可以用命令ncdump -h xxx.nc（安装netcdf-bin），要读取其参数信息可以用命令ncks（安装nco）。其实IRIS EMC也提供了将netcdf转换成txt文本的<a href="https://github.com/iris-edu/emc-tools">python脚本</a>，非常方便。<br>&emsp;&emsp;求合作啊。我擅长处理数据，要是您能看到啥地学科学问题那真是求之不得啊。笑cry。</p>]]></content>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;利用宽频带的背景噪声面波做了美国三维上地幔横波速度结构，该工作做了x年。我不会告诉你这项工作做了多久，说出来都害sao。文章终于在2018年发表，文章链接在<a href="https://link.springer.com/article/10.1007/s00024-018-1881-2">这里</a>，如果有需要可以找我要全文。<br>&emsp;&emsp;做模型真的是需要大量细致的工作。这篇文章的主要贡献是表明只用背景噪声面波也可以做的比较深，比较准，另外就是为community提供了一个新的模型。怎奈自己的地质背景太差，看不到啥突出的科学问题，还被审稿人批评说，‘你做的啥工作啊，像本科生的作业。’心塞。师兄说的对，应该多向可能对你的工作感兴趣的人请教，例如动力学方向的人啊之类的。<br>&emsp;&emsp;老板建议把这个模型挂在<a href="https://ds.iris.edu/ds/products/emc-earthmodels/">IRIS EMC</a>里头，推广推广，让大伙儿都用用。我觉得不错，于是今天终于把它放到了IRIS里面。点击<a href="https://ds.iris.edu/ds/products/emc-us-upper-mantle-vsxiechuyang2018/">这里</a>就可以看到我的模型了。里面有netcdf格式的数据可以下载。如果有需要可以找我要更细致的结果。<br>&emsp;&emsp;IRIS EMC需要的是netcdf格式的模型数据。IRIS有提供把txt文本格式的模型转换成netcdf的<a href="https://github.com/iris-edu/emc-tools">python脚本</a>。另外向IRIS EMC提交模型的要求也可以这他们的<a href="https://ds.iris.edu/ds/products/emc-contributionguide/">网页</a>看到，按照他们的要求把netcdf文件准备好，然后写一个说明文档一并发送给<a href="mailto:&#112;&#x72;&#x6f;&#100;&#x75;&#99;&#x74;&#x40;&#x69;&#x72;&#105;&#x73;&#x2e;&#x77;&#97;&#x73;&#104;&#105;&#x6e;&#x67;&#x74;&#111;&#110;&#x2e;&#101;&#100;&#117;">&#112;&#x72;&#x6f;&#100;&#x75;&#99;&#x74;&#x40;&#x69;&#x72;&#105;&#x73;&#x2e;&#x77;&#97;&#x73;&#104;&#105;&#x6e;&#x67;&#x74;&#111;&#110;&#x2e;&#101;&#100;&#117;</a>就完事了。<br>&emsp;&emsp;netcdf是2进制文件。要查看其头段信息的话可以用命令ncdump -h xxx.nc（安装netcdf-bin），要读取其参数信息可以用命令ncks（安装nco）。其实IRIS EMC也提供了将netcdf转换成txt文本的<a href="https://github.com/iris-edu/emc-tools">python脚本</a>，非常方便。<br>&emsp;&emsp;求合作啊。我擅长处理数据，要是您能看到啥地学科学问题那真是求之不得啊。笑cry。</p>]]></content>
       <categories>
         <category>work</category>
       </categories>

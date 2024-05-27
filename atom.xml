@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>SEISAMUSE</title>
+  
+  <subtitle>Jun Xie的博客</subtitle>
+  <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
+  
+  <link href="http://www.seis-jun.xyz/"/>
+  <updated>2024-05-27T06:27:38.006Z</updated>
+  <id>http://www.seis-jun.xyz/</id>
+  
+  <author>
+    <name>Jun Xie</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo如何插入角注</title>
+    <link href="http://www.seis-jun.xyz/reference-mod"/>
+    <id>http://www.seis-jun.xyz/reference-mod</id>
+    <published>2024-05-26T14:22:57.000Z</published>
+    <updated>2024-05-27T06:27:38.006Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>重新安装Elementary OS系统</title>
+    <link href="http://www.seis-jun.xyz/install-elementary-os-again"/>
+    <id>http://www.seis-jun.xyz/install-elementary-os-again</id>
+    <published>2021-07-23T07:44:13.000Z</published>
+    <updated>2024-05-26T14:17:36.847Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;之前买的新电脑Zbook还行，安装了fedora 32（见&lt;a href=&quot;/after-fedora32&quot; title=&quot;安装完fedora32之后&quot;&gt;安装完fedora32之后&lt;/a&gt;）以后结果出现各种问题。包括，不能安装sac，rdseed，hexo，wikimedia。一气之下就安装回了Elementary OS。这里记录一下Elementary OS的配置。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Linux" scheme="http://www.seis-jun.xyz/categories/Linux/"/>
+    
+    
+    <category term="日记" scheme="http://www.seis-jun.xyz/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Power Spectral Density</title>
+    <link href="http://www.seis-jun.xyz/pdf"/>
+    <id>http://www.seis-jun.xyz/pdf</id>
+    <published>2021-03-29T06:52:08.000Z</published>
+    <updated>2024-05-26T14:17:36.847Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2021/03/29/OXQhg3SjozrPT6e.png&quot; alt=&quot;ANMO台2013年12月的能量谱密度&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
+    
+    
+    <category term="work" scheme="http://www.seis-jun.xyz/tags/work/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>bash里如何循环读取文件</title>
+    <link href="http://www.seis-jun.xyz/read-file-bash"/>
+    <id>http://www.seis-jun.xyz/read-file-bash</id>
+    <published>2021-03-09T07:51:21.000Z</published>
+    <updated>2024-05-26T14:17:36.847Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;Bash操作简单，可以处理简单的计算等。有些时候会遇到文件的读取问题，那如何对文件进行循环逐行读取呢？&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Linux" scheme="http://www.seis-jun.xyz/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="http://www.seis-jun.xyz/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一起看星星</title>
+    <link href="http://www.seis-jun.xyz/sky-and-universe"/>
+    <id>http://www.seis-jun.xyz/sky-and-universe</id>
+    <published>2021-03-08T07:28:20.000Z</published>
+    <updated>2024-05-26T14:17:36.847Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2021/03/08/8G6ODBE3FbZa4U2.png&quot; alt=&quot;幽灵？人鱼？&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="杂" scheme="http://www.seis-jun.xyz/categories/%E6%9D%82/"/>
+    
+    
+    <category term="杂" scheme="http://www.seis-jun.xyz/tags/%E6%9D%82/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>安装完fedora32之后</title>
+    <link href="http://www.seis-jun.xyz/after-fedora32"/>
+    <id>http://www.seis-jun.xyz/after-fedora32</id>
+    <published>2021-03-02T06:54:16.000Z</published>
+    <updated>2024-05-26T14:17:36.847Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;话说这台工作站已经有点“老了”，于是重新买了一台，美滋滋。5分钟安装了个fedora32，记录一下干了些啥。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Linux" scheme="http://www.seis-jun.xyz/categories/Linux/"/>
+    
+    
+    <category term="日记" scheme="http://www.seis-jun.xyz/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>新年快乐</title>
+    <link href="http://www.seis-jun.xyz/happy-new-year"/>
+    <id>http://www.seis-jun.xyz/happy-new-year</id>
+    <published>2021-02-11T16:37:36.000Z</published>
+    <updated>2024-05-26T14:17:36.847Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/acce.png&quot; alt=&quot;文章接收&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="日记" scheme="http://www.seis-jun.xyz/categories/%E6%97%A5%E8%AE%B0/"/>
+    
+    
+    <category term="日记" scheme="http://www.seis-jun.xyz/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>为啥要这样安装FileZilla</title>
+    <link href="http://www.seis-jun.xyz/how-to-install-filezilla"/>
+    <id>http://www.seis-jun.xyz/how-to-install-filezilla</id>
+    <published>2020-11-20T15:27:46.000Z</published>
+    <updated>2024-05-26T14:17:36.847Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;本地到服务器的数据传输使用FileZilla程序比较方便和稳定。只是Linux下需要编译安装该程序，那还不易热儿，那就安装呗。然而安装过程让人迷糊，复杂程度让人难忘，特此记录一下。遗憾的是，花了我两天时间，到现在为止，该程序仍然没有安装成功。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Linux" scheme="http://www.seis-jun.xyz/categories/Linux/"/>
+    
+    
+    <category term="filezilla" scheme="http://www.seis-jun.xyz/tags/filezilla/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于瘾</title>
+    <link href="http://www.seis-jun.xyz/addiction"/>
+    <id>http://www.seis-jun.xyz/addiction</id>
+    <published>2020-11-19T06:07:30.000Z</published>
+    <updated>2024-05-26T14:17:36.847Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;什么是瘾？&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="杂" scheme="http://www.seis-jun.xyz/categories/%E6%9D%82/"/>
+    
+    
+    <category term="瘾" scheme="http://www.seis-jun.xyz/tags/%E7%98%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>文章第三轮大修</title>
+    <link href="http://www.seis-jun.xyz/about-anti-paper"/>
+    <id>http://www.seis-jun.xyz/about-anti-paper</id>
+    <published>2020-11-07T08:56:45.000Z</published>
+    <updated>2024-05-26T14:17:36.847Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;文章的审稿意见今天又双叒下来了，值得记录一下。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="日记" scheme="http://www.seis-jun.xyz/categories/%E6%97%A5%E8%AE%B0/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>如何下载网上的视频</title>
+    <link href="http://www.seis-jun.xyz/how-to-download-video-from-internet"/>
+    <id>http://www.seis-jun.xyz/how-to-download-video-from-internet</id>
+    <published>2020-09-25T08:20:54.000Z</published>
+    <updated>2024-05-26T14:17:36.847Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;很多时候在线看视频遇到喜欢的就想下载下来慢慢欣赏。那如何下载呢？&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="web" scheme="http://www.seis-jun.xyz/categories/web/"/>
+    
+    
+    <category term="video" scheme="http://www.seis-jun.xyz/tags/video/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>怎么计算理论的NCF？</title>
+    <link href="http://www.seis-jun.xyz/how-to-calculate-synthetic-NCF"/>
+    <id>http://www.seis-jun.xyz/how-to-calculate-synthetic-NCF</id>
+    <published>2020-09-14T07:55:31.000Z</published>
+    <updated>2024-05-26T14:17:36.847Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/source_dis.png&quot; alt=&quot;Distribution of ambient noise sources (100-300 s) (Ermert et al., 2017 )&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
+    
+    
+    <category term="sem" scheme="http://www.seis-jun.xyz/tags/sem/"/>
+    
+    <category term="NCF" scheme="http://www.seis-jun.xyz/tags/NCF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何在elementaryOS下让gmt支持中文</title>
+    <link href="http://www.seis-jun.xyz/how-to-configure-chinese-for-gmt"/>
+    <id>http://www.seis-jun.xyz/how-to-configure-chinese-for-gmt</id>
+    <published>2020-07-31T15:03:04.000Z</published>
+    <updated>2024-05-26T14:17:36.847Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;有些时候用gmt画图需要添加一些中文标注。之前在fedora里用gmt4的时候配置过一次。现在用的是elementaryOS+gmt5.4.3怎么配置中文呢？&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="gmt" scheme="http://www.seis-jun.xyz/categories/gmt/"/>
+    
+    
+    <category term="中文" scheme="http://www.seis-jun.xyz/tags/%E4%B8%AD%E6%96%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>基于宽频带背景噪声面波的美国三维上地幔横波速度结构模型</title>
+    <link href="http://www.seis-jun.xyz/US-upper-mantle-vs-model"/>
+    <id>http://www.seis-jun.xyz/US-upper-mantle-vs-model</id>
+    <published>2020-07-28T18:30:10.000Z</published>
+    <updated>2024-05-26T14:17:36.846Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/figure5.png&quot; alt=&quot;Maps of Vs structure in the upper mantle and major geological units modified from Fenneman (1917). The color bar labels are V S in km/s (top) and perturbation in percentage (bottom).&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
+    
+    
+    <category term="model" scheme="http://www.seis-jun.xyz/tags/model/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>稍稍盘点地幔过渡带研究进展</title>
+    <link href="http://www.seis-jun.xyz/mantle-transition-zone"/>
+    <id>http://www.seis-jun.xyz/mantle-transition-zone</id>
+    <published>2020-07-21T15:04:45.000Z</published>
+    <updated>2024-05-26T14:17:36.846Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/Picture1.png&quot; alt=&quot;地幔过渡带&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
+    
+    
+    <category term="过渡带" scheme="http://www.seis-jun.xyz/tags/%E8%BF%87%E6%B8%A1%E5%B8%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>现代人的智商在退步</title>
+    <link href="http://www.seis-jun.xyz/IQ-decrease"/>
+    <id>http://www.seis-jun.xyz/IQ-decrease</id>
+    <published>2020-07-10T09:10:54.000Z</published>
+    <updated>2024-05-26T14:17:36.846Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/iq.jpg&quot; alt=&quot;智商捉急&quot;&gt;&lt;br&gt;图片来自一篇2018年PANS期刊的&lt;a href=&quot;https://www.pnas.org/content/115/26/6674?fbclid=IwAR3CVcH75ppH836xV4c5s99p11421Puo6ljF9hlQtg7kcRcXDa9_mdPSfU0&quot;&gt;文章&lt;/a&gt;.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="杂" scheme="http://www.seis-jun.xyz/categories/%E6%9D%82/"/>
+    
+    
+    <category term="乱" scheme="http://www.seis-jun.xyz/tags/%E4%B9%B1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何访问google</title>
+    <link href="http://www.seis-jun.xyz/how-to-access-google"/>
+    <id>http://www.seis-jun.xyz/how-to-access-google</id>
+    <published>2020-07-08T14:30:01.000Z</published>
+    <updated>2024-05-26T14:17:36.846Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;Google产品尤其是Google scholar非常的方便，对于我这种有完美主义倾向，不喜欢山寨的人来讲真的太必要了。但是由于某些原因，在国内上不了google怎么办呢？&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>如何调用fftw进行Fast Fourier Transform</title>
+    <link href="http://www.seis-jun.xyz/how-to-use-fftw"/>
+    <id>http://www.seis-jun.xyz/how-to-use-fftw</id>
+    <published>2020-07-05T10:21:16.000Z</published>
+    <updated>2024-05-26T14:17:36.846Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;我们常常要看信号的振幅谱来进行分析，那傅里叶变换就必不可少。如果水平不错你可以试着自己写。当然有很多已经写好的包，非常方便，例如这里要讲到的fftw&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; rel=&quot;footnote&quot;&gt;&lt;span class=&quot;hint--top hint--error hint--medium hint--rounded hint--bounce&quot; aria-label=&quot;http://www.fftw.org/
+&quot;&gt;[1]&lt;/span&gt;&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>gmt画时间轴</title>
+    <link href="http://www.seis-jun.xyz/gmt-time-axes"/>
+    <id>http://www.seis-jun.xyz/gmt-time-axes</id>
+    <published>2020-07-04T08:06:35.000Z</published>
+    <updated>2024-05-26T14:17:36.846Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/spec.png&quot; alt=&quot;gmt 时间轴&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="gmt" scheme="http://www.seis-jun.xyz/categories/gmt/"/>
+    
+    
+    <category term="linux" scheme="http://www.seis-jun.xyz/tags/linux/"/>
+    
+    <category term="axes" scheme="http://www.seis-jun.xyz/tags/axes/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo next点击头像回到主页</title>
+    <link href="http://www.seis-jun.xyz/avatar-to-homepage"/>
+    <id>http://www.seis-jun.xyz/avatar-to-homepage</id>
+    <published>2020-06-23T01:58:16.000Z</published>
+    <updated>2024-05-26T14:17:36.846Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;有了头像以后，看到头像一般就想点一点，点击了可以回到主页不是挺好的吗。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="web" scheme="http://www.seis-jun.xyz/categories/web/"/>
+    
+    
+    <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
+    
+    <category term="next" scheme="http://www.seis-jun.xyz/tags/next/"/>
+    
+    <category term="hexo" scheme="http://www.seis-jun.xyz/tags/hexo/"/>
+    
+  </entry>
+  
+</feed>
