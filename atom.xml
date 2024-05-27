@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2024-05-27T11:27:47.656Z</updated>
+  <updated>2024-05-27T13:01:35.670Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>optimize_daily_task</title>
+    <link href="http://www.seis-jun.xyz/optimize-daily-task"/>
+    <id>http://www.seis-jun.xyz/optimize-daily-task</id>
+    <published>2024-05-27T12:29:06.000Z</published>
+    <updated>2024-05-27T13:01:35.670Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;转载自&lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>fatal&#39;&#92;:&#39; &#39;origin&#39; does not appear to be a git repository</title>
@@ -382,22 +403,6 @@
     
     
     <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;Google产品尤其是Google scholar非常的方便，对于我这种有完美主义倾向，不喜欢山寨的人来讲真的太必要了。但是由于某些原因，在国内上不了google怎么办呢？&lt;/p&gt;</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>如何调用fftw进行Fast Fourier Transform</title>
-    <link href="http://www.seis-jun.xyz/how-to-use-fftw"/>
-    <id>http://www.seis-jun.xyz/how-to-use-fftw</id>
-    <published>2020-07-05T10:21:16.000Z</published>
-    <updated>2024-05-26T14:17:36.846Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;我们常常要看信号的振幅谱来进行分析，那傅里叶变换就必不可少。如果水平不错你可以试着自己写。当然有很多已经写好的包，非常方便，例如这里要讲到的fftw&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; rel=&quot;footnote&quot;&gt;&lt;span class=&quot;hint--top hint--error hint--medium hint--rounded hint--bounce&quot; aria-label=&quot;http://www.fftw.org/
-&quot;&gt;[1]&lt;/span&gt;&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;</summary>
     
     
     

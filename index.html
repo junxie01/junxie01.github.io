@@ -135,7 +135,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">75</span>
+          <span class="site-state-item-count">76</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -163,6 +163,102 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://www.seis-jun.xyz/optimize-daily-task">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/seisamuse.png">
+      <meta itemprop="name" content="Jun Xie">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SEISAMUSE">
+      <meta itemprop="description" content="地震学技术">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | SEISAMUSE">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/optimize-daily-task" class="post-title-link" itemprop="url">optimize_daily_task</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-05-27 20:29:06 / 修改时间：21:01:35" itemprop="dateCreated datePublished" datetime="2024-05-27T20:29:06+08:00">2024-05-27</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.4k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>转载自<a target="_blank" rel="noopener" href="https://sspai.com/post/87071">少数派</a></p>
+<h2 id="任务管理很难"><a href="#任务管理很难" class="headerlink" title="任务管理很难"></a>任务管理很难</h2><p>关键：Keep It Simple and Stupid.<br>任务管理是决定什么时候应该做什么事。这么一个看似简单的问题，却难以找到最优解。<br>作者运用专业知识，从计算机科学的角度去解决任务管理问题。</p>
+<h2 id="背包问题"><a href="#背包问题" class="headerlink" title="背包问题"></a>背包问题</h2><p>   “给定一个物品集合（多个物品），每个物品都有各自的重量和价格。存在一个背包，具有一定容量。我们应该将哪几个物品放进背包，使得物品总重量不超过背包的容量，并且背包中的物品总价格最高。”<br>   随着物品数量的增加，将所有方案尝试一遍会消耗大量时间，这就是背包问题很「难」的原因。<br>   如果将任务看成物品，一天的时间看成背包，那么任务所需时间就对应物品的重量，任务完成收益就对应物品的价格，任务管理其实就是决定将哪些任务放进一天这个背包中，从而使一天内完成的任务价格最高。<br>   如何优化任务管理？</p>
+<h2 id="剪枝优化"><a href="#剪枝优化" class="headerlink" title="剪枝优化"></a>剪枝优化</h2><p>   对于每个任务，我需要决策是否将该任务列入「我的一天」。将这个决策过程具像化，就是一棵树（决策树）。每一个选项（是或者否）都像树枝一样，引出不同的结果，剪枝优化就是将决策树的枝桠剪去。<br>也就是说不是所有任务都值得被放进 todo list 中简化自己的需求。</p>
+<p>如何保证剪枝的正确性？如何保证简化后的需求能够满足工作需要呢？首先明确任务管理的目的是提高工作效率，所以我将所有生活类的任务从 Todo list中移除。确保一个任务足够重要才会放入todo list中。<br>要定期删除 Todo list 中的任务，因为如果一项任务一直存在，意味着它可能不重要，否则早就应该被完成了。</p>
+<p>最终，Todo list 中的所有任务通常不超过五个，我只需要选 2-3 个任务添加到「我的一天」，很快速，也很简单。</p>
+<h2 id="局部性原理"><a href="#局部性原理" class="headerlink" title="局部性原理"></a>局部性原理</h2><p>在设计程序时，计算机通常倾向于重复利用邻近的数据，这就是系统设计中的「局部性原理」。</p>
+<p>人脑也很健忘，很多事情转头就忘掉，所以应尽量将任务放在触手可及的地方，要具体。局部性原理保证了大脑注意力集中，不会因为频繁地上下文切换，忘记需要做什么，使跨天的工作更加流畅。</p>
+<h2 id="任务完成时间期望"><a href="#任务完成时间期望" class="headerlink" title="任务完成时间期望"></a>任务完成时间期望</h2><p>背包问题中一个重要约束是背包的容量，对应任务管理：如何保证任务管理时，规划的任务能在当天完成。一天的工作时间很容易确定，但是没有完成任务的情况下，怎么知道任务所需时间呢？</p>
+<p>想要准确地推测任务完成时间比较难，但总会有人帮你确定任务完成时间。因为生活中会有很多deadline。按照小时为粒度进行规划，就可以在一个上午安排好几项任务。要有意识地去评估每个任务的所需时间，利用数学方法去锻炼评估能力。例如期望值，代表了多次实验后，可能出现状态的平均结果。</p>
+<p>记录下每次任务「评估完成时间」和「真实完成时间」，就可以知道每次推测是否准确。相应的差值称为「推测偏差」。如果推测偏差的期望为15%，那么一项需要120分钟完成的任务，实际完成时间很可能是 120+120*0.15&#x3D;138 分钟。根据偏差值的数学期望，就能够有一个大概印象，每一项任务大概需要多久时间才能完成，便于更高效地规划「我的一天」。</p>
+<h2 id="任务管理的本质和愚蠢的系统"><a href="#任务管理的本质和愚蠢的系统" class="headerlink" title="任务管理的本质和愚蠢的系统"></a>任务管理的本质和愚蠢的系统</h2><p>任务管理的本质是个人管理。如果人足够自律，就像一个精密的机器，那完全不需要各种花里胡哨的工具或方法论，只需要将任务列出来，一个接一个地完成。但是一般人都没有那么自律，执行力也不够强，时间表不断被打乱，需要不断的优化。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1088,113 +1184,6 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://www.seis-jun.xyz/how-to-install-filezilla">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/seisamuse.png">
-      <meta itemprop="name" content="Jun Xie">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="SEISAMUSE">
-      <meta itemprop="description" content="地震学技术">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | SEISAMUSE">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/how-to-install-filezilla" class="post-title-link" itemprop="url">为啥要这样安装FileZilla</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2020-11-20 23:27:46" itemprop="dateCreated datePublished" datetime="2020-11-20T23:27:46+08:00">2020-11-20</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-05-26 22:17:36" itemprop="dateModified" datetime="2024-05-26T22:17:36+08:00">2024-05-26</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>3.9k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>4 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>&emsp;&emsp;本地到服务器的数据传输使用FileZilla程序比较方便和稳定。只是Linux下需要编译安装该程序，那还不易热儿，那就安装呗。然而安装过程让人迷糊，复杂程度让人难忘，特此记录一下。遗憾的是，花了我两天时间，到现在为止，该程序仍然没有安装成功。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/how-to-install-filezilla#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
@@ -1218,13 +1207,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">83k</span>
+    <span title="站点总字数">85k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:16</span>
+    <span title="站点阅读时长">1:17</span>
   </span>
 </div>
 <div class="busuanzi-count">
