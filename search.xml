@@ -13,27 +13,6 @@
       </tags>
   </entry>
   <entry>
-    <title>阿甘</title>
-    <url>/%E9%98%BF%E7%94%98.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;记得第一次看阿甘正传时，我流泪了！</p>
-<p>&emsp;&emsp;阿甘的妈妈临死前，对阿甘说的话我开始觉得奇怪，同学告诉我说：她是用她自己的语言来让她的儿子明白……</p>
-<p>&emsp;&emsp;阿甘的妻子死的时候，她问阿甘跑步都看到了什么？阿甘说看到了美丽的山谷，看到了平静的湖水，看到了天地相接……她说要是她也在就好了！阿甘说：You were!（你一直和我在一起）</p>
-<p>&emsp;&emsp;虽说我也和阿甘一样笨，但却没有他那样的运气！</p>
-<p>&emsp;&emsp;运气？</p>
-<p>&emsp;&emsp;哈！</p>
-<p>&emsp;&emsp;世上哪儿来的运气？</p>
-<p>&emsp;&emsp;究其原因，阿甘并不是靠运气，而是靠一颗执著的心！我不能把他的心移植到我的胸腔内。但是我拥有我自己的心！</p>
-<p>&emsp;&emsp;相信执著的我也会像阿甘一样在人生的路上走得更远！</p>
-<p>&emsp;&emsp;加油啊！</p>
-]]></content>
-      <categories>
-        <category>某日记</category>
-      </categories>
-      <tags>
-        <tag>阿甘</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>好快刀</title>
     <url>/%E5%A5%BD%E5%BF%AB%E5%88%80.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;在我还没有来得及目送最后一屡夕晖之前，夜已悄悄的笼罩下来。从地底下蒸出的水汽弥散开来，烟雾弥漫的街道像是通往地府的黄泉路。路上行人不多，偶尔路过一个，像是久死的干尸，摇摇晃晃地往地府赶去。只有几只青蛙的叫声证明这还是人间。 </p>
@@ -52,6 +31,27 @@
       </categories>
       <tags>
         <tag>杂</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>阿甘</title>
+    <url>/%E9%98%BF%E7%94%98.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;记得第一次看阿甘正传时，我流泪了！</p>
+<p>&emsp;&emsp;阿甘的妈妈临死前，对阿甘说的话我开始觉得奇怪，同学告诉我说：她是用她自己的语言来让她的儿子明白……</p>
+<p>&emsp;&emsp;阿甘的妻子死的时候，她问阿甘跑步都看到了什么？阿甘说看到了美丽的山谷，看到了平静的湖水，看到了天地相接……她说要是她也在就好了！阿甘说：You were!（你一直和我在一起）</p>
+<p>&emsp;&emsp;虽说我也和阿甘一样笨，但却没有他那样的运气！</p>
+<p>&emsp;&emsp;运气？</p>
+<p>&emsp;&emsp;哈！</p>
+<p>&emsp;&emsp;世上哪儿来的运气？</p>
+<p>&emsp;&emsp;究其原因，阿甘并不是靠运气，而是靠一颗执著的心！我不能把他的心移植到我的胸腔内。但是我拥有我自己的心！</p>
+<p>&emsp;&emsp;相信执著的我也会像阿甘一样在人生的路上走得更远！</p>
+<p>&emsp;&emsp;加油啊！</p>
+]]></content>
+      <categories>
+        <category>某日记</category>
+      </categories>
+      <tags>
+        <tag>阿甘</tag>
       </tags>
   </entry>
   <entry>
@@ -1338,7 +1338,7 @@
   <entry>
     <title>基于宽频带背景噪声面波的美国三维上地幔横波速度结构模型</title>
     <url>/US-upper-mantle-vs-model.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;利用宽频带的背景噪声面波做了美国三维上地幔横波速度结构，该工作做了x年。我不会告诉你这项工作做了多久，说出来都害sao。文章终于在2018年发表，文章链接在<a href="https://link.springer.com/article/10.1007/s00024-018-1881-2">这里</a>，如果有需要可以找我要全文。<br>&emsp;&emsp;做模型真的是需要大量细致的工作。这篇文章的主要贡献是表明只用背景噪声面波也可以做的比较深，比较准，另外就是为community提供了一个新的模型。怎奈自己的地质背景太差，看不到啥突出的科学问题，还被审稿人批评说，‘你做的啥工作啊，像本科生的作业。’心塞。师兄说的对，应该多向可能对你的工作感兴趣的人请教，例如动力学方向的人啊之类的。<br>&emsp;&emsp;老板建议把这个模型挂在<a href="https://ds.iris.edu/ds/products/emc-earthmodels/">IRIS EMC</a>里头，推广推广，让大伙儿都用用。我觉得不错，于是今天终于把它放到了IRIS里面。点击<a href="https://ds.iris.edu/ds/products/emc-us-upper-mantle-vsxiechuyang2018/">这里</a>就可以看到我的模型了。里面有netcdf格式的数据可以下载。如果有需要可以找我要更细致的结果。<br>&emsp;&emsp;IRIS EMC需要的是netcdf格式的模型数据。IRIS有提供把txt文本格式的模型转换成netcdf的<a href="https://github.com/iris-edu/emc-tools">python脚本</a>。另外向IRIS EMC提交模型的要求也可以这他们的<a href="https://ds.iris.edu/ds/products/emc-contributionguide/">网页</a>看到，按照他们的要求把netcdf文件准备好，然后写一个说明文档一并发送给<a href="mailto:&#112;&#114;&#x6f;&#x64;&#x75;&#x63;&#116;&#x40;&#x69;&#114;&#105;&#115;&#x2e;&#x77;&#97;&#x73;&#x68;&#105;&#x6e;&#103;&#116;&#111;&#110;&#46;&#101;&#100;&#x75;">&#112;&#114;&#x6f;&#x64;&#x75;&#x63;&#116;&#x40;&#x69;&#114;&#105;&#115;&#x2e;&#x77;&#97;&#x73;&#x68;&#105;&#x6e;&#103;&#116;&#111;&#110;&#46;&#101;&#100;&#x75;</a>就完事了。<br>&emsp;&emsp;netcdf是2进制文件。要查看其头段信息的话可以用命令ncdump -h xxx.nc（安装netcdf-bin），要读取其参数信息可以用命令ncks（安装nco）。其实IRIS EMC也提供了将netcdf转换成txt文本的<a href="https://github.com/iris-edu/emc-tools">python脚本</a>，非常方便。<br>&emsp;&emsp;求合作啊。我擅长处理数据，要是您能看到啥地学科学问题那真是求之不得啊。笑cry。</p>]]></content>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;利用宽频带的背景噪声面波做了美国三维上地幔横波速度结构，该工作做了x年。我不会告诉你这项工作做了多久，说出来都害sao。文章终于在2018年发表，文章链接在<a href="https://link.springer.com/article/10.1007/s00024-018-1881-2">这里</a>，如果有需要可以找我要全文。<br>&emsp;&emsp;做模型真的是需要大量细致的工作。这篇文章的主要贡献是表明只用背景噪声面波也可以做的比较深，比较准，另外就是为community提供了一个新的模型。怎奈自己的地质背景太差，看不到啥突出的科学问题，还被审稿人批评说，‘你做的啥工作啊，像本科生的作业。’心塞。师兄说的对，应该多向可能对你的工作感兴趣的人请教，例如动力学方向的人啊之类的。<br>&emsp;&emsp;老板建议把这个模型挂在<a href="https://ds.iris.edu/ds/products/emc-earthmodels/">IRIS EMC</a>里头，推广推广，让大伙儿都用用。我觉得不错，于是今天终于把它放到了IRIS里面。点击<a href="https://ds.iris.edu/ds/products/emc-us-upper-mantle-vsxiechuyang2018/">这里</a>就可以看到我的模型了。里面有netcdf格式的数据可以下载。如果有需要可以找我要更细致的结果。<br>&emsp;&emsp;IRIS EMC需要的是netcdf格式的模型数据。IRIS有提供把txt文本格式的模型转换成netcdf的<a href="https://github.com/iris-edu/emc-tools">python脚本</a>。另外向IRIS EMC提交模型的要求也可以这他们的<a href="https://ds.iris.edu/ds/products/emc-contributionguide/">网页</a>看到，按照他们的要求把netcdf文件准备好，然后写一个说明文档一并发送给<a href="mailto:&#x70;&#114;&#111;&#x64;&#x75;&#x63;&#116;&#x40;&#x69;&#114;&#x69;&#x73;&#46;&#x77;&#x61;&#x73;&#x68;&#x69;&#110;&#x67;&#116;&#111;&#x6e;&#x2e;&#101;&#100;&#x75;">&#x70;&#114;&#111;&#x64;&#x75;&#x63;&#116;&#x40;&#x69;&#114;&#x69;&#x73;&#46;&#x77;&#x61;&#x73;&#x68;&#x69;&#110;&#x67;&#116;&#111;&#x6e;&#x2e;&#101;&#100;&#x75;</a>就完事了。<br>&emsp;&emsp;netcdf是2进制文件。要查看其头段信息的话可以用命令ncdump -h xxx.nc（安装netcdf-bin），要读取其参数信息可以用命令ncks（安装nco）。其实IRIS EMC也提供了将netcdf转换成txt文本的<a href="https://github.com/iris-edu/emc-tools">python脚本</a>，非常方便。<br>&emsp;&emsp;求合作啊。我擅长处理数据，要是您能看到啥地学科学问题那真是求之不得啊。笑cry。</p>]]></content>
       <categories>
         <category>work</category>
       </categories>
@@ -1575,6 +1575,18 @@
       <tags>
         <tag>web</tag>
         <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>fatal&#39;&#92;:&#39; &#39;origin&#39; does not appear to be a git repository</title>
+    <url>/git-error.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>运行git push origin master -f 的时候显示这个错误:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">fatal: &#x27;origin&#x27; does not appear to be a git repository fatal: Could not read from remote repository.</span><br></pre></td></tr></table></figure>
+<p>解决办法是重新关联远程仓库：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git remote add origin git@github.com:junxie01/junxie01.git</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>linux</tag>
       </tags>
   </entry>
 </search>
