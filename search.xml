@@ -832,7 +832,7 @@
     <url>/reward-configuration.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>厚颜无耻的开始想要打赏。如何配置打赏呢？原来next是有打赏的选项字段的。直接修改主题配置文件如下：</p>
 <span id="more"></span>
-<p><img src="/donate.png" alt="打赏字段"><br>然后把微信和支付宝的二维码图片放在&#x2F;themes&#x2F;next&#x2F;source&#x2F;images中。然后就大功告成了。</p>
+<p><img src="/.xyz//donate.png" alt="打赏字段"><br>然后把微信和支付宝的二维码图片放在&#x2F;themes&#x2F;next&#x2F;source&#x2F;images中。然后就大功告成了。</p>
 ]]></content>
       <categories>
         <category>web</category>
@@ -1147,7 +1147,7 @@
     <url>/stop-os-update.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;我的HP笔记本上的Linux系统安装的是Elementary OS。这是个基于Ubuntu的注重界面美观的系统。是挺漂亮的，但几乎每天那个引用中心都会跳出来，帮我检查更新。</p>
 <span id="more"></span>
-<p><img src="/app.png" alt="应用中心"><br>&emsp;&emsp;这很烦人，尤其是还有出错，不能忍。所以必须让它停止自己更新啊。解决办法是这样。在文件&#x2F;etc&#x2F;apt&#x2F;apt.conf.d&#x2F;10periodic中将第一行的1改为0，成这样：</p>
+<p><img src="/.xyz//app.png" alt="应用中心"><br>&emsp;&emsp;这很烦人，尤其是还有出错，不能忍。所以必须让它停止自己更新啊。解决办法是这样。在文件&#x2F;etc&#x2F;apt&#x2F;apt.conf.d&#x2F;10periodic中将第一行的1改为0，成这样：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">APT::Periodic::Update-Package-Lists &quot;0&quot;;</span><br><span class="line">APT::Periodic::Download-Upgradeable-Packages &quot;0&quot;;</span><br><span class="line">APT::Periodic::AutocleanInterval &quot;0&quot;;</span><br></pre></td></tr></table></figure>
 <p>0表示false，自然就不帮您自动更新了。</p>
 ]]></content>
@@ -1171,7 +1171,7 @@
 <p>&emsp;&emsp;在themes&#x2F;next&#x2F;source&#x2F;css&#x2F;_common&#x2F;components&#x2F;post&#x2F;post.styl中找到.post-block<br>然后改成这个样子：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">if xxxxx</span><br><span class="line">.post-block &#123;</span><br><span class="line">  opacity: 0;</span><br><span class="line">  margin-top: 60px;</span><br><span class="line">  margin-bottom: 60px;</span><br><span class="line">  padding: 25px;</span><br><span class="line">  -webkit-box-shadow: 0 0 5px rgba(202, 203, 203, .5);</span><br><span class="line">  -moz-box-shadow: 0 0 5px rgba(202, 203, 204, .5);</span><br><span class="line"> &#125;</span><br><span class="line"> .pgaination, xxxx</span><br></pre></td></tr></table></figure>
 <p>&emsp;&emsp;谁知我用的是copy，也没仔细看那个神仙的脚本里面可能估计将post-block中的短横线敲作了下划线。我拷贝过来试了，没用。一度以为这个边框是永远加不上了。谁知今天鬼使神差的对比了一下神仙贴出的图，发现了问题。于是改了过来，结果就可以了。我估计神仙是故意打错了，让我们这些小白出错了长记性。只可惜自己不懂css啊，懂的话就没那么麻烦了。</p>
-<p><img src="/frame.png" alt="边框"></p>
+<p><img src="/.xyz//frame.png" alt="边框"></p>
 <p>&emsp;&emsp;这个边框效果还凑合吧。</p>
 ]]></content>
       <categories>
@@ -1269,7 +1269,7 @@
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;有些时候画图需要用到时间轴。gmt<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="gmt版本为5.4.3，运行系统为ElmentaryOS 4.15.0-107-generic.
 ">[1]</span></a></sup>里面的时间轴是比较简单的。画basemap的时候对于对于rangeR来说加上T就好了。例如</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-R1990T/1991T/0/1</span><br></pre></td></tr></table></figure>
-<p>&emsp;&emsp;就可以画1990年到1991年的图。然后重要的是横轴的标注annotation怎么设置，见下图：<br><img src="/1.png" alt="时间轴单位"><br>&emsp;&emsp;要让这些单位显示出来还涉及到FORMAT_DATE_MAP的设置。其设置如下图：<br><img src="/2.png" alt="FORMAT_DATE_MAP设置"><br>&emsp;&emsp;例如封面的标注就是将FORMAT_DATE_MAP设置成jjj</p>
+<p>&emsp;&emsp;就可以画1990年到1991年的图。然后重要的是横轴的标注annotation怎么设置，见下图：<br><img src="/.xyz//1.png" alt="时间轴单位"><br>&emsp;&emsp;要让这些单位显示出来还涉及到FORMAT_DATE_MAP的设置。其设置如下图：<br><img src="/.xyz//2.png" alt="FORMAT_DATE_MAP设置"><br>&emsp;&emsp;例如封面的标注就是将FORMAT_DATE_MAP设置成jjj</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">gmt set FORMAT_DATE_MAP jjj</span><br></pre></td></tr></table></figure>
 <p>&emsp;&emsp;然后在B选项用-Bsxa10D。</p>
 <div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">gmt版本为5.4.3，运行系统为ElmentaryOS 4.15.0-107-generic.<a href="#fnref:1" rev="footnote"> ↩</a></span></li></ol></div></div>]]></content>
@@ -1327,7 +1327,7 @@
   <entry>
     <title>稍稍盘点地幔过渡带研究进展</title>
     <url>/mantle-transition-zone.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;不看不知道，一看吓一跳。地幔过渡带的研究热度要爆表。搜了一下2016年以来的文章，多如牛毛，而且乖乖，都是高影响因子期刊论文。<br><img src="/Picture2.png" alt="部分文献"><br>&emsp;&emsp;老板让想一下以后的方向，关于地幔结构，宜居性，热点。那就地幔过渡带的水咯。<br>&emsp;&emsp;地幔过渡带是上地幔与下地幔的交接区域。深度大约为410-660公里。通过研究地幔过渡带结构以及其与上下地幔的相互作用的可以帮助我们认识地幔对流的模式，了解地幔的演化以及揭示地球内部的水循环过程。<br>&emsp;&emsp;目前对地幔过渡的认识主要是认为它是相变层。上地幔中主要是橄榄石。410公里是橄榄石到瓦兹利石的相变。660是林伍德是到布里吉曼石的相变。另外过渡带中间约520km还有一个相变。两个相变面的克拉伯龙斜率是反的。意思是当温度高时410相变面会下降，660会上升，过渡带变薄，反之变厚。对地幔过渡带的研究提供的关键信息可以推断上地幔物质组成，过渡带含水量和温度。了解热柱和俯冲带与过渡带的相互作用等。<br>&emsp;&emsp;大量的研究表明上地幔和下地幔的储水能力较低，可能含的水很少。而过渡带有很好的储水能力，可能包含有大量的水。Bercovici and karato(2003)认为地幔有一个广域的上涌趋势，上涌的过程因为脱水，会在410界面上面形成一个局部熔融层，表现为一个地震学的低速层。含水的地幔过渡带可以解释地球化学观测到的不相容元素和稳定同位素特性，从而支持全地幔对流模式。<br>&emsp;&emsp;我们来看看近几年的地幔过渡带研究进展。刚刚提到的这个410km的低速层，近些年获得大量研究者的关注。Tauzin et al. (2010)认为全球普遍存在这个低速层，他们的观测台站较少，Wei and Shearer (2017)人发现他们的观测数据中只有30-40%有低速层。其他近些年的文章也都纷纷在不同的区域例如中国东南等发现这样的低速层(Tauzin et al., 2017; Li et al., 2019; Li et al., 2020; Xiao et al., 2020)。那这个低速层是否真的是普遍全球存在的，这个低速层的成因及与俯冲板块和热柱的关系都是研究的热点。<br>&emsp;&emsp;地幔过渡带的地形和速度变化也是研究的热点。例如Ai and Zheng (2003)和Ai et al. (2003)利用接收函数对研究660间断面他们发现660不是单一的一个界面在有些地方存在小的间断面。Zhang et al. (2019)发现中国东南660界面速度增大有8%。Ishii et al. (2019)也发现660界面十分尖锐，速度的跳变在数公里范围内。Wu et al. (2019)利用散射波发现410比较平缓，推断410是一个温度控制的相变面。而660含有小尺度的地形，因而推断它是一个相变面加上化学界面。这些研究极大的推动了我们对于过渡带界面的认识。不过可能还有很多值得发掘的点，例如Wu et al. (2019)采样的区域是中国东部及南亚，地球上其他地方是否也是类似的结论。另外660的小间断面与俯冲板块，地幔热柱有什么关系也是值得研究的(Chu et al., 2012; Jenkins et al., 2016)。<br>&emsp;&emsp;地幔过度带的水是大家十分关注的问题。高温高压实验证实地幔过渡带有储存大量水的能力。一些学者从地幔金刚石包裹体中的物质发现地幔过渡带的确含水(Pearson et al., 2014; Tschauner et al., 2018; Schulze et al., 2018)。不过这些例子较少，似乎不足以说明普遍情况。地震学的部分研究发现其实地幔过渡带含的水没有想象中的多(Houser, 2016)。因而地幔过渡带里的含水量还有一定争议。Thio et al. (2016)发现利用地震学的数据来研究地幔过渡带的含水量存在两个问题，一个就是误差较大，另一个就是温度与速度存在一定的折中关系。例如有些研究者直接将低速解释为含水导致，然而温度高也可以导致波速度低。尚需利用多种手段来进行研究，确认地幔过渡带的水含量及分布。<br>&emsp;&emsp;近些年来660界面之下的低速获得了广泛关注(Liu et al., 2018; Sun et al., 2020;Panero et al., 2020)。例如Schmandt et al. (2014)利用接收函数研究了美国西部660界面。他们发现了660之下普遍存在一个低速。他们推测可能是俯冲的法拉隆板片进入下地幔时脱水造成的部分熔融。Liu et al. (2016)等在日本地区发现了660之下的低速，推测是地幔转换带滞留的东亚俯冲的太平洋板片造成。目前在世界其他地区，中国等尚缺乏相关研究。研究660低速有助于提升我们对俯冲板块与地幔过渡带关系的认识。<br>&emsp;&emsp;地幔过渡带的地震学研究方法包括：非对称反射波的方法(Wu et al., 2019)，ScS多次反射波(Wang et al., 2017)以及上界面反射波的方法(Feng et al., 2017)。<br>&emsp;&emsp;还有地震源区转换波法，该方法对深源地震区附近的成像精度高(Li et al., 2008)。中心点反射波法，这种方法空间覆盖好，可以得到可靠的大尺度平均结构(Yu et al., 2018)。<br>&emsp;&emsp;此外还有三重震相法。该方法对垂直方向尚的速度结构非常敏感(Wang and Niu, 2010; Chu et al., 2012)。台站下方转换波法，该方法充分利用到时和振幅信息，但受限于台阵的孔径和台间距(Zhang and Schmandt, 2019)。</p>]]></content>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;不看不知道，一看吓一跳。地幔过渡带的研究热度要爆表。搜了一下2016年以来的文章，多如牛毛，而且乖乖，都是高影响因子期刊论文。<br><img src="/.xyz//Picture2.png" alt="部分文献"><br>&emsp;&emsp;老板让想一下以后的方向，关于地幔结构，宜居性，热点。那就地幔过渡带的水咯。<br>&emsp;&emsp;地幔过渡带是上地幔与下地幔的交接区域。深度大约为410-660公里。通过研究地幔过渡带结构以及其与上下地幔的相互作用的可以帮助我们认识地幔对流的模式，了解地幔的演化以及揭示地球内部的水循环过程。<br>&emsp;&emsp;目前对地幔过渡的认识主要是认为它是相变层。上地幔中主要是橄榄石。410公里是橄榄石到瓦兹利石的相变。660是林伍德是到布里吉曼石的相变。另外过渡带中间约520km还有一个相变。两个相变面的克拉伯龙斜率是反的。意思是当温度高时410相变面会下降，660会上升，过渡带变薄，反之变厚。对地幔过渡带的研究提供的关键信息可以推断上地幔物质组成，过渡带含水量和温度。了解热柱和俯冲带与过渡带的相互作用等。<br>&emsp;&emsp;大量的研究表明上地幔和下地幔的储水能力较低，可能含的水很少。而过渡带有很好的储水能力，可能包含有大量的水。Bercovici and karato(2003)认为地幔有一个广域的上涌趋势，上涌的过程因为脱水，会在410界面上面形成一个局部熔融层，表现为一个地震学的低速层。含水的地幔过渡带可以解释地球化学观测到的不相容元素和稳定同位素特性，从而支持全地幔对流模式。<br>&emsp;&emsp;我们来看看近几年的地幔过渡带研究进展。刚刚提到的这个410km的低速层，近些年获得大量研究者的关注。Tauzin et al. (2010)认为全球普遍存在这个低速层，他们的观测台站较少，Wei and Shearer (2017)人发现他们的观测数据中只有30-40%有低速层。其他近些年的文章也都纷纷在不同的区域例如中国东南等发现这样的低速层(Tauzin et al., 2017; Li et al., 2019; Li et al., 2020; Xiao et al., 2020)。那这个低速层是否真的是普遍全球存在的，这个低速层的成因及与俯冲板块和热柱的关系都是研究的热点。<br>&emsp;&emsp;地幔过渡带的地形和速度变化也是研究的热点。例如Ai and Zheng (2003)和Ai et al. (2003)利用接收函数对研究660间断面他们发现660不是单一的一个界面在有些地方存在小的间断面。Zhang et al. (2019)发现中国东南660界面速度增大有8%。Ishii et al. (2019)也发现660界面十分尖锐，速度的跳变在数公里范围内。Wu et al. (2019)利用散射波发现410比较平缓，推断410是一个温度控制的相变面。而660含有小尺度的地形，因而推断它是一个相变面加上化学界面。这些研究极大的推动了我们对于过渡带界面的认识。不过可能还有很多值得发掘的点，例如Wu et al. (2019)采样的区域是中国东部及南亚，地球上其他地方是否也是类似的结论。另外660的小间断面与俯冲板块，地幔热柱有什么关系也是值得研究的(Chu et al., 2012; Jenkins et al., 2016)。<br>&emsp;&emsp;地幔过度带的水是大家十分关注的问题。高温高压实验证实地幔过渡带有储存大量水的能力。一些学者从地幔金刚石包裹体中的物质发现地幔过渡带的确含水(Pearson et al., 2014; Tschauner et al., 2018; Schulze et al., 2018)。不过这些例子较少，似乎不足以说明普遍情况。地震学的部分研究发现其实地幔过渡带含的水没有想象中的多(Houser, 2016)。因而地幔过渡带里的含水量还有一定争议。Thio et al. (2016)发现利用地震学的数据来研究地幔过渡带的含水量存在两个问题，一个就是误差较大，另一个就是温度与速度存在一定的折中关系。例如有些研究者直接将低速解释为含水导致，然而温度高也可以导致波速度低。尚需利用多种手段来进行研究，确认地幔过渡带的水含量及分布。<br>&emsp;&emsp;近些年来660界面之下的低速获得了广泛关注(Liu et al., 2018; Sun et al., 2020;Panero et al., 2020)。例如Schmandt et al. (2014)利用接收函数研究了美国西部660界面。他们发现了660之下普遍存在一个低速。他们推测可能是俯冲的法拉隆板片进入下地幔时脱水造成的部分熔融。Liu et al. (2016)等在日本地区发现了660之下的低速，推测是地幔转换带滞留的东亚俯冲的太平洋板片造成。目前在世界其他地区，中国等尚缺乏相关研究。研究660低速有助于提升我们对俯冲板块与地幔过渡带关系的认识。<br>&emsp;&emsp;地幔过渡带的地震学研究方法包括：非对称反射波的方法(Wu et al., 2019)，ScS多次反射波(Wang et al., 2017)以及上界面反射波的方法(Feng et al., 2017)。<br>&emsp;&emsp;还有地震源区转换波法，该方法对深源地震区附近的成像精度高(Li et al., 2008)。中心点反射波法，这种方法空间覆盖好，可以得到可靠的大尺度平均结构(Yu et al., 2018)。<br>&emsp;&emsp;此外还有三重震相法。该方法对垂直方向尚的速度结构非常敏感(Wang and Niu, 2010; Chu et al., 2012)。台站下方转换波法，该方法充分利用到时和振幅信息，但受限于台阵的孔径和台间距(Zhang and Schmandt, 2019)。</p>]]></content>
       <categories>
         <category>work</category>
       </categories>
@@ -1338,7 +1338,7 @@
   <entry>
     <title>基于宽频带背景噪声面波的美国三维上地幔横波速度结构模型</title>
     <url>/US-upper-mantle-vs-model.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;利用宽频带的背景噪声面波做了美国三维上地幔横波速度结构，该工作做了x年。我不会告诉你这项工作做了多久，说出来都害sao。文章终于在2018年发表，文章链接在<a href="https://link.springer.com/article/10.1007/s00024-018-1881-2">这里</a>，如果有需要可以找我要全文。<br>&emsp;&emsp;做模型真的是需要大量细致的工作。这篇文章的主要贡献是表明只用背景噪声面波也可以做的比较深，比较准，另外就是为community提供了一个新的模型。怎奈自己的地质背景太差，看不到啥突出的科学问题，还被审稿人批评说，‘你做的啥工作啊，像本科生的作业。’心塞。师兄说的对，应该多向可能对你的工作感兴趣的人请教，例如动力学方向的人啊之类的。<br>&emsp;&emsp;老板建议把这个模型挂在<a href="https://ds.iris.edu/ds/products/emc-earthmodels/">IRIS EMC</a>里头，推广推广，让大伙儿都用用。我觉得不错，于是今天终于把它放到了IRIS里面。点击<a href="https://ds.iris.edu/ds/products/emc-us-upper-mantle-vsxiechuyang2018/">这里</a>就可以看到我的模型了。里面有netcdf格式的数据可以下载。如果有需要可以找我要更细致的结果。<br>&emsp;&emsp;IRIS EMC需要的是netcdf格式的模型数据。IRIS有提供把txt文本格式的模型转换成netcdf的<a href="https://github.com/iris-edu/emc-tools">python脚本</a>。另外向IRIS EMC提交模型的要求也可以这他们的<a href="https://ds.iris.edu/ds/products/emc-contributionguide/">网页</a>看到，按照他们的要求把netcdf文件准备好，然后写一个说明文档一并发送给<a href="mailto:&#x70;&#x72;&#111;&#x64;&#117;&#99;&#x74;&#64;&#x69;&#114;&#x69;&#115;&#x2e;&#119;&#x61;&#115;&#x68;&#x69;&#110;&#x67;&#116;&#x6f;&#110;&#46;&#x65;&#x64;&#x75;">&#x70;&#x72;&#111;&#x64;&#117;&#99;&#x74;&#64;&#x69;&#114;&#x69;&#115;&#x2e;&#119;&#x61;&#115;&#x68;&#x69;&#110;&#x67;&#116;&#x6f;&#110;&#46;&#x65;&#x64;&#x75;</a>就完事了。<br>&emsp;&emsp;netcdf是2进制文件。要查看其头段信息的话可以用命令ncdump -h xxx.nc（安装netcdf-bin），要读取其参数信息可以用命令ncks（安装nco）。其实IRIS EMC也提供了将netcdf转换成txt文本的<a href="https://github.com/iris-edu/emc-tools">python脚本</a>，非常方便。<br>&emsp;&emsp;求合作啊。我擅长处理数据，要是您能看到啥地学科学问题那真是求之不得啊。笑cry。</p>]]></content>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;利用宽频带的背景噪声面波做了美国三维上地幔横波速度结构，该工作做了x年。我不会告诉你这项工作做了多久，说出来都害sao。文章终于在2018年发表，文章链接在<a href="https://link.springer.com/article/10.1007/s00024-018-1881-2">这里</a>，如果有需要可以找我要全文。<br>&emsp;&emsp;做模型真的是需要大量细致的工作。这篇文章的主要贡献是表明只用背景噪声面波也可以做的比较深，比较准，另外就是为community提供了一个新的模型。怎奈自己的地质背景太差，看不到啥突出的科学问题，还被审稿人批评说，‘你做的啥工作啊，像本科生的作业。’心塞。师兄说的对，应该多向可能对你的工作感兴趣的人请教，例如动力学方向的人啊之类的。<br>&emsp;&emsp;老板建议把这个模型挂在<a href="https://ds.iris.edu/ds/products/emc-earthmodels/">IRIS EMC</a>里头，推广推广，让大伙儿都用用。我觉得不错，于是今天终于把它放到了IRIS里面。点击<a href="https://ds.iris.edu/ds/products/emc-us-upper-mantle-vsxiechuyang2018/">这里</a>就可以看到我的模型了。里面有netcdf格式的数据可以下载。如果有需要可以找我要更细致的结果。<br>&emsp;&emsp;IRIS EMC需要的是netcdf格式的模型数据。IRIS有提供把txt文本格式的模型转换成netcdf的<a href="https://github.com/iris-edu/emc-tools">python脚本</a>。另外向IRIS EMC提交模型的要求也可以这他们的<a href="https://ds.iris.edu/ds/products/emc-contributionguide/">网页</a>看到，按照他们的要求把netcdf文件准备好，然后写一个说明文档一并发送给<a href="mailto:&#112;&#x72;&#x6f;&#x64;&#x75;&#99;&#x74;&#64;&#x69;&#114;&#x69;&#x73;&#46;&#119;&#x61;&#x73;&#104;&#105;&#x6e;&#103;&#116;&#111;&#x6e;&#x2e;&#101;&#100;&#x75;">&#112;&#x72;&#x6f;&#x64;&#x75;&#99;&#x74;&#64;&#x69;&#114;&#x69;&#x73;&#46;&#119;&#x61;&#x73;&#104;&#105;&#x6e;&#103;&#116;&#111;&#x6e;&#x2e;&#101;&#100;&#x75;</a>就完事了。<br>&emsp;&emsp;netcdf是2进制文件。要查看其头段信息的话可以用命令ncdump -h xxx.nc（安装netcdf-bin），要读取其参数信息可以用命令ncks（安装nco）。其实IRIS EMC也提供了将netcdf转换成txt文本的<a href="https://github.com/iris-edu/emc-tools">python脚本</a>，非常方便。<br>&emsp;&emsp;求合作啊。我擅长处理数据，要是您能看到啥地学科学问题那真是求之不得啊。笑cry。</p>]]></content>
       <categories>
         <category>work</category>
       </categories>
@@ -1358,7 +1358,7 @@
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo update-gsfontmap</span><br></pre></td></tr></table></figure>
 <p>&emsp;&emsp;最后在gmt的字体配置文件&#x2F;usr&#x2F;share&#x2F;gmt&#x2F;postscriptlight&#x2F;PSL_custom_fonts.txt加上：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">STSong-Light--UniGB-UTF8-H 0.700 1</span><br><span class="line">STFangsong-Light--UniGB-UTF8-H 0.700 1</span><br><span class="line">STHeiti-Regular--UniGB-UTF8-H 0.700 1</span><br><span class="line">STKaiti-Regular--UniGB-UTF8-H 0.700 1</span><br></pre></td></tr></table></figure>
-<p>&emsp;&emsp;用gmt pstext -L就可以看到添加的四中字体：<br><img src="/pstext.png" alt="gmt pstext -L显示的新添加4种字体"><br>&emsp;&emsp;然后就大功告成了。</p>
+<p>&emsp;&emsp;用gmt pstext -L就可以看到添加的四中字体：<br><img src="/.xyz//pstext.png" alt="gmt pstext -L显示的新添加4种字体"><br>&emsp;&emsp;然后就大功告成了。</p>
 <div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">https://www.cnblogs.com/gisalameda/p/6840662.html<a href="#fnref:1" rev="footnote"> ↩</a></span></li></ol></div></div>]]></content>
       <categories>
         <category>gmt</category>
@@ -1402,17 +1402,6 @@
       </tags>
   </entry>
   <entry>
-    <title>文章第三轮大修</title>
-    <url>/about-anti-paper.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;文章的审稿意见今天又双叒下来了，值得记录一下。</p>
-<span id="more"></span>
-<p>&emsp;&emsp;这是一篇怼人的文章，连发表以后发moment的内容都想好了：我不是针对谁，只是各位的model都有问题。。。然而目前为止已经是第三次大修意见。首先要庆幸一下没有拒绝，因为有听过有人在大修中修之后又给据了的，相比起来还是给了希望啊。然而三次大修还是挺折磨。这次审稿人1觉得上次改的还不错建议小修，但审稿人2找不着了。主编找了另一个审稿人审，又提出大量问题和建议。虽然意见多到完成他的建议足够另写一篇，但很中肯，且留了大名。这是第一次审稿人留大名，值得纪念一下，且此人还是业内大牛，想想还是挺开心的。<br>&emsp;&emsp;脑子里一直在纠结这篇文章到底怎么个改法。每次大修回来都感觉无从下手。而在老板眼里似乎跟已经接收了在proof一样。看到知乎的一个问题说：上了985为什么还焦虑？我回答，上985和焦不焦虑没有半毛钱关系。<br>&emsp;&emsp;自己总是很难持之以恒的完成设定的小目标，例如每天看一片文献啥的。很羡慕这个<a href="https://www.stevepavlina.com/">Steve Pavlina</a>博主，每天都坚持写一篇博文。他说要是做不到你的目标的话那就把目标做的更加容易一些。例如不能做到每天都念一篇文章，那就每天都看一篇文章的题目。之后，每天看一篇文章的摘要，完成以后每天就看introduction，逐渐增加。慢慢就能完成了。那就按照他的建议先试试^_^。</p>
-]]></content>
-      <categories>
-        <category>日记</category>
-      </categories>
-  </entry>
-  <entry>
     <title>关于瘾</title>
     <url>/addiction.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;什么是瘾？</p>
@@ -1425,6 +1414,17 @@
       <tags>
         <tag>瘾</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>文章第三轮大修</title>
+    <url>/about-anti-paper.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;文章的审稿意见今天又双叒下来了，值得记录一下。</p>
+<span id="more"></span>
+<p>&emsp;&emsp;这是一篇怼人的文章，连发表以后发moment的内容都想好了：我不是针对谁，只是各位的model都有问题。。。然而目前为止已经是第三次大修意见。首先要庆幸一下没有拒绝，因为有听过有人在大修中修之后又给据了的，相比起来还是给了希望啊。然而三次大修还是挺折磨。这次审稿人1觉得上次改的还不错建议小修，但审稿人2找不着了。主编找了另一个审稿人审，又提出大量问题和建议。虽然意见多到完成他的建议足够另写一篇，但很中肯，且留了大名。这是第一次审稿人留大名，值得纪念一下，且此人还是业内大牛，想想还是挺开心的。<br>&emsp;&emsp;脑子里一直在纠结这篇文章到底怎么个改法。每次大修回来都感觉无从下手。而在老板眼里似乎跟已经接收了在proof一样。看到知乎的一个问题说：上了985为什么还焦虑？我回答，上985和焦不焦虑没有半毛钱关系。<br>&emsp;&emsp;自己总是很难持之以恒的完成设定的小目标，例如每天看一片文献啥的。很羡慕这个<a href="https://www.stevepavlina.com/">Steve Pavlina</a>博主，每天都坚持写一篇博文。他说要是做不到你的目标的话那就把目标做的更加容易一些。例如不能做到每天都念一篇文章，那就每天都看一篇文章的题目。之后，每天看一篇文章的摘要，完成以后每天就看introduction，逐渐增加。慢慢就能完成了。那就按照他的建议先试试^_^。</p>
+]]></content>
+      <categories>
+        <category>日记</category>
+      </categories>
   </entry>
   <entry>
     <title>为啥要这样安装FileZilla</title>
@@ -1605,5 +1605,37 @@
 <p>记录下每次任务「评估完成时间」和「真实完成时间」，就可以知道每次推测是否准确。相应的差值称为「推测偏差」。如果推测偏差的期望为15%，那么一项需要120分钟完成的任务，实际完成时间很可能是 120+120*0.15&#x3D;138 分钟。根据偏差值的数学期望，就能够有一个大概印象，每一项任务大概需要多久时间才能完成，便于更高效地规划「我的一天」。</p>
 <h2 id="任务管理的本质和愚蠢的系统"><a href="#任务管理的本质和愚蠢的系统" class="headerlink" title="任务管理的本质和愚蠢的系统"></a>任务管理的本质和愚蠢的系统</h2><p>任务管理的本质是个人管理。如果人足够自律，就像一个精密的机器，那完全不需要各种花里胡哨的工具或方法论，只需要将任务列出来，一个接一个地完成。但是一般人都没有那么自律，执行力也不够强，时间表不断被打乱，需要不断的优化。</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>rule_no1</title>
+    <url>/rule-no1.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>转载自<a href="https://sspai.com/post/78279">少数派</a><br>每个系统中都存在第一性原理，它的存在是最基本的命题和假设，不能被省略，也不能被违反。—亚里士多德</p>
+<h2 id="第一步：定义问题"><a href="#第一步：定义问题" class="headerlink" title="第一步：定义问题"></a>第一步：定义问题</h2><p>要解决问题之前，一定要关注两件事情：</p>
+<ol>
+<li>我所解决的问题是真的，而不是一个假的问题；</li>
+<li>我所解决的问题有一个明确的范围。<br>确保你的问题和别人的问题是同一个问题。</li>
+</ol>
+<h2 id="第二步：拆解问题"><a href="#第二步：拆解问题" class="headerlink" title="第二步：拆解问题"></a>第二步：拆解问题</h2><p>如果问题复杂，则需要将其拆分为若干个小问题，保证每一个小问题之间是独立的。独立就是无交集。</p>
+<h2 id="第三步：为问题排序"><a href="#第三步：为问题排序" class="headerlink" title="第三步：为问题排序"></a>第三步：为问题排序</h2><p>将问题拆解以后需要对子问题排序，方法有：</p>
+<ol>
+<li>解决问题的困难程度；</li>
+<li>问题被解决后的价值。<br>根据这里两个维度可将问题划分到四个项限：<br><img src="/.xyz//" alt="四项限图"><br>只专注做右侧的事情。</li>
+</ol>
+<h2 id="第四步：逐个解决"><a href="#第四步：逐个解决" class="headerlink" title="第四步：逐个解决"></a>第四步：逐个解决</h2><p>第三步中已经评估了优先级，到第四步就按照顺序做就好了。</p>
+<h2 id="苏格拉底的方法"><a href="#苏格拉底的方法" class="headerlink" title="苏格拉底的方法"></a>苏格拉底的方法</h2><p>在对话中质疑其中的前提、推理过程、结论。直到找到最重要的问题和解决路径。类似的有5WHT：为什么发生、为什么没有发现、为什么没有预防三个角度发问。</p>
+<h2 id="第一性原理误区"><a href="#第一性原理误区" class="headerlink" title="第一性原理误区"></a>第一性原理误区</h2><ol>
+<li>第一性原理思维&#x3D;透过现象看本质<br>看本质是指看到事物背后的原因，而第一性原理是透过本质看现象。</li>
+<li>第一性原理是唯一的<br>其实不是。</li>
+<li>第一性原理获得的结论是稳定的<br>其实不一定。</li>
+</ol>
+<h2 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h2><ol>
+<li>第一性原理适合所有场景吗？</li>
+<li>第一性原理能帮我们增加知识吗？</li>
+</ol>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>第一性原理知识认识论的皮毛，别生搬硬套，别乱用。</p>
+]]></content>
+      <tags>
+        <tag>-学习</tag>
+      </tags>
   </entry>
 </search>

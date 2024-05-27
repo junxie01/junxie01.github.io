@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2024-05-27T13:01:35.670Z</updated>
+  <updated>2024-05-27T15:30:46.143Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>rule_no1</title>
+    <link href="http://www.seis-jun.xyz/rule-no1"/>
+    <id>http://www.seis-jun.xyz/rule-no1</id>
+    <published>2024-05-27T14:38:15.000Z</published>
+    <updated>2024-05-27T15:30:46.143Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;转载自&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="-学习" scheme="http://www.seis-jun.xyz/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>optimize_daily_task</title>
@@ -212,7 +235,7 @@
     <updated>2024-05-26T14:17:36.847Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/acce.png&quot; alt=&quot;文章接收&quot;&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/.xyz//acce.png&quot; alt=&quot;文章接收&quot;&gt;&lt;/p&gt;</summary>
     
     
     
@@ -305,7 +328,7 @@
     <updated>2024-05-26T14:17:36.847Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/source_dis.png&quot; alt=&quot;Distribution of ambient noise sources (100-300 s) (Ermert et al., 2017 )&quot;&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/.xyz//source_dis.png&quot; alt=&quot;Distribution of ambient noise sources (100-300 s) (Ermert et al., 2017 )&quot;&gt;&lt;/p&gt;</summary>
     
     
     
@@ -345,7 +368,7 @@
     <updated>2024-05-26T14:17:36.846Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/figure5.png&quot; alt=&quot;Maps of Vs structure in the upper mantle and major geological units modified from Fenneman (1917). The color bar labels are V S in km/s (top) and perturbation in percentage (bottom).&quot;&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/.xyz//figure5.png&quot; alt=&quot;Maps of Vs structure in the upper mantle and major geological units modified from Fenneman (1917). The color bar labels are V S in km/s (top) and perturbation in percentage (bottom).&quot;&gt;&lt;/p&gt;</summary>
     
     
     
@@ -364,7 +387,7 @@
     <updated>2024-05-26T14:17:36.846Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/Picture1.png&quot; alt=&quot;地幔过渡带&quot;&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/.xyz//Picture1.png&quot; alt=&quot;地幔过渡带&quot;&gt;&lt;/p&gt;</summary>
     
     
     
@@ -383,7 +406,7 @@
     <updated>2024-05-26T14:17:36.846Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/iq.jpg&quot; alt=&quot;智商捉急&quot;&gt;&lt;br&gt;图片来自一篇2018年PANS期刊的&lt;a href=&quot;https://www.pnas.org/content/115/26/6674?fbclid=IwAR3CVcH75ppH836xV4c5s99p11421Puo6ljF9hlQtg7kcRcXDa9_mdPSfU0&quot;&gt;文章&lt;/a&gt;.&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/.xyz//iq.jpg&quot; alt=&quot;智商捉急&quot;&gt;&lt;br&gt;图片来自一篇2018年PANS期刊的&lt;a href=&quot;https://www.pnas.org/content/115/26/6674?fbclid=IwAR3CVcH75ppH836xV4c5s99p11421Puo6ljF9hlQtg7kcRcXDa9_mdPSfU0&quot;&gt;文章&lt;/a&gt;.&lt;/p&gt;</summary>
     
     
     
@@ -391,21 +414,6 @@
     
     
     <category term="乱" scheme="http://www.seis-jun.xyz/tags/%E4%B9%B1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何访问google</title>
-    <link href="http://www.seis-jun.xyz/how-to-access-google"/>
-    <id>http://www.seis-jun.xyz/how-to-access-google</id>
-    <published>2020-07-08T14:30:01.000Z</published>
-    <updated>2024-05-26T14:17:36.846Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;Google产品尤其是Google scholar非常的方便，对于我这种有完美主义倾向，不喜欢山寨的人来讲真的太必要了。但是由于某些原因，在国内上不了google怎么办呢？&lt;/p&gt;</summary>
-    
-    
-    
     
   </entry>
   

@@ -29,13 +29,13 @@
 <meta property="og:site_name" content="SEISAMUSE">
 <meta property="og:description" content="&emsp;&emsp;我的HP笔记本上的Linux系统安装的是Elementary OS。这是个基于Ubuntu的注重界面美观的系统。是挺漂亮的，但几乎每天那个引用中心都会跳出来，帮我检查更新。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://www.seis-jun.xyz/app.png">
+<meta property="og:image" content="http://www.seis-jun.xyz/.xyz//app.png">
 <meta property="article:published_time" content="2020-06-18T02:24:18.000Z">
 <meta property="article:modified_time" content="2024-05-26T14:17:36.846Z">
 <meta property="article:author" content="Jun Xie">
 <meta property="article:tag" content="Linux">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://www.seis-jun.xyz/app.png">
+<meta name="twitter:image" content="http://www.seis-jun.xyz/.xyz//app.png">
 
 
 <link rel="canonical" href="http://www.seis-jun.xyz/stop-os-update.html">
@@ -140,7 +140,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">76</span>
+          <span class="site-state-item-count">77</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -151,7 +151,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">55</span>
+        <span class="site-state-item-count">56</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -259,7 +259,7 @@
     
     <div class="post-body" itemprop="articleBody"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;我的HP笔记本上的Linux系统安装的是Elementary OS。这是个基于Ubuntu的注重界面美观的系统。是挺漂亮的，但几乎每天那个引用中心都会跳出来，帮我检查更新。</p>
 <span id="more"></span>
-<p><img src="/app.png" alt="应用中心"><br>&emsp;&emsp;这很烦人，尤其是还有出错，不能忍。所以必须让它停止自己更新啊。解决办法是这样。在文件&#x2F;etc&#x2F;apt&#x2F;apt.conf.d&#x2F;10periodic中将第一行的1改为0，成这样：</p>
+<p><img src="/.xyz//app.png" alt="应用中心"><br>&emsp;&emsp;这很烦人，尤其是还有出错，不能忍。所以必须让它停止自己更新啊。解决办法是这样。在文件&#x2F;etc&#x2F;apt&#x2F;apt.conf.d&#x2F;10periodic中将第一行的1改为0，成这样：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">APT::Periodic::Update-Package-Lists &quot;0&quot;;</span><br><span class="line">APT::Periodic::Download-Upgradeable-Packages &quot;0&quot;;</span><br><span class="line">APT::Periodic::AutocleanInterval &quot;0&quot;;</span><br></pre></td></tr></table></figure>
 <p>0表示false，自然就不帮您自动更新了。</p>
 
@@ -322,7 +322,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:17</span>
+    <span title="站点阅读时长">1:18</span>
   </span>
 </div>
 <div class="busuanzi-count">
