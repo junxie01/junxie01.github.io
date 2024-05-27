@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2024-05-27T08:56:36.317Z</updated>
+  <updated>2024-05-27T09:00:10.877Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -21,21 +21,26 @@
     <link href="http://www.seis-jun.xyz/add_counter"/>
     <id>http://www.seis-jun.xyz/add_counter</id>
     <published>2024-05-27T08:50:09.000Z</published>
-    <updated>2024-05-27T08:56:36.317Z</updated>
+    <updated>2024-05-27T09:00:10.877Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;##1. 修改根目录下的_config.yml.</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;修改根目录下的_config.yml.</summary>
         
       
     
     
     
+    <category term="web" scheme="http://www.seis-jun.xyz/categories/web/"/>
     
-    <category term="hexo web" scheme="http://www.seis-jun.xyz/tags/hexo-web/"/>
+    
+    <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
+    
+    <category term="hexo" scheme="http://www.seis-jun.xyz/tags/hexo/"/>
     
   </entry>
   
