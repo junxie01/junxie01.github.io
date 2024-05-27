@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2024-05-27T06:27:38.006Z</updated>
+  <updated>2024-05-27T08:56:36.317Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo添加字数统计</title>
+    <link href="http://www.seis-jun.xyz/add_counter"/>
+    <id>http://www.seis-jun.xyz/add_counter</id>
+    <published>2024-05-27T08:50:09.000Z</published>
+    <updated>2024-05-27T08:56:36.317Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;##1. 修改根目录下的_config.yml.</summary>
+        
+      
+    
+    
+    
+    
+    <category term="hexo web" scheme="http://www.seis-jun.xyz/tags/hexo-web/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo如何插入角注</title>
@@ -371,29 +394,6 @@
     <category term="linux" scheme="http://www.seis-jun.xyz/tags/linux/"/>
     
     <category term="axes" scheme="http://www.seis-jun.xyz/tags/axes/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo next点击头像回到主页</title>
-    <link href="http://www.seis-jun.xyz/avatar-to-homepage"/>
-    <id>http://www.seis-jun.xyz/avatar-to-homepage</id>
-    <published>2020-06-23T01:58:16.000Z</published>
-    <updated>2024-05-26T14:17:36.846Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;有了头像以后，看到头像一般就想点一点，点击了可以回到主页不是挺好的吗。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="web" scheme="http://www.seis-jun.xyz/categories/web/"/>
-    
-    
-    <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
-    
-    <category term="next" scheme="http://www.seis-jun.xyz/tags/next/"/>
-    
-    <category term="hexo" scheme="http://www.seis-jun.xyz/tags/hexo/"/>
     
   </entry>
   
