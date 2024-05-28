@@ -739,37 +739,6 @@
       </tags>
   </entry>
   <entry>
-    <title>如何回复审稿人意见？</title>
-    <url>/how-to-reply-to-reviewer.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>SCI文章是否得以发表，生杀大权很大一部分都在peer reviewer手上。文章投出去如果收到了审稿人意见，那么恭喜，机会大大的有。那么如何回复审稿人意见就是关键了。下面是一些要点。</p>
-<span id="more"></span>
-<hr>
-<h2 id="主旨"><a href="#主旨" class="headerlink" title="主旨"></a>主旨</h2><ol start="0">
-<li>给编辑单独回复意见，说改了哪里，改的用什么标出来的。</li>
-<li>对审稿人表示感谢。人家花时间和精力看你的文章，不求回报，指出你的问题和不足让你得到提升让科学进步难道不该感谢?</li>
-<li>认真回复编辑和审稿人的每一条意见&#x2F;疑问&#x2F;陈述，具体就是指每一句话，每一个模糊描述，每一个疑问句。</li>
-<li>作为意见&#x2F;疑问&#x2F;陈述的回应，必要要在正文稿件中有所体现。以表明对审稿人意见的尊重。</li>
-<li>回复的文字量尽量要与审稿人意见差不多，最好更多，但不要重复或者罗嗦，要直接。</li>
-<li>尽量不要辩驳(你证据充分，你业界大佬怼人我没意见)，多做工作，审稿人让做的都要尽量测试&#x2F;计算。实在搞不定的就说我们认同你的观点，然而这个还需要未来大量的工作。</li>
-<li>文章修改的部分要在回复意见中提及，例如，我们修改了那句话，为“xxx”，或者我们重新描述了该问题在linexxx-xxx。我认为前者更好。这样做是为了免得审稿人再去看你的文章。浪费人家时间不说，万一给你整更多问题就哈皮了。</li>
-<li>大修修改文章50%以上，中修30%以上，小修10%左右，显得自己足够认真。话说目前这篇文章已经修改了70%左右了。审稿人意见加回复意见比正文还长。</li>
-<li>一般先回应意见，再提及正文做了那些修改。</li>
-</ol>
-<h2 id="具体"><a href="#具体" class="headerlink" title="具体"></a>具体</h2><ol>
-<li>审稿人称赞：感谢鼓励。</li>
-<li>审稿人疑问：表示自己表述不清，改。</li>
-<li>表示有问题：感谢指出，赞同，承认错误，修改。</li>
-<li>迂回的战术：通过充分考虑觉得审稿人的意见有问题，先肯定在部分情况下审稿人的看法是对的。然而。。。。肯定是自己没有描述清楚。改。</li>
-</ol>
-]]></content>
-      <categories>
-        <category>work</category>
-      </categories>
-      <tags>
-        <tag>paper</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>如何备份hexo</title>
     <url>/how-to-backup-hexo.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>要是换了电脑网站怎么办？那当然是需要备份的了。u盘什么的，网盘什么的也不错。不过搜到大神的<a href="https://notes.doublemine.me/2015-04-06-%E5%A4%87%E4%BB%BDHexo%E5%8D%9A%E5%AE%A2%E6%BA%90%E6%96%87%E4%BB%B6.html">博文</a>介绍说放到githup的repo里面就可以了。于是试了一下，果然可以啊。步骤如下：</p>
@@ -825,6 +794,37 @@
       <tags>
         <tag>web</tag>
         <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何回复审稿人意见？</title>
+    <url>/how-to-reply-to-reviewer.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>SCI文章是否得以发表，生杀大权很大一部分都在peer reviewer手上。文章投出去如果收到了审稿人意见，那么恭喜，机会大大的有。那么如何回复审稿人意见就是关键了。下面是一些要点。</p>
+<span id="more"></span>
+<hr>
+<h2 id="主旨"><a href="#主旨" class="headerlink" title="主旨"></a>主旨</h2><ol start="0">
+<li>给编辑单独回复意见，说改了哪里，改的用什么标出来的。</li>
+<li>对审稿人表示感谢。人家花时间和精力看你的文章，不求回报，指出你的问题和不足让你得到提升让科学进步难道不该感谢?</li>
+<li>认真回复编辑和审稿人的每一条意见&#x2F;疑问&#x2F;陈述，具体就是指每一句话，每一个模糊描述，每一个疑问句。</li>
+<li>作为意见&#x2F;疑问&#x2F;陈述的回应，必要要在正文稿件中有所体现。以表明对审稿人意见的尊重。</li>
+<li>回复的文字量尽量要与审稿人意见差不多，最好更多，但不要重复或者罗嗦，要直接。</li>
+<li>尽量不要辩驳(你证据充分，你业界大佬怼人我没意见)，多做工作，审稿人让做的都要尽量测试&#x2F;计算。实在搞不定的就说我们认同你的观点，然而这个还需要未来大量的工作。</li>
+<li>文章修改的部分要在回复意见中提及，例如，我们修改了那句话，为“xxx”，或者我们重新描述了该问题在linexxx-xxx。我认为前者更好。这样做是为了免得审稿人再去看你的文章。浪费人家时间不说，万一给你整更多问题就哈皮了。</li>
+<li>大修修改文章50%以上，中修30%以上，小修10%左右，显得自己足够认真。话说目前这篇文章已经修改了70%左右了。审稿人意见加回复意见比正文还长。</li>
+<li>一般先回应意见，再提及正文做了那些修改。</li>
+</ol>
+<h2 id="具体"><a href="#具体" class="headerlink" title="具体"></a>具体</h2><ol>
+<li>审稿人称赞：感谢鼓励。</li>
+<li>审稿人疑问：表示自己表述不清，改。</li>
+<li>表示有问题：感谢指出，赞同，承认错误，修改。</li>
+<li>迂回的战术：通过充分考虑觉得审稿人的意见有问题，先肯定在部分情况下审稿人的看法是对的。然而。。。。肯定是自己没有描述清楚。改。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>work</category>
+      </categories>
+      <tags>
+        <tag>paper</tag>
       </tags>
   </entry>
   <entry>
@@ -1338,7 +1338,7 @@
   <entry>
     <title>基于宽频带背景噪声面波的美国三维上地幔横波速度结构模型</title>
     <url>/US-upper-mantle-vs-model.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;利用宽频带的背景噪声面波做了美国三维上地幔横波速度结构，该工作做了x年。我不会告诉你这项工作做了多久，说出来都害sao。文章终于在2018年发表，文章链接在<a href="https://link.springer.com/article/10.1007/s00024-018-1881-2">这里</a>，如果有需要可以找我要全文。<br>&emsp;&emsp;做模型真的是需要大量细致的工作。这篇文章的主要贡献是表明只用背景噪声面波也可以做的比较深，比较准，另外就是为community提供了一个新的模型。怎奈自己的地质背景太差，看不到啥突出的科学问题，还被审稿人批评说，‘你做的啥工作啊，像本科生的作业。’心塞。师兄说的对，应该多向可能对你的工作感兴趣的人请教，例如动力学方向的人啊之类的。<br>&emsp;&emsp;老板建议把这个模型挂在<a href="https://ds.iris.edu/ds/products/emc-earthmodels/">IRIS EMC</a>里头，推广推广，让大伙儿都用用。我觉得不错，于是今天终于把它放到了IRIS里面。点击<a href="https://ds.iris.edu/ds/products/emc-us-upper-mantle-vsxiechuyang2018/">这里</a>就可以看到我的模型了。里面有netcdf格式的数据可以下载。如果有需要可以找我要更细致的结果。<br>&emsp;&emsp;IRIS EMC需要的是netcdf格式的模型数据。IRIS有提供把txt文本格式的模型转换成netcdf的<a href="https://github.com/iris-edu/emc-tools">python脚本</a>。另外向IRIS EMC提交模型的要求也可以这他们的<a href="https://ds.iris.edu/ds/products/emc-contributionguide/">网页</a>看到，按照他们的要求把netcdf文件准备好，然后写一个说明文档一并发送给<a href="mailto:&#x70;&#114;&#x6f;&#100;&#x75;&#99;&#x74;&#64;&#105;&#114;&#x69;&#115;&#x2e;&#119;&#97;&#115;&#104;&#x69;&#110;&#103;&#116;&#111;&#x6e;&#46;&#x65;&#x64;&#x75;">&#x70;&#114;&#x6f;&#100;&#x75;&#99;&#x74;&#64;&#105;&#114;&#x69;&#115;&#x2e;&#119;&#97;&#115;&#104;&#x69;&#110;&#103;&#116;&#111;&#x6e;&#46;&#x65;&#x64;&#x75;</a>就完事了。<br>&emsp;&emsp;netcdf是2进制文件。要查看其头段信息的话可以用命令ncdump -h xxx.nc（安装netcdf-bin），要读取其参数信息可以用命令ncks（安装nco）。其实IRIS EMC也提供了将netcdf转换成txt文本的<a href="https://github.com/iris-edu/emc-tools">python脚本</a>，非常方便。<br>&emsp;&emsp;求合作啊。我擅长处理数据，要是您能看到啥地学科学问题那真是求之不得啊。笑cry。</p>]]></content>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;利用宽频带的背景噪声面波做了美国三维上地幔横波速度结构，该工作做了x年。我不会告诉你这项工作做了多久，说出来都害sao。文章终于在2018年发表，文章链接在<a href="https://link.springer.com/article/10.1007/s00024-018-1881-2">这里</a>，如果有需要可以找我要全文。<br>&emsp;&emsp;做模型真的是需要大量细致的工作。这篇文章的主要贡献是表明只用背景噪声面波也可以做的比较深，比较准，另外就是为community提供了一个新的模型。怎奈自己的地质背景太差，看不到啥突出的科学问题，还被审稿人批评说，‘你做的啥工作啊，像本科生的作业。’心塞。师兄说的对，应该多向可能对你的工作感兴趣的人请教，例如动力学方向的人啊之类的。<br>&emsp;&emsp;老板建议把这个模型挂在<a href="https://ds.iris.edu/ds/products/emc-earthmodels/">IRIS EMC</a>里头，推广推广，让大伙儿都用用。我觉得不错，于是今天终于把它放到了IRIS里面。点击<a href="https://ds.iris.edu/ds/products/emc-us-upper-mantle-vsxiechuyang2018/">这里</a>就可以看到我的模型了。里面有netcdf格式的数据可以下载。如果有需要可以找我要更细致的结果。<br>&emsp;&emsp;IRIS EMC需要的是netcdf格式的模型数据。IRIS有提供把txt文本格式的模型转换成netcdf的<a href="https://github.com/iris-edu/emc-tools">python脚本</a>。另外向IRIS EMC提交模型的要求也可以这他们的<a href="https://ds.iris.edu/ds/products/emc-contributionguide/">网页</a>看到，按照他们的要求把netcdf文件准备好，然后写一个说明文档一并发送给<a href="mailto:&#112;&#x72;&#111;&#x64;&#x75;&#99;&#x74;&#64;&#105;&#114;&#x69;&#115;&#x2e;&#119;&#x61;&#x73;&#104;&#105;&#x6e;&#x67;&#116;&#111;&#110;&#46;&#x65;&#100;&#x75;">&#112;&#x72;&#111;&#x64;&#x75;&#99;&#x74;&#64;&#105;&#114;&#x69;&#115;&#x2e;&#119;&#x61;&#x73;&#104;&#105;&#x6e;&#x67;&#116;&#111;&#110;&#46;&#x65;&#100;&#x75;</a>就完事了。<br>&emsp;&emsp;netcdf是2进制文件。要查看其头段信息的话可以用命令ncdump -h xxx.nc（安装netcdf-bin），要读取其参数信息可以用命令ncks（安装nco）。其实IRIS EMC也提供了将netcdf转换成txt文本的<a href="https://github.com/iris-edu/emc-tools">python脚本</a>，非常方便。<br>&emsp;&emsp;求合作啊。我擅长处理数据，要是您能看到啥地学科学问题那真是求之不得啊。笑cry。</p>]]></content>
       <categories>
         <category>work</category>
       </categories>
