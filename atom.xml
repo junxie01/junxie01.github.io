@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2024-05-28T05:46:13.529Z</updated>
+  <updated>2024-05-28T06:12:57.613Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,21 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>测试</title>
+    <link href="http://www.seis-jun.xyz/%E9%AA%82%E4%BA%BA"/>
+    <id>http://www.seis-jun.xyz/%E9%AA%82%E4%BA%BA</id>
+    <published>2024-05-28T06:11:59.000Z</published>
+    <updated>2024-05-28T06:12:57.613Z</updated>
+    
+    
+    <summary type="html">Here&#39;s something encrypted, password is required to continue reading.</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>如何学习</title>
@@ -399,25 +414,6 @@
     
     
     <category term="model" scheme="http://www.seis-jun.xyz/tags/model/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>稍稍盘点地幔过渡带研究进展</title>
-    <link href="http://www.seis-jun.xyz/mantle-transition-zone"/>
-    <id>http://www.seis-jun.xyz/mantle-transition-zone</id>
-    <published>2020-07-21T15:04:45.000Z</published>
-    <updated>2024-05-26T14:17:36.846Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/.xyz//Picture1.png&quot; alt=&quot;地幔过渡带&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
-    
-    
-    <category term="过渡带" scheme="http://www.seis-jun.xyz/tags/%E8%BF%87%E6%B8%A1%E5%B8%A6/"/>
     
   </entry>
   
