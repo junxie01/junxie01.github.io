@@ -1338,7 +1338,7 @@
   <entry>
     <title>基于宽频带背景噪声面波的美国三维上地幔横波速度结构模型</title>
     <url>/US-upper-mantle-vs-model.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;利用宽频带的背景噪声面波做了美国三维上地幔横波速度结构，该工作做了x年。我不会告诉你这项工作做了多久，说出来都害sao。文章终于在2018年发表，文章链接在<a href="https://link.springer.com/article/10.1007/s00024-018-1881-2">这里</a>，如果有需要可以找我要全文。<br>&emsp;&emsp;做模型真的是需要大量细致的工作。这篇文章的主要贡献是表明只用背景噪声面波也可以做的比较深，比较准，另外就是为community提供了一个新的模型。怎奈自己的地质背景太差，看不到啥突出的科学问题，还被审稿人批评说，‘你做的啥工作啊，像本科生的作业。’心塞。师兄说的对，应该多向可能对你的工作感兴趣的人请教，例如动力学方向的人啊之类的。<br>&emsp;&emsp;老板建议把这个模型挂在<a href="https://ds.iris.edu/ds/products/emc-earthmodels/">IRIS EMC</a>里头，推广推广，让大伙儿都用用。我觉得不错，于是今天终于把它放到了IRIS里面。点击<a href="https://ds.iris.edu/ds/products/emc-us-upper-mantle-vsxiechuyang2018/">这里</a>就可以看到我的模型了。里面有netcdf格式的数据可以下载。如果有需要可以找我要更细致的结果。<br>&emsp;&emsp;IRIS EMC需要的是netcdf格式的模型数据。IRIS有提供把txt文本格式的模型转换成netcdf的<a href="https://github.com/iris-edu/emc-tools">python脚本</a>。另外向IRIS EMC提交模型的要求也可以这他们的<a href="https://ds.iris.edu/ds/products/emc-contributionguide/">网页</a>看到，按照他们的要求把netcdf文件准备好，然后写一个说明文档一并发送给<a href="mailto:&#112;&#x72;&#111;&#x64;&#117;&#99;&#116;&#x40;&#x69;&#x72;&#x69;&#x73;&#x2e;&#x77;&#x61;&#x73;&#x68;&#x69;&#x6e;&#103;&#x74;&#111;&#x6e;&#46;&#101;&#100;&#x75;">&#112;&#x72;&#111;&#x64;&#117;&#99;&#116;&#x40;&#x69;&#x72;&#x69;&#x73;&#x2e;&#x77;&#x61;&#x73;&#x68;&#x69;&#x6e;&#103;&#x74;&#111;&#x6e;&#46;&#101;&#100;&#x75;</a>就完事了。<br>&emsp;&emsp;netcdf是2进制文件。要查看其头段信息的话可以用命令ncdump -h xxx.nc（安装netcdf-bin），要读取其参数信息可以用命令ncks（安装nco）。其实IRIS EMC也提供了将netcdf转换成txt文本的<a href="https://github.com/iris-edu/emc-tools">python脚本</a>，非常方便。<br>&emsp;&emsp;求合作啊。我擅长处理数据，要是您能看到啥地学科学问题那真是求之不得啊。笑cry。</p>]]></content>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;利用宽频带的背景噪声面波做了美国三维上地幔横波速度结构，该工作做了x年。我不会告诉你这项工作做了多久，说出来都害sao。文章终于在2018年发表，文章链接在<a href="https://link.springer.com/article/10.1007/s00024-018-1881-2">这里</a>，如果有需要可以找我要全文。<br>&emsp;&emsp;做模型真的是需要大量细致的工作。这篇文章的主要贡献是表明只用背景噪声面波也可以做的比较深，比较准，另外就是为community提供了一个新的模型。怎奈自己的地质背景太差，看不到啥突出的科学问题，还被审稿人批评说，‘你做的啥工作啊，像本科生的作业。’心塞。师兄说的对，应该多向可能对你的工作感兴趣的人请教，例如动力学方向的人啊之类的。<br>&emsp;&emsp;老板建议把这个模型挂在<a href="https://ds.iris.edu/ds/products/emc-earthmodels/">IRIS EMC</a>里头，推广推广，让大伙儿都用用。我觉得不错，于是今天终于把它放到了IRIS里面。点击<a href="https://ds.iris.edu/ds/products/emc-us-upper-mantle-vsxiechuyang2018/">这里</a>就可以看到我的模型了。里面有netcdf格式的数据可以下载。如果有需要可以找我要更细致的结果。<br>&emsp;&emsp;IRIS EMC需要的是netcdf格式的模型数据。IRIS有提供把txt文本格式的模型转换成netcdf的<a href="https://github.com/iris-edu/emc-tools">python脚本</a>。另外向IRIS EMC提交模型的要求也可以这他们的<a href="https://ds.iris.edu/ds/products/emc-contributionguide/">网页</a>看到，按照他们的要求把netcdf文件准备好，然后写一个说明文档一并发送给<a href="mailto:&#x70;&#x72;&#111;&#100;&#117;&#99;&#x74;&#64;&#x69;&#x72;&#x69;&#115;&#x2e;&#119;&#x61;&#115;&#x68;&#105;&#x6e;&#103;&#x74;&#x6f;&#x6e;&#x2e;&#101;&#x64;&#117;">&#x70;&#x72;&#111;&#100;&#117;&#99;&#x74;&#64;&#x69;&#x72;&#x69;&#115;&#x2e;&#119;&#x61;&#115;&#x68;&#105;&#x6e;&#103;&#x74;&#x6f;&#x6e;&#x2e;&#101;&#x64;&#117;</a>就完事了。<br>&emsp;&emsp;netcdf是2进制文件。要查看其头段信息的话可以用命令ncdump -h xxx.nc（安装netcdf-bin），要读取其参数信息可以用命令ncks（安装nco）。其实IRIS EMC也提供了将netcdf转换成txt文本的<a href="https://github.com/iris-edu/emc-tools">python脚本</a>，非常方便。<br>&emsp;&emsp;求合作啊。我擅长处理数据，要是您能看到啥地学科学问题那真是求之不得啊。笑cry。</p>]]></content>
       <categories>
         <category>work</category>
       </categories>
@@ -1641,8 +1641,8 @@
   <entry>
     <title>如何学习</title>
     <url>/how-to-pretend-you-know.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>转自<a href="https://kenengba.com/post/3721.html">可能吧</a><br>可能吧讲的是如何让人觉得你都懂，感觉有点问不对题。内容更偏向于如何学习。方法很多，重在实践。</p>
-<h2 id="放过自己"><a href="#放过自己" class="headerlink" title="放过自己"></a>放过自己</h2><p>知识进入大脑分为以下几种：</p>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>转自<a href="https://kenengba.com/post/3721.html">可能吧</a><br>可能吧讲的是如何让人觉得你都懂，感觉有点文不对题。内容更偏向于如何学习。其实学习方法很多，但重在实践。</p>
+<h1 id="放过自己"><a href="#放过自己" class="headerlink" title="放过自己"></a>放过自己</h1><p>知识进入大脑分为以下几种：</p>
 <ol>
 <li>听过：有点印象</li>
 <li>知道：对每一个环节比较熟悉，能回答相关问题</li>
@@ -1650,15 +1650,15 @@
 <li>用到：抽象出规律，在生活中使用<br>大多数情况、大多数东西都只在第一层，然而我们却想234。这是不现实的，强求也会痛苦。</li>
 </ol>
 <p>其实没有必要。我们没有必要知道所有事情。没必要也指在阅读和学习时没有必要强迫自己读完学完。同时也意味着你没必要把朋友圈、订阅号等等的文章全部看完。少知道一些东西你并不会损失什么。把这些时间留给234。</p>
-<h2 id="在二手知识上做探索"><a href="#在二手知识上做探索" class="headerlink" title="在二手知识上做探索"></a>在二手知识上做探索</h2><p>我们是站在巨人肩上生活的，或者至少也是站在强人身上。我们在“放过自己”以后就会去探索自己喜欢的事情了。那怎么办？去“请教”，去检索，例如google，wiki。通过一层层探索，我们就能把一个知识从“听过”变成知道。然后才有可能变成“得到”。然而还不够。</p>
-<h2 id="梳理才能得到"><a href="#梳理才能得到" class="headerlink" title="梳理才能得到"></a>梳理才能得到</h2><p>只探索，不梳理并没有“得到”。需要思考、总结，总结出一些规律。整理是学习过程最重要的一环。整理因果，然后自己写出摘要，才是”得到“。</p>
-<h2 id="说出来"><a href="#说出来" class="headerlink" title="说出来"></a>说出来</h2><p>一个知识点牵涉的点非常之多，我们难以全部掌握。如何知道自己的不足？两个方法：</p>
+<h1 id="在二手知识上做探索"><a href="#在二手知识上做探索" class="headerlink" title="在二手知识上做探索"></a>在二手知识上做探索</h1><p>我们是站在巨人肩上生活的，或者至少也是站在强人身上。我们在“放过自己”以后就会去探索自己喜欢的事情了。那怎么办？去“请教”，去检索，例如google，wiki。通过一层层探索，我们就能把一个知识从“听过”变成知道。然后才有可能变成“得到”。然而还不够。</p>
+<h1 id="梳理才能得到"><a href="#梳理才能得到" class="headerlink" title="梳理才能得到"></a>梳理才能得到</h1><p>只探索，不梳理并没有“得到”。需要思考、总结，总结出一些规律。整理是学习过程最重要的一环。整理因果，然后自己写出摘要，才是”得到“。</p>
+<h1 id="说出来"><a href="#说出来" class="headerlink" title="说出来"></a>说出来</h1><p>一个知识点牵涉的点非常之多，我们难以全部掌握。如何知道自己的不足？两个方法：</p>
 <ol>
 <li>给别人讲一遍</li>
 <li>写一篇公众号</li>
 </ol>
 <p>获得了一些知识再讲给别人会获得成就和虚荣，另一方面能快速找到自己的知识漏洞。在给别人讲述过程，如果对方好奇就一定会问一些细节。对于你不懂的一般会被问到，或者至少你在讲的时候会心虚。这是很好的去完善自己的机会。不懂的记下来，然后再去检索，梳理。写公众号也是如此。</p>
-<h2 id="不做笔记可能因为焦虑"><a href="#不做笔记可能因为焦虑" class="headerlink" title="不做笔记可能因为焦虑"></a>不做笔记可能因为焦虑</h2><p>学习有时有点反人性，一般要克服懒惰。然而懒惰有时就是“放过自己”，特别是对于没有必要的事情。学习应该是一件好奇心驱使的事情，把精力放在自己好奇的事情上努力探索才能得到知识。</p>
+<h1 id="不做笔记可能因为焦虑"><a href="#不做笔记可能因为焦虑" class="headerlink" title="不做笔记可能因为焦虑"></a>不做笔记可能因为焦虑</h1><p>学习有时有点反人性，一般要克服懒惰。然而懒惰有时就是“放过自己”，特别是对于没有必要的事情。学习应该是一件好奇心驱使的事情，把精力放在自己好奇的事情上努力探索才能得到知识。</p>
 ]]></content>
       <tags>
         <tag>学习</tag>
