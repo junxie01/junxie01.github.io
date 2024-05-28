@@ -596,6 +596,15 @@
   </url>
   
   <url>
+    <loc>http://www.seis-jun.xyz/how-to-reply-to-reviewer</loc>
+    
+    <lastmod>2024-05-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://www.seis-jun.xyz/how-to-backup-hexo</loc>
     
     <lastmod>2024-05-26</lastmod>
@@ -606,15 +615,6 @@
   
   <url>
     <loc>http://www.seis-jun.xyz/passwd-free-for-deployment</loc>
-    
-    <lastmod>2024-05-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.seis-jun.xyz/how-to-reply-to-reviewer</loc>
     
     <lastmod>2024-05-26</lastmod>
     
@@ -984,14 +984,14 @@
   </url>
   
   <url>
-    <loc>http://www.seis-jun.xyz/tags/hexo/</loc>
+    <loc>http://www.seis-jun.xyz/tags/paper/</loc>
     <lastmod>2024-05-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.seis-jun.xyz/tags/paper/</loc>
+    <loc>http://www.seis-jun.xyz/tags/hexo/</loc>
     <lastmod>2024-05-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
