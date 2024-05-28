@@ -233,20 +233,6 @@
       <span class="post-meta-item-text">阅读次数：</span>
       <span id="busuanzi_value_page_pv"></span>
     </span>
-  
-  <span class="post-meta-item">
-    
-    <span class="post-meta-item-icon">
-      <i class="far fa-comment"></i>
-    </span>
-    <span class="post-meta-item-text">Valine：</span>
-  
-    <a title="valine" href="/funny-thing-about-Eric#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/funny-thing-about-Eric" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
     <span class="post-meta-break"></span>
     <span class="post-meta-item" title="本文字数">
       <span class="post-meta-item-icon">
@@ -360,7 +346,7 @@
 
 
 
-    <div class="comments" id="valine-comments"></div>
+    <div class="comments utterances-container"></div>
 </div>
   </main>
 
@@ -453,21 +439,8 @@
 
 
 
-
-
-<script class="next-config" data-name="valine" type="application/json">{"enable":true,"appId":"BRVsVhsWTeJt73DwzSk2P8gx-gzGzoHsz","appKey":"FoJEkwsSPDRaMi43E4BcobBq","serverURLs":"https://brvsvhsw.api.lncldglobal.com","placeholder":"What do you think?","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":false,"comment_count":true,"recordIP":false,"enableQQ":false,"requiredFields":[],"notify":false,"verify":false,"guest_info":"nick,mail,link","language":null,"el":"#valine-comments","path":"/funny-thing-about-Eric"}</script>
-<script>
-document.addEventListener('page:loaded', () => {
-  NexT.utils.loadComments(CONFIG.valine.el)
-    .then(() => NexT.utils.getScript(
-      'https://fastly.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js',
-      { condition: window.Valine }
-    ))
-    .then(() => {
-      new Valine(CONFIG.valine);
-    });
-});
-</script>
+<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"junxie01/utt","issue_term":"pathname","theme":"github-light"}</script>
+<script src="/js/third-party/comments/utterances.js"></script>
 
 </body>
 </html>

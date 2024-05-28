@@ -1244,7 +1244,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #304011;
+    background: #ff3c4f;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2383,6 +2383,9 @@ ul.breadcrumb li:last-child {
 .tag-cloud-10 {
   border-bottom-color: #111;
   color: #111;
+}
+.utterances {
+  max-width: unset;
 }
 .use-motion .animated {
   animation-fill-mode: none;
