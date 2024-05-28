@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2024-05-28T07:29:11.794Z</updated>
+  <updated>2024-05-28T11:32:11.070Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo next 使用utterances评论</title>
+    <link href="http://www.seis-jun.xyz/how-to-use-utterances"/>
+    <id>http://www.seis-jun.xyz/how-to-use-utterances</id>
+    <published>2024-05-28T11:25:39.000Z</published>
+    <updated>2024-05-28T11:32:11.070Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;之前next里用的是valine评论区，谁知这次怎么弄都配置不上，搜索之下发现新版next已经不支持valine了。好像是因为其安全问题。因此我准备用utterances。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
+    
+  </entry>
   
   <entry>
     <title>hexo如何给文章加框</title>
@@ -373,27 +390,6 @@
     
     
     <category term="video" scheme="http://www.seis-jun.xyz/tags/video/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>怎么计算理论的NCF？</title>
-    <link href="http://www.seis-jun.xyz/how-to-calculate-synthetic-NCF"/>
-    <id>http://www.seis-jun.xyz/how-to-calculate-synthetic-NCF</id>
-    <published>2020-09-14T07:55:31.000Z</published>
-    <updated>2024-05-26T14:17:36.847Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/source_dis.png&quot; alt=&quot;Distribution of ambient noise sources (100-300 s) (Ermert et al., 2017 )&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
-    
-    
-    <category term="sem" scheme="http://www.seis-jun.xyz/tags/sem/"/>
-    
-    <category term="NCF" scheme="http://www.seis-jun.xyz/tags/NCF/"/>
     
   </entry>
   
