@@ -102,11 +102,11 @@
   </entry>
   
   <entry>
-    <title>optimize_daily_task</title>
+    <title>任务管理</title>
     <link href="http://www.seis-jun.xyz/optimize-daily-task"/>
     <id>http://www.seis-jun.xyz/optimize-daily-task</id>
     <published>2024-05-27T12:29:06.000Z</published>
-    <updated>2024-05-27T13:01:35.670Z</updated>
+    <updated>2024-05-28T06:37:23.090Z</updated>
     
     
       
@@ -119,6 +119,8 @@
     
     
     
+    
+    <category term="学习" scheme="http://www.seis-jun.xyz/tags/%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
