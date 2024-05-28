@@ -106,24 +106,6 @@
       </tags>
   </entry>
   <entry>
-    <title>星期五</title>
-    <url>/%E6%98%9F%E6%9C%9F%E4%BA%94.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;好久没有坐过电梯了，今天，腿实在疼的不行了，所以还是坐电梯了。</p>
-<p>&emsp;&emsp;地毯上写着星期五。</p>
-<p>&emsp;&emsp;看到星期五就想到了：鲁宾逊漂流记，黑色星期五，今晚有电影，今晚12点才熄灯，今晚算是周末的开始了，今晚会玩游戏，会玩到很晚，今天是十五，月亮很圆，今天是小姑的生日。</p>
-<p>&emsp;&emsp;不过最重要的是：快要毕业了。</p>
-<p>&emsp;&emsp;可是似乎我还有好多大学应该做的事没有做：谈恋爱，在网吧包夜打游戏，找份兼职做，打打架……</p>
-<p>&emsp;&emsp;前天健身了，很累，晚上感冒了，现在全身都没有力，感觉好没有动力和意义。忽然又想起刚才和老妈打电话。我提到了跳楼的家伙，老妈火了，说道，傻帽，人生这么美好，跳楼？是不是那根筋搭错了？</p>
-<p>&emsp;&emsp;对啊，接着玩，玩到有力气为止</p>
-]]></content>
-      <categories>
-        <category>某日记</category>
-      </categories>
-      <tags>
-        <tag>杂</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>The City of Life and Death</title>
     <url>/the-city-of-life-and-death.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;13日看的《南京！南京》，不知道为什么把南京的名字叫两遍，可能是因为历史的厚重，提到南京就令人想起令人悲痛的往事，1937年12月13日，南京沦陷。</p>
@@ -143,6 +125,24 @@
       </categories>
       <tags>
         <tag>电影</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>星期五</title>
+    <url>/%E6%98%9F%E6%9C%9F%E4%BA%94.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;好久没有坐过电梯了，今天，腿实在疼的不行了，所以还是坐电梯了。</p>
+<p>&emsp;&emsp;地毯上写着星期五。</p>
+<p>&emsp;&emsp;看到星期五就想到了：鲁宾逊漂流记，黑色星期五，今晚有电影，今晚12点才熄灯，今晚算是周末的开始了，今晚会玩游戏，会玩到很晚，今天是十五，月亮很圆，今天是小姑的生日。</p>
+<p>&emsp;&emsp;不过最重要的是：快要毕业了。</p>
+<p>&emsp;&emsp;可是似乎我还有好多大学应该做的事没有做：谈恋爱，在网吧包夜打游戏，找份兼职做，打打架……</p>
+<p>&emsp;&emsp;前天健身了，很累，晚上感冒了，现在全身都没有力，感觉好没有动力和意义。忽然又想起刚才和老妈打电话。我提到了跳楼的家伙，老妈火了，说道，傻帽，人生这么美好，跳楼？是不是那根筋搭错了？</p>
+<p>&emsp;&emsp;对啊，接着玩，玩到有力气为止</p>
+]]></content>
+      <categories>
+        <category>某日记</category>
+      </categories>
+      <tags>
+        <tag>杂</tag>
       </tags>
   </entry>
   <entry>
@@ -1338,7 +1338,7 @@
   <entry>
     <title>基于宽频带背景噪声面波的美国三维上地幔横波速度结构模型</title>
     <url>/US-upper-mantle-vs-model.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;利用宽频带的背景噪声面波做了美国三维上地幔横波速度结构，该工作做了x年。我不会告诉你这项工作做了多久，说出来都害sao。文章终于在2018年发表，文章链接在<a href="https://link.springer.com/article/10.1007/s00024-018-1881-2">这里</a>，如果有需要可以找我要全文。<br>&emsp;&emsp;做模型真的是需要大量细致的工作。这篇文章的主要贡献是表明只用背景噪声面波也可以做的比较深，比较准，另外就是为community提供了一个新的模型。怎奈自己的地质背景太差，看不到啥突出的科学问题，还被审稿人批评说，‘你做的啥工作啊，像本科生的作业。’心塞。师兄说的对，应该多向可能对你的工作感兴趣的人请教，例如动力学方向的人啊之类的。<br>&emsp;&emsp;老板建议把这个模型挂在<a href="https://ds.iris.edu/ds/products/emc-earthmodels/">IRIS EMC</a>里头，推广推广，让大伙儿都用用。我觉得不错，于是今天终于把它放到了IRIS里面。点击<a href="https://ds.iris.edu/ds/products/emc-us-upper-mantle-vsxiechuyang2018/">这里</a>就可以看到我的模型了。里面有netcdf格式的数据可以下载。如果有需要可以找我要更细致的结果。<br>&emsp;&emsp;IRIS EMC需要的是netcdf格式的模型数据。IRIS有提供把txt文本格式的模型转换成netcdf的<a href="https://github.com/iris-edu/emc-tools">python脚本</a>。另外向IRIS EMC提交模型的要求也可以这他们的<a href="https://ds.iris.edu/ds/products/emc-contributionguide/">网页</a>看到，按照他们的要求把netcdf文件准备好，然后写一个说明文档一并发送给<a href="mailto:&#112;&#114;&#111;&#100;&#117;&#x63;&#x74;&#64;&#105;&#x72;&#x69;&#115;&#46;&#119;&#97;&#115;&#x68;&#x69;&#x6e;&#103;&#116;&#x6f;&#x6e;&#x2e;&#101;&#100;&#x75;">&#112;&#114;&#111;&#100;&#117;&#x63;&#x74;&#64;&#105;&#x72;&#x69;&#115;&#46;&#119;&#97;&#115;&#x68;&#x69;&#x6e;&#103;&#116;&#x6f;&#x6e;&#x2e;&#101;&#100;&#x75;</a>就完事了。<br>&emsp;&emsp;netcdf是2进制文件。要查看其头段信息的话可以用命令ncdump -h xxx.nc（安装netcdf-bin），要读取其参数信息可以用命令ncks（安装nco）。其实IRIS EMC也提供了将netcdf转换成txt文本的<a href="https://github.com/iris-edu/emc-tools">python脚本</a>，非常方便。<br>&emsp;&emsp;求合作啊。我擅长处理数据，要是您能看到啥地学科学问题那真是求之不得啊。笑cry。</p>]]></content>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;利用宽频带的背景噪声面波做了美国三维上地幔横波速度结构，该工作做了x年。我不会告诉你这项工作做了多久，说出来都害sao。文章终于在2018年发表，文章链接在<a href="https://link.springer.com/article/10.1007/s00024-018-1881-2">这里</a>，如果有需要可以找我要全文。<br>&emsp;&emsp;做模型真的是需要大量细致的工作。这篇文章的主要贡献是表明只用背景噪声面波也可以做的比较深，比较准，另外就是为community提供了一个新的模型。怎奈自己的地质背景太差，看不到啥突出的科学问题，还被审稿人批评说，‘你做的啥工作啊，像本科生的作业。’心塞。师兄说的对，应该多向可能对你的工作感兴趣的人请教，例如动力学方向的人啊之类的。<br>&emsp;&emsp;老板建议把这个模型挂在<a href="https://ds.iris.edu/ds/products/emc-earthmodels/">IRIS EMC</a>里头，推广推广，让大伙儿都用用。我觉得不错，于是今天终于把它放到了IRIS里面。点击<a href="https://ds.iris.edu/ds/products/emc-us-upper-mantle-vsxiechuyang2018/">这里</a>就可以看到我的模型了。里面有netcdf格式的数据可以下载。如果有需要可以找我要更细致的结果。<br>&emsp;&emsp;IRIS EMC需要的是netcdf格式的模型数据。IRIS有提供把txt文本格式的模型转换成netcdf的<a href="https://github.com/iris-edu/emc-tools">python脚本</a>。另外向IRIS EMC提交模型的要求也可以这他们的<a href="https://ds.iris.edu/ds/products/emc-contributionguide/">网页</a>看到，按照他们的要求把netcdf文件准备好，然后写一个说明文档一并发送给<a href="mailto:&#112;&#x72;&#x6f;&#x64;&#117;&#99;&#x74;&#64;&#x69;&#114;&#105;&#x73;&#x2e;&#119;&#x61;&#115;&#104;&#x69;&#x6e;&#103;&#x74;&#111;&#110;&#46;&#101;&#x64;&#117;">&#112;&#x72;&#x6f;&#x64;&#117;&#99;&#x74;&#64;&#x69;&#114;&#105;&#x73;&#x2e;&#119;&#x61;&#115;&#104;&#x69;&#x6e;&#103;&#x74;&#111;&#110;&#46;&#101;&#x64;&#117;</a>就完事了。<br>&emsp;&emsp;netcdf是2进制文件。要查看其头段信息的话可以用命令ncdump -h xxx.nc（安装netcdf-bin），要读取其参数信息可以用命令ncks（安装nco）。其实IRIS EMC也提供了将netcdf转换成txt文本的<a href="https://github.com/iris-edu/emc-tools">python脚本</a>，非常方便。<br>&emsp;&emsp;求合作啊。我擅长处理数据，要是您能看到啥地学科学问题那真是求之不得啊。笑cry。</p>]]></content>
       <categories>
         <category>work</category>
       </categories>
@@ -1656,16 +1656,14 @@
   <entry>
     <title>hexo 如何给文章设密码</title>
     <url>/how-to-encrypt.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>有些文章写了，但不想要给别人看，那就设一个密码。</p>
-<h1 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h1><p>命令：</p>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h1><p>命令：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-blog-encrypt</span><br></pre></td></tr></table></figure>
 <h1 id="修改配置"><a href="#修改配置" class="headerlink" title="修改配置"></a>修改配置</h1><p>在本目录配置文件_config.yml加入：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">encrypt:</span><br><span class="line">   enable: true</span><br></pre></td></tr></table></figure>
 <h1 id="博客文章加密"><a href="#博客文章加密" class="headerlink" title="博客文章加密"></a>博客文章加密</h1><p>写新的文章时加入：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">password: xxxxx</span><br><span class="line">message: 输入密码的提示。</span><br></pre></td></tr></table></figure>
 <p>高级设置：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">password: xxxx</span><br><span class="line">abstract: here is something encrypted</span><br><span class="line">message: 请输入密码。</span><br><span class="line">wrong_pass_message: Oh, wrong password, please try again.</span><br></pre></td></tr></table></figure>
-]]></content>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">password: xxxx</span><br><span class="line">abstract: here is something encrypted</span><br><span class="line">message: 请输入密码。</span><br><span class="line">wrong_pass_message: Oh, wrong password, please try again.</span><br></pre></td></tr></table></figure>]]></content>
       <tags>
         <tag>-- web</tag>
       </tags>
