@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>寂寞</title>
-    <url>/%E5%AF%82%E5%AF%9E.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;一只小鼠死了,我很伤心.当听知他的死时,我差点落泪,但是泪水只在眼里转了一转,并没有流下来.我不懂我是怎么了?难到我的良心已在这浊世当中损失殆尽？还是我堕落了？</p>
-]]></content>
-      <categories>
-        <category>某日记</category>
-      </categories>
-      <tags>
-        <tag>这是啥</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>阿甘</title>
     <url>/%E9%98%BF%E7%94%98.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;记得第一次看阿甘正传时，我流泪了！</p>
@@ -31,6 +19,18 @@
       </categories>
       <tags>
         <tag>阿甘</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>寂寞</title>
+    <url>/%E5%AF%82%E5%AF%9E.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;一只小鼠死了,我很伤心.当听知他的死时,我差点落泪,但是泪水只在眼里转了一转,并没有流下来.我不懂我是怎么了?难到我的良心已在这浊世当中损失殆尽？还是我堕落了？</p>
+]]></content>
+      <categories>
+        <category>某日记</category>
+      </categories>
+      <tags>
+        <tag>这是啥</tag>
       </tags>
   </entry>
   <entry>
@@ -832,7 +832,7 @@
     <url>/reward-configuration.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>厚颜无耻的开始想要打赏。如何配置打赏呢？原来next是有打赏的选项字段的。直接修改主题配置文件如下：</p>
 <span id="more"></span>
-<p><img src="/.xyz//donate.png" alt="打赏字段"><br>然后把微信和支付宝的二维码图片放在&#x2F;themes&#x2F;next&#x2F;source&#x2F;images中。然后就大功告成了。</p>
+<p><img src="/donate.png" alt="打赏字段"><br>然后把微信和支付宝的二维码图片放在&#x2F;themes&#x2F;next&#x2F;source&#x2F;images中。然后就大功告成了。</p>
 ]]></content>
       <categories>
         <category>web</category>
@@ -1147,7 +1147,7 @@
     <url>/stop-os-update.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;我的HP笔记本上的Linux系统安装的是Elementary OS。这是个基于Ubuntu的注重界面美观的系统。是挺漂亮的，但几乎每天那个引用中心都会跳出来，帮我检查更新。</p>
 <span id="more"></span>
-<p><img src="/.xyz//app.png" alt="应用中心"><br>&emsp;&emsp;这很烦人，尤其是还有出错，不能忍。所以必须让它停止自己更新啊。解决办法是这样。在文件&#x2F;etc&#x2F;apt&#x2F;apt.conf.d&#x2F;10periodic中将第一行的1改为0，成这样：</p>
+<p><img src="/app.png" alt="应用中心"><br>&emsp;&emsp;这很烦人，尤其是还有出错，不能忍。所以必须让它停止自己更新啊。解决办法是这样。在文件&#x2F;etc&#x2F;apt&#x2F;apt.conf.d&#x2F;10periodic中将第一行的1改为0，成这样：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">APT::Periodic::Update-Package-Lists &quot;0&quot;;</span><br><span class="line">APT::Periodic::Download-Upgradeable-Packages &quot;0&quot;;</span><br><span class="line">APT::Periodic::AutocleanInterval &quot;0&quot;;</span><br></pre></td></tr></table></figure>
 <p>0表示false，自然就不帮您自动更新了。</p>
 ]]></content>
@@ -1171,7 +1171,7 @@
 <p>&emsp;&emsp;在themes&#x2F;next&#x2F;source&#x2F;css&#x2F;_common&#x2F;components&#x2F;post&#x2F;post.styl中找到.post-block<br>然后改成这个样子：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">if xxxxx</span><br><span class="line">.post-block &#123;</span><br><span class="line">  opacity: 0;</span><br><span class="line">  margin-top: 60px;</span><br><span class="line">  margin-bottom: 60px;</span><br><span class="line">  padding: 25px;</span><br><span class="line">  -webkit-box-shadow: 0 0 5px rgba(202, 203, 203, .5);</span><br><span class="line">  -moz-box-shadow: 0 0 5px rgba(202, 203, 204, .5);</span><br><span class="line"> &#125;</span><br><span class="line"> .pgaination, xxxx</span><br></pre></td></tr></table></figure>
 <p>&emsp;&emsp;谁知我用的是copy，也没仔细看那个神仙的脚本里面可能估计将post-block中的短横线敲作了下划线。我拷贝过来试了，没用。一度以为这个边框是永远加不上了。谁知今天鬼使神差的对比了一下神仙贴出的图，发现了问题。于是改了过来，结果就可以了。我估计神仙是故意打错了，让我们这些小白出错了长记性。只可惜自己不懂css啊，懂的话就没那么麻烦了。</p>
-<p><img src="/.xyz//frame.png" alt="边框"></p>
+<p><img src="/frame.png" alt="边框"></p>
 <p>&emsp;&emsp;这个边框效果还凑合吧。</p>
 ]]></content>
       <categories>
@@ -1266,10 +1266,10 @@
   <entry>
     <title>gmt画时间轴</title>
     <url>/gmt-time-axes.html</url>
-    <content><![CDATA[<p>&emsp;&emsp;有些时候画图需要用到时间轴。gmt<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="gmt版本为5.4.3，运行系统为ElmentaryOS 4.15.0-107-generic.
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;有些时候画图需要用到时间轴。gmt<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="gmt版本为5.4.3，运行系统为ElmentaryOS 4.15.0-107-generic.
 ">[1]</span></a></sup>里面的时间轴是比较简单的。画basemap的时候对于对于rangeR来说加上T就好了。例如</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-R1990T/1991T/0/1</span><br></pre></td></tr></table></figure>
-<p>&emsp;&emsp;就可以画1990年到1991年的图。然后重要的是横轴的标注annotation怎么设置，见下图：<br><img src="/.xyz//1.png" alt="时间轴单位"><br>&emsp;&emsp;要让这些单位显示出来还涉及到FORMAT_DATE_MAP的设置。其设置如下图：<br><img src="/.xyz//2.png" alt="FORMAT_DATE_MAP设置"><br>&emsp;&emsp;例如封面的标注就是将FORMAT_DATE_MAP设置成jjj</p>
+<p>&emsp;&emsp;就可以画1990年到1991年的图。然后重要的是横轴的标注annotation怎么设置，见下图：<br><img src="/1.png" alt="时间轴单位"><br>&emsp;&emsp;要让这些单位显示出来还涉及到FORMAT_DATE_MAP的设置。其设置如下图：<br><img src="/2.png" alt="FORMAT_DATE_MAP设置"><br>&emsp;&emsp;例如封面的标注就是将FORMAT_DATE_MAP设置成jjj</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">gmt set FORMAT_DATE_MAP jjj</span><br></pre></td></tr></table></figure>
 <p>&emsp;&emsp;然后在B选项用-Bsxa10D。</p>
 <div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">gmt版本为5.4.3，运行系统为ElmentaryOS 4.15.0-107-generic.<a href="#fnref:1" rev="footnote"> ↩</a></span></li></ol></div></div>]]></content>
@@ -1310,7 +1310,7 @@
   <entry>
     <title>现代人的智商在退步</title>
     <url>/IQ-decrease.html</url>
-    <content><![CDATA[<p>&emsp;&emsp;记得有一次和老板一起吃饭聊到一个疑问，就是现代人的智商比起以前的人谁的智商高？</p>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;记得有一次和老板一起吃饭聊到一个疑问，就是现代人的智商比起以前的人谁的智商高？</p>
 <p>&emsp;&emsp;我记得我的想法是说现代人刺激多，所以感觉上会比以前，特别是古代人会更加聪明。老板的意思，我记得是说不见得现代人就比古代人聪明。我觉得也不无道理，特别是现代人接受太多碎片化的信息，往往难以深入思考问题，专心做事。要是像我所说一直在涨的话也总会有个头的啊，因为人的脑容量就那么多，再刺激也不能说无限的把脑容量给扩大。然而没有调查，谁也下不了结论。</p>
 <p>&emsp;&emsp;今天看到一篇发表于PNAS的文章（见封面链接），里面利用1962年到1991年挪威征兵的IQ测试数据分析智商变化。结论是近些年来人们的智商没有增高，反而在倒退。看样子还是老板对啊。笑。当然，这些数据来源于挪威，可能缺乏普遍意义，也许只能说明挪威当兵的人在变笨^_^。要得到较为严谨的结论还需要调研更多其他国家的人，以及时间跨度也得更大。</p>
 <p>&emsp;&emsp;话又说回来，IQ是用智力测试测量人在其年龄段的认知能力（“智力”）的分<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="https://zh.wikipedia.org/wiki/%E6%99%BA%E5%95%86
@@ -1327,7 +1327,7 @@
   <entry>
     <title>稍稍盘点地幔过渡带研究进展</title>
     <url>/mantle-transition-zone.html</url>
-    <content><![CDATA[<p>&emsp;&emsp;不看不知道，一看吓一跳。地幔过渡带的研究热度要爆表。搜了一下2016年以来的文章，多如牛毛，而且乖乖，都是高影响因子期刊论文。<br><img src="/.xyz//Picture2.png" alt="部分文献"><br>&emsp;&emsp;老板让想一下以后的方向，关于地幔结构，宜居性，热点。那就地幔过渡带的水咯。<br>&emsp;&emsp;地幔过渡带是上地幔与下地幔的交接区域。深度大约为410-660公里。通过研究地幔过渡带结构以及其与上下地幔的相互作用的可以帮助我们认识地幔对流的模式，了解地幔的演化以及揭示地球内部的水循环过程。<br>&emsp;&emsp;目前对地幔过渡的认识主要是认为它是相变层。上地幔中主要是橄榄石。410公里是橄榄石到瓦兹利石的相变。660是林伍德是到布里吉曼石的相变。另外过渡带中间约520km还有一个相变。两个相变面的克拉伯龙斜率是反的。意思是当温度高时410相变面会下降，660会上升，过渡带变薄，反之变厚。对地幔过渡带的研究提供的关键信息可以推断上地幔物质组成，过渡带含水量和温度。了解热柱和俯冲带与过渡带的相互作用等。<br>&emsp;&emsp;大量的研究表明上地幔和下地幔的储水能力较低，可能含的水很少。而过渡带有很好的储水能力，可能包含有大量的水。Bercovici and karato(2003)认为地幔有一个广域的上涌趋势，上涌的过程因为脱水，会在410界面上面形成一个局部熔融层，表现为一个地震学的低速层。含水的地幔过渡带可以解释地球化学观测到的不相容元素和稳定同位素特性，从而支持全地幔对流模式。<br>&emsp;&emsp;我们来看看近几年的地幔过渡带研究进展。刚刚提到的这个410km的低速层，近些年获得大量研究者的关注。Tauzin et al. (2010)认为全球普遍存在这个低速层，他们的观测台站较少，Wei and Shearer (2017)人发现他们的观测数据中只有30-40%有低速层。其他近些年的文章也都纷纷在不同的区域例如中国东南等发现这样的低速层(Tauzin et al., 2017; Li et al., 2019; Li et al., 2020; Xiao et al., 2020)。那这个低速层是否真的是普遍全球存在的，这个低速层的成因及与俯冲板块和热柱的关系都是研究的热点。<br>&emsp;&emsp;地幔过渡带的地形和速度变化也是研究的热点。例如Ai and Zheng (2003)和Ai et al. (2003)利用接收函数对研究660间断面他们发现660不是单一的一个界面在有些地方存在小的间断面。Zhang et al. (2019)发现中国东南660界面速度增大有8%。Ishii et al. (2019)也发现660界面十分尖锐，速度的跳变在数公里范围内。Wu et al. (2019)利用散射波发现410比较平缓，推断410是一个温度控制的相变面。而660含有小尺度的地形，因而推断它是一个相变面加上化学界面。这些研究极大的推动了我们对于过渡带界面的认识。不过可能还有很多值得发掘的点，例如Wu et al. (2019)采样的区域是中国东部及南亚，地球上其他地方是否也是类似的结论。另外660的小间断面与俯冲板块，地幔热柱有什么关系也是值得研究的(Chu et al., 2012; Jenkins et al., 2016)。<br>&emsp;&emsp;地幔过度带的水是大家十分关注的问题。高温高压实验证实地幔过渡带有储存大量水的能力。一些学者从地幔金刚石包裹体中的物质发现地幔过渡带的确含水(Pearson et al., 2014; Tschauner et al., 2018; Schulze et al., 2018)。不过这些例子较少，似乎不足以说明普遍情况。地震学的部分研究发现其实地幔过渡带含的水没有想象中的多(Houser, 2016)。因而地幔过渡带里的含水量还有一定争议。Thio et al. (2016)发现利用地震学的数据来研究地幔过渡带的含水量存在两个问题，一个就是误差较大，另一个就是温度与速度存在一定的折中关系。例如有些研究者直接将低速解释为含水导致，然而温度高也可以导致波速度低。尚需利用多种手段来进行研究，确认地幔过渡带的水含量及分布。<br>&emsp;&emsp;近些年来660界面之下的低速获得了广泛关注(Liu et al., 2018; Sun et al., 2020;Panero et al., 2020)。例如Schmandt et al. (2014)利用接收函数研究了美国西部660界面。他们发现了660之下普遍存在一个低速。他们推测可能是俯冲的法拉隆板片进入下地幔时脱水造成的部分熔融。Liu et al. (2016)等在日本地区发现了660之下的低速，推测是地幔转换带滞留的东亚俯冲的太平洋板片造成。目前在世界其他地区，中国等尚缺乏相关研究。研究660低速有助于提升我们对俯冲板块与地幔过渡带关系的认识。<br>&emsp;&emsp;地幔过渡带的地震学研究方法包括：非对称反射波的方法(Wu et al., 2019)，ScS多次反射波(Wang et al., 2017)以及上界面反射波的方法(Feng et al., 2017)。<br>&emsp;&emsp;还有地震源区转换波法，该方法对深源地震区附近的成像精度高(Li et al., 2008)。中心点反射波法，这种方法空间覆盖好，可以得到可靠的大尺度平均结构(Yu et al., 2018)。<br>&emsp;&emsp;此外还有三重震相法。该方法对垂直方向尚的速度结构非常敏感(Wang and Niu, 2010; Chu et al., 2012)。台站下方转换波法，该方法充分利用到时和振幅信息，但受限于台阵的孔径和台间距(Zhang and Schmandt, 2019)。</p>]]></content>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;不看不知道，一看吓一跳。地幔过渡带的研究热度要爆表。搜了一下2016年以来的文章，多如牛毛，而且乖乖，都是高影响因子期刊论文。<br><img src="/Picture2.png" alt="部分文献"><br>&emsp;&emsp;老板让想一下以后的方向，关于地幔结构，宜居性，热点。那就地幔过渡带的水咯。<br>&emsp;&emsp;地幔过渡带是上地幔与下地幔的交接区域。深度大约为410-660公里。通过研究地幔过渡带结构以及其与上下地幔的相互作用的可以帮助我们认识地幔对流的模式，了解地幔的演化以及揭示地球内部的水循环过程。<br>&emsp;&emsp;目前对地幔过渡的认识主要是认为它是相变层。上地幔中主要是橄榄石。410公里是橄榄石到瓦兹利石的相变。660是林伍德是到布里吉曼石的相变。另外过渡带中间约520km还有一个相变。两个相变面的克拉伯龙斜率是反的。意思是当温度高时410相变面会下降，660会上升，过渡带变薄，反之变厚。对地幔过渡带的研究提供的关键信息可以推断上地幔物质组成，过渡带含水量和温度。了解热柱和俯冲带与过渡带的相互作用等。<br>&emsp;&emsp;大量的研究表明上地幔和下地幔的储水能力较低，可能含的水很少。而过渡带有很好的储水能力，可能包含有大量的水。Bercovici and karato(2003)认为地幔有一个广域的上涌趋势，上涌的过程因为脱水，会在410界面上面形成一个局部熔融层，表现为一个地震学的低速层。含水的地幔过渡带可以解释地球化学观测到的不相容元素和稳定同位素特性，从而支持全地幔对流模式。<br>&emsp;&emsp;我们来看看近几年的地幔过渡带研究进展。刚刚提到的这个410km的低速层，近些年获得大量研究者的关注。Tauzin et al. (2010)认为全球普遍存在这个低速层，他们的观测台站较少，Wei and Shearer (2017)人发现他们的观测数据中只有30-40%有低速层。其他近些年的文章也都纷纷在不同的区域例如中国东南等发现这样的低速层(Tauzin et al., 2017; Li et al., 2019; Li et al., 2020; Xiao et al., 2020)。那这个低速层是否真的是普遍全球存在的，这个低速层的成因及与俯冲板块和热柱的关系都是研究的热点。<br>&emsp;&emsp;地幔过渡带的地形和速度变化也是研究的热点。例如Ai and Zheng (2003)和Ai et al. (2003)利用接收函数对研究660间断面他们发现660不是单一的一个界面在有些地方存在小的间断面。Zhang et al. (2019)发现中国东南660界面速度增大有8%。Ishii et al. (2019)也发现660界面十分尖锐，速度的跳变在数公里范围内。Wu et al. (2019)利用散射波发现410比较平缓，推断410是一个温度控制的相变面。而660含有小尺度的地形，因而推断它是一个相变面加上化学界面。这些研究极大的推动了我们对于过渡带界面的认识。不过可能还有很多值得发掘的点，例如Wu et al. (2019)采样的区域是中国东部及南亚，地球上其他地方是否也是类似的结论。另外660的小间断面与俯冲板块，地幔热柱有什么关系也是值得研究的(Chu et al., 2012; Jenkins et al., 2016)。<br>&emsp;&emsp;地幔过度带的水是大家十分关注的问题。高温高压实验证实地幔过渡带有储存大量水的能力。一些学者从地幔金刚石包裹体中的物质发现地幔过渡带的确含水(Pearson et al., 2014; Tschauner et al., 2018; Schulze et al., 2018)。不过这些例子较少，似乎不足以说明普遍情况。地震学的部分研究发现其实地幔过渡带含的水没有想象中的多(Houser, 2016)。因而地幔过渡带里的含水量还有一定争议。Thio et al. (2016)发现利用地震学的数据来研究地幔过渡带的含水量存在两个问题，一个就是误差较大，另一个就是温度与速度存在一定的折中关系。例如有些研究者直接将低速解释为含水导致，然而温度高也可以导致波速度低。尚需利用多种手段来进行研究，确认地幔过渡带的水含量及分布。<br>&emsp;&emsp;近些年来660界面之下的低速获得了广泛关注(Liu et al., 2018; Sun et al., 2020;Panero et al., 2020)。例如Schmandt et al. (2014)利用接收函数研究了美国西部660界面。他们发现了660之下普遍存在一个低速。他们推测可能是俯冲的法拉隆板片进入下地幔时脱水造成的部分熔融。Liu et al. (2016)等在日本地区发现了660之下的低速，推测是地幔转换带滞留的东亚俯冲的太平洋板片造成。目前在世界其他地区，中国等尚缺乏相关研究。研究660低速有助于提升我们对俯冲板块与地幔过渡带关系的认识。<br>&emsp;&emsp;地幔过渡带的地震学研究方法包括：非对称反射波的方法(Wu et al., 2019)，ScS多次反射波(Wang et al., 2017)以及上界面反射波的方法(Feng et al., 2017)。<br>&emsp;&emsp;还有地震源区转换波法，该方法对深源地震区附近的成像精度高(Li et al., 2008)。中心点反射波法，这种方法空间覆盖好，可以得到可靠的大尺度平均结构(Yu et al., 2018)。<br>&emsp;&emsp;此外还有三重震相法。该方法对垂直方向尚的速度结构非常敏感(Wang and Niu, 2010; Chu et al., 2012)。台站下方转换波法，该方法充分利用到时和振幅信息，但受限于台阵的孔径和台间距(Zhang and Schmandt, 2019)。</p>]]></content>
       <categories>
         <category>work</category>
       </categories>
@@ -1338,7 +1338,7 @@
   <entry>
     <title>基于宽频带背景噪声面波的美国三维上地幔横波速度结构模型</title>
     <url>/US-upper-mantle-vs-model.html</url>
-    <content><![CDATA[<p>&emsp;&emsp;利用宽频带的背景噪声面波做了美国三维上地幔横波速度结构，该工作做了x年。我不会告诉你这项工作做了多久，说出来都害sao。文章终于在2018年发表，文章链接在<a href="https://link.springer.com/article/10.1007/s00024-018-1881-2">这里</a>，如果有需要可以找我要全文。<br>&emsp;&emsp;做模型真的是需要大量细致的工作。这篇文章的主要贡献是表明只用背景噪声面波也可以做的比较深，比较准，另外就是为community提供了一个新的模型。怎奈自己的地质背景太差，看不到啥突出的科学问题，还被审稿人批评说，‘你做的啥工作啊，像本科生的作业。’心塞。师兄说的对，应该多向可能对你的工作感兴趣的人请教，例如动力学方向的人啊之类的。<br>&emsp;&emsp;老板建议把这个模型挂在<a href="https://ds.iris.edu/ds/products/emc-earthmodels/">IRIS EMC</a>里头，推广推广，让大伙儿都用用。我觉得不错，于是今天终于把它放到了IRIS里面。点击<a href="https://ds.iris.edu/ds/products/emc-us-upper-mantle-vsxiechuyang2018/">这里</a>就可以看到我的模型了。里面有netcdf格式的数据可以下载。如果有需要可以找我要更细致的结果。<br>&emsp;&emsp;IRIS EMC需要的是netcdf格式的模型数据。IRIS有提供把txt文本格式的模型转换成netcdf的<a href="https://github.com/iris-edu/emc-tools">python脚本</a>。另外向IRIS EMC提交模型的要求也可以这他们的<a href="https://ds.iris.edu/ds/products/emc-contributionguide/">网页</a>看到，按照他们的要求把netcdf文件准备好，然后写一个说明文档一并发送给<a href="mailto:&#112;&#114;&#x6f;&#100;&#x75;&#99;&#x74;&#64;&#105;&#x72;&#105;&#115;&#x2e;&#x77;&#x61;&#x73;&#x68;&#105;&#x6e;&#103;&#116;&#111;&#x6e;&#x2e;&#101;&#x64;&#x75;">&#112;&#114;&#x6f;&#100;&#x75;&#99;&#x74;&#64;&#105;&#x72;&#105;&#115;&#x2e;&#x77;&#x61;&#x73;&#x68;&#105;&#x6e;&#103;&#116;&#111;&#x6e;&#x2e;&#101;&#x64;&#x75;</a>就完事了。<br>&emsp;&emsp;netcdf是2进制文件。要查看其头段信息的话可以用命令ncdump -h xxx.nc（安装netcdf-bin），要读取其参数信息可以用命令ncks（安装nco）。其实IRIS EMC也提供了将netcdf转换成txt文本的<a href="https://github.com/iris-edu/emc-tools">python脚本</a>，非常方便。<br>&emsp;&emsp;求合作啊。我擅长处理数据，要是您能看到啥地学科学问题那真是求之不得啊。笑cry。</p>]]></content>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;利用宽频带的背景噪声面波做了美国三维上地幔横波速度结构，该工作做了x年。我不会告诉你这项工作做了多久，说出来都害sao。文章终于在2018年发表，文章链接在<a href="https://link.springer.com/article/10.1007/s00024-018-1881-2">这里</a>，如果有需要可以找我要全文。<br>&emsp;&emsp;做模型真的是需要大量细致的工作。这篇文章的主要贡献是表明只用背景噪声面波也可以做的比较深，比较准，另外就是为community提供了一个新的模型。怎奈自己的地质背景太差，看不到啥突出的科学问题，还被审稿人批评说，‘你做的啥工作啊，像本科生的作业。’心塞。师兄说的对，应该多向可能对你的工作感兴趣的人请教，例如动力学方向的人啊之类的。<br>&emsp;&emsp;老板建议把这个模型挂在<a href="https://ds.iris.edu/ds/products/emc-earthmodels/">IRIS EMC</a>里头，推广推广，让大伙儿都用用。我觉得不错，于是今天终于把它放到了IRIS里面。点击<a href="https://ds.iris.edu/ds/products/emc-us-upper-mantle-vsxiechuyang2018/">这里</a>就可以看到我的模型了。里面有netcdf格式的数据可以下载。如果有需要可以找我要更细致的结果。<br>&emsp;&emsp;IRIS EMC需要的是netcdf格式的模型数据。IRIS有提供把txt文本格式的模型转换成netcdf的<a href="https://github.com/iris-edu/emc-tools">python脚本</a>。另外向IRIS EMC提交模型的要求也可以这他们的<a href="https://ds.iris.edu/ds/products/emc-contributionguide/">网页</a>看到，按照他们的要求把netcdf文件准备好，然后写一个说明文档一并发送给<a href="mailto:&#x70;&#x72;&#111;&#x64;&#x75;&#99;&#x74;&#64;&#x69;&#x72;&#x69;&#x73;&#x2e;&#119;&#97;&#x73;&#104;&#x69;&#x6e;&#103;&#116;&#x6f;&#110;&#x2e;&#x65;&#100;&#x75;">&#x70;&#x72;&#111;&#x64;&#x75;&#99;&#x74;&#64;&#x69;&#x72;&#x69;&#x73;&#x2e;&#119;&#97;&#x73;&#104;&#x69;&#x6e;&#103;&#116;&#x6f;&#110;&#x2e;&#x65;&#100;&#x75;</a>就完事了。<br>&emsp;&emsp;netcdf是2进制文件。要查看其头段信息的话可以用命令ncdump -h xxx.nc（安装netcdf-bin），要读取其参数信息可以用命令ncks（安装nco）。其实IRIS EMC也提供了将netcdf转换成txt文本的<a href="https://github.com/iris-edu/emc-tools">python脚本</a>，非常方便。<br>&emsp;&emsp;求合作啊。我擅长处理数据，要是您能看到啥地学科学问题那真是求之不得啊。笑cry。</p>]]></content>
       <categories>
         <category>work</category>
       </categories>
@@ -1358,7 +1358,7 @@
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo update-gsfontmap</span><br></pre></td></tr></table></figure>
 <p>&emsp;&emsp;最后在gmt的字体配置文件&#x2F;usr&#x2F;share&#x2F;gmt&#x2F;postscriptlight&#x2F;PSL_custom_fonts.txt加上：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">STSong-Light--UniGB-UTF8-H 0.700 1</span><br><span class="line">STFangsong-Light--UniGB-UTF8-H 0.700 1</span><br><span class="line">STHeiti-Regular--UniGB-UTF8-H 0.700 1</span><br><span class="line">STKaiti-Regular--UniGB-UTF8-H 0.700 1</span><br></pre></td></tr></table></figure>
-<p>&emsp;&emsp;用gmt pstext -L就可以看到添加的四中字体：<br><img src="/.xyz//pstext.png" alt="gmt pstext -L显示的新添加4种字体"><br>&emsp;&emsp;然后就大功告成了。</p>
+<p>&emsp;&emsp;用gmt pstext -L就可以看到添加的四中字体：<br><img src="/pstext.png" alt="gmt pstext -L显示的新添加4种字体"><br>&emsp;&emsp;然后就大功告成了。</p>
 <div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">https://www.cnblogs.com/gisalameda/p/6840662.html<a href="#fnref:1" rev="footnote"> ↩</a></span></li></ol></div></div>]]></content>
       <categories>
         <category>gmt</category>
@@ -1370,7 +1370,7 @@
   <entry>
     <title>怎么计算理论的NCF？</title>
     <url>/how-to-calculate-synthetic-NCF.html</url>
-    <content><![CDATA[<p>&emsp;&emsp;好久没有更新博客了。原因是上个月文章修改意见下来了，第二轮大修，这酸爽，难以言表。<br>&emsp;&emsp;不知道啥时候开始（大概是Fichter和Ermert的文章发表之后），做噪声互相关工作总会被审稿人问：噪声源影响有多大啊？难为人啊。要是能像Ermert他们把源和结构一块儿做了不就结了。但那是人家的手艺，捡起来难啊。<br>&emsp;&emsp;另一个方法就是做模拟。给定源，计算两点波形，做胡相关，叠加。一维，近距离还好做，全球的三维的咋办？<br>&emsp;&emsp;还好有大神啊。人家Tromp et al. (2010)早都弄出来了。就是用Specfem3d_globe就可以了。<br>&emsp;&emsp;其实specfem3d_globe的说明文档已经讲的很清楚了，我这里就简单说一下。一般，波形的正演模拟只需要一步，而ensemble average的NCF需要两步，要计算敏感核函数需要三步。需要注意的点主要有：<br>&emsp;&emsp;1，NCF的模拟不需要CMTSOLUTION，需将其六分量设置为0。<br>&emsp;&emsp;2，There are other parameters in DATA&#x2F;Par_file which should be given specific values. For instance, NUMBER_OF_RUNS and NUMBER_OF_THIS_RUN must be 1; ROTATE_SEISMOGRAMS_RT, SAVE_ALL_SEISMOGRAMS_IN_ONE_FILES, USE_BINARY_FOR_LARGE_FILE and MOVIE_COARSE should be .false.. Moreover, since the first two steps for calculating noise cross-correlation kernels correspond to forward simulations, SIMULATION_TYPE must be 1 when NOISE_TOMOGRAPHY equals 1 or 2. Also, we have to reconstruct the ensemble forward wavefields in adjoint simulations, therefore we need to set SAVE_FORWARD to .true. for the second step, i.e., when NOISE_TOMOGRAPHY equals 2. The third step is for kernel constructions. Hence SIMULATION_TYPE should be 3, whereas SAVE_FORWARD must be .false.. （从使用手册抄的，关于Par_file的设置)<br>&emsp;&emsp;3，利用EXAMPLES&#x2F;noise_examples&#x2F;NOISE_TOMOGRAPHY.m (main program)和EXAMPLES&#x2F;noise_examples&#x2F;PetersonNoiseModel.m两个matlab程序获得S_squared。运行该程序需要提供NSTEP和dt。这两个参数在编译之后运行xcreate_header_file会显示。<br>&emsp;&emsp;4，Create a file called NOISE_TOMOGRAPHY&#x2F;irec_master_noise. Note that this file should be put in directory NOISE_TOMOGRAPHY as well. This file contains only one integer, which is the ID of the ‘maste’ receiver. For example, if in this file shows 5, it means that the fifth receiver listed in DATA&#x2F;STATIONS becomes the ‘master’. That’s why we mentioned previously that the order of receivers in DATA&#x2F;STATIONS important. （该文件定义了是哪个台与其他台的互相关）<br>&emsp;&emsp;5，Create a file called NOISE_TOMOGRAPHY&#x2F;nu_master. This file holds three numbers, forming a (unit) vector. It describes which component we are cross-correlating at the ‘master’ receiv. （该文件定义了哪些分量做胡相关）<br>&emsp;&emsp;6，Describe the noise direction and distributions in src&#x2F;specfem3d&#x2F;noise_tomography.f90. Search for a subroutine called noise_distribution_direction in noise_tomography.f90. It is actually located at the very beginning of noise_tomography.f90. The default assumes vertical noises and a uniform distribution across the whole physical domain. It should be quite self-explanatory for modifications. Should you modify this part, you have to re-compile the source code. (again, that’s why we recommend that you alwaysre-compile the code before you run simulations)（这里根据需要自己给定噪声源的分布。）<br>&emsp;&emsp;接下来就可以运行了。要得到NCF需要运行要两步，在修改参数运行第二步的时候一定要重新编译一下。<br>&emsp;&emsp;然后就可以跑了。结果我老是跑不通，老是出错。多番检查发现错误出在子程序print_stf_file()，即输出震源时间函数的子程序。但没有弄明白为什么会出错。这个程序没有产生后续需要调用的参数。大胆的将其注释掉了。然后程序就跑通了。其实在Par_file里面将PRINT_SOURCE_TIME_FUNCTION改为false应该就可以了。在噪声源均匀的情况下，跑出来的NCF与single force差了pi&#x2F;4，以及一些微小的差异。移动pi&#x2F;4之后基本能够对上，应该是正确的了。Hooray!<br>&emsp;&emsp;第三步我是没跑通，估计是因为空间不足，因为我看到中间数据就已经接近900G。不过我要的是synthetic NCF，足够了，有空再试sensitivity kernel吧。<br>&emsp;&emsp;封面图是我用来做模拟的噪声源分布。结果表明源的影响不大啊。乐。</p>]]></content>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;好久没有更新博客了。原因是上个月文章修改意见下来了，第二轮大修，这酸爽，难以言表。<br>&emsp;&emsp;不知道啥时候开始（大概是Fichter和Ermert的文章发表之后），做噪声互相关工作总会被审稿人问：噪声源影响有多大啊？难为人啊。要是能像Ermert他们把源和结构一块儿做了不就结了。但那是人家的手艺，捡起来难啊。<br>&emsp;&emsp;另一个方法就是做模拟。给定源，计算两点波形，做胡相关，叠加。一维，近距离还好做，全球的三维的咋办？<br>&emsp;&emsp;还好有大神啊。人家Tromp et al. (2010)早都弄出来了。就是用Specfem3d_globe就可以了。<br>&emsp;&emsp;其实specfem3d_globe的说明文档已经讲的很清楚了，我这里就简单说一下。一般，波形的正演模拟只需要一步，而ensemble average的NCF需要两步，要计算敏感核函数需要三步。需要注意的点主要有：<br>&emsp;&emsp;1，NCF的模拟不需要CMTSOLUTION，需将其六分量设置为0。<br>&emsp;&emsp;2，There are other parameters in DATA&#x2F;Par_file which should be given specific values. For instance, NUMBER_OF_RUNS and NUMBER_OF_THIS_RUN must be 1; ROTATE_SEISMOGRAMS_RT, SAVE_ALL_SEISMOGRAMS_IN_ONE_FILES, USE_BINARY_FOR_LARGE_FILE and MOVIE_COARSE should be .false.. Moreover, since the first two steps for calculating noise cross-correlation kernels correspond to forward simulations, SIMULATION_TYPE must be 1 when NOISE_TOMOGRAPHY equals 1 or 2. Also, we have to reconstruct the ensemble forward wavefields in adjoint simulations, therefore we need to set SAVE_FORWARD to .true. for the second step, i.e., when NOISE_TOMOGRAPHY equals 2. The third step is for kernel constructions. Hence SIMULATION_TYPE should be 3, whereas SAVE_FORWARD must be .false.. （从使用手册抄的，关于Par_file的设置)<br>&emsp;&emsp;3，利用EXAMPLES&#x2F;noise_examples&#x2F;NOISE_TOMOGRAPHY.m (main program)和EXAMPLES&#x2F;noise_examples&#x2F;PetersonNoiseModel.m两个matlab程序获得S_squared。运行该程序需要提供NSTEP和dt。这两个参数在编译之后运行xcreate_header_file会显示。<br>&emsp;&emsp;4，Create a file called NOISE_TOMOGRAPHY&#x2F;irec_master_noise. Note that this file should be put in directory NOISE_TOMOGRAPHY as well. This file contains only one integer, which is the ID of the ‘maste’ receiver. For example, if in this file shows 5, it means that the fifth receiver listed in DATA&#x2F;STATIONS becomes the ‘master’. That’s why we mentioned previously that the order of receivers in DATA&#x2F;STATIONS important. （该文件定义了是哪个台与其他台的互相关）<br>&emsp;&emsp;5，Create a file called NOISE_TOMOGRAPHY&#x2F;nu_master. This file holds three numbers, forming a (unit) vector. It describes which component we are cross-correlating at the ‘master’ receiv. （该文件定义了哪些分量做胡相关）<br>&emsp;&emsp;6，Describe the noise direction and distributions in src&#x2F;specfem3d&#x2F;noise_tomography.f90. Search for a subroutine called noise_distribution_direction in noise_tomography.f90. It is actually located at the very beginning of noise_tomography.f90. The default assumes vertical noises and a uniform distribution across the whole physical domain. It should be quite self-explanatory for modifications. Should you modify this part, you have to re-compile the source code. (again, that’s why we recommend that you alwaysre-compile the code before you run simulations)（这里根据需要自己给定噪声源的分布。）<br>&emsp;&emsp;接下来就可以运行了。要得到NCF需要运行要两步，在修改参数运行第二步的时候一定要重新编译一下。<br>&emsp;&emsp;然后就可以跑了。结果我老是跑不通，老是出错。多番检查发现错误出在子程序print_stf_file()，即输出震源时间函数的子程序。但没有弄明白为什么会出错。这个程序没有产生后续需要调用的参数。大胆的将其注释掉了。然后程序就跑通了。其实在Par_file里面将PRINT_SOURCE_TIME_FUNCTION改为false应该就可以了。在噪声源均匀的情况下，跑出来的NCF与single force差了pi&#x2F;4，以及一些微小的差异。移动pi&#x2F;4之后基本能够对上，应该是正确的了。Hooray!<br>&emsp;&emsp;第三步我是没跑通，估计是因为空间不足，因为我看到中间数据就已经接近900G。不过我要的是synthetic NCF，足够了，有空再试sensitivity kernel吧。<br>&emsp;&emsp;封面图是我用来做模拟的噪声源分布。结果表明源的影响不大啊。乐。</p>]]></content>
       <categories>
         <category>work</category>
       </categories>
@@ -1455,7 +1455,7 @@
   <entry>
     <title>新年快乐</title>
     <url>/happy-new-year.html</url>
-    <content><![CDATA[<p>&emsp;&emsp;各位新年快乐。<br>&emsp;&emsp;我不是针对谁，我是说在座各位的模型都有问题。开玩笑的，别当真。<br>&emsp;&emsp;今天很高兴因为一篇文章刚刚接收了，收到了新年礼物。这篇文章经过了多重考验，三次大修。时间也长，文章从第一次投稿到接收用的时间二胎也都降世了。<br>&emsp;&emsp;文章的意思就是经过检验发现现在的模型都有问题。有点惹众怒啊。请轻拍。我忘记是谁说的了，没有一个模型是对的，但都是有用的。大家和气生财(文章)。切勿动怒。<br>&emsp;&emsp;下一步就是好好写本子了啊。哎。加了个油。</p>]]></content>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;各位新年快乐。<br>&emsp;&emsp;我不是针对谁，我是说在座各位的模型都有问题。开玩笑的，别当真。<br>&emsp;&emsp;今天很高兴因为一篇文章刚刚接收了，收到了新年礼物。这篇文章经过了多重考验，三次大修。时间也长，文章从第一次投稿到接收用的时间二胎也都降世了。<br>&emsp;&emsp;文章的意思就是经过检验发现现在的模型都有问题。有点惹众怒啊。请轻拍。我忘记是谁说的了，没有一个模型是对的，但都是有用的。大家和气生财(文章)。切勿动怒。<br>&emsp;&emsp;下一步就是好好写本子了啊。哎。加了个油。</p>]]></content>
       <categories>
         <category>日记</category>
       </categories>
@@ -1491,7 +1491,7 @@
   <entry>
     <title>一起看星星</title>
     <url>/sky-and-universe.html</url>
-    <content><![CDATA[<p>&emsp;&emsp;小时候的爱好之一是看天空。白天看天上的云朵，总感觉会有不可思议的事情发生，或者突然会有UFO窜出。晚上看天上的星星，希望能够看到特别的一颗，或者天外有神秘来客造访。以前夏日的晚上，天上星星真的是光彩夺目，数也数不清;现在的夜晚天空是朦朦胧胧，想看也看不清。<br>&emsp;&emsp;幸好在<a href="http://ruanyifeng.com/">阮一峰的网络日志</a>里面看到了这个<a href="https://viewer.legacysurvey.org/">看星空网址</a>。我魔症的看了好几个小时。这里是全球多个天文台合作，经过多年合作观测，将天文望远镜拍摄的星空拼成的一张10万亿的图片。包含了10亿个星系，覆盖天空的1&#x2F;3。<br>&emsp;&emsp;不用怀疑，点进去。每一个亮点，可能都是一整个星系。起初我把图片放大到了30弧秒，遍历似的看。结果我发现我真低估了他的大小。用沧海一粟来形容人或地球都显得是对人或地球的极富夸张。后来发现很多星系已经被标了记，按顺序看就好了。总之是不舍眨眼。<br>&emsp;&emsp;那里有幽灵，有美人鱼，有飞碟，还有宝石，充满了幻想。有些橙黄，有些惺红，有些翡翠绿，还有宝石蓝，看花了眼。<br>&emsp;&emsp;有些有很多旋臂，像花瓣；有些只有两条，像手臂。有些还没有开始旋转，是青少年吧。另一些已经成了圆盘，垂垂老矣？<br>&emsp;&emsp;有些在热情舞蹈，有些在调皮逗趣，有些在静静凝视，有些在拥抱彼此，有些在聚会宴请，有些寻求孤独宁静，还有一些可能是傲游的仙人。<br>&emsp;&emsp;我们看到的是几十亿年前甚至更久远的他们，不知道他们现在是否依旧闪烁;而我们的光到达他们的时候，他们是否还能看到？<br><img src="https://i.loli.net/2021/03/08/DBtUqGVew1lWgQC.png" alt="黑洞？"><br><img src="https://i.loli.net/2021/03/08/1IuxsGyWAJTjQnl.png" alt="情侣？"><br><img src="https://i.loli.net/2021/03/08/SqhYyJQCXEBn8wT.png" alt="相依"><br><img src="https://i.loli.net/2021/03/08/9x3fXmA4z2tErQ1.png" alt="璀璨"><br><img src="https://i.loli.net/2021/03/08/pVBg48UefoGtSNZ.png" alt="双镯"><br><img src="https://i.loli.net/2021/03/08/7bj8uQZ5rI9UdBs.png" alt="欢脱"><br><img src="https://i.loli.net/2021/03/08/F46WaDXx5qweZBG.png" alt="亲吻"><br><img src="https://i.loli.net/2021/03/09/6Sz4uihkbEw7TJR.png" alt="九星联珠"><br><img src="https://i.loli.net/2021/03/08/4cuZhPki853Te6U.png" alt="大哥小弟？"></p>]]></content>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;小时候的爱好之一是看天空。白天看天上的云朵，总感觉会有不可思议的事情发生，或者突然会有UFO窜出。晚上看天上的星星，希望能够看到特别的一颗，或者天外有神秘来客造访。以前夏日的晚上，天上星星真的是光彩夺目，数也数不清;现在的夜晚天空是朦朦胧胧，想看也看不清。<br>&emsp;&emsp;幸好在<a href="http://ruanyifeng.com/">阮一峰的网络日志</a>里面看到了这个<a href="https://viewer.legacysurvey.org/">看星空网址</a>。我魔症的看了好几个小时。这里是全球多个天文台合作，经过多年合作观测，将天文望远镜拍摄的星空拼成的一张10万亿的图片。包含了10亿个星系，覆盖天空的1&#x2F;3。<br>&emsp;&emsp;不用怀疑，点进去。每一个亮点，可能都是一整个星系。起初我把图片放大到了30弧秒，遍历似的看。结果我发现我真低估了他的大小。用沧海一粟来形容人或地球都显得是对人或地球的极富夸张。后来发现很多星系已经被标了记，按顺序看就好了。总之是不舍眨眼。<br>&emsp;&emsp;那里有幽灵，有美人鱼，有飞碟，还有宝石，充满了幻想。有些橙黄，有些惺红，有些翡翠绿，还有宝石蓝，看花了眼。<br>&emsp;&emsp;有些有很多旋臂，像花瓣；有些只有两条，像手臂。有些还没有开始旋转，是青少年吧。另一些已经成了圆盘，垂垂老矣？<br>&emsp;&emsp;有些在热情舞蹈，有些在调皮逗趣，有些在静静凝视，有些在拥抱彼此，有些在聚会宴请，有些寻求孤独宁静，还有一些可能是傲游的仙人。<br>&emsp;&emsp;我们看到的是几十亿年前甚至更久远的他们，不知道他们现在是否依旧闪烁;而我们的光到达他们的时候，他们是否还能看到？<br><img src="https://i.loli.net/2021/03/08/DBtUqGVew1lWgQC.png" alt="黑洞？"><br><img src="https://i.loli.net/2021/03/08/1IuxsGyWAJTjQnl.png" alt="情侣？"><br><img src="https://i.loli.net/2021/03/08/SqhYyJQCXEBn8wT.png" alt="相依"><br><img src="https://i.loli.net/2021/03/08/9x3fXmA4z2tErQ1.png" alt="璀璨"><br><img src="https://i.loli.net/2021/03/08/pVBg48UefoGtSNZ.png" alt="双镯"><br><img src="https://i.loli.net/2021/03/08/7bj8uQZ5rI9UdBs.png" alt="欢脱"><br><img src="https://i.loli.net/2021/03/08/F46WaDXx5qweZBG.png" alt="亲吻"><br><img src="https://i.loli.net/2021/03/09/6Sz4uihkbEw7TJR.png" alt="九星联珠"><br><img src="https://i.loli.net/2021/03/08/4cuZhPki853Te6U.png" alt="大哥小弟？"></p>]]></content>
       <categories>
         <category>杂</category>
       </categories>
@@ -1517,7 +1517,7 @@
   <entry>
     <title>Power Spectral Density</title>
     <url>/pdf.html</url>
-    <content><![CDATA[<p><img src="http://service.iris.edu/mustang/noise-pdf/1/query?target=IU.ANMO.00.BHZ.M&starttime=2013-12-01&endtime=2013-12-31&format=plot"><br>&emsp;&emsp;封面图是IRIS提供的查看台站能量谱密度图，网址见<a href="http://service.iris.edu/mustang/noise-pdf/1/query?target=IU.ANMO.00.BHZ.M&starttime=2013-12-01&endtime=2013-12-31&format=plot">mustang</a>.<br>&emsp;&emsp;咱们也得会啊，要不然怎么分析自己的数据？于是按照MacNamara and Buland (2004)的文章给的公式自己编了一个程序。同样计算了ANMO台2013年12月竖直分量BHZ的能量谱密度，是这个样子：<br><img src="https://i.loli.net/2021/03/29/rLfmZ1hWNleQKC8.png" alt="自己算的ANMO台BHZ分量2013年12月能量谱密度"><br>&emsp;&emsp;对比看来好像形状差不多了，但是。。。怎么我算出来的比IRIS的整体高了20分贝呢？<br>&emsp;&emsp;后来明白了，是公式里dt的原因。我是除的dt，其实应该是乘。乘上dt就对了，开森。</p>]]></content>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p><img src="http://service.iris.edu/mustang/noise-pdf/1/query?target=IU.ANMO.00.BHZ.M&starttime=2013-12-01&endtime=2013-12-31&format=plot"><br>&emsp;&emsp;封面图是IRIS提供的查看台站能量谱密度图，网址见<a href="http://service.iris.edu/mustang/noise-pdf/1/query?target=IU.ANMO.00.BHZ.M&starttime=2013-12-01&endtime=2013-12-31&format=plot">mustang</a>.<br>&emsp;&emsp;咱们也得会啊，要不然怎么分析自己的数据？于是按照MacNamara and Buland (2004)的文章给的公式自己编了一个程序。同样计算了ANMO台2013年12月竖直分量BHZ的能量谱密度，是这个样子：<br><img src="https://i.loli.net/2021/03/29/rLfmZ1hWNleQKC8.png" alt="自己算的ANMO台BHZ分量2013年12月能量谱密度"><br>&emsp;&emsp;对比看来好像形状差不多了，但是。。。怎么我算出来的比IRIS的整体高了20分贝呢？<br>&emsp;&emsp;后来明白了，是公式里dt的原因。我是除的dt，其实应该是乘。乘上dt就对了，开森。</p>]]></content>
       <categories>
         <category>work</category>
       </categories>
@@ -1592,7 +1592,7 @@
   <entry>
     <title>任务管理</title>
     <url>/optimize-daily-task.html</url>
-    <content><![CDATA[<h2 id="任务管理很难"><a href="#任务管理很难" class="headerlink" title="任务管理很难"></a>任务管理很难</h2><p>关键：Keep It Simple and Stupid.<br>任务管理是决定什么时候应该做什么事。这么一个看似简单的问题，却难以找到最优解。<br>作者运用专业知识，从计算机科学的角度去解决任务管理问题。</p>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="任务管理很难"><a href="#任务管理很难" class="headerlink" title="任务管理很难"></a>任务管理很难</h2><p>关键：Keep It Simple and Stupid.<br>任务管理是决定什么时候应该做什么事。这么一个看似简单的问题，却难以找到最优解。<br>作者运用专业知识，从计算机科学的角度去解决任务管理问题。</p>
 <h2 id="背包问题"><a href="#背包问题" class="headerlink" title="背包问题"></a>背包问题</h2><p>   “给定一个物品集合（多个物品），每个物品都有各自的重量和价格。存在一个背包，具有一定容量。我们应该将哪几个物品放进背包，使得物品总重量不超过背包的容量，并且背包中的物品总价格最高。”<br>   随着物品数量的增加，将所有方案尝试一遍会消耗大量时间，这就是背包问题很「难」的原因。<br>   如果将任务看成物品，一天的时间看成背包，那么任务所需时间就对应物品的重量，任务完成收益就对应物品的价格，任务管理其实就是决定将哪些任务放进一天这个背包中，从而使一天内完成的任务价格最高。<br>   如何优化任务管理？</p>
 <h2 id="剪枝优化"><a href="#剪枝优化" class="headerlink" title="剪枝优化"></a>剪枝优化</h2><p>   对于每个任务，我需要决策是否将该任务列入「我的一天」。将这个决策过程具像化，就是一棵树（决策树）。每一个选项（是或者否）都像树枝一样，引出不同的结果，剪枝优化就是将决策树的枝桠剪去。<br>也就是说不是所有任务都值得被放进 todo list 中简化自己的需求。</p>
 <p>如何保证剪枝的正确性？如何保证简化后的需求能够满足工作需要呢？首先明确任务管理的目的是提高工作效率，所以我将所有生活类的任务从 Todo list中移除。确保一个任务足够重要才会放入todo list中。<br>要定期删除 Todo list 中的任务，因为如果一项任务一直存在，意味着它可能不重要，否则早就应该被完成了。</p>
@@ -1610,7 +1610,7 @@
   <entry>
     <title>第一性原理</title>
     <url>/rule-no1.html</url>
-    <content><![CDATA[<h2 id="第一步：定义问题"><a href="#第一步：定义问题" class="headerlink" title="第一步：定义问题"></a>第一步：定义问题</h2><p>要解决问题之前，一定要关注两件事情：</p>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="第一步：定义问题"><a href="#第一步：定义问题" class="headerlink" title="第一步：定义问题"></a>第一步：定义问题</h2><p>要解决问题之前，一定要关注两件事情：</p>
 <ol>
 <li>我所解决的问题是真的，而不是一个假的问题；</li>
 <li>我所解决的问题有一个明确的范围。<br>确保你的问题和别人的问题是同一个问题。</li>
@@ -1656,7 +1656,7 @@
   <entry>
     <title>hexo如何给文章加框</title>
     <url>/how-to-add-frame.html</url>
-    <content><![CDATA[<p>找到hexo&#x2F;themes&#x2F;next&#x2F;source&#x2F;css&#x2F;_common&#x2F;components&#x2F;post&#x2F;index.styl<br>将：</p>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>找到hexo&#x2F;themes&#x2F;next&#x2F;source&#x2F;css&#x2F;_common&#x2F;components&#x2F;post&#x2F;index.styl<br>将：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">if (hexo-config(&#x27;motion.transition.post_block&#x27;)) &#123;</span><br><span class="line">  .post-block, .pagination, .comments &#123;</span><br><span class="line">    visibility: hidden;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>改为：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">if (hexo-config(&#x27;motion.transition.post_block&#x27;)) &#123;</span><br><span class="line"> .post-block&#123;</span><br><span class="line">   visibility: hidden;</span><br><span class="line">   margin-top: 60px;</span><br><span class="line">   margin-bottom: 60px;</span><br><span class="line">   padding: 25px;</span><br><span class="line">   -webkit-box-shadow: 0 0 5px rgba(202, 203, 203, 1);</span><br><span class="line">   -moz-box-shadow: 0 0 5px rgba(202, 203, 204, 1);</span><br><span class="line">   &#125;</span><br><span class="line"> .pagination, .comments &#123;</span><br><span class="line">    visibility: hidden;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>]]></content>
@@ -1667,7 +1667,7 @@
   <entry>
     <title>hexo 如何给文章设密码</title>
     <url>/how-to-encrypt.html</url>
-    <content><![CDATA[<h1 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h1><p>命令：</p>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h1><p>命令：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-blog-encrypt</span><br></pre></td></tr></table></figure>
 <h1 id="修改配置"><a href="#修改配置" class="headerlink" title="修改配置"></a>修改配置</h1><p>在本目录配置文件_config.yml加入：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">encrypt:</span><br><span class="line">   enable: true</span><br></pre></td></tr></table></figure>
@@ -1682,7 +1682,7 @@
   <entry>
     <title>如何学习</title>
     <url>/how-to-pretend-you-know.html</url>
-    <content><![CDATA[<h1 id="放过自己"><a href="#放过自己" class="headerlink" title="放过自己"></a>放过自己</h1><p>知识进入大脑分为以下几种：</p>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="放过自己"><a href="#放过自己" class="headerlink" title="放过自己"></a>放过自己</h1><p>知识进入大脑分为以下几种：</p>
 <ol>
 <li>听过：有点印象</li>
 <li>知道：对每一个环节比较熟悉，能回答相关问题</li>

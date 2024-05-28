@@ -29,13 +29,13 @@
 <meta property="og:site_name" content="SEISAMUSE">
 <meta property="og:description" content="&emsp;&emsp;有些时候用gmt画图需要添加一些中文标注。之前在fedora里用gmt4的时候配置过一次。现在用的是elementaryOS+gmt5.4.3怎么配置中文呢？">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://www.seis-jun.xyz/.xyz//pstext.png">
+<meta property="og:image" content="http://www.seis-jun.xyz/pstext.png">
 <meta property="article:published_time" content="2020-07-31T15:03:04.000Z">
 <meta property="article:modified_time" content="2024-05-26T14:17:36.847Z">
 <meta property="article:author" content="Jun Xie">
 <meta property="article:tag" content="中文">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://www.seis-jun.xyz/.xyz//pstext.png">
+<meta name="twitter:image" content="http://www.seis-jun.xyz/pstext.png">
 
 
 <link rel="canonical" href="http://www.seis-jun.xyz/how-to-configure-chinese-for-gmt.html">
@@ -266,7 +266,7 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo update-gsfontmap</span><br></pre></td></tr></table></figure>
 <p>&emsp;&emsp;最后在gmt的字体配置文件&#x2F;usr&#x2F;share&#x2F;gmt&#x2F;postscriptlight&#x2F;PSL_custom_fonts.txt加上：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">STSong-Light--UniGB-UTF8-H 0.700 1</span><br><span class="line">STFangsong-Light--UniGB-UTF8-H 0.700 1</span><br><span class="line">STHeiti-Regular--UniGB-UTF8-H 0.700 1</span><br><span class="line">STKaiti-Regular--UniGB-UTF8-H 0.700 1</span><br></pre></td></tr></table></figure>
-<p>&emsp;&emsp;用gmt pstext -L就可以看到添加的四中字体：<br><img src="/.xyz//pstext.png" alt="gmt pstext -L显示的新添加4种字体"><br>&emsp;&emsp;然后就大功告成了。</p>
+<p>&emsp;&emsp;用gmt pstext -L就可以看到添加的四中字体：<br><img src="/pstext.png" alt="gmt pstext -L显示的新添加4种字体"><br>&emsp;&emsp;然后就大功告成了。</p>
 <div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">https://www.cnblogs.com/gisalameda/p/6840662.html<a href="#fnref:1" rev="footnote"> ↩</a></span></li></ol></div></div>
     </div>
 
