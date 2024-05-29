@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2024-05-28T11:35:02.796Z</updated>
+  <updated>2024-05-29T13:49:52.226Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>todesk的安装</title>
+    <link href="http://www.seis-jun.xyz/to-desk"/>
+    <id>http://www.seis-jun.xyz/to-desk</id>
+    <published>2024-05-29T13:32:47.000Z</published>
+    <updated>2024-05-29T13:49:52.226Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Linux" scheme="http://www.seis-jun.xyz/categories/Linux/"/>
+    
+    
+    <category term="linux" scheme="http://www.seis-jun.xyz/tags/linux/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo next 使用utterances评论</title>
@@ -391,25 +416,6 @@
     
     <category term="日记" scheme="http://www.seis-jun.xyz/categories/%E6%97%A5%E8%AE%B0/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>如何下载网上的视频</title>
-    <link href="http://www.seis-jun.xyz/how-to-download-video-from-internet"/>
-    <id>http://www.seis-jun.xyz/how-to-download-video-from-internet</id>
-    <published>2020-09-25T08:20:54.000Z</published>
-    <updated>2024-05-26T14:17:36.847Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;很多时候在线看视频遇到喜欢的就想下载下来慢慢欣赏。那如何下载呢？&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="web" scheme="http://www.seis-jun.xyz/categories/web/"/>
-    
-    
-    <category term="video" scheme="http://www.seis-jun.xyz/tags/video/"/>
     
   </entry>
   
