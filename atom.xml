@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2024-05-29T14:07:22.852Z</updated>
+  <updated>2024-05-31T12:35:37.189Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Fedora下如何登陆X11桌面</title>
+    <link href="http://www.seis-jun.xyz/how-to-set-X11-in-fedora"/>
+    <id>http://www.seis-jun.xyz/how-to-set-X11-in-fedora</id>
+    <published>2024-05-31T12:25:18.000Z</published>
+    <updated>2024-05-31T12:35:37.189Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;  安装了todesk以后进行远程控制时卡在“connecting to free server 100%”，然后不动。怎么办？&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Linux" scheme="http://www.seis-jun.xyz/categories/Linux/"/>
+    
+    
+    <category term="linux" scheme="http://www.seis-jun.xyz/tags/linux/"/>
+    
+  </entry>
   
   <entry>
     <title>todesk的安装</title>
@@ -393,23 +412,6 @@
     
     
     <category term="瘾" scheme="http://www.seis-jun.xyz/tags/%E7%98%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>文章第三轮大修</title>
-    <link href="http://www.seis-jun.xyz/about-anti-paper"/>
-    <id>http://www.seis-jun.xyz/about-anti-paper</id>
-    <published>2020-11-07T08:56:45.000Z</published>
-    <updated>2024-05-26T14:17:36.847Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;文章的审稿意见今天又双叒下来了，值得记录一下。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="日记" scheme="http://www.seis-jun.xyz/categories/%E6%97%A5%E8%AE%B0/"/>
-    
     
   </entry>
   
