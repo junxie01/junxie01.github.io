@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2024-05-31T12:35:37.189Z</updated>
+  <updated>2024-05-31T12:37:13.391Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://www.seis-jun.xyz/how-to-set-X11-in-fedora"/>
     <id>http://www.seis-jun.xyz/how-to-set-X11-in-fedora</id>
     <published>2024-05-31T12:25:18.000Z</published>
-    <updated>2024-05-31T12:35:37.189Z</updated>
+    <updated>2024-05-31T12:37:13.391Z</updated>
     
     
     <summary type="html">&lt;p&gt;  安装了todesk以后进行远程控制时卡在“connecting to free server 100%”，然后不动。怎么办？&lt;/p&gt;</summary>
