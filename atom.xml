@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2024-06-03T09:09:04.447Z</updated>
+  <updated>2024-06-03T10:15:37.340Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -17,6 +17,25 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>AI工具网址</title>
+    <link href="http://www.seis-jun.xyz/ai-tools"/>
+    <id>http://www.seis-jun.xyz/ai-tools</id>
+    <published>2024-06-03T09:58:55.000Z</published>
+    <updated>2024-06-03T10:15:37.340Z</updated>
+    
+    
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;一些ai工具网址，方便查找。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Tools" scheme="http://www.seis-jun.xyz/categories/Tools/"/>
+    
+    
+    <category term="ai" scheme="http://www.seis-jun.xyz/tags/ai/"/>
+    
+  </entry>
+  
+  <entry>
     <title>冰川地震研究方向1</title>
     <link href="http://www.seis-jun.xyz/gls1"/>
     <id>http://www.seis-jun.xyz/gls1</id>
@@ -24,7 +43,7 @@
     <updated>2024-06-03T09:09:04.447Z</updated>
     
     
-    <summary type="html">&lt;p&gt;冰川地震研究方向。&lt;/p&gt;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;冰川地震研究方向。&lt;/p&gt;</summary>
     
     
     
@@ -43,7 +62,7 @@
     <updated>2024-05-31T12:37:13.391Z</updated>
     
     
-    <summary type="html">&lt;p&gt;  安装了todesk以后进行远程控制时卡在“connecting to free server 100%”，然后不动。怎么办？&lt;/p&gt;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;  安装了todesk以后进行远程控制时卡在“connecting to free server 100%”，然后不动。怎么办？&lt;/p&gt;</summary>
     
     
     
@@ -62,7 +81,7 @@
     <updated>2024-05-29T14:07:22.852Z</updated>
     
     
-    <summary type="html">&lt;p&gt;远程登陆服务器进行工作是牛马必备技能。之前用的是teamviewer，老是掉线。从学生那里知道todesk还不错。于是就安装之。&lt;/p&gt;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;远程登陆服务器进行工作是牛马必备技能。之前用的是teamviewer，老是掉线。从学生那里知道todesk还不错。于是就安装之。&lt;/p&gt;</summary>
     
     
     
@@ -81,7 +100,7 @@
     <updated>2024-05-28T11:35:02.796Z</updated>
     
     
-    <summary type="html">&lt;p&gt;之前next里用的是valine评论区，谁知这次怎么弄都配置不上，搜索之下发现新版next已经不支持valine了。好像是因为其安全问题。因此我准备用utterances。&lt;/p&gt;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;之前next里用的是valine评论区，谁知这次怎么弄都配置不上，搜索之下发现新版next已经不支持valine了。好像是因为其安全问题。因此我准备用utterances。&lt;/p&gt;</summary>
     
     
     
@@ -102,7 +121,7 @@
     <updated>2024-05-28T11:36:58.834Z</updated>
     
     
-    <summary type="html">&lt;p&gt;hexo next主题如何给文章加框？&lt;/p&gt;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;hexo next主题如何给文章加框？&lt;/p&gt;</summary>
     
     
     
@@ -123,7 +142,7 @@
     <updated>2024-05-28T11:36:29.756Z</updated>
     
     
-    <summary type="html">&lt;p&gt;有些文章写了，但不想要给别人看，那就设一个密码。&lt;/p&gt;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;有些文章写了，但不想要给别人看，那就设一个密码。&lt;/p&gt;</summary>
     
     
     
@@ -159,7 +178,7 @@
     <updated>2024-05-28T11:35:46.552Z</updated>
     
     
-    <summary type="html">&lt;p&gt;转自&lt;a href=&quot;https://kenengba.com/post/3721.html&quot;&gt;可能吧&lt;/a&gt;&lt;br&gt;可能吧讲的是如何让人觉得你都懂，感觉有点文不对题。内容更偏向于如何学习。其实学习方法很多，但重在实践。&lt;/p&gt;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;转自&lt;a href=&quot;https://kenengba.com/post/3721.html&quot;&gt;可能吧&lt;/a&gt;&lt;br&gt;可能吧讲的是如何让人觉得你都懂，感觉有点文不对题。内容更偏向于如何学习。其实学习方法很多，但重在实践。&lt;/p&gt;</summary>
     
     
     
@@ -178,7 +197,7 @@
     <updated>2024-05-28T11:40:19.495Z</updated>
     
     
-    <summary type="html">&lt;p&gt;转载自&lt;a href=&quot;https://sspai.com/post/78279&quot;&gt;少数派&lt;/a&gt;&lt;br&gt;每个系统中都存在第一性原理，它的存在是最基本的命题和假设，不能被省略，也不能被违反。—亚里士多德&lt;/p&gt;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;转载自&lt;a href=&quot;https://sspai.com/post/78279&quot;&gt;少数派&lt;/a&gt;&lt;br&gt;每个系统中都存在第一性原理，它的存在是最基本的命题和假设，不能被省略，也不能被违反。—亚里士多德&lt;/p&gt;</summary>
     
     
     
@@ -197,7 +216,7 @@
     <updated>2024-05-28T11:40:41.309Z</updated>
     
     
-    <summary type="html">&lt;p&gt;转载自&lt;a href=&quot;https://sspai.com/post/87071&quot;&gt;少数派&lt;/a&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;转载自&lt;a href=&quot;https://sspai.com/post/87071&quot;&gt;少数派&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     
@@ -309,7 +328,7 @@
     <updated>2024-05-26T14:17:36.847Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2021/03/29/OXQhg3SjozrPT6e.png&quot; alt=&quot;ANMO台2013年12月的能量谱密度&quot;&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2021/03/29/OXQhg3SjozrPT6e.png&quot; alt=&quot;ANMO台2013年12月的能量谱密度&quot;&gt;&lt;/p&gt;</summary>
     
     
     
@@ -347,7 +366,7 @@
     <updated>2024-05-26T14:17:36.847Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2021/03/08/8G6ODBE3FbZa4U2.png&quot; alt=&quot;幽灵？人鱼？&quot;&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2021/03/08/8G6ODBE3FbZa4U2.png&quot; alt=&quot;幽灵？人鱼？&quot;&gt;&lt;/p&gt;</summary>
     
     
     
@@ -385,7 +404,7 @@
     <updated>2024-05-26T14:17:36.847Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/acce.png&quot; alt=&quot;文章接收&quot;&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&lt;img src=&quot;/acce.png&quot; alt=&quot;文章接收&quot;&gt;&lt;/p&gt;</summary>
     
     
     
@@ -393,25 +412,6 @@
     
     
     <category term="日记" scheme="http://www.seis-jun.xyz/tags/%E6%97%A5%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>为啥要这样安装FileZilla</title>
-    <link href="http://www.seis-jun.xyz/how-to-install-filezilla"/>
-    <id>http://www.seis-jun.xyz/how-to-install-filezilla</id>
-    <published>2020-11-20T15:27:46.000Z</published>
-    <updated>2024-05-26T14:17:36.847Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;本地到服务器的数据传输使用FileZilla程序比较方便和稳定。只是Linux下需要编译安装该程序，那还不易热儿，那就安装呗。然而安装过程让人迷糊，复杂程度让人难忘，特此记录一下。遗憾的是，花了我两天时间，到现在为止，该程序仍然没有安装成功。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Linux" scheme="http://www.seis-jun.xyz/categories/Linux/"/>
-    
-    
-    <category term="filezilla" scheme="http://www.seis-jun.xyz/tags/filezilla/"/>
     
   </entry>
   
