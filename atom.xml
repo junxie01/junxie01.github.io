@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2024-05-31T12:37:13.391Z</updated>
+  <updated>2024-06-03T09:09:04.447Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>冰川地震研究方向1</title>
+    <link href="http://www.seis-jun.xyz/gls1"/>
+    <id>http://www.seis-jun.xyz/gls1</id>
+    <published>2024-06-03T09:00:01.000Z</published>
+    <updated>2024-06-03T09:09:04.447Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;冰川地震研究方向。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
+    
+    
+    <category term="glacial seismology" scheme="http://www.seis-jun.xyz/tags/glacial-seismology/"/>
+    
+  </entry>
   
   <entry>
     <title>Fedora下如何登陆X11桌面</title>
@@ -393,25 +412,6 @@
     
     
     <category term="filezilla" scheme="http://www.seis-jun.xyz/tags/filezilla/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于瘾</title>
-    <link href="http://www.seis-jun.xyz/addiction"/>
-    <id>http://www.seis-jun.xyz/addiction</id>
-    <published>2020-11-19T06:07:30.000Z</published>
-    <updated>2024-05-26T14:17:36.847Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;什么是瘾？&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="杂" scheme="http://www.seis-jun.xyz/categories/%E6%9D%82/"/>
-    
-    
-    <category term="瘾" scheme="http://www.seis-jun.xyz/tags/%E7%98%BE/"/>
     
   </entry>
   
