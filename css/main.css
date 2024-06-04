@@ -1244,7 +1244,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #2b7dc6;
+    background: #f982d2;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2749,6 +2749,13 @@ header.header {
   .pagination {
     margin-bottom: 10px;
   }
+}
+body {
+  background: url("/images/bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: 50% 50%;
 }
 @media (min-width: 992px) and (max-width: 991px) {
   .sidebar {
