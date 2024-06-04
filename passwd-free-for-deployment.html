@@ -275,7 +275,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>每次发布都得输入用户名和密码，挺麻烦费事。网上<a target="_blank" rel="noopener" href="https://blog.csdn.net/hhgggggg/article/details/77853665">大神</a>可真多，搜搜就能解决。和ssh登录服务器类似，步骤如下：</p>
+    <div class="post-body" itemprop="articleBody"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>每次发布都得输入用户名和密码，挺麻烦费事。网上<a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.csdn.net/hhgggggg/article/details/77853665">大神</a>可真多，搜搜就能解决。和ssh登录服务器类似，步骤如下：</p>
 <span id="more"></span>
 <h2 id="生成SSH密钥"><a href="#生成SSH密钥" class="headerlink" title="生成SSH密钥"></a>生成SSH密钥</h2><p>使用ssh-kergen生成密钥：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ssh</span>-keygen -t rsa -C <span class="string">&quot;junxie01@gmail.com&quot;</span></span><br></pre></td></tr></table></figure>
@@ -290,7 +290,7 @@
 <h2 id="网站设置文件设置"><a href="#网站设置文件设置" class="headerlink" title="网站设置文件设置"></a>网站设置文件设置</h2><p>在网站设置文件deploy字段设置：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:junxie01/junxie01.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
 <p>好了，发布网站时hexo d就不用输入用户名和密码了。大功告成。</p>
-<h2 id="Git自带配置文件"><a href="#Git自带配置文件" class="headerlink" title="Git自带配置文件"></a>Git自带配置文件</h2><p>这个方法是针对github的，配置好了推送克隆什么的都万事大吉了。是这位大神<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/28efda0555bb">博文</a>里看到的。里面介绍了两种方法，我用的是第一种，因为它看起来更简单。</p>
+<h2 id="Git自带配置文件"><a href="#Git自带配置文件" class="headerlink" title="Git自带配置文件"></a>Git自带配置文件</h2><p>这个方法是针对github的，配置好了推送克隆什么的都万事大吉了。是这位大神<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.jianshu.com/p/28efda0555bb">博文</a>里看到的。里面介绍了两种方法，我用的是第一种，因为它看起来更简单。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global credential.helper store  </span><br></pre></td></tr></table></figure>
 <p>如果有多个账号什么的去掉–global就好了。为安全性着想还要给store设置一个时限。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global credential.helper <span class="string">&#x27;cache --timeout=3600&#x27;</span></span><br></pre></td></tr></table></figure>

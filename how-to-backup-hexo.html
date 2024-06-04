@@ -283,7 +283,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>要是换了电脑网站怎么办？那当然是需要备份的了。u盘什么的，网盘什么的也不错。不过搜到大神的<a target="_blank" rel="noopener" href="https://notes.doublemine.me/2015-04-06-%E5%A4%87%E4%BB%BDHexo%E5%8D%9A%E5%AE%A2%E6%BA%90%E6%96%87%E4%BB%B6.html">博文</a>介绍说放到githup的repo里面就可以了。于是试了一下，果然可以啊。步骤如下：</p>
+    <div class="post-body" itemprop="articleBody"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>要是换了电脑网站怎么办？那当然是需要备份的了。u盘什么的，网盘什么的也不错。不过搜到大神的<a target="_blank" rel="noopener external nofollow noreferrer" href="https://notes.doublemine.me/2015-04-06-%E5%A4%87%E4%BB%BDHexo%E5%8D%9A%E5%AE%A2%E6%BA%90%E6%96%87%E4%BB%B6.html">博文</a>介绍说放到githup的repo里面就可以了。于是试了一下，果然可以啊。步骤如下：</p>
 <h2 id="创建github的repository"><a href="#创建github的repository" class="headerlink" title="创建github的repository"></a>创建github的repository</h2><p>创建一个和你的hexo目录一样的repo。我的就是hexo。在hexo主目录下执行如下命令：</p>
 <span id="more"></span>
 
@@ -298,7 +298,7 @@
 <h2 id="同步本地网站"><a href="#同步本地网站" class="headerlink" title="同步本地网站"></a>同步本地网站</h2><p>当github中的repo有更新时，执行一下命令可以同步到本地。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$git</span> pull origin master</span><br></pre></td></tr></table></figure>
 
-<h2 id="自动推送-备份"><a href="#自动推送-备份" class="headerlink" title="自动推送&#x2F;备份"></a>自动推送&#x2F;备份</h2><p>那位牛人博主还有一篇博文<a target="_blank" rel="noopener" href="https://notes.doublemine.me/2015-07-06-%E8%87%AA%E5%8A%A8%E5%A4%87%E4%BB%BDHexo%E5%8D%9A%E5%AE%A2%E6%BA%90%E6%96%87%E4%BB%B6.html">利用nodejs脚本自动备份</a>。我不太懂，省得麻烦。干脆写一个bash脚本(例如do_deploy_push.bash)就可以解决这些问题。脚本如下:</p>
+<h2 id="自动推送-备份"><a href="#自动推送-备份" class="headerlink" title="自动推送&#x2F;备份"></a>自动推送&#x2F;备份</h2><p>那位牛人博主还有一篇博文<a target="_blank" rel="noopener external nofollow noreferrer" href="https://notes.doublemine.me/2015-07-06-%E8%87%AA%E5%8A%A8%E5%A4%87%E4%BB%BDHexo%E5%8D%9A%E5%AE%A2%E6%BA%90%E6%96%87%E4%BB%B6.html">利用nodejs脚本自动备份</a>。我不太懂，省得麻烦。干脆写一个bash脚本(例如do_deploy_push.bash)就可以解决这些问题。脚本如下:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo cl &amp;&amp; hexo g &amp;&amp; hexo d</span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&quot;backup hexo at `date` &quot;</span></span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
 <p>在hexo主目录下面运行 bash do_deploy_push.bash就大功告成了。</p>
 

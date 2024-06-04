@@ -286,7 +286,7 @@
     
     <div class="post-body" itemprop="articleBody"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;有了头像以后，看到头像一般就想点一点，点击了可以回到主页不是挺好的吗。</p>
 <span id="more"></span>
-<p>&emsp;&emsp;网上高手还是挺多。例如这位<a target="_blank" rel="noopener" href="http://eternalzttz.com/hexo-next.html">上仙</a>说要找到文件&#x2F;themes&#x2F;next&#x2F;layout&#x2F;_macro&#x2F;sidebar.swig然后做修改。</p>
+<p>&emsp;&emsp;网上高手还是挺多。例如这位<a target="_blank" rel="noopener external nofollow noreferrer" href="http://eternalzttz.com/hexo-next.html">上仙</a>说要找到文件&#x2F;themes&#x2F;next&#x2F;layout&#x2F;_macro&#x2F;sidebar.swig然后做修改。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">+ &lt;a href=&quot;/&quot;&gt;</span><br><span class="line">    &lt;img class=&quot;site-author-image&quot; itemprop=&quot;image&quot;</span><br><span class="line">       src=&quot;&#123;&#123; url_for( theme.avatar.url | default(theme.images + &#x27;/avatar.gif&#x27;) ) &#125;&#125;&quot;</span><br><span class="line">       alt=&quot;&#123;&#123; author &#125;&#125;&quot; /&gt;</span><br><span class="line">+ &lt;/a&gt;</span><br></pre></td></tr></table></figure>
 <p>&emsp;&emsp;于是我也这么干。但是，然而，怎么我的sidebar.swig没有这个avatar.gif的语句呢。瞎折腾半天也没明白。后来试了一下：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -name sidebar*</span><br></pre></td></tr></table></figure>
