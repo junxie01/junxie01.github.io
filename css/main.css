@@ -1267,7 +1267,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #d637ff;
+    background: #ffb394;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2541,6 +2541,7 @@ header.header {
   justify-content: space-between;
   margin: 0 auto;
   width: calc(100% - 20px);
+  background: rgba(255,255,255,0.9);
 }
 @media (max-width: 767px) {
   .main {
@@ -2567,6 +2568,7 @@ header.header {
   border-radius: 5px;
   box-sizing: border-box;
   width: calc(100% - 252px);
+  background: rgba(255,255,255,0.9);
 }
 @media (max-width: 991px) {
   .main-inner {
@@ -2656,7 +2658,7 @@ header.header {
 }
 .main-menu .menu-item-active::after {
   background: #bbb;
-  border-radius: 50%;
+  border-radius: 5px;
   content: ' ';
   height: 6px;
   margin-top: -3px;
@@ -2753,7 +2755,7 @@ header.header {
   }
 }
 .main-inner {
-  background: var(--content-bg-color);
+  background: rgba(255,255,255,0.9);
   box-shadow: initial;
   padding: 40px;
 }
