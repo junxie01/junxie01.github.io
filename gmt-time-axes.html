@@ -284,7 +284,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>&emsp;&emsp;有些时候画图需要用到时间轴。gmt<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="gmt版本为5.4.3，运行系统为ElmentaryOS 4.15.0-107-generic.
+    <div class="post-body" itemprop="articleBody"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;有些时候画图需要用到时间轴。gmt<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="gmt版本为5.4.3，运行系统为ElmentaryOS 4.15.0-107-generic.
 ">[1]</span></a></sup>里面的时间轴是比较简单的。画basemap的时候对于对于rangeR来说加上T就好了。例如</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-R1990T/1991T/0/1</span><br></pre></td></tr></table></figure>
 <p>&emsp;&emsp;就可以画1990年到1991年的图。然后重要的是横轴的标注annotation怎么设置，见下图：<br><img src="/1.png" alt="时间轴单位"><br>&emsp;&emsp;要让这些单位显示出来还涉及到FORMAT_DATE_MAP的设置。其设置如下图：<br><img src="/2.png" alt="FORMAT_DATE_MAP设置"><br>&emsp;&emsp;例如封面的标注就是将FORMAT_DATE_MAP设置成jjj</p>
