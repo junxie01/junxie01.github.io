@@ -1267,7 +1267,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #ffd722;
+    background: #eea6de;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2699,7 +2699,7 @@ header.header {
     display: none;
   }
   .sidebar-inner {
-    background: rgba(255,255,255,0.9);
+    background: var(--content-bg-color);
     border-radius: 5px;
     box-shadow: initial;
     box-sizing: border-box;
