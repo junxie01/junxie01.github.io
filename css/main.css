@@ -1267,7 +1267,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #292f73;
+    background: #ff29c7;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2570,7 +2570,7 @@ header.header {
 }
 @media (max-width: 991px) {
   .main-inner {
-    border-radius: initial;
+    border-radius: 5px;
     width: 100%;
   }
 }
