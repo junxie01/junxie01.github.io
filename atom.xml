@@ -36,11 +36,11 @@
   </entry>
   
   <entry>
-    <title>冰川地震研究方向1</title>
+    <title>冰川地震研究方向(一)</title>
     <link href="http://www.seis-jun.xyz/gls1"/>
     <id>http://www.seis-jun.xyz/gls1</id>
     <published>2024-06-03T09:00:01.000Z</published>
-    <updated>2024-06-03T09:09:04.447Z</updated>
+    <updated>2024-06-05T02:19:40.666Z</updated>
     
     
     <summary type="html">&lt;p&gt;冰川地震研究方向。&lt;/p&gt;</summary>
@@ -107,9 +107,9 @@
     <category term="web" scheme="http://www.seis-jun.xyz/categories/web/"/>
     
     
-    <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
-    
     <category term="hexo" scheme="http://www.seis-jun.xyz/tags/hexo/"/>
+    
+    <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
     
   </entry>
   
@@ -128,9 +128,9 @@
     <category term="web" scheme="http://www.seis-jun.xyz/categories/web/"/>
     
     
-    <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
-    
     <category term="hexo" scheme="http://www.seis-jun.xyz/tags/hexo/"/>
+    
+    <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
     
   </entry>
   
@@ -149,9 +149,9 @@
     <category term="web" scheme="http://www.seis-jun.xyz/categories/web/"/>
     
     
-    <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
-    
     <category term="hexo" scheme="http://www.seis-jun.xyz/tags/hexo/"/>
+    
+    <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
     
   </entry>
   
@@ -274,9 +274,9 @@
     <category term="web" scheme="http://www.seis-jun.xyz/categories/web/"/>
     
     
-    <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
-    
     <category term="hexo" scheme="http://www.seis-jun.xyz/tags/hexo/"/>
+    
+    <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
     
   </entry>
   
