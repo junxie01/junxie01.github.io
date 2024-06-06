@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2024-06-03T10:15:42.880Z</updated>
+  <updated>2024-06-06T01:38:30.654Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Fedora下没有音量控制了</title>
+    <link href="http://www.seis-jun.xyz/no-audio-control"/>
+    <id>http://www.seis-jun.xyz/no-audio-control</id>
+    <published>2024-06-06T01:00:12.000Z</published>
+    <updated>2024-06-06T01:38:30.654Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Linux" scheme="http://www.seis-jun.xyz/categories/Linux/"/>
+    
+    
+    <category term="linux" scheme="http://www.seis-jun.xyz/tags/linux/"/>
+    
+  </entry>
   
   <entry>
     <title>AI工具网址</title>
@@ -390,25 +415,6 @@
     
     
     <category term="Linux" scheme="http://www.seis-jun.xyz/categories/Linux/"/>
-    
-    
-    <category term="日记" scheme="http://www.seis-jun.xyz/tags/%E6%97%A5%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>新年快乐</title>
-    <link href="http://www.seis-jun.xyz/happy-new-year"/>
-    <id>http://www.seis-jun.xyz/happy-new-year</id>
-    <published>2021-02-11T16:37:36.000Z</published>
-    <updated>2024-05-26T14:17:36.847Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/acce.png&quot; alt=&quot;文章接收&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="日记" scheme="http://www.seis-jun.xyz/categories/%E6%97%A5%E8%AE%B0/"/>
     
     
     <category term="日记" scheme="http://www.seis-jun.xyz/tags/%E6%97%A5%E8%AE%B0/"/>
