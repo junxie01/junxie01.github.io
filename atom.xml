@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2024-06-06T04:48:14.737Z</updated>
+  <updated>2024-06-11T05:31:22.986Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>纪念BLUE</title>
+    <link href="http://www.seis-jun.xyz/memorise-blue"/>
+    <id>http://www.seis-jun.xyz/memorise-blue</id>
+    <published>2024-06-11T01:09:06.000Z</published>
+    <updated>2024-06-11T05:31:22.986Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="某日记" scheme="http://www.seis-jun.xyz/tags/%E6%9F%90%E6%97%A5%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>Fedora下浏览器播放视频卡住没有声音</title>
@@ -176,9 +199,9 @@
     <category term="web" scheme="http://www.seis-jun.xyz/categories/web/"/>
     
     
-    <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
-    
     <category term="hexo" scheme="http://www.seis-jun.xyz/tags/hexo/"/>
+    
+    <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
     
   </entry>
   
@@ -197,9 +220,9 @@
     <category term="web" scheme="http://www.seis-jun.xyz/categories/web/"/>
     
     
-    <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
-    
     <category term="hexo" scheme="http://www.seis-jun.xyz/tags/hexo/"/>
+    
+    <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
     
   </entry>
   
@@ -218,9 +241,9 @@
     <category term="web" scheme="http://www.seis-jun.xyz/categories/web/"/>
     
     
-    <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
-    
     <category term="hexo" scheme="http://www.seis-jun.xyz/tags/hexo/"/>
+    
+    <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
     
   </entry>
   
@@ -343,9 +366,9 @@
     <category term="web" scheme="http://www.seis-jun.xyz/categories/web/"/>
     
     
-    <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
-    
     <category term="hexo" scheme="http://www.seis-jun.xyz/tags/hexo/"/>
+    
+    <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
     
   </entry>
   
@@ -405,25 +428,6 @@
     
     
     <category term="work" scheme="http://www.seis-jun.xyz/tags/work/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>bash里如何循环读取文件</title>
-    <link href="http://www.seis-jun.xyz/read-file-bash"/>
-    <id>http://www.seis-jun.xyz/read-file-bash</id>
-    <published>2021-03-09T07:51:21.000Z</published>
-    <updated>2024-05-26T14:17:36.847Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;Bash操作简单，可以处理简单的计算等。有些时候会遇到文件的读取问题，那如何对文件进行循环逐行读取呢？&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Linux" scheme="http://www.seis-jun.xyz/categories/Linux/"/>
-    
-    
-    <category term="Linux" scheme="http://www.seis-jun.xyz/tags/Linux/"/>
     
   </entry>
   
