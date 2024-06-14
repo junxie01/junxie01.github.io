@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2024-06-14T14:20:02.178Z</updated>
+  <updated>2024-06-14T15:00:04.380Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>文献阅读（一）</title>
+    <link href="http://www.seis-jun.xyz/paper-reading-1"/>
+    <id>http://www.seis-jun.xyz/paper-reading-1</id>
+    <published>2024-06-14T14:55:04.000Z</published>
+    <updated>2024-06-14T15:00:04.380Z</updated>
+    
+    
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2023GL105342?af=R&quot;&gt;Tidally Modulated Glacial Slip and Tremor at HelheimGlacier, Greenland&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
+    
+    
+    <category term="paper" scheme="http://www.seis-jun.xyz/tags/paper/"/>
+    
+  </entry>
   
   <entry>
     <title>如何让大脑保持敏锐？</title>
@@ -397,27 +416,6 @@
     <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
     
     <category term="hexo" scheme="http://www.seis-jun.xyz/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo如何插入角注</title>
-    <link href="http://www.seis-jun.xyz/reference-mod"/>
-    <id>http://www.seis-jun.xyz/reference-mod</id>
-    <published>2024-05-26T14:22:57.000Z</published>
-    <updated>2024-05-27T06:27:38.006Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot;</summary>
-        
-      
-    
-    
-    
     
   </entry>
   
