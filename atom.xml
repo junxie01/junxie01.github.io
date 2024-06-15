@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2024-06-15T00:24:09.458Z</updated>
+  <updated>2024-06-15T00:57:10.608Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>文献阅读（二）</title>
+    <link href="http://www.seis-jun.xyz/paper-reading-2"/>
+    <id>http://www.seis-jun.xyz/paper-reading-2</id>
+    <published>2024-06-15T00:51:55.000Z</published>
+    <updated>2024-06-15T00:57:10.608Z</updated>
+    
+    
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2021GL095661?af=R&quot;&gt;Repeated Tidally Induced Hydrofracture of a Supraglacial Lake at the Amery Ice Shelf Grounding Zone&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
+    
+    
+    <category term="paper" scheme="http://www.seis-jun.xyz/tags/paper/"/>
+    
+  </entry>
   
   <entry>
     <title>写作能力提升技巧</title>
@@ -265,9 +284,9 @@
     <category term="web" scheme="http://www.seis-jun.xyz/categories/web/"/>
     
     
-    <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
-    
     <category term="hexo" scheme="http://www.seis-jun.xyz/tags/hexo/"/>
+    
+    <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
     
   </entry>
   
@@ -286,9 +305,9 @@
     <category term="web" scheme="http://www.seis-jun.xyz/categories/web/"/>
     
     
-    <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
-    
     <category term="hexo" scheme="http://www.seis-jun.xyz/tags/hexo/"/>
+    
+    <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
     
   </entry>
   
@@ -307,9 +326,9 @@
     <category term="web" scheme="http://www.seis-jun.xyz/categories/web/"/>
     
     
-    <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
-    
     <category term="hexo" scheme="http://www.seis-jun.xyz/tags/hexo/"/>
+    
+    <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
     
   </entry>
   
@@ -382,31 +401,6 @@
     
     
     <category term="学习" scheme="http://www.seis-jun.xyz/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>fatal&#39;&#92;:&#39; &#39;origin&#39; does not appear to be a git repository</title>
-    <link href="http://www.seis-jun.xyz/git-error"/>
-    <id>http://www.seis-jun.xyz/git-error</id>
-    <published>2024-05-27T11:20:33.000Z</published>
-    <updated>2024-05-28T11:56:41.463Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;运行git push origin master -f</summary>
-        
-      
-    
-    
-    
-    <category term="Linux" scheme="http://www.seis-jun.xyz/categories/Linux/"/>
-    
-    
-    <category term="git" scheme="http://www.seis-jun.xyz/tags/git/"/>
     
   </entry>
   
