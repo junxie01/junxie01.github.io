@@ -204,6 +204,32 @@
     </div>
 
     
+        <div class="pjax">
+        <div class="sidebar-inner sidebar-post-related">
+          <div class="animated">
+              <div class="links-of-blogroll-title"><i class="fa fa-signs-post fa-fw"></i>
+    相关文章
+  </div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/install-elementary-os-again" rel="bookmark">
+        <time class="popular-posts-time">2021-07-23</time>
+        <br>
+      重新安装Elementary OS系统
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/install-and-backup-mediawiki" rel="bookmark">
+        <time class="popular-posts-time">2020-06-22</time>
+        <br>
+      How to install and backup mediawiki
+      </a>
+    </li>
+  </ul>
+
+          </div>
+        </div>
+        </div>
   </aside>
 
 
@@ -299,7 +325,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;目前还不知道怎么办，todesk官网说要用x11桌面，现在的fedora已经默认用Wayland了。如何开启X11呢？编辑文件&#x2F;etc&#x2F;gdm&#x2F;custom.conf就好了：</p>
+    <div class="post-body" itemprop="articleBody"><p>&emsp;&emsp;目前还不知道怎么办，todesk官网说要用x11桌面，现在的fedora已经默认用Wayland了。如何开启X11呢？编辑文件&#x2F;etc&#x2F;gdm&#x2F;custom.conf就好了：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">WaylandEnable=false</span><br><span class="line">DefaultSession=gnome-xorg.desktop</span><br></pre></td></tr></table></figure>
 <p>&emsp;&emsp;然后重新登陆就发现Settings-&gt;about显示Windowing System X11了。<br>&emsp;&emsp;不过靠不靠谱还不知道，还没有将remote station修改成X11。切换成X11以后bilibili视频似乎看不了了。连自己电脑中的mp4视频也播放不了。x11落后了？</p>
     </div>
@@ -464,6 +490,12 @@
   <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
 
 
 <script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"junxie01/utt","issue_term":"pathname","theme":"github-light"}</script>
