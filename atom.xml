@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2024-06-17T08:02:10.953Z</updated>
+  <updated>2024-06-17T08:26:46.005Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>文献阅读（七）</title>
+    <link href="http://www.seis-jun.xyz/paper-reading-7"/>
+    <id>http://www.seis-jun.xyz/paper-reading-7</id>
+    <published>2024-06-17T08:24:45.000Z</published>
+    <updated>2024-06-17T08:26:46.005Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
+    
+    
+    <category term="paper" scheme="http://www.seis-jun.xyz/tags/paper/"/>
+    
+  </entry>
   
   <entry>
     <title>如何审稿</title>
@@ -254,7 +279,7 @@
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot;</summary>
         
       
     
@@ -298,7 +323,7 @@
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot;</summary>
         
       
     
@@ -384,27 +409,6 @@
     
     
     <category term="linux" scheme="http://www.seis-jun.xyz/tags/linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo next 使用utterances评论</title>
-    <link href="http://www.seis-jun.xyz/how-to-use-utterances"/>
-    <id>http://www.seis-jun.xyz/how-to-use-utterances</id>
-    <published>2024-05-28T11:25:39.000Z</published>
-    <updated>2024-05-28T11:35:02.796Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;之前next里用的是valine评论区，谁知这次怎么弄都配置不上，搜索之下发现新版next已经不支持valine了。好像是因为其安全问题。因此我准备用utterances。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="web" scheme="http://www.seis-jun.xyz/categories/web/"/>
-    
-    
-    <category term="hexo" scheme="http://www.seis-jun.xyz/tags/hexo/"/>
-    
-    <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
     
   </entry>
   
