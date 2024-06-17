@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2024-06-17T07:52:22.800Z</updated>
+  <updated>2024-06-17T08:02:10.953Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://www.seis-jun.xyz/how-to-review"/>
     <id>http://www.seis-jun.xyz/how-to-review</id>
     <published>2024-06-17T06:37:51.000Z</published>
-    <updated>2024-06-17T07:52:22.800Z</updated>
+    <updated>2024-06-17T08:02:10.953Z</updated>
     
     
     <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;如何审稿。转自&lt;a href=&quot;https://github.com/jtleek/reviews&quot;&gt;jtleek&lt;/a&gt;。&lt;/p&gt;</summary>
@@ -402,9 +402,9 @@
     <category term="web" scheme="http://www.seis-jun.xyz/categories/web/"/>
     
     
-    <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
-    
     <category term="hexo" scheme="http://www.seis-jun.xyz/tags/hexo/"/>
+    
+    <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
     
   </entry>
   
