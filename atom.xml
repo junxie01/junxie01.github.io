@@ -135,10 +135,10 @@
     <link href="http://www.seis-jun.xyz/paper-reading-2"/>
     <id>http://www.seis-jun.xyz/paper-reading-2</id>
     <published>2024-06-15T00:51:55.000Z</published>
-    <updated>2024-06-15T00:57:14.271Z</updated>
+    <updated>2024-06-17T07:31:38.406Z</updated>
     
     
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2021GL095661?af=R&quot;&gt;Repeated Tidally Induced Hydrofracture of a Supraglacial Lake at the Amery Ice Shelf Grounding Zone&lt;/a&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2021GL095661?af=R&quot;&gt;Repeated Tidally Induced Hydrofracture of a Supraglacial Lake at the Amery Ice Shelf Grounding Zone&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     
@@ -402,9 +402,9 @@
     <category term="web" scheme="http://www.seis-jun.xyz/categories/web/"/>
     
     
-    <category term="hexo" scheme="http://www.seis-jun.xyz/tags/hexo/"/>
-    
     <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
+    
+    <category term="hexo" scheme="http://www.seis-jun.xyz/tags/hexo/"/>
     
   </entry>
   
