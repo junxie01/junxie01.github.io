@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2024-06-17T08:28:15.228Z</updated>
+  <updated>2024-06-18T05:15:38.737Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>文献阅读（八）</title>
+    <link href="http://www.seis-jun.xyz/paper-reading-8"/>
+    <id>http://www.seis-jun.xyz/paper-reading-8</id>
+    <published>2024-06-18T05:10:10.000Z</published>
+    <updated>2024-06-18T05:15:38.737Z</updated>
+    
+    
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2023GL107442?af=R&quot;&gt;Far-Field Groundwater Response to the Lamb Waves From the 2022 Hunga-Tonga Volcano Eruption&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
+    
+    
+    <category term="paper" scheme="http://www.seis-jun.xyz/tags/paper/"/>
+    
+  </entry>
+  
+  <entry>
     <title>文献阅读（七）</title>
     <link href="http://www.seis-jun.xyz/paper-reading-7"/>
     <id>http://www.seis-jun.xyz/paper-reading-7</id>
     <published>2024-06-17T08:24:45.000Z</published>
-    <updated>2024-06-17T08:28:15.228Z</updated>
+    <updated>2024-06-18T05:13:33.591Z</updated>
     
     
     <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2023GL108058?af=R&quot;&gt;Mapping Glacier Structure in Inaccessible Areas From Turning Seismic Sources Into a Dense Seismic Array&lt;/a&gt;&lt;/p&gt;</summary>
@@ -377,25 +396,6 @@
     
     
     <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;安装了todesk以后进行远程控制时卡在“connecting to free server 100%”，然后不动。怎么办？&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Linux" scheme="http://www.seis-jun.xyz/categories/Linux/"/>
-    
-    
-    <category term="linux" scheme="http://www.seis-jun.xyz/tags/linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>todesk的安装</title>
-    <link href="http://www.seis-jun.xyz/to-desk"/>
-    <id>http://www.seis-jun.xyz/to-desk</id>
-    <published>2024-05-29T13:32:47.000Z</published>
-    <updated>2024-06-14T14:23:13.230Z</updated>
-    
-    
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;远程登陆服务器进行工作是牛马必备技能。之前用的是teamviewer，老是掉线。从学生那里知道todesk还不错。于是就安装之。&lt;/p&gt;</summary>
     
     
     
