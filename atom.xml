@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2024-06-18T12:19:17.543Z</updated>
+  <updated>2024-06-18T12:27:19.478Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>HEXO中加入视频</title>
+    <title>如何在HEXO中加入网络视频（以bilibili视频为例）</title>
     <link href="http://www.seis-jun.xyz/add-video"/>
     <id>http://www.seis-jun.xyz/add-video</id>
     <published>2024-06-18T11:56:47.000Z</published>
-    <updated>2024-06-18T12:19:17.543Z</updated>
+    <updated>2024-06-18T12:27:19.478Z</updated>
     
     
     <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;hexo里面怎么添加视频？&lt;/p&gt;</summary>
