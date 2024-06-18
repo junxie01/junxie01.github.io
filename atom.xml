@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2024-06-18T05:15:49.799Z</updated>
+  <updated>2024-06-18T06:26:13.376Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>文献阅读（九）</title>
+    <link href="http://www.seis-jun.xyz/paper-reading-9"/>
+    <id>http://www.seis-jun.xyz/paper-reading-9</id>
+    <published>2024-06-18T06:21:16.000Z</published>
+    <updated>2024-06-18T06:26:13.376Z</updated>
+    
+    
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
+    
+    
+    <category term="paper" scheme="http://www.seis-jun.xyz/tags/paper/"/>
+    
+  </entry>
   
   <entry>
     <title>文献阅读（八）</title>
@@ -384,25 +403,6 @@
     
     
     <category term="glacial seismology" scheme="http://www.seis-jun.xyz/tags/glacial-seismology/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Fedora下如何登陆X11桌面</title>
-    <link href="http://www.seis-jun.xyz/how-to-set-X11-in-fedora"/>
-    <id>http://www.seis-jun.xyz/how-to-set-X11-in-fedora</id>
-    <published>2024-05-31T12:25:18.000Z</published>
-    <updated>2024-06-14T14:22:28.443Z</updated>
-    
-    
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;安装了todesk以后进行远程控制时卡在“connecting to free server 100%”，然后不动。怎么办？&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Linux" scheme="http://www.seis-jun.xyz/categories/Linux/"/>
-    
-    
-    <category term="linux" scheme="http://www.seis-jun.xyz/tags/linux/"/>
     
   </entry>
   
