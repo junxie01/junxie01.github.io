@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2024-06-20T03:53:38.085Z</updated>
+  <updated>2024-06-20T04:52:47.925Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>文献阅读（十三）</title>
+    <link href="http://www.seis-jun.xyz/paper-reading-13"/>
+    <id>http://www.seis-jun.xyz/paper-reading-13</id>
+    <published>2024-06-20T04:48:48.000Z</published>
+    <updated>2024-06-20T04:52:47.925Z</updated>
+    
+    
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020GL088353?af=R&quot;&gt;Identifying Different Classes of Seismic Noise Signals Using Unsupervised Learning&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
+    
+    
+    <category term="paper" scheme="http://www.seis-jun.xyz/tags/paper/"/>
+    
+  </entry>
   
   <entry>
     <title>如何读文献</title>
@@ -382,23 +401,6 @@
     
     
     <category term="大脑" scheme="http://www.seis-jun.xyz/tags/%E5%A4%A7%E8%84%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>图像识别深度学习资料</title>
-    <link href="http://www.seis-jun.xyz/object-detection"/>
-    <id>http://www.seis-jun.xyz/object-detection</id>
-    <published>2024-06-13T14:58:40.000Z</published>
-    <updated>2024-06-13T15:00:51.493Z</updated>
-    
-    
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;down来的机器学习图像识别资料。&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="学习" scheme="http://www.seis-jun.xyz/tags/%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
