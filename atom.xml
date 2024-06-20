@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2024-06-20T03:08:52.200Z</updated>
+  <updated>2024-06-20T03:20:42.483Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>如何读文献</title>
+    <link href="http://www.seis-jun.xyz/how-to-read-paper"/>
+    <id>http://www.seis-jun.xyz/how-to-read-paper</id>
+    <published>2024-06-20T03:13:28.000Z</published>
+    <updated>2024-06-20T03:20:42.483Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;如何阅读文献？Keshav S. How to Read a Paper.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
+    
+    
+    <category term="paper" scheme="http://www.seis-jun.xyz/tags/paper/"/>
+    
+  </entry>
+  
+  <entry>
     <title>有趣的程序和项目（一）</title>
     <link href="http://www.seis-jun.xyz/code-and-project1"/>
     <id>http://www.seis-jun.xyz/code-and-project1</id>
     <published>2024-06-20T02:53:09.000Z</published>
-    <updated>2024-06-20T03:08:52.200Z</updated>
+    <updated>2024-06-20T03:08:59.346Z</updated>
     
     
       
@@ -380,25 +399,6 @@
     
     
     <category term="学习" scheme="http://www.seis-jun.xyz/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>纪念BLUE</title>
-    <link href="http://www.seis-jun.xyz/memorise-blue"/>
-    <id>http://www.seis-jun.xyz/memorise-blue</id>
-    <published>2024-06-11T01:09:06.000Z</published>
-    <updated>2024-06-14T14:21:43.715Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;BLUE过世了。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="某日记" scheme="http://www.seis-jun.xyz/categories/%E6%9F%90%E6%97%A5%E8%AE%B0/"/>
-    
-    
-    <category term="某日记" scheme="http://www.seis-jun.xyz/tags/%E6%9F%90%E6%97%A5%E8%AE%B0/"/>
     
   </entry>
   
