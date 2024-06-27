@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2024-06-26T14:21:42.243Z</updated>
+  <updated>2024-06-27T00:51:58.907Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>文献阅读（十六）</title>
+    <link href="http://www.seis-jun.xyz/paper-reading-16"/>
+    <id>http://www.seis-jun.xyz/paper-reading-16</id>
+    <published>2024-06-27T00:47:07.000Z</published>
+    <updated>2024-06-27T00:51:58.907Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2022GL101270?af=R&quot;&gt;Locating the Largest Event Observed on Mars With Multi-Orbit Surface Waves&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
+    
+    
+    <category term="paper" scheme="http://www.seis-jun.xyz/tags/paper/"/>
+    
+  </entry>
+  
+  <entry>
     <title>文献阅读（十五）</title>
     <link href="http://www.seis-jun.xyz/paper-reading-15"/>
     <id>http://www.seis-jun.xyz/paper-reading-15</id>
     <published>2024-06-26T14:19:17.000Z</published>
-    <updated>2024-06-26T14:21:42.243Z</updated>
+    <updated>2024-06-26T14:21:51.301Z</updated>
     
     
     <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://www.nature.com/articles/s41561-021-00767-4&quot;&gt;Submarine landslides triggered by iceberg collision with the seafloor&lt;/a&gt;&lt;/p&gt;</summary>
@@ -125,7 +144,7 @@
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
         
       
     
@@ -377,25 +396,6 @@
     
     
     <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;阅读文献对于了解研究趋势是十分重要的。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
-    
-    
-    <category term="paper" scheme="http://www.seis-jun.xyz/tags/paper/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>文献阅读（二）</title>
-    <link href="http://www.seis-jun.xyz/paper-reading-2"/>
-    <id>http://www.seis-jun.xyz/paper-reading-2</id>
-    <published>2024-06-15T00:51:55.000Z</published>
-    <updated>2024-06-17T07:31:38.406Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2021GL095661?af=R&quot;&gt;Repeated Tidally Induced Hydrofracture of a Supraglacial Lake at the Amery Ice Shelf Grounding Zone&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     
