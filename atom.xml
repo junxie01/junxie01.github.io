@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2024-07-09T09:11:16.289Z</updated>
+  <updated>2024-07-24T14:22:56.517Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -17,6 +17,21 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Beamforming 1</title>
+    <link href="http://www.seis-jun.xyz/music"/>
+    <id>http://www.seis-jun.xyz/music</id>
+    <published>2024-07-19T13:27:44.000Z</published>
+    <updated>2024-07-24T14:22:56.517Z</updated>
+    
+    
+    <summary type="html">这是一篇加密的文章，想看得问我密码。</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>如何下载S-net数据</title>
     <link href="http://www.seis-jun.xyz/how-to-download-Snet-data"/>
     <id>http://www.seis-jun.xyz/how-to-download-Snet-data</id>
@@ -24,7 +39,7 @@
     <updated>2024-07-09T09:11:16.289Z</updated>
     
     
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;p&gt;&amp;emsp;&amp;emsp;如何下载S-net数据呢？&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;如何下载S-net数据呢？&lt;/p&gt;</summary>
     
     
     
@@ -43,7 +58,7 @@
     <updated>2024-06-29T03:10:53.503Z</updated>
     
     
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2019GL084123&quot;&gt;Ross Ice Shelf Icequakes Associated With Ocean Gravity Wave Activity&lt;/a&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2019GL084123&quot;&gt;Ross Ice Shelf Icequakes Associated With Ocean Gravity Wave Activity&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     
@@ -62,7 +77,7 @@
     <updated>2024-06-27T01:03:38.428Z</updated>
     
     
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://www.nature.com/articles/s41561-021-00837-7&quot;&gt;Development of ice-shelf estuaries promotes fractures and calving&lt;/a&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://www.nature.com/articles/s41561-021-00837-7&quot;&gt;Development of ice-shelf estuaries promotes fractures and calving&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     
@@ -81,7 +96,7 @@
     <updated>2024-06-27T00:52:11.587Z</updated>
     
     
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2022GL101270?af=R&quot;&gt;Locating the Largest Event Observed on Mars With Multi-Orbit Surface Waves&lt;/a&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2022GL101270?af=R&quot;&gt;Locating the Largest Event Observed on Mars With Multi-Orbit Surface Waves&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     
@@ -100,7 +115,7 @@
     <updated>2024-06-26T14:21:51.301Z</updated>
     
     
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://www.nature.com/articles/s41561-021-00767-4&quot;&gt;Submarine landslides triggered by iceberg collision with the seafloor&lt;/a&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://www.nature.com/articles/s41561-021-00767-4&quot;&gt;Submarine landslides triggered by iceberg collision with the seafloor&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     
@@ -119,7 +134,7 @@
     <updated>2024-06-22T02:56:39.302Z</updated>
     
     
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024GL108202?af=R&quot;&gt;Glacier Retreat in Eastern Himalaya Drives Catastrophic Glacier Hazard Chain&lt;/a&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024GL108202?af=R&quot;&gt;Glacier Retreat in Eastern Himalaya Drives Catastrophic Glacier Hazard Chain&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     
@@ -138,7 +153,7 @@
     <updated>2024-06-22T14:12:41.324Z</updated>
     
     
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;p&gt;&amp;emsp;&amp;emsp;做科研肯定不能闭门造车。那怎么了解研究趋势，热点问题呢？&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;做科研肯定不能闭门造车。那怎么了解研究趋势，热点问题呢？&lt;/p&gt;</summary>
     
     
     
@@ -159,7 +174,7 @@
     <updated>2024-06-20T06:57:26.048Z</updated>
     
     
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020GL088353?af=R&quot;&gt;Identifying Different Classes of Seismic Noise Signals Using Unsupervised Learning&lt;/a&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020GL088353?af=R&quot;&gt;Identifying Different Classes of Seismic Noise Signals Using Unsupervised Learning&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     
@@ -178,7 +193,7 @@
     <updated>2024-06-20T07:59:18.685Z</updated>
     
     
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;p&gt;&amp;emsp;&amp;emsp;如何阅读文献？Keshav S. How to Read a Paper.&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;如何阅读文献？Keshav S. How to Read a Paper.&lt;/p&gt;</summary>
     
     
     
@@ -201,7 +216,7 @@
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
         
       
     
@@ -224,7 +239,7 @@
     <updated>2024-06-20T02:54:03.477Z</updated>
     
     
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://www.sciencedirect.com/science/article/pii/S0012821X20303873?dgcid=rss_sd_all&quot;&gt;Early Holocene Greenland-ice mass loss likely triggered earthquakes and tsunami&lt;/a&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://www.sciencedirect.com/science/article/pii/S0012821X20303873?dgcid=rss_sd_all&quot;&gt;Early Holocene Greenland-ice mass loss likely triggered earthquakes and tsunami&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     
@@ -243,7 +258,7 @@
     <updated>2024-06-20T00:14:47.694Z</updated>
     
     
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024GL108933?af=R&quot;&gt;High-Resolution Characterization of the Firn Layer Near the West Antarctic Ice Sheet Divide Camp With Active and Passive Seismic Data&lt;/a&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024GL108933?af=R&quot;&gt;High-Resolution Characterization of the Firn Layer Near the West Antarctic Ice Sheet Divide Camp With Active and Passive Seismic Data&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     
@@ -262,7 +277,7 @@
     <updated>2024-06-18T13:13:19.143Z</updated>
     
     
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020JB019423?af=R&quot;&gt;Nature of Low‐Frequency, Atmosphere‐Generated Seismic Noise&lt;/a&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020JB019423?af=R&quot;&gt;Nature of Low‐Frequency, Atmosphere‐Generated Seismic Noise&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     
@@ -281,7 +296,7 @@
     <updated>2024-06-18T12:42:09.317Z</updated>
     
     
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;p&gt;hexo里面怎么添加视频？&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;hexo里面怎么添加视频？&lt;/p&gt;</summary>
     
     
     
@@ -300,7 +315,7 @@
     <updated>2024-06-18T06:33:19.514Z</updated>
     
     
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020GL087213?af=R&quot;&gt;Abundant Spontaneous and Dynamically Triggered Submarine Landslides in the Gulf of Mexico&lt;/a&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020GL087213?af=R&quot;&gt;Abundant Spontaneous and Dynamically Triggered Submarine Landslides in the Gulf of Mexico&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     
@@ -319,7 +334,7 @@
     <updated>2024-06-18T05:15:49.799Z</updated>
     
     
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2023GL107442?af=R&quot;&gt;Far-Field Groundwater Response to the Lamb Waves From the 2022 Hunga-Tonga Volcano Eruption&lt;/a&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2023GL107442?af=R&quot;&gt;Far-Field Groundwater Response to the Lamb Waves From the 2022 Hunga-Tonga Volcano Eruption&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     
@@ -338,7 +353,7 @@
     <updated>2024-06-18T05:13:33.591Z</updated>
     
     
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2023GL108058?af=R&quot;&gt;Mapping Glacier Structure in Inaccessible Areas From Turning Seismic Sources Into a Dense Seismic Array&lt;/a&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2023GL108058?af=R&quot;&gt;Mapping Glacier Structure in Inaccessible Areas From Turning Seismic Sources Into a Dense Seismic Array&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     
@@ -357,7 +372,7 @@
     <updated>2024-06-18T02:19:44.538Z</updated>
     
     
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;p&gt;&amp;emsp;&amp;emsp;如何审稿。转自&lt;a href=&quot;https://github.com/jtleek/reviews&quot;&gt;jtleek&lt;/a&gt;。&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;如何审稿。转自&lt;a href=&quot;https://github.com/jtleek/reviews&quot;&gt;jtleek&lt;/a&gt;。&lt;/p&gt;</summary>
     
     
     
@@ -376,26 +391,7 @@
     <updated>2024-06-17T02:48:29.364Z</updated>
     
     
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://www.sciencedirect.com/science/article/pii/S0012821X22006203?dgcid=rss_sd_all&quot;&gt;Estimating the 3D structure of the Enceladus ice shell from Flexural and Crary waves using seismic simulations&lt;/a&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
-    
-    
-    <category term="paper" scheme="http://www.seis-jun.xyz/tags/paper/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>文献阅读（五）</title>
-    <link href="http://www.seis-jun.xyz/paper-reading-5"/>
-    <id>http://www.seis-jun.xyz/paper-reading-5</id>
-    <published>2024-06-16T15:56:32.000Z</published>
-    <updated>2024-06-16T15:59:08.007Z</updated>
-    
-    
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2022GL100978?af=R&quot;&gt;A “Floatilla” of Airborne Seismometers for Venus&lt;/a&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://www.sciencedirect.com/science/article/pii/S0012821X22006203?dgcid=rss_sd_all&quot;&gt;Estimating the 3D structure of the Enceladus ice shell from Flexural and Crary waves using seismic simulations&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     
