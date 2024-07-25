@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2024-07-25T05:53:00.223Z</updated>
+  <updated>2024-07-25T05:53:56.203Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://www.seis-jun.xyz/obspy-paz"/>
     <id>http://www.seis-jun.xyz/obspy-paz</id>
     <published>2024-07-25T05:40:34.000Z</published>
-    <updated>2024-07-25T05:53:00.223Z</updated>
+    <updated>2024-07-25T05:53:56.203Z</updated>
     
     
     <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;有些时候数据下载下来只有polezero格式的仪器响应，那python脚本怎么去仪器响应呢？&lt;/p&gt;</summary>
@@ -31,6 +31,8 @@
     <category term="python" scheme="http://www.seis-jun.xyz/categories/python/"/>
     
     <category term="seismology" scheme="http://www.seis-jun.xyz/categories/python/seismology/"/>
+    
+    <category term="code" scheme="http://www.seis-jun.xyz/categories/python/seismology/code/"/>
     
     
     <category term="work" scheme="http://www.seis-jun.xyz/tags/work/"/>
@@ -45,7 +47,7 @@
     <updated>2024-07-24T14:22:56.517Z</updated>
     
     
-    <summary type="html">这是一篇加密的文章，想看得问我密码。</summary>
+    <summary type="html">Here&#39;s something encrypted, password is required to continue reading.</summary>
     
     
     
