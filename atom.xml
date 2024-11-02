@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2024-10-29T16:12:27.839Z</updated>
+  <updated>2024-11-02T06:33:43.963Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -17,14 +17,33 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>paper-reading-23</title>
+    <link href="http://www.seis-jun.xyz/paper-reading-23"/>
+    <id>http://www.seis-jun.xyz/paper-reading-23</id>
+    <published>2024-11-02T04:07:57.000Z</published>
+    <updated>2024-11-02T06:33:43.963Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://www.frontiersin.org/journals/earth-science/articles/10.3389/feart.2021.667717/full&quot;&gt;Drivers of Recurring Seasonal Cycle of Glacier Calving Styles and Patterns&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
+    
+    
+    <category term="paper" scheme="http://www.seis-jun.xyz/tags/paper/"/>
+    
+  </entry>
+  
+  <entry>
     <title>文献阅读（二十二）</title>
     <link href="http://www.seis-jun.xyz/paper-reading-22"/>
     <id>http://www.seis-jun.xyz/paper-reading-22</id>
     <published>2024-10-29T16:10:32.000Z</published>
-    <updated>2024-10-29T16:12:27.839Z</updated>
+    <updated>2024-11-02T06:33:46.621Z</updated>
     
     
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://www.science.org/doi/10.1126/science.1162543&quot;&gt;A Simple Law for Ice-Shelf Calving&lt;/a&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://www.science.org/doi/10.1126/science.1162543&quot;&gt;A Simple Law for Ice-Shelf Calving&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     
@@ -43,7 +62,7 @@
     <updated>2024-10-12T05:42:05.998Z</updated>
     
     
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;转学习到的高效bash脚本。&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;转学习到的高效bash脚本。&lt;/p&gt;</summary>
     
     
     
@@ -60,7 +79,7 @@
     <updated>2024-10-05T05:19:48.638Z</updated>
     
     
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://academic.oup.com/gji/article/218/1/560/5421624&quot;&gt;Global scale analysis and modelling of primary microseisms&lt;/a&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://academic.oup.com/gji/article/218/1/560/5421624&quot;&gt;Global scale analysis and modelling of primary microseisms&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     
@@ -79,7 +98,7 @@
     <updated>2024-10-05T05:19:34.234Z</updated>
     
     
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024GL108943?af=R&quot;&gt;Using Ocean Ambient Sound to Measure Local Integrated Deep Ocean Temperature&lt;/a&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024GL108943?af=R&quot;&gt;Using Ocean Ambient Sound to Measure Local Integrated Deep Ocean Temperature&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     
@@ -98,7 +117,7 @@
     <updated>2024-09-03T14:12:28.701Z</updated>
     
     
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&lt;a href=&quot;https://pubs.geoscienceworld.org/ssa/srl/article-abstract/90/6/2175/573516/Estimation-of-the-Orientations-of-the-S-net-Cabled&quot;&gt;Estimation of the Orientations of the S-net Cabled Ocean-Bottom Sensors&lt;/a&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://pubs.geoscienceworld.org/ssa/srl/article-abstract/90/6/2175/573516/Estimation-of-the-Orientations-of-the-S-net-Cabled&quot;&gt;Estimation of the Orientations of the S-net Cabled Ocean-Bottom Sensors&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     
@@ -117,7 +136,7 @@
     <updated>2024-09-01T03:02:40.385Z</updated>
     
     
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;如何下载Fnet的台站列表？&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;如何下载Fnet的台站列表？&lt;/p&gt;</summary>
     
     
     
@@ -136,7 +155,7 @@
     <updated>2024-07-25T05:53:56.203Z</updated>
     
     
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;有些时候数据下载下来只有polezero格式的仪器响应，那python脚本怎么去仪器响应呢？&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;有些时候数据下载下来只有polezero格式的仪器响应，那python脚本怎么去仪器响应呢？&lt;/p&gt;</summary>
     
     
     
@@ -174,7 +193,7 @@
     <updated>2024-07-09T09:11:16.289Z</updated>
     
     
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;如何下载S-net数据呢？&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;如何下载S-net数据呢？&lt;/p&gt;</summary>
     
     
     
@@ -193,7 +212,7 @@
     <updated>2024-06-29T03:10:53.503Z</updated>
     
     
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2019GL084123&quot;&gt;Ross Ice Shelf Icequakes Associated With Ocean Gravity Wave Activity&lt;/a&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2019GL084123&quot;&gt;Ross Ice Shelf Icequakes Associated With Ocean Gravity Wave Activity&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     
@@ -212,7 +231,7 @@
     <updated>2024-06-27T01:03:38.428Z</updated>
     
     
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://www.nature.com/articles/s41561-021-00837-7&quot;&gt;Development of ice-shelf estuaries promotes fractures and calving&lt;/a&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://www.nature.com/articles/s41561-021-00837-7&quot;&gt;Development of ice-shelf estuaries promotes fractures and calving&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     
@@ -231,7 +250,7 @@
     <updated>2024-06-27T00:52:11.587Z</updated>
     
     
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2022GL101270?af=R&quot;&gt;Locating the Largest Event Observed on Mars With Multi-Orbit Surface Waves&lt;/a&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2022GL101270?af=R&quot;&gt;Locating the Largest Event Observed on Mars With Multi-Orbit Surface Waves&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     
@@ -250,7 +269,7 @@
     <updated>2024-06-26T14:21:51.301Z</updated>
     
     
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://www.nature.com/articles/s41561-021-00767-4&quot;&gt;Submarine landslides triggered by iceberg collision with the seafloor&lt;/a&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://www.nature.com/articles/s41561-021-00767-4&quot;&gt;Submarine landslides triggered by iceberg collision with the seafloor&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     
@@ -269,7 +288,7 @@
     <updated>2024-06-22T02:56:39.302Z</updated>
     
     
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024GL108202?af=R&quot;&gt;Glacier Retreat in Eastern Himalaya Drives Catastrophic Glacier Hazard Chain&lt;/a&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024GL108202?af=R&quot;&gt;Glacier Retreat in Eastern Himalaya Drives Catastrophic Glacier Hazard Chain&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     
@@ -288,7 +307,7 @@
     <updated>2024-08-06T01:00:22.636Z</updated>
     
     
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;做科研肯定不能闭门造车。那怎么了解研究趋势，热点问题呢？&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;做科研肯定不能闭门造车。那怎么了解研究趋势，热点问题呢？&lt;/p&gt;</summary>
     
     
     
@@ -309,7 +328,7 @@
     <updated>2024-06-20T06:57:26.048Z</updated>
     
     
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020GL088353?af=R&quot;&gt;Identifying Different Classes of Seismic Noise Signals Using Unsupervised Learning&lt;/a&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020GL088353?af=R&quot;&gt;Identifying Different Classes of Seismic Noise Signals Using Unsupervised Learning&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     
@@ -328,7 +347,7 @@
     <updated>2024-06-20T07:59:18.685Z</updated>
     
     
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;如何阅读文献？Keshav S. How to Read a Paper.&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;如何阅读文献？Keshav S. How to Read a Paper.&lt;/p&gt;</summary>
     
     
     
@@ -374,26 +393,7 @@
     <updated>2024-06-20T02:54:03.477Z</updated>
     
     
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://www.sciencedirect.com/science/article/pii/S0012821X20303873?dgcid=rss_sd_all&quot;&gt;Early Holocene Greenland-ice mass loss likely triggered earthquakes and tsunami&lt;/a&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
-    
-    
-    <category term="paper" scheme="http://www.seis-jun.xyz/tags/paper/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>文献阅读（十一）</title>
-    <link href="http://www.seis-jun.xyz/paper-reading-11"/>
-    <id>http://www.seis-jun.xyz/paper-reading-11</id>
-    <published>2024-06-19T14:04:08.000Z</published>
-    <updated>2024-06-20T00:14:47.694Z</updated>
-    
-    
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024GL108933?af=R&quot;&gt;High-Resolution Characterization of the Firn Layer Near the West Antarctic Ice Sheet Divide Camp With Active and Passive Seismic Data&lt;/a&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://www.sciencedirect.com/science/article/pii/S0012821X20303873?dgcid=rss_sd_all&quot;&gt;Early Holocene Greenland-ice mass loss likely triggered earthquakes and tsunami&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     
