@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2024-11-02T07:49:22.068Z</updated>
+  <updated>2024-11-07T14:17:30.096Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>文献阅读(24)</title>
+    <link href="http://www.seis-jun.xyz/paper-reading-24"/>
+    <id>http://www.seis-jun.xyz/paper-reading-24</id>
+    <published>2024-11-07T13:55:03.000Z</published>
+    <updated>2024-11-07T14:17:30.096Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://iopscience.iop.org/article/10.1088/1361-6633/aa8473&quot;&gt;Glacial seismology&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
+    
+    
+    <category term="paper" scheme="http://www.seis-jun.xyz/tags/paper/"/>
+    
+  </entry>
   
   <entry>
     <title>文献阅读(23)</title>
@@ -382,25 +401,6 @@
     <category term="code" scheme="http://www.seis-jun.xyz/tags/code/"/>
     
     <category term="project" scheme="http://www.seis-jun.xyz/tags/project/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>文献阅读（十二）</title>
-    <link href="http://www.seis-jun.xyz/paper-reading-12"/>
-    <id>http://www.seis-jun.xyz/paper-reading-12</id>
-    <published>2024-06-20T00:09:35.000Z</published>
-    <updated>2024-06-20T02:54:03.477Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://www.sciencedirect.com/science/article/pii/S0012821X20303873?dgcid=rss_sd_all&quot;&gt;Early Holocene Greenland-ice mass loss likely triggered earthquakes and tsunami&lt;/a&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
-    
-    
-    <category term="paper" scheme="http://www.seis-jun.xyz/tags/paper/"/>
     
   </entry>
   
