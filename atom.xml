@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2024-11-07T14:17:30.096Z</updated>
+  <updated>2024-12-19T11:38:49.887Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>记一次找回Linux启动项的经历</title>
+    <link href="http://www.seis-jun.xyz/find-linux-back"/>
+    <id>http://www.seis-jun.xyz/find-linux-back</id>
+    <published>2024-12-19T09:16:35.000Z</published>
+    <updated>2024-12-19T11:38:49.887Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;记一次找回Linux启动项的经历&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Linux" scheme="http://www.seis-jun.xyz/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="http://www.seis-jun.xyz/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
     <title>文献阅读(24)</title>
     <link href="http://www.seis-jun.xyz/paper-reading-24"/>
     <id>http://www.seis-jun.xyz/paper-reading-24</id>
     <published>2024-11-07T13:55:03.000Z</published>
-    <updated>2024-11-07T14:17:30.096Z</updated>
+    <updated>2024-11-07T14:17:39.035Z</updated>
     
     
     <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://iopscience.iop.org/article/10.1088/1361-6633/aa8473&quot;&gt;Glacial seismology&lt;/a&gt;&lt;/p&gt;</summary>
@@ -374,33 +393,6 @@
     
     
     <category term="paper" scheme="http://www.seis-jun.xyz/tags/paper/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>有趣的程序和项目（一）</title>
-    <link href="http://www.seis-jun.xyz/code-and-project1"/>
-    <id>http://www.seis-jun.xyz/code-and-project1</id>
-    <published>2024-06-20T02:53:09.000Z</published>
-    <updated>2024-06-20T03:08:59.346Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
-    
-    
-    <category term="code" scheme="http://www.seis-jun.xyz/tags/code/"/>
-    
-    <category term="project" scheme="http://www.seis-jun.xyz/tags/project/"/>
     
   </entry>
   
