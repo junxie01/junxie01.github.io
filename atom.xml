@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2024-12-19T11:39:05.492Z</updated>
+  <updated>2025-02-05T08:16:33.714Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何在自己电脑中部署deepseek</title>
+    <link href="http://www.seis-jun.xyz/how-to-install-deepseek"/>
+    <id>http://www.seis-jun.xyz/how-to-install-deepseek</id>
+    <published>2025-02-05T08:00:13.000Z</published>
+    <updated>2025-02-05T08:16:33.714Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;deepseek很火，我也来凑热闹。之前的所谓LLM好像都本地部署都怎么关注，但似乎deepseek好像很方便。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Linux" scheme="http://www.seis-jun.xyz/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="http://www.seis-jun.xyz/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>记一次找回Linux启动项的经历</title>
@@ -367,25 +386,6 @@
     
     
     <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020GL088353?af=R&quot;&gt;Identifying Different Classes of Seismic Noise Signals Using Unsupervised Learning&lt;/a&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
-    
-    
-    <category term="paper" scheme="http://www.seis-jun.xyz/tags/paper/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何读文献</title>
-    <link href="http://www.seis-jun.xyz/how-to-read-paper"/>
-    <id>http://www.seis-jun.xyz/how-to-read-paper</id>
-    <published>2024-06-20T03:13:28.000Z</published>
-    <updated>2024-06-20T07:59:18.685Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;如何阅读文献？Keshav S. How to Read a Paper.&lt;/p&gt;</summary>
     
     
     
