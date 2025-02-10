@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2025-02-05T08:30:08.930Z</updated>
+  <updated>2025-02-10T10:38:43.250Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>paper-reading-25</title>
+    <link href="http://www.seis-jun.xyz/paper-reading-25"/>
+    <id>http://www.seis-jun.xyz/paper-reading-25</id>
+    <published>2025-02-10T10:33:37.000Z</published>
+    <updated>2025-02-10T10:38:43.250Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://www.science.org/doi/10.1126/science.adp8094&quot;&gt;Hidden cascades of seismic ice stream deformation&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
+    
+    
+    <category term="paper" scheme="http://www.seis-jun.xyz/tags/paper/"/>
+    
+  </entry>
   
   <entry>
     <title>如何在自己电脑中部署deepseek</title>
@@ -374,25 +393,6 @@
     <category term="blogs" scheme="http://www.seis-jun.xyz/tags/blogs/"/>
     
     <category term="science" scheme="http://www.seis-jun.xyz/tags/science/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>文献阅读（十三）</title>
-    <link href="http://www.seis-jun.xyz/paper-reading-13"/>
-    <id>http://www.seis-jun.xyz/paper-reading-13</id>
-    <published>2024-06-20T04:48:48.000Z</published>
-    <updated>2024-06-20T06:57:26.048Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020GL088353?af=R&quot;&gt;Identifying Different Classes of Seismic Noise Signals Using Unsupervised Learning&lt;/a&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
-    
-    
-    <category term="paper" scheme="http://www.seis-jun.xyz/tags/paper/"/>
     
   </entry>
   
