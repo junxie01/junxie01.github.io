@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2025-02-14T06:58:59.163Z</updated>
+  <updated>2025-02-14T06:59:08.702Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://www.seis-jun.xyz/paper-reading-26"/>
     <id>http://www.seis-jun.xyz/paper-reading-26</id>
     <published>2025-02-14T06:48:50.000Z</published>
-    <updated>2025-02-14T06:58:59.163Z</updated>
+    <updated>2025-02-14T06:59:08.702Z</updated>
     
     
     <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://www.science.org/doi/10.1126/science.adr6139&quot;&gt;Depth-dependent seismic sensing of groundwater recovery from the atmospheric-river storms of 2023&lt;/a&gt;&lt;/p&gt;</summary>
@@ -247,21 +247,19 @@
     <link href="http://www.seis-jun.xyz/obspy-paz"/>
     <id>http://www.seis-jun.xyz/obspy-paz</id>
     <published>2024-07-25T05:40:34.000Z</published>
-    <updated>2024-07-25T05:53:56.203Z</updated>
+    <updated>2025-02-24T02:41:28.024Z</updated>
     
     
     <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;有些时候数据下载下来只有polezero格式的仪器响应，那python脚本怎么去仪器响应呢？&lt;/p&gt;</summary>
     
     
     
-    <category term="python" scheme="http://www.seis-jun.xyz/categories/python/"/>
-    
-    <category term="seismology" scheme="http://www.seis-jun.xyz/categories/python/seismology/"/>
-    
-    <category term="code" scheme="http://www.seis-jun.xyz/categories/python/seismology/code/"/>
+    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
     
     
-    <category term="work" scheme="http://www.seis-jun.xyz/tags/work/"/>
+    <category term="python" scheme="http://www.seis-jun.xyz/tags/python/"/>
+    
+    <category term="seismology" scheme="http://www.seis-jun.xyz/tags/seismology/"/>
     
   </entry>
   
