@@ -22,25 +22,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"www.seis-jun.xyz","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="好记性不如烂笔头">
-<meta property="og:type" content="website">
-<meta property="og:title" content="SEISAMUSE">
-<meta property="og:url" content="http://www.seis-jun.xyz/archives/2013/">
+    <meta name="description" content="利用FnetPy下载Fnet数据。安装： 1pip install https:&#x2F;&#x2F;github.com&#x2F;seisman&#x2F;FnetPy&#x2F;archive&#x2F;master.zip 例子： 12345678910111213141516171819202122232425262728293031323334353637383940414243import osfrom obspy.io.xseed imp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何下载Fnet数据">
+<meta property="og:url" content="http://www.seis-jun.xyz/download-fnet-data-py">
 <meta property="og:site_name" content="SEISAMUSE">
-<meta property="og:description" content="好记性不如烂笔头">
+<meta property="og:description" content="利用FnetPy下载Fnet数据。安装： 1pip install https:&#x2F;&#x2F;github.com&#x2F;seisman&#x2F;FnetPy&#x2F;archive&#x2F;master.zip 例子： 12345678910111213141516171819202122232425262728293031323334353637383940414243import osfrom obspy.io.xseed imp">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-04-22T00:36:57.000Z">
+<meta property="article:modified_time" content="2025-04-22T00:45:32.078Z">
 <meta property="article:author" content="Jun Xie">
+<meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://www.seis-jun.xyz/archives/2013/">
+<link rel="canonical" href="http://www.seis-jun.xyz/download-fnet-data-py.html">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"archives/2013/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://www.seis-jun.xyz/download-fnet-data-py","path":"download-fnet-data-py.html","title":"如何下载Fnet数据"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>归档 | SEISAMUSE</title>
+<title>如何下载Fnet数据 | SEISAMUSE</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168057869-1"></script>
   <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-168057869-1","only_pageview":false,"measure_protocol_api_secret":null}</script>
@@ -79,7 +82,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">SEISAMUSE</h1>
+      <p class="site-title">SEISAMUSE</p>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">Jun Xie的博客</p>
@@ -208,71 +211,146 @@
 
     </div>
 
-    <div class="main-inner archive posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
-  
-  
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        
-        <span class="collection-header">非常好! 目前共计 135 篇日志。 继续努力。</span>
-      </div>
 
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.seis-jun.xyz/download-fnet-data-py">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/seisamuse.png">
+      <meta itemprop="name" content="Jun Xie">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SEISAMUSE">
+      <meta itemprop="description" content="好记性不如烂笔头">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="如何下载Fnet数据 | SEISAMUSE">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          如何下载Fnet数据
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
       
-    <div class="collection-year">
-      <span class="collection-header">2013<span class="collection-year-count">2</span></span>
+
+      <time title="创建时间：2025-04-22 08:36:57 / 修改时间：08:45:32" itemprop="dateCreated datePublished" datetime="2025-04-22T08:36:57+08:00">2025-04-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/work/" itemprop="url" rel="index"><span itemprop="name">work</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>利用<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/seisman/FnetPy">FnetPy</a>下载Fnet数据。<br>安装：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install https://github.com/seisman/FnetPy/archive/master.zip</span><br></pre></td></tr></table></figure>
+<p>例子：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">import os</span><br><span class="line">from obspy.io.xseed import Parser</span><br><span class="line">from FnetPy import Client</span><br><span class="line">from datetime import datetime,timedelta</span><br><span class="line">from obspy import read_inventory,read,Trace</span><br><span class="line">from datetime import datetime</span><br><span class="line">client = Client(&#x27;用户名&#x27;, &#x27;密码&#x27;)</span><br><span class="line"></span><br><span class="line">current_date=datetime(2013,1,1,0,0)</span><br><span class="line">#current_date=datetime(2004,12,30,0,0)</span><br><span class="line">end_date=datetime(2025,1,1,0,0)</span><br><span class="line">output_dir=&#x27;./seed&#x27;</span><br><span class="line">raw_dir=&#x27;./raw&#x27;</span><br><span class="line">resp_dir=&#x27;./resp&#x27;</span><br><span class="line">os.makedirs(output_dir, exist_ok=True)</span><br><span class="line">os.makedirs(raw_dir, exist_ok=True)</span><br><span class="line">os.makedirs(resp_dir, exist_ok=True)</span><br><span class="line">while (current_date&lt;end_date):</span><br><span class="line">    start_time = current_data</span><br><span class="line">    start_str = current_date.strftime(&quot;%Y_%m_%d_%H_%M_%S&quot;)</span><br><span class="line">    name=start_str+&quot;.seed&quot;</span><br><span class="line">    fname=os.path.join(raw_dir,name)</span><br><span class="line">    output_file=os.path.join(output_dir, name)</span><br><span class="line">    if os.path.exists(output_file):</span><br><span class="line">        print(f&quot;[跳过] 文件已存在: &#123;output_file&#125;&quot;)</span><br><span class="line">        current_date+=timedelta(days=1)</span><br><span class="line">        continue</span><br><span class="line">    open(output_file, &#x27;wb&#x27;).close()  # 创建空文件</span><br><span class="line">    if not os.path.exists(fname):</span><br><span class="line">        print(&#x27;download data from &#x27;+str(start_time)+&#x27; to &#x27;+str(end_time))</span><br><span class="line">        client.get_waveform(start_time, duration_in_seconds=86400+3600,component=&quot;LHZ&quot;,filename=fname) # download</span><br><span class="line">        print(&#x27;download &#x27;+fname+&#x27; down!&#x27;)</span><br><span class="line">    current_date+=timedelta(days=1)</span><br><span class="line">    st = read(fname) # read</span><br><span class="line">    parser = Parser(fname) #parse</span><br><span class="line">    parser.write_resp(resp_dir, zipped=False)</span><br><span class="line">    for tr in st:</span><br><span class="line">        resp_file = f&quot;RESP.&#123;tr.get_id()&#125;&quot;</span><br><span class="line">        inv = read_inventory(os.path.join(resp_dir, resp_file))</span><br><span class="line">        tr.remove_response(inventory=inv, output=&quot;VEL&quot;)</span><br><span class="line">        #print(tr.stats)</span><br><span class="line">    st.write(output_file, format=&quot;MSEED&quot;)</span><br><span class="line">print(&#x27;Finished&#x27;)</span><br></pre></td></tr></table></figure>
+<p>这个脚本可以下载Fnet,2013到2025年的LHZ连续波形数据，数据长度为25小时，overlap 1小时,去除仪器响应存放在seed文件中。</p>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2013-12-24T01:40:27+08:00"
-              content="2013-12-24">
-          12-24
-        </time>
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="Jun Xie 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.png" alt="Jun Xie 支付宝">
+        <span>支付宝</span>
       </div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/Win7%E4%B8%8B%E6%A0%BC%E6%8E%89Linux%E7%9B%98%E5%A6%82%E4%BD%95%E5%90%AF%E5%8A%A8windows" itemprop="url">
-            <span itemprop="name">Win7下格掉Linux盘如何启动windows</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2013-12-09T21:49:19+08:00"
-              content="2013-12-09">
-          12-09
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/%E9%9B%BE%E9%9C%BE%E9%BD%90%E6%AD%A5%E8%B5%B0" itemprop="url">
-            <span itemprop="name">雾霾齐步走</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-
-    </div>
   </div>
-  
-  
-  
+</div>
 
+          <div class="post-tags">
+              <a href="/tags/python/" rel="tag"># python</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/down-ambient-noise-py" rel="prev" title="obspy下载连续背景噪声数据">
+                  <i class="fa fa-angle-left"></i> obspy下载连续背景噪声数据
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments utterances-container"></div>
 </div>
   </main>
 
