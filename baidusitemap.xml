@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://www.seis-jun.xyz/mouse-click-monitoring.html</loc>
+    <lastmod>2025-05-10</lastmod>
+  </url>
+  <url>
+    <loc>http://www.seis-jun.xyz/gmt-arrow.html</loc>
+    <lastmod>2025-05-10</lastmod>
+  </url>
+  <url>
+    <loc>http://www.seis-jun.xyz/history-and-inversion.html</loc>
+    <lastmod>2025-05-10</lastmod>
+  </url>
+  <url>
+    <loc>http://www.seis-jun.xyz/encrypt_test.html</loc>
+    <lastmod>2025-05-10</lastmod>
+  </url>
+  <url>
     <loc>http://www.seis-jun.xyz/download-earthquake-py.html</loc>
     <lastmod>2025-04-24</lastmod>
   </url>
@@ -107,10 +123,6 @@
   <url>
     <loc>http://www.seis-jun.xyz/paper-reading-15.html</loc>
     <lastmod>2024-06-26</lastmod>
-  </url>
-  <url>
-    <loc>http://www.seis-jun.xyz/encrypt_test.html</loc>
-    <lastmod>2024-06-22</lastmod>
   </url>
   <url>
     <loc>http://www.seis-jun.xyz/paper-reading-14.html</loc>
@@ -269,10 +281,6 @@
     <lastmod>2024-05-26</lastmod>
   </url>
   <url>
-    <loc>http://www.seis-jun.xyz/how-to-calculate-synthetic-NCF.html</loc>
-    <lastmod>2024-05-26</lastmod>
-  </url>
-  <url>
     <loc>http://www.seis-jun.xyz/how-to-download-video-from-internet.html</loc>
     <lastmod>2024-05-26</lastmod>
   </url>
@@ -286,6 +294,10 @@
   </url>
   <url>
     <loc>http://www.seis-jun.xyz/how-to-install-filezilla.html</loc>
+    <lastmod>2024-05-26</lastmod>
+  </url>
+  <url>
+    <loc>http://www.seis-jun.xyz/how-to-calculate-synthetic-NCF.html</loc>
     <lastmod>2024-05-26</lastmod>
   </url>
   <url>
@@ -325,10 +337,6 @@
     <lastmod>2024-05-26</lastmod>
   </url>
   <url>
-    <loc>http://www.seis-jun.xyz/history-and-inversion.html</loc>
-    <lastmod>2024-05-26</lastmod>
-  </url>
-  <url>
     <loc>http://www.seis-jun.xyz/no-more-blog-transfer.html</loc>
     <lastmod>2024-05-26</lastmod>
   </url>
@@ -353,10 +361,6 @@
     <lastmod>2024-05-26</lastmod>
   </url>
   <url>
-    <loc>http://www.seis-jun.xyz/avatar-to-homepage.html</loc>
-    <lastmod>2024-05-26</lastmod>
-  </url>
-  <url>
     <loc>http://www.seis-jun.xyz/gmt-time-axes.html</loc>
     <lastmod>2024-05-26</lastmod>
   </url>
@@ -378,6 +382,10 @@
   </url>
   <url>
     <loc>http://www.seis-jun.xyz/US-upper-mantle-vs-model.html</loc>
+    <lastmod>2024-05-26</lastmod>
+  </url>
+  <url>
+    <loc>http://www.seis-jun.xyz/avatar-to-homepage.html</loc>
     <lastmod>2024-05-26</lastmod>
   </url>
   <url>
@@ -461,10 +469,6 @@
     <lastmod>2024-05-26</lastmod>
   </url>
   <url>
-    <loc>http://www.seis-jun.xyz/%E4%B9%B12.html</loc>
-    <lastmod>2024-05-26</lastmod>
-  </url>
-  <url>
     <loc>http://www.seis-jun.xyz/%E5%90%AF%E7%A8%8B%E5%8E%BB%E7%8E%9B%E9%9B%85.html</loc>
     <lastmod>2024-05-26</lastmod>
   </url>
@@ -489,6 +493,10 @@
     <lastmod>2024-05-26</lastmod>
   </url>
   <url>
+    <loc>http://www.seis-jun.xyz/%E4%B9%B12.html</loc>
+    <lastmod>2024-05-26</lastmod>
+  </url>
+  <url>
     <loc>http://www.seis-jun.xyz/passwd-free-for-deployment.html</loc>
     <lastmod>2024-05-26</lastmod>
   </url>
@@ -497,15 +505,11 @@
     <lastmod>2024-05-26</lastmod>
   </url>
   <url>
-    <loc>http://www.seis-jun.xyz/show-picture-in-hexo.html</loc>
-    <lastmod>2024-05-26</lastmod>
-  </url>
-  <url>
     <loc>http://www.seis-jun.xyz/word-count.html</loc>
     <lastmod>2024-05-26</lastmod>
   </url>
   <url>
-    <loc>http://www.seis-jun.xyz/%E5%AF%82%E5%AF%9E.html</loc>
+    <loc>http://www.seis-jun.xyz/show-picture-in-hexo.html</loc>
     <lastmod>2024-05-26</lastmod>
   </url>
   <url>
@@ -525,15 +529,19 @@
     <lastmod>2024-05-26</lastmod>
   </url>
   <url>
-    <loc>http://www.seis-jun.xyz/%E6%98%9F%E6%9C%9F%E4%BA%94.html</loc>
-    <lastmod>2024-05-26</lastmod>
-  </url>
-  <url>
     <loc>http://www.seis-jun.xyz/%E5%A4%96%E5%A9%86%E5%A4%96%E5%85%AC%E7%9A%84%E6%95%85%E4%BA%8B.html</loc>
     <lastmod>2024-05-26</lastmod>
   </url>
   <url>
+    <loc>http://www.seis-jun.xyz/%E6%98%9F%E6%9C%9F%E4%BA%94.html</loc>
+    <lastmod>2024-05-26</lastmod>
+  </url>
+  <url>
     <loc>http://www.seis-jun.xyz/the-city-of-life-and-death.html</loc>
+    <lastmod>2024-05-26</lastmod>
+  </url>
+  <url>
+    <loc>http://www.seis-jun.xyz/%E5%AF%82%E5%AF%9E.html</loc>
     <lastmod>2024-05-26</lastmod>
   </url>
   <url>

@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2025-04-24T07:51:57.644Z</updated>
+  <updated>2025-05-10T08:01:14.570Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,58 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>鼠标点击位置记录</title>
+    <link href="http://www.seis-jun.xyz/mouse-click-monitoring"/>
+    <id>http://www.seis-jun.xyz/mouse-click-monitoring</id>
+    <published>2025-05-10T07:43:38.000Z</published>
+    <updated>2025-05-10T08:01:14.570Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
+    
+    
+    <category term="python" scheme="http://www.seis-jun.xyz/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>gmt怎么画箭头</title>
+    <link href="http://www.seis-jun.xyz/gmt-arrow"/>
+    <id>http://www.seis-jun.xyz/gmt-arrow</id>
+    <published>2025-05-10T07:32:41.000Z</published>
+    <updated>2025-05-10T07:42:47.648Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="gmt" scheme="http://www.seis-jun.xyz/categories/gmt/"/>
+    
+    
+    <category term="gmt" scheme="http://www.seis-jun.xyz/tags/gmt/"/>
+    
+    <category term="script" scheme="http://www.seis-jun.xyz/tags/script/"/>
+    
+  </entry>
   
   <entry>
     <title>下载地震数据练习</title>
@@ -28,7 +80,7 @@
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot;</summary>
         
       
     
@@ -72,7 +124,7 @@
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot;</summary>
         
       
     
@@ -97,7 +149,7 @@
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot;</summary>
         
       
     
@@ -122,7 +174,7 @@
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot;</summary>
         
       
     
@@ -149,7 +201,7 @@
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot;</summary>
         
       
     
@@ -387,42 +439,6 @@
     
     
     <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>obspy去polezero类型仪器仪响应</title>
-    <link href="http://www.seis-jun.xyz/obspy-paz"/>
-    <id>http://www.seis-jun.xyz/obspy-paz</id>
-    <published>2024-07-25T05:40:34.000Z</published>
-    <updated>2025-02-24T02:41:28.024Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;有些时候数据下载下来只有polezero格式的仪器响应，那python脚本怎么去仪器响应呢？&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
-    
-    
-    <category term="python" scheme="http://www.seis-jun.xyz/tags/python/"/>
-    
-    <category term="seismology" scheme="http://www.seis-jun.xyz/tags/seismology/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Beamforming 1</title>
-    <link href="http://www.seis-jun.xyz/music"/>
-    <id>http://www.seis-jun.xyz/music</id>
-    <published>2024-07-19T13:27:44.000Z</published>
-    <updated>2024-07-24T14:22:56.517Z</updated>
-    
-    
-    <summary type="html">这是一篇加密的文章，想看得问我密码。</summary>
-    
-    
-    
     
   </entry>
   
