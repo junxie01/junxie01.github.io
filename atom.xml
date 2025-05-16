@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2025-05-11T02:22:46.618Z</updated>
+  <updated>2025-05-16T06:46:09.339Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>下载地震数据更新</title>
+    <link href="http://www.seis-jun.xyz/download-eq-data"/>
+    <id>http://www.seis-jun.xyz/download-eq-data</id>
+    <published>2025-05-16T06:39:46.000Z</published>
+    <updated>2025-05-16T06:46:09.339Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="seismology" scheme="http://www.seis-jun.xyz/categories/seismology/"/>
+    
+    
+    <category term="python" scheme="http://www.seis-jun.xyz/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>鼠标点击位置记录</title>
@@ -73,7 +98,7 @@
     <link href="http://www.seis-jun.xyz/download-earthquake-py"/>
     <id>http://www.seis-jun.xyz/download-earthquake-py</id>
     <published>2025-04-24T07:33:35.000Z</published>
-    <updated>2025-04-24T07:51:57.644Z</updated>
+    <updated>2025-05-16T06:41:59.516Z</updated>
     
     
       
@@ -420,25 +445,6 @@
     
     
     <category term="paper" scheme="http://www.seis-jun.xyz/tags/paper/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何下载Fnet的台站列表</title>
-    <link href="http://www.seis-jun.xyz/how-to-download-fnet-station-list"/>
-    <id>http://www.seis-jun.xyz/how-to-download-fnet-station-list</id>
-    <published>2024-09-01T02:52:18.000Z</published>
-    <updated>2024-09-01T03:02:40.385Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;如何下载Fnet的台站列表？&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
-    
-    
-    <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
     
   </entry>
   
