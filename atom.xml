@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2025-05-16T06:46:09.339Z</updated>
+  <updated>2025-05-31T13:58:16.243Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -17,18 +17,37 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>即“蠢”又“坏”？</title>
+    <link href="http://www.seis-jun.xyz/bad-and-evil"/>
+    <id>http://www.seis-jun.xyz/bad-and-evil</id>
+    <published>2025-05-31T10:50:20.000Z</published>
+    <updated>2025-05-31T13:58:16.243Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;人大约都是即“蠢”又“坏”的吧！&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="某日记" scheme="http://www.seis-jun.xyz/categories/%E6%9F%90%E6%97%A5%E8%AE%B0/"/>
+    
+    
+    <category term="乱笔" scheme="http://www.seis-jun.xyz/tags/%E4%B9%B1%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
     <title>下载地震数据更新</title>
     <link href="http://www.seis-jun.xyz/download-eq-data"/>
     <id>http://www.seis-jun.xyz/download-eq-data</id>
     <published>2025-05-16T06:39:46.000Z</published>
-    <updated>2025-05-16T06:46:09.339Z</updated>
+    <updated>2025-05-16T06:46:19.646Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot;</summary>
         
       
     
@@ -53,7 +72,7 @@
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot;</summary>
         
       
     
@@ -78,7 +97,7 @@
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot;</summary>
         
       
     
@@ -105,7 +124,7 @@
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot;</summary>
         
       
     
@@ -149,7 +168,7 @@
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot;</summary>
         
       
     
@@ -174,7 +193,7 @@
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot;</summary>
         
       
     
@@ -199,7 +218,7 @@
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot;</summary>
         
       
     
@@ -226,7 +245,7 @@
       
         
         
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot;</summary>
         
       
     
@@ -419,25 +438,6 @@
     
     
     <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024GL108943?af=R&quot;&gt;Using Ocean Ambient Sound to Measure Local Integrated Deep Ocean Temperature&lt;/a&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
-    
-    
-    <category term="paper" scheme="http://www.seis-jun.xyz/tags/paper/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>文献阅读（十九）</title>
-    <link href="http://www.seis-jun.xyz/paper-reading-19"/>
-    <id>http://www.seis-jun.xyz/paper-reading-19</id>
-    <published>2024-09-03T13:58:47.000Z</published>
-    <updated>2024-09-03T14:12:28.701Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://pubs.geoscienceworld.org/ssa/srl/article-abstract/90/6/2175/573516/Estimation-of-the-Orientations-of-the-S-net-Cabled&quot;&gt;Estimation of the Orientations of the S-net Cabled Ocean-Bottom Sensors&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     
