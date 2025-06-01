@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2025-06-01T11:13:07.036Z</updated>
+  <updated>2025-06-01T12:03:44.309Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -21,16 +21,10 @@
     <link href="http://www.seis-jun.xyz/attention-mechanism"/>
     <id>http://www.seis-jun.xyz/attention-mechanism</id>
     <published>2025-06-01T11:07:33.000Z</published>
-    <updated>2025-06-01T11:13:07.036Z</updated>
+    <updated>2025-06-01T12:03:44.309Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
-        
-      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;今天学习注意力机制（&lt;a href=&quot;https://towardsdatascience.com/hands-on-attention-mechanism-for-time-series-classification-with-python/&quot;&gt;Attention Mechanism&lt;/a&gt;）。&lt;/p&gt;</summary>
     
     
     
@@ -46,10 +40,10 @@
     <link href="http://www.seis-jun.xyz/bad-and-evil"/>
     <id>http://www.seis-jun.xyz/bad-and-evil</id>
     <published>2025-05-31T10:50:20.000Z</published>
-    <updated>2025-06-01T02:07:13.971Z</updated>
+    <updated>2025-06-01T11:18:51.192Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;人大约都是即“蠢”又“坏”的吧！&lt;/p&gt;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;人大约都是即“蠢”又“坏”的吧！&lt;/p&gt;</summary>
     
     
     
@@ -170,7 +164,7 @@
     <updated>2025-04-23T07:47:29.840Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2024GL113290&quot;&gt;Coherence-Based Characterization of a Long-Period Monochromatic Seismic Signal&lt;/a&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2024GL113290&quot;&gt;Coherence-Based Characterization of a Long-Period Monochromatic Seismic Signal&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     
@@ -293,7 +287,7 @@
     <updated>2025-02-14T06:59:08.702Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://www.science.org/doi/10.1126/science.adr6139&quot;&gt;Depth-dependent seismic sensing of groundwater recovery from the atmospheric-river storms of 2023&lt;/a&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://www.science.org/doi/10.1126/science.adr6139&quot;&gt;Depth-dependent seismic sensing of groundwater recovery from the atmospheric-river storms of 2023&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     
@@ -312,7 +306,7 @@
     <updated>2025-02-10T10:41:08.035Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://www.science.org/doi/10.1126/science.adp8094&quot;&gt;Hidden cascades of seismic ice stream deformation&lt;/a&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://www.science.org/doi/10.1126/science.adp8094&quot;&gt;Hidden cascades of seismic ice stream deformation&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     
@@ -331,7 +325,7 @@
     <updated>2025-02-05T08:30:08.930Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;deepseek很火，我也来凑热闹。之前发布的一些LLM都没关注本地部署，因为似乎要钱，而deepseek是免费的（贫穷限制了我的想象）。&lt;/p&gt;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;deepseek很火，我也来凑热闹。之前发布的一些LLM都没关注本地部署，因为似乎要钱，而deepseek是免费的（贫穷限制了我的想象）。&lt;/p&gt;</summary>
     
     
     
@@ -350,7 +344,7 @@
     <updated>2024-12-19T11:39:05.492Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;记一次找回Linux启动项的经历&lt;/p&gt;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;记一次找回Linux启动项的经历&lt;/p&gt;</summary>
     
     
     
@@ -369,7 +363,7 @@
     <updated>2025-02-10T10:41:08.832Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://iopscience.iop.org/article/10.1088/1361-6633/aa8473&quot;&gt;Glacial seismology&lt;/a&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://iopscience.iop.org/article/10.1088/1361-6633/aa8473&quot;&gt;Glacial seismology&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     
@@ -388,7 +382,7 @@
     <updated>2024-11-02T07:49:22.068Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://www.frontiersin.org/journals/earth-science/articles/10.3389/feart.2021.667717/full&quot;&gt;Drivers of Recurring Seasonal Cycle of Glacier Calving Styles and Patterns&lt;/a&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://www.frontiersin.org/journals/earth-science/articles/10.3389/feart.2021.667717/full&quot;&gt;Drivers of Recurring Seasonal Cycle of Glacier Calving Styles and Patterns&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     
@@ -407,7 +401,7 @@
     <updated>2024-11-02T06:33:46.621Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://www.science.org/doi/10.1126/science.1162543&quot;&gt;A Simple Law for Ice-Shelf Calving&lt;/a&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://www.science.org/doi/10.1126/science.1162543&quot;&gt;A Simple Law for Ice-Shelf Calving&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     
@@ -426,7 +420,7 @@
     <updated>2024-10-12T05:42:05.998Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;转学习到的高效bash脚本。&lt;/p&gt;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;转学习到的高效bash脚本。&lt;/p&gt;</summary>
     
     
     
@@ -443,7 +437,7 @@
     <updated>2024-10-05T05:19:48.638Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://academic.oup.com/gji/article/218/1/560/5421624&quot;&gt;Global scale analysis and modelling of primary microseisms&lt;/a&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://academic.oup.com/gji/article/218/1/560/5421624&quot;&gt;Global scale analysis and modelling of primary microseisms&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     
