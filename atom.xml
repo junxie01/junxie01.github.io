@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2025-06-01T13:01:23.897Z</updated>
+  <updated>2025-06-07T09:21:52.865Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python脚本下载连续波形数据</title>
+    <link href="http://www.seis-jun.xyz/download-continuous-seis"/>
+    <id>http://www.seis-jun.xyz/download-continuous-seis</id>
+    <published>2025-06-07T09:09:37.000Z</published>
+    <updated>2025-06-07T09:21:52.865Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;这是连续波形数据下载更新。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
+    
+    
+    <category term="python" scheme="http://www.seis-jun.xyz/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>注意力机制</title>
@@ -426,25 +445,6 @@
     
     
     <category term="Linux" scheme="http://www.seis-jun.xyz/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>文献阅读（二十一）</title>
-    <link href="http://www.seis-jun.xyz/paper-reading-21"/>
-    <id>http://www.seis-jun.xyz/paper-reading-21</id>
-    <published>2024-10-05T05:13:07.000Z</published>
-    <updated>2024-10-05T05:19:48.638Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://academic.oup.com/gji/article/218/1/560/5421624&quot;&gt;Global scale analysis and modelling of primary microseisms&lt;/a&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
-    
-    
-    <category term="paper" scheme="http://www.seis-jun.xyz/tags/paper/"/>
     
   </entry>
   
