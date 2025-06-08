@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2025-06-08T13:04:37.346Z</updated>
+  <updated>2025-06-08T14:02:03.497Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://www.seis-jun.xyz/download-continous-data-update"/>
     <id>http://www.seis-jun.xyz/download-continous-data-update</id>
     <published>2025-06-08T12:42:13.000Z</published>
-    <updated>2025-06-08T13:04:37.346Z</updated>
+    <updated>2025-06-08T14:02:03.497Z</updated>
     
     
     <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;python脚本下载连续波形数据更新。&lt;/p&gt;</summary>
