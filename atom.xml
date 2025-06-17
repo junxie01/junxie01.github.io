@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2025-06-08T14:02:03.497Z</updated>
+  <updated>2025-06-17T05:32:51.125Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Fedora 40如何安装腾讯会议</title>
+    <link href="http://www.seis-jun.xyz/how-to-install-wemeet"/>
+    <id>http://www.seis-jun.xyz/how-to-install-wemeet</id>
+    <published>2025-06-17T05:20:08.000Z</published>
+    <updated>2025-06-17T05:32:51.125Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;没想到腾讯开发了Linux版本下的腾讯会议。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Linux" scheme="http://www.seis-jun.xyz/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="http://www.seis-jun.xyz/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>python脚本下载连续波形数据更新</title>
@@ -436,25 +455,6 @@
     
     
     <category term="Linux" scheme="http://www.seis-jun.xyz/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>文献阅读(24)</title>
-    <link href="http://www.seis-jun.xyz/paper-reading-24"/>
-    <id>http://www.seis-jun.xyz/paper-reading-24</id>
-    <published>2024-11-07T13:55:03.000Z</published>
-    <updated>2025-02-10T10:41:08.832Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://iopscience.iop.org/article/10.1088/1361-6633/aa8473&quot;&gt;Glacial seismology&lt;/a&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
-    
-    
-    <category term="paper" scheme="http://www.seis-jun.xyz/tags/paper/"/>
     
   </entry>
   
