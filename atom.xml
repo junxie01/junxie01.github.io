@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2025-06-17T12:58:56.360Z</updated>
+  <updated>2025-06-17T13:30:40.581Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Hexo下如何画流程图</title>
+    <link href="http://www.seis-jun.xyz/plot-work-flow"/>
+    <id>http://www.seis-jun.xyz/plot-work-flow</id>
+    <published>2025-06-17T13:13:32.000Z</published>
+    <updated>2025-06-17T13:30:40.581Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;那么Hexo下如何画流程图呢？&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="web" scheme="http://www.seis-jun.xyz/categories/web/"/>
+    
+    
+    <category term="Linux" scheme="http://www.seis-jun.xyz/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
     <title>学习Sequencer</title>
     <link href="http://www.seis-jun.xyz/run-sequencer"/>
     <id>http://www.seis-jun.xyz/run-sequencer</id>
     <published>2025-06-17T11:17:21.000Z</published>
-    <updated>2025-06-17T12:58:56.360Z</updated>
+    <updated>2025-06-17T12:59:42.945Z</updated>
     
     
     <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;今天学习Sequencer。&lt;/p&gt;</summary>
@@ -436,25 +455,6 @@
     
     
     <category term="paper" scheme="http://www.seis-jun.xyz/tags/paper/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何在自己电脑中部署deepseek</title>
-    <link href="http://www.seis-jun.xyz/how-to-install-deepseek"/>
-    <id>http://www.seis-jun.xyz/how-to-install-deepseek</id>
-    <published>2025-02-05T08:00:13.000Z</published>
-    <updated>2025-02-05T08:30:08.930Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;deepseek很火，我也来凑热闹。之前发布的一些LLM都没关注本地部署，因为似乎要钱，而deepseek是免费的（贫穷限制了我的想象）。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Linux" scheme="http://www.seis-jun.xyz/categories/Linux/"/>
-    
-    
-    <category term="Linux" scheme="http://www.seis-jun.xyz/tags/Linux/"/>
     
   </entry>
   
