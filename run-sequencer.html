@@ -30,7 +30,7 @@
 <meta property="og:description" content="&emsp;&emsp;今天学习Sequencer。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-06-17T11:17:21.000Z">
-<meta property="article:modified_time" content="2025-06-17T12:59:42.945Z">
+<meta property="article:modified_time" content="2025-06-18T01:21:47.847Z">
 <meta property="article:author" content="Jun Xie">
 <meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
@@ -251,9 +251,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2025-06-17 19:17:21 / 修改时间：20:59:42" itemprop="dateCreated datePublished" datetime="2025-06-17T19:17:21+08:00">2025-06-17</time>
+      <time title="创建时间：2025-06-17 19:17:21" itemprop="dateCreated datePublished" datetime="2025-06-17T19:17:21+08:00">2025-06-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-06-18 09:21:47" itemprop="dateModified" datetime="2025-06-18T09:21:47+08:00">2025-06-18</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -329,12 +335,12 @@ G --> H[BFS序列提取]</pre>
 <li>能量距离（分布差异）<br>   为什么多度量？ 不同度量揭示不同特征（如EMD检测谱线位移，欧氏距离捕捉整体形态）。</li>
 </ul>
 <ol start="3">
-<li>MST构建与η计算<br>   对每个（度量, 尺度, 片段）生成距离矩阵 → 构建MST → 计算伸长率$η_{klm}$。例（文章图3）：窄脉冲数据在小尺度（l&#x3D;4,5）的欧氏距离获得高η，指示局部趋势。</li>
+<li>MST构建与η计算<br>   对每个（度量, 尺度, 片段）生成距离矩阵 → 构建MST → 计算伸长率$ η_{klm} $。例（文章图3）：窄脉冲数据在小尺度（l&#x3D;4,5）的欧氏距离获得高η，指示局部趋势。</li>
 <li>信息聚合</li>
 </ol>
 <ul>
-<li>片段聚合：对固定（度量,尺度），用η加权平均各片段距离矩阵：$D_{kl}&#x3D;⟨η_{klm}⋅D_{klm}⟩_m$</li>
-<li>全局聚合：用η加权合并所有MST的边，构建全局邻近矩阵：<br>$P_{combined}&#x3D;⟨η_{kl}⋅#edges(MST_{kl})⟩_kl$</li>
+<li>片段聚合：对固定（度量,尺度），用η加权平均各片段距离矩阵：$ D_{kl}&#x3D;⟨η_{klm}⋅D_{klm}⟩_m $</li>
+<li>全局聚合：用η加权合并所有MST的边，构建全局邻近矩阵：<br>$$ P_{combined}&#x3D;⟨η_{kl}⋅#edges(MST_{kl})⟩_kl $$</li>
 </ul>
 <ol start="5">
 <li>序列提取<br>   构建全局MST → 从最不连通节点开始广度优先搜索（BFS），生成最终序列顺序。</li>
@@ -356,7 +362,7 @@ G --> H[BFS序列提取]</pre>
 * 高动态范围数据：建议对数缩放（如亮度值）避免少数像素主导。
 * 缺失值：需插值或剔除，否则距离度量失效。
 2. 计算优化
-* 大数据集（$N&gt;104$）：
+* 大数据集（$ N&gt;104 $）：
  ** 启用子采样模式（见7.3节）：
  1. 在小样本（Ns≪N）构建初始序列。
  2. 按锚点（f AN s）逐步插入剩余点。
@@ -370,7 +376,7 @@ G --> H[BFS序列提取]</pre>
 </ol>
 <ul>
 <li>检查高η度量：分析主导趋势的度量（如EMD指示位移，KL散度捕获分布变化）。</li>
-<li>残差分析（见5.1节）：<br>   ** 沿序列方向平滑数据 → 比较原始值与平滑值的残差。<br>大残差可能指示异常点或次级趋势。<br>   ** 对比降维方法：用归一化伸长率$η′&#x3D;η&#x2F;N$评估t-SNE&#x2F;UMAP结果（图7,8）。</li>
+<li>残差分析（见5.1节）：<br>   ** 沿序列方向平滑数据 → 比较原始值与平滑值的残差。<br>大残差可能指示异常点或次级趋势。<br>   ** 对比降维方法：用归一化伸长率$ η′&#x3D;η&#x2F;N $评估t-SNE&#x2F;UMAP结果（图7,8）。</li>
 </ul>
 <ol start="4">
 <li>局限性</li>
@@ -459,7 +465,7 @@ G --> H[BFS序列提取]</pre>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">3:53</span>
+    <span title="站点阅读时长">3:54</span>
   </span>
 </div>
 <div class="busuanzi-count">
