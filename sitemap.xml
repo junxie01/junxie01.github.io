@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.seis-jun.xyz/jupyter-notebook-extensions</loc>
+    
+    <lastmod>2025-06-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://www.seis-jun.xyz/news-website</loc>
     
     <lastmod>2025-06-21</lastmod>
@@ -947,15 +956,6 @@
   </url>
   
   <url>
-    <loc>http://www.seis-jun.xyz/how-to-add-frame-in-hexo-next</loc>
-    
-    <lastmod>2024-05-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://www.seis-jun.xyz/install-and-backup-mediawiki</loc>
     
     <lastmod>2024-05-26</lastmod>
@@ -966,6 +966,15 @@
   
   <url>
     <loc>http://www.seis-jun.xyz/avatar-to-homepage</loc>
+    
+    <lastmod>2024-05-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.seis-jun.xyz/how-to-add-frame-in-hexo-next</loc>
     
     <lastmod>2024-05-26</lastmod>
     
@@ -1208,7 +1217,7 @@
   </url>
   
   <url>
-    <loc>http://www.seis-jun.xyz/%E5%90%AF%E7%A8%8B%E5%8E%BB%E7%8E%9B%E9%9B%85</loc>
+    <loc>http://www.seis-jun.xyz/%E4%B9%B12</loc>
     
     <lastmod>2024-05-26</lastmod>
     
@@ -1217,7 +1226,7 @@
   </url>
   
   <url>
-    <loc>http://www.seis-jun.xyz/%E4%B9%B12</loc>
+    <loc>http://www.seis-jun.xyz/%E5%90%AF%E7%A8%8B%E5%8E%BB%E7%8E%9B%E9%9B%85</loc>
     
     <lastmod>2024-05-26</lastmod>
     
@@ -1711,14 +1720,14 @@
   </url>
   
   <url>
-    <loc>http://www.seis-jun.xyz/tags/blog/</loc>
+    <loc>http://www.seis-jun.xyz/tags/wiki/</loc>
     <lastmod>2025-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.seis-jun.xyz/tags/wiki/</loc>
+    <loc>http://www.seis-jun.xyz/tags/blog/</loc>
     <lastmod>2025-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1837,14 +1846,14 @@
   </url>
   
   <url>
-    <loc>http://www.seis-jun.xyz/tags/laTeX/</loc>
+    <loc>http://www.seis-jun.xyz/tags/%E6%9F%90%E6%97%A5%E8%AE%B0/</loc>
     <lastmod>2025-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.seis-jun.xyz/tags/%E6%9F%90%E6%97%A5%E8%AE%B0/</loc>
+    <loc>http://www.seis-jun.xyz/tags/laTeX/</loc>
     <lastmod>2025-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
