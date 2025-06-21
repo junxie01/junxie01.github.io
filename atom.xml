@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2025-06-21T11:47:18.148Z</updated>
+  <updated>2025-06-21T11:23:03.220Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,27 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>有趣的jupyter-notebook插件</title>
-    <link href="http://www.seis-jun.xyz/jupyter-notebook-extensions"/>
-    <id>http://www.seis-jun.xyz/jupyter-notebook-extensions</id>
-    <published>2025-06-21T11:45:32.000Z</published>
-    <updated>2025-06-21T11:47:18.148Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
   
   <entry>
     <title>有趣的新闻网站</title>
@@ -459,6 +438,33 @@
     
     
     <category term="python" scheme="http://www.seis-jun.xyz/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>obspy下载连续背景噪声数据</title>
+    <link href="http://www.seis-jun.xyz/down-ambient-noise-py"/>
+    <id>http://www.seis-jun.xyz/down-ambient-noise-py</id>
+    <published>2025-04-21T13:17:55.000Z</published>
+    <updated>2025-04-21T13:23:00.240Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
+    
+    
+    <category term="python" scheme="http://www.seis-jun.xyz/tags/python/"/>
+    
+    <category term="obspy" scheme="http://www.seis-jun.xyz/tags/obspy/"/>
     
   </entry>
   
