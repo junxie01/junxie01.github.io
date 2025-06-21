@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/j-icon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/j-icon-16x16.png">
+  <link rel="mask-icon" href="/images/icon.png" color="#222">
+  <meta name="google-site-verification" content="google7b56233b0c90910d.html">
+  <meta name="baidu-site-verification" content="l7XxPhR6zN">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.seis-jun.xyz","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="&emsp;&emsp;以下是python脚本练习。其完成的功能包括：  遍历目录events_20250619下所有子目录中以bhz.SAC_rm结尾的SAC文件； 对这些数据进行窄带滤波，宽度为中心频率（周期分之一）的$\pm$5mHz，滤波器为4个极点0相位的Butterworth，滤波周期为arange(25,145,10)； 计算窄带滤波后的每个周期的信噪比。信噪比定义为信号窗口内，波形">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PYTHON脚本练习（一）">
+<meta property="og:url" content="http://www.seis-jun.xyz/python-script1">
+<meta property="og:site_name" content="SEISAMUSE">
+<meta property="og:description" content="&emsp;&emsp;以下是python脚本练习。其完成的功能包括：  遍历目录events_20250619下所有子目录中以bhz.SAC_rm结尾的SAC文件； 对这些数据进行窄带滤波，宽度为中心频率（周期分之一）的$\pm$5mHz，滤波器为4个极点0相位的Butterworth，滤波周期为arange(25,145,10)； 计算窄带滤波后的每个周期的信噪比。信噪比定义为信号窗口内，波形">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-06-21T06:29:56.000Z">
+<meta property="article:modified_time" content="2025-06-21T06:56:12.966Z">
+<meta property="article:author" content="Jun Xie">
+<meta property="article:tag" content="python">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://www.seis-jun.xyz/python-script1.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://www.seis-jun.xyz/python-script1","path":"python-script1.html","title":"PYTHON脚本练习（一）"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>PYTHON脚本练习（一） | SEISAMUSE</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168057869-1"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-168057869-1","only_pageview":false,"measure_protocol_api_secret":null}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+  <script src="/js/third-party/analytics/baidu-analytics.js"></script>
+  <script async src="https://hm.baidu.com/hm.js?0723cf651cbf165b63377fccb701c171"></script>
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<!-- hexo injector head_end end --><link rel="alternate" href="/atom.xml" title="SEISAMUSE" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">SEISAMUSE</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Jun Xie的博客</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+<a herf="/">
+    <img class="site-author-image" itemprop="image" alt="Jun Xie"
+      src="/images/seisamuse.png">
+</a>
+  <p class="site-author-name" itemprop="name">Jun Xie</p>
+  <div class="site-description" itemprop="description">好记性不如烂笔头</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">151</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">75</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/junxie01" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;junxie01" rel="noopener me external nofollow noreferrer" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+  <script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
+  <script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div id="myCanvasContainer" class="widget tagcloud">
+      <canvas width="250" height="250" id="resCanvas" style="width:100%">
+        <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NCF/" rel="tag">NCF</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Seismology/" rel="tag">Seismology</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ai/" rel="tag">ai</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/axes/" rel="tag">axes</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/" rel="tag">blog</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blogs/" rel="tag">blogs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/code/" rel="tag">code</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/filezilla/" rel="tag">filezilla</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/glacial-seismology/" rel="tag">glacial seismology</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gmt/" rel="tag">gmt</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/grub/" rel="tag">grub</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/laTeX/" rel="tag">laTeX</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/model/" rel="tag">model</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/next/" rel="tag">next</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/obspy/" rel="tag">obspy</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/paper/" rel="tag">paper</a><span class="tag-list-count">30</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/project/" rel="tag">project</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a><span class="tag-list-count">14</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/review/" rel="tag">review</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/science/" rel="tag">science</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/script/" rel="tag">script</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sed/" rel="tag">sed</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/seismic/" rel="tag">seismic</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/seismology/" rel="tag">seismology</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sem/" rel="tag">sem</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/video/" rel="tag">video</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web/" rel="tag">web</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wiki/" rel="tag">wiki</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/work/" rel="tag">work</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%AD%E6%96%87/" rel="tag">中文</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B9%B1/" rel="tag">乱</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B9%B1%E7%AC%94/" rel="tag">乱笔</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%84%BF%E5%AD%90/" rel="tag">儿子</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag">博客</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8E%86%E5%8F%B2/" rel="tag">历史</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8F%8D%E6%BC%94/" rel="tag">反演</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%91%BD%E9%A2%98%E4%BD%9C%E6%96%87/" rel="tag">命题作文</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%96%E5%85%AC/" rel="tag">外公</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%96%E5%A9%86/" rel="tag">外婆</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%A7%E8%84%91/" rel="tag">大脑</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A5%BD%E5%8F%8B/" rel="tag">好友</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A6%96%E6%80%AA/" rel="tag">妖怪</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%81%E6%B3%A2/" rel="tag">宁波</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%89%E6%81%AF/" rel="tag">安息</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%86%8E%E6%81%A8/" rel="tag">憎恨</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%88%90%E9%83%BD/" rel="tag">成都</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%89%93%E7%89%8C/" rel="tag">打牌</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%A0%E9%A2%98/" rel="tag">无题</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%A5%E8%AE%B0/" rel="tag">日记</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9D%82/" rel="tag">杂</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9F%90%E6%97%A5%E8%AE%B0/" rel="tag">某日记</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B4%BB%E7%9D%80/" rel="tag">活着</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%8C%AB/" rel="tag">猫</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%94%B5%E5%BD%B1/" rel="tag">电影</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%94%B5%E8%A7%86%E5%89%A7/" rel="tag">电视剧</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%98%BE/" rel="tag">瘾</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9B%86%E5%9C%B0/" rel="tag">盆地</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BD%91%E6%98%93/" rel="tag">网易</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%8C%B6%E9%93%BA/" rel="tag">茶铺</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%A1%E5%BC%82/" rel="tag">诡异</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%BB%E5%90%8E%E6%84%9F/" rel="tag">读后感</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BA%AF%E5%A3%B3/" rel="tag">躯壳</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BF%87%E6%B8%A1%E5%B8%A6/" rel="tag">过渡带</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BF%99%E6%98%AF%E5%95%A5/" rel="tag">这是啥</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BF%B7%E9%9B%BE/" rel="tag">迷雾</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%80%9D%E8%80%85/" rel="tag">逝者</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%98%BF%E7%94%98/" rel="tag">阿甘</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9B%BE%E9%9C%BE/" rel="tag">雾霾</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9C%B8%E7%8E%8B%E5%88%AB%E5%A7%AC/" rel="tag">霸王别姬</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%A5%AD%E5%90%8E%E6%84%9F/" rel="tag">饭后感</a><span class="tag-list-count">1</span></li></ul>
+      </canvas>
+    </div>
+  </div>
+
+
+        </div>
+      </div>
+    </div>
+
+    
+        <div class="pjax">
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.seis-jun.xyz/python-script1">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/seisamuse.png">
+      <meta itemprop="name" content="Jun Xie">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SEISAMUSE">
+      <meta itemprop="description" content="好记性不如烂笔头">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="PYTHON脚本练习（一） | SEISAMUSE">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          PYTHON脚本练习（一）
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2025-06-21 14:29:56 / 修改时间：14:56:12" itemprop="dateCreated datePublished" datetime="2025-06-21T14:29:56+08:00">2025-06-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/work/" itemprop="url" rel="index"><span itemprop="name">work</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4.7k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;以下是python脚本练习。其完成的功能包括：</p>
+<ul>
+<li>遍历目录events_20250619下所有子目录中以bhz.SAC_rm结尾的SAC文件；</li>
+<li>对这些数据进行窄带滤波，宽度为中心频率（周期分之一）的$\pm$5mHz，滤波器为4个极点0相位的Butterworth，滤波周期为arange(25,145,10)；</li>
+<li>计算窄带滤波后的每个周期的信噪比。信噪比定义为信号窗口内，波形包络的最大值比上噪声窗口的均方根。信号窗口定义为2.5-5km&#x2F;s的到时。噪声窗定义为信号末端之后1000秒开始的1000秒长度的窗口。计算的信噪比写入到user0；</li>
+<li>将处理后的数据写到新的文件夹bp_sac中，文件名命名为z.year.jday.00.STA.bhz.period，仅保留信噪比大于3的数据。</li>
+<li>采用并行处理(8个cpu)。</li>
+<li>统计每个周期信噪比大于3的波形数据。</li>
+<li>统计每个周期信噪比大于3的波形的平均信噪比。</li>
+<li>将统计结构写入csv，并画出统计结果。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br></pre></td><td class="code"><pre><span class="line">import os</span><br><span class="line">import numpy as np</span><br><span class="line">import pandas as pd</span><br><span class="line">import matplotlib.pyplot as plt</span><br><span class="line">from obspy import read</span><br><span class="line">from obspy.signal.filter import envelope</span><br><span class="line">from concurrent.futures import ThreadPoolExecutor, as_completed</span><br><span class="line">from collections import defaultdict</span><br><span class="line"></span><br><span class="line"># 参数设置 </span><br><span class="line">input_root = &quot;events_20250619&quot;</span><br><span class="line">output_root = &quot;bp_sac&quot;</span><br><span class="line">center_periods = np.arange(25, 150, 10)</span><br><span class="line">bandwidth = 0.010</span><br><span class="line">vmin, vmax = 2.5, 5.0</span><br><span class="line">noise_offset, noise_len = 1000, 1000</span><br><span class="line">snr_threshold = 3.0</span><br><span class="line">max_workers = 8  # 根据 CPU 核心数调整</span><br><span class="line"></span><br><span class="line"># 存储每个周期的 SNR 值</span><br><span class="line">period_snr_map = defaultdict(list)</span><br><span class="line"></span><br><span class="line">def process_file(filepath, root):</span><br><span class="line">    results = []</span><br><span class="line">    try:</span><br><span class="line">        st = read(filepath)</span><br><span class="line">        tr = st[0]</span><br><span class="line">        sac = tr.stats.sac</span><br><span class="line">    except Exception as e:</span><br><span class="line">        print(f&quot;跳过 &#123;filepath&#125;: &#123;e&#125;&quot;)</span><br><span class="line">        return results</span><br><span class="line"></span><br><span class="line">    if not hasattr(sac, &quot;o&quot;) or not hasattr(sac, &quot;dist&quot;):</span><br><span class="line">        return results</span><br><span class="line"></span><br><span class="line">    dist = sac.dist</span><br><span class="line">    starttime = tr.stats.starttime</span><br><span class="line">    win_start = starttime + dist / vmax</span><br><span class="line">    win_end = starttime + dist / vmin</span><br><span class="line">    t = tr.times()</span><br><span class="line">    abs_time = np.array([starttime + float(tt) for tt in t])</span><br><span class="line"></span><br><span class="line">    for period in center_periods:</span><br><span class="line">        fc = 1.0 / period</span><br><span class="line">        fmin, fmax = fc - bandwidth / 2, fc + bandwidth / 2</span><br><span class="line">        if fmin &lt;= 0:</span><br><span class="line">            continue</span><br><span class="line">        tr_filt = tr.copy()</span><br><span class="line">        tr_filt.detrend(&quot;demean&quot;)</span><br><span class="line">        tr_filt.taper(0.05)</span><br><span class="line">        tr_filt.filter(&quot;bandpass&quot;, freqmin=fmin, freqmax=fmax, corners=4, zerophase=True)</span><br><span class="line">        env = envelope(tr_filt.data)</span><br><span class="line">        idx_sig = np.where((abs_time &gt;= win_start) &amp; (abs_time &lt;= win_end))[0]</span><br><span class="line">        if len(idx_sig) == 0:</span><br><span class="line">            continue</span><br><span class="line">        signal_max = np.max(env[idx_sig])</span><br><span class="line">        noise_start = win_end + noise_offset</span><br><span class="line">        noise_end = noise_start + noise_len</span><br><span class="line">        idx_noise = np.where((abs_time &gt;= noise_start) &amp; (abs_time &lt;= noise_end))[0]</span><br><span class="line">        if len(idx_noise) == 0:</span><br><span class="line">            continue</span><br><span class="line">        noise_rms = np.sqrt(np.mean(env[idx_noise] ** 2))</span><br><span class="line">        snr = signal_max / noise_rms if noise_rms &gt; 0 else 0</span><br><span class="line"></span><br><span class="line">        if snr &gt;= snr_threshold:</span><br><span class="line">            tr_filt.stats.sac.user0 = snr</span><br><span class="line">            year = tr.stats.starttime.year</span><br><span class="line">            jday = tr.stats.starttime.julday</span><br><span class="line">            station = tr.stats.station.lower()</span><br><span class="line">            channel = tr.stats.channel.lower()</span><br><span class="line">            outname = f&quot;z.&#123;year&#125;.&#123;jday:03d&#125;.00.&#123;station&#125;.&#123;channel&#125;.&#123;period:03d&#125;&quot;</span><br><span class="line"></span><br><span class="line">            rel_dir = os.path.relpath(root, input_root)</span><br><span class="line">            out_dir = os.path.join(output_root, rel_dir)</span><br><span class="line">            os.makedirs(out_dir, exist_ok=True)</span><br><span class="line">            outpath = os.path.join(out_dir, outname)</span><br><span class="line">            tr_filt.write(outpath, format=&quot;SAC&quot;)</span><br><span class="line"></span><br><span class="line">            results.append((period, snr))</span><br><span class="line">            print(f&quot;✔ 保存: &#123;outname&#125;, SNR=&#123;snr:.2f&#125;&quot;)</span><br><span class="line"></span><br><span class="line">    return results</span><br><span class="line"># ===== 收集所有文件路径 =====</span><br><span class="line">all_files = []</span><br><span class="line">for root, dirs, files in os.walk(input_root):</span><br><span class="line">    for file in files:</span><br><span class="line">        if file.endswith(&quot;bhz.SAC_rm&quot;):</span><br><span class="line">            all_files.append((os.path.join(root, file), root))</span><br><span class="line"></span><br><span class="line">print(f&quot;📁 待处理文件数: &#123;len(all_files)&#125;&quot;)</span><br><span class="line"></span><br><span class="line"># ===== 并行处理 =====</span><br><span class="line">with ThreadPoolExecutor(max_workers=max_workers) as executor:</span><br><span class="line">    future_to_file = &#123;executor.submit(process_file, fpath, root): (fpath, root) for fpath, root in all_files&#125;</span><br><span class="line">    for future in as_completed(future_to_file):</span><br><span class="line">        try:</span><br><span class="line">            result = future.result()</span><br><span class="line">            for period, snr in result:</span><br><span class="line">                period_snr_map[period].append(snr)</span><br><span class="line">        except Exception as e:</span><br><span class="line">            fpath, _ = future_to_file[future]</span><br><span class="line">            print(f&quot;❌ 文件出错 &#123;fpath&#125;: &#123;e&#125;&quot;)</span><br><span class="line"></span><br><span class="line"># ===== 统计与可视化 =====</span><br><span class="line">periods = sorted(period_snr_map.keys())</span><br><span class="line">counts = [len(period_snr_map[p]) for p in periods]</span><br><span class="line">means = [np.mean(period_snr_map[p]) if len(period_snr_map[p]) &gt; 0 else 0 for p in periods]</span><br><span class="line"></span><br><span class="line">df = pd.DataFrame(&#123;</span><br><span class="line">    &quot;Period(s)&quot;: periods,</span><br><span class="line">    &quot;Count(SNR&gt;3)&quot;: counts,</span><br><span class="line">    &quot;Mean_SNR(SNR&gt;3)&quot;: means</span><br><span class="line">&#125;)</span><br><span class="line">df.to_csv(&quot;snr_stats.csv&quot;, index=False)</span><br><span class="line"></span><br><span class="line"># === 可视化 ===</span><br><span class="line">plt.figure(figsize=(10, 6))</span><br><span class="line">plt.bar(periods, counts, width=4, color=&#x27;skyblue&#x27;, edgecolor=&#x27;black&#x27;)</span><br><span class="line">plt.xlabel(&quot;Period (s)&quot;)</span><br><span class="line">plt.ylabel(&quot;Count of SNR &gt; 3&quot;)</span><br><span class="line">plt.title(&quot;Number of Traces with SNR &gt; 3 per Period&quot;)</span><br><span class="line">plt.grid(True, linestyle=&quot;--&quot;, alpha=0.5)</span><br><span class="line">plt.tight_layout()</span><br><span class="line">plt.savefig(&quot;snr_count_bar.png&quot;, dpi=150)</span><br><span class="line"></span><br><span class="line">plt.figure(figsize=(10, 6))</span><br><span class="line">plt.plot(periods, means, marker=&#x27;o&#x27;, linestyle=&#x27;-&#x27;, color=&#x27;orange&#x27;)</span><br><span class="line">plt.xlabel(&quot;Period (s)&quot;)</span><br><span class="line">plt.ylabel(&quot;Mean SNR (SNR &gt; 3)&quot;)</span><br><span class="line">plt.title(&quot;Mean SNR of Traces with SNR &gt; 3 per Period&quot;)</span><br><span class="line">plt.grid(True, linestyle=&quot;--&quot;, alpha=0.5)</span><br><span class="line">plt.tight_layout()</span><br><span class="line">plt.savefig(&quot;snr_mean_line.png&quot;, dpi=150)</span><br><span class="line"></span><br><span class="line">print(&quot;🎉 并行处理完成，统计结果写入 snr_stats.csv&quot;)</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="Jun Xie 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.png" alt="Jun Xie 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/python/" rel="tag"># python</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/plot-work-flow" rel="prev" title="Hexo下如何画流程图">
+                  <i class="fa fa-angle-left"></i> Hexo下如何画流程图
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments utterances-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2020 – 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Jun Xie</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">244k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">3:42</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.umd.js" integrity="sha256-a+H7FYzJv6oU2hfsfDGM2Ohw/cR9v+hPfxHCLdmCrE8=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.0/mermaid.min.js","integrity":"sha256-stuqcu2FrjYCXDOytWFA5SoUE/r3nkp6gTglzNSlavU="}}</script>
+  <script src="/js/third-party/tags/mermaid.js"></script>
+
+
+  <script src="/js/third-party/fancybox.js"></script>
+
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"junxie01/utt","issue_term":"pathname","theme":"github-light"}</script>
+<script src="/js/third-party/comments/utterances.js"></script>
+
+</body>
+</html>
