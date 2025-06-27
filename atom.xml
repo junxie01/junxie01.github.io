@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2025-06-21T12:30:04.873Z</updated>
+  <updated>2025-06-27T00:39:18.211Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,21 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>mfp</title>
+    <link href="http://www.seis-jun.xyz/mfp"/>
+    <id>http://www.seis-jun.xyz/mfp</id>
+    <published>2025-06-27T00:34:58.000Z</published>
+    <updated>2025-06-27T00:39:18.211Z</updated>
+    
+    
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;今天学习匹配场处理（Matched Field Processing, MFP）。&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>有趣的jupyter-notebook插件</title>
@@ -435,31 +450,6 @@
     
     
     <category term="seismology" scheme="http://www.seis-jun.xyz/categories/seismology/"/>
-    
-    
-    <category term="python" scheme="http://www.seis-jun.xyz/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何下载Fnet数据</title>
-    <link href="http://www.seis-jun.xyz/download-fnet-data-py"/>
-    <id>http://www.seis-jun.xyz/download-fnet-data-py</id>
-    <published>2025-04-22T00:36:57.000Z</published>
-    <updated>2025-04-22T00:54:00.522Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
     
     
     <category term="python" scheme="http://www.seis-jun.xyz/tags/python/"/>

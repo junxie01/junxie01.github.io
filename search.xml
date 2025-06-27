@@ -5683,4 +5683,44 @@ G --> H[BFS序列提取]</pre>
         <tag>python</tag>
       </tags>
   </entry>
+  <entry>
+    <title>mfp</title>
+    <url>/mfp.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>&emsp;&emsp;MFP是一种定位算法，最早应用于海洋声学领域（Baggeroer &amp; Kuperman，1988），目前在地震学中已广泛用于地震或微震定位（如 Cros et al.，2011；Gal et al.，2018）。以下为 MFP 的简要推导：</p>
+<h2 id="MFP-功率"><a href="#MFP-功率" class="headerlink" title="MFP 功率"></a>MFP 功率</h2><ul>
+<li>步骤 1：计算傅里叶谱向量<br>(<br>\boldsymbol{u}(\omega) &#x3D; [u_1(\omega), u_2(\omega), \cdots, u_N(\omega)]^T, \tag{1}<br>)</li>
+</ul>
+<p>   式中，(N)为接收器总数，(T)表示转置运算，(u_i(\omega))为第(i)个接收器记录的傅里叶谱，(\omega)为角频率。</p>
+<ul>
+<li>步骤 2：计算协方差矩阵<br>(<br>\boldsymbol{C}(\omega) &#x3D; \boldsymbol{u}(\omega)\boldsymbol{u}^H(\omega), \tag{2}<br>)</li>
+</ul>
+<p>  其中，(H)表示共轭转置运算。</p>
+<ul>
+<li><p>步骤 3：协方差矩阵归一化（仅保留相位信息）<br>(<br>\tilde{C}<em>{mn}(\omega) &#x3D; \frac{C</em>{mn}(\omega)}{\vert C_{mn}(\omega) \vert}. \tag{3}<br>)</p>
+</li>
+<li><p>步骤 4：生成导向矢量<br>(<br>\boldsymbol{a}(\omega, v, \boldsymbol{r}) &#x3D; \left[ e^{-i\omega \vert \boldsymbol{r}-\boldsymbol{r}_1 \vert &#x2F; v}, e^{-i\omega \vert \boldsymbol{r}-\boldsymbol{r}_2 \vert &#x2F; v}, \cdots, e^{-i\omega \vert \boldsymbol{r}-\boldsymbol{r}_N \vert &#x2F; v} \right]^T, \tag{4}<br>)</p>
+</li>
+</ul>
+<p>   其中，(v)为波速，(\boldsymbol{r})和(\boldsymbol{r}_i)分别为候选震源位置和第(i)个接收器的位置。</p>
+<ul>
+<li>步骤 5：定义 MFP 相干性<br>(<br>P(\omega, v, \boldsymbol{r}) &#x3D; \frac{1}{N^2} \boldsymbol{a}^H(\omega, v, \boldsymbol{r}) \tilde{\boldsymbol{C}}(\omega) \boldsymbol{a}(\omega, v, \boldsymbol{r}). \tag{5}<br>)</li>
+</ul>
+<p>当MFP相干性达到最大值时，对应位置即为潜在震源位置。</p>
+<ul>
+<li>局限性：由于地球内部地震波传播速度的非均匀性，MFP 在地震学中的应用存在限制。因此，部分研究在涉及三维地震波速模型时采用射线追踪计算走时（Gal 等人，2018）。</li>
+</ul>
+<h2 id="MFP-阵列响应函数"><a href="#MFP-阵列响应函数" class="headerlink" title="MFP 阵列响应函数"></a>MFP 阵列响应函数</h2><p>与 F-K 波束形成类似，可通过给定震源位置、波速和频率的信号，检验阵列几何配置的分辨率。</p>
+<ul>
+<li><p>步骤 1：构造信号复谱向量<br>利用给定的波速(v)、震源位置(\boldsymbol{r}_0)和频率(\omega)，生成：<br>(<br>\boldsymbol{u}(\omega, v, \boldsymbol{r}_0) &#x3D; \left[ e^{-i\omega \vert \boldsymbol{r}_0-\boldsymbol{r}_1 \vert &#x2F; v}, e^{-i\omega \vert \boldsymbol{r}_0-\boldsymbol{r}_2 \vert &#x2F; v}, \cdots, e^{-i\omega \vert \boldsymbol{r}_0-\boldsymbol{r}_N \vert &#x2F; v} \right]^T. \tag{6}<br>)</p>
+</li>
+<li><p>步骤 2：计算信号协方差矩阵<br>(<br>\boldsymbol{C}(\omega) &#x3D; \boldsymbol{u}(\omega, v, \boldsymbol{r}_0)\boldsymbol{u}^H(\omega, v, \boldsymbol{r}_0). \tag{7}<br>)</p>
+</li>
+<li><p>步骤 3：提取协方差矩阵的相位信息<br>(<br>\tilde{C}<em>{mn}(\omega) &#x3D; \frac{C</em>{mn}(\omega)}{\vert C_{mn}(\omega) \vert}. \tag{8}<br>)</p>
+</li>
+<li><p>步骤 4：生成导向矢量并计算 MFP 相干性<br>(<br>\boldsymbol{a}(\omega, v, \boldsymbol{r}) &#x3D; \left[ e^{-i\omega \vert \boldsymbol{r}-\boldsymbol{r}_1 \vert &#x2F; v}, \cdots, e^{-i\omega \vert \boldsymbol{r}-\boldsymbol{r}_N \vert &#x2F; v} \right]^T, \tag{9}<br>)<br>(<br>P(\omega, v, \boldsymbol{r}) &#x3D; \frac{1}{N^2} \boldsymbol{a}^H(\omega, v, \boldsymbol{r}) \tilde{\boldsymbol{C}}(\omega) \boldsymbol{a}(\omega, v, \boldsymbol{r}). \tag{10}<br>)</p>
+</li>
+<li><p>步骤 5：跨频率累加相干性（简化处理）<br>(<br>P_0(v, \boldsymbol{r}) &#x3D; \frac{1}{K} \sum_{k} P(\omega_k, v, \boldsymbol{r}). \tag{11}<br>)</p>
+</li>
+</ul>]]></content>
+  </entry>
 </search>
