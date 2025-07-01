@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2025-06-30T13:42:42.394Z</updated>
+  <updated>2025-07-01T03:56:25.857Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>如何发布你自己的脚本</title>
+    <link href="http://www.seis-jun.xyz/distribute-package"/>
+    <id>http://www.seis-jun.xyz/distribute-package</id>
+    <published>2025-07-01T03:07:47.000Z</published>
+    <updated>2025-07-01T03:56:25.857Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;你是不是也想让自己的程序像obspy一样，叫全世界的人pip install就可以用？&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="python" scheme="http://www.seis-jun.xyz/categories/python/"/>
+    
+    
+    <category term="python" scheme="http://www.seis-jun.xyz/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
     <title>PYTHON脚本练习（二）</title>
     <link href="http://www.seis-jun.xyz/python-script2"/>
     <id>http://www.seis-jun.xyz/python-script2</id>
     <published>2025-06-30T13:27:28.000Z</published>
-    <updated>2025-06-30T13:42:42.394Z</updated>
+    <updated>2025-06-30T13:43:30.793Z</updated>
     
     
       
@@ -434,25 +453,6 @@
     
     
     <category term="python" scheme="http://www.seis-jun.xyz/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>文献阅读(27)</title>
-    <link href="http://www.seis-jun.xyz/paper-reading-27"/>
-    <id>http://www.seis-jun.xyz/paper-reading-27</id>
-    <published>2025-04-23T07:42:03.000Z</published>
-    <updated>2025-04-23T07:47:29.840Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2024GL113290&quot;&gt;Coherence-Based Characterization of a Long-Period Monochromatic Seismic Signal&lt;/a&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
-    
-    
-    <category term="paper" scheme="http://www.seis-jun.xyz/tags/paper/"/>
     
   </entry>
   
