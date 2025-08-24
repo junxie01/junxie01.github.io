@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2025-07-01T03:56:25.857Z</updated>
+  <updated>2025-08-24T03:23:46.046Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>python脚本练习-聚束分析</title>
+    <link href="http://www.seis-jun.xyz/fk"/>
+    <id>http://www.seis-jun.xyz/fk</id>
+    <published>2025-08-24T03:19:23.000Z</published>
+    <updated>2025-08-24T03:23:46.046Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;python脚本练习-fk。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="python" scheme="http://www.seis-jun.xyz/categories/python/"/>
+    
+    
+    <category term="python" scheme="http://www.seis-jun.xyz/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
     <title>如何发布你自己的脚本</title>
     <link href="http://www.seis-jun.xyz/distribute-package"/>
     <id>http://www.seis-jun.xyz/distribute-package</id>
     <published>2025-07-01T03:07:47.000Z</published>
-    <updated>2025-07-01T03:56:25.857Z</updated>
+    <updated>2025-07-01T03:56:37.835Z</updated>
     
     
     <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;你是不是也想让自己的程序像obspy一样，叫全世界的人pip install就可以用？&lt;/p&gt;</summary>
@@ -428,31 +447,6 @@
     <category term="gmt" scheme="http://www.seis-jun.xyz/tags/gmt/"/>
     
     <category term="script" scheme="http://www.seis-jun.xyz/tags/script/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>下载地震数据练习</title>
-    <link href="http://www.seis-jun.xyz/download-earthquake-py"/>
-    <id>http://www.seis-jun.xyz/download-earthquake-py</id>
-    <published>2025-04-24T07:33:35.000Z</published>
-    <updated>2025-05-16T06:41:59.516Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="seismology" scheme="http://www.seis-jun.xyz/categories/seismology/"/>
-    
-    
-    <category term="python" scheme="http://www.seis-jun.xyz/tags/python/"/>
     
   </entry>
   
