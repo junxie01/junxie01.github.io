@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2025-08-24T06:01:09.147Z</updated>
+  <updated>2025-08-25T14:00:35.894Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何将图片转化成视频</title>
+    <link href="http://www.seis-jun.xyz/png-to-mp4"/>
+    <id>http://www.seis-jun.xyz/png-to-mp4</id>
+    <published>2025-08-25T13:48:42.000Z</published>
+    <updated>2025-08-25T14:00:35.894Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;如果我有一堆图片，如何利用他们生成视频呢？&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Linux" scheme="http://www.seis-jun.xyz/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="http://www.seis-jun.xyz/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>PYTHON脚本练习（二）聚束分析</title>
@@ -420,33 +439,6 @@
     
     
     <category term="python" scheme="http://www.seis-jun.xyz/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>gmt怎么画箭头</title>
-    <link href="http://www.seis-jun.xyz/gmt-arrow"/>
-    <id>http://www.seis-jun.xyz/gmt-arrow</id>
-    <published>2025-05-10T07:32:41.000Z</published>
-    <updated>2025-05-11T02:23:21.948Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="gmt" scheme="http://www.seis-jun.xyz/categories/gmt/"/>
-    
-    
-    <category term="gmt" scheme="http://www.seis-jun.xyz/tags/gmt/"/>
-    
-    <category term="script" scheme="http://www.seis-jun.xyz/tags/script/"/>
     
   </entry>
   
