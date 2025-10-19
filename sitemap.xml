@@ -1046,6 +1046,15 @@
   </url>
   
   <url>
+    <loc>http://www.seis-jun.xyz/avatar-to-homepage</loc>
+    
+    <lastmod>2024-05-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://www.seis-jun.xyz/gmt-time-axes</loc>
     
     <lastmod>2024-05-26</lastmod>
@@ -1082,25 +1091,16 @@
   </url>
   
   <url>
-    <loc>http://www.seis-jun.xyz/mantle-transition-zone</loc>
-    
-    <lastmod>2024-05-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.seis-jun.xyz/avatar-to-homepage</loc>
-    
-    <lastmod>2024-05-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://www.seis-jun.xyz/US-upper-mantle-vs-model</loc>
+    
+    <lastmod>2024-05-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.seis-jun.xyz/mantle-transition-zone</loc>
     
     <lastmod>2024-05-26</lastmod>
     
@@ -1154,7 +1154,7 @@
   </url>
   
   <url>
-    <loc>http://www.seis-jun.xyz/%E9%A5%AD%E5%90%8E%E6%84%9F2</loc>
+    <loc>http://www.seis-jun.xyz/%E5%A4%B4%E6%99%95</loc>
     
     <lastmod>2024-05-26</lastmod>
     
@@ -1163,7 +1163,7 @@
   </url>
   
   <url>
-    <loc>http://www.seis-jun.xyz/%E5%A4%B4%E6%99%95</loc>
+    <loc>http://www.seis-jun.xyz/%E9%A5%AD%E5%90%8E%E6%84%9F2</loc>
     
     <lastmod>2024-05-26</lastmod>
     
@@ -1406,7 +1406,7 @@
   </url>
   
   <url>
-    <loc>http://www.seis-jun.xyz/%E5%A5%BD%E5%BF%AB%E5%88%80</loc>
+    <loc>http://www.seis-jun.xyz/%E5%8D%97%E4%BA%AC%E5%A4%A7%E5%B1%A0%E6%9D%80</loc>
     
     <lastmod>2024-05-26</lastmod>
     
@@ -1415,7 +1415,7 @@
   </url>
   
   <url>
-    <loc>http://www.seis-jun.xyz/%E5%8D%97%E4%BA%AC%E5%A4%A7%E5%B1%A0%E6%9D%80</loc>
+    <loc>http://www.seis-jun.xyz/%E5%A5%BD%E5%BF%AB%E5%88%80</loc>
     
     <lastmod>2024-05-26</lastmod>
     
@@ -1827,14 +1827,14 @@
   </url>
   
   <url>
-    <loc>http://www.seis-jun.xyz/tags/%E8%BF%87%E6%B8%A1%E5%B8%A6/</loc>
+    <loc>http://www.seis-jun.xyz/tags/model/</loc>
     <lastmod>2025-10-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.seis-jun.xyz/tags/model/</loc>
+    <loc>http://www.seis-jun.xyz/tags/%E8%BF%87%E6%B8%A1%E5%B8%A6/</loc>
     <lastmod>2025-10-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1890,14 +1890,14 @@
   </url>
   
   <url>
-    <loc>http://www.seis-jun.xyz/tags/%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>http://www.seis-jun.xyz/tags/git/</loc>
     <lastmod>2025-10-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.seis-jun.xyz/tags/git/</loc>
+    <loc>http://www.seis-jun.xyz/tags/%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2025-10-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1946,20 +1946,6 @@
   </url>
   
   <url>
-    <loc>http://www.seis-jun.xyz/tags/code/</loc>
-    <lastmod>2025-10-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.seis-jun.xyz/tags/project/</loc>
-    <lastmod>2025-10-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://www.seis-jun.xyz/tags/blogs/</loc>
     <lastmod>2025-10-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -1968,6 +1954,20 @@
   
   <url>
     <loc>http://www.seis-jun.xyz/tags/science/</loc>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.seis-jun.xyz/tags/code/</loc>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.seis-jun.xyz/tags/project/</loc>
     <lastmod>2025-10-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
