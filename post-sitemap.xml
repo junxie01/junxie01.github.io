@@ -9,6 +9,14 @@
 
 
     <url>
+        <loc>http://www.seis-jun.xyz/paper-reading-29.html</loc>
+        <lastmod>2025-10-19T12:51:34.936Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://www.seis-jun.xyz/paper-reading-28.html</loc>
         <lastmod>2025-10-10T05:27:49.511Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -897,7 +905,7 @@
     </url>
 
     <url>
-        <loc>http://www.seis-jun.xyz/gmt-time-axes.html</loc>
+        <loc>http://www.seis-jun.xyz/avatar-to-homepage.html</loc>
         <lastmod>2024-05-26T14:17:36.846Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -905,7 +913,7 @@
     </url>
 
     <url>
-        <loc>http://www.seis-jun.xyz/avatar-to-homepage.html</loc>
+        <loc>http://www.seis-jun.xyz/gmt-time-axes.html</loc>
         <lastmod>2024-05-26T14:17:36.846Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>

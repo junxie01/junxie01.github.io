@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2025-10-10T05:27:49.511Z</updated>
+  <updated>2025-10-19T12:51:34.936Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>文献阅读(29)</title>
+    <link href="http://www.seis-jun.xyz/paper-reading-29"/>
+    <id>http://www.seis-jun.xyz/paper-reading-29</id>
+    <published>2025-10-19T12:35:53.000Z</published>
+    <updated>2025-10-19T12:51:34.936Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2011GC003661&quot;&gt;Polarized Earth’s ambient microseismic noise&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
+    
+    
+    <category term="paper" scheme="http://www.seis-jun.xyz/tags/paper/"/>
+    
+  </entry>
   
   <entry>
     <title>文献阅读(28)</title>
@@ -408,25 +427,6 @@
     
     
     <category term="python" scheme="http://www.seis-jun.xyz/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>即“蠢”又“坏”？</title>
-    <link href="http://www.seis-jun.xyz/bad-and-evil"/>
-    <id>http://www.seis-jun.xyz/bad-and-evil</id>
-    <published>2025-05-31T10:50:20.000Z</published>
-    <updated>2025-06-01T11:18:51.192Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;人大约都是即“蠢”又“坏”的吧！&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="某日记" scheme="http://www.seis-jun.xyz/categories/%E6%9F%90%E6%97%A5%E8%AE%B0/"/>
-    
-    
-    <category term="乱笔" scheme="http://www.seis-jun.xyz/tags/%E4%B9%B1%E7%AC%94/"/>
     
   </entry>
   
