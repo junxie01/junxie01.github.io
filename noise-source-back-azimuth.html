@@ -24,13 +24,13 @@
 
     <meta name="description" content="&emsp;&emsp;DOP-E 单站极化与背方位角分析流程">
 <meta property="og:type" content="article">
-<meta property="og:title" content="noise-source-back-azimuth">
+<meta property="og:title" content="计算背景噪声中噪声源背方位角">
 <meta property="og:url" content="http://www.seis-jun.xyz/noise-source-back-azimuth">
 <meta property="og:site_name" content="SEISAMUSE">
 <meta property="og:description" content="&emsp;&emsp;DOP-E 单站极化与背方位角分析流程">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-10-24T02:24:39.000Z">
-<meta property="article:modified_time" content="2025-10-24T02:28:50.839Z">
+<meta property="article:modified_time" content="2025-10-24T02:36:25.686Z">
 <meta property="article:author" content="Jun Xie">
 <meta property="article:tag" content="work">
 <meta name="twitter:card" content="summary">
@@ -40,10 +40,10 @@
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://www.seis-jun.xyz/noise-source-back-azimuth","path":"noise-source-back-azimuth.html","title":"noise-source-back-azimuth"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://www.seis-jun.xyz/noise-source-back-azimuth","path":"noise-source-back-azimuth.html","title":"计算背景噪声中噪声源背方位角"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>noise-source-back-azimuth | SEISAMUSE</title>
+<title>计算背景噪声中噪声源背方位角 | SEISAMUSE</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168057869-1"></script>
   <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-168057869-1","only_pageview":false,"measure_protocol_api_secret":null}</script>
@@ -262,12 +262,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="noise-source-back-azimuth | SEISAMUSE">
+      <meta itemprop="name" content="计算背景噪声中噪声源背方位角 | SEISAMUSE">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          noise-source-back-azimuth
+          计算背景噪声中噪声源背方位角
         </h1>
 
         <div class="post-meta-container">
@@ -279,7 +279,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2025-10-24 10:24:39 / 修改时间：10:28:50" itemprop="dateCreated datePublished" datetime="2025-10-24T10:24:39+08:00">2025-10-24</time>
+      <time title="创建时间：2025-10-24 10:24:39 / 修改时间：10:36:25" itemprop="dateCreated datePublished" datetime="2025-10-24T10:24:39+08:00">2025-10-24</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -367,7 +367,7 @@
 </li>
 </ol>
 <hr>
-<h2 id="三、S-transform（论文规范实现）"><a href="#三、S-transform（论文规范实现）" class="headerlink" title="三、S-transform（论文规范实现）"></a>三、S-transform（论文规范实现）</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>[<br>S(t,f)&#x3D;\int x(\tau),\frac{|f|}{\sqrt{2\pi}},e^{-(t-\tau)^2 f^2&#x2F;2},e^{-i2\pi f\tau},d\tau<br>]</p>
+<h2 id="三、S-transform（论文规范实现）"><a href="#三、S-transform（论文规范实现）" class="headerlink" title="三、S-transform（论文规范实现）"></a>三、S-transform（论文规范实现）</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>$$<br>S(t,f)&#x3D;\int x(\tau),\frac{|f|}{\sqrt{2\pi}},e^{-(t-\tau)^2 f^2&#x2F;2},e^{-i2\pi f\tau},d\tau<br>$$</p>
 <h3 id="参数与理由"><a href="#参数与理由" class="headerlink" title="参数与理由"></a>参数与理由</h3><table>
 <thead>
 <tr>
@@ -401,8 +401,8 @@
 <p><strong>说明</strong>：<br>σ &#x3D; 1&#x2F;(2πf) 表示随频率增加窗宽减小，确保多分辨率特性。<br>|f|&#x2F;√(2π) 为归一化系数，维持 Parseval 能量一致性。  </p>
 </blockquote>
 <hr>
-<h2 id="四、谱矩阵构造与平滑"><a href="#四、谱矩阵构造与平滑" class="headerlink" title="四、谱矩阵构造与平滑"></a>四、谱矩阵构造与平滑</h2><h3 id="谱矩阵定义"><a href="#谱矩阵定义" class="headerlink" title="谱矩阵定义"></a>谱矩阵定义</h3><p>[<br>S_{ij}(t,f) &#x3D; \widetilde{X_i}(t,f),\widetilde{X_j}^*(t,f)<br>]<br>其中 ( \widetilde{X_i}(t,f) ) 为分量 i 的 S-transform 复系数。</p>
-<h3 id="平滑"><a href="#平滑" class="headerlink" title="平滑"></a>平滑</h3><p>对时间方向做高斯平滑：<br>[<br>\sigma_{\text{tf}} &#x3D; \text{tf_window_periods} \times T \times f_s<br>]</p>
+<h2 id="四、谱矩阵构造与平滑"><a href="#四、谱矩阵构造与平滑" class="headerlink" title="四、谱矩阵构造与平滑"></a>四、谱矩阵构造与平滑</h2><h3 id="谱矩阵定义"><a href="#谱矩阵定义" class="headerlink" title="谱矩阵定义"></a>谱矩阵定义</h3><p>$$<br>S_{ij}(t,f) &#x3D; \widetilde{X_i}(t,f),\widetilde{X_j}^*(t,f)<br>$$<br>其中 $ \widetilde{X_i}(t,f) $ 为分量 i 的 S-transform 复系数。</p>
+<h3 id="平滑"><a href="#平滑" class="headerlink" title="平滑"></a>平滑</h3><p>对时间方向做高斯平滑：<br>$$<br>\sigma_{\text{tf}} &#x3D; \text{tf_window_periods} \times T \times f_s<br>$$</p>
 <table>
 <thead>
 <tr>
@@ -423,8 +423,8 @@
 </tr>
 </tbody></table>
 <hr>
-<h2 id="五、本征分解与极化属性"><a href="#五、本征分解与极化属性" class="headerlink" title="五、本征分解与极化属性"></a>五、本征分解与极化属性</h2><p>对每个 (t,f) 做 3×3 复矩阵本征分解：<br>[<br>S &#x3D; V \Lambda V^H,\quad \Lambda &#x3D; \operatorname{diag}(\lambda_1,\lambda_2,\lambda_3)<br>]</p>
-<h3 id="DOP（Degree-of-Polarization）"><a href="#DOP（Degree-of-Polarization）" class="headerlink" title="DOP（Degree of Polarization）"></a>DOP（Degree of Polarization）</h3><p>[<br>\mathrm{DOP} &#x3D; \frac{\lambda_1 - \lambda_2}{\lambda_1 + \lambda_2 + \lambda_3}<br>]</p>
+<h2 id="五、本征分解与极化属性"><a href="#五、本征分解与极化属性" class="headerlink" title="五、本征分解与极化属性"></a>五、本征分解与极化属性</h2><p>对每个 (t,f) 做 3×3 复矩阵本征分解：<br>$$<br>S &#x3D; V \Lambda V^H,\quad \Lambda &#x3D; \operatorname{diag}(\lambda_1,\lambda_2,\lambda_3)<br>$$</p>
+<h3 id="DOP（Degree-of-Polarization）"><a href="#DOP（Degree-of-Polarization）" class="headerlink" title="DOP（Degree of Polarization）"></a>DOP（Degree of Polarization）</h3><p>$$<br>\mathrm{DOP} &#x3D; \frac{\lambda_1 - \lambda_2}{\lambda_1 + \lambda_2 + \lambda_3}<br>$$</p>
 <h3 id="Planarity"><a href="#Planarity" class="headerlink" title="Planarity"></a>Planarity</h3><p>通过主、次特征向量叉积求平面法线，与竖直方向夹角 α：</p>
 <ul>
 <li>若 α ≈ 90° → 水平 planarity（Rayleigh 波特征）  </li>
@@ -450,7 +450,7 @@
 </tr>
 </tbody></table>
 <hr>
-<h2 id="六、背方位角（BAZ）计算"><a href="#六、背方位角（BAZ）计算" class="headerlink" title="六、背方位角（BAZ）计算"></a>六、背方位角（BAZ）计算</h2><h3 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h3><p>[<br>\mathrm{BAZ} &#x3D; \operatorname{atan2}(E, N)<br>]<br>以度为单位，0° &#x3D; 北，顺时针增加。</p>
+<h2 id="六、背方位角（BAZ）计算"><a href="#六、背方位角（BAZ）计算" class="headerlink" title="六、背方位角（BAZ）计算"></a>六、背方位角（BAZ）计算</h2><h3 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h3><p>$$<br>\mathrm{BAZ} &#x3D; \operatorname{atan2}(E, N)<br>$$<br>以度为单位，0° &#x3D; 北，顺时针增加。</p>
 <h3 id="处理细节"><a href="#处理细节" class="headerlink" title="处理细节"></a>处理细节</h3><ul>
 <li>使用主特征向量的水平分量 (N,E)。  </li>
 <li>实部幅值过小则跳过或使用相位差法。  </li>
