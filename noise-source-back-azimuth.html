@@ -22,28 +22,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"www.seis-jun.xyz","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="&emsp;&emsp;Mapping Glacier Structure in Inaccessible Areas From Turning Seismic Sources Into a Dense Seismic Array">
+    <meta name="description" content="&emsp;&emsp;DOP-E 单站极化与背方位角分析流程">
 <meta property="og:type" content="article">
-<meta property="og:title" content="文献阅读（七）">
-<meta property="og:url" content="http://www.seis-jun.xyz/paper-reading-7">
+<meta property="og:title" content="noise-source-back-azimuth">
+<meta property="og:url" content="http://www.seis-jun.xyz/noise-source-back-azimuth">
 <meta property="og:site_name" content="SEISAMUSE">
-<meta property="og:description" content="&emsp;&emsp;Mapping Glacier Structure in Inaccessible Areas From Turning Seismic Sources Into a Dense Seismic Array">
+<meta property="og:description" content="&emsp;&emsp;DOP-E 单站极化与背方位角分析流程">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-06-17T08:24:45.000Z">
-<meta property="article:modified_time" content="2024-06-18T05:13:33.591Z">
+<meta property="article:published_time" content="2025-10-24T02:24:39.000Z">
+<meta property="article:modified_time" content="2025-10-24T02:28:50.839Z">
 <meta property="article:author" content="Jun Xie">
-<meta property="article:tag" content="paper">
+<meta property="article:tag" content="work">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://www.seis-jun.xyz/paper-reading-7.html">
+<link rel="canonical" href="http://www.seis-jun.xyz/noise-source-back-azimuth.html">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://www.seis-jun.xyz/paper-reading-7","path":"paper-reading-7.html","title":"文献阅读（七）"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://www.seis-jun.xyz/noise-source-back-azimuth","path":"noise-source-back-azimuth.html","title":"noise-source-back-azimuth"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>文献阅读（七） | SEISAMUSE</title>
+<title>noise-source-back-azimuth | SEISAMUSE</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168057869-1"></script>
   <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-168057869-1","only_pageview":false,"measure_protocol_api_secret":null}</script>
@@ -151,7 +151,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%91%98%E8%A6%81"><span class="nav-number">1.</span> <span class="nav-text">摘要</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E7%AB%A0%E9%87%8D%E8%A6%81%E6%80%A7"><span class="nav-number">2.</span> <span class="nav-text">文章重要性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93%E5%89%8D%E4%BA%BA%E7%A0%94%E7%A9%B6"><span class="nav-number">3.</span> <span class="nav-text">总结前人研究</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%98%E5%9C%A8%E7%9A%84%E4%B8%8D%E8%B6%B3"><span class="nav-number">4.</span> <span class="nav-text">存在的不足</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E7%9A%84%E6%95%B0%E6%8D%AE"><span class="nav-number">5.</span> <span class="nav-text">使用的数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%87%87%E7%94%A8%E7%9A%84%E6%96%B9%E6%B3%95"><span class="nav-number">6.</span> <span class="nav-text">采用的方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8E%B7%E5%BE%97%E7%9A%84%E7%BB%93%E6%9E%9C"><span class="nav-number">7.</span> <span class="nav-text">获得的结果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E6%96%B0%E4%B9%8B%E5%A4%84"><span class="nav-number">8.</span> <span class="nav-text">创新之处</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B4%A1%E7%8C%AE"><span class="nav-number">9.</span> <span class="nav-text">贡献</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%98%E5%9C%A8%E7%9A%84%E4%B8%8D%E8%B6%B3-1"><span class="nav-number">10.</span> <span class="nav-text">存在的不足</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E6%80%BB%E4%BD%93%E6%B5%81%E7%A8%8B%E6%A6%82%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text">一、总体流程概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86"><span class="nav-number">2.</span> <span class="nav-text">二、数据预处理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%AE%E6%A0%87"><span class="nav-number">2.1.</span> <span class="nav-text">目标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4"><span class="nav-number">2.2.</span> <span class="nav-text">步骤</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81S-transform%EF%BC%88%E8%AE%BA%E6%96%87%E8%A7%84%E8%8C%83%E5%AE%9E%E7%8E%B0%EF%BC%89"><span class="nav-number">3.</span> <span class="nav-text">三、S-transform（论文规范实现）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-number">3.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%82%E6%95%B0%E4%B8%8E%E7%90%86%E7%94%B1"><span class="nav-number">3.2.</span> <span class="nav-text">参数与理由</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E8%B0%B1%E7%9F%A9%E9%98%B5%E6%9E%84%E9%80%A0%E4%B8%8E%E5%B9%B3%E6%BB%91"><span class="nav-number">4.</span> <span class="nav-text">四、谱矩阵构造与平滑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B0%B1%E7%9F%A9%E9%98%B5%E5%AE%9A%E4%B9%89"><span class="nav-number">4.1.</span> <span class="nav-text">谱矩阵定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B9%B3%E6%BB%91"><span class="nav-number">4.2.</span> <span class="nav-text">平滑</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E6%9C%AC%E5%BE%81%E5%88%86%E8%A7%A3%E4%B8%8E%E6%9E%81%E5%8C%96%E5%B1%9E%E6%80%A7"><span class="nav-number">5.</span> <span class="nav-text">五、本征分解与极化属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#DOP%EF%BC%88Degree-of-Polarization%EF%BC%89"><span class="nav-number">5.1.</span> <span class="nav-text">DOP（Degree of Polarization）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Planarity"><span class="nav-number">5.2.</span> <span class="nav-text">Planarity</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AD%E3%80%81%E8%83%8C%E6%96%B9%E4%BD%8D%E8%A7%92%EF%BC%88BAZ%EF%BC%89%E8%AE%A1%E7%AE%97"><span class="nav-number">6.</span> <span class="nav-text">六、背方位角（BAZ）计算</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%AC%E5%BC%8F"><span class="nav-number">6.1.</span> <span class="nav-text">公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%84%E7%90%86%E7%BB%86%E8%8A%82"><span class="nav-number">6.2.</span> <span class="nav-text">处理细节</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E4%B9%89%E6%80%A7%E5%A4%84%E7%90%86"><span class="nav-number">6.3.</span> <span class="nav-text">二义性处理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%83%E3%80%81%E7%AD%9B%E9%80%89%E4%B8%8E%E8%81%9A%E5%90%88%E8%BE%93%E5%87%BA"><span class="nav-number">7.</span> <span class="nav-text">七、筛选与聚合输出</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AD%9B%E9%80%89%E8%A7%84%E5%88%99"><span class="nav-number">7.1.</span> <span class="nav-text">筛选规则</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -215,24 +215,17 @@
   </div>
   <ul class="popular-posts">
     <li class="popular-posts-item">
-      <a class="popular-posts-link" href="/paper-reading-6" rel="bookmark">
-        <time class="popular-posts-time">2024-06-17</time>
+      <a class="popular-posts-link" href="/music" rel="bookmark">
+        <time class="popular-posts-time">2024-07-19</time>
         <br>
-      文献阅读（六）
+      学习聚束分析(一)
       </a>
     </li>
     <li class="popular-posts-item">
-      <a class="popular-posts-link" href="/code-and-project2" rel="bookmark">
-        <time class="popular-posts-time">2025-04-17</time>
+      <a class="popular-posts-link" href="/latex-math-express" rel="bookmark">
+        <time class="popular-posts-time">2025-06-21</time>
         <br>
-      有趣的程序和项目（二）
-      </a>
-    </li>
-    <li class="popular-posts-item">
-      <a class="popular-posts-link" href="/paper-reading-26" rel="bookmark">
-        <time class="popular-posts-time">2025-02-14</time>
-        <br>
-      文献阅读(26)
+      $\LaTeX$的数学公式表达
       </a>
     </li>
   </ul>
@@ -256,7 +249,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.seis-jun.xyz/paper-reading-7">
+    <link itemprop="mainEntityOfPage" href="http://www.seis-jun.xyz/noise-source-back-azimuth">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/seisamuse.png">
@@ -269,12 +262,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="文献阅读（七） | SEISAMUSE">
+      <meta itemprop="name" content="noise-source-back-azimuth | SEISAMUSE">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          文献阅读（七）
+          noise-source-back-azimuth
         </h1>
 
         <div class="post-meta-container">
@@ -284,15 +277,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2024-06-17 16:24:45" itemprop="dateCreated datePublished" datetime="2024-06-17T16:24:45+08:00">2024-06-17</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-06-18 13:13:33" itemprop="dateModified" datetime="2024-06-18T13:13:33+08:00">2024-06-18</time>
+      <time title="创建时间：2025-10-24 10:24:39 / 修改时间：10:28:50" itemprop="dateCreated datePublished" datetime="2025-10-24T10:24:39+08:00">2025-10-24</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -318,14 +305,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.1k</span>
+      <span>1.8k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -335,43 +322,148 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3><p>&emsp;&emsp;了解冰川结构的异质性对于评估其命运至关重要。然而，结构变化强烈的地方，如裂缝场，通常无法直接进行仪器观测。为了克服这一限制，我们引入了一种创新技术，利用源-接收器空间互易原理，将由裂缝产生的地震源转化为虚拟接收器。我们展示了利用Seismic Michelson Interferometry（地震干涉测量学）技术，通过局部化良好的地震源之间的相位干涉模式来获取相位速度图。得到的相位速度对冰川结构的变化表现出敏感性，提供了对机械属性变化起源的洞见，并且空间分辨率比传统方法提高了五倍。特别是，我们观察到与严重受损的地下区域相关的相位速度的急剧变化，表明了一个复杂的三维介质。更系统地应用这种方法并在其他情境中使用将提高我们对冰川和其他地震发生环境结构的理解。</p>
-<h3 id="文章重要性"><a href="#文章重要性" class="headerlink" title="文章重要性"></a>文章重要性</h3><p>这篇文章的重要性在于提出了一种新的技术手段，可以在人迹罕至的地区，如冰川裂缝区域，通过地震干涉测量学来获取高分辨率的冰川结构图。</p>
-<h3 id="总结前人研究"><a href="#总结前人研究" class="headerlink" title="总结前人研究"></a>总结前人研究</h3><p>文章总结了以下前人研究：</p>
+    <div class="post-body" itemprop="articleBody"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p><em>(基于论文 Schimmel et al., 2011; Berbellini et al., 2019)</em>  </p>
+<h2 id="一、总体流程概述"><a href="#一、总体流程概述" class="headerlink" title="一、总体流程概述"></a>一、总体流程概述</h2><ol>
+<li><strong>数据预处理</strong>（去趋势、去仪器、对齐）  </li>
+<li><strong>S-transform 时频分解</strong>（论文定义）  </li>
+<li><strong>构造谱矩阵与时域平滑</strong>  </li>
+<li><strong>本征分解求极化参数（DOP、planarity、semimajor axis）</strong>  </li>
+<li><strong>筛选高质量段</strong>（DOP &gt; 阈值 &amp; planarity 接近水平）  </li>
+<li><strong>计算背方位角（BAZ）并解除 180° 二义性</strong>  </li>
+<li><strong>输出可视化与统计</strong>（时频图、直方图、极坐标图）  </li>
+<li><strong>验证与质量控制（QA）</strong>  </li>
+<li><strong>批量与性能优化</strong></li>
+</ol>
+<hr>
+<h2 id="二、数据预处理"><a href="#二、数据预处理" class="headerlink" title="二、数据预处理"></a>二、数据预处理</h2><h3 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h3><p>确保三分量（Z&#x2F;N&#x2F;E）记录在同一时间基线，且仅保留稳定的噪声段。</p>
+<h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h3><ol>
+<li><p><strong>去仪器响应</strong>  </p>
 <ul>
-<li>被动地震方法在监测冰量变化、冰床界面变化和冰厚空间变化方面的应用。</li>
-<li>利用已知位置的脉冲源，通过Rayleigh表面波旅行时间延迟层析成像来揭示裂缝发生与地震相速度之间的非唯一关系。</li>
+<li>若记录为速度，直接使用；否则用 RESP 文件去响应。  </li>
+<li>理由：相位一致性影响极化矩阵。</li>
 </ul>
-<h3 id="存在的不足"><a href="#存在的不足" class="headerlink" title="存在的不足"></a>存在的不足</h3><p>文章指出的不足包括：</p>
+</li>
+<li><p><strong>去趋势 &#x2F; 去均值</strong>  </p>
 <ul>
-<li>使用噪声源进行地震成像时，确保方位等分性（azimuthal equipartitioning）的挑战。</li>
-<li>在采样波场方面的限制，尤其是在仪器部署区域之外。</li>
+<li><code>trace.detrend(&quot;linear&quot;); trace.detrend(&quot;demean&quot;)</code>  </li>
+<li>理由：低频漂移会污染低频段（0.03 Hz）。</li>
 </ul>
-<h3 id="使用的数据"><a href="#使用的数据" class="headerlink" title="使用的数据"></a>使用的数据</h3><ul>
-<li>法国阿尔卑斯山Argentière冰川消融区的地震事件目录，由98个三分量地震仪组成的阵列收集。</li>
-</ul>
-<h3 id="采用的方法"><a href="#采用的方法" class="headerlink" title="采用的方法"></a>采用的方法</h3><ul>
-<li>利用源-接收器空间互易原理将地震源转化为虚拟接收器。</li>
-<li>使用波形同步化和表面波衍射核（Diffraction Kernels, DKs）构建。</li>
-<li>采用地震干涉测量学（Seismic Michelson Interferometry, SMI）进行迭代反演。</li>
-</ul>
-<h3 id="获得的结果"><a href="#获得的结果" class="headerlink" title="获得的结果"></a>获得的结果</h3><ul>
-<li>获得了在空间分辨率上比传统方法高五倍的相位速度图。</li>
-<li>观察到与冰川厚度和裂缝存在相关的相位速度变化。</li>
-</ul>
-<h3 id="创新之处"><a href="#创新之处" class="headerlink" title="创新之处"></a>创新之处</h3><ul>
-<li>利用地震源作为虚拟接收器，通过干涉模式来获取高分辨率的相位速度图。</li>
-<li>这种方法允许在没有直接测量设备的地区进行地震成像。</li>
-</ul>
-<h3 id="贡献"><a href="#贡献" class="headerlink" title="贡献"></a>贡献</h3><ul>
-<li>提供了一种新的技术手段，可以在传统方法难以到达的地区进行高分辨率的地震成像。</li>
-<li>为理解冰川结构和动态提供了新的视角。</li>
-</ul>
-<h3 id="存在的不足-1"><a href="#存在的不足-1" class="headerlink" title="存在的不足"></a>存在的不足</h3><p>文章中并未明确指出研究的不足之处，但可以推测可能的不足包括：</p>
+</li>
+<li><p><strong>剔除事件或脉冲干扰</strong>  </p>
 <ul>
-<li>技术的应用范围可能受限于地震源的分布和定位精度。</li>
-<li>对于非脉冲源或非冰川环境的适用性尚未得到验证。</li>
+<li>可通过短时能量（STA&#x2F;LTA）检测排除瞬变。</li>
 </ul>
+</li>
+<li><p><strong>带通滤波</strong>  </p>
+<ul>
+<li>推荐：<code>0.01–0.06 Hz</code> （若仅关心 0.03 Hz 区域）。  </li>
+<li>理由：去掉无关频段以提高信噪比。</li>
+</ul>
+</li>
+<li><p><strong>时间对齐与补零</strong>  </p>
+<ul>
+<li>三分量必须同起止时刻；短 gap 可补零，长 gap 建议跳过。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="三、S-transform（论文规范实现）"><a href="#三、S-transform（论文规范实现）" class="headerlink" title="三、S-transform（论文规范实现）"></a>三、S-transform（论文规范实现）</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>[<br>S(t,f)&#x3D;\int x(\tau),\frac{|f|}{\sqrt{2\pi}},e^{-(t-\tau)^2 f^2&#x2F;2},e^{-i2\pi f\tau},d\tau<br>]</p>
+<h3 id="参数与理由"><a href="#参数与理由" class="headerlink" title="参数与理由"></a>参数与理由</h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>推荐值</th>
+<th>理由</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>频率点数 <code>n_freqs</code></td>
+<td>60</td>
+<td>覆盖 0.01–0.06 Hz 区间，低频对数分辨率更合理</td>
+</tr>
+<tr>
+<td>窗宽 σ</td>
+<td>1&#x2F;(2πf)</td>
+<td>论文定义，时间-频率能量守恒</td>
+</tr>
+<tr>
+<td>调整系数 k</td>
+<td>1.0–1.5</td>
+<td>增大可提高时域平滑性</td>
+</tr>
+<tr>
+<td>下采样步长 step</td>
+<td>5 s</td>
+<td>提高计算效率，仍能解析 0.03 Hz（周期 33 s）信号</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>说明</strong>：<br>σ &#x3D; 1&#x2F;(2πf) 表示随频率增加窗宽减小，确保多分辨率特性。<br>|f|&#x2F;√(2π) 为归一化系数，维持 Parseval 能量一致性。  </p>
+</blockquote>
+<hr>
+<h2 id="四、谱矩阵构造与平滑"><a href="#四、谱矩阵构造与平滑" class="headerlink" title="四、谱矩阵构造与平滑"></a>四、谱矩阵构造与平滑</h2><h3 id="谱矩阵定义"><a href="#谱矩阵定义" class="headerlink" title="谱矩阵定义"></a>谱矩阵定义</h3><p>[<br>S_{ij}(t,f) &#x3D; \widetilde{X_i}(t,f),\widetilde{X_j}^*(t,f)<br>]<br>其中 ( \widetilde{X_i}(t,f) ) 为分量 i 的 S-transform 复系数。</p>
+<h3 id="平滑"><a href="#平滑" class="headerlink" title="平滑"></a>平滑</h3><p>对时间方向做高斯平滑：<br>[<br>\sigma_{\text{tf}} &#x3D; \text{tf_window_periods} \times T \times f_s<br>]</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>推荐值</th>
+<th>理由</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>tf_window_periods</code></td>
+<td>3.0</td>
+<td>论文示例值（2s ≈ 3T），平滑噪声但保留相干波</td>
+</tr>
+<tr>
+<td>DOP 窗长度</td>
+<td><code>4 × T</code></td>
+<td>保证至少 4 周期稳定极化，论文建议值</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="五、本征分解与极化属性"><a href="#五、本征分解与极化属性" class="headerlink" title="五、本征分解与极化属性"></a>五、本征分解与极化属性</h2><p>对每个 (t,f) 做 3×3 复矩阵本征分解：<br>[<br>S &#x3D; V \Lambda V^H,\quad \Lambda &#x3D; \operatorname{diag}(\lambda_1,\lambda_2,\lambda_3)<br>]</p>
+<h3 id="DOP（Degree-of-Polarization）"><a href="#DOP（Degree-of-Polarization）" class="headerlink" title="DOP（Degree of Polarization）"></a>DOP（Degree of Polarization）</h3><p>[<br>\mathrm{DOP} &#x3D; \frac{\lambda_1 - \lambda_2}{\lambda_1 + \lambda_2 + \lambda_3}<br>]</p>
+<h3 id="Planarity"><a href="#Planarity" class="headerlink" title="Planarity"></a>Planarity</h3><p>通过主、次特征向量叉积求平面法线，与竖直方向夹角 α：</p>
+<ul>
+<li>若 α ≈ 90° → 水平 planarity（Rayleigh 波特征）  </li>
+<li>若 α ≈ 0° → 垂直平面（Love 波或噪声）</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>推荐值</th>
+<th>理由</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>dop_thresh</code></td>
+<td>0.8</td>
+<td>论文常用 0.75–0.85；取 0.8 折中稳健</td>
+</tr>
+<tr>
+<td><code>alpha_min</code></td>
+<td>60°</td>
+<td>仅保留水平 planarity</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="六、背方位角（BAZ）计算"><a href="#六、背方位角（BAZ）计算" class="headerlink" title="六、背方位角（BAZ）计算"></a>六、背方位角（BAZ）计算</h2><h3 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h3><p>[<br>\mathrm{BAZ} &#x3D; \operatorname{atan2}(E, N)<br>]<br>以度为单位，0° &#x3D; 北，顺时针增加。</p>
+<h3 id="处理细节"><a href="#处理细节" class="headerlink" title="处理细节"></a>处理细节</h3><ul>
+<li>使用主特征向量的水平分量 (N,E)。  </li>
+<li>实部幅值过小则跳过或使用相位差法。  </li>
+<li>输出角度范围 [0, 360°)。</li>
+</ul>
+<h3 id="二义性处理"><a href="#二义性处理" class="headerlink" title="二义性处理"></a>二义性处理</h3><ul>
+<li>单站存在 ±180° 二义性。  </li>
+<li><strong>假设 retrograde（瑞利波基模）</strong>，可选反向修正：若竖直与水平分量相位差 ~180°，翻转 BAZ。</li>
+</ul>
+<hr>
+<h2 id="七、筛选与聚合输出"><a href="#七、筛选与聚合输出" class="headerlink" title="七、筛选与聚合输出"></a>七、筛选与聚合输出</h2><h3 id="筛选规则"><a href="#筛选规则" class="headerlink" title="筛选规则"></a>筛选规则</h3><pre><code class="text">DOP &gt;= 0.8
+planarity_angle &gt; 60°
+</code></pre>
     </div>
 
     
@@ -398,21 +490,18 @@
 </div>
 
           <div class="post-tags">
-              <a href="/tags/paper/" rel="tag"># paper</a>
+              <a href="/tags/work/" rel="tag"># work</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/how-to-review" rel="prev" title="如何审稿">
-                  <i class="fa fa-angle-left"></i> 如何审稿
+                <a href="/paper-reading-29" rel="prev" title="文献阅读(29)">
+                  <i class="fa fa-angle-left"></i> 文献阅读(29)
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/paper-reading-8" rel="next" title="文献阅读（八）">
-                  文献阅读（八） <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>
