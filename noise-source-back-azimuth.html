@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.seis-jun.xyz","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.25.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="&emsp;&emsp;DOP-E 单站极化与背方位角分析流程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算背景噪声中噪声源背方位角">
+<meta property="og:url" content="http://www.seis-jun.xyz/noise-source-back-azimuth">
+<meta property="og:site_name" content="SEISAMUSE">
+<meta property="og:description" content="&emsp;&emsp;DOP-E 单站极化与背方位角分析流程">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-10-24T02:24:39.000Z">
+<meta property="article:modified_time" content="2025-10-26T08:10:19.605Z">
+<meta property="article:author" content="Jun Xie">
+<meta property="article:tag" content="work">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://www.seis-jun.xyz/noise-source-back-azimuth.html">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://www.seis-jun.xyz/noise-source-back-azimuth","path":"noise-source-back-azimuth.html","title":"计算背景噪声中噪声源背方位角"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>计算背景噪声中噪声源背方位角 | SEISAMUSE</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<!-- hexo injector head_end end --><link rel="alternate" href="/atom.xml" title="SEISAMUSE" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">SEISAMUSE</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Jun Xie的博客</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E6%80%BB%E4%BD%93%E6%B5%81%E7%A8%8B%E6%A6%82%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text">一、总体流程概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86"><span class="nav-number">2.</span> <span class="nav-text">二、数据预处理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%AE%E6%A0%87"><span class="nav-number">2.1.</span> <span class="nav-text">目标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4"><span class="nav-number">2.2.</span> <span class="nav-text">步骤</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81S-transform%EF%BC%88%E8%AE%BA%E6%96%87%E8%A7%84%E8%8C%83%E5%AE%9E%E7%8E%B0%EF%BC%89"><span class="nav-number">3.</span> <span class="nav-text">三、S-transform（论文规范实现）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-number">3.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%82%E6%95%B0%E4%B8%8E%E7%90%86%E7%94%B1"><span class="nav-number">3.2.</span> <span class="nav-text">参数与理由</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E8%B0%B1%E7%9F%A9%E9%98%B5%E6%9E%84%E9%80%A0%E4%B8%8E%E5%B9%B3%E6%BB%91"><span class="nav-number">4.</span> <span class="nav-text">四、谱矩阵构造与平滑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B0%B1%E7%9F%A9%E9%98%B5%E5%AE%9A%E4%B9%89"><span class="nav-number">4.1.</span> <span class="nav-text">谱矩阵定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B9%B3%E6%BB%91"><span class="nav-number">4.2.</span> <span class="nav-text">平滑</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E6%9C%AC%E5%BE%81%E5%88%86%E8%A7%A3%E4%B8%8E%E6%9E%81%E5%8C%96%E5%B1%9E%E6%80%A7"><span class="nav-number">5.</span> <span class="nav-text">五、本征分解与极化属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#DOP%EF%BC%88Degree-of-Polarization%EF%BC%89"><span class="nav-number">5.1.</span> <span class="nav-text">DOP（Degree of Polarization）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Planarity"><span class="nav-number">5.2.</span> <span class="nav-text">Planarity</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AD%E3%80%81%E8%83%8C%E6%96%B9%E4%BD%8D%E8%A7%92%EF%BC%88BAZ%EF%BC%89%E8%AE%A1%E7%AE%97"><span class="nav-number">6.</span> <span class="nav-text">六、背方位角（BAZ）计算</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%AC%E5%BC%8F"><span class="nav-number">6.1.</span> <span class="nav-text">公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%84%E7%90%86%E7%BB%86%E8%8A%82"><span class="nav-number">6.2.</span> <span class="nav-text">处理细节</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E4%B9%89%E6%80%A7%E5%A4%84%E7%90%86"><span class="nav-number">6.3.</span> <span class="nav-text">二义性处理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%83%E3%80%81%E7%AD%9B%E9%80%89%E4%B8%8E%E8%81%9A%E5%90%88%E8%BE%93%E5%87%BA"><span class="nav-number">7.</span> <span class="nav-text">七、筛选与聚合输出</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AD%9B%E9%80%89%E8%A7%84%E5%88%99"><span class="nav-number">7.1.</span> <span class="nav-text">筛选规则</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AB%E3%80%81%E8%84%9A%E6%9C%AC"><span class="nav-number">8.</span> <span class="nav-text">八、脚本</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Jun Xie</p>
+  <div class="site-description" itemprop="description">好记性不如烂笔头</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">163</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">77</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.seis-jun.xyz/noise-source-back-azimuth">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Jun Xie">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SEISAMUSE">
+      <meta itemprop="description" content="好记性不如烂笔头">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="计算背景噪声中噪声源背方位角 | SEISAMUSE">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          计算背景噪声中噪声源背方位角
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-10-24 10:24:39" itemprop="dateCreated datePublished" datetime="2025-10-24T10:24:39+08:00">2025-10-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-10-26 16:10:19" itemprop="dateModified" datetime="2025-10-26T16:10:19+08:00">2025-10-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/work/" itemprop="url" rel="index"><span itemprop="name">work</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>11k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>10 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p><em>(基于论文 Schimmel et al., 2011; Berbellini et al., 2019)</em>  </p>
+<h2 id="一、总体流程概述"><a href="#一、总体流程概述" class="headerlink" title="一、总体流程概述"></a>一、总体流程概述</h2><ol>
+<li><strong>数据预处理</strong>（去趋势、去仪器、对齐）  </li>
+<li><strong>S-transform 时频分解</strong>（论文定义）  </li>
+<li><strong>构造谱矩阵与时域平滑</strong>  </li>
+<li><strong>本征分解求极化参数（DOP、planarity、semimajor axis）</strong>  </li>
+<li><strong>筛选高质量段</strong>（DOP &gt; 阈值 &amp; planarity 接近水平）  </li>
+<li><strong>计算背方位角（BAZ）并解除 180° 二义性</strong>  </li>
+<li><strong>输出可视化与统计</strong>（时频图、直方图、极坐标图）  </li>
+<li><strong>验证与质量控制（QA）</strong>  </li>
+<li><strong>批量与性能优化</strong></li>
+</ol>
+<hr>
+<h2 id="二、数据预处理"><a href="#二、数据预处理" class="headerlink" title="二、数据预处理"></a>二、数据预处理</h2><h3 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h3><p>确保三分量（Z&#x2F;N&#x2F;E）记录在同一时间基线，且仅保留稳定的噪声段。</p>
+<h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h3><ol>
+<li><p><strong>去仪器响应</strong>  </p>
+<ul>
+<li>若记录为速度，直接使用；否则用 RESP 文件去响应。  </li>
+<li>理由：相位一致性影响极化矩阵。</li>
+</ul>
+</li>
+<li><p><strong>去趋势 &#x2F; 去均值</strong>  </p>
+<ul>
+<li><code>trace.detrend(&quot;linear&quot;); trace.detrend(&quot;demean&quot;)</code>  </li>
+<li>理由：低频漂移会污染低频段（0.03 Hz）。</li>
+</ul>
+</li>
+<li><p><strong>剔除事件或脉冲干扰</strong>  </p>
+<ul>
+<li>可通过短时能量（STA&#x2F;LTA）检测排除瞬变。</li>
+</ul>
+</li>
+<li><p><strong>带通滤波</strong>  </p>
+<ul>
+<li>推荐：<code>0.01–0.06 Hz</code> （若仅关心 0.03 Hz 区域）。  </li>
+<li>理由：去掉无关频段以提高信噪比。</li>
+</ul>
+</li>
+<li><p><strong>时间对齐与补零</strong>  </p>
+<ul>
+<li>三分量必须同起止时刻；短 gap 可补零，长 gap 建议跳过。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="三、S-transform（论文规范实现）"><a href="#三、S-transform（论文规范实现）" class="headerlink" title="三、S-transform（论文规范实现）"></a>三、S-transform（论文规范实现）</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>$$<br>S(t,f)&#x3D;\int x(\tau)\frac{|f|}{\sqrt{2\pi}}e^{-(t-\tau)^2f^2&#x2F;2}e^{-i2\pi f\tau}d\tau<br>$$</p>
+<h3 id="参数与理由"><a href="#参数与理由" class="headerlink" title="参数与理由"></a>参数与理由</h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>推荐值</th>
+<th>理由</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>频率点数 <code>n_freqs</code></td>
+<td>60</td>
+<td>覆盖 0.01–0.06 Hz 区间，低频对数分辨率更合理</td>
+</tr>
+<tr>
+<td>窗宽 σ</td>
+<td>1&#x2F;(2πf)</td>
+<td>论文定义，时间-频率能量守恒</td>
+</tr>
+<tr>
+<td>调整系数 k</td>
+<td>1.0–1.5</td>
+<td>增大可提高时域平滑性</td>
+</tr>
+<tr>
+<td>下采样步长 step</td>
+<td>5 s</td>
+<td>提高计算效率，仍能解析 0.03 Hz（周期 33 s）信号</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>说明</strong>：<br>σ &#x3D; 1&#x2F;(2πf) 表示随频率增加窗宽减小，确保多分辨率特性。<br>|f|&#x2F;√(2π) 为归一化系数，维持 Parseval 能量一致性。  </p>
+</blockquote>
+<hr>
+<h2 id="四、谱矩阵构造与平滑"><a href="#四、谱矩阵构造与平滑" class="headerlink" title="四、谱矩阵构造与平滑"></a>四、谱矩阵构造与平滑</h2><h3 id="谱矩阵定义"><a href="#谱矩阵定义" class="headerlink" title="谱矩阵定义"></a>谱矩阵定义</h3><p>$$<br>S_{ij}(t,f) &#x3D; \widetilde{X_i}(t,f)\widetilde{X_j}^*(t,f)<br>$$<br>其中 $ \widetilde{X_i}(t,f) $ 为分量 i 的 S-transform 复系数。</p>
+<h3 id="平滑"><a href="#平滑" class="headerlink" title="平滑"></a>平滑</h3><p>对时间方向做高斯平滑：<br>$$<br>\sigma_{\text{tf}} &#x3D; \text{tf_window_periods} \times T \times f_s<br>$$</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>推荐值</th>
+<th>理由</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>tf_window_periods</code></td>
+<td>3.0</td>
+<td>论文示例值（2s ≈ 3T），平滑噪声但保留相干波</td>
+</tr>
+<tr>
+<td>DOP 窗长度</td>
+<td><code>4 × T</code></td>
+<td>保证至少 4 周期稳定极化，论文建议值</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="五、本征分解与极化属性"><a href="#五、本征分解与极化属性" class="headerlink" title="五、本征分解与极化属性"></a>五、本征分解与极化属性</h2><p>对每个 (t,f) 做 3×3 复矩阵本征分解：<br>$$<br>S &#x3D; V \Lambda V^H,\quad \Lambda &#x3D; \operatorname{diag}(\lambda_1,\lambda_2,\lambda_3)<br>$$</p>
+<h3 id="DOP（Degree-of-Polarization）"><a href="#DOP（Degree-of-Polarization）" class="headerlink" title="DOP（Degree of Polarization）"></a>DOP（Degree of Polarization）</h3><p>$$<br>\mathrm{DOP} &#x3D; \frac{\lambda_1 - \lambda_2}{\lambda_1 + \lambda_2 + \lambda_3}<br>$$</p>
+<h3 id="Planarity"><a href="#Planarity" class="headerlink" title="Planarity"></a>Planarity</h3><p>通过主、次特征向量叉积求平面法线，与竖直方向夹角 α：</p>
+<ul>
+<li>若 α ≈ 90° → 水平 planarity（Rayleigh 波特征）  </li>
+<li>若 α ≈ 0° → 垂直平面（Love 波或噪声）</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>推荐值</th>
+<th>理由</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>dop_thresh</code></td>
+<td>0.8</td>
+<td>论文常用 0.75–0.85；取 0.8 折中稳健</td>
+</tr>
+<tr>
+<td><code>alpha_min</code></td>
+<td>60°</td>
+<td>仅保留水平 planarity</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="六、背方位角（BAZ）计算"><a href="#六、背方位角（BAZ）计算" class="headerlink" title="六、背方位角（BAZ）计算"></a>六、背方位角（BAZ）计算</h2><h3 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h3><p>$$<br>\mathrm{BAZ} &#x3D; \operatorname{atan2}(E, N)<br>$$<br>以度为单位，0° &#x3D; 北，顺时针增加。</p>
+<h3 id="处理细节"><a href="#处理细节" class="headerlink" title="处理细节"></a>处理细节</h3><ul>
+<li>使用主特征向量的水平分量 (N,E)。  </li>
+<li>实部幅值过小则跳过或使用相位差法。  </li>
+<li>输出角度范围 [0, 360°)。</li>
+</ul>
+<h3 id="二义性处理"><a href="#二义性处理" class="headerlink" title="二义性处理"></a>二义性处理</h3><ul>
+<li>单站存在 ±180° 二义性。  </li>
+<li><strong>假设 retrograde（瑞利波基模）</strong>，可选反向修正：若竖直与水平分量相位差 ~180°，翻转 BAZ。</li>
+</ul>
+<hr>
+<h2 id="七、筛选与聚合输出"><a href="#七、筛选与聚合输出" class="headerlink" title="七、筛选与聚合输出"></a>七、筛选与聚合输出</h2><h3 id="筛选规则"><a href="#筛选规则" class="headerlink" title="筛选规则"></a>筛选规则</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">DOP &gt;= 0.8</span><br><span class="line">planarity_angle &gt; 60°</span><br></pre></td></tr></table></figure>
+
+<h2 id="八、脚本"><a href="#八、脚本" class="headerlink" title="八、脚本"></a>八、脚本</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/env python3</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">DOP-E style polarization + BAZ extraction using paper-consistent S-transform</span><br><span class="line">Implements Schimmel et al. (2011) S-transform definition with speed optimizations (Numba).</span><br><span class="line"></span><br><span class="line">Usage:</span><br><span class="line">    python dop_e_st_paper.py /path/to/sac_dir --target-freq 0.03 --outs out</span><br><span class="line"></span><br><span class="line">References:</span><br><span class="line">- Schimmel, Stutzmann, Ardhuin &amp; Gallart (2011), Polarized Earth&#x27;s ambient microseismic noise, G³</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">import os</span><br><span class="line">import glob</span><br><span class="line">import argparse</span><br><span class="line">from collections import defaultdict</span><br><span class="line">import numpy as np</span><br><span class="line">import matplotlib.pyplot as plt</span><br><span class="line">from obspy import read</span><br><span class="line">from scipy.signal import get_window</span><br><span class="line">from numba import njit, prange</span><br><span class="line">import math</span><br><span class="line">import warnings</span><br><span class="line"></span><br><span class="line">warnings.filterwarnings(&quot;ignore&quot;)</span><br><span class="line"></span><br><span class="line"># ======================================================</span><br><span class="line"># S-transform implementation per Schimmel et al. (2011)</span><br><span class="line"># ======================================================</span><br><span class="line"></span><br><span class="line">def s_transform(x, fs, freqs, pad=True):</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    Paper-consistent S-transform:</span><br><span class="line">    S(t,f) = ∫ x(τ) * |f|/√(2π) * exp[-(t-τ)^2 f^2 / 2] * exp[-i2π f τ] dτ</span><br><span class="line">    Implemented via FFT multiplication.</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    n = len(x)</span><br><span class="line">    dt = 1.0 / fs</span><br><span class="line">    if pad:</span><br><span class="line">        Nfft = 1 &lt;&lt; ((2 * n - 1).bit_length())</span><br><span class="line">    else:</span><br><span class="line">        Nfft = n</span><br><span class="line">    t = np.arange(n) * dt</span><br><span class="line">    X = np.fft.fft(x, n=Nfft)</span><br><span class="line">    freqs_fft = np.fft.fftfreq(Nfft, d=dt)</span><br><span class="line"></span><br><span class="line">    S = np.zeros((len(freqs), n), dtype=np.complex128)</span><br><span class="line">    # time index array</span><br><span class="line">    for i, f in enumerate(freqs):</span><br><span class="line">        if f &lt;= 0:</span><br><span class="line">            continue</span><br><span class="line">        # build Gaussian window in frequency domain for convolution</span><br><span class="line">        # Using exact analytical equivalence:</span><br><span class="line">        # G(f&#x27;) = exp[-2π^2 (f&#x27;-f)^2 / f^2]</span><br><span class="line">        g_f = np.exp(-2.0 * (np.pi ** 2) * ((freqs_fft - f) ** 2) / (f ** 2))</span><br><span class="line">        # convolution via inverse FFT</span><br><span class="line">        s_ifft = np.fft.ifft(X * g_f, n=Nfft)</span><br><span class="line">        s_ifft = s_ifft[:n]</span><br><span class="line">        # normalization factor |f|/sqrt(2π)</span><br><span class="line">        S[i, :] = (abs(f) / np.sqrt(2.0 * np.pi)) * s_ifft * np.exp(1j * 2 * np.pi * f * t)</span><br><span class="line">    return S</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># ======================================================</span><br><span class="line"># Polarization &amp; BAZ analysis (Numba optimized)</span><br><span class="line"># ======================================================</span><br><span class="line"></span><br><span class="line">@njit(parallel=True, fastmath=True)</span><br><span class="line">def compute_dop_baz(cz, cn, ce, periods, fs, dop_thresh):</span><br><span class="line">    nfr, nt = cz.shape</span><br><span class="line">    DOP = np.zeros((nfr, nt))</span><br><span class="line">    BAZ = np.full((nfr, nt), np.nan)</span><br><span class="line">    QUALITY = np.zeros((nfr, nt))</span><br><span class="line"></span><br><span class="line">    for ifr in prange(nfr):</span><br><span class="line">        for it in range(nt):</span><br><span class="line">            # spectral matrix (3x3)</span><br><span class="line">            Z = cz[ifr, it]</span><br><span class="line">            N = cn[ifr, it]</span><br><span class="line">            E = ce[ifr, it]</span><br><span class="line">            S00 = (Z * np.conj(Z)).real</span><br><span class="line">            S01 = (Z * np.conj(N))</span><br><span class="line">            S02 = (Z * np.conj(E))</span><br><span class="line">            S11 = (N * np.conj(N)).real</span><br><span class="line">            S12 = (N * np.conj(E))</span><br><span class="line">            S22 = (E * np.conj(E)).real</span><br><span class="line"></span><br><span class="line">            # Hermitian matrix</span><br><span class="line">            S = np.array([[S00, S01.real, S02.real],</span><br><span class="line">                          [S01.real, S11, S12.real],</span><br><span class="line">                          [S02.real, S12.real, S22]], dtype=np.float64)</span><br><span class="line"></span><br><span class="line">            # eigen decomposition</span><br><span class="line">            w, v = np.linalg.eigh(S)</span><br><span class="line">            idx = np.argsort(w)[::-1]</span><br><span class="line">            w = w[idx]</span><br><span class="line">            v = v[:, idx]</span><br><span class="line">            # DOP = (λ1 - λ2)/(λ1+λ2+λ3)</span><br><span class="line">            denom = w.sum()</span><br><span class="line">            if denom &lt;= 0:</span><br><span class="line">                dop_val = 0.0</span><br><span class="line">            else:</span><br><span class="line">                dop_val = (w[0] - w[1]) / denom</span><br><span class="line">                if dop_val &lt; 0:</span><br><span class="line">                    dop_val = 0.0</span><br><span class="line">                elif dop_val &gt; 1.0:</span><br><span class="line">                    dop_val = 1.0</span><br><span class="line">            DOP[ifr, it] = dop_val</span><br><span class="line"></span><br><span class="line">            if dop_val &lt; dop_thresh:</span><br><span class="line">                continue</span><br><span class="line"></span><br><span class="line">            # horizontal azimuth from first eigenvector (v[:,0])</span><br><span class="line">            a = v[:, 0]</span><br><span class="line">            rn = a[1]</span><br><span class="line">            re = a[2]</span><br><span class="line">            az = math.degrees(math.atan2(re, rn))</span><br><span class="line">            if az &lt; 0:</span><br><span class="line">                az += 360.0</span><br><span class="line">            BAZ[ifr, it] = az</span><br><span class="line">            QUALITY[ifr, it] = 1</span><br><span class="line"></span><br><span class="line">    return DOP, BAZ, QUALITY</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># ======================================================</span><br><span class="line"># DOPAnalyzer class</span><br><span class="line"># ======================================================</span><br><span class="line"></span><br><span class="line">class DOPAnalyzer:</span><br><span class="line">    def __init__(self, fs=1.0, target_freq=None, freq_band=None,</span><br><span class="line">                 dop_thresh=0.8, n_freqs=80, step=1):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        Parameters:</span><br><span class="line">            fs: sampling rate</span><br><span class="line">            target_freq: center frequency (Hz)</span><br><span class="line">            freq_band: (fmin,fmax)</span><br><span class="line">            dop_thresh: threshold</span><br><span class="line">            n_freqs: number of frequency points</span><br><span class="line">            step: downsample factor for time (e.g. 5 -&gt; 5 s resolution)</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        self.fs = fs</span><br><span class="line">        self.dt = 1.0 / fs</span><br><span class="line">        self.target_freq = target_freq</span><br><span class="line">        self.freq_band = freq_band</span><br><span class="line">        self.dop_thresh = dop_thresh</span><br><span class="line">        self.n_freqs = n_freqs</span><br><span class="line">        self.step = step</span><br><span class="line"></span><br><span class="line">    def _read_triple(self, fz, fn, fe):</span><br><span class="line">        stz = read(fz)[0]</span><br><span class="line">        stn = read(fn)[0]</span><br><span class="line">        ste = read(fe)[0]</span><br><span class="line">        start = max(stz.stats.starttime, stn.stats.starttime, ste.stats.starttime)</span><br><span class="line">        end = min(stz.stats.endtime, stn.stats.endtime, ste.stats.endtime)</span><br><span class="line">        stz.trim(start, end)</span><br><span class="line">        stn.trim(start, end)</span><br><span class="line">        ste.trim(start, end)</span><br><span class="line">        return stz.data.astype(float), stn.data.astype(float), ste.data.astype(float), stz.stats</span><br><span class="line"></span><br><span class="line">    def _choose_freqs(self):</span><br><span class="line">        if self.freq_band:</span><br><span class="line">            fmin, fmax = self.freq_band</span><br><span class="line">        elif self.target_freq:</span><br><span class="line">            fmin = self.target_freq * 0.8</span><br><span class="line">            fmax = self.target_freq * 1.2</span><br><span class="line">        else:</span><br><span class="line">            fmin, fmax = 0.005, 0.25</span><br><span class="line">        freqs = np.logspace(np.log10(fmin), np.log10(fmax), self.n_freqs)</span><br><span class="line">        return freqs</span><br><span class="line"></span><br><span class="line">    def analyze_triple(self, z, n, e):</span><br><span class="line">        npts = len(z)</span><br><span class="line">        tvec = np.arange(0, npts, self.step) / self.fs</span><br><span class="line">        freqs = self._choose_freqs()</span><br><span class="line">        periods = 1.0 / freqs</span><br><span class="line"></span><br><span class="line">        cz = s_transform(z, self.fs, freqs)</span><br><span class="line">        cn = s_transform(n, self.fs, freqs)</span><br><span class="line">        ce = s_transform(e, self.fs, freqs)</span><br><span class="line"></span><br><span class="line">        # downsample in time for speed</span><br><span class="line">        cz = cz[:, ::self.step]</span><br><span class="line">        cn = cn[:, ::self.step]</span><br><span class="line">        ce = ce[:, ::self.step]</span><br><span class="line"></span><br><span class="line">        DOP, BAZ, QUALITY = compute_dop_baz(cz, cn, ce, periods, self.fs, self.dop_thresh)</span><br><span class="line"></span><br><span class="line">        return &#123;&quot;times&quot;: tvec, &quot;freqs&quot;: freqs, &quot;DOP&quot;: DOP, &quot;BAZ&quot;: BAZ, &quot;QUALITY&quot;: QUALITY&#125;</span><br><span class="line"></span><br><span class="line">    def plot_results(self, res, out_prefix=&quot;result&quot;, target_freq=None):</span><br><span class="line">        times = res[&quot;times&quot;]</span><br><span class="line">        freqs = res[&quot;freqs&quot;]</span><br><span class="line">        DOP = res[&quot;DOP&quot;]</span><br><span class="line">        BAZ = res[&quot;BAZ&quot;]</span><br><span class="line">        Q = res[&quot;QUALITY&quot;]</span><br><span class="line"></span><br><span class="line">        t_hr = times / 3600.0</span><br><span class="line"></span><br><span class="line">        plt.figure(figsize=(12, 4))</span><br><span class="line">        plt.pcolormesh(t_hr, freqs, DOP, shading=&quot;auto&quot;)</span><br><span class="line">        plt.colorbar(label=&quot;DOP&quot;)</span><br><span class="line">        plt.yscale(&quot;log&quot;)</span><br><span class="line">        plt.ylabel(&quot;Frequency (Hz)&quot;)</span><br><span class="line">        plt.xlabel(&quot;Time (hours)&quot;)</span><br><span class="line">        plt.title(&quot;DOP (S-transform)&quot;)</span><br><span class="line">        plt.tight_layout()</span><br><span class="line">        plt.savefig(out_prefix + &quot;_DOP.png&quot;, dpi=200)</span><br><span class="line"></span><br><span class="line">        plt.figure(figsize=(12, 4))</span><br><span class="line">        baz_masked = np.where(Q &gt; 0, BAZ, np.nan)</span><br><span class="line">        plt.pcolormesh(t_hr, freqs, baz_masked, shading=&quot;auto&quot;, cmap=&quot;hsv&quot;, vmin=0, vmax=360)</span><br><span class="line">        plt.colorbar(label=&quot;Back Azimuth (°)&quot;)</span><br><span class="line">        plt.yscale(&quot;log&quot;)</span><br><span class="line">        plt.ylabel(&quot;Frequency (Hz)&quot;)</span><br><span class="line">        plt.xlabel(&quot;Time (hours)&quot;)</span><br><span class="line">        plt.title(f&quot;BAZ (DOP&gt;&#123;self.dop_thresh&#125;)&quot;)</span><br><span class="line">        plt.tight_layout()</span><br><span class="line">        plt.savefig(out_prefix + &quot;_BAZ_timefreq.png&quot;, dpi=200)</span><br><span class="line"></span><br><span class="line">        if target_freq is not None:</span><br><span class="line">            idx = np.argmin(np.abs(freqs - target_freq))</span><br><span class="line">            baz_vals = BAZ[idx, Q[idx, :] &gt; 0]</span><br><span class="line">        else:</span><br><span class="line">            baz_vals = BAZ[Q &gt; 0]</span><br><span class="line"></span><br><span class="line">        plt.figure(figsize=(6, 4))</span><br><span class="line">        plt.hist(baz_vals[~np.isnan(baz_vals)], bins=np.arange(0, 361, 10))</span><br><span class="line">        plt.xlabel(&quot;Back Azimuth (°)&quot;)</span><br><span class="line">        plt.ylabel(&quot;Count&quot;)</span><br><span class="line">        plt.title(&quot;BAZ Histogram&quot;)</span><br><span class="line">        plt.tight_layout()</span><br><span class="line">        plt.savefig(out_prefix + &quot;_BAZ_hist.png&quot;, dpi=200)</span><br><span class="line">        plt.close(&quot;all&quot;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># ======================================================</span><br><span class="line"># Utility: find 3-component sets</span><br><span class="line"># ======================================================</span><br><span class="line"></span><br><span class="line">def find_triples_in_dir(sac_dir):</span><br><span class="line">    files = glob.glob(os.path.join(sac_dir, &quot;*.SAC&quot;)) + glob.glob(os.path.join(sac_dir, &quot;*.sac&quot;))</span><br><span class="line">    idx = defaultdict(dict)</span><br><span class="line">    for f in files:</span><br><span class="line">        b = os.path.basename(f)</span><br><span class="line">        up = b.upper()</span><br><span class="line">        if &quot;LHZ&quot; in up or &quot;HZ&quot; in up:</span><br><span class="line">            base = up.replace(&quot;LHZ&quot;, &quot;&quot;).replace(&quot;HZ&quot;, &quot;&quot;).strip(&quot;_&quot;)</span><br><span class="line">            idx[base][&quot;Z&quot;] = f</span><br><span class="line">        elif &quot;LHN&quot; in up or &quot;HN&quot; in up:</span><br><span class="line">            base = up.replace(&quot;LHN&quot;, &quot;&quot;).replace(&quot;HN&quot;, &quot;&quot;).strip(&quot;_&quot;)</span><br><span class="line">            idx[base][&quot;N&quot;] = f</span><br><span class="line">        elif &quot;LHE&quot; in up or &quot;HE&quot; in up:</span><br><span class="line">            base = up.replace(&quot;LHE&quot;, &quot;&quot;).replace(&quot;HE&quot;, &quot;&quot;).strip(&quot;_&quot;)</span><br><span class="line">            idx[base][&quot;E&quot;] = f</span><br><span class="line">    triples = []</span><br><span class="line">    for base, d in idx.items():</span><br><span class="line">        if all(k in d for k in (&quot;Z&quot;, &quot;N&quot;, &quot;E&quot;)):</span><br><span class="line">            triples.append((base, d[&quot;Z&quot;], d[&quot;N&quot;], d[&quot;E&quot;]))</span><br><span class="line">    return triples</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># ======================================================</span><br><span class="line"># Main</span><br><span class="line"># ======================================================</span><br><span class="line"></span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">    p = argparse.ArgumentParser(description=&quot;DOP-E S-transform (paper consistent, optimized)&quot;)</span><br><span class="line">    p.add_argument(&quot;sacdir&quot;, help=&quot;Directory with 3-component SAC files&quot;)</span><br><span class="line">    p.add_argument(&quot;--target-freq&quot;, type=float, default=0.03, help=&quot;Center frequency (Hz)&quot;)</span><br><span class="line">    p.add_argument(&quot;--fmin&quot;, type=float, default=None, help=&quot;Min frequency&quot;)</span><br><span class="line">    p.add_argument(&quot;--fmax&quot;, type=float, default=None, help=&quot;Max frequency&quot;)</span><br><span class="line">    p.add_argument(&quot;--outs&quot;, default=&quot;out&quot;, help=&quot;Output prefix&quot;)</span><br><span class="line">    p.add_argument(&quot;--dop-thresh&quot;, type=float, default=0.8, help=&quot;DOP threshold&quot;)</span><br><span class="line">    p.add_argument(&quot;--n-freqs&quot;, type=int, default=60, help=&quot;Number of frequency points&quot;)</span><br><span class="line">    p.add_argument(&quot;--step&quot;, type=int, default=5, help=&quot;Downsample step for time (1 = full)&quot;)</span><br><span class="line">    args = p.parse_args()</span><br><span class="line"></span><br><span class="line">    triples = find_triples_in_dir(args.sacdir)</span><br><span class="line">    if not triples:</span><br><span class="line">        print(&quot;No 3-component SAC sets found.&quot;)</span><br><span class="line">        raise SystemExit</span><br><span class="line"></span><br><span class="line">    for base, fz, fn, fe in triples:</span><br><span class="line">        print(&quot;Processing:&quot;, base)</span><br><span class="line">        z, n, e, stats = DOPAnalyzer()._read_triple(fz, fn, fe)</span><br><span class="line">        fs = stats.sampling_rate</span><br><span class="line">        if args.fmin and args.fmax:</span><br><span class="line">            freq_band = (args.fmin, args.fmax)</span><br><span class="line">        else:</span><br><span class="line">            freq_band = None</span><br><span class="line">        analyzer = DOPAnalyzer(fs=fs,</span><br><span class="line">                               target_freq=args.target_freq,</span><br><span class="line">                               freq_band=freq_band,</span><br><span class="line">                               dop_thresh=args.dop_thresh,</span><br><span class="line">                               n_freqs=args.n_freqs,</span><br><span class="line">                               step=args.step)</span><br><span class="line">        res = analyzer.analyze_triple(z, n, e)</span><br><span class="line">        outpref = f&quot;&#123;args.outs&#125;_&#123;base&#125;&quot;</span><br><span class="line">        analyzer.plot_results(res, out_prefix=outpref, target_freq=args.target_freq)</span><br><span class="line">        print(&quot;Saved:&quot;, outpref)</span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/work/" rel="tag"># work</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/paper-reading-29" rel="prev" title="文献阅读(29)">
+                  <i class="fa fa-angle-left"></i> 文献阅读(29)
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Jun Xie</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">282k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">4:16</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener external nofollow noreferrer" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener external nofollow noreferrer" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>

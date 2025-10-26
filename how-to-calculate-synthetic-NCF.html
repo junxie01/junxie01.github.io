@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.seis-jun.xyz","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.25.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js" defer></script>
+
+    <meta property="og:type" content="article">
+<meta property="og:title" content="怎么计算理论的NCF？">
+<meta property="og:url" content="http://www.seis-jun.xyz/how-to-calculate-synthetic-NCF">
+<meta property="og:site_name" content="SEISAMUSE">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-09-14T07:55:31.000Z">
+<meta property="article:modified_time" content="2025-10-26T08:10:19.542Z">
+<meta property="article:author" content="Jun Xie">
+<meta property="article:tag" content="sem">
+<meta property="article:tag" content="NCF">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://www.seis-jun.xyz/how-to-calculate-synthetic-NCF.html">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://www.seis-jun.xyz/how-to-calculate-synthetic-NCF","path":"how-to-calculate-synthetic-NCF.html","title":"怎么计算理论的NCF？"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>怎么计算理论的NCF？ | SEISAMUSE</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<!-- hexo injector head_end end --><link rel="alternate" href="/atom.xml" title="SEISAMUSE" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">SEISAMUSE</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Jun Xie的博客</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Jun Xie</p>
+  <div class="site-description" itemprop="description">好记性不如烂笔头</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">163</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">77</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.seis-jun.xyz/how-to-calculate-synthetic-NCF">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Jun Xie">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SEISAMUSE">
+      <meta itemprop="description" content="好记性不如烂笔头">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="怎么计算理论的NCF？ | SEISAMUSE">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          怎么计算理论的NCF？
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-09-14 15:55:31" itemprop="dateCreated datePublished" datetime="2020-09-14T15:55:31+08:00">2020-09-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-10-26 16:10:19" itemprop="dateModified" datetime="2025-10-26T16:10:19+08:00">2025-10-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/work/" itemprop="url" rel="index"><span itemprop="name">work</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;好久没有更新博客了。原因是上个月文章修改意见下来了，第二轮大修，这酸爽，难以言表。<br>&emsp;&emsp;不知道啥时候开始（大概是Fichter和Ermert的文章发表之后），做噪声互相关工作总会被审稿人问：噪声源影响有多大啊？难为人啊。要是能像Ermert他们把源和结构一块儿做了不就结了。但那是人家的手艺，捡起来难啊。<br>&emsp;&emsp;另一个方法就是做模拟。给定源，计算两点波形，做胡相关，叠加。一维，近距离还好做，全球的三维的咋办？<br>&emsp;&emsp;还好有大神啊。人家Tromp et al. (2010)早都弄出来了。就是用Specfem3d_globe就可以了。<br>&emsp;&emsp;其实specfem3d_globe的说明文档已经讲的很清楚了，我这里就简单说一下。一般，波形的正演模拟只需要一步，而ensemble average的NCF需要两步，要计算敏感核函数需要三步。需要注意的点主要有：<br>&emsp;&emsp;1，NCF的模拟不需要CMTSOLUTION，需将其六分量设置为0。<br>&emsp;&emsp;2，There are other parameters in DATA&#x2F;Par_file which should be given specific values. For instance, NUMBER_OF_RUNS and NUMBER_OF_THIS_RUN must be 1; ROTATE_SEISMOGRAMS_RT, SAVE_ALL_SEISMOGRAMS_IN_ONE_FILES, USE_BINARY_FOR_LARGE_FILE and MOVIE_COARSE should be .false.. Moreover, since the first two steps for calculating noise cross-correlation kernels correspond to forward simulations, SIMULATION_TYPE must be 1 when NOISE_TOMOGRAPHY equals 1 or 2. Also, we have to reconstruct the ensemble forward wavefields in adjoint simulations, therefore we need to set SAVE_FORWARD to .true. for the second step, i.e., when NOISE_TOMOGRAPHY equals 2. The third step is for kernel constructions. Hence SIMULATION_TYPE should be 3, whereas SAVE_FORWARD must be .false.. （从使用手册抄的，关于Par_file的设置)<br>&emsp;&emsp;3，利用EXAMPLES&#x2F;noise_examples&#x2F;NOISE_TOMOGRAPHY.m (main program)和EXAMPLES&#x2F;noise_examples&#x2F;PetersonNoiseModel.m两个matlab程序获得S_squared。运行该程序需要提供NSTEP和dt。这两个参数在编译之后运行xcreate_header_file会显示。<br>&emsp;&emsp;4，Create a file called NOISE_TOMOGRAPHY&#x2F;irec_master_noise. Note that this file should be put in directory NOISE_TOMOGRAPHY as well. This file contains only one integer, which is the ID of the ‘maste’ receiver. For example, if in this file shows 5, it means that the fifth receiver listed in DATA&#x2F;STATIONS becomes the ‘master’. That’s why we mentioned previously that the order of receivers in DATA&#x2F;STATIONS important. （该文件定义了是哪个台与其他台的互相关）<br>&emsp;&emsp;5，Create a file called NOISE_TOMOGRAPHY&#x2F;nu_master. This file holds three numbers, forming a (unit) vector. It describes which component we are cross-correlating at the ‘master’ receiv. （该文件定义了哪些分量做胡相关）<br>&emsp;&emsp;6，Describe the noise direction and distributions in src&#x2F;specfem3d&#x2F;noise_tomography.f90. Search for a subroutine called noise_distribution_direction in noise_tomography.f90. It is actually located at the very beginning of noise_tomography.f90. The default assumes vertical noises and a uniform distribution across the whole physical domain. It should be quite self-explanatory for modifications. Should you modify this part, you have to re-compile the source code. (again, that’s why we recommend that you alwaysre-compile the code before you run simulations)（这里根据需要自己给定噪声源的分布。）<br>&emsp;&emsp;接下来就可以运行了。要得到NCF需要运行要两步，在修改参数运行第二步的时候一定要重新编译一下。<br>&emsp;&emsp;然后就可以跑了。结果我老是跑不通，老是出错。多番检查发现错误出在子程序print_stf_file()，即输出震源时间函数的子程序。但没有弄明白为什么会出错。这个程序没有产生后续需要调用的参数。大胆的将其注释掉了。然后程序就跑通了。其实在Par_file里面将PRINT_SOURCE_TIME_FUNCTION改为false应该就可以了。在噪声源均匀的情况下，跑出来的NCF与single force差了pi&#x2F;4，以及一些微小的差异。移动pi&#x2F;4之后基本能够对上，应该是正确的了。Hooray!<br>&emsp;&emsp;第三步我是没跑通，估计是因为空间不足，因为我看到中间数据就已经接近900G。不过我要的是synthetic NCF，足够了，有空再试sensitivity kernel吧。<br>&emsp;&emsp;封面图是我用来做模拟的噪声源分布。结果表明源的影响不大啊。乐。</p>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/sem/" rel="tag"># sem</a>
+              <a href="/tags/NCF/" rel="tag"># NCF</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/how-to-configure-chinese-for-gmt" rel="prev" title="如何在elementaryOS下让gmt支持中文">
+                  <i class="fa fa-angle-left"></i> 如何在elementaryOS下让gmt支持中文
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/how-to-download-video-from-internet" rel="next" title="如何下载网上的视频">
+                  如何下载网上的视频 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Jun Xie</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">282k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">4:16</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener external nofollow noreferrer" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener external nofollow noreferrer" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>
