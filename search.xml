@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>寂寞</title>
-    <url>/%E5%AF%82%E5%AF%9E.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;一只小鼠死了,我很伤心.当听知他的死时,我差点落泪,但是泪水只在眼里转了一转,并没有流下来.我不懂我是怎么了?难到我的良心已在这浊世当中损失殆尽？还是我堕落了？</p>
-]]></content>
-      <categories>
-        <category>某日记</category>
-      </categories>
-      <tags>
-        <tag>这是啥</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>阿甘</title>
     <url>/%E9%98%BF%E7%94%98.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;记得第一次看阿甘正传时，我流泪了！</p>
@@ -31,6 +19,18 @@
       </categories>
       <tags>
         <tag>阿甘</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>寂寞</title>
+    <url>/%E5%AF%82%E5%AF%9E.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;一只小鼠死了,我很伤心.当听知他的死时,我差点落泪,但是泪水只在眼里转了一转,并没有流下来.我不懂我是怎么了?难到我的良心已在这浊世当中损失殆尽？还是我堕落了？</p>
+]]></content>
+      <categories>
+        <category>某日记</category>
+      </categories>
+      <tags>
+        <tag>这是啥</tag>
       </tags>
   </entry>
   <entry>
@@ -88,24 +88,6 @@
       </tags>
   </entry>
   <entry>
-    <title>外婆外公的故事</title>
-    <url>/%E5%A4%96%E5%A9%86%E5%A4%96%E5%85%AC%E7%9A%84%E6%95%85%E4%BA%8B.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="大面的由来"><a href="#大面的由来" class="headerlink" title="大面的由来"></a>大面的由来</h2><p>&emsp;&emsp;我们所在的那个镇叫做大面铺。外公外婆几十年来几乎没有离开那个镇上百里。</p>
-<p>&emsp;&emsp;外公，大面铺为什么叫大面铺。外公说，大面铺以前并不叫大面铺，而叫倒面铺。于是故事就来了：</p>
-<p>&emsp;&emsp;很久很久以前，外公也不知道那是什么时候，鲁班和长腿大仙一同修建长东寺。一天，他们两都觉得无聊，于是想出一个消磨时间的比赛。比试看是鲁班先做好一张椅子，还是长腿大仙先从面粉厂挑回一担面粉。比赛开始。鲁班用纯熟的手艺开始砍木头,长腿大仙就更快了。只见他挑上担子只一步就跨到了界牌铺，第二步就跨到了洪门铺，第三步就到了面粉厂了。长腿大仙迅速装好面粉准备往回走。当他刚往回迈出第一步时，鲁班的椅子一半都还没有做好。聪明的鲁班料想这回输定了，于是将他的墨线悄悄地伸出去只一弹，长腿大仙一个跟斗就摔倒在了洪门铺与面粉厂中间的一块儿地上，面粉撒了一地。长腿大仙不得不爬起来重新回到面粉厂装面粉。等到他往回跨第一步时又被鲁班的墨线给弹摔倒了。如此，几番折腾，最后当长腿大仙回到长东寺时，鲁班也刚好做好椅子。于是两人打了个平手。长腿大仙摔倒的地方撒了一地的面粉，于是那块地方就被叫做倒面铺。后来又不知不觉地变成了大面铺。外公低下头继续弄他的东西……</p>
-<h2 id="鲁班的墨"><a href="#鲁班的墨" class="headerlink" title="鲁班的墨"></a>鲁班的墨</h2><p>&emsp;&emsp;外公，鲁班的墨线怎么这么厉害。当然厉害了。鲁班破木头从来都不用锯子或斧头，他就用墨线那么一弹，木头就齐齐地成了两半。他的墨是特制的，非得要用那山上的泉水兑，才能弹得动木头。有一天鲁班的墨用完了，于是叫他的徒弟上山打泉水调制墨。徒弟懒，不愿上山，于是撒了一泡尿来兑墨。鲁班用调好的墨弹木头，可是不管怎么弹木头都没有动静。鲁班于是就发现了问题，问他的徒弟，你这水是从山上打的吗？外公脸上露出了婴儿般的笑容……</p>
-<h2 id="竹皇"><a href="#竹皇" class="headerlink" title="竹皇"></a>竹皇</h2><p>&emsp;&emsp;外婆说，有一天她到外面倒垃圾。只听见对面一条竹子发出唧唧咋咋的怪叫，还在不停的摆动。我说，那应该是竹子上面有一只鸟或者什么的吧？不是，我确定不是，我走近了看，没有看到有鸟，我用绳子作了记号，然后就跑回家叫你外公来看是怎么回事。你外公说我好傻。他说那是竹皇，是竹子中的黄帝，有灵性的，发现他以后就应该立刻砍下来，入药，大补。你现在才来叫我有什么用，他已经跑了。后来去看，我做记号的那根竹子果真不叫了。外婆一副无辜的样子……</p>
-<h2 id="金鹅"><a href="#金鹅" class="headerlink" title="金鹅"></a>金鹅</h2><p>&emsp;&emsp;说到有灵性的东西就是以前我给你讲过的金鹅了，外婆说。我听他们讲，有一天一个人到荷塘里面打水，每次他用水桶去舀水，都有一只鹅子跳到他的桶里面，最后他不耐烦了，于是就把那只鹅抓了起来，这才发现是一只金鹅子，于是那个人就发财了。那是该那个人发财啊，别人的水桶它怎么不去窜呢？偏偏跑到他的桶里面。你见过金鹅吗？没有，我都是听他们讲的。你外公倒是见到过。那一年我们都到邻居家看电视去了，你外公一个人坐在院子里。你知道的以前我们家养过鹅的，就在里屋的巷子里。这时你外公就看到门口蹲了一只鹅，你也知道，你外公的眼神不好，他看到一团白色，想肯定是鹅子跑出来了。于是就对着鹅子叫：你还不回去！过了一会儿鹅子就不见了。回到小巷子里，发现鹅子都在，那有跑出来？要是你外公眼神好走过去就把它抱起来，要是你外公不说那句话而是直接去抱它，要是……我们家早就发财了……外婆露出了开朗的笑声……</p>
-]]></content>
-      <categories>
-        <category>乱笔</category>
-      </categories>
-      <tags>
-        <tag>外公</tag>
-        <tag>外婆</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>星期五</title>
     <url>/%E6%98%9F%E6%9C%9F%E4%BA%94.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;好久没有坐过电梯了，今天，腿实在疼的不行了，所以还是坐电梯了。</p>
@@ -121,6 +103,24 @@
       </categories>
       <tags>
         <tag>杂</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>外婆外公的故事</title>
+    <url>/%E5%A4%96%E5%A9%86%E5%A4%96%E5%85%AC%E7%9A%84%E6%95%85%E4%BA%8B.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="大面的由来"><a href="#大面的由来" class="headerlink" title="大面的由来"></a>大面的由来</h2><p>&emsp;&emsp;我们所在的那个镇叫做大面铺。外公外婆几十年来几乎没有离开那个镇上百里。</p>
+<p>&emsp;&emsp;外公，大面铺为什么叫大面铺。外公说，大面铺以前并不叫大面铺，而叫倒面铺。于是故事就来了：</p>
+<p>&emsp;&emsp;很久很久以前，外公也不知道那是什么时候，鲁班和长腿大仙一同修建长东寺。一天，他们两都觉得无聊，于是想出一个消磨时间的比赛。比试看是鲁班先做好一张椅子，还是长腿大仙先从面粉厂挑回一担面粉。比赛开始。鲁班用纯熟的手艺开始砍木头,长腿大仙就更快了。只见他挑上担子只一步就跨到了界牌铺，第二步就跨到了洪门铺，第三步就到了面粉厂了。长腿大仙迅速装好面粉准备往回走。当他刚往回迈出第一步时，鲁班的椅子一半都还没有做好。聪明的鲁班料想这回输定了，于是将他的墨线悄悄地伸出去只一弹，长腿大仙一个跟斗就摔倒在了洪门铺与面粉厂中间的一块儿地上，面粉撒了一地。长腿大仙不得不爬起来重新回到面粉厂装面粉。等到他往回跨第一步时又被鲁班的墨线给弹摔倒了。如此，几番折腾，最后当长腿大仙回到长东寺时，鲁班也刚好做好椅子。于是两人打了个平手。长腿大仙摔倒的地方撒了一地的面粉，于是那块地方就被叫做倒面铺。后来又不知不觉地变成了大面铺。外公低下头继续弄他的东西……</p>
+<h2 id="鲁班的墨"><a href="#鲁班的墨" class="headerlink" title="鲁班的墨"></a>鲁班的墨</h2><p>&emsp;&emsp;外公，鲁班的墨线怎么这么厉害。当然厉害了。鲁班破木头从来都不用锯子或斧头，他就用墨线那么一弹，木头就齐齐地成了两半。他的墨是特制的，非得要用那山上的泉水兑，才能弹得动木头。有一天鲁班的墨用完了，于是叫他的徒弟上山打泉水调制墨。徒弟懒，不愿上山，于是撒了一泡尿来兑墨。鲁班用调好的墨弹木头，可是不管怎么弹木头都没有动静。鲁班于是就发现了问题，问他的徒弟，你这水是从山上打的吗？外公脸上露出了婴儿般的笑容……</p>
+<h2 id="竹皇"><a href="#竹皇" class="headerlink" title="竹皇"></a>竹皇</h2><p>&emsp;&emsp;外婆说，有一天她到外面倒垃圾。只听见对面一条竹子发出唧唧咋咋的怪叫，还在不停的摆动。我说，那应该是竹子上面有一只鸟或者什么的吧？不是，我确定不是，我走近了看，没有看到有鸟，我用绳子作了记号，然后就跑回家叫你外公来看是怎么回事。你外公说我好傻。他说那是竹皇，是竹子中的黄帝，有灵性的，发现他以后就应该立刻砍下来，入药，大补。你现在才来叫我有什么用，他已经跑了。后来去看，我做记号的那根竹子果真不叫了。外婆一副无辜的样子……</p>
+<h2 id="金鹅"><a href="#金鹅" class="headerlink" title="金鹅"></a>金鹅</h2><p>&emsp;&emsp;说到有灵性的东西就是以前我给你讲过的金鹅了，外婆说。我听他们讲，有一天一个人到荷塘里面打水，每次他用水桶去舀水，都有一只鹅子跳到他的桶里面，最后他不耐烦了，于是就把那只鹅抓了起来，这才发现是一只金鹅子，于是那个人就发财了。那是该那个人发财啊，别人的水桶它怎么不去窜呢？偏偏跑到他的桶里面。你见过金鹅吗？没有，我都是听他们讲的。你外公倒是见到过。那一年我们都到邻居家看电视去了，你外公一个人坐在院子里。你知道的以前我们家养过鹅的，就在里屋的巷子里。这时你外公就看到门口蹲了一只鹅，你也知道，你外公的眼神不好，他看到一团白色，想肯定是鹅子跑出来了。于是就对着鹅子叫：你还不回去！过了一会儿鹅子就不见了。回到小巷子里，发现鹅子都在，那有跑出来？要是你外公眼神好走过去就把它抱起来，要是你外公不说那句话而是直接去抱它，要是……我们家早就发财了……外婆露出了开朗的笑声……</p>
+]]></content>
+      <categories>
+        <category>乱笔</category>
+      </categories>
+      <tags>
+        <tag>外公</tag>
+        <tag>外婆</tag>
       </tags>
   </entry>
   <entry>
@@ -196,6 +196,22 @@
       </tags>
   </entry>
   <entry>
+    <title>发霉了</title>
+    <url>/%E5%8F%91%E9%9C%89%E4%BA%86.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;你知道吗？我快发霉了。</p>
+<p>&emsp;&emsp;不是身上长出灰绿色毛茸茸真菌的那钟发霉，而是从里面来的。就像脑子里可以长出蘑菇一样，不能长出灯泡了。</p>
+<p>&emsp;&emsp;我骑了自行车去吃晚饭，我已经太久没有动。我骑的很慢，比晚饭过后散步的老奶奶还要慢。吃饭的人很多，正是吃饭的时候。在饭堂门口挺车的时候差一点就撞到背后驶来的一个小伙，真是的，连身体的灵敏度都降低了。但是为什么又不让我撞到？最好撞到一个漂亮女孩儿（在做梦啦……）！吃晚饭只花了我十分钟。不要误会，我不是吃不下，只是平时吃饭都是这个速度。似乎吃得有些快啊，不过吃饭就专心吃饭咯，本没有其他事做，本不应该做其他事情。</p>
+<p>&emsp;&emsp;我骑上自行车，沿着平时去往实验室的路骑，骑的比饭后散步的老公公还要慢。</p>
+<p>&emsp;&emsp;我骑到了校园的最北边的北门。外面就是吵闹的街，车辆过往飞驰。天哪，我连学校都不敢出去，我是怎么了？我在原地来回骑了许多个圈，我也记不得有多少个圈。外面的吵闹声声声入耳，心里的喧哗却是蠢蠢欲动喷薄欲出。但是我脑子里什么都没有。我沿着另一条与之前平行的路返回。如果每个人都是一条直线，哇噻，世上那么多的线，我们居然能够有交点，那真是奇迹。剩下的线当然不能说都是平行的，更多的是处于不同平面的。我觉得平行的和有交点的同样难得啊！</p>
+<p>&emsp;&emsp;有时我喜欢用眼睛盯住朝我走来的每一个人，直到他们都胆怯的转移视线，有时我却害怕见到任何一双眼睛，我只低着头看我路。但很多时候我找不到自己的路。而今天我选择低头看我自己的路。</p>
+<p>&emsp;&emsp;我骑到了校园的最南面。</p>
+<p>&emsp;&emsp;突然不知道我出来是干啥的了。</p>
+]]></content>
+      <categories>
+        <category>日记</category>
+      </categories>
+  </entry>
+  <entry>
     <title>流水一</title>
     <url>/%E6%B5%81%E6%B0%B4%E4%B8%80.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;10点半起的床，哇，疯了。我应该没有那么懒吧！</p>
@@ -219,22 +235,6 @@
       </categories>
   </entry>
   <entry>
-    <title>发霉了</title>
-    <url>/%E5%8F%91%E9%9C%89%E4%BA%86.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;你知道吗？我快发霉了。</p>
-<p>&emsp;&emsp;不是身上长出灰绿色毛茸茸真菌的那钟发霉，而是从里面来的。就像脑子里可以长出蘑菇一样，不能长出灯泡了。</p>
-<p>&emsp;&emsp;我骑了自行车去吃晚饭，我已经太久没有动。我骑的很慢，比晚饭过后散步的老奶奶还要慢。吃饭的人很多，正是吃饭的时候。在饭堂门口挺车的时候差一点就撞到背后驶来的一个小伙，真是的，连身体的灵敏度都降低了。但是为什么又不让我撞到？最好撞到一个漂亮女孩儿（在做梦啦……）！吃晚饭只花了我十分钟。不要误会，我不是吃不下，只是平时吃饭都是这个速度。似乎吃得有些快啊，不过吃饭就专心吃饭咯，本没有其他事做，本不应该做其他事情。</p>
-<p>&emsp;&emsp;我骑上自行车，沿着平时去往实验室的路骑，骑的比饭后散步的老公公还要慢。</p>
-<p>&emsp;&emsp;我骑到了校园的最北边的北门。外面就是吵闹的街，车辆过往飞驰。天哪，我连学校都不敢出去，我是怎么了？我在原地来回骑了许多个圈，我也记不得有多少个圈。外面的吵闹声声声入耳，心里的喧哗却是蠢蠢欲动喷薄欲出。但是我脑子里什么都没有。我沿着另一条与之前平行的路返回。如果每个人都是一条直线，哇噻，世上那么多的线，我们居然能够有交点，那真是奇迹。剩下的线当然不能说都是平行的，更多的是处于不同平面的。我觉得平行的和有交点的同样难得啊！</p>
-<p>&emsp;&emsp;有时我喜欢用眼睛盯住朝我走来的每一个人，直到他们都胆怯的转移视线，有时我却害怕见到任何一双眼睛，我只低着头看我路。但很多时候我找不到自己的路。而今天我选择低头看我自己的路。</p>
-<p>&emsp;&emsp;我骑到了校园的最南面。</p>
-<p>&emsp;&emsp;突然不知道我出来是干啥的了。</p>
-]]></content>
-      <categories>
-        <category>日记</category>
-      </categories>
-  </entry>
-  <entry>
     <title>123</title>
     <url>/123.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;天下着小雨，早上出门的时候还没有下的。天气预报还是挺准的。</p>
@@ -246,6 +246,22 @@
 <p>&emsp;&emsp;哦……我的思绪也飞走了。</p>
 <p>&emsp;&emsp;下课了。我不经意地仔细看了看缆绳。有好几股铜线组成，大概一个手掌勉强能握住。从一楼到十楼每层三米少说也三十米，三十米的缆绳哇，肯定重的要命。</p>
 <p>&emsp;&emsp;天气预报说今晚有小雪，明天有中雪。其实我都不知道我喜不喜欢下雪了。</p>
+]]></content>
+      <categories>
+        <category>日记</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Dloc</title>
+    <url>/Dloc.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;我似乎又dloc了。我不是故意的。大概是因为上周末晚饭过后出去转了一转，还有昨晚也吹了吹冷风的缘故。</p>
+<p>&emsp;&emsp;Dloc对于我是司空见惯的了。我几乎没有什么大的病痛，除了初三摔断手壁，高三给自己狗咬到。dloc这种事情不到一个月就会有。或许是因为抵抗力差了些吧！老妈说我小时候三天两头就住院了，能挺过来还挺不容易。</p>
+<p>&emsp;&emsp;从小到大我记得的dloc症状大概就只有两种发展类型。一种就是狂流鼻涕，另一种是先喉咙痛，然后狂流鼻涕。</p>
+<p>&emsp;&emsp;几乎每次快到考试的时候就会dloc。我有时会怀疑是考试综合症。老妈说头发长了就会“变狗”。变狗的意思就是dloc，生病。我甚至想过用科学的方法来合理头发长了与dloc的关系。比如头发长了，免疫系统更新较慢等等。因为正如老妈讲的，每次我的头发长的时候都会dloc，但是我却找不到他们之间的关系。 </p>
+<p>&emsp;&emsp;记得最清楚的一次感冒考试是高一考数学。因为经受了初中老师的关于考试时间的观念，不管有没有把试卷做完都应该坐到考试结束。那天dloc正进入严重时期，爆发期。考试到一半的时候，我准备的纸巾已经被我的鼻涕吸完了。好吧，这的确比较恶心，随后当然就没有办法咯。我用一只手写着卷子，另一手拧着鼻子。那次的考试似乎有点简单，大家纷纷都提前离场了。大概提早了半个多小时，考场里面几乎就只有我和另外一个同学了。我仍然坚持着。坚持着把时间坐够。最后，监考老师说，你们还交不交的啊，不交我走了。要知道那个时候离考试结束还有十多分钟呢！我们只好把试卷交了。结束我拧鼻子的痛苦。</p>
+<p>&emsp;&emsp;食堂的苦瓜从来都没有炒熟过，苦的难以下咽。自从尝了第一次以后我便没有吃过第二次。如果食堂师傅做的苦瓜能有老妈做的那么好就太棒了。有一次dloc居然影响到了我的味觉，吃东西都没有味道。于是我就打了平时不敢吃的苦瓜。</p>
+<p>&emsp;&emsp;其实dloc对于现在的我一点影响都没有，除了可以成为我不去实验室的借口。</p>
+<p>&emsp;&emsp;也许dloc还能一点一点得侵蚀人的大脑，让人变得更傻。</p>
 ]]></content>
       <categories>
         <category>日记</category>
@@ -269,22 +285,6 @@
 <p>&emsp;&emsp;《花木兰》开演了。整体还不错，除了一些比较雷的对白。花木兰，民族英雄，还有什么好说的。</p>
 <p>&emsp;&emsp;回到宿舍，我和小白又看起了《犬夜叉》。这几集故事太精彩，我们被故事情节深深地吸住了。</p>
 <p>&emsp;&emsp;白心上人是得道活佛，有那么高强的纯净法力。确仍然败给了死亡这道坎，从而憎恨世人憎恨世界。他哪里还有资格作佛。世上也没有一个完全的人，每个人心中总有善和恶。明白了这一点，白心上人成佛了，我们的心里也坦然了许多。</p>
-]]></content>
-      <categories>
-        <category>日记</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Dloc</title>
-    <url>/Dloc.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;我似乎又dloc了。我不是故意的。大概是因为上周末晚饭过后出去转了一转，还有昨晚也吹了吹冷风的缘故。</p>
-<p>&emsp;&emsp;Dloc对于我是司空见惯的了。我几乎没有什么大的病痛，除了初三摔断手壁，高三给自己狗咬到。dloc这种事情不到一个月就会有。或许是因为抵抗力差了些吧！老妈说我小时候三天两头就住院了，能挺过来还挺不容易。</p>
-<p>&emsp;&emsp;从小到大我记得的dloc症状大概就只有两种发展类型。一种就是狂流鼻涕，另一种是先喉咙痛，然后狂流鼻涕。</p>
-<p>&emsp;&emsp;几乎每次快到考试的时候就会dloc。我有时会怀疑是考试综合症。老妈说头发长了就会“变狗”。变狗的意思就是dloc，生病。我甚至想过用科学的方法来合理头发长了与dloc的关系。比如头发长了，免疫系统更新较慢等等。因为正如老妈讲的，每次我的头发长的时候都会dloc，但是我却找不到他们之间的关系。 </p>
-<p>&emsp;&emsp;记得最清楚的一次感冒考试是高一考数学。因为经受了初中老师的关于考试时间的观念，不管有没有把试卷做完都应该坐到考试结束。那天dloc正进入严重时期，爆发期。考试到一半的时候，我准备的纸巾已经被我的鼻涕吸完了。好吧，这的确比较恶心，随后当然就没有办法咯。我用一只手写着卷子，另一手拧着鼻子。那次的考试似乎有点简单，大家纷纷都提前离场了。大概提早了半个多小时，考场里面几乎就只有我和另外一个同学了。我仍然坚持着。坚持着把时间坐够。最后，监考老师说，你们还交不交的啊，不交我走了。要知道那个时候离考试结束还有十多分钟呢！我们只好把试卷交了。结束我拧鼻子的痛苦。</p>
-<p>&emsp;&emsp;食堂的苦瓜从来都没有炒熟过，苦的难以下咽。自从尝了第一次以后我便没有吃过第二次。如果食堂师傅做的苦瓜能有老妈做的那么好就太棒了。有一次dloc居然影响到了我的味觉，吃东西都没有味道。于是我就打了平时不敢吃的苦瓜。</p>
-<p>&emsp;&emsp;其实dloc对于现在的我一点影响都没有，除了可以成为我不去实验室的借口。</p>
-<p>&emsp;&emsp;也许dloc还能一点一点得侵蚀人的大脑，让人变得更傻。</p>
 ]]></content>
       <categories>
         <category>日记</category>
@@ -377,26 +377,6 @@
       </tags>
   </entry>
   <entry>
-    <title>流水三</title>
-    <url>/%E6%B5%81%E6%B0%B4%E4%B8%89.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;“阿三，我打你的电话试一下，你别接！”小白转过身对阿三说道。</p>
-<p>&emsp;&emsp;“好！”阿三正专心的在魔兽世界里镇压敌军。手机铃声响了两声，然后停了。</p>
-<p>&emsp;&emsp;“我刚充了话费，所以打你的电话试一下。”</p>
-<p>&emsp;&emsp;“充上了吗？”</p>
-<p>&emsp;&emsp;“充上了啊，要不然怎么能打通你的手机？”</p>
-<p>&emsp;&emsp;“你打了我手机吗？”</p>
-<p>&emsp;&emsp;每天早上从床上爬起来都是一件让人烦恼的事情，不，那种感觉不应该叫做烦恼，床就像人的恋人，让你离开你的恋人的感觉总归是难以割舍。不过我们对这个恋人倒是残忍至极，晚上回来睡他，白天却留她孤零零一个。</p>
-<p>&emsp;&emsp;总会在清晨醒一次，但那个时候的我大概只是在睡魔的疏忽下溜出梦的监牢出来透透风。天已经大亮。只是不知道太阳有没有游览到这块院子。以为已经八九点光景。然后打开手机，原来只六点多，迅速编辑一条短信，通常在我来不及意识到短信是否发出的那一刻睡魔就抓住了我，再次陷入朦胧的梦境，很难忆起梦境的人事。</p>
-<p>&emsp;&emsp;如果课是在上午，下午或者晚上，那么我肯定会在上午，下午或者晚上打瞌睡，简而言之就是，上课的时候我总会不知不觉不能自已的打瞌睡。曾经有人拿老鼠做过实验，想方设法让老鼠不能睡觉，结果老鼠在第13天的时候就死掉了，因为没有睡觉的缘故，呃，这家伙真是残忍。我在想要是再这么下去我会不会也尽快的死掉了。呵呵，还是得认真调整一下生物钟了，拿一个整天来睡觉或许是个比较好的办法。</p>
-<p>&emsp;&emsp;我试着给自己写一首打油诗的评语，不过还没有完成，因为我不知道自己以后会是怎么样的，所以那首打油诗一直都没有完成，也许人本来就无法知道自己以后的路该怎么走。</p>
-<p>&emsp;&emsp;我把自行车推去校园自行车行修了，我不会记恨因为他儿摔过，呵呵，大概我只会畏惧。</p>
-<p>&emsp;&emsp;在看正负2摄氏度的视频，突然觉得人类是多么无知渺小啊，活着真好，真糟糕！</p>
-]]></content>
-      <categories>
-        <category>日记</category>
-      </categories>
-  </entry>
-  <entry>
     <title>扑克</title>
     <url>/%E6%89%91%E5%85%8B.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;“诶～你又耍赖啊！”木斯灰白的眉毛往上挑动了一下，用奇怪的眼神看着坐在眼前的小佳。</p>
@@ -414,6 +394,26 @@
 ]]></content>
       <categories>
         <category>乱笔</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>流水三</title>
+    <url>/%E6%B5%81%E6%B0%B4%E4%B8%89.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;“阿三，我打你的电话试一下，你别接！”小白转过身对阿三说道。</p>
+<p>&emsp;&emsp;“好！”阿三正专心的在魔兽世界里镇压敌军。手机铃声响了两声，然后停了。</p>
+<p>&emsp;&emsp;“我刚充了话费，所以打你的电话试一下。”</p>
+<p>&emsp;&emsp;“充上了吗？”</p>
+<p>&emsp;&emsp;“充上了啊，要不然怎么能打通你的手机？”</p>
+<p>&emsp;&emsp;“你打了我手机吗？”</p>
+<p>&emsp;&emsp;每天早上从床上爬起来都是一件让人烦恼的事情，不，那种感觉不应该叫做烦恼，床就像人的恋人，让你离开你的恋人的感觉总归是难以割舍。不过我们对这个恋人倒是残忍至极，晚上回来睡他，白天却留她孤零零一个。</p>
+<p>&emsp;&emsp;总会在清晨醒一次，但那个时候的我大概只是在睡魔的疏忽下溜出梦的监牢出来透透风。天已经大亮。只是不知道太阳有没有游览到这块院子。以为已经八九点光景。然后打开手机，原来只六点多，迅速编辑一条短信，通常在我来不及意识到短信是否发出的那一刻睡魔就抓住了我，再次陷入朦胧的梦境，很难忆起梦境的人事。</p>
+<p>&emsp;&emsp;如果课是在上午，下午或者晚上，那么我肯定会在上午，下午或者晚上打瞌睡，简而言之就是，上课的时候我总会不知不觉不能自已的打瞌睡。曾经有人拿老鼠做过实验，想方设法让老鼠不能睡觉，结果老鼠在第13天的时候就死掉了，因为没有睡觉的缘故，呃，这家伙真是残忍。我在想要是再这么下去我会不会也尽快的死掉了。呵呵，还是得认真调整一下生物钟了，拿一个整天来睡觉或许是个比较好的办法。</p>
+<p>&emsp;&emsp;我试着给自己写一首打油诗的评语，不过还没有完成，因为我不知道自己以后会是怎么样的，所以那首打油诗一直都没有完成，也许人本来就无法知道自己以后的路该怎么走。</p>
+<p>&emsp;&emsp;我把自行车推去校园自行车行修了，我不会记恨因为他儿摔过，呵呵，大概我只会畏惧。</p>
+<p>&emsp;&emsp;在看正负2摄氏度的视频，突然觉得人类是多么无知渺小啊，活着真好，真糟糕！</p>
+]]></content>
+      <categories>
+        <category>日记</category>
       </categories>
   </entry>
   <entry>
@@ -521,32 +521,6 @@
       </tags>
   </entry>
   <entry>
-    <title>猫</title>
-    <url>/%E7%8C%AB.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;L给我出了一个心理测试。按喜欢的多少程度依次说出三种动物。第三种是真正的自己。而我，就是一只猫了。</p>
-<p>&emsp;&emsp;通常许多时候许多东西信则是则有，不信则无了。比如星座学说。里面对人的性格的描述语言都比较中立。它的每一种星座描述的性格也许每个人都具有。而看到他的描述以后你就会在身上找自己的相印的性格特点，把它们放大，于是觉得自己原来就是这样的人。</p>
-<p>&emsp;&emsp;现在我相信我是一只猫了。</p>
-<p>&emsp;&emsp;猫是一种比较灵异的动物。之前看到的一个新闻，说国外的一个老人院里面养了一只猫，这只猫非常奇怪。当一个老人寿命将尽的前几个星期，这只猫都会匍匐在老人的床边，陪伴着他，直到他去世。而同样的事情在这只猫身上发生了十几次。这算很诡异了吧。当然我也不算很诡异，除了偶尔眼前会闪现诡异的东西，估计是玻璃体里面的沉浊物吧！初中的时候，老妈帮我在街边的算命先生那里算过一次命。具体我不记得了，只说我的一个亲戚会去世，我会戴孝。结果把我外婆吓得够呛，她寻思着是不是两老的寿命将近了。结果后来拜祭了一个干妈，没多久，干爹就死掉了。说到干妈就好玩了。她也在我算命不久前去算过命，算命的说她有两个儿子。而事实上她只生了一个儿子，而自己都60好几岁了，哪来什么第二个儿子？然后我就横空的成了她的第二个儿子。呵呵，这些东西真的好诡异。不信他却无法解释他啊。。。</p>
-<p>&emsp;&emsp;猫这种动物，你对它好它就对你好，赖着你，有一天你对它不好，它就记恨着你，不理你，离开你，没准一辈子就不见你。外婆家养了一只猫。它是外婆养的，从它的妈妈到它一直养着。所以它只对外婆一个人好。只有外婆进的它身，可以摸它，听到外婆的声音它都会跑过来。但是别人都不行。我想外婆和那只猫有很深厚的感情的。过年的时候，舅舅和表弟放了好多好多鞭炮，那只猫被吓着了，躲了起来。第二天，外婆唤了它好久，它才战战兢兢的叫几声。然后外婆担心的给它喂了食。第二天再唤，它再也没出现。外婆伤心了好久。后来不时念叨那只可爱的猫。那天是它来见的外婆最后一面吧。其实人也是这样的啊，你对他好他也就对你好。</p>
-<p>&emsp;&emsp;猫是有洁癖的吧。它会自己清理自己的抓子毛发，用口水，呵呵，放心，我是不会用口水来清洗自己的。以前我家也养过一只猫。开始没有养过猫的我将猫的脖子拴起来养。结果差一点把它勒死。是的啊，如果猫被拴起来又怎么会有自由怎么去捉老鼠呢？不知道是因为报复我拴它还是因为它爱干净的缘故。后来它总是在我的房间里面解决问题。虽然异味不重，但是总要打扫，而且看着想着又比较恶心。所以老妈总对它有不喜欢的情绪。也许猫它感觉到了吧，不久后它就离家出走了，老妈说它定是吃到毒药死掉了。希望它好好的。</p>
-<p>&emsp;&emsp;猫的弹跳力很好。这很像以前蹦蹦跳跳的我啊，可惜现在比较缺乏锻炼，都跳不高了。</p>
-<p>&emsp;&emsp;猫走起路来没有声音。我也是这样，有一次回家，老妈也在。我就跟在老妈后面一步步上楼梯，她一点儿也没发现，她转过脸来，看到我，吓了一大跳，呵呵。</p>
-<p>&emsp;&emsp;猫吃饱了会把玩嘴里的猎物。嗯，我还没有想到我与这一点相关的事情。不过确实有点可怕，当你看到一只吃饱了的猫，把老鼠咬的半死，放在地上逗着玩的时候，你会不寒而栗的。</p>
-<p>&emsp;&emsp;猫会傻傻的自娱自乐。比如有一个圆圆的球，猫儿看到了，它会去追逐它。球不动了，它又用抓子推它挠它，玩得很开心很专注。我也可以这样，呵呵。</p>
-<p>&emsp;&emsp;猫也许会胡思乱想吧，就像我。我想现在L应该会以为我已经在记恨她了吧。因为她总是把“你别恨我，别怪我”之类的挂在嘴边。我好久都没有和她联系了。为的是不去打搅她。嗯，希望她不要胡斯乱想。希望她好好的。呵呵，也许就我一个人在胡思乱想而已。猫也许真的会胡思乱想，只是它不能像我们一样把不开心的事情说出来。当它不开心的时候它只会趴在地上，用无神迷茫的眼神望着，或者闭着眼假装在睡觉。</p>
-<p>&emsp;&emsp;这周都是六点多起床，然后看半小时左右的书，然后到操场跑步。精神还算不错。不过老板交代要看文献的，总是没有进展。</p>
-<p>&emsp;&emsp;今天下完雨过后陪师兄去买手机了，中国的手机怎么会是这样的呢？山寨，翻新机，水货，港航，行货，欧版……哪个才是真的啊？师兄还真有种不折不挠的精神，他是给老爸买的手机，买了以后是要寄到家里的，所以非要到邮局旁边的餐馆吃饭。所以我们1点多才吃饭。我的胃又饿过了头。午饭以后已经2点。睡了一下午的觉。睡的好畅快，把这一周的觉都补回来了，因为我之前都不睡午觉，睡眠严重不足啊。。。</p>
-<p>&emsp;&emsp;明天要主持会议，看我这只病猫发威吧，嘿嘿^_^</p>
-]]></content>
-      <categories>
-        <category>日记</category>
-      </categories>
-      <tags>
-        <tag>猫</tag>
-        <tag>诡异</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>活着or霸王别姬</title>
     <url>/%E6%B4%BB%E7%9D%80or%E9%9C%B8%E7%8E%8B%E5%88%AB%E5%A7%AC.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;先看的《活着》，然后看了《霸王别姬》。因为这两部电影被同寝室室友予以高度的评价，甚至说是中国最优秀的电影。所以就看了。</p>
@@ -585,6 +559,32 @@
       </categories>
       <tags>
         <tag>命题作文</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>猫</title>
+    <url>/%E7%8C%AB.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;L给我出了一个心理测试。按喜欢的多少程度依次说出三种动物。第三种是真正的自己。而我，就是一只猫了。</p>
+<p>&emsp;&emsp;通常许多时候许多东西信则是则有，不信则无了。比如星座学说。里面对人的性格的描述语言都比较中立。它的每一种星座描述的性格也许每个人都具有。而看到他的描述以后你就会在身上找自己的相印的性格特点，把它们放大，于是觉得自己原来就是这样的人。</p>
+<p>&emsp;&emsp;现在我相信我是一只猫了。</p>
+<p>&emsp;&emsp;猫是一种比较灵异的动物。之前看到的一个新闻，说国外的一个老人院里面养了一只猫，这只猫非常奇怪。当一个老人寿命将尽的前几个星期，这只猫都会匍匐在老人的床边，陪伴着他，直到他去世。而同样的事情在这只猫身上发生了十几次。这算很诡异了吧。当然我也不算很诡异，除了偶尔眼前会闪现诡异的东西，估计是玻璃体里面的沉浊物吧！初中的时候，老妈帮我在街边的算命先生那里算过一次命。具体我不记得了，只说我的一个亲戚会去世，我会戴孝。结果把我外婆吓得够呛，她寻思着是不是两老的寿命将近了。结果后来拜祭了一个干妈，没多久，干爹就死掉了。说到干妈就好玩了。她也在我算命不久前去算过命，算命的说她有两个儿子。而事实上她只生了一个儿子，而自己都60好几岁了，哪来什么第二个儿子？然后我就横空的成了她的第二个儿子。呵呵，这些东西真的好诡异。不信他却无法解释他啊。。。</p>
+<p>&emsp;&emsp;猫这种动物，你对它好它就对你好，赖着你，有一天你对它不好，它就记恨着你，不理你，离开你，没准一辈子就不见你。外婆家养了一只猫。它是外婆养的，从它的妈妈到它一直养着。所以它只对外婆一个人好。只有外婆进的它身，可以摸它，听到外婆的声音它都会跑过来。但是别人都不行。我想外婆和那只猫有很深厚的感情的。过年的时候，舅舅和表弟放了好多好多鞭炮，那只猫被吓着了，躲了起来。第二天，外婆唤了它好久，它才战战兢兢的叫几声。然后外婆担心的给它喂了食。第二天再唤，它再也没出现。外婆伤心了好久。后来不时念叨那只可爱的猫。那天是它来见的外婆最后一面吧。其实人也是这样的啊，你对他好他也就对你好。</p>
+<p>&emsp;&emsp;猫是有洁癖的吧。它会自己清理自己的抓子毛发，用口水，呵呵，放心，我是不会用口水来清洗自己的。以前我家也养过一只猫。开始没有养过猫的我将猫的脖子拴起来养。结果差一点把它勒死。是的啊，如果猫被拴起来又怎么会有自由怎么去捉老鼠呢？不知道是因为报复我拴它还是因为它爱干净的缘故。后来它总是在我的房间里面解决问题。虽然异味不重，但是总要打扫，而且看着想着又比较恶心。所以老妈总对它有不喜欢的情绪。也许猫它感觉到了吧，不久后它就离家出走了，老妈说它定是吃到毒药死掉了。希望它好好的。</p>
+<p>&emsp;&emsp;猫的弹跳力很好。这很像以前蹦蹦跳跳的我啊，可惜现在比较缺乏锻炼，都跳不高了。</p>
+<p>&emsp;&emsp;猫走起路来没有声音。我也是这样，有一次回家，老妈也在。我就跟在老妈后面一步步上楼梯，她一点儿也没发现，她转过脸来，看到我，吓了一大跳，呵呵。</p>
+<p>&emsp;&emsp;猫吃饱了会把玩嘴里的猎物。嗯，我还没有想到我与这一点相关的事情。不过确实有点可怕，当你看到一只吃饱了的猫，把老鼠咬的半死，放在地上逗着玩的时候，你会不寒而栗的。</p>
+<p>&emsp;&emsp;猫会傻傻的自娱自乐。比如有一个圆圆的球，猫儿看到了，它会去追逐它。球不动了，它又用抓子推它挠它，玩得很开心很专注。我也可以这样，呵呵。</p>
+<p>&emsp;&emsp;猫也许会胡思乱想吧，就像我。我想现在L应该会以为我已经在记恨她了吧。因为她总是把“你别恨我，别怪我”之类的挂在嘴边。我好久都没有和她联系了。为的是不去打搅她。嗯，希望她不要胡斯乱想。希望她好好的。呵呵，也许就我一个人在胡思乱想而已。猫也许真的会胡思乱想，只是它不能像我们一样把不开心的事情说出来。当它不开心的时候它只会趴在地上，用无神迷茫的眼神望着，或者闭着眼假装在睡觉。</p>
+<p>&emsp;&emsp;这周都是六点多起床，然后看半小时左右的书，然后到操场跑步。精神还算不错。不过老板交代要看文献的，总是没有进展。</p>
+<p>&emsp;&emsp;今天下完雨过后陪师兄去买手机了，中国的手机怎么会是这样的呢？山寨，翻新机，水货，港航，行货，欧版……哪个才是真的啊？师兄还真有种不折不挠的精神，他是给老爸买的手机，买了以后是要寄到家里的，所以非要到邮局旁边的餐馆吃饭。所以我们1点多才吃饭。我的胃又饿过了头。午饭以后已经2点。睡了一下午的觉。睡的好畅快，把这一周的觉都补回来了，因为我之前都不睡午觉，睡眠严重不足啊。。。</p>
+<p>&emsp;&emsp;明天要主持会议，看我这只病猫发威吧，嘿嘿^_^</p>
+]]></content>
+      <categories>
+        <category>日记</category>
+      </categories>
+      <tags>
+        <tag>猫</tag>
+        <tag>诡异</tag>
       </tags>
   </entry>
   <entry>
@@ -696,30 +696,19 @@
       </tags>
   </entry>
   <entry>
-    <title>这个网站是怎么来的</title>
-    <url>/how-I-build-this-web.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>目的：心血来潮，漫无目的。<br>方法：利用Hexo+Github构建。<br>花费：1块钱用于腾讯云买域名+6块用于阿里云买域名+宝宝睡了之后的晚上。<br>用途：好记性不如烂笔头。用手敲敲还可锻炼一下。<br>时间：2020年5月26日晚。<br>步骤：参见<a href="https://cloud.tencent.com/developer/article/1423783">这里</a>，具体如下：</p>
-<span id="more"></span>
-<h2 id="一、建立repo"><a href="#一、建立repo" class="headerlink" title="一、建立repo"></a>一、建立repo</h2><p>建一个和自己的github用户名一样的repo。</p>
-<h2 id="二、安装必要的程序"><a href="#二、安装必要的程序" class="headerlink" title="二、安装必要的程序"></a>二、安装必要的程序</h2><p>需要安装的程序有Git，node.js，hexo</p>
-<h3 id="1，安装Git"><a href="#1，安装Git" class="headerlink" title="1，安装Git"></a>1，安装Git</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> apt install git</span><br></pre></td></tr></table></figure>
-<h3 id="2，安装node-js"><a href="#2，安装node-js" class="headerlink" title="2，安装node.js"></a>2，安装node.js</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> apt install nodejs </span><br></pre></td></tr></table></figure>
-<h3 id="3，安装hexo-初始化"><a href="#3，安装hexo-初始化" class="headerlink" title="3，安装hexo&amp;&amp;初始化"></a>3，安装hexo&amp;&amp;初始化</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install -g hexo</span><br><span class="line">$ hexo init [<span class="built_in">dir</span>] <span class="comment">#当前目录或新建[dir]</span></span><br></pre></td></tr></table></figure>
-<h2 id="三、设置"><a href="#三、设置" class="headerlink" title="三、设置"></a>三、设置</h2><h3 id="1，设置文件为-config-yml，自行修改例如"><a href="#1，设置文件为-config-yml，自行修改例如" class="headerlink" title="1，设置文件为_config.yml，自行修改例如"></a>1，设置文件为_config.yml，自行修改例如</h3><p>title 博客名字<br>subtitle 副标题<br>author 作者<br>等等。遇到问题多看看<a href="https://hexo.io/zh-cn/docs">hexo的官方文档</a>。</p>
-<h3 id="2，主题配置"><a href="#2，主题配置" class="headerlink" title="2，主题配置"></a>2，主题配置</h3><p>想要自己的博客好看那就需要配置主题theme,我用的是Next。<br>具体设置可以到google搜索关键字hexo+next。</p>
-<h2 id="四、部署网站到github"><a href="#四、部署网站到github" class="headerlink" title="四、部署网站到github"></a>四、部署网站到github</h2><h3 id="1，在-config-yml中添加"><a href="#1，在-config-yml中添加" class="headerlink" title="1，在_config.yml中添加"></a>1，在_config.yml中添加</h3><p>deploy:<br>  type: git<br>  repository: <a href="https://github.com/%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97/%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97.github.io.git">https://github.com/你的名字/你的名字.github.io.git</a><br>  branch: master </p>
-<h3 id="2，安装部署工具"><a href="#2，安装部署工具" class="headerlink" title="2，安装部署工具"></a>2，安装部署工具</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-deployer-git  --save</span><br></pre></td></tr></table></figure>
-<h3 id="3，发布"><a href="#3，发布" class="headerlink" title="3，发布"></a>3，发布</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo cl &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
-<p>现在可以打开网址：你的名字.github.io访问。</p>
-<h2 id="五、绑定域名"><a href="#五、绑定域名" class="headerlink" title="五、绑定域名"></a>五、绑定域名</h2><h3 id="1，购买域名"><a href="#1，购买域名" class="headerlink" title="1，购买域名"></a>1，购买域名</h3><h3 id="2，域名解析"><a href="#2，域名解析" class="headerlink" title="2，域名解析"></a>2，域名解析</h3><p>找到域名解析选项添加两条记录:<br>CNAME www 你的名字.github.io<br>CNAME @ 你的名字.github.io</p>
-<h3 id="3，添加CNAME文件"><a href="#3，添加CNAME文件" class="headerlink" title="3，添加CNAME文件"></a>3，添加CNAME文件</h3><p>在hexo文件夹的source目录中新建CNAME文件，将你的域名写入。然后就大功告成。<br>完结撒花。</p>
+    <title>跟伴</title>
+    <url>/%E8%B7%9F%E4%BC%B4.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;这是一种路上游荡的魂魄。</p>
+<p>&emsp;&emsp;因为生前性格孤僻十分孤单，没有一个朋友，所以容易走极端。遇到人生的重大挫折没有地方需求帮助，没有人来帮忙分担，最后在绝望中选择各种手段结束自己的生命。</p>
+<p>&emsp;&emsp;死后由于怨气未散，所以不愿到阴曹，傍晚十分喜欢在偏僻小路上飘荡。</p>
+<p>&emsp;&emsp;最喜欢跟踪单独一个人行走的路人。通常能感知孤独，可化作路人的熟人面目，但又让路人无法辨认出是哪个人。路人若是回头发现，并且警觉，快速行走。。。</p>
+<p>&emsp;&emsp;当路人以为自己已经甩开跟踪者，回头看时。。。什么也看不见。。。。。。因为跟伴紧贴着路人的后背。。。。。。他露出诡异的笑。。。准备把你拉到阴间。。。作伴。。。</p>
 ]]></content>
       <categories>
-        <category>web</category>
+        <category>乱笔</category>
       </categories>
       <tags>
-        <tag>web</tag>
-        <tag>next</tag>
+        <tag>妖怪</tag>
       </tags>
   </entry>
   <entry>
@@ -754,19 +743,30 @@
       </tags>
   </entry>
   <entry>
-    <title>跟伴</title>
-    <url>/%E8%B7%9F%E4%BC%B4.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;这是一种路上游荡的魂魄。</p>
-<p>&emsp;&emsp;因为生前性格孤僻十分孤单，没有一个朋友，所以容易走极端。遇到人生的重大挫折没有地方需求帮助，没有人来帮忙分担，最后在绝望中选择各种手段结束自己的生命。</p>
-<p>&emsp;&emsp;死后由于怨气未散，所以不愿到阴曹，傍晚十分喜欢在偏僻小路上飘荡。</p>
-<p>&emsp;&emsp;最喜欢跟踪单独一个人行走的路人。通常能感知孤独，可化作路人的熟人面目，但又让路人无法辨认出是哪个人。路人若是回头发现，并且警觉，快速行走。。。</p>
-<p>&emsp;&emsp;当路人以为自己已经甩开跟踪者，回头看时。。。什么也看不见。。。。。。因为跟伴紧贴着路人的后背。。。。。。他露出诡异的笑。。。准备把你拉到阴间。。。作伴。。。</p>
+    <title>这个网站是怎么来的</title>
+    <url>/how-I-build-this-web.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>目的：心血来潮，漫无目的。<br>方法：利用Hexo+Github构建。<br>花费：1块钱用于腾讯云买域名+6块用于阿里云买域名+宝宝睡了之后的晚上。<br>用途：好记性不如烂笔头。用手敲敲还可锻炼一下。<br>时间：2020年5月26日晚。<br>步骤：参见<a href="https://cloud.tencent.com/developer/article/1423783">这里</a>，具体如下：</p>
+<span id="more"></span>
+<h2 id="一、建立repo"><a href="#一、建立repo" class="headerlink" title="一、建立repo"></a>一、建立repo</h2><p>建一个和自己的github用户名一样的repo。</p>
+<h2 id="二、安装必要的程序"><a href="#二、安装必要的程序" class="headerlink" title="二、安装必要的程序"></a>二、安装必要的程序</h2><p>需要安装的程序有Git，node.js，hexo</p>
+<h3 id="1，安装Git"><a href="#1，安装Git" class="headerlink" title="1，安装Git"></a>1，安装Git</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> apt install git</span><br></pre></td></tr></table></figure>
+<h3 id="2，安装node-js"><a href="#2，安装node-js" class="headerlink" title="2，安装node.js"></a>2，安装node.js</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> apt install nodejs </span><br></pre></td></tr></table></figure>
+<h3 id="3，安装hexo-初始化"><a href="#3，安装hexo-初始化" class="headerlink" title="3，安装hexo&amp;&amp;初始化"></a>3，安装hexo&amp;&amp;初始化</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install -g hexo</span><br><span class="line">$ hexo init [<span class="built_in">dir</span>] <span class="comment">#当前目录或新建[dir]</span></span><br></pre></td></tr></table></figure>
+<h2 id="三、设置"><a href="#三、设置" class="headerlink" title="三、设置"></a>三、设置</h2><h3 id="1，设置文件为-config-yml，自行修改例如"><a href="#1，设置文件为-config-yml，自行修改例如" class="headerlink" title="1，设置文件为_config.yml，自行修改例如"></a>1，设置文件为_config.yml，自行修改例如</h3><p>title 博客名字<br>subtitle 副标题<br>author 作者<br>等等。遇到问题多看看<a href="https://hexo.io/zh-cn/docs">hexo的官方文档</a>。</p>
+<h3 id="2，主题配置"><a href="#2，主题配置" class="headerlink" title="2，主题配置"></a>2，主题配置</h3><p>想要自己的博客好看那就需要配置主题theme,我用的是Next。<br>具体设置可以到google搜索关键字hexo+next。</p>
+<h2 id="四、部署网站到github"><a href="#四、部署网站到github" class="headerlink" title="四、部署网站到github"></a>四、部署网站到github</h2><h3 id="1，在-config-yml中添加"><a href="#1，在-config-yml中添加" class="headerlink" title="1，在_config.yml中添加"></a>1，在_config.yml中添加</h3><p>deploy:<br>  type: git<br>  repository: <a href="https://github.com/%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97/%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97.github.io.git">https://github.com/你的名字/你的名字.github.io.git</a><br>  branch: master </p>
+<h3 id="2，安装部署工具"><a href="#2，安装部署工具" class="headerlink" title="2，安装部署工具"></a>2，安装部署工具</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-deployer-git  --save</span><br></pre></td></tr></table></figure>
+<h3 id="3，发布"><a href="#3，发布" class="headerlink" title="3，发布"></a>3，发布</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo cl &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
+<p>现在可以打开网址：你的名字.github.io访问。</p>
+<h2 id="五、绑定域名"><a href="#五、绑定域名" class="headerlink" title="五、绑定域名"></a>五、绑定域名</h2><h3 id="1，购买域名"><a href="#1，购买域名" class="headerlink" title="1，购买域名"></a>1，购买域名</h3><h3 id="2，域名解析"><a href="#2，域名解析" class="headerlink" title="2，域名解析"></a>2，域名解析</h3><p>找到域名解析选项添加两条记录:<br>CNAME www 你的名字.github.io<br>CNAME @ 你的名字.github.io</p>
+<h3 id="3，添加CNAME文件"><a href="#3，添加CNAME文件" class="headerlink" title="3，添加CNAME文件"></a>3，添加CNAME文件</h3><p>在hexo文件夹的source目录中新建CNAME文件，将你的域名写入。然后就大功告成。<br>完结撒花。</p>
 ]]></content>
       <categories>
-        <category>乱笔</category>
+        <category>web</category>
       </categories>
       <tags>
-        <tag>妖怪</tag>
+        <tag>web</tag>
+        <tag>next</tag>
       </tags>
   </entry>
   <entry>
@@ -828,21 +828,6 @@
       </tags>
   </entry>
   <entry>
-    <title>hexo next开启打赏</title>
-    <url>/reward-configuration.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>厚颜无耻的开始想要打赏。如何配置打赏呢？原来next是有打赏的选项字段的。直接修改主题配置文件如下：</p>
-<span id="more"></span>
-<p><img src="/donate.png" alt="打赏字段"><br>然后把微信和支付宝的二维码图片放在&#x2F;themes&#x2F;next&#x2F;source&#x2F;images中。然后就大功告成了。</p>
-]]></content>
-      <categories>
-        <category>web</category>
-      </categories>
-      <tags>
-        <tag>web</tag>
-        <tag>next</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>hexo图片显示</title>
     <url>/show-picture-in-hexo.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>网站上没有图片是不行的，无图无真相。解决办法在<a href="https://blog.csdn.net/qq_38148394/article/details/79997971">这里</a>，主要是利用了插件hexo-assrt-image。所以先安装这个插件：</p>
@@ -870,6 +855,21 @@
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">link = link.concat(&quot;/&quot;);</span><br></pre></td></tr></table></figure>
 <p>然后图片位置就准备了。然后就大功告成。</p>
 <div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">https://blog.csdn.net/xjm850552586/article/details/84101345<a href="#fnref:1" rev="footnote"> ↩</a></span></li></ol></div></div>]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>web</tag>
+        <tag>next</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo next开启打赏</title>
+    <url>/reward-configuration.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>厚颜无耻的开始想要打赏。如何配置打赏呢？原来next是有打赏的选项字段的。直接修改主题配置文件如下：</p>
+<span id="more"></span>
+<p><img src="/donate.png" alt="打赏字段"><br>然后把微信和支付宝的二维码图片放在&#x2F;themes&#x2F;next&#x2F;source&#x2F;images中。然后就大功告成了。</p>
+]]></content>
       <categories>
         <category>web</category>
       </categories>
@@ -920,29 +920,6 @@
       </categories>
       <tags>
         <tag>日记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>网易博客迁移</title>
-    <url>/wangyi-blog-transfer.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;今天想到自己在网易上的博客。翻出来一看，乖乖人家网易在2018年就把博客给停了。估计是看我不在上面更新了，伤心欲绝了吧。笑。</p>
-<span id="more"></span>
-
-<p>&emsp;&emsp;我的那些怪文扔了怪可惜的。于是就想都搬到这里来吧。没法直接搬啊。看看网易怎么说吧。可以下载到xml文件里，或者搬迁到Lofter里面。都试一下。xml里面是个啥。果然有博文，但乱码一大堆。咋行。搬到Lofter里面吧。显示得要７天左右。</p>
-<p>&emsp;&emsp;好吧，趁此机会在网上搜索吧。我疯狂的搜了从xml到wordpress, 网易到hexo，网易到其他博客，等等等等。为此还在csdn建了自己的账号。因为搜到说可以一键从网易搬到那里。结果迟了啊。这都0202年了，人家的网易搬家功能早都扔了。对了hexo博文都是markdown格式。岂不将xml转换到markdown格式就完美了。</p>
-<p>&emsp;&emsp;于是我又疯狂开始搜索xml转移到markdown。倒是搜到了一些有用的。比如<a href="https://zhuanlan.zhihu.com/p/67765274">墨问非名</a>的项目<a href="https://github.com/alicewish/Lofter2Hexo">Lofter2Hexo</a>，<a href="https://himring.top/lofter-expo-repo/">北方之塔</a>的脚本<a href="https://github.com/FromEndWorld/lofter2Jekyll">lofter2Jekyll</a>。两个程序的名字居然一样叫readxml。这本来没啥问题。</p>
-<p>&emsp;&emsp;问题是我的网速慢啊。程序名字一样是我安装好之后才知道的啊。安装其中一个结果安装好久。安装空挡就看了另一个，也来试一下。开了两个terminal同时安装两个程序。有些依赖包啊什么的没安装。于是又另开两个terminal继续安装。搞了半天，真的搞了半天。因为中间吃饭去了。</p>
-<p>&emsp;&emsp;然后我也不记得哪个安装好了。算了先看看网易博客有没有导入到Lofter里面吧。点开看，完成了。太好了，下载了Lofter的xml文件。看起来还不错。然后，试试吧。不知道用的哪个readxml，总之是把某个程序的windows文本结果的\r换成Linux以后就可以用了。然后就试了。果然可以，虽然有几张图没有下载下来。不过没关系了。</p>
-<p>&emsp;&emsp;我迫不及待的打开了LOFTER文件夹中的md文件查看。我的乖乖，全都是乱码。title乱码，标签乱码，日期是今天。简直没办法看。此外我的博文显示有270篇，转换过来只有220篇，估计还有50多篇都被认为不和谐吧。但我写的东西很和谐啊。一点也不愤青。</p>
-<p>&emsp;&emsp;心想，算了。嘴巴也说算了。妻说，别。以后整理出来可以给儿子看看啊。</p>
-<p>&emsp;&emsp;于是晚上娃睡了以后花了一个多小时，才搬了40篇到这里来。下次再继续吧。</p>
-]]></content>
-      <categories>
-        <category>日记</category>
-      </categories>
-      <tags>
-        <tag>博客</tag>
-        <tag>网易</tag>
       </tags>
   </entry>
   <entry>
@@ -1012,6 +989,29 @@
       <tags>
         <tag>反演</tag>
         <tag>历史</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>网易博客迁移</title>
+    <url>/wangyi-blog-transfer.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;今天想到自己在网易上的博客。翻出来一看，乖乖人家网易在2018年就把博客给停了。估计是看我不在上面更新了，伤心欲绝了吧。笑。</p>
+<span id="more"></span>
+
+<p>&emsp;&emsp;我的那些怪文扔了怪可惜的。于是就想都搬到这里来吧。没法直接搬啊。看看网易怎么说吧。可以下载到xml文件里，或者搬迁到Lofter里面。都试一下。xml里面是个啥。果然有博文，但乱码一大堆。咋行。搬到Lofter里面吧。显示得要７天左右。</p>
+<p>&emsp;&emsp;好吧，趁此机会在网上搜索吧。我疯狂的搜了从xml到wordpress, 网易到hexo，网易到其他博客，等等等等。为此还在csdn建了自己的账号。因为搜到说可以一键从网易搬到那里。结果迟了啊。这都0202年了，人家的网易搬家功能早都扔了。对了hexo博文都是markdown格式。岂不将xml转换到markdown格式就完美了。</p>
+<p>&emsp;&emsp;于是我又疯狂开始搜索xml转移到markdown。倒是搜到了一些有用的。比如<a href="https://zhuanlan.zhihu.com/p/67765274">墨问非名</a>的项目<a href="https://github.com/alicewish/Lofter2Hexo">Lofter2Hexo</a>，<a href="https://himring.top/lofter-expo-repo/">北方之塔</a>的脚本<a href="https://github.com/FromEndWorld/lofter2Jekyll">lofter2Jekyll</a>。两个程序的名字居然一样叫readxml。这本来没啥问题。</p>
+<p>&emsp;&emsp;问题是我的网速慢啊。程序名字一样是我安装好之后才知道的啊。安装其中一个结果安装好久。安装空挡就看了另一个，也来试一下。开了两个terminal同时安装两个程序。有些依赖包啊什么的没安装。于是又另开两个terminal继续安装。搞了半天，真的搞了半天。因为中间吃饭去了。</p>
+<p>&emsp;&emsp;然后我也不记得哪个安装好了。算了先看看网易博客有没有导入到Lofter里面吧。点开看，完成了。太好了，下载了Lofter的xml文件。看起来还不错。然后，试试吧。不知道用的哪个readxml，总之是把某个程序的windows文本结果的\r换成Linux以后就可以用了。然后就试了。果然可以，虽然有几张图没有下载下来。不过没关系了。</p>
+<p>&emsp;&emsp;我迫不及待的打开了LOFTER文件夹中的md文件查看。我的乖乖，全都是乱码。title乱码，标签乱码，日期是今天。简直没办法看。此外我的博文显示有270篇，转换过来只有220篇，估计还有50多篇都被认为不和谐吧。但我写的东西很和谐啊。一点也不愤青。</p>
+<p>&emsp;&emsp;心想，算了。嘴巴也说算了。妻说，别。以后整理出来可以给儿子看看啊。</p>
+<p>&emsp;&emsp;于是晚上娃睡了以后花了一个多小时，才搬了40篇到这里来。下次再继续吧。</p>
+]]></content>
+      <categories>
+        <category>日记</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+        <tag>网易</tag>
       </tags>
   </entry>
   <entry>
@@ -1159,30 +1159,6 @@
       </tags>
   </entry>
   <entry>
-    <title>hexo next首页文章加框</title>
-    <url>/how-to-add-frame-in-hexo-next.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;我的博客首页的文章列表一直是连起来的，看起来不爽。因而一直在搜索如何加边框，搜出来的是如何添加文章边框阴影效果。看起来也对。于是就开始照猫画虎。</p>
-<span id="more"></span>
-
-<p>例如这位<a href="https://www.jianshu.com/p/428244cd2caa">大仙</a>说要在themes&#x2F;next&#x2F;source&#x2F;css&#x2F;_custom&#x2F;custom.styl里面加入：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.post &#123;</span><br><span class="line">   margin-top: 0px;</span><br><span class="line">   margin-bottom: 60px;</span><br><span class="line">   padding: 25px;</span><br><span class="line">   -webkit-box-shadow: 0 0 5px rgba(202, 203, 203, .5);</span><br><span class="line">   -moz-box-shadow: 0 0 5px rgba(202, 203, 204, .5);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>&emsp;&emsp;可是我没有custom.styl啊，连_custom文件夹都没有啊。咋办呢？直接建一个呗。建了以后也不行。我还一度怀疑自己的next版本不对，用不了custom.styl。</p>
-<p>&emsp;&emsp;后来又搜到这位<a href="https://blog.csdn.net/qq_39119496/article/details/103372437?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase">神仙</a>。是这个样子干的。</p>
-<p>&emsp;&emsp;在themes&#x2F;next&#x2F;source&#x2F;css&#x2F;_common&#x2F;components&#x2F;post&#x2F;post.styl中找到.post-block<br>然后改成这个样子：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">if xxxxx</span><br><span class="line">.post-block &#123;</span><br><span class="line">  opacity: 0;</span><br><span class="line">  margin-top: 60px;</span><br><span class="line">  margin-bottom: 60px;</span><br><span class="line">  padding: 25px;</span><br><span class="line">  -webkit-box-shadow: 0 0 5px rgba(202, 203, 203, .5);</span><br><span class="line">  -moz-box-shadow: 0 0 5px rgba(202, 203, 204, .5);</span><br><span class="line"> &#125;</span><br><span class="line"> .pgaination, xxxx</span><br></pre></td></tr></table></figure>
-<p>&emsp;&emsp;谁知我用的是copy，也没仔细看那个神仙的脚本里面可能估计将post-block中的短横线敲作了下划线。我拷贝过来试了，没用。一度以为这个边框是永远加不上了。谁知今天鬼使神差的对比了一下神仙贴出的图，发现了问题。于是改了过来，结果就可以了。我估计神仙是故意打错了，让我们这些小白出错了长记性。只可惜自己不懂css啊，懂的话就没那么麻烦了。</p>
-<p><img src="/frame.png" alt="边框"></p>
-<p>&emsp;&emsp;这个边框效果还凑合吧。</p>
-]]></content>
-      <categories>
-        <category>web</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>blog</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>How to install and backup mediawiki</title>
     <url>/install-and-backup-mediawiki.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>Meidawiki is a good tool to organise the information and knowledge. I even use it to keep some notes. My first mediawiki was established like in 2012. There are some important informations in my database. Therefore I hope to keep it and run it in every Laptop. This blog keeps the steps on how to install and backup it.</p>
@@ -1239,6 +1215,30 @@
       </categories>
       <tags>
         <tag>wiki</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo next首页文章加框</title>
+    <url>/how-to-add-frame-in-hexo-next.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;我的博客首页的文章列表一直是连起来的，看起来不爽。因而一直在搜索如何加边框，搜出来的是如何添加文章边框阴影效果。看起来也对。于是就开始照猫画虎。</p>
+<span id="more"></span>
+
+<p>例如这位<a href="https://www.jianshu.com/p/428244cd2caa">大仙</a>说要在themes&#x2F;next&#x2F;source&#x2F;css&#x2F;_custom&#x2F;custom.styl里面加入：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.post &#123;</span><br><span class="line">   margin-top: 0px;</span><br><span class="line">   margin-bottom: 60px;</span><br><span class="line">   padding: 25px;</span><br><span class="line">   -webkit-box-shadow: 0 0 5px rgba(202, 203, 203, .5);</span><br><span class="line">   -moz-box-shadow: 0 0 5px rgba(202, 203, 204, .5);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>&emsp;&emsp;可是我没有custom.styl啊，连_custom文件夹都没有啊。咋办呢？直接建一个呗。建了以后也不行。我还一度怀疑自己的next版本不对，用不了custom.styl。</p>
+<p>&emsp;&emsp;后来又搜到这位<a href="https://blog.csdn.net/qq_39119496/article/details/103372437?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase">神仙</a>。是这个样子干的。</p>
+<p>&emsp;&emsp;在themes&#x2F;next&#x2F;source&#x2F;css&#x2F;_common&#x2F;components&#x2F;post&#x2F;post.styl中找到.post-block<br>然后改成这个样子：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">if xxxxx</span><br><span class="line">.post-block &#123;</span><br><span class="line">  opacity: 0;</span><br><span class="line">  margin-top: 60px;</span><br><span class="line">  margin-bottom: 60px;</span><br><span class="line">  padding: 25px;</span><br><span class="line">  -webkit-box-shadow: 0 0 5px rgba(202, 203, 203, .5);</span><br><span class="line">  -moz-box-shadow: 0 0 5px rgba(202, 203, 204, .5);</span><br><span class="line"> &#125;</span><br><span class="line"> .pgaination, xxxx</span><br></pre></td></tr></table></figure>
+<p>&emsp;&emsp;谁知我用的是copy，也没仔细看那个神仙的脚本里面可能估计将post-block中的短横线敲作了下划线。我拷贝过来试了，没用。一度以为这个边框是永远加不上了。谁知今天鬼使神差的对比了一下神仙贴出的图，发现了问题。于是改了过来，结果就可以了。我估计神仙是故意打错了，让我们这些小白出错了长记性。只可惜自己不懂css啊，懂的话就没那么麻烦了。</p>
+<p><img src="/frame.png" alt="边框"></p>
+<p>&emsp;&emsp;这个边框效果还凑合吧。</p>
+]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>blog</tag>
       </tags>
   </entry>
   <entry>
@@ -1338,7 +1338,7 @@
   <entry>
     <title>基于宽频带背景噪声面波的美国三维上地幔横波速度结构模型</title>
     <url>/US-upper-mantle-vs-model.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;利用宽频带的背景噪声面波做了美国三维上地幔横波速度结构，该工作做了x年。我不会告诉你这项工作做了多久，说出来都害sao。文章终于在2018年发表，文章链接在<a href="https://link.springer.com/article/10.1007/s00024-018-1881-2">这里</a>，如果有需要可以找我要全文。<br>&emsp;&emsp;做模型真的是需要大量细致的工作。这篇文章的主要贡献是表明只用背景噪声面波也可以做的比较深，比较准，另外就是为community提供了一个新的模型。怎奈自己的地质背景太差，看不到啥突出的科学问题，还被审稿人批评说，‘你做的啥工作啊，像本科生的作业。’心塞。师兄说的对，应该多向可能对你的工作感兴趣的人请教，例如动力学方向的人啊之类的。<br>&emsp;&emsp;老板建议把这个模型挂在<a href="https://ds.iris.edu/ds/products/emc-earthmodels/">IRIS EMC</a>里头，推广推广，让大伙儿都用用。我觉得不错，于是今天终于把它放到了IRIS里面。点击<a href="https://ds.iris.edu/ds/products/emc-us-upper-mantle-vsxiechuyang2018/">这里</a>就可以看到我的模型了。里面有netcdf格式的数据可以下载。如果有需要可以找我要更细致的结果。<br>&emsp;&emsp;IRIS EMC需要的是netcdf格式的模型数据。IRIS有提供把txt文本格式的模型转换成netcdf的<a href="https://github.com/iris-edu/emc-tools">python脚本</a>。另外向IRIS EMC提交模型的要求也可以这他们的<a href="https://ds.iris.edu/ds/products/emc-contributionguide/">网页</a>看到，按照他们的要求把netcdf文件准备好，然后写一个说明文档一并发送给<a href="mailto:&#x70;&#114;&#x6f;&#x64;&#x75;&#99;&#x74;&#64;&#x69;&#114;&#105;&#115;&#46;&#x77;&#97;&#x73;&#104;&#x69;&#110;&#x67;&#116;&#x6f;&#x6e;&#x2e;&#101;&#100;&#x75;">&#x70;&#114;&#x6f;&#x64;&#x75;&#99;&#x74;&#64;&#x69;&#114;&#105;&#115;&#46;&#x77;&#97;&#x73;&#104;&#x69;&#110;&#x67;&#116;&#x6f;&#x6e;&#x2e;&#101;&#100;&#x75;</a>就完事了。<br>&emsp;&emsp;netcdf是2进制文件。要查看其头段信息的话可以用命令ncdump -h xxx.nc（安装netcdf-bin），要读取其参数信息可以用命令ncks（安装nco）。其实IRIS EMC也提供了将netcdf转换成txt文本的<a href="https://github.com/iris-edu/emc-tools">python脚本</a>，非常方便。<br>&emsp;&emsp;求合作啊。我擅长处理数据，要是您能看到啥地学科学问题那真是求之不得啊。笑cry。</p>]]></content>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;利用宽频带的背景噪声面波做了美国三维上地幔横波速度结构，该工作做了x年。我不会告诉你这项工作做了多久，说出来都害sao。文章终于在2018年发表，文章链接在<a href="https://link.springer.com/article/10.1007/s00024-018-1881-2">这里</a>，如果有需要可以找我要全文。<br>&emsp;&emsp;做模型真的是需要大量细致的工作。这篇文章的主要贡献是表明只用背景噪声面波也可以做的比较深，比较准，另外就是为community提供了一个新的模型。怎奈自己的地质背景太差，看不到啥突出的科学问题，还被审稿人批评说，‘你做的啥工作啊，像本科生的作业。’心塞。师兄说的对，应该多向可能对你的工作感兴趣的人请教，例如动力学方向的人啊之类的。<br>&emsp;&emsp;老板建议把这个模型挂在<a href="https://ds.iris.edu/ds/products/emc-earthmodels/">IRIS EMC</a>里头，推广推广，让大伙儿都用用。我觉得不错，于是今天终于把它放到了IRIS里面。点击<a href="https://ds.iris.edu/ds/products/emc-us-upper-mantle-vsxiechuyang2018/">这里</a>就可以看到我的模型了。里面有netcdf格式的数据可以下载。如果有需要可以找我要更细致的结果。<br>&emsp;&emsp;IRIS EMC需要的是netcdf格式的模型数据。IRIS有提供把txt文本格式的模型转换成netcdf的<a href="https://github.com/iris-edu/emc-tools">python脚本</a>。另外向IRIS EMC提交模型的要求也可以这他们的<a href="https://ds.iris.edu/ds/products/emc-contributionguide/">网页</a>看到，按照他们的要求把netcdf文件准备好，然后写一个说明文档一并发送给<a href="mailto:&#x70;&#114;&#111;&#100;&#117;&#x63;&#x74;&#64;&#105;&#114;&#105;&#115;&#46;&#x77;&#x61;&#x73;&#x68;&#105;&#x6e;&#x67;&#116;&#x6f;&#110;&#46;&#x65;&#x64;&#x75;">&#x70;&#114;&#111;&#100;&#117;&#x63;&#x74;&#64;&#105;&#114;&#105;&#115;&#46;&#x77;&#x61;&#x73;&#x68;&#105;&#x6e;&#x67;&#116;&#x6f;&#110;&#46;&#x65;&#x64;&#x75;</a>就完事了。<br>&emsp;&emsp;netcdf是2进制文件。要查看其头段信息的话可以用命令ncdump -h xxx.nc（安装netcdf-bin），要读取其参数信息可以用命令ncks（安装nco）。其实IRIS EMC也提供了将netcdf转换成txt文本的<a href="https://github.com/iris-edu/emc-tools">python脚本</a>，非常方便。<br>&emsp;&emsp;求合作啊。我擅长处理数据，要是您能看到啥地学科学问题那真是求之不得啊。笑cry。</p>]]></content>
       <categories>
         <category>work</category>
       </categories>
@@ -3301,53 +3301,6 @@
       </tags>
   </entry>
   <entry>
-    <title>文献阅读（七）</title>
-    <url>/paper-reading-7.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3><p>&emsp;&emsp;了解冰川结构的异质性对于评估其命运至关重要。然而，结构变化强烈的地方，如裂缝场，通常无法直接进行仪器观测。为了克服这一限制，我们引入了一种创新技术，利用源-接收器空间互易原理，将由裂缝产生的地震源转化为虚拟接收器。我们展示了利用Seismic Michelson Interferometry（地震干涉测量学）技术，通过局部化良好的地震源之间的相位干涉模式来获取相位速度图。得到的相位速度对冰川结构的变化表现出敏感性，提供了对机械属性变化起源的洞见，并且空间分辨率比传统方法提高了五倍。特别是，我们观察到与严重受损的地下区域相关的相位速度的急剧变化，表明了一个复杂的三维介质。更系统地应用这种方法并在其他情境中使用将提高我们对冰川和其他地震发生环境结构的理解。</p>
-<h3 id="文章重要性"><a href="#文章重要性" class="headerlink" title="文章重要性"></a>文章重要性</h3><p>这篇文章的重要性在于提出了一种新的技术手段，可以在人迹罕至的地区，如冰川裂缝区域，通过地震干涉测量学来获取高分辨率的冰川结构图。</p>
-<h3 id="总结前人研究"><a href="#总结前人研究" class="headerlink" title="总结前人研究"></a>总结前人研究</h3><p>文章总结了以下前人研究：</p>
-<ul>
-<li>被动地震方法在监测冰量变化、冰床界面变化和冰厚空间变化方面的应用。</li>
-<li>利用已知位置的脉冲源，通过Rayleigh表面波旅行时间延迟层析成像来揭示裂缝发生与地震相速度之间的非唯一关系。</li>
-</ul>
-<h3 id="存在的不足"><a href="#存在的不足" class="headerlink" title="存在的不足"></a>存在的不足</h3><p>文章指出的不足包括：</p>
-<ul>
-<li>使用噪声源进行地震成像时，确保方位等分性（azimuthal equipartitioning）的挑战。</li>
-<li>在采样波场方面的限制，尤其是在仪器部署区域之外。</li>
-</ul>
-<h3 id="使用的数据"><a href="#使用的数据" class="headerlink" title="使用的数据"></a>使用的数据</h3><ul>
-<li>法国阿尔卑斯山Argentière冰川消融区的地震事件目录，由98个三分量地震仪组成的阵列收集。</li>
-</ul>
-<h3 id="采用的方法"><a href="#采用的方法" class="headerlink" title="采用的方法"></a>采用的方法</h3><ul>
-<li>利用源-接收器空间互易原理将地震源转化为虚拟接收器。</li>
-<li>使用波形同步化和表面波衍射核（Diffraction Kernels, DKs）构建。</li>
-<li>采用地震干涉测量学（Seismic Michelson Interferometry, SMI）进行迭代反演。</li>
-</ul>
-<h3 id="获得的结果"><a href="#获得的结果" class="headerlink" title="获得的结果"></a>获得的结果</h3><ul>
-<li>获得了在空间分辨率上比传统方法高五倍的相位速度图。</li>
-<li>观察到与冰川厚度和裂缝存在相关的相位速度变化。</li>
-</ul>
-<h3 id="创新之处"><a href="#创新之处" class="headerlink" title="创新之处"></a>创新之处</h3><ul>
-<li>利用地震源作为虚拟接收器，通过干涉模式来获取高分辨率的相位速度图。</li>
-<li>这种方法允许在没有直接测量设备的地区进行地震成像。</li>
-</ul>
-<h3 id="贡献"><a href="#贡献" class="headerlink" title="贡献"></a>贡献</h3><ul>
-<li>提供了一种新的技术手段，可以在传统方法难以到达的地区进行高分辨率的地震成像。</li>
-<li>为理解冰川结构和动态提供了新的视角。</li>
-</ul>
-<h3 id="存在的不足-1"><a href="#存在的不足-1" class="headerlink" title="存在的不足"></a>存在的不足</h3><p>文章中并未明确指出研究的不足之处，但可以推测可能的不足包括：</p>
-<ul>
-<li>技术的应用范围可能受限于地震源的分布和定位精度。</li>
-<li>对于非脉冲源或非冰川环境的适用性尚未得到验证。</li>
-</ul>]]></content>
-      <categories>
-        <category>work</category>
-      </categories>
-      <tags>
-        <tag>paper</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>文献阅读（六）</title>
     <url>/paper-reading-6.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3><p>通过恢复相位和群速度以及表面波的频率内容，对土星的卫星土卫二进行地震调查可以确定冰壳的厚度以及与平均厚度的偏差。在这里，我们模拟了土卫二冰壳的均匀厚度分别为5公里、20公里和40公里，以及冰面地形变化在5-40公里范围内的情况。我们研究了几种恢复平均冰壳厚度的方法。我们展示了表面波色散可以用来确定平均冰壳厚度。只有在冰壳比临界值薄（小于20公里）时，才会出现冰中的挠曲波。只有在更厚的冰壳中，瑞利波才会占主导地位。Crary波的频率内容取决于冰壳的厚度。</p>
@@ -3386,6 +3339,53 @@
 <h3 id="存在的不足-1"><a href="#存在的不足-1" class="headerlink" title="存在的不足"></a>存在的不足</h3><ul>
 <li>研究没有考虑背景噪声和其他可能影响地震信号的复杂因素。</li>
 <li>对于地震事件的定位和定时存在一定的假设，可能影响实际应用中的准确性。</li>
+</ul>]]></content>
+      <categories>
+        <category>work</category>
+      </categories>
+      <tags>
+        <tag>paper</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>文献阅读（七）</title>
+    <url>/paper-reading-7.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3><p>&emsp;&emsp;了解冰川结构的异质性对于评估其命运至关重要。然而，结构变化强烈的地方，如裂缝场，通常无法直接进行仪器观测。为了克服这一限制，我们引入了一种创新技术，利用源-接收器空间互易原理，将由裂缝产生的地震源转化为虚拟接收器。我们展示了利用Seismic Michelson Interferometry（地震干涉测量学）技术，通过局部化良好的地震源之间的相位干涉模式来获取相位速度图。得到的相位速度对冰川结构的变化表现出敏感性，提供了对机械属性变化起源的洞见，并且空间分辨率比传统方法提高了五倍。特别是，我们观察到与严重受损的地下区域相关的相位速度的急剧变化，表明了一个复杂的三维介质。更系统地应用这种方法并在其他情境中使用将提高我们对冰川和其他地震发生环境结构的理解。</p>
+<h3 id="文章重要性"><a href="#文章重要性" class="headerlink" title="文章重要性"></a>文章重要性</h3><p>这篇文章的重要性在于提出了一种新的技术手段，可以在人迹罕至的地区，如冰川裂缝区域，通过地震干涉测量学来获取高分辨率的冰川结构图。</p>
+<h3 id="总结前人研究"><a href="#总结前人研究" class="headerlink" title="总结前人研究"></a>总结前人研究</h3><p>文章总结了以下前人研究：</p>
+<ul>
+<li>被动地震方法在监测冰量变化、冰床界面变化和冰厚空间变化方面的应用。</li>
+<li>利用已知位置的脉冲源，通过Rayleigh表面波旅行时间延迟层析成像来揭示裂缝发生与地震相速度之间的非唯一关系。</li>
+</ul>
+<h3 id="存在的不足"><a href="#存在的不足" class="headerlink" title="存在的不足"></a>存在的不足</h3><p>文章指出的不足包括：</p>
+<ul>
+<li>使用噪声源进行地震成像时，确保方位等分性（azimuthal equipartitioning）的挑战。</li>
+<li>在采样波场方面的限制，尤其是在仪器部署区域之外。</li>
+</ul>
+<h3 id="使用的数据"><a href="#使用的数据" class="headerlink" title="使用的数据"></a>使用的数据</h3><ul>
+<li>法国阿尔卑斯山Argentière冰川消融区的地震事件目录，由98个三分量地震仪组成的阵列收集。</li>
+</ul>
+<h3 id="采用的方法"><a href="#采用的方法" class="headerlink" title="采用的方法"></a>采用的方法</h3><ul>
+<li>利用源-接收器空间互易原理将地震源转化为虚拟接收器。</li>
+<li>使用波形同步化和表面波衍射核（Diffraction Kernels, DKs）构建。</li>
+<li>采用地震干涉测量学（Seismic Michelson Interferometry, SMI）进行迭代反演。</li>
+</ul>
+<h3 id="获得的结果"><a href="#获得的结果" class="headerlink" title="获得的结果"></a>获得的结果</h3><ul>
+<li>获得了在空间分辨率上比传统方法高五倍的相位速度图。</li>
+<li>观察到与冰川厚度和裂缝存在相关的相位速度变化。</li>
+</ul>
+<h3 id="创新之处"><a href="#创新之处" class="headerlink" title="创新之处"></a>创新之处</h3><ul>
+<li>利用地震源作为虚拟接收器，通过干涉模式来获取高分辨率的相位速度图。</li>
+<li>这种方法允许在没有直接测量设备的地区进行地震成像。</li>
+</ul>
+<h3 id="贡献"><a href="#贡献" class="headerlink" title="贡献"></a>贡献</h3><ul>
+<li>提供了一种新的技术手段，可以在传统方法难以到达的地区进行高分辨率的地震成像。</li>
+<li>为理解冰川结构和动态提供了新的视角。</li>
+</ul>
+<h3 id="存在的不足-1"><a href="#存在的不足-1" class="headerlink" title="存在的不足"></a>存在的不足</h3><p>文章中并未明确指出研究的不足之处，但可以推测可能的不足包括：</p>
+<ul>
+<li>技术的应用范围可能受限于地震源的分布和定位精度。</li>
+<li>对于非脉冲源或非冰川环境的适用性尚未得到验证。</li>
 </ul>]]></content>
       <categories>
         <category>work</category>
@@ -4294,47 +4294,6 @@
       </tags>
   </entry>
   <entry>
-    <title>高效bash脚本</title>
-    <url>/efficient-shell-script.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="build-in-commands"><a href="#build-in-commands" class="headerlink" title="build-in commands"></a>build-in commands</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> [[ <span class="string">&quot;<span class="variable">$var</span>&quot;</span> -eq 3 ]];<span class="keyword">then</span></span><br><span class="line">   <span class="built_in">echo</span> <span class="string">&quot;hello&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="minimize-subshells"><a href="#minimize-subshells" class="headerlink" title="minimize subshells"></a>minimize subshells</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">output=$(&lt;input.txt)</span><br></pre></td></tr></table></figure>
-
-<h1 id="array"><a href="#array" class="headerlink" title="array"></a>array</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">color=(<span class="string">&quot;red&quot;</span> <span class="string">&quot;yellow&quot;</span> <span class="string">&quot;blue&quot;</span>)</span><br><span class="line"><span class="keyword">for</span> col <span class="keyword">in</span> <span class="string">&quot;<span class="variable">$&#123;color[@]&#125;</span>&quot;</span>;</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">   <span class="built_in">echo</span> <span class="variable">$col</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="enable-noclobber"><a href="#enable-noclobber" class="headerlink" title="enable noclobber"></a>enable noclobber</h1><p>可以防止overwrite。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">set -o noclobber</span><br></pre></td></tr></table></figure>
-
-<h1 id="file-operation"><a href="#file-operation" class="headerlink" title="file operation"></a>file operation</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">while IFS= read -f line</span><br><span class="line">do</span><br><span class="line">echo $line</span><br><span class="line">done &lt;input.txt</span><br></pre></td></tr></table></figure>
-
-<h1 id="parallel-processing"><a href="#parallel-processing" class="headerlink" title="parallel processing"></a>parallel processing</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cat urls.txt | xargs -n 1 -P 4 curl -O</span><br></pre></td></tr></table></figure>
-
-<h1 id="error-handling"><a href="#error-handling" class="headerlink" title="error handling"></a>error handling</h1><p>脚本一出错就退出来。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">set -e</span><br></pre></td></tr></table></figure>
-<p>个性化出错信息。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">command || &#123; echo &quot;command failded&quot;; exit 1; &#125;</span><br></pre></td></tr></table></figure>
-<p>trap signals </p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">trap &#x27;echo &quot;error occurred&quot;; cleanup; exit1&#x27; ERR</span><br><span class="line">function cleanup()&#123;</span><br><span class="line">   #clean up command</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>validate inputs</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">if [[ -z &quot;$1&quot; ]];then</span><br><span class="line">   echo &quot;Usage: $0 &lt;argument&gt;&quot;</span><br><span class="line">   exit 1</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
-<p>logging</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">logfile=&quot;script.log&quot;</span><br><span class="line">exec &gt; &gt;(tee -i $logfile)</span><br><span class="line">exec 2&gt;&amp;1</span><br><span class="line"></span><br><span class="line">echo &quot;script started&quot;</span><br></pre></td></tr></table></figure>
-
-<h1 id="系统任务"><a href="#系统任务" class="headerlink" title="系统任务"></a>系统任务</h1><p>系统备份</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">set -e</span><br><span class="line">trap &#x27; echo &quot;Backup failed&quot;; exit 1&#x27; ERR</span><br><span class="line">bk_up=&quot;/bak_dir&quot;</span><br><span class="line">ts=$(date +%Y%m%d%H%M%S)</span><br><span class="line">bkup_file=&quot;$&#123;bk_up&#125;/backup_$&#123;ts&#125;.tar.gz&quot;</span><br><span class="line">tar czf &quot;$bkup_file&quot; backup_files</span><br></pre></td></tr></table></figure>
-<p>系统监测</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">threshold=80</span><br><span class="line">partition=&quot;/dev/sda1&quot;</span><br><span class="line">usage=$(df -h | grep &quot;$partition&quot; | awk &#x27;&#123;print $5&#125;&#x27; | sed &#x27;s/%//&#x27;)</span><br><span class="line">if [[ &quot;$usage&quot; -gt &quot;$threshold&quot; ]];then</span><br><span class="line">   echo &quot;disk usage of $partition is above $threshold%&quot;</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
-<p>用户管理</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function add_user() &#123;</span><br><span class="line">    local username=$1</span><br><span class="line">    useradd &quot;$username&quot; &amp;&amp; echo &quot;User $username added successfully.&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function remove_user() &#123;</span><br><span class="line">&#125;</span><br><span class="line">case $1 in </span><br><span class="line">    add)</span><br><span class="line">       add_user &quot;$2&quot;</span><br><span class="line">       ;;</span><br><span class="line">    remove)</span><br><span class="line">       remove_user &quot;$2&quot;</span><br><span class="line">       ;;</span><br><span class="line">    *)</span><br><span class="line">       echo &quot;Usage : $0 &#123;add|remove&#125; &lt;username&gt;&quot;</span><br><span class="line">       exit 1</span><br><span class="line">       ;;</span><br><span class="line">esac</span><br></pre></td></tr></table></figure>
-<p>自动更新</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">set -e</span><br><span class="line">trap &#x27;echo &quot;update failed&quot;; exit 1 &#x27; ERR</span><br><span class="line"></span><br><span class="line">apt-get update &amp;&amp; apt-get upgrade -y</span><br></pre></td></tr></table></figure>
-<p>网络配置</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function configure_network()&#123;</span><br><span class="line">     local interface=$1</span><br><span class="line">     local ip_address=$$2</span><br><span class="line">     local gateway=$3</span><br><span class="line">     </span><br><span class="line">     cat &lt;&lt;EOF &gt;/etc/network/interfaces</span><br><span class="line">auto $interface</span><br><span class="line">iface $interface inet static</span><br><span class="line">     address $ip_address</span><br><span class="line">     gateway $gateway</span><br><span class="line">EOF</span><br><span class="line">     systemctl restart networking</span><br><span class="line">     echo &quot;network configured on $interface&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>文献阅读（二十二）</title>
     <url>/paper-reading-22.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="摘要翻译"><a href="#摘要翻译" class="headerlink" title="摘要翻译"></a>摘要翻译</h3><p>&emsp;&emsp;本文研究了南极和格陵兰岛的冰架在形成冰山前的崩解过程。目前，冰盖模型面临的一个主要问题是缺乏基于物理的冰架崩解法则。冰架与海湾壁或海底高地的摩擦提供了冰盖流动的阻力；这种阻力的减少会导致冰盖流动加速，进而导致海平面上升。冰架的长度增加会增加侧摩擦和遇到海底高地的概率，而这些无法在没有崩解法则的情况下计算。我们假设沿流冰架的扩展是控制崩解的主要因素。为了验证这一假设，我们收集了不同冰架的新数据和已发表的数据（表S1），选择这些数据是为了代表性而非全面性。除了一些壮观的例子外，崩解通量远大于长度变化。因此，冰架前端的速度大致等于崩解通量（c），而沿流速度梯度给出了适当的扩展速率（e˙）。所有数据都避开了剪切边缘，主要位于中心线附近。结果与我们的假设一致。最佳幂律拟合为 c &#x3D; 15,000e˙0.43 m&#x2F;year，解释了91%的方差（对数-对数空间中的线性回归为62%）；使用 c &#x3D; 12,000 e˙0.33 表示对扩展应力的线性依赖，解释了88%的方差（对数-对数为43%）。残差表明较窄的冰架崩解速度较慢。侧向剪切将裂缝开启应力从崩解前沿旋转开来，同时有利于较小的冰山和容易愈合的剪切裂缝。模型 c &#x3D; 0.039(e˙w)1.9 m&#x2F;year（半宽w以米为单位）解释了超过95%的方差（对数-对数空间中为92%）。崩解率与厚度H相关，但幂律拟合 c(H) 仅解释了69%的方差（对数-对数为84%）；涉及 c(e˙) 和 c(e˙w) 的拟合残差与H没有强相关性。尽管如此，扩展应力随H增加，人们可能会预期断裂，因此崩解，取决于变形工作完成的速率，因此与 e˙H 成正比。包括 (e˙wH) 的最佳拟合幂律为 c &#x3D; 0.022(e˙wH)0.98 m&#x2F;year；图1显示了通过原点的线性拟合 c &#x3D; 0.016 e˙wH m&#x2F;year，每个解释了89%的方差（对数-对数为93%）（SOM文本）。数据不允许在这些或其他可能的关系中进行选择，但后者是物理上有动机的并且简单。c随e˙增加的一个含义是，几乎所有未受支撑的冰架都将无条件不稳定，因为厚度（因此扩展速率）在流动方向上减小，但速度增加；崩解事件将冰架前沿移入更厚、更快扩展、因此更快崩解的冰中，这些冰供应得更慢。数值实验表明适当的支撑可以稳定冰架。这与观察结果一致：从足够快的输入足够薄（因此扩展缓慢）的冰中可以形成极长的“冰舌”，冰架通常观察到在支撑点附近终止，失去支撑后冰架迅速缩小。尽管我们没有学到完整的崩解法则，但我们建议，从冰架的相互比较中得出的关系可能比以往任何时候都更令人鼓舞，因此值得进一步测试，并在冰流模型中谨慎实施。</p>
@@ -4428,6 +4387,47 @@
       </tags>
   </entry>
   <entry>
+    <title>高效bash脚本</title>
+    <url>/efficient-shell-script.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="build-in-commands"><a href="#build-in-commands" class="headerlink" title="build-in commands"></a>build-in commands</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> [[ <span class="string">&quot;<span class="variable">$var</span>&quot;</span> -eq 3 ]];<span class="keyword">then</span></span><br><span class="line">   <span class="built_in">echo</span> <span class="string">&quot;hello&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="minimize-subshells"><a href="#minimize-subshells" class="headerlink" title="minimize subshells"></a>minimize subshells</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">output=$(&lt;input.txt)</span><br></pre></td></tr></table></figure>
+
+<h1 id="array"><a href="#array" class="headerlink" title="array"></a>array</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">color=(<span class="string">&quot;red&quot;</span> <span class="string">&quot;yellow&quot;</span> <span class="string">&quot;blue&quot;</span>)</span><br><span class="line"><span class="keyword">for</span> col <span class="keyword">in</span> <span class="string">&quot;<span class="variable">$&#123;color[@]&#125;</span>&quot;</span>;</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">   <span class="built_in">echo</span> <span class="variable">$col</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="enable-noclobber"><a href="#enable-noclobber" class="headerlink" title="enable noclobber"></a>enable noclobber</h1><p>可以防止overwrite。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">set -o noclobber</span><br></pre></td></tr></table></figure>
+
+<h1 id="file-operation"><a href="#file-operation" class="headerlink" title="file operation"></a>file operation</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">while IFS= read -f line</span><br><span class="line">do</span><br><span class="line">echo $line</span><br><span class="line">done &lt;input.txt</span><br></pre></td></tr></table></figure>
+
+<h1 id="parallel-processing"><a href="#parallel-processing" class="headerlink" title="parallel processing"></a>parallel processing</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cat urls.txt | xargs -n 1 -P 4 curl -O</span><br></pre></td></tr></table></figure>
+
+<h1 id="error-handling"><a href="#error-handling" class="headerlink" title="error handling"></a>error handling</h1><p>脚本一出错就退出来。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">set -e</span><br></pre></td></tr></table></figure>
+<p>个性化出错信息。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">command || &#123; echo &quot;command failded&quot;; exit 1; &#125;</span><br></pre></td></tr></table></figure>
+<p>trap signals </p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">trap &#x27;echo &quot;error occurred&quot;; cleanup; exit1&#x27; ERR</span><br><span class="line">function cleanup()&#123;</span><br><span class="line">   #clean up command</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>validate inputs</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">if [[ -z &quot;$1&quot; ]];then</span><br><span class="line">   echo &quot;Usage: $0 &lt;argument&gt;&quot;</span><br><span class="line">   exit 1</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
+<p>logging</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">logfile=&quot;script.log&quot;</span><br><span class="line">exec &gt; &gt;(tee -i $logfile)</span><br><span class="line">exec 2&gt;&amp;1</span><br><span class="line"></span><br><span class="line">echo &quot;script started&quot;</span><br></pre></td></tr></table></figure>
+
+<h1 id="系统任务"><a href="#系统任务" class="headerlink" title="系统任务"></a>系统任务</h1><p>系统备份</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">set -e</span><br><span class="line">trap &#x27; echo &quot;Backup failed&quot;; exit 1&#x27; ERR</span><br><span class="line">bk_up=&quot;/bak_dir&quot;</span><br><span class="line">ts=$(date +%Y%m%d%H%M%S)</span><br><span class="line">bkup_file=&quot;$&#123;bk_up&#125;/backup_$&#123;ts&#125;.tar.gz&quot;</span><br><span class="line">tar czf &quot;$bkup_file&quot; backup_files</span><br></pre></td></tr></table></figure>
+<p>系统监测</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">threshold=80</span><br><span class="line">partition=&quot;/dev/sda1&quot;</span><br><span class="line">usage=$(df -h | grep &quot;$partition&quot; | awk &#x27;&#123;print $5&#125;&#x27; | sed &#x27;s/%//&#x27;)</span><br><span class="line">if [[ &quot;$usage&quot; -gt &quot;$threshold&quot; ]];then</span><br><span class="line">   echo &quot;disk usage of $partition is above $threshold%&quot;</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
+<p>用户管理</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function add_user() &#123;</span><br><span class="line">    local username=$1</span><br><span class="line">    useradd &quot;$username&quot; &amp;&amp; echo &quot;User $username added successfully.&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function remove_user() &#123;</span><br><span class="line">&#125;</span><br><span class="line">case $1 in </span><br><span class="line">    add)</span><br><span class="line">       add_user &quot;$2&quot;</span><br><span class="line">       ;;</span><br><span class="line">    remove)</span><br><span class="line">       remove_user &quot;$2&quot;</span><br><span class="line">       ;;</span><br><span class="line">    *)</span><br><span class="line">       echo &quot;Usage : $0 &#123;add|remove&#125; &lt;username&gt;&quot;</span><br><span class="line">       exit 1</span><br><span class="line">       ;;</span><br><span class="line">esac</span><br></pre></td></tr></table></figure>
+<p>自动更新</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">set -e</span><br><span class="line">trap &#x27;echo &quot;update failed&quot;; exit 1 &#x27; ERR</span><br><span class="line"></span><br><span class="line">apt-get update &amp;&amp; apt-get upgrade -y</span><br></pre></td></tr></table></figure>
+<p>网络配置</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function configure_network()&#123;</span><br><span class="line">     local interface=$1</span><br><span class="line">     local ip_address=$$2</span><br><span class="line">     local gateway=$3</span><br><span class="line">     </span><br><span class="line">     cat &lt;&lt;EOF &gt;/etc/network/interfaces</span><br><span class="line">auto $interface</span><br><span class="line">iface $interface inet static</span><br><span class="line">     address $ip_address</span><br><span class="line">     gateway $gateway</span><br><span class="line">EOF</span><br><span class="line">     systemctl restart networking</span><br><span class="line">     echo &quot;network configured on $interface&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>文献阅读(24)</title>
     <url>/paper-reading-24.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="摘要翻译"><a href="#摘要翻译" class="headerlink" title="摘要翻译"></a>摘要翻译</h3><p>地震源和波传播研究有助于理解冰川及其周围环境中的结构、传输、断裂力学、质量平衡等过程。由冰川生成的地震波与地球主体耦合良好，能够被地震仪在从局部到全球的范围内记录。尽管活跃冰川的断裂、消融、融化以及&#x2F;或者高度不规则的环境可能极为不稳定和危险，但在稳定的近冰或岩石地点通常可以进行有信息量的地震测量。地震学还有助于新兴的研究领域，即大气、海洋、固体地球和冰冻圈之间的弹性波和重力波耦合。最近科学和技术的进步已经促成了冰川学和地震学之间的合作，这些合作涵盖了广泛的尺度和过程。这包括对冰冻圈系统对气候变化和其他环境条件响应的深入了解。在这里，我们回顾了相关的基础物理和冰川学知识，并提供了对冰川地震学当前状态及其快速发展的未来方向的广泛回顾。</p>
@@ -4484,6 +4484,39 @@
 <p>&emsp;&emsp;AI真的好方便。以前要解决这些问题得在网上使劲搜，关键字不准还搜不出来。现在kimi啥的帮你搜索，整理，效率有三层楼那么高啊。另外现在的程序都好用到爆。按钮字大到恨不得占满屏幕，功能简单到你一点击啥都解决了。</p>
 <p>&emsp;&emsp;这些工具真的提高了完成一个工作的效率，重点还是要清楚你自己要干什么，然而在提高效率的同时也可能让人懈怠。总是依赖工具，那就麻烦了。</p>
 <p>&emsp;&emsp;咋突然让我想到了钢铁侠，脱去那个战衣，你还是啥？</p>]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何在自己电脑中部署deepseek</title>
+    <url>/how-to-install-deepseek.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="Windows下deepseek部署"><a href="#Windows下deepseek部署" class="headerlink" title="Windows下deepseek部署"></a>Windows下deepseek部署</h1><p>&emsp;&emsp;首先是在windows下下载<a href="https://ollama.com/download">ollama</a>并安装。然后在cmd下运行:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ollama run deepseek-r1:7b</span><br></pre></td></tr></table></figure>
+<p>其实安装时输入deepseek-r1默认就是7b，大小有4.7G。当然还有其他的版本，自己去搜索并根据自己的GPU大小进行安装。<br>安装完之后出现了</p>
+<p>“&gt;&gt;&gt;”</p>
+<p>就可以对话了。下次要调用就在cmd中重新运行命令:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ollama run deepseek-r1</span><br></pre></td></tr></table></figure>
+
+<h1 id="Linux下deepseek部署"><a href="#Linux下deepseek部署" class="headerlink" title="Linux下deepseek部署"></a>Linux下deepseek部署</h1><p>&emsp;&emsp;在Linux下面则这样安装ollama，命令:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">curl -fsSL https://ollama.com/install.sh | sh</span><br></pre></td></tr></table></figure>
+<p>这个命令是从github下载ollama进行安装。得保证你能连接到github。接下来安装deepseek:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ollama run deepseek-r1:7b</span><br></pre></td></tr></table></figure>
+
+<h1 id="deepseek与zotero结合"><a href="#deepseek与zotero结合" class="headerlink" title="deepseek与zotero结合"></a>deepseek与zotero结合</h1><p>deepseek可以和zotero结合进行本地的文献阅读。<br>这个时候就要安装awsome GPT，位置在<a href="https://zotero-chinese.com/plugins/">zotero中文社区</a>。配置可以参考<a href="https://zhuanlan.zhihu.com/p/20850142386">这里</a>。我尝试了一下，没有搞定。有机会再整。</p>
+<h1 id="图像生成大模型Janus-Pro-7B本地部署"><a href="#图像生成大模型Janus-Pro-7B本地部署" class="headerlink" title="图像生成大模型Janus-Pro-7B本地部署"></a>图像生成大模型Janus-Pro-7B本地部署</h1><p>&emsp;&emsp;另外DeepSeek发布的多模态大模型Janus-Pro-7B支持图像生成，也可以<a href="https://www.upx8.com/4681">本地部署</a>，超厉害。</p>
+<h2 id="安装Git和conda"><a href="#安装Git和conda" class="headerlink" title="安装Git和conda"></a>安装Git和conda</h2><h2 id="创建环境："><a href="#创建环境：" class="headerlink" title="创建环境："></a>创建环境：</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">conda create -n mp python=3.10 -y</span><br><span class="line">conda activate mp</span><br></pre></td></tr></table></figure>
+<h2 id="克隆Janus"><a href="#克隆Janus" class="headerlink" title="克隆Janus"></a>克隆Janus</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/deepseek-ai/Janus.git</span><br><span class="line">cd Janus</span><br></pre></td></tr></table></figure>
+<h2 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip install -e .</span><br></pre></td></tr></table></figure>
+<h2 id="安装Graio-UI"><a href="#安装Graio-UI" class="headerlink" title="安装Graio(UI)"></a>安装Graio(UI)</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip install gradio</span><br><span class="line">pip uninstall torch torchvision torchaudio -y</span><br><span class="line">pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121</span><br></pre></td></tr></table></figure>
+<h2 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">python demo/app_januspro.py</span><br></pre></td></tr></table></figure>
+<p>调用gpu运行</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">python demo/app_januspro.py --device cuda</span><br></pre></td></tr></table></figure>
+<p>打开本地链接<a href="http://127.0.0.1:7860就可以使用。">http://127.0.0.1:7860就可以使用。</a></p>
+<p>理想很丰满，现实很骨感，还是没搞定，有时间再整。</p>]]></content>
       <categories>
         <category>Linux</category>
       </categories>
@@ -4567,39 +4600,6 @@
       </categories>
       <tags>
         <tag>paper</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>如何在自己电脑中部署deepseek</title>
-    <url>/how-to-install-deepseek.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="Windows下deepseek部署"><a href="#Windows下deepseek部署" class="headerlink" title="Windows下deepseek部署"></a>Windows下deepseek部署</h1><p>&emsp;&emsp;首先是在windows下下载<a href="https://ollama.com/download">ollama</a>并安装。然后在cmd下运行:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ollama run deepseek-r1:7b</span><br></pre></td></tr></table></figure>
-<p>其实安装时输入deepseek-r1默认就是7b，大小有4.7G。当然还有其他的版本，自己去搜索并根据自己的GPU大小进行安装。<br>安装完之后出现了</p>
-<p>“&gt;&gt;&gt;”</p>
-<p>就可以对话了。下次要调用就在cmd中重新运行命令:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ollama run deepseek-r1</span><br></pre></td></tr></table></figure>
-
-<h1 id="Linux下deepseek部署"><a href="#Linux下deepseek部署" class="headerlink" title="Linux下deepseek部署"></a>Linux下deepseek部署</h1><p>&emsp;&emsp;在Linux下面则这样安装ollama，命令:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">curl -fsSL https://ollama.com/install.sh | sh</span><br></pre></td></tr></table></figure>
-<p>这个命令是从github下载ollama进行安装。得保证你能连接到github。接下来安装deepseek:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ollama run deepseek-r1:7b</span><br></pre></td></tr></table></figure>
-
-<h1 id="deepseek与zotero结合"><a href="#deepseek与zotero结合" class="headerlink" title="deepseek与zotero结合"></a>deepseek与zotero结合</h1><p>deepseek可以和zotero结合进行本地的文献阅读。<br>这个时候就要安装awsome GPT，位置在<a href="https://zotero-chinese.com/plugins/">zotero中文社区</a>。配置可以参考<a href="https://zhuanlan.zhihu.com/p/20850142386">这里</a>。我尝试了一下，没有搞定。有机会再整。</p>
-<h1 id="图像生成大模型Janus-Pro-7B本地部署"><a href="#图像生成大模型Janus-Pro-7B本地部署" class="headerlink" title="图像生成大模型Janus-Pro-7B本地部署"></a>图像生成大模型Janus-Pro-7B本地部署</h1><p>&emsp;&emsp;另外DeepSeek发布的多模态大模型Janus-Pro-7B支持图像生成，也可以<a href="https://www.upx8.com/4681">本地部署</a>，超厉害。</p>
-<h2 id="安装Git和conda"><a href="#安装Git和conda" class="headerlink" title="安装Git和conda"></a>安装Git和conda</h2><h2 id="创建环境："><a href="#创建环境：" class="headerlink" title="创建环境："></a>创建环境：</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">conda create -n mp python=3.10 -y</span><br><span class="line">conda activate mp</span><br></pre></td></tr></table></figure>
-<h2 id="克隆Janus"><a href="#克隆Janus" class="headerlink" title="克隆Janus"></a>克隆Janus</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/deepseek-ai/Janus.git</span><br><span class="line">cd Janus</span><br></pre></td></tr></table></figure>
-<h2 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip install -e .</span><br></pre></td></tr></table></figure>
-<h2 id="安装Graio-UI"><a href="#安装Graio-UI" class="headerlink" title="安装Graio(UI)"></a>安装Graio(UI)</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip install gradio</span><br><span class="line">pip uninstall torch torchvision torchaudio -y</span><br><span class="line">pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121</span><br></pre></td></tr></table></figure>
-<h2 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">python demo/app_januspro.py</span><br></pre></td></tr></table></figure>
-<p>调用gpu运行</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">python demo/app_januspro.py --device cuda</span><br></pre></td></tr></table></figure>
-<p>打开本地链接<a href="http://127.0.0.1:7860就可以使用。">http://127.0.0.1:7860就可以使用。</a></p>
-<p>理想很丰满，现实很骨感，还是没搞定，有时间再整。</p>]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -4855,6 +4855,51 @@
       </tags>
   </entry>
   <entry>
+    <title>python脚本下载连续波形数据</title>
+    <url>/download-continuous-seis.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> socket</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> obspy <span class="keyword">import</span> UTCDateTime, Stream</span><br><span class="line"><span class="keyword">from</span> obspy.clients.fdsn <span class="keyword">import</span> Client</span><br><span class="line"><span class="keyword">from</span> concurrent.futures <span class="keyword">import</span> ThreadPoolExecutor, as_completed</span><br><span class="line"><span class="keyword">from</span> requests.exceptions <span class="keyword">import</span> ConnectionError, Timeout</span><br><span class="line"></span><br><span class="line"><span class="comment"># 参数设置</span></span><br><span class="line">client = Client(<span class="string">&quot;IRIS&quot;</span>)</span><br><span class="line">output_dir = <span class="string">&quot;global_data&quot;</span></span><br><span class="line">os.makedirs(output_dir, exist_ok=<span class="literal">True</span>)</span><br><span class="line">sta_file = <span class="string">&quot;station.lst&quot;</span></span><br><span class="line">start_date = UTCDateTime(<span class="string">&quot;2013-01-01&quot;</span>)</span><br><span class="line">end_date = UTCDateTime(<span class="string">&quot;2024-01-01&quot;</span>)  <span class="comment"># 包括该天</span></span><br><span class="line">thread_workers = <span class="number">20</span></span><br><span class="line">exception_log = <span class="string">&quot;exceptions.txt&quot;</span></span><br><span class="line">timing_log = <span class="string">&quot;download_time.txt&quot;</span></span><br><span class="line">max_retries = <span class="number">5</span>  <span class="comment"># 最大重试次数</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;📁 当前工作目录: <span class="subst">&#123;os.getcwd()&#125;</span>&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;📁 波形保存路径: <span class="subst">&#123;os.path.abspath(output_dir)&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取台站列表</span></span><br><span class="line">sta_list = []</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(sta_file, <span class="string">&quot;r&quot;</span>) <span class="keyword">as</span> sf:</span><br><span class="line">    <span class="keyword">for</span> line <span class="keyword">in</span> sf:</span><br><span class="line">        <span class="keyword">if</span> line.strip() <span class="keyword">and</span> <span class="keyword">not</span> line.strip().startswith(<span class="string">&quot;#&quot;</span>):</span><br><span class="line">            parts = line.strip().split()</span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">len</span>(parts) &gt;= <span class="number">2</span>:</span><br><span class="line">                net, sta = parts[<span class="number">0</span>], parts[<span class="number">1</span>]</span><br><span class="line">                sta_list.append((net, sta))</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">download_station</span>(<span class="params">net, sta, day</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    下载单个台站某天波形数据，去仪器响应，返回Stream</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    start = UTCDateTime(day)</span><br><span class="line">    end = start + <span class="number">86400</span></span><br><span class="line">    st = client.get_waveforms(net, sta, <span class="string">&quot;*&quot;</span>, <span class="string">&quot;LH?&quot;</span>, start, end, attach_response=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">    st.remove_response(output=<span class="string">&quot;VEL&quot;</span>, pre_filt=(<span class="number">0.008</span>, <span class="number">0.01</span>, <span class="number">0.3</span>, <span class="number">0.4</span>),</span><br><span class="line">                       taper=<span class="literal">True</span>, zero_mean=<span class="literal">True</span>, taper_fraction=<span class="number">0.05</span>)</span><br><span class="line">    <span class="keyword">return</span> st</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">download_day</span>(<span class="params">day</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    下载某天所有台站数据，返回合并Stream和日志信息</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    stream_day = Stream()</span><br><span class="line">    daily_log = []</span><br><span class="line">    log_lines = []</span><br><span class="line"></span><br><span class="line">    <span class="keyword">with</span> ThreadPoolExecutor(max_workers=thread_workers) <span class="keyword">as</span> executor:</span><br><span class="line">        futures = &#123;executor.submit(download_station, net, sta, day): (net, sta) <span class="keyword">for</span> net, sta <span class="keyword">in</span> sta_list&#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> future <span class="keyword">in</span> as_completed(futures):</span><br><span class="line">            net, sta = futures[future]</span><br><span class="line">            <span class="keyword">try</span>:</span><br><span class="line">                st = future.result()</span><br><span class="line">                stream_day += st</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">f&quot;✅ <span class="subst">&#123;net&#125;</span>.<span class="subst">&#123;sta&#125;</span> 下载成功（<span class="subst">&#123;<span class="built_in">len</span>(st)&#125;</span> traces）&quot;</span>)</span><br><span class="line">                daily_log.append((net, sta, <span class="number">1</span>))</span><br><span class="line">            <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">f&quot;❌ <span class="subst">&#123;net&#125;</span>.<span class="subst">&#123;sta&#125;</span> 下载失败: <span class="subst">&#123;e&#125;</span>&quot;</span>)</span><br><span class="line">                daily_log.append((net, sta, <span class="number">0</span>))</span><br><span class="line">                log_lines.append(<span class="string">f&quot;<span class="subst">&#123;day.date&#125;</span> <span class="subst">&#123;net&#125;</span>.<span class="subst">&#123;sta&#125;</span> ❌ <span class="subst">&#123;e&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> stream_day, daily_log, log_lines</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">is_network_error</span>(<span class="params">e</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    判断异常是否为网络相关异常</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    network_error_types = (ConnectionError, Timeout, socket.timeout, socket.error)</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">isinstance</span>(e, network_error_types) <span class="keyword">or</span> <span class="string">&quot;timed out&quot;</span> <span class="keyword">in</span> <span class="built_in">str</span>(e).lower() <span class="keyword">or</span> <span class="string">&quot;connection&quot;</span> <span class="keyword">in</span> <span class="built_in">str</span>(e).lower()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 主循环</span></span><br><span class="line">current_day = start_date</span><br><span class="line"><span class="keyword">while</span> current_day &lt;= end_date:</span><br><span class="line">    filename = <span class="string">f&quot;<span class="subst">&#123;current_day.strftime(<span class="string">&#x27;%Y%m%d&#x27;</span>)&#125;</span>.mseed&quot;</span></span><br><span class="line">    filepath = os.path.join(output_dir, filename)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 先判断文件是否存在且非空</span></span><br><span class="line">    <span class="keyword">if</span> os.path.exists(filepath) <span class="keyword">and</span> os.path.getsize(filepath) &gt; <span class="number">0</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;\n📆 <span class="subst">&#123;current_day.date&#125;</span> 文件已存在且非空，跳过下载。&quot;</span>)</span><br><span class="line">        current_day += <span class="number">86400</span></span><br><span class="line">        <span class="keyword">continue</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;\n📆 正在处理日期: <span class="subst">&#123;current_day.date&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line">    attempt = <span class="number">0</span></span><br><span class="line">    success = <span class="literal">False</span></span><br><span class="line">    day_start_time = time.time()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> attempt &lt; max_retries <span class="keyword">and</span> <span class="keyword">not</span> success:</span><br><span class="line">        attempt += <span class="number">1</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;🔄 尝试第 <span class="subst">&#123;attempt&#125;</span> 次下载 <span class="subst">&#123;current_day.date&#125;</span> ...&quot;</span>)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            stream_day, daily_log, log_lines = download_day(current_day)</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">len</span>(stream_day) == <span class="number">0</span>:</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">f&quot;⚠️ <span class="subst">&#123;current_day.date&#125;</span> 没有下载到数据，准备重试...&quot;</span>)</span><br><span class="line">                <span class="keyword">raise</span> ValueError(<span class="string">&quot;下载数据为空&quot;</span>)</span><br><span class="line"></span><br><span class="line">            <span class="comment"># 保存合并后的波形</span></span><br><span class="line">            stream_day.write(filepath, <span class="built_in">format</span>=<span class="string">&quot;MSEED&quot;</span>)</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&quot;💾 <span class="subst">&#123;filename&#125;</span> 保存成功（共 <span class="subst">&#123;<span class="built_in">len</span>(stream_day)&#125;</span> traces）&quot;</span>)</span><br><span class="line">            success = <span class="literal">True</span></span><br><span class="line"></span><br><span class="line">            <span class="comment"># 写入异常日志</span></span><br><span class="line">            <span class="keyword">if</span> log_lines:</span><br><span class="line">                <span class="keyword">with</span> <span class="built_in">open</span>(exception_log, <span class="string">&quot;a&quot;</span>) <span class="keyword">as</span> elog:</span><br><span class="line">                    elog.write(<span class="string">&quot;\n&quot;</span>.join(log_lines) + <span class="string">&quot;\n&quot;</span>)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&quot;❌ 下载异常: <span class="subst">&#123;e&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line">            <span class="comment"># 判断是否为网络错误</span></span><br><span class="line">            <span class="keyword">if</span> is_network_error(e):</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">&quot;🌐 网络异常，等待5秒后重试...&quot;</span>)</span><br><span class="line">                time.sleep(<span class="number">5</span>)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">&quot;⚠️ 非网络异常，仍将重试...&quot;</span>)</span><br><span class="line">                time.sleep(<span class="number">3</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 下载耗时记录</span></span><br><span class="line">    day_duration = time.time() - day_start_time</span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(timing_log, <span class="string">&quot;a&quot;</span>) <span class="keyword">as</span> tlog:</span><br><span class="line">        tlog.write(<span class="string">f&quot;<span class="subst">&#123;current_day.date&#125;</span>: <span class="subst">&#123;day_duration:<span class="number">.2</span>f&#125;</span> seconds\n&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> success:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;❌ <span class="subst">&#123;current_day.date&#125;</span> 下载失败，超过最大重试次数。请检查网络或日志。&quot;</span>)</span><br><span class="line"></span><br><span class="line">    current_day += <span class="number">86400</span></span><br></pre></td></tr></table></figure>
+<p>&emsp;&emsp;这个脚本实现的功能包括：</p>
+<ul>
+<li>下载台站列表station.lst的2013-01-01到2024-01-01，LH?数据。</li>
+<li>每天的数据存储为global_data&#x2F;YYYYMMDD.mseed。</li>
+<li>去仪器响应，保留VEL，滤波频率为0.008, 0.01, 0.3, 0.4。</li>
+<li>记录每天数据下载的耗时，保存在“download_time.txt”中。</li>
+<li>判断是否是网络中断错误，如果是则做5次尝试重新下载，每次间隔5秒。</li>
+<li>判断当天数据是否已经被下载，如果没有或者大小是0则开始下载。</li>
+<li>将错误输出到exceptions.txt中。</li>
+<li>每天数据下载时，启用20个进程进行下载。</li>
+</ul>]]></content>
+      <categories>
+        <category>work</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>统计数据下载情况</title>
+    <url>/statistic-data-download.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;数据下载好后需要统计下载的情况，这是python脚本。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> obspy <span class="keyword">import</span> read</span><br><span class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> datetime <span class="keyword">as</span> dt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> matplotlib.cm <span class="keyword">as</span> cm</span><br><span class="line"><span class="keyword">import</span> matplotlib.dates <span class="keyword">as</span> mdates</span><br><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> defaultdict</span><br><span class="line"><span class="keyword">from</span> matplotlib.transforms <span class="keyword">import</span> blended_transform_factory</span><br><span class="line"></span><br><span class="line"><span class="comment"># ===== 配置 =====</span></span><br><span class="line">data_dir = <span class="string">&quot;daily_waveforms&quot;</span>  <span class="comment"># 存放YYYYMMDD.mseed文件目录</span></span><br><span class="line">station_file = <span class="string">&quot;station.list&quot;</span>  <span class="comment"># 台站列表，格式：NET STA（两列）</span></span><br><span class="line">components = [<span class="string">&quot;LHZ&quot;</span>, <span class="string">&quot;LHN&quot;</span>, <span class="string">&quot;LHE&quot;</span>]</span><br><span class="line">start_year = <span class="number">2020</span></span><br><span class="line">end_year = <span class="number">2020</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># ===== 读取台站列表 =====</span></span><br><span class="line">stations = []</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(station_file, <span class="string">&quot;r&quot;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    <span class="keyword">for</span> line <span class="keyword">in</span> f:</span><br><span class="line">        <span class="keyword">if</span> line.strip():</span><br><span class="line">            net, sta = line.strip().split()[:<span class="number">2</span>]</span><br><span class="line">            stations.append((net, sta))</span><br><span class="line"></span><br><span class="line">station_set = <span class="built_in">set</span>(<span class="string">f&quot;<span class="subst">&#123;net&#125;</span>.<span class="subst">&#123;sta&#125;</span>&quot;</span> <span class="keyword">for</span> net, sta <span class="keyword">in</span> stations)</span><br><span class="line"></span><br><span class="line"><span class="comment"># ===== 初始化 =====</span></span><br><span class="line">station_dates = &#123;comp: defaultdict(<span class="built_in">set</span>) <span class="keyword">for</span> comp <span class="keyword">in</span> components&#125;  <span class="comment"># comp -&gt; &#123;net.sta -&gt; set(date)&#125;</span></span><br><span class="line">station_file_sizes = defaultdict(<span class="built_in">int</span>)  <span class="comment"># 台站对应所有文件大小</span></span><br><span class="line">total_files = <span class="number">0</span></span><br><span class="line">total_file_size = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># ===== 遍历所有mseed文件 =====</span></span><br><span class="line">all_files = <span class="built_in">sorted</span>(f <span class="keyword">for</span> f <span class="keyword">in</span> os.listdir(data_dir) <span class="keyword">if</span> f.endswith(<span class="string">&quot;.mseed&quot;</span>))</span><br><span class="line"><span class="keyword">for</span> filename <span class="keyword">in</span> all_files:</span><br><span class="line">    filepath = os.path.join(data_dir, filename)</span><br><span class="line"></span><br><span class="line">    size = os.path.getsize(filepath)</span><br><span class="line">    total_files += <span class="number">1</span></span><br><span class="line">    total_file_size += size</span><br><span class="line"></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        st = read(filepath)</span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;读取文件失败 <span class="subst">&#123;filename&#125;</span>: <span class="subst">&#123;e&#125;</span>&quot;</span>)</span><br><span class="line">        <span class="keyword">continue</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 解析文件日期 YYYYMMDD</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        file_date = dt.strptime(filename[:<span class="number">8</span>], <span class="string">&quot;%Y%m%d&quot;</span>).date()</span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;无法解析日期 <span class="subst">&#123;filename&#125;</span>: <span class="subst">&#123;e&#125;</span>&quot;</span>)</span><br><span class="line">        <span class="keyword">continue</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> tr <span class="keyword">in</span> st:</span><br><span class="line">        net = tr.stats.network</span><br><span class="line">        sta = tr.stats.station</span><br><span class="line">        comp = tr.stats.channel[-<span class="number">3</span>:]</span><br><span class="line"></span><br><span class="line">        key = <span class="string">f&quot;<span class="subst">&#123;net&#125;</span>.<span class="subst">&#123;sta&#125;</span>&quot;</span></span><br><span class="line">        <span class="keyword">if</span> key <span class="keyword">not</span> <span class="keyword">in</span> station_set:</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        <span class="keyword">if</span> comp <span class="keyword">not</span> <span class="keyword">in</span> components:</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line"></span><br><span class="line">        station_dates[comp][key].add(file_date)</span><br><span class="line">        station_file_sizes[key] += size</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;共计读取文件数: <span class="subst">&#123;total_files&#125;</span>&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;所有文件总大小: <span class="subst">&#123;total_file_size / (<span class="number">1024</span>**<span class="number">2</span>):<span class="number">.2</span>f&#125;</span> MB&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># ===== 删除无有效数据台站 =====</span></span><br><span class="line"><span class="keyword">for</span> comp <span class="keyword">in</span> components:</span><br><span class="line">    keys_to_remove = [k <span class="keyword">for</span> k, dates <span class="keyword">in</span> station_dates[comp].items() <span class="keyword">if</span> <span class="built_in">len</span>(dates) == <span class="number">0</span>]</span><br><span class="line">    <span class="keyword">for</span> k <span class="keyword">in</span> keys_to_remove:</span><br><span class="line">        <span class="keyword">del</span> station_dates[comp][k]</span><br><span class="line"></span><br><span class="line"><span class="comment"># ===== 输出有效天数统计文本 =====</span></span><br><span class="line"><span class="keyword">for</span> comp <span class="keyword">in</span> components:</span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">f&quot;station_day_count_<span class="subst">&#123;comp&#125;</span>.txt&quot;</span>, <span class="string">&quot;w&quot;</span>) <span class="keyword">as</span> f:</span><br><span class="line">        <span class="keyword">for</span> key <span class="keyword">in</span> <span class="built_in">sorted</span>(station_dates[comp].keys()):</span><br><span class="line">            f.write(<span class="string">f&quot;<span class="subst">&#123;key&#125;</span> <span class="subst">&#123;<span class="built_in">len</span>(station_dates[comp][key])&#125;</span>\n&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># ===== 台网颜色映射 =====</span></span><br><span class="line">all_nets = <span class="built_in">sorted</span>(<span class="built_in">set</span>(net <span class="keyword">for</span> net, sta <span class="keyword">in</span> stations))</span><br><span class="line">net_color_map = &#123;net: cm.get_cmap(<span class="string">&quot;tab20&quot;</span>)(i / <span class="built_in">max</span>(<span class="built_in">len</span>(all_nets)-<span class="number">1</span>,<span class="number">1</span>)) <span class="keyword">for</span> i, net <span class="keyword">in</span> <span class="built_in">enumerate</span>(all_nets)&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># ===== 绘图函数 =====</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">plot_component_availability</span>(<span class="params">comp, station_dates_comp</span>):</span><br><span class="line">    valid_stations = <span class="built_in">sorted</span>(station_dates_comp.keys(), key=<span class="keyword">lambda</span> x: (x.split(<span class="string">&quot;.&quot;</span>)[<span class="number">0</span>], x.split(<span class="string">&quot;.&quot;</span>)[<span class="number">1</span>]))</span><br><span class="line">    fig, ax = plt.subplots(figsize=(<span class="number">14</span>, <span class="built_in">max</span>(<span class="number">6</span>, <span class="number">0.3</span> * <span class="built_in">len</span>(valid_stations))))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">to_datetime</span>(<span class="params">d</span>):</span><br><span class="line">        <span class="keyword">return</span> dt(d.year, d.month, d.day)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> idx, key <span class="keyword">in</span> <span class="built_in">enumerate</span>(valid_stations):</span><br><span class="line">        net = key.split(<span class="string">&quot;.&quot;</span>)[<span class="number">0</span>]</span><br><span class="line">        dates = <span class="built_in">sorted</span>(station_dates_comp[key])</span><br><span class="line">        x_vals = [to_datetime(d) <span class="keyword">for</span> d <span class="keyword">in</span> dates]</span><br><span class="line">        ax.plot(x_vals, [idx]*<span class="built_in">len</span>(dates), <span class="string">&quot;.&quot;</span>, color=net_color_map[net], markersize=<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">    ax.set_xlabel(<span class="string">&quot;时间&quot;</span>)</span><br><span class="line">    ax.set_ylabel(<span class="string">&quot;台站&quot;</span>)</span><br><span class="line">    ax.set_yticks(<span class="built_in">range</span>(<span class="built_in">len</span>(valid_stations)))</span><br><span class="line">    ax.set_yticklabels(valid_stations, fontsize=<span class="number">5</span>)</span><br><span class="line"></span><br><span class="line">    ax.grid(<span class="literal">True</span>, linestyle=<span class="string">&quot;:&quot;</span>, alpha=<span class="number">0.5</span>)</span><br><span class="line"></span><br><span class="line">    x_start = dt(start_year, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">    x_end = dt(end_year, <span class="number">12</span>, <span class="number">31</span>)</span><br><span class="line">    ax.set_xlim(x_start, x_end)</span><br><span class="line"></span><br><span class="line">    ax.xaxis.set_major_locator(mdates.YearLocator())</span><br><span class="line">    ax.xaxis.set_major_formatter(mdates.DateFormatter(<span class="string">&quot;%Y&quot;</span>))</span><br><span class="line"></span><br><span class="line">    plt.tight_layout(rect=[<span class="number">0</span>, <span class="number">0</span>, <span class="number">0.85</span>, <span class="number">1</span>])</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 右侧外部标注台网名</span></span><br><span class="line">    trans = blended_transform_factory(ax.transAxes, ax.transData)</span><br><span class="line">    net_indices = defaultdict(<span class="built_in">list</span>)</span><br><span class="line">    <span class="keyword">for</span> idx, key <span class="keyword">in</span> <span class="built_in">enumerate</span>(valid_stations):</span><br><span class="line">        net = key.split(<span class="string">&quot;.&quot;</span>)[<span class="number">0</span>]</span><br><span class="line">        net_indices[net].append(idx)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> net, indices <span class="keyword">in</span> net_indices.items():</span><br><span class="line">        mid_idx = indices[<span class="built_in">len</span>(indices)//<span class="number">2</span>]</span><br><span class="line">        color = net_color_map[net]</span><br><span class="line">        ax.text(<span class="number">1.02</span>, mid_idx, net, color=color, fontsize=<span class="number">8</span>, fontweight=<span class="string">&#x27;bold&#x27;</span>,</span><br><span class="line">                verticalalignment=<span class="string">&#x27;center&#x27;</span>, horizontalalignment=<span class="string">&#x27;left&#x27;</span>,</span><br><span class="line">                transform=trans)</span><br><span class="line"></span><br><span class="line">    plt.savefig(<span class="string">f&quot;<span class="subst">&#123;comp&#125;</span>_availability_2013_2022.png&quot;</span>, dpi=<span class="number">300</span>, bbox_inches=<span class="string">&#x27;tight&#x27;</span>)</span><br><span class="line">    plt.close()</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;已保存图像: <span class="subst">&#123;comp&#125;</span>_availability_2013_2022.png&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># ===== 画三分量图 =====</span></span><br><span class="line"><span class="keyword">for</span> comp <span class="keyword">in</span> components:</span><br><span class="line">    plot_component_availability(comp, station_dates[comp])</span><br><span class="line"></span><br><span class="line"><span class="comment"># ===== 台网统计 =====</span></span><br><span class="line">network_stats = defaultdict(<span class="keyword">lambda</span>: &#123;<span class="string">&quot;total&quot;</span>: <span class="number">0</span>, <span class="string">&quot;valid&quot;</span>: <span class="number">0</span>, <span class="string">&quot;day_counts&quot;</span>: []&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> net, sta <span class="keyword">in</span> stations:</span><br><span class="line">    network_stats[net][<span class="string">&quot;total&quot;</span>] += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">all_valid_keys = <span class="built_in">set</span>()</span><br><span class="line"><span class="keyword">for</span> comp <span class="keyword">in</span> components:</span><br><span class="line">    all_valid_keys.update(station_dates[comp].keys())</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> key <span class="keyword">in</span> all_valid_keys:</span><br><span class="line">    net = key.split(<span class="string">&quot;.&quot;</span>)[<span class="number">0</span>]</span><br><span class="line">    days_list = [<span class="built_in">len</span>(station_dates[comp].get(key, [])) <span class="keyword">for</span> comp <span class="keyword">in</span> components]</span><br><span class="line">    valid_days = <span class="built_in">max</span>(days_list)</span><br><span class="line">    network_stats[net][<span class="string">&quot;valid&quot;</span>] += <span class="number">1</span></span><br><span class="line">    network_stats[net][<span class="string">&quot;day_counts&quot;</span>].append(valid_days)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;\n台网统计汇总：&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;<span class="subst">&#123;<span class="string">&#x27;Net&#x27;</span>:&lt;<span class="number">6</span>&#125;</span> <span class="subst">&#123;<span class="string">&#x27;Total&#x27;</span>:&gt;<span class="number">6</span>&#125;</span> <span class="subst">&#123;<span class="string">&#x27;Valid&#x27;</span>:&gt;<span class="number">6</span>&#125;</span> <span class="subst">&#123;<span class="string">&#x27;AvgDays&#x27;</span>:&gt;<span class="number">10</span>&#125;</span>&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;-&quot;</span> * <span class="number">32</span>)</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&quot;network_summary_all_components.txt&quot;</span>, <span class="string">&quot;w&quot;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(<span class="string">f&quot;<span class="subst">&#123;<span class="string">&#x27;Net&#x27;</span>:&lt;<span class="number">6</span>&#125;</span> <span class="subst">&#123;<span class="string">&#x27;Total&#x27;</span>:&gt;<span class="number">6</span>&#125;</span> <span class="subst">&#123;<span class="string">&#x27;Valid&#x27;</span>:&gt;<span class="number">6</span>&#125;</span> <span class="subst">&#123;<span class="string">&#x27;AvgDays&#x27;</span>:&gt;<span class="number">10</span>&#125;</span>\n&quot;</span>)</span><br><span class="line">    <span class="keyword">for</span> net <span class="keyword">in</span> <span class="built_in">sorted</span>(network_stats.keys()):</span><br><span class="line">        total = network_stats[net][<span class="string">&quot;total&quot;</span>]</span><br><span class="line">        valid = network_stats[net][<span class="string">&quot;valid&quot;</span>]</span><br><span class="line">        avg_days = np.mean(network_stats[net][<span class="string">&quot;day_counts&quot;</span>]) <span class="keyword">if</span> network_stats[net][<span class="string">&quot;day_counts&quot;</span>] <span class="keyword">else</span> <span class="number">0</span></span><br><span class="line">        line = <span class="string">f&quot;<span class="subst">&#123;net:&lt;<span class="number">6</span>&#125;</span> <span class="subst">&#123;total:&gt;<span class="number">6</span>&#125;</span> <span class="subst">&#123;valid:&gt;<span class="number">6</span>&#125;</span> <span class="subst">&#123;avg_days:&gt;<span class="number">10.1</span>f&#125;</span>&quot;</span></span><br><span class="line">        <span class="built_in">print</span>(line)</span><br><span class="line">        f.write(line + <span class="string">&quot;\n&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># ===== 总结 =====</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;\n文件总数: <span class="subst">&#123;total_files&#125;</span>&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;文件总大小: <span class="subst">&#123;total_file_size/(<span class="number">1024</span>**<span class="number">2</span>):<span class="number">.2</span>f&#125;</span> MB (<span class="subst">&#123;total_file_size/(<span class="number">1024</span>**<span class="number">3</span>):<span class="number">.2</span>f&#125;</span> GB)&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>&emsp;&emsp;这个脚本实现的功能包括：</p>
+<ul>
+<li>统计开始时间start_year到结束时间end_year的数据下载情况</li>
+<li>对LHZ、LHN和LHE分别进行统计。</li>
+<li>对统计结果进行可视化输出。</li>
+<li>横轴是时间，纵轴是台站名。不同台网用不同颜色标出。在图右侧标出台网名。</li>
+<li>输出文件network_summary_all_components.txt，给出台网包含台站数目，有效台站数目和各自平均天数。</li>
+<li>输出文件station_day_count_{comp}.txt，给出台站名和有效天数。</li>
+<li>输出文件总数，文件总大小。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>work</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>注意力机制</title>
     <url>/attention-mechanism.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;注意力机制的核心思想是让模型能够动态聚焦于输入数据中最相关的部分。在时间序列分类中：<br>工作原理：</p>
@@ -4994,51 +5039,6 @@
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">import matplotlib.pyplot as plt</span><br><span class="line">import torch</span><br><span class="line">import torch.nn as nn</span><br><span class="line">import torch.optim as optim</span><br><span class="line">from torch.utils.data import Dataset, DataLoader, TensorDataset</span><br><span class="line">from sklearn.model_selection import train_test_split</span><br><span class="line">from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix, roc_auc_score</span><br><span class="line"></span><br><span class="line"># 配置参数</span><br><span class="line">class Config:</span><br><span class="line">    num_points = 500        # 时间序列长度</span><br><span class="line">    dataset_size = 5000     # 数据集大小</span><br><span class="line">    normal_ratio = 0.5      # 正常样本比例</span><br><span class="line">    min_freq = 1            # 最小频率</span><br><span class="line">    max_freq = 4            # 最大频率</span><br><span class="line">    min_amp = 1             # 最小振幅</span><br><span class="line">    max_amp = 10            # 最大振幅</span><br><span class="line">    min_loc_ratio = 0.0     # 异常位置最小比例</span><br><span class="line">    max_loc_ratio = 0.9     # 异常位置最大比例</span><br><span class="line">    min_length_ratio = 0.1  # 异常长度最小比例</span><br><span class="line">    max_length_ratio = 0.5  # 异常长度最大比例</span><br><span class="line">    batch_size = 32         # 批大小</span><br><span class="line">    lr = 0.001              # 学习率</span><br><span class="line">    num_epochs = 15         # 训练轮数</span><br><span class="line">    hidden_dim = 32         # LSTM隐藏层维度</span><br><span class="line">    device = torch.device(&#x27;cuda&#x27; if torch.cuda.is_available() else &#x27;cpu&#x27;)</span><br><span class="line">    patience = 5            # 早停耐心值</span><br><span class="line"></span><br><span class="line">config = Config()</span><br><span class="line"></span><br><span class="line"># 1. 数据生成</span><br><span class="line">def generate_sine_wave(length, freq, amp):</span><br><span class="line">    &quot;&quot;&quot;生成正弦波&quot;&quot;&quot;</span><br><span class="line">    t = np.linspace(0, 2*np.pi, length)</span><br><span class="line">    return amp * np.sin(freq * t)</span><br><span class="line"></span><br><span class="line">def generate_dataset(config):</span><br><span class="line">    &quot;&quot;&quot;生成数据集&quot;&quot;&quot;</span><br><span class="line">    X = []</span><br><span class="line">    y = []</span><br><span class="line">    </span><br><span class="line">    for _ in range(config.dataset_size):</span><br><span class="line">        # 随机生成频率和振幅</span><br><span class="line">        freq = np.random.uniform(config.min_freq, config.max_freq)</span><br><span class="line">        amp = np.random.uniform(config.min_amp, config.max_amp)</span><br><span class="line">        </span><br><span class="line">        # 生成正常或异常样本</span><br><span class="line">        if np.random.rand() &lt; config.normal_ratio:</span><br><span class="line">            # 正常样本</span><br><span class="line">            wave = generate_sine_wave(config.num_points, freq, amp)</span><br><span class="line">            label = 0</span><br><span class="line">        else:</span><br><span class="line">            # 异常样本：生成正弦波并在随机位置插入平坦段</span><br><span class="line">            wave = generate_sine_wave(config.num_points, freq, amp)</span><br><span class="line">            # 随机选择异常位置和长度（按比例）</span><br><span class="line">            loc_ratio = np.random.uniform(config.min_loc_ratio, config.max_loc_ratio)</span><br><span class="line">            length_ratio = np.random.uniform(config.min_length_ratio, config.max_length_ratio)</span><br><span class="line">            loc = int(loc_ratio * config.num_points)</span><br><span class="line">            length = int(length_ratio * config.num_points)</span><br><span class="line">            end = min(loc + length, config.num_points)</span><br><span class="line">            # 将选定区域替换为常数值（取开始点的值）</span><br><span class="line">            wave[loc:end] = wave[loc]</span><br><span class="line">            label = 1</span><br><span class="line">        </span><br><span class="line">        X.append(wave)</span><br><span class="line">        y.append(label)</span><br><span class="line">    </span><br><span class="line">    # 转换为numpy数组</span><br><span class="line">    X = np.array(X)</span><br><span class="line">    y = np.array(y)</span><br><span class="line">    </span><br><span class="line">    # 转换为PyTorch张量</span><br><span class="line">    X_tensor = torch.tensor(X, dtype=torch.float32).unsqueeze(-1)  # (N, T, 1)</span><br><span class="line">    y_tensor = torch.tensor(y, dtype=torch.float32)  # (N,)</span><br><span class="line">    </span><br><span class="line">    return X_tensor, y_tensor</span><br><span class="line"></span><br><span class="line"># 2. 模型定义</span><br><span class="line">class AttentionModel(nn.Module):</span><br><span class="line">    def __init__(self, input_dim=1, hidden_dim=32):</span><br><span class="line">        super(AttentionModel, self).__init__()</span><br><span class="line">        # 双向LSTM</span><br><span class="line">        self.lstm = nn.LSTM(</span><br><span class="line">            input_size=input_dim,</span><br><span class="line">            hidden_size=hidden_dim,</span><br><span class="line">            batch_first=True,</span><br><span class="line">            bidirectional=True</span><br><span class="line">        )</span><br><span class="line">        # 注意力权重计算</span><br><span class="line">        self.attention = nn.Sequential(</span><br><span class="line">            nn.Linear(2 * hidden_dim, 64),</span><br><span class="line">            nn.Tanh(),</span><br><span class="line">            nn.Linear(64, 1)</span><br><span class="line">        )</span><br><span class="line">        # 分类器</span><br><span class="line">        self.classifier = nn.Sequential(</span><br><span class="line">            nn.Linear(2 * hidden_dim, 1),</span><br><span class="line">            nn.Sigmoid()</span><br><span class="line">        )</span><br><span class="line">    </span><br><span class="line">    def forward(self, x):</span><br><span class="line">        # LSTM处理</span><br><span class="line">        lstm_out, _ = self.lstm(x)  # (batch_size, seq_len, 2*hidden_dim)</span><br><span class="line">        </span><br><span class="line">        # 计算注意力权重</span><br><span class="line">        e = self.attention(lstm_out).squeeze(-1)  # (batch_size, seq_len)</span><br><span class="line">        alpha = torch.softmax(e, dim=1)  # 归一化权重</span><br><span class="line">        alpha_expanded = alpha.unsqueeze(-1)  # (batch_size, seq_len, 1)</span><br><span class="line">        </span><br><span class="line">        # 加权得到上下文向量</span><br><span class="line">        context = torch.sum(alpha_expanded * lstm_out, dim=1)  # (batch_size, 2*hidden_dim)</span><br><span class="line">        </span><br><span class="line">        # 分类</span><br><span class="line">        out = self.classifier(context).squeeze(-1)  # (batch_size,)</span><br><span class="line">        return out, alpha</span><br><span class="line"></span><br><span class="line"># 3. 训练函数</span><br><span class="line">def train_model(model, train_loader, val_loader, config):</span><br><span class="line">    model.to(config.device)</span><br><span class="line">    criterion = nn.BCELoss()</span><br><span class="line">    optimizer = optim.Adam(model.parameters(), lr=config.lr)</span><br><span class="line">    </span><br><span class="line">    best_val_loss = float(&#x27;inf&#x27;)</span><br><span class="line">    patience_counter = 0</span><br><span class="line">    </span><br><span class="line">    train_losses = []</span><br><span class="line">    val_losses = []</span><br><span class="line">    </span><br><span class="line">    for epoch in range(config.num_epochs):</span><br><span class="line">        # 训练阶段</span><br><span class="line">        model.train()</span><br><span class="line">        train_loss = 0.0</span><br><span class="line">        for batch_X, batch_y in train_loader:</span><br><span class="line">            batch_X, batch_y = batch_X.to(config.device), batch_y.to(config.device)</span><br><span class="line">            </span><br><span class="line">            optimizer.zero_grad()</span><br><span class="line">            outputs, _ = model(batch_X)</span><br><span class="line">            loss = criterion(outputs, batch_y)</span><br><span class="line">            loss.backward()</span><br><span class="line">            optimizer.step()</span><br><span class="line">            </span><br><span class="line">            train_loss += loss.item() * batch_X.size(0)</span><br><span class="line">        </span><br><span class="line">        # 计算平均训练损失</span><br><span class="line">        train_loss = train_loss / len(train_loader.dataset)</span><br><span class="line">        train_losses.append(train_loss)</span><br><span class="line">        </span><br><span class="line">        # 验证阶段</span><br><span class="line">        model.eval()</span><br><span class="line">        val_loss = 0.0</span><br><span class="line">        with torch.no_grad():</span><br><span class="line">            for batch_X, batch_y in val_loader:</span><br><span class="line">                batch_X, batch_y = batch_X.to(config.device), batch_y.to(config.device)</span><br><span class="line">                outputs, _ = model(batch_X)</span><br><span class="line">                loss = criterion(outputs, batch_y)</span><br><span class="line">                val_loss += loss.item() * batch_X.size(0)</span><br><span class="line">        </span><br><span class="line">        val_loss = val_loss / len(val_loader.dataset)</span><br><span class="line">        val_losses.append(val_loss)</span><br><span class="line">        </span><br><span class="line">        print(f&#x27;Epoch &#123;epoch+1&#125;/&#123;config.num_epochs&#125; | Train Loss: &#123;train_loss:.4f&#125; | Val Loss: &#123;val_loss:.4f&#125;&#x27;)</span><br><span class="line">        </span><br><span class="line">        # 早停检查</span><br><span class="line">        if val_loss &lt; best_val_loss:</span><br><span class="line">            best_val_loss = val_loss</span><br><span class="line">            patience_counter = 0</span><br><span class="line">            torch.save(model.state_dict(), &#x27;best_model.pth&#x27;)</span><br><span class="line">        else:</span><br><span class="line">            patience_counter += 1</span><br><span class="line">            if patience_counter &gt;= config.patience:</span><br><span class="line">                print(f&#x27;Early stopping at epoch &#123;epoch+1&#125;&#x27;)</span><br><span class="line">                break</span><br><span class="line">    </span><br><span class="line">    # 加载最佳模型</span><br><span class="line">    model.load_state_dict(torch.load(&#x27;best_model.pth&#x27;))</span><br><span class="line">    return model, train_losses, val_losses</span><br><span class="line"></span><br><span class="line"># 4. 评估函数</span><br><span class="line">def evaluate_model(model, test_loader, config):</span><br><span class="line">    model.eval()</span><br><span class="line">    y_true = []</span><br><span class="line">    y_pred = []</span><br><span class="line">    y_score = []</span><br><span class="line">    </span><br><span class="line">    with torch.no_grad():</span><br><span class="line">        for batch_X, batch_y in test_loader:</span><br><span class="line">            batch_X, batch_y = batch_X.to(config.device), batch_y.to(config.device)</span><br><span class="line">            outputs, _ = model(batch_X)</span><br><span class="line">            </span><br><span class="line">            # 收集真实标签和预测概率</span><br><span class="line">            y_true.extend(batch_y.cpu().numpy())</span><br><span class="line">            y_score.extend(outputs.cpu().numpy())</span><br><span class="line">            y_pred.extend((outputs &gt; 0.5).float().cpu().numpy())</span><br><span class="line">    </span><br><span class="line">    # 计算指标</span><br><span class="line">    acc = accuracy_score(y_true, y_pred)</span><br><span class="line">    prec = precision_score(y_true, y_pred)</span><br><span class="line">    rec = recall_score(y_true, y_pred)</span><br><span class="line">    f1 = f1_score(y_true, y_pred)</span><br><span class="line">    auc = roc_auc_score(y_true, y_score)</span><br><span class="line">    cm = confusion_matrix(y_true, y_pred)</span><br><span class="line">    </span><br><span class="line">    print(f&#x27;Accuracy: &#123;acc:.4f&#125;&#x27;)</span><br><span class="line">    print(f&#x27;Precision: &#123;prec:.4f&#125;&#x27;)</span><br><span class="line">    print(f&#x27;Recall: &#123;rec:.4f&#125;&#x27;)</span><br><span class="line">    print(f&#x27;F1 Score: &#123;f1:.4f&#125;&#x27;)</span><br><span class="line">    print(f&#x27;ROC AUC: &#123;auc:.4f&#125;&#x27;)</span><br><span class="line">    print(&#x27;Confusion Matrix:&#x27;)</span><br><span class="line">    print(cm)</span><br><span class="line">    </span><br><span class="line">    return acc, prec, rec, f1, auc, cm</span><br><span class="line"></span><br><span class="line"># 5. 可视化注意力</span><br><span class="line">def plot_attention(wave, attention_weights, title=&#x27;Attention Visualization&#x27;):</span><br><span class="line">    &quot;&quot;&quot;可视化注意力权重&quot;&quot;&quot;</span><br><span class="line">    wave = wave.squeeze()</span><br><span class="line">    attention_weights = attention_weights.squeeze()</span><br><span class="line">    </span><br><span class="line">    fig, ax1 = plt.subplots(figsize=(12, 4))</span><br><span class="line">    </span><br><span class="line">    # 绘制原始波形</span><br><span class="line">    ax1.plot(wave, &#x27;b-&#x27;, label=&#x27;Signal&#x27;)</span><br><span class="line">    ax1.set_xlabel(&#x27;Time Step&#x27;)</span><br><span class="line">    ax1.set_ylabel(&#x27;Amplitude&#x27;, color=&#x27;b&#x27;)</span><br><span class="line">    ax1.tick_params(&#x27;y&#x27;, colors=&#x27;b&#x27;)</span><br><span class="line">    </span><br><span class="line">    # 绘制注意力权重（红色虚线）</span><br><span class="line">    ax2 = ax1.twinx()</span><br><span class="line">    ax2.plot(attention_weights, &#x27;r--&#x27;, alpha=0.7, label=&#x27;Attention&#x27;)</span><br><span class="line">    ax2.set_ylabel(&#x27;Attention Weight&#x27;, color=&#x27;r&#x27;)</span><br><span class="line">    ax2.tick_params(&#x27;y&#x27;, colors=&#x27;r&#x27;)</span><br><span class="line">    ax2.set_ylim(0, 1.0)</span><br><span class="line">    </span><br><span class="line">    plt.title(title)</span><br><span class="line">    fig.tight_layout()</span><br><span class="line">    plt.show()</span><br><span class="line"></span><br><span class="line"># 主函数</span><br><span class="line">def main():</span><br><span class="line">    # 生成数据</span><br><span class="line">    print(&quot;Generating dataset...&quot;)</span><br><span class="line">    X, y = generate_dataset(config)</span><br><span class="line">    </span><br><span class="line">    # 划分训练集、验证集、测试集</span><br><span class="line">    X_train, X_temp, y_train, y_temp = train_test_split(</span><br><span class="line">        X, y, test_size=0.3, random_state=42</span><br><span class="line">    )</span><br><span class="line">    X_val, X_test, y_val, y_test = train_test_split(</span><br><span class="line">        X_temp, y_temp, test_size=0.5, random_state=42</span><br><span class="line">    )</span><br><span class="line">    </span><br><span class="line">    # 创建数据加载器</span><br><span class="line">    train_dataset = TensorDataset(X_train, y_train)</span><br><span class="line">    val_dataset = TensorDataset(X_val, y_val)</span><br><span class="line">    test_dataset = TensorDataset(X_test, y_test)</span><br><span class="line">    </span><br><span class="line">    train_loader = DataLoader(train_dataset, batch_size=config.batch_size, shuffle=True)</span><br><span class="line">    val_loader = DataLoader(val_dataset, batch_size=config.batch_size)</span><br><span class="line">    test_loader = DataLoader(test_dataset, batch_size=config.batch_size)</span><br><span class="line">    </span><br><span class="line">    # 初始化模型</span><br><span class="line">    model = AttentionModel(input_dim=1, hidden_dim=config.hidden_dim)</span><br><span class="line">    </span><br><span class="line">    # 训练模型</span><br><span class="line">    print(&quot;Training model...&quot;)</span><br><span class="line">    model, train_losses, val_losses = train_model(model, train_loader, val_loader, config)</span><br><span class="line">    </span><br><span class="line">    # 评估模型</span><br><span class="line">    print(&quot;\nEvaluating model on test set...&quot;)</span><br><span class="line">    evaluate_model(model, test_loader, config)</span><br><span class="line">    </span><br><span class="line">    # 可视化训练过程</span><br><span class="line">    plt.figure(figsize=(10, 5))</span><br><span class="line">    plt.plot(train_losses, label=&#x27;Train Loss&#x27;)</span><br><span class="line">    plt.plot(val_losses, label=&#x27;Validation Loss&#x27;)</span><br><span class="line">    plt.xlabel(&#x27;Epochs&#x27;)</span><br><span class="line">    plt.ylabel(&#x27;Loss&#x27;)</span><br><span class="line">    plt.legend()</span><br><span class="line">    plt.title(&#x27;Training and Validation Loss&#x27;)</span><br><span class="line">    plt.show()</span><br><span class="line">    </span><br><span class="line">    # 可视化注意力机制</span><br><span class="line">    print(&quot;\nVisualizing attention for sample examples...&quot;)</span><br><span class="line">    model.eval()</span><br><span class="line">    with torch.no_grad():</span><br><span class="line">        # 随机选择一些测试样本</span><br><span class="line">        indices = np.random.choice(len(test_dataset), 4, replace=False)</span><br><span class="line">        for i in indices:</span><br><span class="line">            sample_X, sample_y = test_dataset[i]</span><br><span class="line">            sample_X = sample_X.unsqueeze(0).to(config.device)  # 增加批次维度</span><br><span class="line">            _, attention_weights = model(sample_X)</span><br><span class="line">            </span><br><span class="line">            # 转换回CPU和numpy</span><br><span class="line">            sample_X = sample_X.cpu().numpy().squeeze()</span><br><span class="line">            attention_weights = attention_weights.cpu().numpy().squeeze()</span><br><span class="line">            </span><br><span class="line">            # 绘制</span><br><span class="line">            title = f&quot;Sample &#123;i&#125; - &#123;&#x27;Anomaly&#x27; if sample_y.item() == 1 else &#x27;Normal&#x27;&#125;&quot;</span><br><span class="line">            plot_attention(sample_X, attention_weights, title)</span><br><span class="line"></span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>ai</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>python脚本下载连续波形数据</title>
-    <url>/download-continuous-seis.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> socket</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> obspy <span class="keyword">import</span> UTCDateTime, Stream</span><br><span class="line"><span class="keyword">from</span> obspy.clients.fdsn <span class="keyword">import</span> Client</span><br><span class="line"><span class="keyword">from</span> concurrent.futures <span class="keyword">import</span> ThreadPoolExecutor, as_completed</span><br><span class="line"><span class="keyword">from</span> requests.exceptions <span class="keyword">import</span> ConnectionError, Timeout</span><br><span class="line"></span><br><span class="line"><span class="comment"># 参数设置</span></span><br><span class="line">client = Client(<span class="string">&quot;IRIS&quot;</span>)</span><br><span class="line">output_dir = <span class="string">&quot;global_data&quot;</span></span><br><span class="line">os.makedirs(output_dir, exist_ok=<span class="literal">True</span>)</span><br><span class="line">sta_file = <span class="string">&quot;station.lst&quot;</span></span><br><span class="line">start_date = UTCDateTime(<span class="string">&quot;2013-01-01&quot;</span>)</span><br><span class="line">end_date = UTCDateTime(<span class="string">&quot;2024-01-01&quot;</span>)  <span class="comment"># 包括该天</span></span><br><span class="line">thread_workers = <span class="number">20</span></span><br><span class="line">exception_log = <span class="string">&quot;exceptions.txt&quot;</span></span><br><span class="line">timing_log = <span class="string">&quot;download_time.txt&quot;</span></span><br><span class="line">max_retries = <span class="number">5</span>  <span class="comment"># 最大重试次数</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;📁 当前工作目录: <span class="subst">&#123;os.getcwd()&#125;</span>&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;📁 波形保存路径: <span class="subst">&#123;os.path.abspath(output_dir)&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取台站列表</span></span><br><span class="line">sta_list = []</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(sta_file, <span class="string">&quot;r&quot;</span>) <span class="keyword">as</span> sf:</span><br><span class="line">    <span class="keyword">for</span> line <span class="keyword">in</span> sf:</span><br><span class="line">        <span class="keyword">if</span> line.strip() <span class="keyword">and</span> <span class="keyword">not</span> line.strip().startswith(<span class="string">&quot;#&quot;</span>):</span><br><span class="line">            parts = line.strip().split()</span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">len</span>(parts) &gt;= <span class="number">2</span>:</span><br><span class="line">                net, sta = parts[<span class="number">0</span>], parts[<span class="number">1</span>]</span><br><span class="line">                sta_list.append((net, sta))</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">download_station</span>(<span class="params">net, sta, day</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    下载单个台站某天波形数据，去仪器响应，返回Stream</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    start = UTCDateTime(day)</span><br><span class="line">    end = start + <span class="number">86400</span></span><br><span class="line">    st = client.get_waveforms(net, sta, <span class="string">&quot;*&quot;</span>, <span class="string">&quot;LH?&quot;</span>, start, end, attach_response=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">    st.remove_response(output=<span class="string">&quot;VEL&quot;</span>, pre_filt=(<span class="number">0.008</span>, <span class="number">0.01</span>, <span class="number">0.3</span>, <span class="number">0.4</span>),</span><br><span class="line">                       taper=<span class="literal">True</span>, zero_mean=<span class="literal">True</span>, taper_fraction=<span class="number">0.05</span>)</span><br><span class="line">    <span class="keyword">return</span> st</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">download_day</span>(<span class="params">day</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    下载某天所有台站数据，返回合并Stream和日志信息</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    stream_day = Stream()</span><br><span class="line">    daily_log = []</span><br><span class="line">    log_lines = []</span><br><span class="line"></span><br><span class="line">    <span class="keyword">with</span> ThreadPoolExecutor(max_workers=thread_workers) <span class="keyword">as</span> executor:</span><br><span class="line">        futures = &#123;executor.submit(download_station, net, sta, day): (net, sta) <span class="keyword">for</span> net, sta <span class="keyword">in</span> sta_list&#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> future <span class="keyword">in</span> as_completed(futures):</span><br><span class="line">            net, sta = futures[future]</span><br><span class="line">            <span class="keyword">try</span>:</span><br><span class="line">                st = future.result()</span><br><span class="line">                stream_day += st</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">f&quot;✅ <span class="subst">&#123;net&#125;</span>.<span class="subst">&#123;sta&#125;</span> 下载成功（<span class="subst">&#123;<span class="built_in">len</span>(st)&#125;</span> traces）&quot;</span>)</span><br><span class="line">                daily_log.append((net, sta, <span class="number">1</span>))</span><br><span class="line">            <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">f&quot;❌ <span class="subst">&#123;net&#125;</span>.<span class="subst">&#123;sta&#125;</span> 下载失败: <span class="subst">&#123;e&#125;</span>&quot;</span>)</span><br><span class="line">                daily_log.append((net, sta, <span class="number">0</span>))</span><br><span class="line">                log_lines.append(<span class="string">f&quot;<span class="subst">&#123;day.date&#125;</span> <span class="subst">&#123;net&#125;</span>.<span class="subst">&#123;sta&#125;</span> ❌ <span class="subst">&#123;e&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> stream_day, daily_log, log_lines</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">is_network_error</span>(<span class="params">e</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    判断异常是否为网络相关异常</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    network_error_types = (ConnectionError, Timeout, socket.timeout, socket.error)</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">isinstance</span>(e, network_error_types) <span class="keyword">or</span> <span class="string">&quot;timed out&quot;</span> <span class="keyword">in</span> <span class="built_in">str</span>(e).lower() <span class="keyword">or</span> <span class="string">&quot;connection&quot;</span> <span class="keyword">in</span> <span class="built_in">str</span>(e).lower()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 主循环</span></span><br><span class="line">current_day = start_date</span><br><span class="line"><span class="keyword">while</span> current_day &lt;= end_date:</span><br><span class="line">    filename = <span class="string">f&quot;<span class="subst">&#123;current_day.strftime(<span class="string">&#x27;%Y%m%d&#x27;</span>)&#125;</span>.mseed&quot;</span></span><br><span class="line">    filepath = os.path.join(output_dir, filename)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 先判断文件是否存在且非空</span></span><br><span class="line">    <span class="keyword">if</span> os.path.exists(filepath) <span class="keyword">and</span> os.path.getsize(filepath) &gt; <span class="number">0</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;\n📆 <span class="subst">&#123;current_day.date&#125;</span> 文件已存在且非空，跳过下载。&quot;</span>)</span><br><span class="line">        current_day += <span class="number">86400</span></span><br><span class="line">        <span class="keyword">continue</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;\n📆 正在处理日期: <span class="subst">&#123;current_day.date&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line">    attempt = <span class="number">0</span></span><br><span class="line">    success = <span class="literal">False</span></span><br><span class="line">    day_start_time = time.time()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> attempt &lt; max_retries <span class="keyword">and</span> <span class="keyword">not</span> success:</span><br><span class="line">        attempt += <span class="number">1</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;🔄 尝试第 <span class="subst">&#123;attempt&#125;</span> 次下载 <span class="subst">&#123;current_day.date&#125;</span> ...&quot;</span>)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            stream_day, daily_log, log_lines = download_day(current_day)</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">len</span>(stream_day) == <span class="number">0</span>:</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">f&quot;⚠️ <span class="subst">&#123;current_day.date&#125;</span> 没有下载到数据，准备重试...&quot;</span>)</span><br><span class="line">                <span class="keyword">raise</span> ValueError(<span class="string">&quot;下载数据为空&quot;</span>)</span><br><span class="line"></span><br><span class="line">            <span class="comment"># 保存合并后的波形</span></span><br><span class="line">            stream_day.write(filepath, <span class="built_in">format</span>=<span class="string">&quot;MSEED&quot;</span>)</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&quot;💾 <span class="subst">&#123;filename&#125;</span> 保存成功（共 <span class="subst">&#123;<span class="built_in">len</span>(stream_day)&#125;</span> traces）&quot;</span>)</span><br><span class="line">            success = <span class="literal">True</span></span><br><span class="line"></span><br><span class="line">            <span class="comment"># 写入异常日志</span></span><br><span class="line">            <span class="keyword">if</span> log_lines:</span><br><span class="line">                <span class="keyword">with</span> <span class="built_in">open</span>(exception_log, <span class="string">&quot;a&quot;</span>) <span class="keyword">as</span> elog:</span><br><span class="line">                    elog.write(<span class="string">&quot;\n&quot;</span>.join(log_lines) + <span class="string">&quot;\n&quot;</span>)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&quot;❌ 下载异常: <span class="subst">&#123;e&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line">            <span class="comment"># 判断是否为网络错误</span></span><br><span class="line">            <span class="keyword">if</span> is_network_error(e):</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">&quot;🌐 网络异常，等待5秒后重试...&quot;</span>)</span><br><span class="line">                time.sleep(<span class="number">5</span>)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">&quot;⚠️ 非网络异常，仍将重试...&quot;</span>)</span><br><span class="line">                time.sleep(<span class="number">3</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 下载耗时记录</span></span><br><span class="line">    day_duration = time.time() - day_start_time</span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(timing_log, <span class="string">&quot;a&quot;</span>) <span class="keyword">as</span> tlog:</span><br><span class="line">        tlog.write(<span class="string">f&quot;<span class="subst">&#123;current_day.date&#125;</span>: <span class="subst">&#123;day_duration:<span class="number">.2</span>f&#125;</span> seconds\n&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> success:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;❌ <span class="subst">&#123;current_day.date&#125;</span> 下载失败，超过最大重试次数。请检查网络或日志。&quot;</span>)</span><br><span class="line"></span><br><span class="line">    current_day += <span class="number">86400</span></span><br></pre></td></tr></table></figure>
-<p>&emsp;&emsp;这个脚本实现的功能包括：</p>
-<ul>
-<li>下载台站列表station.lst的2013-01-01到2024-01-01，LH?数据。</li>
-<li>每天的数据存储为global_data&#x2F;YYYYMMDD.mseed。</li>
-<li>去仪器响应，保留VEL，滤波频率为0.008, 0.01, 0.3, 0.4。</li>
-<li>记录每天数据下载的耗时，保存在“download_time.txt”中。</li>
-<li>判断是否是网络中断错误，如果是则做5次尝试重新下载，每次间隔5秒。</li>
-<li>判断当天数据是否已经被下载，如果没有或者大小是0则开始下载。</li>
-<li>将错误输出到exceptions.txt中。</li>
-<li>每天数据下载时，启用20个进程进行下载。</li>
-</ul>]]></content>
-      <categories>
-        <category>work</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>统计数据下载情况</title>
-    <url>/statistic-data-download.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;数据下载好后需要统计下载的情况，这是python脚本。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> obspy <span class="keyword">import</span> read</span><br><span class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> datetime <span class="keyword">as</span> dt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> matplotlib.cm <span class="keyword">as</span> cm</span><br><span class="line"><span class="keyword">import</span> matplotlib.dates <span class="keyword">as</span> mdates</span><br><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> defaultdict</span><br><span class="line"><span class="keyword">from</span> matplotlib.transforms <span class="keyword">import</span> blended_transform_factory</span><br><span class="line"></span><br><span class="line"><span class="comment"># ===== 配置 =====</span></span><br><span class="line">data_dir = <span class="string">&quot;daily_waveforms&quot;</span>  <span class="comment"># 存放YYYYMMDD.mseed文件目录</span></span><br><span class="line">station_file = <span class="string">&quot;station.list&quot;</span>  <span class="comment"># 台站列表，格式：NET STA（两列）</span></span><br><span class="line">components = [<span class="string">&quot;LHZ&quot;</span>, <span class="string">&quot;LHN&quot;</span>, <span class="string">&quot;LHE&quot;</span>]</span><br><span class="line">start_year = <span class="number">2020</span></span><br><span class="line">end_year = <span class="number">2020</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># ===== 读取台站列表 =====</span></span><br><span class="line">stations = []</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(station_file, <span class="string">&quot;r&quot;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    <span class="keyword">for</span> line <span class="keyword">in</span> f:</span><br><span class="line">        <span class="keyword">if</span> line.strip():</span><br><span class="line">            net, sta = line.strip().split()[:<span class="number">2</span>]</span><br><span class="line">            stations.append((net, sta))</span><br><span class="line"></span><br><span class="line">station_set = <span class="built_in">set</span>(<span class="string">f&quot;<span class="subst">&#123;net&#125;</span>.<span class="subst">&#123;sta&#125;</span>&quot;</span> <span class="keyword">for</span> net, sta <span class="keyword">in</span> stations)</span><br><span class="line"></span><br><span class="line"><span class="comment"># ===== 初始化 =====</span></span><br><span class="line">station_dates = &#123;comp: defaultdict(<span class="built_in">set</span>) <span class="keyword">for</span> comp <span class="keyword">in</span> components&#125;  <span class="comment"># comp -&gt; &#123;net.sta -&gt; set(date)&#125;</span></span><br><span class="line">station_file_sizes = defaultdict(<span class="built_in">int</span>)  <span class="comment"># 台站对应所有文件大小</span></span><br><span class="line">total_files = <span class="number">0</span></span><br><span class="line">total_file_size = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># ===== 遍历所有mseed文件 =====</span></span><br><span class="line">all_files = <span class="built_in">sorted</span>(f <span class="keyword">for</span> f <span class="keyword">in</span> os.listdir(data_dir) <span class="keyword">if</span> f.endswith(<span class="string">&quot;.mseed&quot;</span>))</span><br><span class="line"><span class="keyword">for</span> filename <span class="keyword">in</span> all_files:</span><br><span class="line">    filepath = os.path.join(data_dir, filename)</span><br><span class="line"></span><br><span class="line">    size = os.path.getsize(filepath)</span><br><span class="line">    total_files += <span class="number">1</span></span><br><span class="line">    total_file_size += size</span><br><span class="line"></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        st = read(filepath)</span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;读取文件失败 <span class="subst">&#123;filename&#125;</span>: <span class="subst">&#123;e&#125;</span>&quot;</span>)</span><br><span class="line">        <span class="keyword">continue</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 解析文件日期 YYYYMMDD</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        file_date = dt.strptime(filename[:<span class="number">8</span>], <span class="string">&quot;%Y%m%d&quot;</span>).date()</span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;无法解析日期 <span class="subst">&#123;filename&#125;</span>: <span class="subst">&#123;e&#125;</span>&quot;</span>)</span><br><span class="line">        <span class="keyword">continue</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> tr <span class="keyword">in</span> st:</span><br><span class="line">        net = tr.stats.network</span><br><span class="line">        sta = tr.stats.station</span><br><span class="line">        comp = tr.stats.channel[-<span class="number">3</span>:]</span><br><span class="line"></span><br><span class="line">        key = <span class="string">f&quot;<span class="subst">&#123;net&#125;</span>.<span class="subst">&#123;sta&#125;</span>&quot;</span></span><br><span class="line">        <span class="keyword">if</span> key <span class="keyword">not</span> <span class="keyword">in</span> station_set:</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        <span class="keyword">if</span> comp <span class="keyword">not</span> <span class="keyword">in</span> components:</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line"></span><br><span class="line">        station_dates[comp][key].add(file_date)</span><br><span class="line">        station_file_sizes[key] += size</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;共计读取文件数: <span class="subst">&#123;total_files&#125;</span>&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;所有文件总大小: <span class="subst">&#123;total_file_size / (<span class="number">1024</span>**<span class="number">2</span>):<span class="number">.2</span>f&#125;</span> MB&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># ===== 删除无有效数据台站 =====</span></span><br><span class="line"><span class="keyword">for</span> comp <span class="keyword">in</span> components:</span><br><span class="line">    keys_to_remove = [k <span class="keyword">for</span> k, dates <span class="keyword">in</span> station_dates[comp].items() <span class="keyword">if</span> <span class="built_in">len</span>(dates) == <span class="number">0</span>]</span><br><span class="line">    <span class="keyword">for</span> k <span class="keyword">in</span> keys_to_remove:</span><br><span class="line">        <span class="keyword">del</span> station_dates[comp][k]</span><br><span class="line"></span><br><span class="line"><span class="comment"># ===== 输出有效天数统计文本 =====</span></span><br><span class="line"><span class="keyword">for</span> comp <span class="keyword">in</span> components:</span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">f&quot;station_day_count_<span class="subst">&#123;comp&#125;</span>.txt&quot;</span>, <span class="string">&quot;w&quot;</span>) <span class="keyword">as</span> f:</span><br><span class="line">        <span class="keyword">for</span> key <span class="keyword">in</span> <span class="built_in">sorted</span>(station_dates[comp].keys()):</span><br><span class="line">            f.write(<span class="string">f&quot;<span class="subst">&#123;key&#125;</span> <span class="subst">&#123;<span class="built_in">len</span>(station_dates[comp][key])&#125;</span>\n&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># ===== 台网颜色映射 =====</span></span><br><span class="line">all_nets = <span class="built_in">sorted</span>(<span class="built_in">set</span>(net <span class="keyword">for</span> net, sta <span class="keyword">in</span> stations))</span><br><span class="line">net_color_map = &#123;net: cm.get_cmap(<span class="string">&quot;tab20&quot;</span>)(i / <span class="built_in">max</span>(<span class="built_in">len</span>(all_nets)-<span class="number">1</span>,<span class="number">1</span>)) <span class="keyword">for</span> i, net <span class="keyword">in</span> <span class="built_in">enumerate</span>(all_nets)&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># ===== 绘图函数 =====</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">plot_component_availability</span>(<span class="params">comp, station_dates_comp</span>):</span><br><span class="line">    valid_stations = <span class="built_in">sorted</span>(station_dates_comp.keys(), key=<span class="keyword">lambda</span> x: (x.split(<span class="string">&quot;.&quot;</span>)[<span class="number">0</span>], x.split(<span class="string">&quot;.&quot;</span>)[<span class="number">1</span>]))</span><br><span class="line">    fig, ax = plt.subplots(figsize=(<span class="number">14</span>, <span class="built_in">max</span>(<span class="number">6</span>, <span class="number">0.3</span> * <span class="built_in">len</span>(valid_stations))))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">to_datetime</span>(<span class="params">d</span>):</span><br><span class="line">        <span class="keyword">return</span> dt(d.year, d.month, d.day)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> idx, key <span class="keyword">in</span> <span class="built_in">enumerate</span>(valid_stations):</span><br><span class="line">        net = key.split(<span class="string">&quot;.&quot;</span>)[<span class="number">0</span>]</span><br><span class="line">        dates = <span class="built_in">sorted</span>(station_dates_comp[key])</span><br><span class="line">        x_vals = [to_datetime(d) <span class="keyword">for</span> d <span class="keyword">in</span> dates]</span><br><span class="line">        ax.plot(x_vals, [idx]*<span class="built_in">len</span>(dates), <span class="string">&quot;.&quot;</span>, color=net_color_map[net], markersize=<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">    ax.set_xlabel(<span class="string">&quot;时间&quot;</span>)</span><br><span class="line">    ax.set_ylabel(<span class="string">&quot;台站&quot;</span>)</span><br><span class="line">    ax.set_yticks(<span class="built_in">range</span>(<span class="built_in">len</span>(valid_stations)))</span><br><span class="line">    ax.set_yticklabels(valid_stations, fontsize=<span class="number">5</span>)</span><br><span class="line"></span><br><span class="line">    ax.grid(<span class="literal">True</span>, linestyle=<span class="string">&quot;:&quot;</span>, alpha=<span class="number">0.5</span>)</span><br><span class="line"></span><br><span class="line">    x_start = dt(start_year, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">    x_end = dt(end_year, <span class="number">12</span>, <span class="number">31</span>)</span><br><span class="line">    ax.set_xlim(x_start, x_end)</span><br><span class="line"></span><br><span class="line">    ax.xaxis.set_major_locator(mdates.YearLocator())</span><br><span class="line">    ax.xaxis.set_major_formatter(mdates.DateFormatter(<span class="string">&quot;%Y&quot;</span>))</span><br><span class="line"></span><br><span class="line">    plt.tight_layout(rect=[<span class="number">0</span>, <span class="number">0</span>, <span class="number">0.85</span>, <span class="number">1</span>])</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 右侧外部标注台网名</span></span><br><span class="line">    trans = blended_transform_factory(ax.transAxes, ax.transData)</span><br><span class="line">    net_indices = defaultdict(<span class="built_in">list</span>)</span><br><span class="line">    <span class="keyword">for</span> idx, key <span class="keyword">in</span> <span class="built_in">enumerate</span>(valid_stations):</span><br><span class="line">        net = key.split(<span class="string">&quot;.&quot;</span>)[<span class="number">0</span>]</span><br><span class="line">        net_indices[net].append(idx)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> net, indices <span class="keyword">in</span> net_indices.items():</span><br><span class="line">        mid_idx = indices[<span class="built_in">len</span>(indices)//<span class="number">2</span>]</span><br><span class="line">        color = net_color_map[net]</span><br><span class="line">        ax.text(<span class="number">1.02</span>, mid_idx, net, color=color, fontsize=<span class="number">8</span>, fontweight=<span class="string">&#x27;bold&#x27;</span>,</span><br><span class="line">                verticalalignment=<span class="string">&#x27;center&#x27;</span>, horizontalalignment=<span class="string">&#x27;left&#x27;</span>,</span><br><span class="line">                transform=trans)</span><br><span class="line"></span><br><span class="line">    plt.savefig(<span class="string">f&quot;<span class="subst">&#123;comp&#125;</span>_availability_2013_2022.png&quot;</span>, dpi=<span class="number">300</span>, bbox_inches=<span class="string">&#x27;tight&#x27;</span>)</span><br><span class="line">    plt.close()</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;已保存图像: <span class="subst">&#123;comp&#125;</span>_availability_2013_2022.png&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># ===== 画三分量图 =====</span></span><br><span class="line"><span class="keyword">for</span> comp <span class="keyword">in</span> components:</span><br><span class="line">    plot_component_availability(comp, station_dates[comp])</span><br><span class="line"></span><br><span class="line"><span class="comment"># ===== 台网统计 =====</span></span><br><span class="line">network_stats = defaultdict(<span class="keyword">lambda</span>: &#123;<span class="string">&quot;total&quot;</span>: <span class="number">0</span>, <span class="string">&quot;valid&quot;</span>: <span class="number">0</span>, <span class="string">&quot;day_counts&quot;</span>: []&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> net, sta <span class="keyword">in</span> stations:</span><br><span class="line">    network_stats[net][<span class="string">&quot;total&quot;</span>] += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">all_valid_keys = <span class="built_in">set</span>()</span><br><span class="line"><span class="keyword">for</span> comp <span class="keyword">in</span> components:</span><br><span class="line">    all_valid_keys.update(station_dates[comp].keys())</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> key <span class="keyword">in</span> all_valid_keys:</span><br><span class="line">    net = key.split(<span class="string">&quot;.&quot;</span>)[<span class="number">0</span>]</span><br><span class="line">    days_list = [<span class="built_in">len</span>(station_dates[comp].get(key, [])) <span class="keyword">for</span> comp <span class="keyword">in</span> components]</span><br><span class="line">    valid_days = <span class="built_in">max</span>(days_list)</span><br><span class="line">    network_stats[net][<span class="string">&quot;valid&quot;</span>] += <span class="number">1</span></span><br><span class="line">    network_stats[net][<span class="string">&quot;day_counts&quot;</span>].append(valid_days)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;\n台网统计汇总：&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;<span class="subst">&#123;<span class="string">&#x27;Net&#x27;</span>:&lt;<span class="number">6</span>&#125;</span> <span class="subst">&#123;<span class="string">&#x27;Total&#x27;</span>:&gt;<span class="number">6</span>&#125;</span> <span class="subst">&#123;<span class="string">&#x27;Valid&#x27;</span>:&gt;<span class="number">6</span>&#125;</span> <span class="subst">&#123;<span class="string">&#x27;AvgDays&#x27;</span>:&gt;<span class="number">10</span>&#125;</span>&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;-&quot;</span> * <span class="number">32</span>)</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&quot;network_summary_all_components.txt&quot;</span>, <span class="string">&quot;w&quot;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(<span class="string">f&quot;<span class="subst">&#123;<span class="string">&#x27;Net&#x27;</span>:&lt;<span class="number">6</span>&#125;</span> <span class="subst">&#123;<span class="string">&#x27;Total&#x27;</span>:&gt;<span class="number">6</span>&#125;</span> <span class="subst">&#123;<span class="string">&#x27;Valid&#x27;</span>:&gt;<span class="number">6</span>&#125;</span> <span class="subst">&#123;<span class="string">&#x27;AvgDays&#x27;</span>:&gt;<span class="number">10</span>&#125;</span>\n&quot;</span>)</span><br><span class="line">    <span class="keyword">for</span> net <span class="keyword">in</span> <span class="built_in">sorted</span>(network_stats.keys()):</span><br><span class="line">        total = network_stats[net][<span class="string">&quot;total&quot;</span>]</span><br><span class="line">        valid = network_stats[net][<span class="string">&quot;valid&quot;</span>]</span><br><span class="line">        avg_days = np.mean(network_stats[net][<span class="string">&quot;day_counts&quot;</span>]) <span class="keyword">if</span> network_stats[net][<span class="string">&quot;day_counts&quot;</span>] <span class="keyword">else</span> <span class="number">0</span></span><br><span class="line">        line = <span class="string">f&quot;<span class="subst">&#123;net:&lt;<span class="number">6</span>&#125;</span> <span class="subst">&#123;total:&gt;<span class="number">6</span>&#125;</span> <span class="subst">&#123;valid:&gt;<span class="number">6</span>&#125;</span> <span class="subst">&#123;avg_days:&gt;<span class="number">10.1</span>f&#125;</span>&quot;</span></span><br><span class="line">        <span class="built_in">print</span>(line)</span><br><span class="line">        f.write(line + <span class="string">&quot;\n&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># ===== 总结 =====</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;\n文件总数: <span class="subst">&#123;total_files&#125;</span>&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;文件总大小: <span class="subst">&#123;total_file_size/(<span class="number">1024</span>**<span class="number">2</span>):<span class="number">.2</span>f&#125;</span> MB (<span class="subst">&#123;total_file_size/(<span class="number">1024</span>**<span class="number">3</span>):<span class="number">.2</span>f&#125;</span> GB)&quot;</span>)</span><br></pre></td></tr></table></figure>
-<p>&emsp;&emsp;这个脚本实现的功能包括：</p>
-<ul>
-<li>统计开始时间start_year到结束时间end_year的数据下载情况</li>
-<li>对LHZ、LHN和LHE分别进行统计。</li>
-<li>对统计结果进行可视化输出。</li>
-<li>横轴是时间，纵轴是台站名。不同台网用不同颜色标出。在图右侧标出台网名。</li>
-<li>输出文件network_summary_all_components.txt，给出台网包含台站数目，有效台站数目和各自平均天数。</li>
-<li>输出文件station_day_count_{comp}.txt，给出台站名和有效天数。</li>
-<li>输出文件总数，文件总大小。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>work</category>
       </categories>
       <tags>
         <tag>python</tag>
