@@ -1268,7 +1268,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #0014ff;
+    background: #57e0ff;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2567,7 +2567,7 @@ header.header {
 }
 @media (max-width: 991px) {
   header.header {
-    border-radius: initial;
+    border-radius: 5px;
   }
 }
 .main {
@@ -2734,7 +2734,7 @@ header.header {
   }
   .sidebar-inner {
     background: var(--content-bg-color);
-    border-radius: initial;
+    border-radius: 5px;
     box-shadow: initial;
     box-sizing: border-box;
     color: var(--text-color);
