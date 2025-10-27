@@ -81,7 +81,7 @@
     </url>
 
     <url>
-        <loc>http://www.seis-jun.xyz/python-script1.html</loc>
+        <loc>http://www.seis-jun.xyz/news-website.html</loc>
         <lastmod>2025-10-26T08:10:19.599Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -89,7 +89,7 @@
     </url>
 
     <url>
-        <loc>http://www.seis-jun.xyz/news-website.html</loc>
+        <loc>http://www.seis-jun.xyz/python-script1.html</loc>
         <lastmod>2025-10-26T08:10:19.599Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -513,7 +513,7 @@
     </url>
 
     <url>
-        <loc>http://www.seis-jun.xyz/paper-reading-4.html</loc>
+        <loc>http://www.seis-jun.xyz/paper-reading-5.html</loc>
         <lastmod>2025-10-26T08:10:19.565Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -521,7 +521,7 @@
     </url>
 
     <url>
-        <loc>http://www.seis-jun.xyz/paper-reading-5.html</loc>
+        <loc>http://www.seis-jun.xyz/paper-reading-4.html</loc>
         <lastmod>2025-10-26T08:10:19.565Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -753,7 +753,7 @@
     </url>
 
     <url>
-        <loc>http://www.seis-jun.xyz/after-fedora32.html</loc>
+        <loc>http://www.seis-jun.xyz/sky-and-universe.html</loc>
         <lastmod>2025-10-26T08:10:19.546Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -761,7 +761,7 @@
     </url>
 
     <url>
-        <loc>http://www.seis-jun.xyz/sky-and-universe.html</loc>
+        <loc>http://www.seis-jun.xyz/after-fedora32.html</loc>
         <lastmod>2025-10-26T08:10:19.546Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -921,7 +921,7 @@
     </url>
 
     <url>
-        <loc>http://www.seis-jun.xyz/no-more-blog-transfer.html</loc>
+        <loc>http://www.seis-jun.xyz/history-and-inversion.html</loc>
         <lastmod>2025-10-26T08:10:19.533Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -929,7 +929,7 @@
     </url>
 
     <url>
-        <loc>http://www.seis-jun.xyz/history-and-inversion.html</loc>
+        <loc>http://www.seis-jun.xyz/no-more-blog-transfer.html</loc>
         <lastmod>2025-10-26T08:10:19.533Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
