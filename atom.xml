@@ -263,16 +263,19 @@
     <link href="http://www.seis-jun.xyz/python-script1"/>
     <id>http://www.seis-jun.xyz/python-script1</id>
     <published>2025-06-21T06:29:56.000Z</published>
-    <updated>2025-10-26T08:10:19.000Z</updated>
+    <updated>2025-10-28T09:16:20.984Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
-        
-      
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;以下是python脚本练习1，功能包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;遍历目录events_20250619下所有子目录中以bhz.SAC_rm结尾的SAC文件；&lt;/li&gt;
+&lt;li&gt;对这些数据进行窄带滤波，宽度为中心频率（周期分之一）的$&#92;pm$5mHz，滤波器为4个极点0相位的Butterworth，滤波周期为arange(25,145,10)；&lt;/li&gt;
+&lt;li&gt;计算窄带滤波后的每个周期的信噪比。信噪比定义为信号窗口内，波形包络的最大值比上噪声窗口的均方根。信号窗口定义为2.5-5km&amp;#x2F;s的到时。噪声窗定义为信号末端之后1000秒开始的1000秒长度的窗口。计算的信噪比写入到user0；&lt;/li&gt;
+&lt;li&gt;将处理后的数据写到新的文件夹bp_sac中，文件名命名为z.year.jday.00.STA.bhz.period，仅保留信噪比大于3的数据。&lt;/li&gt;
+&lt;li&gt;采用并行处理(8个cpu)。&lt;/li&gt;
+&lt;li&gt;统计每个周期信噪比大于3的波形数据。&lt;/li&gt;
+&lt;li&gt;统计每个周期信噪比大于3的波形的平均信噪比。&lt;/li&gt;
+&lt;li&gt;将统计结构写入csv，并画出统计结果。</summary>
     
     
     
