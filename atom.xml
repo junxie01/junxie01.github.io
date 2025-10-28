@@ -154,16 +154,10 @@
     <link href="http://www.seis-jun.xyz/python-script2"/>
     <id>http://www.seis-jun.xyz/python-script2</id>
     <published>2025-06-30T13:27:28.000Z</published>
-    <updated>2025-10-26T08:10:19.000Z</updated>
+    <updated>2025-10-28T09:08:53.367Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
-        
-      
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;以下是python脚本练习2，功能为读取选定时间段内的hdf5文件，文件名形如20130512_cross_spec.hdf5。该文件总共有24段，每一段是一个小时某台阵平均互相关谱。然后画出这个互相关谱，保存为png格式图片。&lt;/p&gt;</summary>
     
     
     
