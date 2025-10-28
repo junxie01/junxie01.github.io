@@ -22,15 +22,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"www.seis-jun.xyz","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.25.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="&emsp;&emsp;DOP-E 单站极化与背方位角分析流程">
+    <meta name="description" content="&emsp;&emsp;单站三分量背景噪声数据如何分析极化与信号源背方位角？">
 <meta property="og:type" content="article">
 <meta property="og:title" content="计算背景噪声中噪声源背方位角">
 <meta property="og:url" content="http://www.seis-jun.xyz/noise-source-back-azimuth">
 <meta property="og:site_name" content="SEISAMUSE">
-<meta property="og:description" content="&emsp;&emsp;DOP-E 单站极化与背方位角分析流程">
+<meta property="og:description" content="&emsp;&emsp;单站三分量背景噪声数据如何分析极化与信号源背方位角？">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-10-24T02:24:39.000Z">
-<meta property="article:modified_time" content="2025-10-26T09:03:03.244Z">
+<meta property="article:modified_time" content="2025-10-28T14:38:27.684Z">
 <meta property="article:author" content="Jun Xie">
 <meta property="article:tag" content="work">
 <meta name="twitter:card" content="summary">
@@ -181,7 +181,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E4%BD%93%E6%B5%81%E7%A8%8B%E6%A6%82%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text">总体流程概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86"><span class="nav-number">2.</span> <span class="nav-text">数据预处理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%AE%E6%A0%87"><span class="nav-number">2.1.</span> <span class="nav-text">目标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4"><span class="nav-number">2.2.</span> <span class="nav-text">步骤</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#S-transform%EF%BC%88%E8%AE%BA%E6%96%87%E8%A7%84%E8%8C%83%E5%AE%9E%E7%8E%B0%EF%BC%89"><span class="nav-number">3.</span> <span class="nav-text">S-transform（论文规范实现）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-number">3.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%82%E6%95%B0%E4%B8%8E%E7%90%86%E7%94%B1"><span class="nav-number">3.2.</span> <span class="nav-text">参数与理由</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B0%B1%E7%9F%A9%E9%98%B5%E6%9E%84%E9%80%A0%E4%B8%8E%E5%B9%B3%E6%BB%91"><span class="nav-number">4.</span> <span class="nav-text">谱矩阵构造与平滑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B0%B1%E7%9F%A9%E9%98%B5%E5%AE%9A%E4%B9%89"><span class="nav-number">4.1.</span> <span class="nav-text">谱矩阵定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B9%B3%E6%BB%91"><span class="nav-number">4.2.</span> <span class="nav-text">平滑</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%AC%E5%BE%81%E5%88%86%E8%A7%A3%E4%B8%8E%E6%9E%81%E5%8C%96%E5%B1%9E%E6%80%A7"><span class="nav-number">5.</span> <span class="nav-text">本征分解与极化属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#DOP%EF%BC%88Degree-of-Polarization%EF%BC%89"><span class="nav-number">5.1.</span> <span class="nav-text">DOP（Degree of Polarization）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Planarity"><span class="nav-number">5.2.</span> <span class="nav-text">Planarity</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%83%8C%E6%96%B9%E4%BD%8D%E8%A7%92%EF%BC%88BAZ%EF%BC%89%E8%AE%A1%E7%AE%97"><span class="nav-number">6.</span> <span class="nav-text">背方位角（BAZ）计算</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%AC%E5%BC%8F"><span class="nav-number">6.1.</span> <span class="nav-text">公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%84%E7%90%86%E7%BB%86%E8%8A%82"><span class="nav-number">6.2.</span> <span class="nav-text">处理细节</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E4%B9%89%E6%80%A7%E5%A4%84%E7%90%86"><span class="nav-number">6.3.</span> <span class="nav-text">二义性处理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AD%9B%E9%80%89%E4%B8%8E%E8%81%9A%E5%90%88%E8%BE%93%E5%87%BA"><span class="nav-number">7.</span> <span class="nav-text">筛选与聚合输出</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AD%9B%E9%80%89%E8%A7%84%E5%88%99"><span class="nav-number">7.1.</span> <span class="nav-text">筛选规则</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%84%9A%E6%9C%AC"><span class="nav-number">8.</span> <span class="nav-text">脚本</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E4%BD%93%E6%B5%81%E7%A8%8B%E6%A6%82%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text">总体流程概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86"><span class="nav-number">2.</span> <span class="nav-text">数据预处理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%AE%E6%A0%87"><span class="nav-number">2.1.</span> <span class="nav-text">目标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4"><span class="nav-number">2.2.</span> <span class="nav-text">步骤</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#S-transform"><span class="nav-number">3.</span> <span class="nav-text">S-transform</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-number">3.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%82%E6%95%B0%E4%B8%8E%E7%90%86%E7%94%B1"><span class="nav-number">3.2.</span> <span class="nav-text">参数与理由</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B0%B1%E7%9F%A9%E9%98%B5%E6%9E%84%E9%80%A0%E4%B8%8E%E5%B9%B3%E6%BB%91"><span class="nav-number">4.</span> <span class="nav-text">谱矩阵构造与平滑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B0%B1%E7%9F%A9%E9%98%B5%E5%AE%9A%E4%B9%89"><span class="nav-number">4.1.</span> <span class="nav-text">谱矩阵定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B9%B3%E6%BB%91"><span class="nav-number">4.2.</span> <span class="nav-text">平滑</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%AC%E5%BE%81%E5%88%86%E8%A7%A3%E4%B8%8E%E6%9E%81%E5%8C%96%E5%B1%9E%E6%80%A7"><span class="nav-number">5.</span> <span class="nav-text">本征分解与极化属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#DOP%EF%BC%88Degree-of-Polarization%EF%BC%89"><span class="nav-number">5.1.</span> <span class="nav-text">DOP（Degree of Polarization）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Planarity"><span class="nav-number">5.2.</span> <span class="nav-text">Planarity</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%83%8C%E6%96%B9%E4%BD%8D%E8%A7%92%EF%BC%88BAZ%EF%BC%89%E8%AE%A1%E7%AE%97"><span class="nav-number">6.</span> <span class="nav-text">背方位角（BAZ）计算</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%AC%E5%BC%8F"><span class="nav-number">6.1.</span> <span class="nav-text">公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%84%E7%90%86%E7%BB%86%E8%8A%82"><span class="nav-number">6.2.</span> <span class="nav-text">处理细节</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E4%B9%89%E6%80%A7%E5%A4%84%E7%90%86"><span class="nav-number">6.3.</span> <span class="nav-text">二义性处理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AD%9B%E9%80%89%E4%B8%8E%E8%81%9A%E5%90%88%E8%BE%93%E5%87%BA"><span class="nav-number">7.</span> <span class="nav-text">筛选与聚合输出</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AD%9B%E9%80%89%E8%A7%84%E5%88%99"><span class="nav-number">7.1.</span> <span class="nav-text">筛选规则</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%84%9A%E6%9C%AC"><span class="nav-number">8.</span> <span class="nav-text">脚本</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -250,6 +250,13 @@
       </a>
     </li>
     <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/download-continuous-seis" rel="bookmark">
+        <time class="popular-posts-time">2025-06-07</time>
+        <br>
+      python脚本下载连续波形数据
+      </a>
+    </li>
+    <li class="popular-posts-item">
       <a class="popular-posts-link" href="/latex-math-express" rel="bookmark">
         <time class="popular-posts-time">2025-06-21</time>
         <br>
@@ -313,7 +320,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-10-26 17:03:03" itemprop="dateModified" datetime="2025-10-26T17:03:03+08:00">2025-10-26</time>
+      <time title="修改时间：2025-10-28 22:38:27" itemprop="dateModified" datetime="2025-10-28T22:38:27+08:00">2025-10-28</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -356,14 +363,14 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p><em>(基于论文 Schimmel et al., 2011; Berbellini et al., 2019)</em>  </p>
+    <div class="post-body" itemprop="articleBody"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>当然是DOP-E啦(基于论文 Schimmel et al., 2011; Berbellini et al., 2019)。  </p>
 <h2 id="总体流程概述"><a href="#总体流程概述" class="headerlink" title="总体流程概述"></a>总体流程概述</h2><ol>
 <li><strong>数据预处理</strong>（去趋势、去仪器、对齐）  </li>
-<li><strong>S-transform 时频分解</strong>（论文定义）  </li>
+<li><strong>S-transform 时频分解</strong></li>
 <li><strong>构造谱矩阵与时域平滑</strong>  </li>
 <li><strong>本征分解求极化参数（DOP、planarity、semimajor axis）</strong>  </li>
 <li><strong>筛选高质量段</strong>（DOP &gt; 阈值 &amp; planarity 接近水平）  </li>
-<li><strong>计算背方位角（BAZ）并解除 180° 二义性</strong>  </li>
+<li><strong>计算背方位角（BAZ）并消除 180° 二义性</strong>  </li>
 <li><strong>输出可视化与统计</strong>（时频图、直方图、极坐标图）  </li>
 <li><strong>验证与质量控制（QA）</strong>  </li>
 <li><strong>批量与性能优化</strong></li>
@@ -373,25 +380,17 @@
 <h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h3><ol>
 <li><p><strong>去仪器响应</strong>  </p>
 <ul>
-<li>若记录为速度，直接使用；否则用 RESP 文件去响应。  </li>
-<li>理由：相位一致性影响极化矩阵。</li>
+<li>去仪器响应，转换到速度记录。</li>
 </ul>
 </li>
 <li><p><strong>去趋势 &#x2F; 去均值</strong>  </p>
 <ul>
-<li><code>trace.detrend(&quot;linear&quot;); trace.detrend(&quot;demean&quot;)</code>  </li>
-<li>理由：低频漂移会污染低频段（0.03 Hz）。</li>
+<li><code>trace.detrend(&quot;linear&quot;); trace.detrend(&quot;demean&quot;)</code></li>
 </ul>
 </li>
 <li><p><strong>剔除事件或脉冲干扰</strong>  </p>
 <ul>
-<li>可通过短时能量（STA&#x2F;LTA）检测排除瞬变。</li>
-</ul>
-</li>
-<li><p><strong>带通滤波</strong>  </p>
-<ul>
-<li>推荐：<code>0.01–0.06 Hz</code> （若仅关心 0.03 Hz 区域）。  </li>
-<li>理由：去掉无关频段以提高信噪比。</li>
+<li>可通过短时能量（STA&#x2F;LTA）检测排除瞬变信号（例如地震）。</li>
 </ul>
 </li>
 <li><p><strong>时间对齐与补零</strong>  </p>
@@ -401,7 +400,7 @@
 </li>
 </ol>
 <hr>
-<h2 id="S-transform（论文规范实现）"><a href="#S-transform（论文规范实现）" class="headerlink" title="S-transform（论文规范实现）"></a>S-transform（论文规范实现）</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>$$<br>S(t,f)&#x3D;\int x(\tau)\frac{|f|}{\sqrt{2\pi}}e^{-(t-\tau)^2f^2&#x2F;2}e^{-i2\pi f\tau}d\tau<br>$$</p>
+<h2 id="S-transform"><a href="#S-transform" class="headerlink" title="S-transform"></a>S-transform</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>$$<br>S(t,f)&#x3D;\int x(\tau)\frac{|f|}{\sqrt{2\pi}}e^{-(t-\tau)^2f^2&#x2F;2}e^{-i2\pi f\tau}d\tau<br>$$</p>
 <h3 id="参数与理由"><a href="#参数与理由" class="headerlink" title="参数与理由"></a>参数与理由</h3><table>
 <thead>
 <tr>
@@ -426,9 +425,9 @@
 <td>增大可提高时域平滑性</td>
 </tr>
 <tr>
-<td>下采样步长 step</td>
+<td>降采样步长 step</td>
 <td>5 s</td>
-<td>提高计算效率，仍能解析 0.03 Hz（周期 33 s）信号</td>
+<td>提高计算效率，仍能解析低频信号</td>
 </tr>
 </tbody></table>
 <blockquote>
@@ -491,7 +490,7 @@
 <li>输出角度范围 [0, 360°)。</li>
 </ul>
 <h3 id="二义性处理"><a href="#二义性处理" class="headerlink" title="二义性处理"></a>二义性处理</h3><ul>
-<li>单站存在 ±180° 二义性。  </li>
+<li>单台存在 ±180° 二义性。  </li>
 <li><strong>假设 retrograde（瑞利波基模）</strong>，可选反向修正：若竖直与水平分量相位差 ~180°，翻转 BAZ。</li>
 </ul>
 <hr>
