@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>寂寞</title>
-    <url>/%E5%AF%82%E5%AF%9E.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;一只小鼠死了,我很伤心.当听知他的死时,我差点落泪,但是泪水只在眼里转了一转,并没有流下来.我不懂我是怎么了?难到我的良心已在这浊世当中损失殆尽？还是我堕落了？</p>
-]]></content>
-      <categories>
-        <category>某日记</category>
-      </categories>
-      <tags>
-        <tag>这是啥</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>阿甘</title>
     <url>/%E9%98%BF%E7%94%98.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;记得第一次看阿甘正传时，我流泪了！</p>
@@ -31,6 +19,18 @@
       </categories>
       <tags>
         <tag>阿甘</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>寂寞</title>
+    <url>/%E5%AF%82%E5%AF%9E.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;一只小鼠死了,我很伤心.当听知他的死时,我差点落泪,但是泪水只在眼里转了一转,并没有流下来.我不懂我是怎么了?难到我的良心已在这浊世当中损失殆尽？还是我堕落了？</p>
+]]></content>
+      <categories>
+        <category>某日记</category>
+      </categories>
+      <tags>
+        <tag>这是啥</tag>
       </tags>
   </entry>
   <entry>
@@ -106,6 +106,24 @@
       </tags>
   </entry>
   <entry>
+    <title>星期五</title>
+    <url>/%E6%98%9F%E6%9C%9F%E4%BA%94.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;好久没有坐过电梯了，今天，腿实在疼的不行了，所以还是坐电梯了。</p>
+<p>&emsp;&emsp;地毯上写着星期五。</p>
+<p>&emsp;&emsp;看到星期五就想到了：鲁宾逊漂流记，黑色星期五，今晚有电影，今晚12点才熄灯，今晚算是周末的开始了，今晚会玩游戏，会玩到很晚，今天是十五，月亮很圆，今天是小姑的生日。</p>
+<p>&emsp;&emsp;不过最重要的是：快要毕业了。</p>
+<p>&emsp;&emsp;可是似乎我还有好多大学应该做的事没有做：谈恋爱，在网吧包夜打游戏，找份兼职做，打打架……</p>
+<p>&emsp;&emsp;前天健身了，很累，晚上感冒了，现在全身都没有力，感觉好没有动力和意义。忽然又想起刚才和老妈打电话。我提到了跳楼的家伙，老妈火了，说道，傻帽，人生这么美好，跳楼？是不是那根筋搭错了？</p>
+<p>&emsp;&emsp;对啊，接着玩，玩到有力气为止</p>
+]]></content>
+      <categories>
+        <category>某日记</category>
+      </categories>
+      <tags>
+        <tag>杂</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>The City of Life and Death</title>
     <url>/the-city-of-life-and-death.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;13日看的《南京！南京》，不知道为什么把南京的名字叫两遍，可能是因为历史的厚重，提到南京就令人想起令人悲痛的往事，1937年12月13日，南京沦陷。</p>
@@ -125,48 +143,6 @@
       </categories>
       <tags>
         <tag>电影</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>星期五</title>
-    <url>/%E6%98%9F%E6%9C%9F%E4%BA%94.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;好久没有坐过电梯了，今天，腿实在疼的不行了，所以还是坐电梯了。</p>
-<p>&emsp;&emsp;地毯上写着星期五。</p>
-<p>&emsp;&emsp;看到星期五就想到了：鲁宾逊漂流记，黑色星期五，今晚有电影，今晚12点才熄灯，今晚算是周末的开始了，今晚会玩游戏，会玩到很晚，今天是十五，月亮很圆，今天是小姑的生日。</p>
-<p>&emsp;&emsp;不过最重要的是：快要毕业了。</p>
-<p>&emsp;&emsp;可是似乎我还有好多大学应该做的事没有做：谈恋爱，在网吧包夜打游戏，找份兼职做，打打架……</p>
-<p>&emsp;&emsp;前天健身了，很累，晚上感冒了，现在全身都没有力，感觉好没有动力和意义。忽然又想起刚才和老妈打电话。我提到了跳楼的家伙，老妈火了，说道，傻帽，人生这么美好，跳楼？是不是那根筋搭错了？</p>
-<p>&emsp;&emsp;对啊，接着玩，玩到有力气为止</p>
-]]></content>
-      <categories>
-        <category>某日记</category>
-      </categories>
-      <tags>
-        <tag>杂</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>mist</title>
-    <url>/mist.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;看了许多的电影，不知怎么的老喜欢看电影。同学说，你看了那么多电影就没有想法吗？我说有。那么你为什么不把这些想法写下来呢？我说，说的对。于是我便回忆看过的电影，对有些有看法的电影说一说。</p>
-<p>&emsp;&emsp;这部电影是一年前同学下的，据说有科幻色彩，我对科幻比较敏感，于是就同他一起坐下来看了这部电影。</p>
-<p>&emsp;&emsp;倒是想不起来是自己的幻想，还是电影里面本来有的线索。说一座山上面的军事基地在进行机密实验，发生了可怕的事故。大概是打开了和另一个世界的联系的通道。另一个世界的迷雾从通道弥散开来。男主人公带着自己的儿子，到超市买东西。结果，不多久雾气就淹没了整个小镇。尖叫声从雾气中传来。大家都躲到了超市 里面。整个故事的大部分时间都在超市里发展。第一个怪物是在超市后门出现的，只是一只软软的有无数牙齿的触手。看不到它的全貌，但已经感觉到了恐怖，让人 起鸡皮疙瘩的恐怖。也许看不到才增添了几分恐怖的气氛。触手被男主人公用斧头砍掉了一只，另一个员工就惨了，他被触手拖到了迷雾里。    </p>
-<p>&emsp;&emsp;迷雾，看不到的恐怖才是最恐怖的。真正的恐怖却又来自人的内心。</p>
-<p>&emsp;&emsp;到了晚上又有可怕的大蚊子袭击超市，接着是吃蚊子的可怕飞龙。几个人死掉了。其中一个是被蚊子咬到中毒死的，她肿起来了，超恐怖。有部分人开始抗争，用各 种武器。后来超市逐渐分成了两部分人。一部分持积极态度主人公为代表，另一部分人是一个疯女人为代表。这部人持消极态度，认为是上帝的惩罚，有些是被疯女 人的言语蛊惑跟随她的，有些是见到了恐怖的镜像吓倒的。大概也就是反应社会上的各种人的生活态度吧！</p>
-<p>&emsp;&emsp;为救受伤的人，主人公带几个人冒着危和恐怖到旁边的药店取药。药店里面被恐怖的能够吐出强腐蚀性蛛丝的蜘蛛占领。几个人挂掉了。但是成功地拿到了药。</p>
-<p>&emsp;&emsp;为了出去寻求帮助，继续抗争，还是妥协任怪物宰割吞食的问题上两派人起了争执，疯女人被杀掉。</p>
-<p>&emsp;&emsp;主人公同自己的孩子，一个女士，一对老夫妻五人坐上了主人公的汽车奔驰在寻求帮助的路上，或者希望能逃离迷雾。途经主人公的家，已狼藉一片。主人公回想起 因为忘记修补窗户导致妻子枉死，痛苦不已。车周围还有体形巨大的怪兽行走，山摇地动。不久迷雾还没散，但是汽车已经没有油了。主人公手中有一把枪，但是只 有四颗子弹。为了不被怪物带走，忍受痛苦，大家都愿意自杀。但是子弹也不够。四声枪响过后。车上只剩主人公一人，万分痛苦。（主人答应不让怪物带走他的孩 子，他做到了）他叫喊着，你们这些怪物来吧，吃了我。他下车了，但是根本就没有了站起来的力气，他太悲痛了，因为他亲手杀死了自己的妻子和孩子。</p>
-<p>&emsp;&emsp;但此时，迷雾渐渐散去，只见军队开来，还有剩下的那些在超市里面的人。怪物都不见了。极为讽刺的是留下来的人都得救了，而出去寻求帮助的人却不是被怪物吃掉，而是自杀。人们在面对恐惧时以为勇敢就是出路，就是幸免。但在极端恐怖时，人们只能用自杀来了结。完。</p>
-<p>&emsp;&emsp;对于主人公杀死自己的孩子这一点我和同学的分歧比较大。要换作是我，我是觉不可能亲手杀掉自己的孩子的。但同学认为，与其看到孩子受罪，不如痛快的让他了结了痛苦，让罪都自己一个人受。</p>
-<p>&emsp;&emsp;整个剧几乎就不能看到比较大的怪物同人之间的战斗场面。怪物袭击人的场面也不多。唯一能看到比较大的是那触手。而被迷雾笼罩的城镇也给人一种窒息的感觉。 场景一直在超市里，用超市反应整个城镇。人们的心理，以及生存的态度表现的比较多，比较深刻。疯女人的消极以及煽动性的话语让你有种跳进电影把她杀掉的冲 动。多听她的话，也许活着的斗志都会被消磨。</p>
-<p>&emsp;&emsp;看完整部电影就感觉吃不下饭了。那只触手给人的恐怖感觉久久不能挥去，很沉闷，而世事的无常又带给我们对于自己的命运未知的恐惧。</p>
-]]></content>
-      <categories>
-        <category>某日记</category>
-      </categories>
-      <tags>
-        <tag>电影</tag>
-        <tag>迷雾</tag>
       </tags>
   </entry>
   <entry>
@@ -193,6 +169,30 @@
       <tags>
         <tag>杂</tag>
         <tag>无题</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>mist</title>
+    <url>/mist.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;看了许多的电影，不知怎么的老喜欢看电影。同学说，你看了那么多电影就没有想法吗？我说有。那么你为什么不把这些想法写下来呢？我说，说的对。于是我便回忆看过的电影，对有些有看法的电影说一说。</p>
+<p>&emsp;&emsp;这部电影是一年前同学下的，据说有科幻色彩，我对科幻比较敏感，于是就同他一起坐下来看了这部电影。</p>
+<p>&emsp;&emsp;倒是想不起来是自己的幻想，还是电影里面本来有的线索。说一座山上面的军事基地在进行机密实验，发生了可怕的事故。大概是打开了和另一个世界的联系的通道。另一个世界的迷雾从通道弥散开来。男主人公带着自己的儿子，到超市买东西。结果，不多久雾气就淹没了整个小镇。尖叫声从雾气中传来。大家都躲到了超市 里面。整个故事的大部分时间都在超市里发展。第一个怪物是在超市后门出现的，只是一只软软的有无数牙齿的触手。看不到它的全貌，但已经感觉到了恐怖，让人 起鸡皮疙瘩的恐怖。也许看不到才增添了几分恐怖的气氛。触手被男主人公用斧头砍掉了一只，另一个员工就惨了，他被触手拖到了迷雾里。    </p>
+<p>&emsp;&emsp;迷雾，看不到的恐怖才是最恐怖的。真正的恐怖却又来自人的内心。</p>
+<p>&emsp;&emsp;到了晚上又有可怕的大蚊子袭击超市，接着是吃蚊子的可怕飞龙。几个人死掉了。其中一个是被蚊子咬到中毒死的，她肿起来了，超恐怖。有部分人开始抗争，用各 种武器。后来超市逐渐分成了两部分人。一部分持积极态度主人公为代表，另一部分人是一个疯女人为代表。这部人持消极态度，认为是上帝的惩罚，有些是被疯女 人的言语蛊惑跟随她的，有些是见到了恐怖的镜像吓倒的。大概也就是反应社会上的各种人的生活态度吧！</p>
+<p>&emsp;&emsp;为救受伤的人，主人公带几个人冒着危和恐怖到旁边的药店取药。药店里面被恐怖的能够吐出强腐蚀性蛛丝的蜘蛛占领。几个人挂掉了。但是成功地拿到了药。</p>
+<p>&emsp;&emsp;为了出去寻求帮助，继续抗争，还是妥协任怪物宰割吞食的问题上两派人起了争执，疯女人被杀掉。</p>
+<p>&emsp;&emsp;主人公同自己的孩子，一个女士，一对老夫妻五人坐上了主人公的汽车奔驰在寻求帮助的路上，或者希望能逃离迷雾。途经主人公的家，已狼藉一片。主人公回想起 因为忘记修补窗户导致妻子枉死，痛苦不已。车周围还有体形巨大的怪兽行走，山摇地动。不久迷雾还没散，但是汽车已经没有油了。主人公手中有一把枪，但是只 有四颗子弹。为了不被怪物带走，忍受痛苦，大家都愿意自杀。但是子弹也不够。四声枪响过后。车上只剩主人公一人，万分痛苦。（主人答应不让怪物带走他的孩 子，他做到了）他叫喊着，你们这些怪物来吧，吃了我。他下车了，但是根本就没有了站起来的力气，他太悲痛了，因为他亲手杀死了自己的妻子和孩子。</p>
+<p>&emsp;&emsp;但此时，迷雾渐渐散去，只见军队开来，还有剩下的那些在超市里面的人。怪物都不见了。极为讽刺的是留下来的人都得救了，而出去寻求帮助的人却不是被怪物吃掉，而是自杀。人们在面对恐惧时以为勇敢就是出路，就是幸免。但在极端恐怖时，人们只能用自杀来了结。完。</p>
+<p>&emsp;&emsp;对于主人公杀死自己的孩子这一点我和同学的分歧比较大。要换作是我，我是觉不可能亲手杀掉自己的孩子的。但同学认为，与其看到孩子受罪，不如痛快的让他了结了痛苦，让罪都自己一个人受。</p>
+<p>&emsp;&emsp;整个剧几乎就不能看到比较大的怪物同人之间的战斗场面。怪物袭击人的场面也不多。唯一能看到比较大的是那触手。而被迷雾笼罩的城镇也给人一种窒息的感觉。 场景一直在超市里，用超市反应整个城镇。人们的心理，以及生存的态度表现的比较多，比较深刻。疯女人的消极以及煽动性的话语让你有种跳进电影把她杀掉的冲 动。多听她的话，也许活着的斗志都会被消磨。</p>
+<p>&emsp;&emsp;看完整部电影就感觉吃不下饭了。那只触手给人的恐怖感觉久久不能挥去，很沉闷，而世事的无常又带给我们对于自己的命运未知的恐惧。</p>
+]]></content>
+      <categories>
+        <category>某日记</category>
+      </categories>
+      <tags>
+        <tag>电影</tag>
+        <tag>迷雾</tag>
       </tags>
   </entry>
   <entry>
@@ -397,21 +397,6 @@
       </categories>
   </entry>
   <entry>
-    <title>消失的几天</title>
-    <url>/%E6%B6%88%E5%A4%B1%E7%9A%84%E5%87%A0%E5%A4%A9.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;顺便交代一下这个国庆是怎么过的吧！因为似乎这几天对好多人来说我都音信全无呢！</p>
-<p>&emsp;&emsp;九月二十几号接到一个任务，那就是：国庆节出差；更值得开心的是，出差地点是家乡。本来准备国庆依然决然的宅在办公室的，接到这份差事的我无疑是欣喜若狂。</p>
-<p>&emsp;&emsp;不过我们准备的不是很充分，而且单单讲求效率了，确切来讲是做了最好的打算以及相对于这个打算的最好的准备，当然这个准备扩大了实际达到的效果与预期的目标之间的差距与麻烦。一路上吃的还算不错都是家乡的口味，只是一路肚子都不舒服，说拉肚子倒又不是，总之胃部和肠道很是不给力。身上不知哪里来了几处伤疤，就像梦一样，因为梦也是不知道从哪里时开始。三四天前被蚊子叮的疮口现在都是猩红，这些蚊子难道就是传说中的外星来客？坐车对于我是最苦的差事，前后总共10天，总共算来大概有3天多时间是在车上呆着的。我自小是不晕车的（除了学前班时去动物园，看见隔座的同学晕车呕吐不觉也似乎干呕了一阵。），而此次坐车坐得我直想吐。</p>
-<p>&emsp;&emsp;值得夸耀开心的是在家乡见到了几年未见的老友。我们还一起在火锅前叙了旧。（顺便说一下，我现在这个身体这个胃是吃不了火锅的，吃不消，实在是吃不消！）还有有一晚的住宿问题是得到另一个好友的女朋友秋秋的帮忙解决的，还免费做了她的哥哥一回，这应该提提的，毕竟我比她大三天，不算亏的。末了还得谢谢他们俩的帮忙。另外就是见到了爸妈，见到了外公外婆，见到了舅舅舅妈，见到了小姨，见到了二姨父，很开心。还有就是在火车上闷着没事看完了三本阿加莎.克里斯蒂的悬疑侦探小说，还看了季羡林散文全编第五本的一半。阿加莎克里斯蒂的小说果然构思严谨缜密，总是出奇不意，种种结果总是让人始料未及，却又合情合理，故事也总是有条不紊的展开。然后昨晚没睡就想到也要写一个悬疑故事。（当然不睡也不完全是因为在构思这个故事，一大半原因是吵闹，还有本就在车上睡了一晚，睡得脑热头疼如何能入眠。）这也就是《爱妻之死》啦，我会慢慢写的，呵呵，第一次写这种类型，就当写着玩吧！</p>
-<p>&emsp;&emsp;刚刚洗了个澡。发现自己瘦了些。好吧，事实是，我也不清楚我是不是真的瘦了，也许只是因为三的一句玩笑。我发现自己的胳膊还有腿在变细（比之前细），肚子的赘肉在凸显，肉在变软，这正朝着我害怕的老年以后变得肉松皮皱，四肢小肚子大的趋势发展，这是多么恐怖啊，如果发生在自己身上。具体有没有变瘦还得经过磅秤的检验以后再说。总之之后的健身是少不了的了。</p>
-<p>&emsp;&emsp;这次出差欢喜甚多，收获不少，我们积累了一些野外布台的经验，许多都是自己吃了亏得来的。不过这些也不算亏，因为我们既没有被谁敲诈也没被骗，许多都是自己欠考虑，还得多坐了几次车，多跑了些路而已。读万卷书，行万里路，路跑多了总是没有错的。路跑多了就会知道以后想办法怎么让自己尽量少跑路，少走弯道。但是接下来就有麻烦了。因为出差的缘故，好多事情都堆在一起了，不过事是要一件一件做的，脚踏实地就好。还有就是出差或多或少是有补助的。既有补助又获得锻炼以及经验经历还能增进感情，所以大家都是愿意去的，但是却只让我们三人去。如果换作我不在这三个人里面我总是会眼红好一阵的。而我却实实在在的是在这三个人里面，如果别人问我，出差开心吗？我说好也不是，坏也不是。说好，别人就更加羡慕嫉妒恨，换作是我，我也会这样。说不好不开心，别人就会说你虚伪等等。总之左也不是右也难为。呵呵，早知道把请客吃饭摆在见面的招呼寒暄中了。</p>
-<p>&emsp;&emsp;头还是晕，睡不着，马上就上课了，别胡思乱想了，愿一切都好^_^</p>
-]]></content>
-      <categories>
-        <category>日记</category>
-      </categories>
-  </entry>
-  <entry>
     <title>扑克</title>
     <url>/%E6%89%91%E5%85%8B.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;“诶～你又耍赖啊！”木斯灰白的眉毛往上挑动了一下，用奇怪的眼神看着坐在眼前的小佳。</p>
@@ -429,6 +414,21 @@
 ]]></content>
       <categories>
         <category>乱笔</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>消失的几天</title>
+    <url>/%E6%B6%88%E5%A4%B1%E7%9A%84%E5%87%A0%E5%A4%A9.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;顺便交代一下这个国庆是怎么过的吧！因为似乎这几天对好多人来说我都音信全无呢！</p>
+<p>&emsp;&emsp;九月二十几号接到一个任务，那就是：国庆节出差；更值得开心的是，出差地点是家乡。本来准备国庆依然决然的宅在办公室的，接到这份差事的我无疑是欣喜若狂。</p>
+<p>&emsp;&emsp;不过我们准备的不是很充分，而且单单讲求效率了，确切来讲是做了最好的打算以及相对于这个打算的最好的准备，当然这个准备扩大了实际达到的效果与预期的目标之间的差距与麻烦。一路上吃的还算不错都是家乡的口味，只是一路肚子都不舒服，说拉肚子倒又不是，总之胃部和肠道很是不给力。身上不知哪里来了几处伤疤，就像梦一样，因为梦也是不知道从哪里时开始。三四天前被蚊子叮的疮口现在都是猩红，这些蚊子难道就是传说中的外星来客？坐车对于我是最苦的差事，前后总共10天，总共算来大概有3天多时间是在车上呆着的。我自小是不晕车的（除了学前班时去动物园，看见隔座的同学晕车呕吐不觉也似乎干呕了一阵。），而此次坐车坐得我直想吐。</p>
+<p>&emsp;&emsp;值得夸耀开心的是在家乡见到了几年未见的老友。我们还一起在火锅前叙了旧。（顺便说一下，我现在这个身体这个胃是吃不了火锅的，吃不消，实在是吃不消！）还有有一晚的住宿问题是得到另一个好友的女朋友秋秋的帮忙解决的，还免费做了她的哥哥一回，这应该提提的，毕竟我比她大三天，不算亏的。末了还得谢谢他们俩的帮忙。另外就是见到了爸妈，见到了外公外婆，见到了舅舅舅妈，见到了小姨，见到了二姨父，很开心。还有就是在火车上闷着没事看完了三本阿加莎.克里斯蒂的悬疑侦探小说，还看了季羡林散文全编第五本的一半。阿加莎克里斯蒂的小说果然构思严谨缜密，总是出奇不意，种种结果总是让人始料未及，却又合情合理，故事也总是有条不紊的展开。然后昨晚没睡就想到也要写一个悬疑故事。（当然不睡也不完全是因为在构思这个故事，一大半原因是吵闹，还有本就在车上睡了一晚，睡得脑热头疼如何能入眠。）这也就是《爱妻之死》啦，我会慢慢写的，呵呵，第一次写这种类型，就当写着玩吧！</p>
+<p>&emsp;&emsp;刚刚洗了个澡。发现自己瘦了些。好吧，事实是，我也不清楚我是不是真的瘦了，也许只是因为三的一句玩笑。我发现自己的胳膊还有腿在变细（比之前细），肚子的赘肉在凸显，肉在变软，这正朝着我害怕的老年以后变得肉松皮皱，四肢小肚子大的趋势发展，这是多么恐怖啊，如果发生在自己身上。具体有没有变瘦还得经过磅秤的检验以后再说。总之之后的健身是少不了的了。</p>
+<p>&emsp;&emsp;这次出差欢喜甚多，收获不少，我们积累了一些野外布台的经验，许多都是自己吃了亏得来的。不过这些也不算亏，因为我们既没有被谁敲诈也没被骗，许多都是自己欠考虑，还得多坐了几次车，多跑了些路而已。读万卷书，行万里路，路跑多了总是没有错的。路跑多了就会知道以后想办法怎么让自己尽量少跑路，少走弯道。但是接下来就有麻烦了。因为出差的缘故，好多事情都堆在一起了，不过事是要一件一件做的，脚踏实地就好。还有就是出差或多或少是有补助的。既有补助又获得锻炼以及经验经历还能增进感情，所以大家都是愿意去的，但是却只让我们三人去。如果换作我不在这三个人里面我总是会眼红好一阵的。而我却实实在在的是在这三个人里面，如果别人问我，出差开心吗？我说好也不是，坏也不是。说好，别人就更加羡慕嫉妒恨，换作是我，我也会这样。说不好不开心，别人就会说你虚伪等等。总之左也不是右也难为。呵呵，早知道把请客吃饭摆在见面的招呼寒暄中了。</p>
+<p>&emsp;&emsp;头还是晕，睡不着，马上就上课了，别胡思乱想了，愿一切都好^_^</p>
+]]></content>
+      <categories>
+        <category>日记</category>
       </categories>
   </entry>
   <entry>
@@ -677,22 +677,6 @@
       </categories>
   </entry>
   <entry>
-    <title>跟伴</title>
-    <url>/%E8%B7%9F%E4%BC%B4.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;这是一种路上游荡的魂魄。</p>
-<p>&emsp;&emsp;因为生前性格孤僻十分孤单，没有一个朋友，所以容易走极端。遇到人生的重大挫折没有地方需求帮助，没有人来帮忙分担，最后在绝望中选择各种手段结束自己的生命。</p>
-<p>&emsp;&emsp;死后由于怨气未散，所以不愿到阴曹，傍晚十分喜欢在偏僻小路上飘荡。</p>
-<p>&emsp;&emsp;最喜欢跟踪单独一个人行走的路人。通常能感知孤独，可化作路人的熟人面目，但又让路人无法辨认出是哪个人。路人若是回头发现，并且警觉，快速行走。。。</p>
-<p>&emsp;&emsp;当路人以为自己已经甩开跟踪者，回头看时。。。什么也看不见。。。。。。因为跟伴紧贴着路人的后背。。。。。。他露出诡异的笑。。。准备把你拉到阴间。。。作伴。。。</p>
-]]></content>
-      <categories>
-        <category>乱笔</category>
-      </categories>
-      <tags>
-        <tag>妖怪</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>血色乎浪漫</title>
     <url>/%E8%A1%80%E8%89%B2%E4%B9%8E%E6%B5%AA%E6%BC%AB.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;人活着该削平自己将自己融入社会大染缸，还是该看清事实从中跳出来，或者该坚持自我暴力抵抗，还是怀揣着希望守护自己的安全岛？</p>
@@ -709,6 +693,22 @@
       </categories>
       <tags>
         <tag>电视剧</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>跟伴</title>
+    <url>/%E8%B7%9F%E4%BC%B4.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;这是一种路上游荡的魂魄。</p>
+<p>&emsp;&emsp;因为生前性格孤僻十分孤单，没有一个朋友，所以容易走极端。遇到人生的重大挫折没有地方需求帮助，没有人来帮忙分担，最后在绝望中选择各种手段结束自己的生命。</p>
+<p>&emsp;&emsp;死后由于怨气未散，所以不愿到阴曹，傍晚十分喜欢在偏僻小路上飘荡。</p>
+<p>&emsp;&emsp;最喜欢跟踪单独一个人行走的路人。通常能感知孤独，可化作路人的熟人面目，但又让路人无法辨认出是哪个人。路人若是回头发现，并且警觉，快速行走。。。</p>
+<p>&emsp;&emsp;当路人以为自己已经甩开跟踪者，回头看时。。。什么也看不见。。。。。。因为跟伴紧贴着路人的后背。。。。。。他露出诡异的笑。。。准备把你拉到阴间。。。作伴。。。</p>
+]]></content>
+      <categories>
+        <category>乱笔</category>
+      </categories>
+      <tags>
+        <tag>妖怪</tag>
       </tags>
   </entry>
   <entry>
@@ -902,6 +902,27 @@
       </tags>
   </entry>
   <entry>
+    <title>关于写日记</title>
+    <url>/about-diary.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;好久都没有写日记的习惯了。今天勉强写一些吧。</p>
+<span id="more"></span>
+
+<p>&emsp;&emsp;上周鬼使神差的建了这个个人网站。其实不是心血来潮，是一直都有建站的想法。只是不知道为啥中途就没有建过。可能这次只是收到了来自腾讯云广告的蛊惑。看样子广告还真是有用啊。用处就是让一直没有下定决心的人迈出临门一脚。腾讯云让我耗费了１块钱，但整这个博客的时间花了我一周了。</p>
+<p>&emsp;&emsp;今天又不知哪根筋不对劲，忽然想起网易博客里面还有我以前的博文。翻出来看看居然有270多条。从2005年一直到2015年都有。（其中一部分是QQ转移过去的。）看样子我写字的习惯还不错。然而2015年之后就没有怎么写过了。想想也挺可惜的。不过回想自己没有坚持写文字，挺遗憾。可能大约是没有时间吧。</p>
+<p>&emsp;&emsp;嗯。也不对。时间从来都是像药膏一样挤挤就会有的。这是借口。文字通常是人用来发牢骚的东西。牢骚多发的猛的就成了巨匠。例如鲁迅。牢骚发的弱的就凑不够字数。我是说每个人都牢骚，有的人发到了文字上，但有些人通过嘴巴，拳头，脑子什么都就发泄完了。大概这些年我的牢骚都从其他地方发了吧。</p>
+<p>&emsp;&emsp;以后还想好好发发。不过还是别叫日记的好。自从看到大伙儿对委员长记日记习惯的调侃后就觉得“日记”变了味啊。</p>
+<p>&emsp;&emsp;另一个目的就是还是继续写文字锻炼脑子吧。锻炼脑子准没有错的。说不定还能防老年痴呆。</p>
+<p>&emsp;&emsp;不过也不要发宏愿，这类东西从来都是麻痹自己，让当时的自己产生多巴胺，且长不大的青少年才玩的玩意。</p>
+<p>&emsp;&emsp;所以就这样吧。爱写写写写。</p>
+]]></content>
+      <categories>
+        <category>日记</category>
+      </categories>
+      <tags>
+        <tag>日记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>网易博客迁移</title>
     <url>/wangyi-blog-transfer.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;今天想到自己在网易上的博客。翻出来一看，乖乖人家网易在2018年就把博客给停了。估计是看我不在上面更新了，伤心欲绝了吧。笑。</p>
@@ -922,27 +943,6 @@
       <tags>
         <tag>博客</tag>
         <tag>网易</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于写日记</title>
-    <url>/about-diary.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;好久都没有写日记的习惯了。今天勉强写一些吧。</p>
-<span id="more"></span>
-
-<p>&emsp;&emsp;上周鬼使神差的建了这个个人网站。其实不是心血来潮，是一直都有建站的想法。只是不知道为啥中途就没有建过。可能这次只是收到了来自腾讯云广告的蛊惑。看样子广告还真是有用啊。用处就是让一直没有下定决心的人迈出临门一脚。腾讯云让我耗费了１块钱，但整这个博客的时间花了我一周了。</p>
-<p>&emsp;&emsp;今天又不知哪根筋不对劲，忽然想起网易博客里面还有我以前的博文。翻出来看看居然有270多条。从2005年一直到2015年都有。（其中一部分是QQ转移过去的。）看样子我写字的习惯还不错。然而2015年之后就没有怎么写过了。想想也挺可惜的。不过回想自己没有坚持写文字，挺遗憾。可能大约是没有时间吧。</p>
-<p>&emsp;&emsp;嗯。也不对。时间从来都是像药膏一样挤挤就会有的。这是借口。文字通常是人用来发牢骚的东西。牢骚多发的猛的就成了巨匠。例如鲁迅。牢骚发的弱的就凑不够字数。我是说每个人都牢骚，有的人发到了文字上，但有些人通过嘴巴，拳头，脑子什么都就发泄完了。大概这些年我的牢骚都从其他地方发了吧。</p>
-<p>&emsp;&emsp;以后还想好好发发。不过还是别叫日记的好。自从看到大伙儿对委员长记日记习惯的调侃后就觉得“日记”变了味啊。</p>
-<p>&emsp;&emsp;另一个目的就是还是继续写文字锻炼脑子吧。锻炼脑子准没有错的。说不定还能防老年痴呆。</p>
-<p>&emsp;&emsp;不过也不要发宏愿，这类东西从来都是麻痹自己，让当时的自己产生多巴胺，且长不大的青少年才玩的玩意。</p>
-<p>&emsp;&emsp;所以就这样吧。爱写写写写。</p>
-]]></content>
-      <categories>
-        <category>日记</category>
-      </categories>
-      <tags>
-        <tag>日记</tag>
       </tags>
   </entry>
   <entry>
@@ -994,20 +994,6 @@
       </tags>
   </entry>
   <entry>
-    <title>不继续搬迁网易博客了</title>
-    <url>/no-more-blog-transfer.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;那个网易博客太多私人的话题和内容就不往这里搬了。自己也不是明星，八卦什么的也不值钱。这里还是用来记好玩的吧。</p>
-<span id="more"></span>
-
-]]></content>
-      <categories>
-        <category>杂</category>
-      </categories>
-      <tags>
-        <tag>杂</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>历史和反演</title>
     <url>/history-and-inversion.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;研一的时候上过一节外系的选修课。现在已经想不起来是什么课了。那为啥我还记得这个课呢？</p>
@@ -1026,6 +1012,20 @@
       <tags>
         <tag>反演</tag>
         <tag>历史</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>不继续搬迁网易博客了</title>
+    <url>/no-more-blog-transfer.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;那个网易博客太多私人的话题和内容就不往这里搬了。自己也不是明星，八卦什么的也不值钱。这里还是用来记好玩的吧。</p>
+<span id="more"></span>
+
+]]></content>
+      <categories>
+        <category>杂</category>
+      </categories>
+      <tags>
+        <tag>杂</tag>
       </tags>
   </entry>
   <entry>
@@ -1143,6 +1143,22 @@
       </tags>
   </entry>
   <entry>
+    <title>如何让Elementary OS取消自动更新检查</title>
+    <url>/stop-os-update.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;我的HP笔记本上的Linux系统安装的是Elementary OS。这是个基于Ubuntu的注重界面美观的系统。是挺漂亮的，但几乎每天那个引用中心都会跳出来，帮我检查更新。</p>
+<span id="more"></span>
+<p><img src="/app.png" alt="应用中心"><br>&emsp;&emsp;这很烦人，尤其是还有出错，不能忍。所以必须让它停止自己更新啊。解决办法是这样。在文件&#x2F;etc&#x2F;apt&#x2F;apt.conf.d&#x2F;10periodic中将第一行的1改为0，成这样：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">APT::Periodic::Update-Package-Lists &quot;0&quot;;</span><br><span class="line">APT::Periodic::Download-Upgradeable-Packages &quot;0&quot;;</span><br><span class="line">APT::Periodic::AutocleanInterval &quot;0&quot;;</span><br></pre></td></tr></table></figure>
+<p>0表示false，自然就不帮您自动更新了。</p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>hexo next首页文章加框</title>
     <url>/how-to-add-frame-in-hexo-next.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;我的博客首页的文章列表一直是连起来的，看起来不爽。因而一直在搜索如何加边框，搜出来的是如何添加文章边框阴影效果。看起来也对。于是就开始照猫画虎。</p>
@@ -1223,22 +1239,6 @@
       </categories>
       <tags>
         <tag>wiki</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>如何让Elementary OS取消自动更新检查</title>
-    <url>/stop-os-update.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;我的HP笔记本上的Linux系统安装的是Elementary OS。这是个基于Ubuntu的注重界面美观的系统。是挺漂亮的，但几乎每天那个引用中心都会跳出来，帮我检查更新。</p>
-<span id="more"></span>
-<p><img src="/app.png" alt="应用中心"><br>&emsp;&emsp;这很烦人，尤其是还有出错，不能忍。所以必须让它停止自己更新啊。解决办法是这样。在文件&#x2F;etc&#x2F;apt&#x2F;apt.conf.d&#x2F;10periodic中将第一行的1改为0，成这样：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">APT::Periodic::Update-Package-Lists &quot;0&quot;;</span><br><span class="line">APT::Periodic::Download-Upgradeable-Packages &quot;0&quot;;</span><br><span class="line">APT::Periodic::AutocleanInterval &quot;0&quot;;</span><br></pre></td></tr></table></figure>
-<p>0表示false，自然就不帮您自动更新了。</p>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -1338,7 +1338,7 @@
   <entry>
     <title>基于宽频带背景噪声面波的美国三维上地幔横波速度结构模型</title>
     <url>/US-upper-mantle-vs-model.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;利用宽频带的背景噪声面波做了美国三维上地幔横波速度结构，该工作做了x年。我不会告诉你这项工作做了多久，说出来都害sao。文章终于在2018年发表，文章链接在<a href="https://link.springer.com/article/10.1007/s00024-018-1881-2">这里</a>，如果有需要可以找我要全文。<br>&emsp;&emsp;做模型真的是需要大量细致的工作。这篇文章的主要贡献是表明只用背景噪声面波也可以做的比较深，比较准，另外就是为community提供了一个新的模型。怎奈自己的地质背景太差，看不到啥突出的科学问题，还被审稿人批评说，‘你做的啥工作啊，像本科生的作业。’心塞。师兄说的对，应该多向可能对你的工作感兴趣的人请教，例如动力学方向的人啊之类的。<br>&emsp;&emsp;老板建议把这个模型挂在<a href="https://ds.iris.edu/ds/products/emc-earthmodels/">IRIS EMC</a>里头，推广推广，让大伙儿都用用。我觉得不错，于是今天终于把它放到了IRIS里面。点击<a href="https://ds.iris.edu/ds/products/emc-us-upper-mantle-vsxiechuyang2018/">这里</a>就可以看到我的模型了。里面有netcdf格式的数据可以下载。如果有需要可以找我要更细致的结果。<br>&emsp;&emsp;IRIS EMC需要的是netcdf格式的模型数据。IRIS有提供把txt文本格式的模型转换成netcdf的<a href="https://github.com/iris-edu/emc-tools">python脚本</a>。另外向IRIS EMC提交模型的要求也可以这他们的<a href="https://ds.iris.edu/ds/products/emc-contributionguide/">网页</a>看到，按照他们的要求把netcdf文件准备好，然后写一个说明文档一并发送给<a href="mailto:&#112;&#114;&#x6f;&#100;&#117;&#x63;&#116;&#x40;&#105;&#114;&#105;&#x73;&#46;&#x77;&#97;&#115;&#104;&#x69;&#x6e;&#x67;&#116;&#x6f;&#110;&#x2e;&#x65;&#x64;&#x75;">&#112;&#114;&#x6f;&#100;&#117;&#x63;&#116;&#x40;&#105;&#114;&#105;&#x73;&#46;&#x77;&#97;&#115;&#104;&#x69;&#x6e;&#x67;&#116;&#x6f;&#110;&#x2e;&#x65;&#x64;&#x75;</a>就完事了。<br>&emsp;&emsp;netcdf是2进制文件。要查看其头段信息的话可以用命令ncdump -h xxx.nc（安装netcdf-bin），要读取其参数信息可以用命令ncks（安装nco）。其实IRIS EMC也提供了将netcdf转换成txt文本的<a href="https://github.com/iris-edu/emc-tools">python脚本</a>，非常方便。<br>&emsp;&emsp;求合作啊。我擅长处理数据，要是您能看到啥地学科学问题那真是求之不得啊。笑cry。</p>]]></content>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;利用宽频带的背景噪声面波做了美国三维上地幔横波速度结构，该工作做了x年。我不会告诉你这项工作做了多久，说出来都害sao。文章终于在2018年发表，文章链接在<a href="https://link.springer.com/article/10.1007/s00024-018-1881-2">这里</a>，如果有需要可以找我要全文。<br>&emsp;&emsp;做模型真的是需要大量细致的工作。这篇文章的主要贡献是表明只用背景噪声面波也可以做的比较深，比较准，另外就是为community提供了一个新的模型。怎奈自己的地质背景太差，看不到啥突出的科学问题，还被审稿人批评说，‘你做的啥工作啊，像本科生的作业。’心塞。师兄说的对，应该多向可能对你的工作感兴趣的人请教，例如动力学方向的人啊之类的。<br>&emsp;&emsp;老板建议把这个模型挂在<a href="https://ds.iris.edu/ds/products/emc-earthmodels/">IRIS EMC</a>里头，推广推广，让大伙儿都用用。我觉得不错，于是今天终于把它放到了IRIS里面。点击<a href="https://ds.iris.edu/ds/products/emc-us-upper-mantle-vsxiechuyang2018/">这里</a>就可以看到我的模型了。里面有netcdf格式的数据可以下载。如果有需要可以找我要更细致的结果。<br>&emsp;&emsp;IRIS EMC需要的是netcdf格式的模型数据。IRIS有提供把txt文本格式的模型转换成netcdf的<a href="https://github.com/iris-edu/emc-tools">python脚本</a>。另外向IRIS EMC提交模型的要求也可以这他们的<a href="https://ds.iris.edu/ds/products/emc-contributionguide/">网页</a>看到，按照他们的要求把netcdf文件准备好，然后写一个说明文档一并发送给<a href="mailto:&#x70;&#x72;&#x6f;&#100;&#117;&#x63;&#116;&#x40;&#x69;&#114;&#x69;&#115;&#x2e;&#x77;&#x61;&#115;&#104;&#105;&#110;&#x67;&#116;&#x6f;&#110;&#x2e;&#x65;&#x64;&#x75;">&#x70;&#x72;&#x6f;&#100;&#117;&#x63;&#116;&#x40;&#x69;&#114;&#x69;&#115;&#x2e;&#x77;&#x61;&#115;&#104;&#105;&#110;&#x67;&#116;&#x6f;&#110;&#x2e;&#x65;&#x64;&#x75;</a>就完事了。<br>&emsp;&emsp;netcdf是2进制文件。要查看其头段信息的话可以用命令ncdump -h xxx.nc（安装netcdf-bin），要读取其参数信息可以用命令ncks（安装nco）。其实IRIS EMC也提供了将netcdf转换成txt文本的<a href="https://github.com/iris-edu/emc-tools">python脚本</a>，非常方便。<br>&emsp;&emsp;求合作啊。我擅长处理数据，要是您能看到啥地学科学问题那真是求之不得啊。笑cry。</p>]]></content>
       <categories>
         <category>work</category>
       </categories>
@@ -1650,7 +1650,7 @@
     <title>密码测试</title>
     <url>/encrypt_test.html</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="密码错了，再输一次试试。" data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="43728c31108686b2367fa21384b5e6a2e796faf2e7eae1043e2bf10da6b80fc3">4630436162ade97ba2718b7d0c4b3b6334fd4ee00636305f1fafcc50b95360ece5859bc192747c6d6d835975fbe028d32029d3a5d7ca8d53202923fc67893f5dc94d72724d863584bc8f4338fe447c0bf6b32cc2035086ad0f8d118b3b37fb21b4dc9364142a5f338d290124b41197816ea10486102e12b457505747c746ff71392fc34a3d1da515cd2245d34d21f1c173be2faeb8e962c64b7e76870c0346b2aecab7d34de608460cfa56a105b15f4602af01b95b10394881d3ab1d9fb3cd8e19acfe36375c19507e2660c2380517ec81a155ac274ec80cd4639c64c896a3308d6984ac04fd7f5bea8bf87c231ebfdc6e809e11c7dcf815e363b61376e8627704dd6ec084ef059b351150ab01d9d31c8fb4a2bc27173af587002ea989ea55245084c31e2825c25720c568d23b26ffb81388b3b609602de3443f9ac945ccdb5e84a14b0dabf0acc4ab37c82af5a428c9190a7e4c73f5d00eba30e0c33f695ef59e1930bbe09cb13dbefc642fd2fe1c71c9f517fab851b39a5793262b90b68f9df52bbf614b93e88f5e37e57104aa4af4bea582fc2b0ed7ce5a5e9d888f5bfe75007b7483ec51a1e37751cc5b964b9f57d6d021b6621227652a3d1681eeb3dc9f3c8f354a36ab1eded8643df3894ccc153f0810e0b28fc8c6beeff956457363c96a3054a61c8246945aebce1efa611549e7d3792df3db34658e68a31044d60dc0a8be6890008e16503a7febc78f3683b4ed39358678098d62ad0f924c0e4a44430eb9f37c88e040105505af6d740fe480ff980b3120cfe51793458d891d0355c04b7f73b43b0e9fb63e96228fd6b659f590becef3fa6463d2a77e6704c11bb191e529c8efd8b5726a44bd09b6a5334f5770957ceb35bad08f8cb9b4fbecb4457b2bff68024f9c32514aa20e6597292ccd90edabe3c61e78cb57b56b67bb5c83bb7f7a5a83401205ba1d6874a677d466d186df20ecd748f8c25e3fc7158d1ac01f5dfd5dbb5241694138be02b144191c3cd7f57141f64b1e7d882f2b635fba1099c3ab7063d925dbfba32898ac0a2f3297acba28f1294de4290c9d96715d4798ea09a4e079997188e2c06005d09be60f32ddb87da98657833342e27f2724e04a57f5632d8770ae10ea81ea1ffdeee8421785e4f3f80d06957e1a11b329d6f8639441c00fefd4d47b58afdf62a84873efd48534bfb1ed52d3a69fc19ab32509be3bb725b7465204624b749bc1ed9c9ed9f29788d353896f0496ca01b310fd0547f6336f45a5be47f632975b204eb8dc542dbb06faed845d4ce4659f122bdd65a3400126790663ed6bc8547bb73139578cbd05b4c952b5018c808ec350fe6638aa7ebb3e9020bcb0855a4008c6ee31879e5ffcbedf69b483446c1f38c0b52abbd544cac9dbe9f580ea6f618bf43d1f2a0a45c0efc2335603095903cc79d892446c3884490db14b5edefb5ef27c8fe1d371b7822ee5137e5a82aaf68eb8b9ae238788123c1a20299cdbbc89ff242caa356d8c340b48c845456e50f3db1c18895b83c32dfe027ea6253ec47cad0179e6274627f5e39dcd76e5d0a7b7bce376fd88e92de94e2a1d8e6b45ed300e645013d60aaff1c7547f8f7e51731af4ff7f730bec858af82c9978610681e8024ca3333ae86ea7dd32077a6e336188a320246b0b60208cc10bda9a9d6ace7d924453cb1c2f57fffd76deed0d8a781419abbcb4039afa3753fc47d5f832a00e6f98c5095577592e7b3e92ed6ac48442502d998abb846844fa618cb9afa20bad2fa5a945518b62b175d3667378b2a20cdbee5f20128081d213304cefa02fc3ca1d0107921f6391d79959ba0e9d53db52ca718122ad8128d820423ec8871a751c31742e04f597a2ce2544d50d3f002dc98ef16c74d0874f3824cbba33d3a3f1cddc61d1e626ae88da69f7f46880844420d60ea6cd6d96cc26286961e8841077fb599641f75c3dbfc8b21a5f3186dc2187b30fbe1c7aded37df7a98e5e2c501520f43913d4187c72561aff4715e76f9419641417ba1a9120c06f81a19544310bf52f37331337bf4ad5ecaa5d42ee76a3980b4090eefba807ba69553877d0cc24ab1aae5ee6bfa2eef35608e5873b79a500838a00fa26893fd6fbe4c006cb25205e83d9e8f42f0ffee05d7433d8f439a2fc9ad2dd17be069b8bb0a825fe7d032280edd55e129f874509e7a575bb4ee968adfd71b7aff64d722d40aa546e62e5175f1964a29658297ac95860b420d7b2be34b792537c2067e20c0cbee5b0fe3b756cabbaf9f7c932d2f5e05a776b40cc7e1eaa7a843804758e237db9221ceb9ce7e4783efecdaa77b72eaca690dfa2ea7c0ab89b748ce2af816ae5dcef08ef4b4b025851435478f23b774f2ba0f2a78426ecab88913dd9e2cbe3bca3aa5f12c627aef4b77b6fe1bb20</script>
+  <script id="hbeData" type="hbeData" data-hmacdigest="4050b2851003883f2572f2c50fb8c7f1ded8cddc745e4323043f882f9f50ef0f">4630436162ade97ba2718b7d0c4b3b6334fd4ee00636305f1fafcc50b95360ece5859bc192747c6d6d835975fbe028d32029d3a5d7ca8d53202923fc67893f5dc94d72724d863584bc8f4338fe447c0bf6b32cc2035086ad0f8d118b3b37fb21b4dc9364142a5f338d290124b41197816ea10486102e12b457505747c746ff71392fc34a3d1da515cd2245d34d21f1c173be2faeb8e962c64b7e76870c0346b2aecab7d34de608460cfa56a105b15f4602af01b95b10394881d3ab1d9fb3cd8e19acfe36375c19507e2660c2380517ec81a155ac274ec80cd4639c64c896a3308d6984ac04fd7f5bea8bf87c231ebfdc6e809e11c7dcf815e363b61376e8627704dd6ec084ef059b351150ab01d9d31c8fb4a2bc27173af587002ea989ea55245084c31e2825c25720c568d23b26ffb81388b3b609602de3443f9ac945ccdb5e84a14b0dabf0acc4ab37c82af5a428c9190a7e4c73f5d00eba30e0c33f695ef59e1930bbe09cb13dbefc642fd2fe1c71c9f517fab851b39a5793262b90b68f9df52bbf614b93e88f5e37e57104aa4af4bea582fc2b0ed7ce5a5e9d888f5bfe75007b7483ec51a1e37751cc5b964b9f57d6d021b6621227652a3d1681eeb3dc9f3c8f354a36ab1eded8643df3894ccc153f0810e0b28fc8c6beeff956457363c96a3054a61c8246945aebce1efa611549e7d3792df3db34658e68a31044d60dc0a8be6890008e16503a7febc78f3683b4ed39358678098d62ad0f924c0e4a44430eb9f37c88e040105505af6d740fe480ff980b3120cfe51793458d891d0355c04b7f73b43b0e9fb63e96228fd6b659f590becef3fa6463d2a77e6704c11bb191e529c8efd8b5726a44bd09b6a5334f5770957ceb35bad08f8cb9b4fbecb4457b2bff68024f9c32514aa20e6597292ccd90edabe3c61e78cb57b56b67bb5c83bb7f7a5a83401205ba1d6874a677d466d186df20ecd748f8c25e3fc7158d1ac01f5dfd5dbb5241694138be02b144191c3cd7f57141f64b1e7d882f2b635fba1099c3ab7063d925dbfba32898ac0a2f3297acba28f1294de4290c9d96715d4798ea09a4e079997188e2c06005d09be60f32ddb87da98657833342e27f2724e04a57f5632d8770ae10ea81ea1ffdeee8421785e4f3f80d06957e1a11b329d6f8639441c00fefd4d47b58afdf62a84873efd48534bfb1ed52d3a69fc19ab32509be3bb725b7465204624b749bc1ed9c9ed9f29788d353896f0496ca01b310fd0547f6336f45a5be47f632975b204eb8dc542dbb06faed845d4ce4659f122bdd65a3400126790663ed6bc8547bb73139578cbd05b4c952b5018c808ec350fe6638aa7ebb3e9020bcb0855a4008c6ee31879e5ffcbedf69b483446c1f38c0b52abbd544cac9dbe9f580ea6f618bf43d1f2a0a45c0efc2335603095903cc79d892446c3884490db14b5edefb5ef27c8fe1d371b7822ee5137e5a82aaf68eb8b9ae238788123c1a20299cdbbc89ff242caa356d8c340b48c845456e50f3db1c18895b83c32dfe027ea6253ec47cad0179e6274627f5e39dcd76e5d0a7b7bce376fd88e92de94e2a1d8e6b45ed300e645013d60aaff1c7547f8f7e51731af4ff7f730bec858af82c9978610681e8024ca3333ae86ea7dd32077a6e336188a320246b0b60208cc10bda9a9d6ace7d924453cb1c2f57fffd76deed0d8a781419abbcb4039afa3753fc47d5f832a00e6f98c5095577592e7b3e92ed6ac48442502d998abb846844fa618cb9afa20bad2fa5a945518b62b175d3667378b2a20cdbee5f20128081d213304cefa02fc3ca1d0107921f6391d79959ba0e9d53db52ca718122ad8128d820423ec8871a751c31742e04f597a2ce2544d50d3f002dc98ef16c74d0874f3824cbba33d3a3f1cddc61d1e626ae88da69f7f46880844420d60ea6cd6d96cc26286961e8841077fb599641f75c3dbfc8b21a5f3186dc2187b30fbe1c7aded37df7a98e5e2c501520f43913d4187c72561aff4715e76f9419641417ba1a9120c06f81a19544310bf52f37331337bf4ad5ecaa5d42ee76a3980b4090eefba807ba69553877d0cc24ab1aae5ee6bfa2eef35608e5873b79a500838a00fa26893fd6fbe4c006cb25205e83d9e8f42f0ffee05d7433d8f439a2fc9ad2dd17be069b8bb0a825fe7d032280edd55e129f874509e7a575bb4ee968adfd71b7aff64d72982d8fbcbe8c15878f4d630d82af8046be909981725d3429bdfb178b995eafd0a1b39969a5708b8c9890dbd94685817131bc5ddcd70d7777b97a89bf7ccdeb5499b29bf57adfbe79842564f10e629b464c7ee657acace43383493b44be732eb8cc4b75af6972c09198bcea8fc8a37fcc68b19280fe40935b18e3c510485f0e67907e8e597433f0986ed7687c8f318cc7bb8ca4c86de255a0b14f26bff22f966d54b3185be62bf0284cb3855ee72fa78e8a8024adc0c66eaf962e950daf1f455882881e2f0b2ad8c6f6f2cc7a77433cbe9f05b51a29feffd804ab7637299c52e226bed2fb86ae2b2a59822eb3881de6fb6d5c32145a81d9839065812f273e8464</script>
   <div class="hbe hbe-content">
     <div class="hbe hbe-input hbe-input-default">
       <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
@@ -1658,8 +1658,6 @@
         <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入秘密查看文章</span>
       </label>
     </div>
-    <!-- 添加确认按钮 -->
-    <button id="hbeConfirmBtn" class="hbe hbe-confirm-btn">Confirm</button>
   </div>
 </div>
 <script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
@@ -1847,6 +1845,19 @@
       </tags>
   </entry>
   <entry>
+    <title>运行LaTeX 遇到 ! LaTeX Error: File `xxx` not found.</title>
+    <url>/no-file-found-in-LaTeX.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>这样就可以了</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo dnf install &#x27;tex(xxx)&#x27;</span><br></pre></td></tr></table></figure>
+<p>然后就会帮你安装缺失的文件。</p>]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>laTeX</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Fedora下浏览器播放视频卡住没有声音</title>
     <url>/no-audio-in-playing-browser-video.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>之前整了nodesk之后就出现了视频播放的问题。用mplayer播放视频时，卡住。用浏览器播放视频的时候卡住，关掉音频之后视频正常播放了。但是没有声音。<br>然后</p>
@@ -1860,19 +1871,6 @@
       </categories>
       <tags>
         <tag>linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>运行LaTeX 遇到 ! LaTeX Error: File `xxx` not found.</title>
-    <url>/no-file-found-in-LaTeX.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>这样就可以了</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo dnf install &#x27;tex(xxx)&#x27;</span><br></pre></td></tr></table></figure>
-<p>然后就会帮你安装缺失的文件。</p>]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>laTeX</tag>
       </tags>
   </entry>
   <entry>
@@ -3613,6 +3611,52 @@
       </tags>
   </entry>
   <entry>
+    <title>文献阅读（十二）</title>
+    <url>/paper-reading-12.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3><p>&emsp;&emsp;由于冰盖质量巨大，会在地球地壳中引起显著的应力。研究表明，在北欧的某些地区，冰川消融过程中的应力释放可以触发大地震。尽管已经在北欧分析了冰川引起的应力，但尚未对格陵兰进行分析。我们知道格陵兰冰盖在早期全新世经历了一个大规模的融化期，我们首次分析了格陵兰在冰川消融期间的冰川诱发应力变化。结合历史海平面指标和冰川诱发断层重新激活模型的综合分析表明，大约10,600年前，格陵兰冰盖的消融可能导致了一次大地震或一系列较小震级地震。地震可能使相对海平面观测值发生了数米的偏移。地震引发的应力释放是在单一事件中产生的，它可能在北大西洋产生了高达7.2米的英国群岛上岸高度和高达7.8米的加拿大沿岸海啸。</p>
+<h3 id="相关研究的重要性"><a href="#相关研究的重要性" class="headerlink" title="相关研究的重要性"></a>相关研究的重要性</h3><ol>
+<li><strong>冰盖融化与地壳应力</strong>：冰盖的融化可以导致地壳应力的释放，进而可能触发地震活动，这对理解地球内部动力学和表面过程具有重要意义。</li>
+<li><strong>海平面变化与地震活动</strong>：相对海平面的变化是研究古气候变化的重要指标，而地震活动与海平面变化之间可能存在联系。</li>
+</ol>
+<h3 id="前人研究及不足"><a href="#前人研究及不足" class="headerlink" title="前人研究及不足"></a>前人研究及不足</h3><ul>
+<li><strong>北欧地区研究</strong>：已有研究分析了北欧地区冰川消融引起的地壳应力和地震活动，例如Arvidsson (1996) 研究了Fennoscandian地区的地震活动与冰川消融的关系。</li>
+<li><strong>格陵兰冰盖研究</strong>：尽管格陵兰冰盖的融化速度在过去几十年有所加快，但目前尚无证据表明这与地震活动的增加有关 (Voss et al., 2007; Olivieri and Spada, 2015)。</li>
+<li><strong>不足</strong>：对格陵兰地区冰川消融引起的应力释放及其可能触发的地震活动的研究相对较少。</li>
+</ul>
+<h3 id="本文使用的数据和方法"><a href="#本文使用的数据和方法" class="headerlink" title="本文使用的数据和方法"></a>本文使用的数据和方法</h3><ul>
+<li><strong>数据</strong>：<ul>
+<li>过去的海平面指标</li>
+<li>格陵兰冰盖模型 (Huy3)</li>
+<li>地球粘滞模型</li>
+<li>海洋负荷模型</li>
+</ul>
+</li>
+<li><strong>方法</strong>：<ul>
+<li>结合历史海平面数据和冰川诱导断层重新激活模型</li>
+<li>使用有限元软件ABAQUS进行三维模型计算</li>
+<li>应用GeoClaw软件模拟海啸动力学</li>
+</ul>
+</li>
+</ul>
+<h3 id="本文结果"><a href="#本文结果" class="headerlink" title="本文结果"></a>本文结果</h3><ul>
+<li><strong>应力模型</strong>：表明南格陵兰是冰川触发断层活动的最可能区域。</li>
+<li><strong>海啸模拟</strong>：如果地震是由单一事件引起的，可能在北大西洋产生了高达数米的海啸。</li>
+</ul>
+<h3 id="本文创新之处和贡献"><a href="#本文创新之处和贡献" class="headerlink" title="本文创新之处和贡献"></a>本文创新之处和贡献</h3><ul>
+<li><strong>首次分析</strong>：首次对格陵兰地区冰川消融期间的冰川诱导应力进行了分析。</li>
+<li><strong>综合方法</strong>：结合了多种方法来评估冰川触发地震的可能性，并模拟了可能产生的海啸。</li>
+</ul>
+<h3 id="本文不足"><a href="#本文不足" class="headerlink" title="本文不足"></a>本文不足</h3><ul>
+<li>文章中并未明确指出研究的局限性，但可能包括模型的简化假设、对冰盖融化历史和地震活动的不确定性，以及缺乏直接的地质证据来支持模型预测。</li>
+</ul>]]></content>
+      <categories>
+        <category>work</category>
+      </categories>
+      <tags>
+        <tag>paper</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>如何读文献</title>
     <url>/how-to-read-paper.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><p>&emsp;&emsp;高效地阅读论文是一项很关键但多半没有人教你的技能。这里讲述了”三遍阅读法”及其在进行文献调查中的使用。</p>
@@ -3663,43 +3707,39 @@
       </tags>
   </entry>
   <entry>
-    <title>文献阅读（十二）</title>
-    <url>/paper-reading-12.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3><p>&emsp;&emsp;由于冰盖质量巨大，会在地球地壳中引起显著的应力。研究表明，在北欧的某些地区，冰川消融过程中的应力释放可以触发大地震。尽管已经在北欧分析了冰川引起的应力，但尚未对格陵兰进行分析。我们知道格陵兰冰盖在早期全新世经历了一个大规模的融化期，我们首次分析了格陵兰在冰川消融期间的冰川诱发应力变化。结合历史海平面指标和冰川诱发断层重新激活模型的综合分析表明，大约10,600年前，格陵兰冰盖的消融可能导致了一次大地震或一系列较小震级地震。地震可能使相对海平面观测值发生了数米的偏移。地震引发的应力释放是在单一事件中产生的，它可能在北大西洋产生了高达7.2米的英国群岛上岸高度和高达7.8米的加拿大沿岸海啸。</p>
-<h3 id="相关研究的重要性"><a href="#相关研究的重要性" class="headerlink" title="相关研究的重要性"></a>相关研究的重要性</h3><ol>
-<li><strong>冰盖融化与地壳应力</strong>：冰盖的融化可以导致地壳应力的释放，进而可能触发地震活动，这对理解地球内部动力学和表面过程具有重要意义。</li>
-<li><strong>海平面变化与地震活动</strong>：相对海平面的变化是研究古气候变化的重要指标，而地震活动与海平面变化之间可能存在联系。</li>
-</ol>
+    <title>文献阅读（十三）</title>
+    <url>/paper-reading-13.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3><p>&emsp;&emsp;适当的非构造性地震信号分类对于检测微地震和提高对持续弱地面运动的理解至关重要。我们利用无监督机器学习来标记连续波形中常见的五种非平稳地震噪声类别。描述数据的时间和频谱特征被聚类以识别可分离的紧急和脉冲波形类型。训练好的聚类模型被用来分类来自密集地震阵列的每1秒连续地震记录，站点间隔为10-30米。研究表明，主导噪声信号可以高度局部化，尺度在数百米。该方法展示了弱地面运动的复杂性，并提高了在低信噪比下分析地震波形的标准。应用这种技术将提高在嘈杂环境中检测真实微小地震事件的能力，其中地震传感器记录了来自非构造性源的类似地震信号。</p>
+<h3 id="相关研究的重要性"><a href="#相关研究的重要性" class="headerlink" title="相关研究的重要性"></a>相关研究的重要性</h3><ul>
+<li><strong>微地震检测</strong>：提高微地震的检测能力有助于更好地理解断层上的故障过程。</li>
+<li><strong>地震信号与噪声的区分</strong>：正确区分地震信号和噪声对于地震监测和预测至关重要。</li>
+</ul>
 <h3 id="前人研究及不足"><a href="#前人研究及不足" class="headerlink" title="前人研究及不足"></a>前人研究及不足</h3><ul>
-<li><strong>北欧地区研究</strong>：已有研究分析了北欧地区冰川消融引起的地壳应力和地震活动，例如Arvidsson (1996) 研究了Fennoscandian地区的地震活动与冰川消融的关系。</li>
-<li><strong>格陵兰冰盖研究</strong>：尽管格陵兰冰盖的融化速度在过去几十年有所加快，但目前尚无证据表明这与地震活动的增加有关 (Voss et al., 2007; Olivieri and Spada, 2015)。</li>
-<li><strong>不足</strong>：对格陵兰地区冰川消融引起的应力释放及其可能触发的地震活动的研究相对较少。</li>
+<li><strong>Aguiar &amp; Beroza, 2014; Hammer et al., 2013; Linville et al., 2019; Mousavi et al., 2016; Perol et al., 2018; Ross, Meier, &amp; Hauksson, 2018; Ross, Meier, Hauksson, &amp; Heaton, 2018; Rouet-Leduc et al., 2019</strong>：这些研究使用有监督的机器学习来识别地震、颤动、山体滑坡、雪崩和矿震等。</li>
+<li><strong>不足</strong>：现有研究多集中在使用有监督学习，需要大量正确标记的数据，对于新出现的或未知的信号类型识别能力有限。</li>
 </ul>
 <h3 id="本文使用的数据和方法"><a href="#本文使用的数据和方法" class="headerlink" title="本文使用的数据和方法"></a>本文使用的数据和方法</h3><ul>
-<li><strong>数据</strong>：<ul>
-<li>过去的海平面指标</li>
-<li>格陵兰冰盖模型 (Huy3)</li>
-<li>地球粘滞模型</li>
-<li>海洋负荷模型</li>
-</ul>
-</li>
+<li><strong>数据</strong>：来自加利福尼亚大学圣地亚哥分校斯克里普斯海洋学研究所的密集地震阵列的连续波形数据。</li>
 <li><strong>方法</strong>：<ul>
-<li>结合历史海平面数据和冰川诱导断层重新激活模型</li>
-<li>使用有限元软件ABAQUS进行三维模型计算</li>
-<li>应用GeoClaw软件模拟海啸动力学</li>
+<li>使用无监督机器学习对数据进行聚类分析。</li>
+<li>利用主成分分析（PCA）对标准化的特征向量进行降维。</li>
+<li>应用k-means聚类算法对特征向量进行分类。</li>
 </ul>
 </li>
 </ul>
 <h3 id="本文结果"><a href="#本文结果" class="headerlink" title="本文结果"></a>本文结果</h3><ul>
-<li><strong>应力模型</strong>：表明南格陵兰是冰川触发断层活动的最可能区域。</li>
-<li><strong>海啸模拟</strong>：如果地震是由单一事件引起的，可能在北大西洋产生了高达数米的海啸。</li>
+<li><strong>识别了五种不同的噪声类别</strong>：具有不同的频谱和时间波形属性。</li>
+<li><strong>噪声信号的空间分布</strong>：在密集阵列中表现出高度的局部化和变化。</li>
 </ul>
 <h3 id="本文创新之处和贡献"><a href="#本文创新之处和贡献" class="headerlink" title="本文创新之处和贡献"></a>本文创新之处和贡献</h3><ul>
-<li><strong>首次分析</strong>：首次对格陵兰地区冰川消融期间的冰川诱导应力进行了分析。</li>
-<li><strong>综合方法</strong>：结合了多种方法来评估冰川触发地震的可能性，并模拟了可能产生的海啸。</li>
+<li><strong>无监督学习的应用</strong>：首次尝试在密集地震阵列中对连续波形的每一秒进行标记和评估。</li>
+<li><strong>聚类模型</strong>：训练的模型能够快速分类大量连续地震波形数据。</li>
 </ul>
 <h3 id="本文不足"><a href="#本文不足" class="headerlink" title="本文不足"></a>本文不足</h3><ul>
-<li>文章中并未明确指出研究的局限性，但可能包括模型的简化假设、对冰盖融化历史和地震活动的不确定性，以及缺乏直接的地质证据来支持模型预测。</li>
+<li>文章中并未明确指出研究的局限性，但可能包括对噪声源的物理特性缺乏直接的实验验证，以及模型在不同地区或不同类型噪声的泛化能力尚未得到验证。</li>
+</ul>
+<h3 id="数据可用性声明"><a href="#数据可用性声明" class="headerlink" title="数据可用性声明"></a>数据可用性声明</h3><ul>
+<li>原始数据通过地震学研究机构的联合研究机构公开获取。训练数据可通过国际数字地震图网络获取。</li>
 </ul>]]></content>
       <categories>
         <category>work</category>
@@ -3782,48 +3822,6 @@
 </ul>
 <h3 id="本文不足"><a href="#本文不足" class="headerlink" title="本文不足"></a>本文不足</h3><ul>
 <li>文章中并未明确指出研究的局限性，但可能包括对冰川动态和CGHC事件复杂性的进一步理解需要更多的实地观测和数据。</li>
-</ul>]]></content>
-      <categories>
-        <category>work</category>
-      </categories>
-      <tags>
-        <tag>paper</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>文献阅读（十三）</title>
-    <url>/paper-reading-13.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3><p>&emsp;&emsp;适当的非构造性地震信号分类对于检测微地震和提高对持续弱地面运动的理解至关重要。我们利用无监督机器学习来标记连续波形中常见的五种非平稳地震噪声类别。描述数据的时间和频谱特征被聚类以识别可分离的紧急和脉冲波形类型。训练好的聚类模型被用来分类来自密集地震阵列的每1秒连续地震记录，站点间隔为10-30米。研究表明，主导噪声信号可以高度局部化，尺度在数百米。该方法展示了弱地面运动的复杂性，并提高了在低信噪比下分析地震波形的标准。应用这种技术将提高在嘈杂环境中检测真实微小地震事件的能力，其中地震传感器记录了来自非构造性源的类似地震信号。</p>
-<h3 id="相关研究的重要性"><a href="#相关研究的重要性" class="headerlink" title="相关研究的重要性"></a>相关研究的重要性</h3><ul>
-<li><strong>微地震检测</strong>：提高微地震的检测能力有助于更好地理解断层上的故障过程。</li>
-<li><strong>地震信号与噪声的区分</strong>：正确区分地震信号和噪声对于地震监测和预测至关重要。</li>
-</ul>
-<h3 id="前人研究及不足"><a href="#前人研究及不足" class="headerlink" title="前人研究及不足"></a>前人研究及不足</h3><ul>
-<li><strong>Aguiar &amp; Beroza, 2014; Hammer et al., 2013; Linville et al., 2019; Mousavi et al., 2016; Perol et al., 2018; Ross, Meier, &amp; Hauksson, 2018; Ross, Meier, Hauksson, &amp; Heaton, 2018; Rouet-Leduc et al., 2019</strong>：这些研究使用有监督的机器学习来识别地震、颤动、山体滑坡、雪崩和矿震等。</li>
-<li><strong>不足</strong>：现有研究多集中在使用有监督学习，需要大量正确标记的数据，对于新出现的或未知的信号类型识别能力有限。</li>
-</ul>
-<h3 id="本文使用的数据和方法"><a href="#本文使用的数据和方法" class="headerlink" title="本文使用的数据和方法"></a>本文使用的数据和方法</h3><ul>
-<li><strong>数据</strong>：来自加利福尼亚大学圣地亚哥分校斯克里普斯海洋学研究所的密集地震阵列的连续波形数据。</li>
-<li><strong>方法</strong>：<ul>
-<li>使用无监督机器学习对数据进行聚类分析。</li>
-<li>利用主成分分析（PCA）对标准化的特征向量进行降维。</li>
-<li>应用k-means聚类算法对特征向量进行分类。</li>
-</ul>
-</li>
-</ul>
-<h3 id="本文结果"><a href="#本文结果" class="headerlink" title="本文结果"></a>本文结果</h3><ul>
-<li><strong>识别了五种不同的噪声类别</strong>：具有不同的频谱和时间波形属性。</li>
-<li><strong>噪声信号的空间分布</strong>：在密集阵列中表现出高度的局部化和变化。</li>
-</ul>
-<h3 id="本文创新之处和贡献"><a href="#本文创新之处和贡献" class="headerlink" title="本文创新之处和贡献"></a>本文创新之处和贡献</h3><ul>
-<li><strong>无监督学习的应用</strong>：首次尝试在密集地震阵列中对连续波形的每一秒进行标记和评估。</li>
-<li><strong>聚类模型</strong>：训练的模型能够快速分类大量连续地震波形数据。</li>
-</ul>
-<h3 id="本文不足"><a href="#本文不足" class="headerlink" title="本文不足"></a>本文不足</h3><ul>
-<li>文章中并未明确指出研究的局限性，但可能包括对噪声源的物理特性缺乏直接的实验验证，以及模型在不同地区或不同类型噪声的泛化能力尚未得到验证。</li>
-</ul>
-<h3 id="数据可用性声明"><a href="#数据可用性声明" class="headerlink" title="数据可用性声明"></a>数据可用性声明</h3><ul>
-<li>原始数据通过地震学研究机构的联合研究机构公开获取。训练数据可通过国际数字地震图网络获取。</li>
 </ul>]]></content>
       <categories>
         <category>work</category>
@@ -5291,6 +5289,35 @@ G --> H[BFS序列提取]</pre>
       </tags>
   </entry>
   <entry>
+    <title>有趣的新闻网站</title>
+    <url>/news-website.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;以下是有趣的新闻网站：</p>
+<ul>
+<li><a href="https://www.allyoucanread.com/">AllYouCanRead</a>是一个综合性资讯导航平台，按地域聚合全球六大洲新闻站点，同时以艺术、商业、科技等超 30 个主题精细分类各类网站资源，杂志专区更细分动物、时尚、育儿等数十个品类，通过清晰的结构化导航，为用户提供一站式全球新闻媒体与实用网站的定向检索服务。</li>
+<li><a href="https://www.apple.com/apple-news">Apple News</a>是苹果公司为iOS和macOS设备打造的官方新闻应用，它不仅整合主流新闻媒体的免费内容，还通过订阅服务 Apple News+ 提供大量杂志和深度报道。该平台以用户界面友好、内容精选优质而著称，尤其适合苹果生态中的用户日常阅读使用。借助苹果的算法推荐和编辑精选，用户可以在一个界面中阅读来自多家出版商的新闻、专题和评论。对于追求高品质阅读体验的用户，Apple News 提供了一种简洁但内容丰富的获取方式。</li>
+<li><a href="https://www.bbc.com/news">BBC News</a>是英国广播公司旗下的新闻平台，长期以客观、权威的报道风格受到全球用户信赖。它提供来自全球各地的实时新闻、深度分析、专题报道以及视频广播内容，尤其擅长以多语种进行国际传播，包括提供中文页面服务。BBC News 无需订阅即可访问，内容涵盖政治、科技、文化、健康等广泛领域，适合希望获取权威信息、提升英文阅读能力或关注全球动态的广大读者。</li>
+<li><a href="https://edition.cnn.com/">CNN</a>作为国际知名新闻平台，以实时追踪全球突发新闻为核心特色，24 小时不间断更新政治、经济、科技、文化及娱乐等领域资讯。其报道兼具速度与深度，既提供俄乌冲突、美国大选等热点事件的现场直击，也通过专家分析、纪录片等形式挖掘新闻背后的背景逻辑。</li>
+<li><a href="https://flipboard.com/">Flipboard</a>是一个以“杂志式排版”为特色的新闻聚合与社交内容平台，用户可以根据自己的兴趣订阅特定主题、媒体或用户发布的内容源，并将喜欢的内容整理成属于自己的“杂志”。它强调视觉体验和内容个性化，非常适合喜欢图文并茂、轻松滑阅的移动端用户。Flipboard 支持离线阅读和多平台同步，并通过滑动式界面增强交互感，使其成为许多用户在通勤、碎片时间中快速获取资讯的理想选择。</li>
+<li><a href="https://news.google.com/">Google News</a>是谷歌推出的一项新闻聚合服务，它通过智能算法从全球各大新闻网站实时抓取内容，为用户推送个性化、主题化的新闻报道。平台聚合同一事件来自不同媒体的视角，帮助读者全面了解事件全貌。其界面简洁、使用免费，同时支持桌面和移动端，是获取国际主流新闻、快速了解时事动态的便捷工具。用户还可以设置感兴趣的主题或地区，实现高度定制化的阅读体验，非常适合需要快速掌握新闻全局的用户。</li>
+<li><a href="https://www.newsnow.co.uk/h/">Newsnow</a>作为一个英国的多元新闻聚合平台，具备诸多显著优势。其新闻内容丰富多元，广泛涵盖英国、世界、商业、娱乐、体育及科技等各个领域，能够满足不同用户的多样化阅读需求。网站的界面设计简洁直观，分类清晰，便于用户快速定位感兴趣的新闻板块。其个性化推荐功能有助于用户发现更多符合个人喜好的内容。</li>
+<li><a href="https://emm.newsbrief.eu/NewsBrief/clusteredition/en/latest.html">NewsBrief</a>核心优势在于以分钟级速度聚合全球60+语言信源，通过AI驱动的动态聚类技术，将碎片化新闻提炼为可视化事件脉络，其独家”EU Focus”模块深度追踪28个欧盟机构政策动向，并支持跨事件对比分析，为政策研究者、商业机构提供学术级舆情洞察。</li>
+<li><a href="https://newspapermap.com/">Newspaper Map</a>通过地图可视化交互，直观聚合全球报纸资源，支持按地理位置一键直达各地新闻源，突破传统新闻检索的国界与语言限制。</li>
+<li><a href="https://www.thepaperboy.com/">Paperboy</a>在算法推荐新闻泛滥的时代，反其道而行，成为”数字报亭式”的古典新闻聚合平台，满足用户对传统报纸阅读体验的怀旧需求，同时解决地方性信息获取痛点。</li>
+<li><a href="http://www.pressreader.com/">PressReader</a>是一个汇集全球报纸和杂志的数字阅读平台，提供来自120多个国家、70多种语言的7000多份出版物原版内容。其最大优势在于内容全面、更新及时，涵盖新闻、财经、科技、时尚等多个领域。平台呈现与实体刊物一致的排版，支持全文搜索、多语种翻译、音频朗读与剪藏分享，提升了阅读的互动性和便捷性。</li>
+<li><a href="https://www.nytimes.com/">The New York Times</a>是全球最具影响力的新闻机构之一，提供高质量的新闻报道、评论、深度专题和调查类文章。作为一个付费订阅平台，它以专业记者团队、深入独家的调查报道和精准的国际视角闻名，尤其在政治、经济、国际关系等领域具有广泛权威性。无论是通过网页还是手机 App，纽约时报为读者提供一种深入理解世界的方式，是重度新闻使用者、研究者和政策关注者的重要信息来源。</li>
+<li><a href="https://wn.com/">World News</a>提供全球新闻资讯，整合大量知名媒体的报道，涵盖政治、经济、社会、文化及自然灾害等丰富多样的新闻内容，更新及时，能够快速反映世界各地的最新动态。该网站界面简洁直观，以图文列表形式展示新闻，每条新闻都明确标注了来源媒体和发布时间，增强了新闻的可信度与透明度。</li>
+<li><a href="https://world.huanqiu.com/">环球网国际新闻</a>以 “全球视野、中国视角” 为核心，兼具时效性、权威性与多元覆盖，既关注国际政治经济格局的宏观变化，也聚焦与中国及华人相关的具体议题，通过结构化板块和图文结合的方式，为读者提供全面、及时的国际资讯。 </li>
+<li><a href="https://news.cctv.com/">央视网</a>作为国家级新媒体旗舰平台，既保持主流媒体的权威性，又通过技术创新实现“新闻+政务+服务”深度融合，是媒体融合发展的标杆案例。其核心优势在于依托总台内容资源库构建的全媒体传播体系，以及在无障碍访问等社会责任领域的先行实践。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>杂</category>
+      </categories>
+      <tags>
+        <tag>Fun</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>$&#92;LaTeX$的数学公式表达</title>
     <url>/latex-math-express.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;以下是$\LaTeX$的数学算符</p>
@@ -5630,35 +5657,6 @@ G --> H[BFS序列提取]</pre>
       </categories>
       <tags>
         <tag>LaTeX</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>有趣的新闻网站</title>
-    <url>/news-website.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;以下是有趣的新闻网站：</p>
-<ul>
-<li><a href="https://www.allyoucanread.com/">AllYouCanRead</a>是一个综合性资讯导航平台，按地域聚合全球六大洲新闻站点，同时以艺术、商业、科技等超 30 个主题精细分类各类网站资源，杂志专区更细分动物、时尚、育儿等数十个品类，通过清晰的结构化导航，为用户提供一站式全球新闻媒体与实用网站的定向检索服务。</li>
-<li><a href="https://www.apple.com/apple-news">Apple News</a>是苹果公司为iOS和macOS设备打造的官方新闻应用，它不仅整合主流新闻媒体的免费内容，还通过订阅服务 Apple News+ 提供大量杂志和深度报道。该平台以用户界面友好、内容精选优质而著称，尤其适合苹果生态中的用户日常阅读使用。借助苹果的算法推荐和编辑精选，用户可以在一个界面中阅读来自多家出版商的新闻、专题和评论。对于追求高品质阅读体验的用户，Apple News 提供了一种简洁但内容丰富的获取方式。</li>
-<li><a href="https://www.bbc.com/news">BBC News</a>是英国广播公司旗下的新闻平台，长期以客观、权威的报道风格受到全球用户信赖。它提供来自全球各地的实时新闻、深度分析、专题报道以及视频广播内容，尤其擅长以多语种进行国际传播，包括提供中文页面服务。BBC News 无需订阅即可访问，内容涵盖政治、科技、文化、健康等广泛领域，适合希望获取权威信息、提升英文阅读能力或关注全球动态的广大读者。</li>
-<li><a href="https://edition.cnn.com/">CNN</a>作为国际知名新闻平台，以实时追踪全球突发新闻为核心特色，24 小时不间断更新政治、经济、科技、文化及娱乐等领域资讯。其报道兼具速度与深度，既提供俄乌冲突、美国大选等热点事件的现场直击，也通过专家分析、纪录片等形式挖掘新闻背后的背景逻辑。</li>
-<li><a href="https://flipboard.com/">Flipboard</a>是一个以“杂志式排版”为特色的新闻聚合与社交内容平台，用户可以根据自己的兴趣订阅特定主题、媒体或用户发布的内容源，并将喜欢的内容整理成属于自己的“杂志”。它强调视觉体验和内容个性化，非常适合喜欢图文并茂、轻松滑阅的移动端用户。Flipboard 支持离线阅读和多平台同步，并通过滑动式界面增强交互感，使其成为许多用户在通勤、碎片时间中快速获取资讯的理想选择。</li>
-<li><a href="https://news.google.com/">Google News</a>是谷歌推出的一项新闻聚合服务，它通过智能算法从全球各大新闻网站实时抓取内容，为用户推送个性化、主题化的新闻报道。平台聚合同一事件来自不同媒体的视角，帮助读者全面了解事件全貌。其界面简洁、使用免费，同时支持桌面和移动端，是获取国际主流新闻、快速了解时事动态的便捷工具。用户还可以设置感兴趣的主题或地区，实现高度定制化的阅读体验，非常适合需要快速掌握新闻全局的用户。</li>
-<li><a href="https://www.newsnow.co.uk/h/">Newsnow</a>作为一个英国的多元新闻聚合平台，具备诸多显著优势。其新闻内容丰富多元，广泛涵盖英国、世界、商业、娱乐、体育及科技等各个领域，能够满足不同用户的多样化阅读需求。网站的界面设计简洁直观，分类清晰，便于用户快速定位感兴趣的新闻板块。其个性化推荐功能有助于用户发现更多符合个人喜好的内容。</li>
-<li><a href="https://emm.newsbrief.eu/NewsBrief/clusteredition/en/latest.html">NewsBrief</a>核心优势在于以分钟级速度聚合全球60+语言信源，通过AI驱动的动态聚类技术，将碎片化新闻提炼为可视化事件脉络，其独家”EU Focus”模块深度追踪28个欧盟机构政策动向，并支持跨事件对比分析，为政策研究者、商业机构提供学术级舆情洞察。</li>
-<li><a href="https://newspapermap.com/">Newspaper Map</a>通过地图可视化交互，直观聚合全球报纸资源，支持按地理位置一键直达各地新闻源，突破传统新闻检索的国界与语言限制。</li>
-<li><a href="https://www.thepaperboy.com/">Paperboy</a>在算法推荐新闻泛滥的时代，反其道而行，成为”数字报亭式”的古典新闻聚合平台，满足用户对传统报纸阅读体验的怀旧需求，同时解决地方性信息获取痛点。</li>
-<li><a href="http://www.pressreader.com/">PressReader</a>是一个汇集全球报纸和杂志的数字阅读平台，提供来自120多个国家、70多种语言的7000多份出版物原版内容。其最大优势在于内容全面、更新及时，涵盖新闻、财经、科技、时尚等多个领域。平台呈现与实体刊物一致的排版，支持全文搜索、多语种翻译、音频朗读与剪藏分享，提升了阅读的互动性和便捷性。</li>
-<li><a href="https://www.nytimes.com/">The New York Times</a>是全球最具影响力的新闻机构之一，提供高质量的新闻报道、评论、深度专题和调查类文章。作为一个付费订阅平台，它以专业记者团队、深入独家的调查报道和精准的国际视角闻名，尤其在政治、经济、国际关系等领域具有广泛权威性。无论是通过网页还是手机 App，纽约时报为读者提供一种深入理解世界的方式，是重度新闻使用者、研究者和政策关注者的重要信息来源。</li>
-<li><a href="https://wn.com/">World News</a>提供全球新闻资讯，整合大量知名媒体的报道，涵盖政治、经济、社会、文化及自然灾害等丰富多样的新闻内容，更新及时，能够快速反映世界各地的最新动态。该网站界面简洁直观，以图文列表形式展示新闻，每条新闻都明确标注了来源媒体和发布时间，增强了新闻的可信度与透明度。</li>
-<li><a href="https://world.huanqiu.com/">环球网国际新闻</a>以 “全球视野、中国视角” 为核心，兼具时效性、权威性与多元覆盖，既关注国际政治经济格局的宏观变化，也聚焦与中国及华人相关的具体议题，通过结构化板块和图文结合的方式，为读者提供全面、及时的国际资讯。 </li>
-<li><a href="https://news.cctv.com/">央视网</a>作为国家级新媒体旗舰平台，既保持主流媒体的权威性，又通过技术创新实现“新闻+政务+服务”深度融合，是媒体融合发展的标杆案例。其核心优势在于依托总台内容资源库构建的全媒体传播体系，以及在无障碍访问等社会责任领域的先行实践。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>杂</category>
-      </categories>
-      <tags>
-        <tag>Fun</tag>
       </tags>
   </entry>
   <entry>
