@@ -605,7 +605,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-10-26 16:10:19" itemprop="dateModified" datetime="2025-10-26T16:10:19+08:00">2025-10-26</time>
+      <time title="修改时间：2025-10-29 10:32:57" itemprop="dateModified" datetime="2025-10-29T10:32:57+08:00">2025-10-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -624,7 +624,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.7k</span>
+      <span>1.8k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -642,14 +642,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;有些时候需要抓取别人图片中的点的信息，应该怎么整？当然是找作者要咯！不过有时可能没办法（例如可能联系不上作者&#x2F;作者找不到数据了&#x2F;作者不想给你&#x2F;作者说你自己提取吧）或则并不需要他图片中的点的准确信息的时候，我们可以自己去点。之前有个perl脚本，但找不到了（这又体现了整理资料和做笔记的必要性），现在python很方便的，调用pynput的Listener就好了。记录鼠标点击的脚本如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">from pynput.mouse import Listener</span><br><span class="line">import logging</span><br><span class="line">from datetime import datetime</span><br><span class="line"></span><br><span class="line"># 配置日志记录</span><br><span class="line">logging.basicConfig(</span><br><span class="line">    filename=&quot;mouse_clicks.log&quot;,</span><br><span class="line">    level=logging.INFO,</span><br><span class="line">    format=&quot;%(asctime)s %(message)s&quot;,</span><br><span class="line">    datefmt=&quot;%Y-%m-%dT%H:%M:%S&quot;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">def on_click(x, y, button, pressed):</span><br><span class="line">    if pressed:</span><br><span class="line">        message = f&quot;&#123;x&#125; &#123;y&#125;&quot;</span><br><span class="line">        print(message)  # 输出到屏幕</span><br><span class="line">        logging.info(message)  # 写入日志文件</span><br><span class="line">        if button == button.right:</span><br><span class="line">            # 停止监听器</span><br><span class="line">            return False</span><br><span class="line"></span><br><span class="line"># 启动鼠标监听器</span><br><span class="line">with Listener(on_click=on_click) as listener:</span><br><span class="line">    try:</span><br><span class="line">        listener.join()</span><br><span class="line">    except KeyboardInterrupt:</span><br><span class="line">        print(&quot;监听器已被用户中断。&quot;)</span><br></pre></td></tr></table></figure>
-<p>&emsp;&emsp;这个脚本会记录鼠标左键的位置，输出到mouse_clicks.log文件中。mouse_clicks.log文件有三列:</p>
-<p>2025-05-07T17:01:33 1977 1576</p>
-<p>分别表示点击的时间，x和y坐标。其中y坐标是下面大上面小。此外点击鼠标右键或者输入Ctrl+C就可以结束记录。我一般是怎么做的呢？我先点击图片左下角得到（x0,y0），点击右下角得到(x1,y0)，点击左上角得到(x0,y1)，然后点击你想要的点。得到mouse_clicks.log以后就可以这么画图（gmt）。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">dat=mouse_clicks.log</span><br><span class="line">#获得x0,y0,x1,y1，他们是参考点</span><br><span class="line">x0=`awk &#x27;NR==1&#123;print $2&#125;&#x27; $&#123;dat&#125;`</span><br><span class="line">y0=`awk &#x27;NR==1&#123;print $3&#125;&#x27; $&#123;dat&#125;`</span><br><span class="line">x1=`awk &#x27;NR==2&#123;print $2&#125;&#x27; $&#123;dat&#125;`</span><br><span class="line">y1=`awk &#x27;NR==3&#123;print $3&#125;&#x27; $&#123;dat&#125;`</span><br><span class="line">#获得横纵轴长度（屏幕尺度）</span><br><span class="line">xs=`echo &quot;$x1-$x0&quot; |bc` </span><br><span class="line">ys=`echo &quot;$y0-$y1&quot; |bc`</span><br><span class="line"></span><br><span class="line">awk -v x0=$x0 -v y0=$y0 -v xs=$xs -v ys=$ys &#x27;NR&gt;3&#123;print ($2-x0)/xs*2000-1000,(y0-$3)/ys*1500&#125;&#x27; $&#123;dat&#125; | gmt psxy -R -J -O -K -W3p,black &gt;&gt;$ps</span><br><span class="line">#这里（2000，1500）是横纵轴实际尺度，-1000表示实际位置调整。</span><br></pre></td></tr></table></figure>
-<p>&emsp;&emsp;注意，这种方法仅仅适用于线性笛卡尔坐标，其他的各种投影都不行。<br>&emsp;&emsp;以后得加上这句：脚本&#x2F;程序不保证正确性，自求多幅(no warranty&#x2F;use at your own risk)。</p>
-
+          <p>&emsp;&emsp;有些时候需要抓取别人图片中的点的信息，应该怎么整？</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/mouse-click-monitoring#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
