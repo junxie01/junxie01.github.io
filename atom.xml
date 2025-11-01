@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2025-11-01T06:05:17.687Z</updated>
+  <updated>2025-11-01T08:10:59.108Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -21,10 +21,10 @@
     <link href="http://www.seis-jun.xyz/focal-mechanism-inversion"/>
     <id>http://www.seis-jun.xyz/focal-mechanism-inversion</id>
     <published>2025-11-01T01:53:23.000Z</published>
-    <updated>2025-11-01T06:05:17.687Z</updated>
+    <updated>2025-11-01T08:10:59.108Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;要想反演震源机制解怎么办？&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;想反演震源机制解怎么办？&lt;/p&gt;</summary>
     
     
     
@@ -40,7 +40,7 @@
     <link href="http://www.seis-jun.xyz/noise-source-back-azimuth"/>
     <id>http://www.seis-jun.xyz/noise-source-back-azimuth</id>
     <published>2025-10-24T02:24:39.000Z</published>
-    <updated>2025-11-01T06:05:20.272Z</updated>
+    <updated>2025-11-01T08:11:00.637Z</updated>
     
     
     <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;单台三分量背景噪声数据如何分析极化与信号源背方位角？  &lt;/p&gt;</summary>
