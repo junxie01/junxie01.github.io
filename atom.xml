@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2025-11-01T12:24:55.424Z</updated>
+  <updated>2025-11-02T09:34:53.630Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>地震学相关程序</title>
+    <link href="http://www.seis-jun.xyz/seismology-software"/>
+    <id>http://www.seis-jun.xyz/seismology-software</id>
+    <published>2025-11-01T12:35:26.000Z</published>
+    <updated>2025-11-02T09:34:53.630Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;哪里去找地震学相关的程序？&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
+    
+    
+    <category term="seismology" scheme="http://www.seis-jun.xyz/tags/seismology/"/>
+    
+  </entry>
+  
+  <entry>
     <title>震源机制解反演</title>
     <link href="http://www.seis-jun.xyz/focal-mechanism-inversion"/>
     <id>http://www.seis-jun.xyz/focal-mechanism-inversion</id>
     <published>2025-11-01T01:53:23.000Z</published>
-    <updated>2025-11-01T12:24:55.424Z</updated>
+    <updated>2025-11-02T05:47:49.753Z</updated>
     
     
     <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;想反演震源机制解怎么办？&lt;/p&gt;</summary>
@@ -374,25 +393,6 @@
     <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;安装了seisman的&lt;a href=&quot;https://github.com/seisman/HinetPy&quot;&gt;HinetPy&lt;/a&gt;，运行脚本数据下载脚本的时候就遇到这个问题：&lt;/p&gt;
 &lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;from HinetPy import Client, win32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  File &amp;quot;/home/junxie/work/Snet/HinetPy-main/HinetPy/__init__.py&amp;quot;, line 23, in &amp;lt;module&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    from .client import Client&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  File &amp;quot;/home/junxie/work/Snet/HinetPy-main/HinetPy/client.py&amp;quot;, line 22, in &amp;lt;module&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    from urllib3.util import create_urllib3_context&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ImportError: cannot import name &amp;#x27;create_urllib3_context&amp;#x27; from &amp;#x27;urllib3.util&amp;#x27; (/home/junxie/.conda/envs/py3/lib/python3.9/site-packages/urllib3/util/__init__.py)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;怎么整？&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
-    
-    
-    <category term="python" scheme="http://www.seis-jun.xyz/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>统计数据下载情况</title>
-    <link href="http://www.seis-jun.xyz/statistic-data-download"/>
-    <id>http://www.seis-jun.xyz/statistic-data-download</id>
-    <published>2025-06-07T11:48:45.000Z</published>
-    <updated>2025-10-29T02:27:39.194Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;数据下载好后怎么统计数据连续性？&lt;/p&gt;</summary>
     
     
     
