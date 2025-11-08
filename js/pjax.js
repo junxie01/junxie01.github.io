@@ -12,7 +12,7 @@ const pjax = new Pjax({
     '.pjax'
   ],
   switches: {
-    '.post-toc-wrap'(oldWrap, newWrap) {
+    '.post-toc-wrap': function(oldWrap, newWrap) {
       if (newWrap.querySelector('.post-toc')) {
         Pjax.switches.outerHTML.call(this, oldWrap, newWrap);
       } else {
@@ -49,5 +49,3 @@ document.addEventListener('pjax:success', () => {
     NexT.utils.updateSidebarPosition();
   }
 });
-
-if (!window.pjax) window.pjax = pjax;
