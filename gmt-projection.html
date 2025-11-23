@@ -34,8 +34,10 @@
 <meta property="og:image" content="http://www.seis-jun.xyz/gmt-projection/cyl1.png">
 <meta property="og:image" content="http://www.seis-jun.xyz/gmt-projection/cyl2.png">
 <meta property="og:image" content="http://www.seis-jun.xyz/gmt-projection/azi1.png">
+<meta property="og:image" content="http://www.seis-jun.xyz/gmt-projection/orth.png">
+<meta property="og:image" content="http://www.seis-jun.xyz/gmt-projection/per.png">
 <meta property="article:published_time" content="2025-11-23T07:24:13.000Z">
-<meta property="article:modified_time" content="2025-11-23T08:29:30.692Z">
+<meta property="article:modified_time" content="2025-11-23T08:45:39.003Z">
 <meta property="article:author" content="Jun Xie">
 <meta property="article:tag" content="gmt">
 <meta name="twitter:card" content="summary">
@@ -288,7 +290,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2025-11-23 15:24:13 / 修改时间：16:29:30" itemprop="dateCreated datePublished" datetime="2025-11-23T15:24:13+08:00">2025-11-23</time>
+      <time title="创建时间：2025-11-23 15:24:13 / 修改时间：16:45:39" itemprop="dateCreated datePublished" datetime="2025-11-23T15:24:13+08:00">2025-11-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -314,7 +316,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>781</span>
+      <span>1.4k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -331,7 +333,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>&emsp;&emsp;其实参见<a target="_blank" rel="noopener external nofollow noreferrer" href="https://docs.generic-mapping-tools.org/6.0/cookbook/map_projections.html">GMT文档</a>就可以了。不过，一般我们画图不需要每个参数都知道吧。下面就列出几个典型的投影方式和例子，免得以后到处找。</p>
+    <div class="post-body" itemprop="articleBody"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;其实参见<a target="_blank" rel="noopener external nofollow noreferrer" href="https://docs.generic-mapping-tools.org/6.0/cookbook/map_projections.html">GMT文档</a>就可以了。不过，一般我们画图不需要每个参数都知道吧。下面就列出几个典型的投影方式和例子，免得以后到处找。</p>
 <ul>
 <li><p>蒙卡托投影<br>首先是Mercator投影，最开始学的时候就是用这个。GMT主页说它可能是最著名的。它是等角圆柱形投影。</p>
 <img src="/gmt-projection/mercater.png" class="" title="蒙卡托投影">
@@ -349,13 +351,29 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">gmt begin cyl1 png</span><br><span class="line">gmt coast -R-180/180/-90/90 -JY0/0/6i -Ggray -Swhite -Dl -Bxa90 -Bya45 -A30000 -W0p </span><br><span class="line">gmt end</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>圆柱等距投影<br>也是扁扁的地球</p>
-<img src="/gmt-projection/cyl2.png" class="">
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">gmt begin cyl2 png</span><br><span class="line">gmt coast -R-180/180/-90/90 -JQ6i -Ggray -Swhite -Dl -Bxa90 -Bya45 -A30000 -W0p </span><br><span class="line">gmt end</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>方位等距投影<br>一般以某个点为中心的画法，例如接收函数台站和事件分布。</p>
-<img src="/gmt-projection/azi1.png" class="">
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">gmt begin azi1 png</span><br><span class="line">gmt coast -Rg -JE0/0/6i -Ggray -Swhite -Dl -Bxa90 -Bya45 -A30000 -W0p </span><br><span class="line">gmt end</span><br></pre></td></tr></table></figure></li>
+<img src="/gmt-projection/cyl2.png" class=""></li>
 </ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">gmt begin cyl2 png</span><br><span class="line">gmt coast -R-180/180/-90/90 -JQ6i -Ggray -Swhite -Dl -Bxa90 -Bya45 -A30000 -W0p </span><br><span class="line">gmt end</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>方位等距投影<br>一般以某个点为中心的画法，例如接收函数台站和事件分布。<img src="/gmt-projection/azi1.png" class=""></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">gmt begin azi1 png</span><br><span class="line">gmt coast -Rg -JE0/0/6i -Ggray -Swhite -Dl -Bxa90 -Bya45 -A30000 -W0p </span><br><span class="line">gmt end</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>正投影<br>从无限远处看地球。可以简单理解为外星人视角。</li>
+</ul>
+<img src="/gmt-projection/orth.png" class="">
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">gmt begin orth png</span><br><span class="line">gmt coast -R-180/180/-90/90 -JG0/0/6i -Ggray -Swhite -Dl -Bxa90 -Bya45 -A30000 -W0p </span><br><span class="line">gmt end</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>透视投影<br>gmt文档说是飞行器视角，我愿意称之为上帝视角，你想怎么看怎么看。</p>
+<p>-JG0&#x2F;0&#x2F;6000&#x2F;90&#x2F;0&#x2F;0&#x2F;60&#x2F;60&#x2F;5i </p>
+<p>投影中心的经度和纬度（0ºE&#x2F;0ºN）。<br>观测者海拔高度（以公里为单位，6000 公里）。如果该值小于 10，则假定为观测者到地心的距离（以地球半径为单位）。如果附加“r”，则表示观测者到地心的距离（以公里为单位）。<br>方位角以度为单位（90 度为正东）。相当于往东飞。<br>倾斜角度（0度）。这是相对于天顶的视角，0度表示垂直向下看，60度倾斜角表示从地平线以上30度角看。<br>旋转角度（0度）。这是图像的视轴旋转（顺时针方向）。180度旋转模拟倒飞的情况。<br>视场的宽度和高度以度为单位（60）。这个数字取决于你是用肉眼观察（在这种情况下，你的视野大约为 60º 宽），还是用双筒望远镜等工具观察。</p>
+</li>
+</ul>
+<img src="/gmt-projection/per.png" class="">
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">gmt begin per png</span><br><span class="line">gmt coast -R-180/180/-90/90 -JG0/0/6000/90/0/0/60/60/5i -Ggray -Swhite -Dl -Bxa90 -Bya45 -A30000 -W0p </span><br><span class="line">gmt end</span><br></pre></td></tr></table></figure>
     </div>
 
     
