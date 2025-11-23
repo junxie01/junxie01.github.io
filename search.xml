@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>寂寞</title>
-    <url>/%E5%AF%82%E5%AF%9E.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;一只小鼠死了,我很伤心.当听知他的死时,我差点落泪,但是泪水只在眼里转了一转,并没有流下来.我不懂我是怎么了?难到我的良心已在这浊世当中损失殆尽？还是我堕落了？</p>
-]]></content>
-      <categories>
-        <category>某日记</category>
-      </categories>
-      <tags>
-        <tag>这是啥</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>阿甘</title>
     <url>/%E9%98%BF%E7%94%98.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;记得第一次看阿甘正传时，我流泪了！</p>
@@ -31,6 +19,18 @@
       </categories>
       <tags>
         <tag>阿甘</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>寂寞</title>
+    <url>/%E5%AF%82%E5%AF%9E.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;一只小鼠死了,我很伤心.当听知他的死时,我差点落泪,但是泪水只在眼里转了一转,并没有流下来.我不懂我是怎么了?难到我的良心已在这浊世当中损失殆尽？还是我堕落了？</p>
+]]></content>
+      <categories>
+        <category>某日记</category>
+      </categories>
+      <tags>
+        <tag>这是啥</tag>
       </tags>
   </entry>
   <entry>
@@ -106,24 +106,6 @@
       </tags>
   </entry>
   <entry>
-    <title>星期五</title>
-    <url>/%E6%98%9F%E6%9C%9F%E4%BA%94.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;好久没有坐过电梯了，今天，腿实在疼的不行了，所以还是坐电梯了。</p>
-<p>&emsp;&emsp;地毯上写着星期五。</p>
-<p>&emsp;&emsp;看到星期五就想到了：鲁宾逊漂流记，黑色星期五，今晚有电影，今晚12点才熄灯，今晚算是周末的开始了，今晚会玩游戏，会玩到很晚，今天是十五，月亮很圆，今天是小姑的生日。</p>
-<p>&emsp;&emsp;不过最重要的是：快要毕业了。</p>
-<p>&emsp;&emsp;可是似乎我还有好多大学应该做的事没有做：谈恋爱，在网吧包夜打游戏，找份兼职做，打打架……</p>
-<p>&emsp;&emsp;前天健身了，很累，晚上感冒了，现在全身都没有力，感觉好没有动力和意义。忽然又想起刚才和老妈打电话。我提到了跳楼的家伙，老妈火了，说道，傻帽，人生这么美好，跳楼？是不是那根筋搭错了？</p>
-<p>&emsp;&emsp;对啊，接着玩，玩到有力气为止</p>
-]]></content>
-      <categories>
-        <category>某日记</category>
-      </categories>
-      <tags>
-        <tag>杂</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>The City of Life and Death</title>
     <url>/the-city-of-life-and-death.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;13日看的《南京！南京》，不知道为什么把南京的名字叫两遍，可能是因为历史的厚重，提到南京就令人想起令人悲痛的往事，1937年12月13日，南京沦陷。</p>
@@ -143,6 +125,24 @@
       </categories>
       <tags>
         <tag>电影</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>星期五</title>
+    <url>/%E6%98%9F%E6%9C%9F%E4%BA%94.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;好久没有坐过电梯了，今天，腿实在疼的不行了，所以还是坐电梯了。</p>
+<p>&emsp;&emsp;地毯上写着星期五。</p>
+<p>&emsp;&emsp;看到星期五就想到了：鲁宾逊漂流记，黑色星期五，今晚有电影，今晚12点才熄灯，今晚算是周末的开始了，今晚会玩游戏，会玩到很晚，今天是十五，月亮很圆，今天是小姑的生日。</p>
+<p>&emsp;&emsp;不过最重要的是：快要毕业了。</p>
+<p>&emsp;&emsp;可是似乎我还有好多大学应该做的事没有做：谈恋爱，在网吧包夜打游戏，找份兼职做，打打架……</p>
+<p>&emsp;&emsp;前天健身了，很累，晚上感冒了，现在全身都没有力，感觉好没有动力和意义。忽然又想起刚才和老妈打电话。我提到了跳楼的家伙，老妈火了，说道，傻帽，人生这么美好，跳楼？是不是那根筋搭错了？</p>
+<p>&emsp;&emsp;对啊，接着玩，玩到有力气为止</p>
+]]></content>
+      <categories>
+        <category>某日记</category>
+      </categories>
+      <tags>
+        <tag>杂</tag>
       </tags>
   </entry>
   <entry>
@@ -275,25 +275,16 @@
       </categories>
   </entry>
   <entry>
-    <title>旧年</title>
-    <url>/%E6%97%A7%E5%B9%B4.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;我本应该在09年年末做一个年终总结的，但是因为各种原因，以及自己的犹豫不绝和薄弱的意志才拖到现在。</p>
-<p>&emsp;&emsp;我想我的09年就可以用我没有写总结的原因来说明：各种外部的因素限制以及自己内心的脆弱。</p>
-<p>&emsp;&emsp;在这里回故一下09年的事迹，怕到某年某月想回想这段往事却找脑中找不到，记不得。</p>
-<p>&emsp;&emsp;09年二月，家那边下过了场雪，那只有不到一天的短暂寿命的雪，我说，瑞雪兆丰年。</p>
-<p>&emsp;&emsp;09年不知在那个地方看到了我的运程，说我会遇到一个能够给我带来好运的人，还说下半年我会有桃花运。</p>
-<p>&emsp;&emsp;09年4，5月，我们在抓紧着时间准备着本科时期的最后一个作业，毕业论文。事实上大部分时间还是在玩。</p>
-<p>&emsp;&emsp;09年6月，我毕业了。和相处几年的同窗说再见。我没有喝多，但是我却让我自己以为自己喝多了。我流泪了，但是没有哭。穿上了学士服，和同学留下了最后的本科记忆。我以为未来是美好的。</p>
-<p>&emsp;&emsp;09年7，8月，在家度过的最漫长的暑假，我不知道接下来迎接我的是什么。</p>
-<p>&emsp;&emsp;09年9月，我成了一个研究僧。对于学习一样是那么懒惰，对于工作仍然没有动力。</p>
-<p>&emsp;&emsp;09年10月，拿到了还能算是工资的第一笔钱。但是却没能用来买有意思的东西。因为我的电脑在同一时间瘫痪。</p>
-<p>&emsp;&emsp;09年11月，我递交了第一封情书。虽然我早知道结果，但是心里却依然很痛。</p>
-<p>&emsp;&emsp;09年12月，我和小白打赌，如果每玩一次游戏就给他十块钱。结果是他挑唆我玩，我给了十块，完了一天。</p>
-<p>&emsp;&emsp;09年最令人难忘的是，我们毕业了。各自都有自己美好的出路，前程。我们开心的喝酒、谈笑、照毕业照。噢，对了，分发毕业照的时候我似乎发错了，谁多领了的赶紧还我，因为我还没有。</p>
-<p>&emsp;&emsp;09年值得开心的事是，那个对我09年运程的估计是对的。因为在下班年真的认识了好多女生，不过我一个都没有抓住。当然那不是重点，重点是，我认识了好多朋友。几个舍友哥们幽默、知识渊博、平易近人。一大帮容易相处的师兄总能在关键时候有莫大的帮助。还有就是和我一起打发时间的七上八下。能带给我好运的人，应该就是我的导师，七上八下，师兄，室友。</p>
-<p>&emsp;&emsp;09年最伤心的事是，我好像一点成就都没有。这是08年的失误，09年的失败啊！</p>
-<p>&emsp;&emsp;10年不能再像09年那样没有计划了。09年没有计划的我就像是无头苍蝇在到处乱撞，也像是漂泊在太平洋的小舟遇上了阴雨天气，没有指南针，没有方向，没有动力，没有出路。</p>
-<p>&emsp;&emsp;再见，2009！</p>
+    <title>Dloc</title>
+    <url>/Dloc.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;我似乎又dloc了。我不是故意的。大概是因为上周末晚饭过后出去转了一转，还有昨晚也吹了吹冷风的缘故。</p>
+<p>&emsp;&emsp;Dloc对于我是司空见惯的了。我几乎没有什么大的病痛，除了初三摔断手壁，高三给自己狗咬到。dloc这种事情不到一个月就会有。或许是因为抵抗力差了些吧！老妈说我小时候三天两头就住院了，能挺过来还挺不容易。</p>
+<p>&emsp;&emsp;从小到大我记得的dloc症状大概就只有两种发展类型。一种就是狂流鼻涕，另一种是先喉咙痛，然后狂流鼻涕。</p>
+<p>&emsp;&emsp;几乎每次快到考试的时候就会dloc。我有时会怀疑是考试综合症。老妈说头发长了就会“变狗”。变狗的意思就是dloc，生病。我甚至想过用科学的方法来合理头发长了与dloc的关系。比如头发长了，免疫系统更新较慢等等。因为正如老妈讲的，每次我的头发长的时候都会dloc，但是我却找不到他们之间的关系。 </p>
+<p>&emsp;&emsp;记得最清楚的一次感冒考试是高一考数学。因为经受了初中老师的关于考试时间的观念，不管有没有把试卷做完都应该坐到考试结束。那天dloc正进入严重时期，爆发期。考试到一半的时候，我准备的纸巾已经被我的鼻涕吸完了。好吧，这的确比较恶心，随后当然就没有办法咯。我用一只手写着卷子，另一手拧着鼻子。那次的考试似乎有点简单，大家纷纷都提前离场了。大概提早了半个多小时，考场里面几乎就只有我和另外一个同学了。我仍然坚持着。坚持着把时间坐够。最后，监考老师说，你们还交不交的啊，不交我走了。要知道那个时候离考试结束还有十多分钟呢！我们只好把试卷交了。结束我拧鼻子的痛苦。</p>
+<p>&emsp;&emsp;食堂的苦瓜从来都没有炒熟过，苦的难以下咽。自从尝了第一次以后我便没有吃过第二次。如果食堂师傅做的苦瓜能有老妈做的那么好就太棒了。有一次dloc居然影响到了我的味觉，吃东西都没有味道。于是我就打了平时不敢吃的苦瓜。</p>
+<p>&emsp;&emsp;其实dloc对于现在的我一点影响都没有，除了可以成为我不去实验室的借口。</p>
+<p>&emsp;&emsp;也许dloc还能一点一点得侵蚀人的大脑，让人变得更傻。</p>
 ]]></content>
       <categories>
         <category>日记</category>
@@ -320,16 +311,46 @@
       </categories>
   </entry>
   <entry>
-    <title>Dloc</title>
-    <url>/Dloc.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;我似乎又dloc了。我不是故意的。大概是因为上周末晚饭过后出去转了一转，还有昨晚也吹了吹冷风的缘故。</p>
-<p>&emsp;&emsp;Dloc对于我是司空见惯的了。我几乎没有什么大的病痛，除了初三摔断手壁，高三给自己狗咬到。dloc这种事情不到一个月就会有。或许是因为抵抗力差了些吧！老妈说我小时候三天两头就住院了，能挺过来还挺不容易。</p>
-<p>&emsp;&emsp;从小到大我记得的dloc症状大概就只有两种发展类型。一种就是狂流鼻涕，另一种是先喉咙痛，然后狂流鼻涕。</p>
-<p>&emsp;&emsp;几乎每次快到考试的时候就会dloc。我有时会怀疑是考试综合症。老妈说头发长了就会“变狗”。变狗的意思就是dloc，生病。我甚至想过用科学的方法来合理头发长了与dloc的关系。比如头发长了，免疫系统更新较慢等等。因为正如老妈讲的，每次我的头发长的时候都会dloc，但是我却找不到他们之间的关系。 </p>
-<p>&emsp;&emsp;记得最清楚的一次感冒考试是高一考数学。因为经受了初中老师的关于考试时间的观念，不管有没有把试卷做完都应该坐到考试结束。那天dloc正进入严重时期，爆发期。考试到一半的时候，我准备的纸巾已经被我的鼻涕吸完了。好吧，这的确比较恶心，随后当然就没有办法咯。我用一只手写着卷子，另一手拧着鼻子。那次的考试似乎有点简单，大家纷纷都提前离场了。大概提早了半个多小时，考场里面几乎就只有我和另外一个同学了。我仍然坚持着。坚持着把时间坐够。最后，监考老师说，你们还交不交的啊，不交我走了。要知道那个时候离考试结束还有十多分钟呢！我们只好把试卷交了。结束我拧鼻子的痛苦。</p>
-<p>&emsp;&emsp;食堂的苦瓜从来都没有炒熟过，苦的难以下咽。自从尝了第一次以后我便没有吃过第二次。如果食堂师傅做的苦瓜能有老妈做的那么好就太棒了。有一次dloc居然影响到了我的味觉，吃东西都没有味道。于是我就打了平时不敢吃的苦瓜。</p>
-<p>&emsp;&emsp;其实dloc对于现在的我一点影响都没有，除了可以成为我不去实验室的借口。</p>
-<p>&emsp;&emsp;也许dloc还能一点一点得侵蚀人的大脑，让人变得更傻。</p>
+    <title>饭后感2</title>
+    <url>/%E9%A5%AD%E5%90%8E%E6%84%9F2.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;吃过晚饭，忽然想起有通电话未打，于是下楼拨通了号码，有事忙，待会儿打来。于是决定出去转转。</p>
+<p>&emsp;&emsp;不知不觉到了街边的小公园。其实冬天寒冷的夜晚没有几个露天的好地方可以用于人们晚上饭后游览。</p>
+<p>&emsp;&emsp;我也不知道这算不算个公园，公园的意思大概就是公开的用于大家游览的地方。公园中间有一个人工小湖，其他的花草树木小设施都是围绕着这个湖簇拥着。湖中心象征似的修了个小岛，岛上除了和岸边相同的树木的装饰，还有一个比较显眼的小屋子。见到了事实真相就缺少了几分想象，那个屋子是几只黑天鹅的黑色小屋子。白天也没见里面住过天鹅，大概里面的居住条件不好吧，估计晚上也不会把它们关在里面，因为据说一只黑天鹅价值6000块。各处少不了照的四处通明，小偷无处可藏的霓虹灯，使得这公园才有晚上这许多人的光顾。</p>
+<p>&emsp;&emsp;最显眼的要数西边的一个转动的水车，据我们多次观察，一致断定，水车不是电动的。它的半径有大概7至8米宽，时刻不停地被水流带动着转动，水车上装有装水的竹筒，只可惜没有一个引水的小沟，竹筒里的水随着水车的转动来到半空，然后被无情的抛弃，直落下来，像被抛弃的婴儿，有的溅到他母亲的身上像是手脚有力气抓住母亲衣角，有的直接落在了母亲脚下随着水流而下，发出几声哄哄的哀鸣。对了，这像泉水一样泄入小湖里带动水车转动的水是哪里来的？三岁小孩也能思索的出，是用水泵时刻不停来回抽取的。因为站在离泉眼附近还能感觉到水泵的震动，仿佛是汶川地震的余震。东边也如此炮制，只是少了个水车，只剩下拙略的剩有人类加工过的瀑布，发出嚯嚯嚯的噪音，似乎纪律缺管的刚成立的地下组织在召开激烈的讨论会。</p>
+<p>&emsp;&emsp;绕这个椭圆形的小湖快步一圈大概要花二十分钟左右，因为刚刚有一个白运动衫胖大阿姨快步从我身边经过，如今过了将近二十分钟，白色胖大身影又从我眼前掠过，若不是我眼花或者看到了鬼，又或者那个阿姨在那个凳子上面歇息过，我的估计就应该是比较准确的。她第三次经过我的身边时我真好正对着她，看了个仔细，人家哪是阿姨啊，反正女士的年龄总跟她们的心思一样是个谜。我沿着湖走了一圈，花了三十多分钟，然后发现，的确走不动了，结论是，这双鞋确实买的小了，伤脚。于是找了湖男岸木质小路上的一个金属冷条凳坐下。身上带有刚刚步行时附着在身上的余温，还可以抵御的了这条凳的寒，这如白天一样的黑夜的冷。</p>
+<p>&emsp;&emsp;今天是农历十三，我抬头望了望天，月面的一边少了一圈，像被馋嘴偷吃的小孩沿着边掉了，月亮光洁的挂不住任何云彩做成的面纱，像接掉红头巾的新娘，但是她却独守空房，因为今天的天空没有一丝云彩，新郎大概被亲朋好友拉去灌酒了。仔细瞧才发现不远处有一个星，若不是有点儿高中的天文知识谁也不会想到那个便是著名的太白金星，因为它的光亮全被皎洁的月夺去了，但是它却依然不依不舍的守在月的身旁，看样子对月一片真心。</p>
+<p>&emsp;&emsp;远处天边升起了一个孔明灯，大概是孔明灯，在天空中往西斜飘了一阵便熄灭了，大概放孔明灯的人的愿望实现不了了，好失望伤心啊！过了一会儿另一个孔明灯又升起来了，这次也是向西，似乎在追寻前一个似的，它追了好远好远，但是心上人已经不在了。黑暗一点点的吞没了孤单的它，然后天幕就只是黑暗的天下。</p>
+<p>&emsp;&emsp;公园北边是一些居民楼，还有一栋灯火通明的教学楼，那是我初中时上课的地方。窗口正对着我，日光灯根根可数，灯光下大概又是困顿发倦的自习生。对岸霓虹灯的灯光照在湖面反射进双眼，水面承载着大量的面波震动信息，波光粼粼照的人有些眩晕。几个晚上锻炼身体的小孩子不时的从我眼前跑过，喘着粗气。我想告诉他们晚饭过后不适宜跑，逛逛就行了。顺着他们跑过去的方向看去，一个穿着单薄迷彩服蓬乱头发的小伙子从路上走到湖边的大石头上坐了下来，一动不动的看着湖面，像是有心事。又或者他本来就是一个疯子。也许他看着我傻傻的坐在这儿也以为是一个疯子呢！过了一会儿他向我这边走过来，靠近我时从岸边地上捡起一块鹅卵石，我以为他听到我心里说他是疯子要赶过来报复呢，我的脚因为寒冷而哆嗦着，要跑的话估计也来不及了。谁知他把鹅卵石向湖中一仍，然后傻兮兮的冲我笑了一笑，然后跑掉了。</p>
+<p>&emsp;&emsp;突然水面扰动起来，水纹显示从湖心小岛方向有东西向我这边游过来，像电影中鳄鱼游动留下的激起的水面。不过这里哪来鳄鱼啊，我为自己的想法而发笑，好奇心驱使我起来去看个究竟。一看，发现是一只在水面游动的老鼠，正思索着它游过来的目的，它看到了我，吓得来了个大潜水，等再起来时已经到岸了，然后迅速找了自己的老洞躲了起来。我靠近岸边，想看看它是否因为心急紧张而跑错了路。过了一会儿又一只老鼠从湖心游过来，这次这只小一些，游得慢一些，像刚学会游泳。我故意跺了一脚，像上一只一样的，它也潜进了水里，不过它起来的时候还在原地，远没有上一只灵敏矫捷。我不忍心再吓它，万一要是这只是上一只的媳妇儿，我吓了她，待会儿她的老公来找我报仇就麻烦了。终于她费了九牛二虎之力游到了岸边。</p>
+<p>&emsp;&emsp;电话响起了，我酝酿了好多话要讲，可是讲话可不比写文章啊，说起来什么都忘了。</p>
+]]></content>
+      <categories>
+        <category>某日记</category>
+      </categories>
+      <tags>
+        <tag>饭后感</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>旧年</title>
+    <url>/%E6%97%A7%E5%B9%B4.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;我本应该在09年年末做一个年终总结的，但是因为各种原因，以及自己的犹豫不绝和薄弱的意志才拖到现在。</p>
+<p>&emsp;&emsp;我想我的09年就可以用我没有写总结的原因来说明：各种外部的因素限制以及自己内心的脆弱。</p>
+<p>&emsp;&emsp;在这里回故一下09年的事迹，怕到某年某月想回想这段往事却找脑中找不到，记不得。</p>
+<p>&emsp;&emsp;09年二月，家那边下过了场雪，那只有不到一天的短暂寿命的雪，我说，瑞雪兆丰年。</p>
+<p>&emsp;&emsp;09年不知在那个地方看到了我的运程，说我会遇到一个能够给我带来好运的人，还说下半年我会有桃花运。</p>
+<p>&emsp;&emsp;09年4，5月，我们在抓紧着时间准备着本科时期的最后一个作业，毕业论文。事实上大部分时间还是在玩。</p>
+<p>&emsp;&emsp;09年6月，我毕业了。和相处几年的同窗说再见。我没有喝多，但是我却让我自己以为自己喝多了。我流泪了，但是没有哭。穿上了学士服，和同学留下了最后的本科记忆。我以为未来是美好的。</p>
+<p>&emsp;&emsp;09年7，8月，在家度过的最漫长的暑假，我不知道接下来迎接我的是什么。</p>
+<p>&emsp;&emsp;09年9月，我成了一个研究僧。对于学习一样是那么懒惰，对于工作仍然没有动力。</p>
+<p>&emsp;&emsp;09年10月，拿到了还能算是工资的第一笔钱。但是却没能用来买有意思的东西。因为我的电脑在同一时间瘫痪。</p>
+<p>&emsp;&emsp;09年11月，我递交了第一封情书。虽然我早知道结果，但是心里却依然很痛。</p>
+<p>&emsp;&emsp;09年12月，我和小白打赌，如果每玩一次游戏就给他十块钱。结果是他挑唆我玩，我给了十块，完了一天。</p>
+<p>&emsp;&emsp;09年最令人难忘的是，我们毕业了。各自都有自己美好的出路，前程。我们开心的喝酒、谈笑、照毕业照。噢，对了，分发毕业照的时候我似乎发错了，谁多领了的赶紧还我，因为我还没有。</p>
+<p>&emsp;&emsp;09年值得开心的事是，那个对我09年运程的估计是对的。因为在下班年真的认识了好多女生，不过我一个都没有抓住。当然那不是重点，重点是，我认识了好多朋友。几个舍友哥们幽默、知识渊博、平易近人。一大帮容易相处的师兄总能在关键时候有莫大的帮助。还有就是和我一起打发时间的七上八下。能带给我好运的人，应该就是我的导师，七上八下，师兄，室友。</p>
+<p>&emsp;&emsp;09年最伤心的事是，我好像一点成就都没有。这是08年的失误，09年的失败啊！</p>
+<p>&emsp;&emsp;10年不能再像09年那样没有计划了。09年没有计划的我就像是无头苍蝇在到处乱撞，也像是漂泊在太平洋的小舟遇上了阴雨天气，没有指南针，没有方向，没有动力，没有出路。</p>
+<p>&emsp;&emsp;再见，2009！</p>
 ]]></content>
       <categories>
         <category>日记</category>
@@ -354,27 +375,6 @@
       <categories>
         <category>日记</category>
       </categories>
-  </entry>
-  <entry>
-    <title>饭后感2</title>
-    <url>/%E9%A5%AD%E5%90%8E%E6%84%9F2.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;吃过晚饭，忽然想起有通电话未打，于是下楼拨通了号码，有事忙，待会儿打来。于是决定出去转转。</p>
-<p>&emsp;&emsp;不知不觉到了街边的小公园。其实冬天寒冷的夜晚没有几个露天的好地方可以用于人们晚上饭后游览。</p>
-<p>&emsp;&emsp;我也不知道这算不算个公园，公园的意思大概就是公开的用于大家游览的地方。公园中间有一个人工小湖，其他的花草树木小设施都是围绕着这个湖簇拥着。湖中心象征似的修了个小岛，岛上除了和岸边相同的树木的装饰，还有一个比较显眼的小屋子。见到了事实真相就缺少了几分想象，那个屋子是几只黑天鹅的黑色小屋子。白天也没见里面住过天鹅，大概里面的居住条件不好吧，估计晚上也不会把它们关在里面，因为据说一只黑天鹅价值6000块。各处少不了照的四处通明，小偷无处可藏的霓虹灯，使得这公园才有晚上这许多人的光顾。</p>
-<p>&emsp;&emsp;最显眼的要数西边的一个转动的水车，据我们多次观察，一致断定，水车不是电动的。它的半径有大概7至8米宽，时刻不停地被水流带动着转动，水车上装有装水的竹筒，只可惜没有一个引水的小沟，竹筒里的水随着水车的转动来到半空，然后被无情的抛弃，直落下来，像被抛弃的婴儿，有的溅到他母亲的身上像是手脚有力气抓住母亲衣角，有的直接落在了母亲脚下随着水流而下，发出几声哄哄的哀鸣。对了，这像泉水一样泄入小湖里带动水车转动的水是哪里来的？三岁小孩也能思索的出，是用水泵时刻不停来回抽取的。因为站在离泉眼附近还能感觉到水泵的震动，仿佛是汶川地震的余震。东边也如此炮制，只是少了个水车，只剩下拙略的剩有人类加工过的瀑布，发出嚯嚯嚯的噪音，似乎纪律缺管的刚成立的地下组织在召开激烈的讨论会。</p>
-<p>&emsp;&emsp;绕这个椭圆形的小湖快步一圈大概要花二十分钟左右，因为刚刚有一个白运动衫胖大阿姨快步从我身边经过，如今过了将近二十分钟，白色胖大身影又从我眼前掠过，若不是我眼花或者看到了鬼，又或者那个阿姨在那个凳子上面歇息过，我的估计就应该是比较准确的。她第三次经过我的身边时我真好正对着她，看了个仔细，人家哪是阿姨啊，反正女士的年龄总跟她们的心思一样是个谜。我沿着湖走了一圈，花了三十多分钟，然后发现，的确走不动了，结论是，这双鞋确实买的小了，伤脚。于是找了湖男岸木质小路上的一个金属冷条凳坐下。身上带有刚刚步行时附着在身上的余温，还可以抵御的了这条凳的寒，这如白天一样的黑夜的冷。</p>
-<p>&emsp;&emsp;今天是农历十三，我抬头望了望天，月面的一边少了一圈，像被馋嘴偷吃的小孩沿着边掉了，月亮光洁的挂不住任何云彩做成的面纱，像接掉红头巾的新娘，但是她却独守空房，因为今天的天空没有一丝云彩，新郎大概被亲朋好友拉去灌酒了。仔细瞧才发现不远处有一个星，若不是有点儿高中的天文知识谁也不会想到那个便是著名的太白金星，因为它的光亮全被皎洁的月夺去了，但是它却依然不依不舍的守在月的身旁，看样子对月一片真心。</p>
-<p>&emsp;&emsp;远处天边升起了一个孔明灯，大概是孔明灯，在天空中往西斜飘了一阵便熄灭了，大概放孔明灯的人的愿望实现不了了，好失望伤心啊！过了一会儿另一个孔明灯又升起来了，这次也是向西，似乎在追寻前一个似的，它追了好远好远，但是心上人已经不在了。黑暗一点点的吞没了孤单的它，然后天幕就只是黑暗的天下。</p>
-<p>&emsp;&emsp;公园北边是一些居民楼，还有一栋灯火通明的教学楼，那是我初中时上课的地方。窗口正对着我，日光灯根根可数，灯光下大概又是困顿发倦的自习生。对岸霓虹灯的灯光照在湖面反射进双眼，水面承载着大量的面波震动信息，波光粼粼照的人有些眩晕。几个晚上锻炼身体的小孩子不时的从我眼前跑过，喘着粗气。我想告诉他们晚饭过后不适宜跑，逛逛就行了。顺着他们跑过去的方向看去，一个穿着单薄迷彩服蓬乱头发的小伙子从路上走到湖边的大石头上坐了下来，一动不动的看着湖面，像是有心事。又或者他本来就是一个疯子。也许他看着我傻傻的坐在这儿也以为是一个疯子呢！过了一会儿他向我这边走过来，靠近我时从岸边地上捡起一块鹅卵石，我以为他听到我心里说他是疯子要赶过来报复呢，我的脚因为寒冷而哆嗦着，要跑的话估计也来不及了。谁知他把鹅卵石向湖中一仍，然后傻兮兮的冲我笑了一笑，然后跑掉了。</p>
-<p>&emsp;&emsp;突然水面扰动起来，水纹显示从湖心小岛方向有东西向我这边游过来，像电影中鳄鱼游动留下的激起的水面。不过这里哪来鳄鱼啊，我为自己的想法而发笑，好奇心驱使我起来去看个究竟。一看，发现是一只在水面游动的老鼠，正思索着它游过来的目的，它看到了我，吓得来了个大潜水，等再起来时已经到岸了，然后迅速找了自己的老洞躲了起来。我靠近岸边，想看看它是否因为心急紧张而跑错了路。过了一会儿又一只老鼠从湖心游过来，这次这只小一些，游得慢一些，像刚学会游泳。我故意跺了一脚，像上一只一样的，它也潜进了水里，不过它起来的时候还在原地，远没有上一只灵敏矫捷。我不忍心再吓它，万一要是这只是上一只的媳妇儿，我吓了她，待会儿她的老公来找我报仇就麻烦了。终于她费了九牛二虎之力游到了岸边。</p>
-<p>&emsp;&emsp;电话响起了，我酝酿了好多话要讲，可是讲话可不比写文章啊，说起来什么都忘了。</p>
-]]></content>
-      <categories>
-        <category>某日记</category>
-      </categories>
-      <tags>
-        <tag>饭后感</tag>
-      </tags>
   </entry>
   <entry>
     <title>流水三</title>
@@ -466,6 +466,24 @@
       </tags>
   </entry>
   <entry>
+    <title>成都印象</title>
+    <url>/%E6%88%90%E9%83%BD%E5%8D%B0%E8%B1%A1.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;我想说说我对成都的印象。因为我毕竟也是一个成都人。我是在这儿出生长大学习的,经历的不多,耳濡目染的却不少。有句话叫做少不如蜀,老不出川。意思就是讲成都很好,年少时呆在成都,人就不会奋斗单图享乐了,而老了以后就在这里养老吧,还出去干什么呢?当然成都也不是所有的都好完了哈。</p>
+<p>&emsp;&emsp;先说说成都的自然环境。成都处在四川盆地里,盆地里的天总是十分阴沉的,一年中难得见到几次艳阳的天。不怪古有蜀犬吠日的说法。常年在成都呆着或许对阴沉的天并没有什么感觉,只是自然而然的认为,天就是这样的。在其他地方呆过,见过真正的算是明亮的蔚蓝的天,以及没有丝毫云彩阻挡的阳光,如果这时候来成都见到如此阴沉的天气的话是让人的心里有说不出的抑郁的。所以我是劝一些性格内向,敏感,心情容易受外界影响的人不要来成都居住的哈。因为这里的被阴云笼罩的阴沉沉的天,足以让人抑郁到想要自杀的。开玩笑的哈,如果有成都人做你的朋友,你就不会那么郁闷了哈。成都的水算是比丰富的,所以空气中的水汽很重,而且是盆地缘故,水汽也不容易散去。所以这里很潮湿,也许不像江边城市如重庆长沙和海边城市如海南那么湿。瓜子花生如果不密封放在空气中,只一天就潮了。鞋子如果晚上没有放进屋里,第二天也像是刚洗过不久的。冬天洗的衣服晾在外面不管多久,都没有真正干的感觉。被子如果不时常拿出去晒晒是很快会发霉的。冬天气温并不算低,通常在零度以上,但是因为湿冷的关系,人会感觉冷的刺骨。所以很多人生冻疮,患风湿。成都的地是很肥沃的,不像北大仓的黑土那么肥,但也相当肥了。所以物产十分丰富,种类也十分繁多。所以就有天府之国的美称了。</p>
+<p>&emsp;&emsp;再说说成都的人哈。非常抱歉我不能像林语堂的《吾国吾民》里讲中国人一样的罗列出成都人的所有特点。因为我对成都人的了解不及林语堂对中国人研究的十分之一。我也不太懂得成都的自然环境对成都人性格影响的微妙关系。成都处在一个盆地里,物产丰富,自给自足,也许因为这样所以造就的是安逸自得,及时行乐,容易满足,自我感觉良好,容易相处亲近,拿得起放得下,没有太多大志的成都人。成都人特别爱打牌。他们不管男女老少都会在茶余饭后,在街头巷尾,在农忙间隙,围成一桌开始打牌。几乎在任何场合,任何地方都可以听到打牌的声音,看到打牌人的身影。打牌不为输赢,只为耗磨时间,也许也体现出成都人的素质比较低吧,找不到其他更有意思的娱乐方式。不过打牌又有什么不好,既娱乐又加强了大家的感情交流。成都人对打牌到底有多热爱?记得那天到车站坐公交,上车时离发车时间还有大约15分钟。只见此车的司机和售票员正和另一车的司机在司机座位旁边兴高采烈的打斗地主,旁边还有两个其他车的司机或售票员观战。直到公交车调度人员过来催促,他们才收起家什,可口中还叫喊着:瞧我的一手好牌啊……成都的人爱喝茶。也许现在喝茶已经成了老年人的专利了。因为我看到的只是茶铺里头满满的全是老头儿。拿我外公来说,不管刮风下雨,早上起来用完早饭后的唯一一件事就是去茶铺喝茶,闲聊,直到午饭时间。从他铿锵的步伐到现在蹒跚的行走,一直都没有变过。(除了有农忙或者重要的事情。)成都人自我感觉良好。在亲人的聊天中,时常听到的就是:放眼全国望去,就我们成都最好,水好,土好,人好,吃的好,会享乐。成都的男人都是耙耳朵。他们具有女性的一些气质,包容,能忍耐,不好斗。在家里总是听妻子的话。难怪国学大师文怀沙开玩笑的说,如果他是一个女子,他一定嫁给成都小伙子。成都的女子都是温柔体贴的。不仅人长的漂亮,皮肤好,而且说话也是柔柔的。结了婚以后会把老公麻得很干（就是母老虎的意思）,但对老公却是一心一意。一个结了婚的师兄老是强调说,一定要娶四川的女子做老婆。这样的女孩子你可千万别去惹怒她们,否则你可遭罪了,呵呵。成都人容易满足,比如我。他们做事也会很努力,但是不强求,会顺其自然。他们有了一些成果就容易坐享其成。等到坐吃山空才又开始努力。所以,成都人有很多积蓄的很少吧,呵呵。成都的电视会放街头巷尾拍到的美女，电视台的主持人会带着你到各处去吃好吃的，名字叫吃八方。</p>
+<p>&emsp;&emsp;我所了解的就这么多了。也许因为我是成都人,对家乡有特别的情感的缘故,以及我的经历有限,所以我的理解多有偏颇哈。对了,成都人也是很好客的哈,希望朋友常到这里坐坐。</p>
+]]></content>
+      <categories>
+        <category>乱笔</category>
+      </categories>
+      <tags>
+        <tag>成都</tag>
+        <tag>打牌</tag>
+        <tag>盆地</tag>
+        <tag>茶铺</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>愿逝者安息</title>
     <url>/%E6%84%BF%E9%80%9D%E8%80%85%E5%AE%89%E6%81%AF.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;刚刚得知高中好友母亲去世的消息，内心有太多东西哽咽着。我不懂得如何安慰人，以至于好友母亲病重中都没有给于他足够的关怀和支持。做人做到这个份上算是老差劲的了。</p>
@@ -484,24 +502,6 @@
         <tag>逝者</tag>
         <tag>安息</tag>
         <tag>好友</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>成都印象</title>
-    <url>/%E6%88%90%E9%83%BD%E5%8D%B0%E8%B1%A1.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;我想说说我对成都的印象。因为我毕竟也是一个成都人。我是在这儿出生长大学习的,经历的不多,耳濡目染的却不少。有句话叫做少不如蜀,老不出川。意思就是讲成都很好,年少时呆在成都,人就不会奋斗单图享乐了,而老了以后就在这里养老吧,还出去干什么呢?当然成都也不是所有的都好完了哈。</p>
-<p>&emsp;&emsp;先说说成都的自然环境。成都处在四川盆地里,盆地里的天总是十分阴沉的,一年中难得见到几次艳阳的天。不怪古有蜀犬吠日的说法。常年在成都呆着或许对阴沉的天并没有什么感觉,只是自然而然的认为,天就是这样的。在其他地方呆过,见过真正的算是明亮的蔚蓝的天,以及没有丝毫云彩阻挡的阳光,如果这时候来成都见到如此阴沉的天气的话是让人的心里有说不出的抑郁的。所以我是劝一些性格内向,敏感,心情容易受外界影响的人不要来成都居住的哈。因为这里的被阴云笼罩的阴沉沉的天,足以让人抑郁到想要自杀的。开玩笑的哈,如果有成都人做你的朋友,你就不会那么郁闷了哈。成都的水算是比丰富的,所以空气中的水汽很重,而且是盆地缘故,水汽也不容易散去。所以这里很潮湿,也许不像江边城市如重庆长沙和海边城市如海南那么湿。瓜子花生如果不密封放在空气中,只一天就潮了。鞋子如果晚上没有放进屋里,第二天也像是刚洗过不久的。冬天洗的衣服晾在外面不管多久,都没有真正干的感觉。被子如果不时常拿出去晒晒是很快会发霉的。冬天气温并不算低,通常在零度以上,但是因为湿冷的关系,人会感觉冷的刺骨。所以很多人生冻疮,患风湿。成都的地是很肥沃的,不像北大仓的黑土那么肥,但也相当肥了。所以物产十分丰富,种类也十分繁多。所以就有天府之国的美称了。</p>
-<p>&emsp;&emsp;再说说成都的人哈。非常抱歉我不能像林语堂的《吾国吾民》里讲中国人一样的罗列出成都人的所有特点。因为我对成都人的了解不及林语堂对中国人研究的十分之一。我也不太懂得成都的自然环境对成都人性格影响的微妙关系。成都处在一个盆地里,物产丰富,自给自足,也许因为这样所以造就的是安逸自得,及时行乐,容易满足,自我感觉良好,容易相处亲近,拿得起放得下,没有太多大志的成都人。成都人特别爱打牌。他们不管男女老少都会在茶余饭后,在街头巷尾,在农忙间隙,围成一桌开始打牌。几乎在任何场合,任何地方都可以听到打牌的声音,看到打牌人的身影。打牌不为输赢,只为耗磨时间,也许也体现出成都人的素质比较低吧,找不到其他更有意思的娱乐方式。不过打牌又有什么不好,既娱乐又加强了大家的感情交流。成都人对打牌到底有多热爱?记得那天到车站坐公交,上车时离发车时间还有大约15分钟。只见此车的司机和售票员正和另一车的司机在司机座位旁边兴高采烈的打斗地主,旁边还有两个其他车的司机或售票员观战。直到公交车调度人员过来催促,他们才收起家什,可口中还叫喊着:瞧我的一手好牌啊……成都的人爱喝茶。也许现在喝茶已经成了老年人的专利了。因为我看到的只是茶铺里头满满的全是老头儿。拿我外公来说,不管刮风下雨,早上起来用完早饭后的唯一一件事就是去茶铺喝茶,闲聊,直到午饭时间。从他铿锵的步伐到现在蹒跚的行走,一直都没有变过。(除了有农忙或者重要的事情。)成都人自我感觉良好。在亲人的聊天中,时常听到的就是:放眼全国望去,就我们成都最好,水好,土好,人好,吃的好,会享乐。成都的男人都是耙耳朵。他们具有女性的一些气质,包容,能忍耐,不好斗。在家里总是听妻子的话。难怪国学大师文怀沙开玩笑的说,如果他是一个女子,他一定嫁给成都小伙子。成都的女子都是温柔体贴的。不仅人长的漂亮,皮肤好,而且说话也是柔柔的。结了婚以后会把老公麻得很干（就是母老虎的意思）,但对老公却是一心一意。一个结了婚的师兄老是强调说,一定要娶四川的女子做老婆。这样的女孩子你可千万别去惹怒她们,否则你可遭罪了,呵呵。成都人容易满足,比如我。他们做事也会很努力,但是不强求,会顺其自然。他们有了一些成果就容易坐享其成。等到坐吃山空才又开始努力。所以,成都人有很多积蓄的很少吧,呵呵。成都的电视会放街头巷尾拍到的美女，电视台的主持人会带着你到各处去吃好吃的，名字叫吃八方。</p>
-<p>&emsp;&emsp;我所了解的就这么多了。也许因为我是成都人,对家乡有特别的情感的缘故,以及我的经历有限,所以我的理解多有偏颇哈。对了,成都人也是很好客的哈,希望朋友常到这里坐坐。</p>
-]]></content>
-      <categories>
-        <category>乱笔</category>
-      </categories>
-      <tags>
-        <tag>成都</tag>
-        <tag>打牌</tag>
-        <tag>盆地</tag>
-        <tag>茶铺</tag>
       </tags>
   </entry>
   <entry>
@@ -531,75 +531,6 @@
       </tags>
   </entry>
   <entry>
-    <title>读后感</title>
-    <url>/%E8%AF%BB%E5%90%8E%E6%84%9F.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;夏看了L写的新的日志了。真的很开心。并且夏还惊奇的发现，喜欢L的另一个原因是她看事情的独特的观点。当夏了解到L的对于好多问题的看法以后，觉得世上的事都是可笑的呀。</p>
-<p>&emsp;&emsp;对了，夏还要无力的辩驳一下，他说他并没有把感情等等的事情放到公式里面来计算，他现在的脑子里面的公式少之又少。不，也许L是对的，夏活在公式里面。但我想他的心还是想摆脱这些公式堆砌的框架的。但夏至少是活在一层壳里面的，他自己也不知道这层壳是什么时候覆在自己的表面（不是污垢哦，洗过澡的哈。）的。</p>
-<p>&emsp;&emsp;夏很听话的。他肯定会活的好好的。特别是有L这样的好朋友在心灵上给予的支持和帮助。所以，夏会很尊重L的决定的，会与她保持安全的距离。虽然夏很明白，女生都是比较犹豫不安的，特别是当男生在死缠烂打的情况下。但夏一点儿也不懂，不会死缠烂打的招数。夏就是一个“好人”，nice guy！（有一次英语作文，夏把guy写成了gay，笑死人了，呵呵。）不过他正在试着变成坏人。嗯！</p>
-<p>&emsp;&emsp;夏活的很肤浅，很糊涂。但是很自在。至于北京那个女孩儿，大约也只是简单做朋友了吧，呵呵。</p>
-<p>&emsp;&emsp;夏已经开始渐渐相信L说生活是不需要爱情这种调味剂也可以继续的那句话了。他只需要L以及他的朋友过的好就很开心了。嘿嘿^_^</p>
-]]></content>
-      <categories>
-        <category>日记</category>
-      </categories>
-      <tags>
-        <tag>读后感</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>花卷</title>
-    <url>/%E8%8A%B1%E5%8D%B7.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;晚饭时，实验室只剩师妹了。她的一卡通忽然找不找，约莫买东西时落在了黑超。我说没事，要是找不着，我请吧。时间是17：40。快到东苑的时候，师妹说先去找她的卡。我建议和她一起去，以免找不到卡没法吃饭。但是一个东西突然钻进了我的脑袋，那就是：花卷。</p>
-<span id="more"></span>
-
-<p>&emsp;&emsp;师妹我得要先去买花卷，要不然待会儿就卖完了……但是你没卡吃饭……我对师妹说。她说，好的，没事，你先去吧，我带了钱。我想可能师妹并不知道有什么花卷是非买不可的。昨天和师弟一起吃晚饭，问到我为什么要去二楼，我说我要买花卷，当作早餐。师弟说，他不喜欢带回去，第二天吃冷的东西就不好了。他问，师兄你为什么不每天早点起床到食堂买早点吃呢？我笑了，然后什么都没有说……</p>
-<p>&emsp;&emsp;娘子在年后胆结石发作，剧痛使她彻夜不能安寝，还间杂腹泻和呕吐。第二天奄奄一息的娘子被我们带到了传说中的做保胆取石的最好的医院去做手术。被一颗小小的黄绿色恶魔精灵折磨的生不如死的娘子心理和身理都脆弱的像块悬挂的冰块。从娘子被推进手术室到接下来的15个小时，我的心也是一直悬着的。当然，手术并没有做那么久，只有3个多小时。只是这三个小时都不见人，只能希望什么事都不会发生。只在那时才体会到电视剧中主角眼睁睁自己的亲人被送进手术室，然后自己在走廊里除了焦急等待以外什么都不能做的如热锅上的蚂蚁心理。只不过走廊里的热锅蚂蚁不是一只，是好多只。从手术室出来有12个小时娘子都必须要忍痛和困保持清醒，以免做过手术的部位粘连。然后我就一个劲儿的在娘子耳边唠叨不停，估计娘子耳朵也成茧几次，然后又被共振掉几次了。实在抱歉啊。</p>
-<p>&emsp;&emsp;虽说只是个小手术，却签了好多的恐怖的协议，自愿承担各种风险；况且是第一次被推进手术室，还被人动了刀子开了肚子。不过总算是顺利的进行了手术，取出了结石。娘子也认为那个小小的东西就是一个妖怪。几天以后娘子出院了，不过瘦了好几圈，比之前少了20多斤。</p>
-<p>&emsp;&emsp;从此，娘子再也不能大鱼大肉，连饭菜里面多一丝辣椒末也会让肚子难受，胆处生疼。馋坏了本来见好吃就吃的从不忌口的我家娘子，害的她只能每天吃清淡异常的饭菜，然后逛美食博客以慰馋心，苦了一个为麻辣美食而生的胃。另外，患了胆结石是需要少食多餐的，早餐尤其重要。</p>
-<p>&emsp;&emsp;我们试过早餐吃馒头还有汤圆。馒头总是没味，干瘪，难以下咽。汤圆就更不行，试过一次，娘子吃后就犯疼。对比了好多，我们还是决定吃花卷吧。因为花卷还是挺香挺有味的，比起馒头来。对了，可能你要问：为什么不吃面条？大概也许你没有吃过除盐以外什么都不放的面条吧。然而，早上起来买的街上的花卷不但个子小，而且就像得了白化病一样，吃着好不安心。所以决定每天晚饭时从食堂带几个回去，第二天早上热了吃。</p>
-<p>&emsp;&emsp;得了这胆的毛病，娘子身心受了好多的摧残。很多的痛我也无法替她分担，以至于好多的事都没有替娘子考虑周全。只怪我做事马虎啊。需要向娘子道歉之处甚多。盼娘子容我好好的改。</p>
-<p>&emsp;&emsp;希望娘子慢慢好起来。可以快快乐乐健健康康开开心心的做自己喜欢做的事情。</p>
-<p>&emsp;&emsp;阿门。</p>
-]]></content>
-      <categories>
-        <category>日记</category>
-      </categories>
-      <tags>
-        <tag>命题作文</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>活着or霸王别姬</title>
-    <url>/%E6%B4%BB%E7%9D%80or%E9%9C%B8%E7%8E%8B%E5%88%AB%E5%A7%AC.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;先看的《活着》，然后看了《霸王别姬》。因为这两部电影被同寝室室友予以高度的评价，甚至说是中国最优秀的电影。所以就看了。</p>
-<p>&emsp;&emsp;看了很多电影，却不是很清楚大众的眼中最好的电影是什么样的。但在我的眼里，我觉得，如果一部电影，在看的时候可以让人聚精会神，而不想其他东西；让人影响深刻，眼前一亮；让人情绪高涨，感同身受；发人深省，豁然开朗；或者强烈的视觉震撼的，都算好的电影。而那种让人看着看着就想睡觉，没法集中注意力的电影算不得好的电影。这两部应该算好电影了。</p>
-<p>&emsp;&emsp;两部电影的时代和时间跨度比较相近，都是从半封建社会的中国到民国到抗战到解放战争到新中国到文化大革命。。。文章和为时而做，诗歌和为事而做。针砭时弊的东西都总会赢得大家的呼声，因为人是社会的人，人还是挑剔的人。所以聪明的人会看到这个社会的弊病，普通的人因为聪明人的暗示而欢呼雀跃，期待睿智的人来改变这些弊病。两部电影都用小人物的艺术人生，悲凉人生，比较全面的描述了近代中国的发展历程。给我们展示活在这个过度时期的人的形态，以及这个特殊的时期给人们带来的影响。看电影应该用娱乐的眼光来看，而不是政治的。因为电影只是一种娱乐。<br>    两部电影描绘的主人公有所不同，但都与艺术有关。《活着》处处透着黑色的幽默，笑过以后显得无奈和无助。比如富家纨绔子，因为赌博，输掉了所有祖产，赢回妻儿的守候，在土改时还保住了自己的性命。主人公和好友凭着皮影戏在中共和国民党的战场死里逢生。被批斗的妇科大夫很久没东西吃得了馒头高兴的吃到撑死。儿子因为特殊的时代以外而死，女儿病得哑了。女儿生孩子的时候难产死掉了。《活着》的意思就是让主人公经历所有世事变迁仍然活着，承受所有的痛苦和折磨，活着比死了还不如。《霸王别姬》不同于《活着》的地方在于它直面的，不加修饰的把那些残忍的东西展现出来。民国前，京剧发达起来，人们追京剧。戏班严厉交学生，往死里大学生，小孩子学生恐惧到自杀。成了角儿，被公公调戏，心理扭曲。被地主欺压，被国民党打压，被文化大革命蹂躏。处处都是鲜血淋淋的。片中还有一处比较讽刺的对比。国民党看戏的时候无纪律，明摆着搞破坏；共产党看戏的时候纪律严谨规规矩矩，到了后来迫害人是到了骨子里。相对于《活着》中主人公的苟延残喘的活着，《霸王别姬》里的主人公选择了死。</p>
-<p>&emsp;&emsp;我们看到的对于电影这种表现形式的描述通常都是说，相对于小说，人物内心描绘的不够多，还把文字用实物展现出来。一百个人读一篇小说有一百种读法，一百个人看一部电影就只有一部电影。但我不这么认为。任何人眼中的世界都是与其他人不同的，都是专属于自己的认知的世界。所以，不同的人看同一部电影也是不同的。</p>
-<p>&emsp;&emsp;我喜欢看电影，因为电影虽然来源于生活，但总是比生活要高那么一点。</p>
-<p>&emsp;&emsp;完了。</p>
-]]></content>
-      <categories>
-        <category>杂</category>
-      </categories>
-      <tags>
-        <tag>电影</tag>
-        <tag>活着</tag>
-        <tag>霸王别姬</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>乱2</title>
-    <url>/%E4%B9%B12.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;弯弯曲曲的阳光直直的照进屋外，熟睡的我高兴地蹦起来落在了天花板。窗台上留下了10年以后我的脚印。我重重的摔在软绵绵的岩石上，像蹦极一样来回颠簸。一只尖叫的青蛙从结冰的湖面窜出，湖面结了一个窟窿，天空泛起直直的嶙峋波纹。半空中横陈着的乐者手舞足蹈的吹奏着口中的琵琶，一只只曼妙的如箭的音符射向四周，箭尖着地处开出了美丽的蝴蝶。我泛舟湖底，领略着满天的繁星。一对鱼儿在空中划着拳，输了的那位颐指气使，赢了的那位红了双腮。忽然一阵微风袭来，将我卷进了透明的电话簿。可怜那船儿被卷成了一颗树苗。我花了一立方的时间睁开眼，发现树苗上结满了刀子。我摘下其中熟透了的一把，割下了我的一只脚趾。我将我剩下的部分扔进了雷电，那只脚趾开始慢慢的发了芽。</p>
-]]></content>
-      <categories>
-        <category>乱笔</category>
-      </categories>
-      <tags>
-        <tag>杂</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>雾霾齐步走</title>
     <url>/%E9%9B%BE%E9%9C%BE%E9%BD%90%E6%AD%A5%E8%B5%B0.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;据传，雾霾的妈妈叫他回去吃饭了。</p>
@@ -626,6 +557,25 @@
       </tags>
   </entry>
   <entry>
+    <title>活着or霸王别姬</title>
+    <url>/%E6%B4%BB%E7%9D%80or%E9%9C%B8%E7%8E%8B%E5%88%AB%E5%A7%AC.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;先看的《活着》，然后看了《霸王别姬》。因为这两部电影被同寝室室友予以高度的评价，甚至说是中国最优秀的电影。所以就看了。</p>
+<p>&emsp;&emsp;看了很多电影，却不是很清楚大众的眼中最好的电影是什么样的。但在我的眼里，我觉得，如果一部电影，在看的时候可以让人聚精会神，而不想其他东西；让人影响深刻，眼前一亮；让人情绪高涨，感同身受；发人深省，豁然开朗；或者强烈的视觉震撼的，都算好的电影。而那种让人看着看着就想睡觉，没法集中注意力的电影算不得好的电影。这两部应该算好电影了。</p>
+<p>&emsp;&emsp;两部电影的时代和时间跨度比较相近，都是从半封建社会的中国到民国到抗战到解放战争到新中国到文化大革命。。。文章和为时而做，诗歌和为事而做。针砭时弊的东西都总会赢得大家的呼声，因为人是社会的人，人还是挑剔的人。所以聪明的人会看到这个社会的弊病，普通的人因为聪明人的暗示而欢呼雀跃，期待睿智的人来改变这些弊病。两部电影都用小人物的艺术人生，悲凉人生，比较全面的描述了近代中国的发展历程。给我们展示活在这个过度时期的人的形态，以及这个特殊的时期给人们带来的影响。看电影应该用娱乐的眼光来看，而不是政治的。因为电影只是一种娱乐。<br>    两部电影描绘的主人公有所不同，但都与艺术有关。《活着》处处透着黑色的幽默，笑过以后显得无奈和无助。比如富家纨绔子，因为赌博，输掉了所有祖产，赢回妻儿的守候，在土改时还保住了自己的性命。主人公和好友凭着皮影戏在中共和国民党的战场死里逢生。被批斗的妇科大夫很久没东西吃得了馒头高兴的吃到撑死。儿子因为特殊的时代以外而死，女儿病得哑了。女儿生孩子的时候难产死掉了。《活着》的意思就是让主人公经历所有世事变迁仍然活着，承受所有的痛苦和折磨，活着比死了还不如。《霸王别姬》不同于《活着》的地方在于它直面的，不加修饰的把那些残忍的东西展现出来。民国前，京剧发达起来，人们追京剧。戏班严厉交学生，往死里大学生，小孩子学生恐惧到自杀。成了角儿，被公公调戏，心理扭曲。被地主欺压，被国民党打压，被文化大革命蹂躏。处处都是鲜血淋淋的。片中还有一处比较讽刺的对比。国民党看戏的时候无纪律，明摆着搞破坏；共产党看戏的时候纪律严谨规规矩矩，到了后来迫害人是到了骨子里。相对于《活着》中主人公的苟延残喘的活着，《霸王别姬》里的主人公选择了死。</p>
+<p>&emsp;&emsp;我们看到的对于电影这种表现形式的描述通常都是说，相对于小说，人物内心描绘的不够多，还把文字用实物展现出来。一百个人读一篇小说有一百种读法，一百个人看一部电影就只有一部电影。但我不这么认为。任何人眼中的世界都是与其他人不同的，都是专属于自己的认知的世界。所以，不同的人看同一部电影也是不同的。</p>
+<p>&emsp;&emsp;我喜欢看电影，因为电影虽然来源于生活，但总是比生活要高那么一点。</p>
+<p>&emsp;&emsp;完了。</p>
+]]></content>
+      <categories>
+        <category>杂</category>
+      </categories>
+      <tags>
+        <tag>电影</tag>
+        <tag>活着</tag>
+        <tag>霸王别姬</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Win7下格掉Linux盘如何启动windows</title>
     <url>/Win7%E4%B8%8B%E6%A0%BC%E6%8E%89Linux%E7%9B%98%E5%A6%82%E4%BD%95%E5%90%AF%E5%8A%A8windows.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;在win7下用系统的磁盘管理工具把原来的fedora14给格了，然后重启就只能进入grub，试了安装盘修复也不行。</p>
@@ -640,6 +590,56 @@
       </categories>
       <tags>
         <tag>grub</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>花卷</title>
+    <url>/%E8%8A%B1%E5%8D%B7.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;晚饭时，实验室只剩师妹了。她的一卡通忽然找不找，约莫买东西时落在了黑超。我说没事，要是找不着，我请吧。时间是17：40。快到东苑的时候，师妹说先去找她的卡。我建议和她一起去，以免找不到卡没法吃饭。但是一个东西突然钻进了我的脑袋，那就是：花卷。</p>
+<span id="more"></span>
+
+<p>&emsp;&emsp;师妹我得要先去买花卷，要不然待会儿就卖完了……但是你没卡吃饭……我对师妹说。她说，好的，没事，你先去吧，我带了钱。我想可能师妹并不知道有什么花卷是非买不可的。昨天和师弟一起吃晚饭，问到我为什么要去二楼，我说我要买花卷，当作早餐。师弟说，他不喜欢带回去，第二天吃冷的东西就不好了。他问，师兄你为什么不每天早点起床到食堂买早点吃呢？我笑了，然后什么都没有说……</p>
+<p>&emsp;&emsp;娘子在年后胆结石发作，剧痛使她彻夜不能安寝，还间杂腹泻和呕吐。第二天奄奄一息的娘子被我们带到了传说中的做保胆取石的最好的医院去做手术。被一颗小小的黄绿色恶魔精灵折磨的生不如死的娘子心理和身理都脆弱的像块悬挂的冰块。从娘子被推进手术室到接下来的15个小时，我的心也是一直悬着的。当然，手术并没有做那么久，只有3个多小时。只是这三个小时都不见人，只能希望什么事都不会发生。只在那时才体会到电视剧中主角眼睁睁自己的亲人被送进手术室，然后自己在走廊里除了焦急等待以外什么都不能做的如热锅上的蚂蚁心理。只不过走廊里的热锅蚂蚁不是一只，是好多只。从手术室出来有12个小时娘子都必须要忍痛和困保持清醒，以免做过手术的部位粘连。然后我就一个劲儿的在娘子耳边唠叨不停，估计娘子耳朵也成茧几次，然后又被共振掉几次了。实在抱歉啊。</p>
+<p>&emsp;&emsp;虽说只是个小手术，却签了好多的恐怖的协议，自愿承担各种风险；况且是第一次被推进手术室，还被人动了刀子开了肚子。不过总算是顺利的进行了手术，取出了结石。娘子也认为那个小小的东西就是一个妖怪。几天以后娘子出院了，不过瘦了好几圈，比之前少了20多斤。</p>
+<p>&emsp;&emsp;从此，娘子再也不能大鱼大肉，连饭菜里面多一丝辣椒末也会让肚子难受，胆处生疼。馋坏了本来见好吃就吃的从不忌口的我家娘子，害的她只能每天吃清淡异常的饭菜，然后逛美食博客以慰馋心，苦了一个为麻辣美食而生的胃。另外，患了胆结石是需要少食多餐的，早餐尤其重要。</p>
+<p>&emsp;&emsp;我们试过早餐吃馒头还有汤圆。馒头总是没味，干瘪，难以下咽。汤圆就更不行，试过一次，娘子吃后就犯疼。对比了好多，我们还是决定吃花卷吧。因为花卷还是挺香挺有味的，比起馒头来。对了，可能你要问：为什么不吃面条？大概也许你没有吃过除盐以外什么都不放的面条吧。然而，早上起来买的街上的花卷不但个子小，而且就像得了白化病一样，吃着好不安心。所以决定每天晚饭时从食堂带几个回去，第二天早上热了吃。</p>
+<p>&emsp;&emsp;得了这胆的毛病，娘子身心受了好多的摧残。很多的痛我也无法替她分担，以至于好多的事都没有替娘子考虑周全。只怪我做事马虎啊。需要向娘子道歉之处甚多。盼娘子容我好好的改。</p>
+<p>&emsp;&emsp;希望娘子慢慢好起来。可以快快乐乐健健康康开开心心的做自己喜欢做的事情。</p>
+<p>&emsp;&emsp;阿门。</p>
+]]></content>
+      <categories>
+        <category>日记</category>
+      </categories>
+      <tags>
+        <tag>命题作文</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>读后感</title>
+    <url>/%E8%AF%BB%E5%90%8E%E6%84%9F.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;夏看了L写的新的日志了。真的很开心。并且夏还惊奇的发现，喜欢L的另一个原因是她看事情的独特的观点。当夏了解到L的对于好多问题的看法以后，觉得世上的事都是可笑的呀。</p>
+<p>&emsp;&emsp;对了，夏还要无力的辩驳一下，他说他并没有把感情等等的事情放到公式里面来计算，他现在的脑子里面的公式少之又少。不，也许L是对的，夏活在公式里面。但我想他的心还是想摆脱这些公式堆砌的框架的。但夏至少是活在一层壳里面的，他自己也不知道这层壳是什么时候覆在自己的表面（不是污垢哦，洗过澡的哈。）的。</p>
+<p>&emsp;&emsp;夏很听话的。他肯定会活的好好的。特别是有L这样的好朋友在心灵上给予的支持和帮助。所以，夏会很尊重L的决定的，会与她保持安全的距离。虽然夏很明白，女生都是比较犹豫不安的，特别是当男生在死缠烂打的情况下。但夏一点儿也不懂，不会死缠烂打的招数。夏就是一个“好人”，nice guy！（有一次英语作文，夏把guy写成了gay，笑死人了，呵呵。）不过他正在试着变成坏人。嗯！</p>
+<p>&emsp;&emsp;夏活的很肤浅，很糊涂。但是很自在。至于北京那个女孩儿，大约也只是简单做朋友了吧，呵呵。</p>
+<p>&emsp;&emsp;夏已经开始渐渐相信L说生活是不需要爱情这种调味剂也可以继续的那句话了。他只需要L以及他的朋友过的好就很开心了。嘿嘿^_^</p>
+]]></content>
+      <categories>
+        <category>日记</category>
+      </categories>
+      <tags>
+        <tag>读后感</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>乱2</title>
+    <url>/%E4%B9%B12.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;弯弯曲曲的阳光直直的照进屋外，熟睡的我高兴地蹦起来落在了天花板。窗台上留下了10年以后我的脚印。我重重的摔在软绵绵的岩石上，像蹦极一样来回颠簸。一只尖叫的青蛙从结冰的湖面窜出，湖面结了一个窟窿，天空泛起直直的嶙峋波纹。半空中横陈着的乐者手舞足蹈的吹奏着口中的琵琶，一只只曼妙的如箭的音符射向四周，箭尖着地处开出了美丽的蝴蝶。我泛舟湖底，领略着满天的繁星。一对鱼儿在空中划着拳，输了的那位颐指气使，赢了的那位红了双腮。忽然一阵微风袭来，将我卷进了透明的电话簿。可怜那船儿被卷成了一颗树苗。我花了一立方的时间睁开眼，发现树苗上结满了刀子。我摘下其中熟透了的一把，割下了我的一只脚趾。我将我剩下的部分扔进了雷电，那只脚趾开始慢慢的发了芽。</p>
+]]></content>
+      <categories>
+        <category>乱笔</category>
+      </categories>
+      <tags>
+        <tag>杂</tag>
       </tags>
   </entry>
   <entry>
@@ -677,22 +677,6 @@
       </categories>
   </entry>
   <entry>
-    <title>跟伴</title>
-    <url>/%E8%B7%9F%E4%BC%B4.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;这是一种路上游荡的魂魄。</p>
-<p>&emsp;&emsp;因为生前性格孤僻十分孤单，没有一个朋友，所以容易走极端。遇到人生的重大挫折没有地方需求帮助，没有人来帮忙分担，最后在绝望中选择各种手段结束自己的生命。</p>
-<p>&emsp;&emsp;死后由于怨气未散，所以不愿到阴曹，傍晚十分喜欢在偏僻小路上飘荡。</p>
-<p>&emsp;&emsp;最喜欢跟踪单独一个人行走的路人。通常能感知孤独，可化作路人的熟人面目，但又让路人无法辨认出是哪个人。路人若是回头发现，并且警觉，快速行走。。。</p>
-<p>&emsp;&emsp;当路人以为自己已经甩开跟踪者，回头看时。。。什么也看不见。。。。。。因为跟伴紧贴着路人的后背。。。。。。他露出诡异的笑。。。准备把你拉到阴间。。。作伴。。。</p>
-]]></content>
-      <categories>
-        <category>乱笔</category>
-      </categories>
-      <tags>
-        <tag>妖怪</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>血色乎浪漫</title>
     <url>/%E8%A1%80%E8%89%B2%E4%B9%8E%E6%B5%AA%E6%BC%AB.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;人活着该削平自己将自己融入社会大染缸，还是该看清事实从中跳出来，或者该坚持自我暴力抵抗，还是怀揣着希望守护自己的安全岛？</p>
@@ -712,30 +696,19 @@
       </tags>
   </entry>
   <entry>
-    <title>这个网站是怎么来的</title>
-    <url>/how-I-build-this-web.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>目的：心血来潮，漫无目的。<br>方法：利用Hexo+Github构建。<br>花费：1块钱用于腾讯云买域名+6块用于阿里云买域名+宝宝睡了之后的晚上。<br>用途：好记性不如烂笔头。用手敲敲还可锻炼一下。<br>时间：2020年5月26日晚。<br>步骤：参见<a href="https://cloud.tencent.com/developer/article/1423783">这里</a>，具体如下：</p>
-<span id="more"></span>
-<h2 id="一、建立repo"><a href="#一、建立repo" class="headerlink" title="一、建立repo"></a>一、建立repo</h2><p>建一个和自己的github用户名一样的repo。</p>
-<h2 id="二、安装必要的程序"><a href="#二、安装必要的程序" class="headerlink" title="二、安装必要的程序"></a>二、安装必要的程序</h2><p>需要安装的程序有Git，node.js，hexo</p>
-<h3 id="1，安装Git"><a href="#1，安装Git" class="headerlink" title="1，安装Git"></a>1，安装Git</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> apt install git</span><br></pre></td></tr></table></figure>
-<h3 id="2，安装node-js"><a href="#2，安装node-js" class="headerlink" title="2，安装node.js"></a>2，安装node.js</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> apt install nodejs </span><br></pre></td></tr></table></figure>
-<h3 id="3，安装hexo-初始化"><a href="#3，安装hexo-初始化" class="headerlink" title="3，安装hexo&amp;&amp;初始化"></a>3，安装hexo&amp;&amp;初始化</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install -g hexo</span><br><span class="line">$ hexo init [<span class="built_in">dir</span>] <span class="comment">#当前目录或新建[dir]</span></span><br></pre></td></tr></table></figure>
-<h2 id="三、设置"><a href="#三、设置" class="headerlink" title="三、设置"></a>三、设置</h2><h3 id="1，设置文件为-config-yml，自行修改例如"><a href="#1，设置文件为-config-yml，自行修改例如" class="headerlink" title="1，设置文件为_config.yml，自行修改例如"></a>1，设置文件为_config.yml，自行修改例如</h3><p>title 博客名字<br>subtitle 副标题<br>author 作者<br>等等。遇到问题多看看<a href="https://hexo.io/zh-cn/docs">hexo的官方文档</a>。</p>
-<h3 id="2，主题配置"><a href="#2，主题配置" class="headerlink" title="2，主题配置"></a>2，主题配置</h3><p>想要自己的博客好看那就需要配置主题theme,我用的是Next。<br>具体设置可以到google搜索关键字hexo+next。</p>
-<h2 id="四、部署网站到github"><a href="#四、部署网站到github" class="headerlink" title="四、部署网站到github"></a>四、部署网站到github</h2><h3 id="1，在-config-yml中添加"><a href="#1，在-config-yml中添加" class="headerlink" title="1，在_config.yml中添加"></a>1，在_config.yml中添加</h3><p>deploy:<br>  type: git<br>  repository: <a href="https://github.com/%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97/%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97.github.io.git">https://github.com/你的名字/你的名字.github.io.git</a><br>  branch: master </p>
-<h3 id="2，安装部署工具"><a href="#2，安装部署工具" class="headerlink" title="2，安装部署工具"></a>2，安装部署工具</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-deployer-git  --save</span><br></pre></td></tr></table></figure>
-<h3 id="3，发布"><a href="#3，发布" class="headerlink" title="3，发布"></a>3，发布</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo cl &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
-<p>现在可以打开网址：你的名字.github.io访问。</p>
-<h2 id="五、绑定域名"><a href="#五、绑定域名" class="headerlink" title="五、绑定域名"></a>五、绑定域名</h2><h3 id="1，购买域名"><a href="#1，购买域名" class="headerlink" title="1，购买域名"></a>1，购买域名</h3><h3 id="2，域名解析"><a href="#2，域名解析" class="headerlink" title="2，域名解析"></a>2，域名解析</h3><p>找到域名解析选项添加两条记录:<br>CNAME www 你的名字.github.io<br>CNAME @ 你的名字.github.io</p>
-<h3 id="3，添加CNAME文件"><a href="#3，添加CNAME文件" class="headerlink" title="3，添加CNAME文件"></a>3，添加CNAME文件</h3><p>在hexo文件夹的source目录中新建CNAME文件，将你的域名写入。然后就大功告成。<br>完结撒花。</p>
+    <title>跟伴</title>
+    <url>/%E8%B7%9F%E4%BC%B4.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;这是一种路上游荡的魂魄。</p>
+<p>&emsp;&emsp;因为生前性格孤僻十分孤单，没有一个朋友，所以容易走极端。遇到人生的重大挫折没有地方需求帮助，没有人来帮忙分担，最后在绝望中选择各种手段结束自己的生命。</p>
+<p>&emsp;&emsp;死后由于怨气未散，所以不愿到阴曹，傍晚十分喜欢在偏僻小路上飘荡。</p>
+<p>&emsp;&emsp;最喜欢跟踪单独一个人行走的路人。通常能感知孤独，可化作路人的熟人面目，但又让路人无法辨认出是哪个人。路人若是回头发现，并且警觉，快速行走。。。</p>
+<p>&emsp;&emsp;当路人以为自己已经甩开跟踪者，回头看时。。。什么也看不见。。。。。。因为跟伴紧贴着路人的后背。。。。。。他露出诡异的笑。。。准备把你拉到阴间。。。作伴。。。</p>
 ]]></content>
       <categories>
-        <category>web</category>
+        <category>乱笔</category>
       </categories>
       <tags>
-        <tag>web</tag>
-        <tag>next</tag>
+        <tag>妖怪</tag>
       </tags>
   </entry>
   <entry>
@@ -770,35 +743,6 @@
       </tags>
   </entry>
   <entry>
-    <title>如何备份hexo</title>
-    <url>/how-to-backup-hexo.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>要是换了电脑网站怎么办？那当然是需要备份的了。u盘什么的，网盘什么的也不错。不过搜到大神的<a href="https://notes.doublemine.me/2015-04-06-%E5%A4%87%E4%BB%BDHexo%E5%8D%9A%E5%AE%A2%E6%BA%90%E6%96%87%E4%BB%B6.html">博文</a>介绍说放到githup的repo里面就可以了。于是试了一下，果然可以啊。步骤如下：</p>
-<h2 id="创建github的repository"><a href="#创建github的repository" class="headerlink" title="创建github的repository"></a>创建github的repository</h2><p>创建一个和你的hexo目录一样的repo。我的就是hexo。在hexo主目录下执行如下命令：</p>
-<span id="more"></span>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="variable">$echo</span> <span class="string">&quot;# hexo&quot;</span> &gt;&gt;README.md</span><br><span class="line"><span class="variable">$git</span> init</span><br><span class="line"><span class="variable">$git</span> commit -m <span class="string">&quot;&quot;</span></span><br><span class="line"><span class="variable">$git</span> add README.md </span><br><span class="line"><span class="variable">$git</span> commit -m <span class="string">&quot;README&quot;</span></span><br><span class="line"><span class="variable">$git</span> remote add origin https://github.com/junxie01/hexo.git</span><br><span class="line"><span class="variable">$git</span> push -u origin master</span><br></pre></td></tr></table></figure>
-
-<h2 id="备份-推送"><a href="#备份-推送" class="headerlink" title="备份&#x2F;推送"></a>备份&#x2F;推送</h2><p>每次完成hexo的更新或者新博文的建立就可以运行如下命令进行推送&#x2F;备份。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="variable">$git</span> add .</span><br><span class="line"><span class="variable">$git</span> commit -m <span class="string">&quot;hexo备份&quot;</span></span><br><span class="line"><span class="variable">$git</span> push origin master</span><br></pre></td></tr></table></figure>
-
-<h2 id="新电脑网站移植"><a href="#新电脑网站移植" class="headerlink" title="新电脑网站移植"></a>新电脑网站移植</h2><p>需要在新电脑写博客需要安装npm，node.js，hexo。然后把github的repo克隆到本地就好了。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="variable">$git</span> <span class="built_in">clone</span> git@github.com:junxie01/hexo.git</span><br></pre></td></tr></table></figure>
-
-<h2 id="同步本地网站"><a href="#同步本地网站" class="headerlink" title="同步本地网站"></a>同步本地网站</h2><p>当github中的repo有更新时，执行一下命令可以同步到本地。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="variable">$git</span> pull origin master</span><br></pre></td></tr></table></figure>
-
-<h2 id="自动推送-备份"><a href="#自动推送-备份" class="headerlink" title="自动推送&#x2F;备份"></a>自动推送&#x2F;备份</h2><p>那位牛人博主还有一篇博文<a href="https://notes.doublemine.me/2015-07-06-%E8%87%AA%E5%8A%A8%E5%A4%87%E4%BB%BDHexo%E5%8D%9A%E5%AE%A2%E6%BA%90%E6%96%87%E4%BB%B6.html">利用nodejs脚本自动备份</a>。我不太懂，省得麻烦。干脆写一个bash脚本(例如do_deploy_push.bash)就可以解决这些问题。脚本如下:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo cl &amp;&amp; hexo g &amp;&amp; hexo d</span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&quot;backup hexo at `date` &quot;</span></span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
-<p>在hexo主目录下面运行 bash do_deploy_push.bash就大功告成了。</p>
-]]></content>
-      <categories>
-        <category>web</category>
-      </categories>
-      <tags>
-        <tag>web</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>hexo免密发布</title>
     <url>/passwd-free-for-deployment.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>每次发布都得输入用户名和密码，挺麻烦费事。网上<a href="https://blog.csdn.net/hhgggggg/article/details/77853665">大神</a>可真多，搜搜就能解决。和ssh登录服务器类似，步骤如下：</p>
@@ -823,8 +767,35 @@
 <p>这个我就没有管了。问题不大吧。</p>
 ]]></content>
       <tags>
-        <tag>web</tag>
         <tag>hexo</tag>
+        <tag>web</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>这个网站是怎么来的</title>
+    <url>/how-I-build-this-web.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>目的：心血来潮，漫无目的。<br>方法：利用Hexo+Github构建。<br>花费：1块钱用于腾讯云买域名+6块用于阿里云买域名+宝宝睡了之后的晚上。<br>用途：好记性不如烂笔头。用手敲敲还可锻炼一下。<br>时间：2020年5月26日晚。<br>步骤：参见<a href="https://cloud.tencent.com/developer/article/1423783">这里</a>，具体如下：</p>
+<span id="more"></span>
+<h2 id="一、建立repo"><a href="#一、建立repo" class="headerlink" title="一、建立repo"></a>一、建立repo</h2><p>建一个和自己的github用户名一样的repo。</p>
+<h2 id="二、安装必要的程序"><a href="#二、安装必要的程序" class="headerlink" title="二、安装必要的程序"></a>二、安装必要的程序</h2><p>需要安装的程序有Git，node.js，hexo</p>
+<h3 id="1，安装Git"><a href="#1，安装Git" class="headerlink" title="1，安装Git"></a>1，安装Git</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> apt install git</span><br></pre></td></tr></table></figure>
+<h3 id="2，安装node-js"><a href="#2，安装node-js" class="headerlink" title="2，安装node.js"></a>2，安装node.js</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> apt install nodejs </span><br></pre></td></tr></table></figure>
+<h3 id="3，安装hexo-初始化"><a href="#3，安装hexo-初始化" class="headerlink" title="3，安装hexo&amp;&amp;初始化"></a>3，安装hexo&amp;&amp;初始化</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install -g hexo</span><br><span class="line">$ hexo init [<span class="built_in">dir</span>] <span class="comment">#当前目录或新建[dir]</span></span><br></pre></td></tr></table></figure>
+<h2 id="三、设置"><a href="#三、设置" class="headerlink" title="三、设置"></a>三、设置</h2><h3 id="1，设置文件为-config-yml，自行修改例如"><a href="#1，设置文件为-config-yml，自行修改例如" class="headerlink" title="1，设置文件为_config.yml，自行修改例如"></a>1，设置文件为_config.yml，自行修改例如</h3><p>title 博客名字<br>subtitle 副标题<br>author 作者<br>等等。遇到问题多看看<a href="https://hexo.io/zh-cn/docs">hexo的官方文档</a>。</p>
+<h3 id="2，主题配置"><a href="#2，主题配置" class="headerlink" title="2，主题配置"></a>2，主题配置</h3><p>想要自己的博客好看那就需要配置主题theme,我用的是Next。<br>具体设置可以到google搜索关键字hexo+next。</p>
+<h2 id="四、部署网站到github"><a href="#四、部署网站到github" class="headerlink" title="四、部署网站到github"></a>四、部署网站到github</h2><h3 id="1，在-config-yml中添加"><a href="#1，在-config-yml中添加" class="headerlink" title="1，在_config.yml中添加"></a>1，在_config.yml中添加</h3><p>deploy:<br>  type: git<br>  repository: <a href="https://github.com/%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97/%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97.github.io.git">https://github.com/你的名字/你的名字.github.io.git</a><br>  branch: master </p>
+<h3 id="2，安装部署工具"><a href="#2，安装部署工具" class="headerlink" title="2，安装部署工具"></a>2，安装部署工具</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-deployer-git  --save</span><br></pre></td></tr></table></figure>
+<h3 id="3，发布"><a href="#3，发布" class="headerlink" title="3，发布"></a>3，发布</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo cl &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
+<p>现在可以打开网址：你的名字.github.io访问。</p>
+<h2 id="五、绑定域名"><a href="#五、绑定域名" class="headerlink" title="五、绑定域名"></a>五、绑定域名</h2><h3 id="1，购买域名"><a href="#1，购买域名" class="headerlink" title="1，购买域名"></a>1，购买域名</h3><h3 id="2，域名解析"><a href="#2，域名解析" class="headerlink" title="2，域名解析"></a>2，域名解析</h3><p>找到域名解析选项添加两条记录:<br>CNAME www 你的名字.github.io<br>CNAME @ 你的名字.github.io</p>
+<h3 id="3，添加CNAME文件"><a href="#3，添加CNAME文件" class="headerlink" title="3，添加CNAME文件"></a>3，添加CNAME文件</h3><p>在hexo文件夹的source目录中新建CNAME文件，将你的域名写入。然后就大功告成。<br>完结撒花。</p>
+]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>web</tag>
+        <tag>next</tag>
       </tags>
   </entry>
   <entry>
@@ -874,8 +845,8 @@
         <category>web</category>
       </categories>
       <tags>
+        <tag>hexo</tag>
         <tag>web</tag>
-        <tag>next</tag>
       </tags>
   </entry>
   <entry>
@@ -1029,6 +1000,39 @@
       </tags>
   </entry>
   <entry>
+    <title>sed插入和删除匹配行</title>
+    <url>/learn-sed.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;sed功能非常强大，利用来处理文本文件不要太爽。要是能熟练掌握，在文本江湖简直随心所欲，无往而不利。我自然也想学学，不过入坑awk有点久。通常习惯了一种方式以后就难以醉心到另一种。这也大约是少林72绝技一般和尚难同时融汇多种的原因吧。一般人也很难精通多个领域。这两天在配置这个博客时遇到一些要对所有post处理的步骤。于是就尝试了sed的用法。倒是很方便。例如：</p>
+<span id="more"></span>
+
+<ol>
+<li>匹配包含date行，在该行后添加copyright: true。</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sed -i <span class="string">&#x27;/date/a\copyright: true&#x27;</span> a.md </span><br></pre></td></tr></table></figure>
+<p>在行前添加就把a换做i。</p>
+<ol start="2">
+<li>删除包含copyright的行。</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sed -i <span class="string">&#x27;/copyright/d&#x27;</span> a.md</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>批量处理就这样。</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> md <span class="keyword">in</span> *md</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">   sed -i <span class="string">&#x27;/copyright/d&#x27;</span> <span class="variable">$md</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;题外话，是不是觉得我找抽啊，插入了copyright之后又删掉。说来话长。我怕有人copy了我的东西不打声招呼，于是就想申明一下许可权益啊版权信息啊什么的（申明之后别人爱拿还得拿）。于是搜索到<a href="https://juejin.im/post/5c7dd8675188251b6406e7b5">上仙</a>那里，根据教程开始弄。过程中就得来个批量处理，用sed添加copyright。结果出来还不错。可谁知那个“署名”前面的cc图标老是乱码（一个叉）。哎呀，我这个暴脾气（洁癖），如何受得了。于是就搜啊搜，怎么才能显示出来呢？结果，啥办法没有。最后只能根据另一位<a href="https://wylu.me/posts/e0424f3f/">上神</a>的教程重新弄了一个简单的主题默认的版权信息。然后就得批处理copyright。啊，世界安静了。</p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>web</tag>
+        <tag>next</tag>
+        <tag>sed</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>我对这个博客做了什么</title>
     <url>/what-did-I-do-to-this-blog.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;原本是想记笔记，写一些技术性的东西。然而现在为止好像还没有干啥正事。那我对这个博客做了些什么呢？干了这些：</p>
@@ -1105,41 +1109,8 @@
         <category>web</category>
       </categories>
       <tags>
-        <tag>next</tag>
         <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>sed插入和删除匹配行</title>
-    <url>/learn-sed.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;sed功能非常强大，利用来处理文本文件不要太爽。要是能熟练掌握，在文本江湖简直随心所欲，无往而不利。我自然也想学学，不过入坑awk有点久。通常习惯了一种方式以后就难以醉心到另一种。这也大约是少林72绝技一般和尚难同时融汇多种的原因吧。一般人也很难精通多个领域。这两天在配置这个博客时遇到一些要对所有post处理的步骤。于是就尝试了sed的用法。倒是很方便。例如：</p>
-<span id="more"></span>
-
-<ol>
-<li>匹配包含date行，在该行后添加copyright: true。</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sed -i <span class="string">&#x27;/date/a\copyright: true&#x27;</span> a.md </span><br></pre></td></tr></table></figure>
-<p>在行前添加就把a换做i。</p>
-<ol start="2">
-<li>删除包含copyright的行。</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sed -i <span class="string">&#x27;/copyright/d&#x27;</span> a.md</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>批量处理就这样。</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> md <span class="keyword">in</span> *md</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">   sed -i <span class="string">&#x27;/copyright/d&#x27;</span> <span class="variable">$md</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
-
-<p>&emsp;&emsp;题外话，是不是觉得我找抽啊，插入了copyright之后又删掉。说来话长。我怕有人copy了我的东西不打声招呼，于是就想申明一下许可权益啊版权信息啊什么的（申明之后别人爱拿还得拿）。于是搜索到<a href="https://juejin.im/post/5c7dd8675188251b6406e7b5">上仙</a>那里，根据教程开始弄。过程中就得来个批量处理，用sed添加copyright。结果出来还不错。可谁知那个“署名”前面的cc图标老是乱码（一个叉）。哎呀，我这个暴脾气（洁癖），如何受得了。于是就搜啊搜，怎么才能显示出来呢？结果，啥办法没有。最后只能根据另一位<a href="https://wylu.me/posts/e0424f3f/">上神</a>的教程重新弄了一个简单的主题默认的版权信息。然后就得批处理copyright。啊，世界安静了。</p>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>web</tag>
         <tag>next</tag>
-        <tag>hexo</tag>
-        <tag>sed</tag>
       </tags>
   </entry>
   <entry>
@@ -1260,9 +1231,9 @@
         <category>web</category>
       </categories>
       <tags>
+        <tag>hexo</tag>
         <tag>web</tag>
         <tag>next</tag>
-        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -1348,7 +1319,7 @@
   <entry>
     <title>基于宽频带背景噪声面波的美国三维上地幔横波速度结构模型</title>
     <url>/US-upper-mantle-vs-model.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;利用宽频带的背景噪声面波做了美国三维上地幔横波速度结构，该工作做了x年。我不会告诉你这项工作做了多久，说出来都害sao。文章终于在2018年发表，文章链接在<a href="https://link.springer.com/article/10.1007/s00024-018-1881-2">这里</a>，如果有需要可以找我要全文。<br>&emsp;&emsp;做模型真的是需要大量细致的工作。这篇文章的主要贡献是表明只用背景噪声面波也可以做的比较深，比较准，另外就是为community提供了一个新的模型。怎奈自己的地质背景太差，看不到啥突出的科学问题，还被审稿人批评说，‘你做的啥工作啊，像本科生的作业。’心塞。师兄说的对，应该多向可能对你的工作感兴趣的人请教，例如动力学方向的人啊之类的。<br>&emsp;&emsp;老板建议把这个模型挂在<a href="https://ds.iris.edu/ds/products/emc-earthmodels/">IRIS EMC</a>里头，推广推广，让大伙儿都用用。我觉得不错，于是今天终于把它放到了IRIS里面。点击<a href="https://ds.iris.edu/ds/products/emc-us-upper-mantle-vsxiechuyang2018/">这里</a>就可以看到我的模型了。里面有netcdf格式的数据可以下载。如果有需要可以找我要更细致的结果。<br>&emsp;&emsp;IRIS EMC需要的是netcdf格式的模型数据。IRIS有提供把txt文本格式的模型转换成netcdf的<a href="https://github.com/iris-edu/emc-tools">python脚本</a>。另外向IRIS EMC提交模型的要求也可以这他们的<a href="https://ds.iris.edu/ds/products/emc-contributionguide/">网页</a>看到，按照他们的要求把netcdf文件准备好，然后写一个说明文档一并发送给<a href="mailto:&#112;&#114;&#x6f;&#100;&#x75;&#x63;&#116;&#64;&#x69;&#114;&#105;&#115;&#x2e;&#119;&#97;&#115;&#x68;&#105;&#x6e;&#103;&#116;&#111;&#110;&#46;&#x65;&#100;&#x75;">&#112;&#114;&#x6f;&#100;&#x75;&#x63;&#116;&#64;&#x69;&#114;&#105;&#115;&#x2e;&#119;&#97;&#115;&#x68;&#105;&#x6e;&#103;&#116;&#111;&#110;&#46;&#x65;&#100;&#x75;</a>就完事了。<br>&emsp;&emsp;netcdf是2进制文件。要查看其头段信息的话可以用命令ncdump -h xxx.nc（安装netcdf-bin），要读取其参数信息可以用命令ncks（安装nco）。其实IRIS EMC也提供了将netcdf转换成txt文本的<a href="https://github.com/iris-edu/emc-tools">python脚本</a>，非常方便。<br>&emsp;&emsp;求合作啊。我擅长处理数据，要是您能看到啥地学科学问题那真是求之不得啊。笑cry。</p>]]></content>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;利用宽频带的背景噪声面波做了美国三维上地幔横波速度结构，该工作做了x年。我不会告诉你这项工作做了多久，说出来都害sao。文章终于在2018年发表，文章链接在<a href="https://link.springer.com/article/10.1007/s00024-018-1881-2">这里</a>，如果有需要可以找我要全文。<br>&emsp;&emsp;做模型真的是需要大量细致的工作。这篇文章的主要贡献是表明只用背景噪声面波也可以做的比较深，比较准，另外就是为community提供了一个新的模型。怎奈自己的地质背景太差，看不到啥突出的科学问题，还被审稿人批评说，‘你做的啥工作啊，像本科生的作业。’心塞。师兄说的对，应该多向可能对你的工作感兴趣的人请教，例如动力学方向的人啊之类的。<br>&emsp;&emsp;老板建议把这个模型挂在<a href="https://ds.iris.edu/ds/products/emc-earthmodels/">IRIS EMC</a>里头，推广推广，让大伙儿都用用。我觉得不错，于是今天终于把它放到了IRIS里面。点击<a href="https://ds.iris.edu/ds/products/emc-us-upper-mantle-vsxiechuyang2018/">这里</a>就可以看到我的模型了。里面有netcdf格式的数据可以下载。如果有需要可以找我要更细致的结果。<br>&emsp;&emsp;IRIS EMC需要的是netcdf格式的模型数据。IRIS有提供把txt文本格式的模型转换成netcdf的<a href="https://github.com/iris-edu/emc-tools">python脚本</a>。另外向IRIS EMC提交模型的要求也可以这他们的<a href="https://ds.iris.edu/ds/products/emc-contributionguide/">网页</a>看到，按照他们的要求把netcdf文件准备好，然后写一个说明文档一并发送给<a href="mailto:&#x70;&#x72;&#111;&#100;&#x75;&#x63;&#x74;&#64;&#105;&#114;&#x69;&#x73;&#46;&#x77;&#x61;&#115;&#x68;&#105;&#110;&#x67;&#116;&#111;&#x6e;&#46;&#101;&#x64;&#117;">&#x70;&#x72;&#111;&#100;&#x75;&#x63;&#x74;&#64;&#105;&#114;&#x69;&#x73;&#46;&#x77;&#x61;&#115;&#x68;&#105;&#110;&#x67;&#116;&#111;&#x6e;&#46;&#101;&#x64;&#117;</a>就完事了。<br>&emsp;&emsp;netcdf是2进制文件。要查看其头段信息的话可以用命令ncdump -h xxx.nc（安装netcdf-bin），要读取其参数信息可以用命令ncks（安装nco）。其实IRIS EMC也提供了将netcdf转换成txt文本的<a href="https://github.com/iris-edu/emc-tools">python脚本</a>，非常方便。<br>&emsp;&emsp;求合作啊。我擅长处理数据，要是您能看到啥地学科学问题那真是求之不得啊。笑cry。</p>]]></content>
       <categories>
         <category>work</category>
       </categories>
@@ -1437,6 +1408,35 @@
       </tags>
   </entry>
   <entry>
+    <title>如何备份hexo</title>
+    <url>/how-to-backup-hexo.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>要是换了电脑网站怎么办？那当然是需要备份的了。u盘什么的，网盘什么的也不错。不过搜到大神的<a href="https://notes.doublemine.me/2015-04-06-%E5%A4%87%E4%BB%BDHexo%E5%8D%9A%E5%AE%A2%E6%BA%90%E6%96%87%E4%BB%B6.html">博文</a>介绍说放到githup的repo里面就可以了。于是试了一下，果然可以啊。步骤如下：</p>
+<h2 id="创建github的repository"><a href="#创建github的repository" class="headerlink" title="创建github的repository"></a>创建github的repository</h2><p>创建一个和你的hexo目录一样的repo。我的就是hexo。在hexo主目录下执行如下命令：</p>
+<span id="more"></span>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="variable">$echo</span> <span class="string">&quot;# hexo&quot;</span> &gt;&gt;README.md</span><br><span class="line"><span class="variable">$git</span> init</span><br><span class="line"><span class="variable">$git</span> commit -m <span class="string">&quot;&quot;</span></span><br><span class="line"><span class="variable">$git</span> add README.md </span><br><span class="line"><span class="variable">$git</span> commit -m <span class="string">&quot;README&quot;</span></span><br><span class="line"><span class="variable">$git</span> remote add origin https://github.com/junxie01/hexo.git</span><br><span class="line"><span class="variable">$git</span> push -u origin master</span><br></pre></td></tr></table></figure>
+
+<h2 id="备份-推送"><a href="#备份-推送" class="headerlink" title="备份&#x2F;推送"></a>备份&#x2F;推送</h2><p>每次完成hexo的更新或者新博文的建立就可以运行如下命令进行推送&#x2F;备份。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="variable">$git</span> add .</span><br><span class="line"><span class="variable">$git</span> commit -m <span class="string">&quot;hexo备份&quot;</span></span><br><span class="line"><span class="variable">$git</span> push origin master</span><br></pre></td></tr></table></figure>
+
+<h2 id="新电脑网站移植"><a href="#新电脑网站移植" class="headerlink" title="新电脑网站移植"></a>新电脑网站移植</h2><p>需要在新电脑写博客需要安装npm，node.js，hexo。然后把github的repo克隆到本地就好了。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="variable">$git</span> <span class="built_in">clone</span> git@github.com:junxie01/hexo.git</span><br></pre></td></tr></table></figure>
+
+<h2 id="同步本地网站"><a href="#同步本地网站" class="headerlink" title="同步本地网站"></a>同步本地网站</h2><p>当github中的repo有更新时，执行一下命令可以同步到本地。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="variable">$git</span> pull origin master</span><br></pre></td></tr></table></figure>
+
+<h2 id="自动推送-备份"><a href="#自动推送-备份" class="headerlink" title="自动推送&#x2F;备份"></a>自动推送&#x2F;备份</h2><p>那位牛人博主还有一篇博文<a href="https://notes.doublemine.me/2015-07-06-%E8%87%AA%E5%8A%A8%E5%A4%87%E4%BB%BDHexo%E5%8D%9A%E5%AE%A2%E6%BA%90%E6%96%87%E4%BB%B6.html">利用nodejs脚本自动备份</a>。我不太懂，省得麻烦。干脆写一个bash脚本(例如do_deploy_push.bash)就可以解决这些问题。脚本如下:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo cl &amp;&amp; hexo g &amp;&amp; hexo d</span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&quot;backup hexo at `date` &quot;</span></span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+<p>在hexo主目录下面运行 bash do_deploy_push.bash就大功告成了。</p>
+]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>web</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>为啥要这样安装FileZilla</title>
     <url>/how-to-install-filezilla.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;本地到服务器的数据传输使用FileZilla程序比较方便和稳定。只是Linux下需要编译安装该程序，那还不易热儿，那就安装呗。然而安装过程让人迷糊，复杂程度让人难忘，特此记录一下。遗憾的是，花了我两天时间，到现在为止，该程序仍然没有安装成功。</p>
@@ -1463,17 +1463,6 @@
       </tags>
   </entry>
   <entry>
-    <title>新年快乐</title>
-    <url>/happy-new-year.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;各位新年快乐。<br>&emsp;&emsp;我不是针对谁，我是说在座各位的模型都有问题。开玩笑的，别当真。<br>&emsp;&emsp;今天很高兴因为一篇文章刚刚接收了，收到了新年礼物。这篇文章经过了多重考验，三次大修。时间也长，文章从第一次投稿到接收用的时间二胎也都降世了。<br>&emsp;&emsp;文章的意思就是经过检验发现现在的模型都有问题。有点惹众怒啊。请轻拍。我忘记是谁说的了，没有一个模型是对的，但都是有用的。大家和气生财(文章)。切勿动怒。<br>&emsp;&emsp;下一步就是好好写本子了啊。哎。加了个油。</p>]]></content>
-      <categories>
-        <category>日记</category>
-      </categories>
-      <tags>
-        <tag>日记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>安装完fedora32之后</title>
     <url>/after-fedora32.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;话说这台工作站已经有点“老了”，于是重新买了一台，美滋滋。5分钟安装了个fedora32，记录一下干了些啥。</p>
@@ -1493,6 +1482,17 @@
 ]]></content>
       <categories>
         <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>日记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>新年快乐</title>
+    <url>/happy-new-year.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;各位新年快乐。<br>&emsp;&emsp;我不是针对谁，我是说在座各位的模型都有问题。开玩笑的，别当真。<br>&emsp;&emsp;今天很高兴因为一篇文章刚刚接收了，收到了新年礼物。这篇文章经过了多重考验，三次大修。时间也长，文章从第一次投稿到接收用的时间二胎也都降世了。<br>&emsp;&emsp;文章的意思就是经过检验发现现在的模型都有问题。有点惹众怒啊。请轻拍。我忘记是谁说的了，没有一个模型是对的，但都是有用的。大家和气生财(文章)。切勿动怒。<br>&emsp;&emsp;下一步就是好好写本子了啊。哎。加了个油。</p>]]></content>
+      <categories>
+        <category>日记</category>
       </categories>
       <tags>
         <tag>日记</tag>
@@ -1583,8 +1583,8 @@
         <category>web</category>
       </categories>
       <tags>
-        <tag>web</tag>
         <tag>hexo</tag>
+        <tag>web</tag>
       </tags>
   </entry>
   <entry>
@@ -1685,8 +1685,8 @@
         <category>web</category>
       </categories>
       <tags>
-        <tag>web</tag>
         <tag>hexo</tag>
+        <tag>web</tag>
       </tags>
   </entry>
   <entry>
@@ -1704,8 +1704,8 @@
         <category>web</category>
       </categories>
       <tags>
-        <tag>web</tag>
         <tag>hexo</tag>
+        <tag>web</tag>
       </tags>
   </entry>
   <entry>
@@ -1748,8 +1748,8 @@
         <category>web</category>
       </categories>
       <tags>
-        <tag>web</tag>
         <tag>hexo</tag>
+        <tag>web</tag>
       </tags>
   </entry>
   <entry>
@@ -1789,22 +1789,6 @@
       </tags>
   </entry>
   <entry>
-    <title>冰川地震研究方向(一)</title>
-    <url>/gls1.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><ol>
-<li>冰川内部水流与冰震活动的作用关系。冰下湖水位变化、接地线附近的冰下水流、冰流底部空枪的打开和闭合、冰川侵蚀作用、冰架底部裂缝扩张与冰震关系。</li>
-<li>冰川物理、冰川动力学建模与冰川地震学的进一步交叉与融合、冰川结构变化机制及冰震和冰川物性参数关系，如冰川底部冰zi的剪切模量主要受到冰zi密度、含水量以及孔隙度的影响是研究冰川滑移定律及冰川动力学建模的重要参数。</li>
-<li>冰川结构变化的前兆特征研究，例如冰川地震发生前的前段冰震密集活动。</li>
-<li>外部环境与冰川的相互作用，例如海浪、潮汐、次重力波以及温度、风场变化对冰川活动的变化。</li>
-</ol>]]></content>
-      <categories>
-        <category>work</category>
-      </categories>
-      <tags>
-        <tag>glacial seismology</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>AI工具网址</title>
     <url>/ai-tools.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="大语言"><a href="#大语言" class="headerlink" title="大语言"></a>大语言</h2><ol>
@@ -1834,6 +1818,22 @@
       </categories>
       <tags>
         <tag>ai</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>冰川地震研究方向(一)</title>
+    <url>/gls1.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><ol>
+<li>冰川内部水流与冰震活动的作用关系。冰下湖水位变化、接地线附近的冰下水流、冰流底部空枪的打开和闭合、冰川侵蚀作用、冰架底部裂缝扩张与冰震关系。</li>
+<li>冰川物理、冰川动力学建模与冰川地震学的进一步交叉与融合、冰川结构变化机制及冰震和冰川物性参数关系，如冰川底部冰zi的剪切模量主要受到冰zi密度、含水量以及孔隙度的影响是研究冰川滑移定律及冰川动力学建模的重要参数。</li>
+<li>冰川结构变化的前兆特征研究，例如冰川地震发生前的前段冰震密集活动。</li>
+<li>外部环境与冰川的相互作用，例如海浪、潮汐、次重力波以及温度、风场变化对冰川活动的变化。</li>
+</ol>]]></content>
+      <categories>
+        <category>work</category>
+      </categories>
+      <tags>
+        <tag>glacial seismology</tag>
       </tags>
   </entry>
   <entry>
@@ -1883,6 +1883,22 @@
       </categories>
       <tags>
         <tag>laTeX</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>纪念BLUE</title>
+    <url>/memorise-blue.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;BLUE是在端午节过世的，或许更早，因为回到家只看到她的尸体。BLUE是我们在疫情解封后邂逅的，我们把她请回家，做了我们家一员。很抱歉没有给她配备好的住宿条件。让她在房间里可以自由的跑，只在进食的时候放在脸盆里。我不知道她挑不挑食。曾经在脸盆里投喂了白菜，她没吃。她很喜欢鱼饲料。每次投喂都大块朵颐。身材也是看得见的长大。一开始BLUE很害羞，只要我们一靠近她就立马缩回去，可能是还不熟络。她经常在屋子里摸索，大约所有地方她都造访过，很多时候还担当了扫帚的职责，常常跑出来以后裹了一身的棉絮。常常我们也不知道她在哪个角落，只听她哆哆哆的脚步声，便知道她还在探索。</p>
+<p>&emsp;&emsp;天冷起来，她是要睡很长时间的。我买了个冬眠盒子。把她放在里面，她迫不及待地钻了进去。开始还有些动静，天冷一些就安静了。只能从盒子上的水汽知道她还在。她熬过了四个冬天，她总能在天暖和的时候醒来。加上把她带回家那一次，她一共搬了三次家。</p>
+<p>&emsp;&emsp;有时我们在工作，她跑到客厅，瞅一瞅我们，大概在不懈的嘲笑，然后就继续她的探索；有时我们在床上休息，她在房间里哆哆哆，大概在取笑我们还在赖床。<br>后来我们碰到了更小只的purple男孩，把他带回来给BLUE做朋友。不知道他们相不相熟。有一次我们外出旅行了一周，他们两个一起躲到了厕所阴凉地方，靠在一块报团取暖。<br>到了冬天把他们一起放在了冬眠盒子。各自安好。谁知天热起来把他们放出来，BLUE的眼睛是浮肿的，也茶饭不思。我买了眼药给他治竟也无好转。随后又多次买药。</p>
+<p>&emsp;&emsp;老婆说自己不太会养宠物，以前家里养过鸟，鱼，狗。他们去世时自己会十分悲痛，像失去了亲人一样不舍。我说对BLUE大可放心，因为到时候可能她会给我们送终。可是毕竟不能如愿。</p>
+<p>&emsp;&emsp;我和娃把BLUE埋在了路口。那里我们还埋葬了一只小鸟和一只仓鼠。娃似乎比以前坚强，麻雀和仓鼠过世的时候他哭得很伤心，而这次他很淡然。他说这宇宙所有东西所有东西都会死掉，都会消失的。不知道他是明白还是不明白。</p>
+<p>&emsp;&emsp;希望一切安好。我估计以后再也不养宠物。如果他成了你的宠物，你就是在掌控他的生死。</p>]]></content>
+      <categories>
+        <category>某日记</category>
+      </categories>
+      <tags>
+        <tag>某日记</tag>
       </tags>
   </entry>
   <entry>
@@ -2896,22 +2912,6 @@
 </ul>]]></content>
       <tags>
         <tag>学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>纪念BLUE</title>
-    <url>/memorise-blue.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;BLUE是在端午节过世的，或许更早，因为回到家只看到她的尸体。BLUE是我们在疫情解封后邂逅的，我们把她请回家，做了我们家一员。很抱歉没有给她配备好的住宿条件。让她在房间里可以自由的跑，只在进食的时候放在脸盆里。我不知道她挑不挑食。曾经在脸盆里投喂了白菜，她没吃。她很喜欢鱼饲料。每次投喂都大块朵颐。身材也是看得见的长大。一开始BLUE很害羞，只要我们一靠近她就立马缩回去，可能是还不熟络。她经常在屋子里摸索，大约所有地方她都造访过，很多时候还担当了扫帚的职责，常常跑出来以后裹了一身的棉絮。常常我们也不知道她在哪个角落，只听她哆哆哆的脚步声，便知道她还在探索。</p>
-<p>&emsp;&emsp;天冷起来，她是要睡很长时间的。我买了个冬眠盒子。把她放在里面，她迫不及待地钻了进去。开始还有些动静，天冷一些就安静了。只能从盒子上的水汽知道她还在。她熬过了四个冬天，她总能在天暖和的时候醒来。加上把她带回家那一次，她一共搬了三次家。</p>
-<p>&emsp;&emsp;有时我们在工作，她跑到客厅，瞅一瞅我们，大概在不懈的嘲笑，然后就继续她的探索；有时我们在床上休息，她在房间里哆哆哆，大概在取笑我们还在赖床。<br>后来我们碰到了更小只的purple男孩，把他带回来给BLUE做朋友。不知道他们相不相熟。有一次我们外出旅行了一周，他们两个一起躲到了厕所阴凉地方，靠在一块报团取暖。<br>到了冬天把他们一起放在了冬眠盒子。各自安好。谁知天热起来把他们放出来，BLUE的眼睛是浮肿的，也茶饭不思。我买了眼药给他治竟也无好转。随后又多次买药。</p>
-<p>&emsp;&emsp;老婆说自己不太会养宠物，以前家里养过鸟，鱼，狗。他们去世时自己会十分悲痛，像失去了亲人一样不舍。我说对BLUE大可放心，因为到时候可能她会给我们送终。可是毕竟不能如愿。</p>
-<p>&emsp;&emsp;我和娃把BLUE埋在了路口。那里我们还埋葬了一只小鸟和一只仓鼠。娃似乎比以前坚强，麻雀和仓鼠过世的时候他哭得很伤心，而这次他很淡然。他说这宇宙所有东西所有东西都会死掉，都会消失的。不知道他是明白还是不明白。</p>
-<p>&emsp;&emsp;希望一切安好。我估计以后再也不养宠物。如果他成了你的宠物，你就是在掌控他的生死。</p>]]></content>
-      <categories>
-        <category>某日记</category>
-      </categories>
-      <tags>
-        <tag>某日记</tag>
       </tags>
   </entry>
   <entry>
@@ -4345,6 +4345,42 @@
       </tags>
   </entry>
   <entry>
+    <title>文献阅读（二十二）</title>
+    <url>/paper-reading-22.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="摘要翻译"><a href="#摘要翻译" class="headerlink" title="摘要翻译"></a>摘要翻译</h3><p>&emsp;&emsp;本文研究了南极和格陵兰岛的冰架在形成冰山前的崩解过程。目前，冰盖模型面临的一个主要问题是缺乏基于物理的冰架崩解法则。冰架与海湾壁或海底高地的摩擦提供了冰盖流动的阻力；这种阻力的减少会导致冰盖流动加速，进而导致海平面上升。冰架的长度增加会增加侧摩擦和遇到海底高地的概率，而这些无法在没有崩解法则的情况下计算。我们假设沿流冰架的扩展是控制崩解的主要因素。为了验证这一假设，我们收集了不同冰架的新数据和已发表的数据（表S1），选择这些数据是为了代表性而非全面性。除了一些壮观的例子外，崩解通量远大于长度变化。因此，冰架前端的速度大致等于崩解通量（c），而沿流速度梯度给出了适当的扩展速率（e˙）。所有数据都避开了剪切边缘，主要位于中心线附近。结果与我们的假设一致。最佳幂律拟合为 c &#x3D; 15,000e˙0.43 m&#x2F;year，解释了91%的方差（对数-对数空间中的线性回归为62%）；使用 c &#x3D; 12,000 e˙0.33 表示对扩展应力的线性依赖，解释了88%的方差（对数-对数为43%）。残差表明较窄的冰架崩解速度较慢。侧向剪切将裂缝开启应力从崩解前沿旋转开来，同时有利于较小的冰山和容易愈合的剪切裂缝。模型 c &#x3D; 0.039(e˙w)1.9 m&#x2F;year（半宽w以米为单位）解释了超过95%的方差（对数-对数空间中为92%）。崩解率与厚度H相关，但幂律拟合 c(H) 仅解释了69%的方差（对数-对数为84%）；涉及 c(e˙) 和 c(e˙w) 的拟合残差与H没有强相关性。尽管如此，扩展应力随H增加，人们可能会预期断裂，因此崩解，取决于变形工作完成的速率，因此与 e˙H 成正比。包括 (e˙wH) 的最佳拟合幂律为 c &#x3D; 0.022(e˙wH)0.98 m&#x2F;year；图1显示了通过原点的线性拟合 c &#x3D; 0.016 e˙wH m&#x2F;year，每个解释了89%的方差（对数-对数为93%）（SOM文本）。数据不允许在这些或其他可能的关系中进行选择，但后者是物理上有动机的并且简单。c随e˙增加的一个含义是，几乎所有未受支撑的冰架都将无条件不稳定，因为厚度（因此扩展速率）在流动方向上减小，但速度增加；崩解事件将冰架前沿移入更厚、更快扩展、因此更快崩解的冰中，这些冰供应得更慢。数值实验表明适当的支撑可以稳定冰架。这与观察结果一致：从足够快的输入足够薄（因此扩展缓慢）的冰中可以形成极长的“冰舌”，冰架通常观察到在支撑点附近终止，失去支撑后冰架迅速缩小。尽管我们没有学到完整的崩解法则，但我们建议，从冰架的相互比较中得出的关系可能比以往任何时候都更令人鼓舞，因此值得进一步测试，并在冰流模型中谨慎实施。</p>
+<h3 id="相关研究的重要性"><a href="#相关研究的重要性" class="headerlink" title="相关研究的重要性"></a>相关研究的重要性</h3><ol>
+<li><strong>海平面上升</strong>：冰架崩解是全球海平面变化的关键因素，了解其机制对于预测未来海平面变化至关重要。</li>
+<li><strong>气候变化研究</strong>：冰架崩解与气候变化紧密相关，研究崩解过程有助于理解全球气候变化的影响。</li>
+<li><strong>冰盖稳定性</strong>：了解冰架崩解机制对于评估冰盖稳定性和长期存续性至关重要。</li>
+</ol>
+<h3 id="前人研究及不足"><a href="#前人研究及不足" class="headerlink" title="前人研究及不足"></a>前人研究及不足</h3><ul>
+<li>**Meier (1990)**：在《Sea-Level Change》中讨论了冰架崩解对海平面变化的影响，但未提出基于物理的崩解法则。</li>
+<li>**Dupont &amp; Alley (2005)**：研究了冰架流动与崩解的关系，但未全面解释崩解过程的物理机制。</li>
+<li><strong>不足</strong>：缺乏一个全面的、基于物理的崩解法则，无法准确预测冰架崩解对海平面变化的影响。</li>
+</ul>
+<h3 id="本文使用的数据和方法"><a href="#本文使用的数据和方法" class="headerlink" title="本文使用的数据和方法"></a>本文使用的数据和方法</h3><ul>
+<li><strong>数据</strong>：收集了不同冰架的新数据和已发表的数据（表S1），包括冰架的厚度、半宽、速度等。</li>
+<li><strong>方法</strong>：通过最佳幂律拟合和线性回归分析，研究冰架崩解通量与冰架扩展速率之间的关系。</li>
+</ul>
+<h3 id="本文结果"><a href="#本文结果" class="headerlink" title="本文结果"></a>本文结果</h3><ul>
+<li><strong>结果</strong>：发现冰架崩解通量与冰架扩展速率的0.43次幂成正比，解释了91%的方差；冰架崩解率与冰架厚度、半宽和应变率的乘积成正比，解释了89%的方差。</li>
+</ul>
+<h3 id="本文创新之处及贡献"><a href="#本文创新之处及贡献" class="headerlink" title="本文创新之处及贡献"></a>本文创新之处及贡献</h3><ol>
+<li><strong>创新</strong>：提出了一个基于物理的冰架崩解法则，即冰架崩解通量与冰架扩展速率的幂律关系。</li>
+<li><strong>贡献</strong>：为冰流模型提供了一个可能的崩解法则，有助于更准确地预测冰架崩解对海平面变化的影响。</li>
+</ol>
+<h3 id="本文不足"><a href="#本文不足" class="headerlink" title="本文不足"></a>本文不足</h3><ul>
+<li><strong>数据限制</strong>：数据集并非全面，可能影响结果的普适性。</li>
+<li><strong>模型简化</strong>：模型假设沿流冰架扩展是控制崩解的主要因素，可能忽略了其他影响因素。</li>
+</ul>]]></content>
+      <categories>
+        <category>work</category>
+      </categories>
+      <tags>
+        <tag>paper</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>文献阅读(23)</title>
     <url>/paper-reading-23.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="摘要翻译"><a href="#摘要翻译" class="headerlink" title="摘要翻译"></a>摘要翻译</h3><p><strong>冰川崩解样式和模式的季节性周期的驱动因素</strong></p>
@@ -4393,42 +4429,6 @@
 <h3 id="本文不足"><a href="#本文不足" class="headerlink" title="本文不足"></a>本文不足</h3><ul>
 <li><strong>数据限制</strong>：研究仅限于Eqip Sermia冰川，可能无法直接推广到其他冰川。</li>
 <li><strong>方法限制</strong>：TRI和其他遥感技术可能无法捕捉到所有小型崩解事件，且对天气条件有一定依赖。</li>
-</ul>]]></content>
-      <categories>
-        <category>work</category>
-      </categories>
-      <tags>
-        <tag>paper</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>文献阅读（二十二）</title>
-    <url>/paper-reading-22.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="摘要翻译"><a href="#摘要翻译" class="headerlink" title="摘要翻译"></a>摘要翻译</h3><p>&emsp;&emsp;本文研究了南极和格陵兰岛的冰架在形成冰山前的崩解过程。目前，冰盖模型面临的一个主要问题是缺乏基于物理的冰架崩解法则。冰架与海湾壁或海底高地的摩擦提供了冰盖流动的阻力；这种阻力的减少会导致冰盖流动加速，进而导致海平面上升。冰架的长度增加会增加侧摩擦和遇到海底高地的概率，而这些无法在没有崩解法则的情况下计算。我们假设沿流冰架的扩展是控制崩解的主要因素。为了验证这一假设，我们收集了不同冰架的新数据和已发表的数据（表S1），选择这些数据是为了代表性而非全面性。除了一些壮观的例子外，崩解通量远大于长度变化。因此，冰架前端的速度大致等于崩解通量（c），而沿流速度梯度给出了适当的扩展速率（e˙）。所有数据都避开了剪切边缘，主要位于中心线附近。结果与我们的假设一致。最佳幂律拟合为 c &#x3D; 15,000e˙0.43 m&#x2F;year，解释了91%的方差（对数-对数空间中的线性回归为62%）；使用 c &#x3D; 12,000 e˙0.33 表示对扩展应力的线性依赖，解释了88%的方差（对数-对数为43%）。残差表明较窄的冰架崩解速度较慢。侧向剪切将裂缝开启应力从崩解前沿旋转开来，同时有利于较小的冰山和容易愈合的剪切裂缝。模型 c &#x3D; 0.039(e˙w)1.9 m&#x2F;year（半宽w以米为单位）解释了超过95%的方差（对数-对数空间中为92%）。崩解率与厚度H相关，但幂律拟合 c(H) 仅解释了69%的方差（对数-对数为84%）；涉及 c(e˙) 和 c(e˙w) 的拟合残差与H没有强相关性。尽管如此，扩展应力随H增加，人们可能会预期断裂，因此崩解，取决于变形工作完成的速率，因此与 e˙H 成正比。包括 (e˙wH) 的最佳拟合幂律为 c &#x3D; 0.022(e˙wH)0.98 m&#x2F;year；图1显示了通过原点的线性拟合 c &#x3D; 0.016 e˙wH m&#x2F;year，每个解释了89%的方差（对数-对数为93%）（SOM文本）。数据不允许在这些或其他可能的关系中进行选择，但后者是物理上有动机的并且简单。c随e˙增加的一个含义是，几乎所有未受支撑的冰架都将无条件不稳定，因为厚度（因此扩展速率）在流动方向上减小，但速度增加；崩解事件将冰架前沿移入更厚、更快扩展、因此更快崩解的冰中，这些冰供应得更慢。数值实验表明适当的支撑可以稳定冰架。这与观察结果一致：从足够快的输入足够薄（因此扩展缓慢）的冰中可以形成极长的“冰舌”，冰架通常观察到在支撑点附近终止，失去支撑后冰架迅速缩小。尽管我们没有学到完整的崩解法则，但我们建议，从冰架的相互比较中得出的关系可能比以往任何时候都更令人鼓舞，因此值得进一步测试，并在冰流模型中谨慎实施。</p>
-<h3 id="相关研究的重要性"><a href="#相关研究的重要性" class="headerlink" title="相关研究的重要性"></a>相关研究的重要性</h3><ol>
-<li><strong>海平面上升</strong>：冰架崩解是全球海平面变化的关键因素，了解其机制对于预测未来海平面变化至关重要。</li>
-<li><strong>气候变化研究</strong>：冰架崩解与气候变化紧密相关，研究崩解过程有助于理解全球气候变化的影响。</li>
-<li><strong>冰盖稳定性</strong>：了解冰架崩解机制对于评估冰盖稳定性和长期存续性至关重要。</li>
-</ol>
-<h3 id="前人研究及不足"><a href="#前人研究及不足" class="headerlink" title="前人研究及不足"></a>前人研究及不足</h3><ul>
-<li>**Meier (1990)**：在《Sea-Level Change》中讨论了冰架崩解对海平面变化的影响，但未提出基于物理的崩解法则。</li>
-<li>**Dupont &amp; Alley (2005)**：研究了冰架流动与崩解的关系，但未全面解释崩解过程的物理机制。</li>
-<li><strong>不足</strong>：缺乏一个全面的、基于物理的崩解法则，无法准确预测冰架崩解对海平面变化的影响。</li>
-</ul>
-<h3 id="本文使用的数据和方法"><a href="#本文使用的数据和方法" class="headerlink" title="本文使用的数据和方法"></a>本文使用的数据和方法</h3><ul>
-<li><strong>数据</strong>：收集了不同冰架的新数据和已发表的数据（表S1），包括冰架的厚度、半宽、速度等。</li>
-<li><strong>方法</strong>：通过最佳幂律拟合和线性回归分析，研究冰架崩解通量与冰架扩展速率之间的关系。</li>
-</ul>
-<h3 id="本文结果"><a href="#本文结果" class="headerlink" title="本文结果"></a>本文结果</h3><ul>
-<li><strong>结果</strong>：发现冰架崩解通量与冰架扩展速率的0.43次幂成正比，解释了91%的方差；冰架崩解率与冰架厚度、半宽和应变率的乘积成正比，解释了89%的方差。</li>
-</ul>
-<h3 id="本文创新之处及贡献"><a href="#本文创新之处及贡献" class="headerlink" title="本文创新之处及贡献"></a>本文创新之处及贡献</h3><ol>
-<li><strong>创新</strong>：提出了一个基于物理的冰架崩解法则，即冰架崩解通量与冰架扩展速率的幂律关系。</li>
-<li><strong>贡献</strong>：为冰流模型提供了一个可能的崩解法则，有助于更准确地预测冰架崩解对海平面变化的影响。</li>
-</ol>
-<h3 id="本文不足"><a href="#本文不足" class="headerlink" title="本文不足"></a>本文不足</h3><ul>
-<li><strong>数据限制</strong>：数据集并非全面，可能影响结果的普适性。</li>
-<li><strong>模型简化</strong>：模型假设沿流冰架扩展是控制崩解的主要因素，可能忽略了其他影响因素。</li>
 </ul>]]></content>
       <categories>
         <category>work</category>
@@ -4806,21 +4806,6 @@
       </tags>
   </entry>
   <entry>
-    <title>gmt怎么画箭头</title>
-    <url>/gmt-arrow.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;用gmt画箭头还是挺常见的。<a href="https://docs.generic-mapping-tools.org/dev/plot.html">GMT document</a>和<a href="https://docs.gmt-china.org/latest/basis/vector/">GMT中文手册</a>虽好，但如果网络不好不就歇菜了，还是记录一下吧，自己翻起来方便。画箭头参数是Sv(或SV)，自己调Sv之后的参数可以看效果。输入参数表示是x，y，angle，length。x，y表示箭头的起始坐标。angle是箭头指向，逆时针为正，x轴正向为0。length就是那个length了。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">echo 0 0 60 0.5i | gmt psxy -R -J -O -K -Sv0.25c+e0.2c -W0.5p -Gblack &gt;&gt;$ps</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>gmt</category>
-      </categories>
-      <tags>
-        <tag>gmt</tag>
-        <tag>script</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>鼠标点击位置记录</title>
     <url>/mouse-click-monitoring.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;当然是找作者要咯！不过有时可能没办法（例如可能联系不上作者&#x2F;作者说找不到数据了&#x2F;作者不想给你&#x2F;作者说你自己提取吧）或则并不需要他图片中的点的准确信息的时候，我们可以自己去点。之前有个perl脚本，但找不到了（这又体现了整理资料和做笔记的必要性），现在python很方便的，调用pynput的Listener就好了。记录鼠标点击的脚本如下：</p>
@@ -4835,6 +4820,21 @@
       </categories>
       <tags>
         <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>gmt怎么画箭头</title>
+    <url>/gmt-arrow.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;用gmt画箭头还是挺常见的。<a href="https://docs.generic-mapping-tools.org/dev/plot.html">GMT document</a>和<a href="https://docs.gmt-china.org/latest/basis/vector/">GMT中文手册</a>虽好，但如果网络不好不就歇菜了，还是记录一下吧，自己翻起来方便。画箭头参数是Sv(或SV)，自己调Sv之后的参数可以看效果。输入参数表示是x，y，angle，length。x，y表示箭头的起始坐标。angle是箭头指向，逆时针为正，x轴正向为0。length就是那个length了。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">echo 0 0 60 0.5i | gmt psxy -R -J -O -K -Sv0.25c+e0.2c -W0.5p -Gblack &gt;&gt;$ps</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>gmt</category>
+      </categories>
+      <tags>
+        <tag>gmt</tag>
+        <tag>script</tag>
       </tags>
   </entry>
   <entry>
@@ -5295,6 +5295,34 @@ G --> H[BFS序列提取]</pre>
       </tags>
   </entry>
   <entry>
+    <title>有趣的新闻网站</title>
+    <url>/news-website.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><ul>
+<li><a href="https://www.allyoucanread.com/">AllYouCanRead</a>是一个综合性资讯导航平台，按地域聚合全球六大洲新闻站点，同时以艺术、商业、科技等超 30 个主题精细分类各类网站资源，杂志专区更细分动物、时尚、育儿等数十个品类，通过清晰的结构化导航，为用户提供一站式全球新闻媒体与实用网站的定向检索服务。</li>
+<li><a href="https://www.apple.com/apple-news">Apple News</a>是苹果公司为iOS和macOS设备打造的官方新闻应用，它不仅整合主流新闻媒体的免费内容，还通过订阅服务 Apple News+ 提供大量杂志和深度报道。该平台以用户界面友好、内容精选优质而著称，尤其适合苹果生态中的用户日常阅读使用。借助苹果的算法推荐和编辑精选，用户可以在一个界面中阅读来自多家出版商的新闻、专题和评论。对于追求高品质阅读体验的用户，Apple News 提供了一种简洁但内容丰富的获取方式。</li>
+<li><a href="https://www.bbc.com/news">BBC News</a>是英国广播公司旗下的新闻平台，长期以”客观、权威”lol的报道风格受到全球用户信赖。它提供来自全球各地的实时新闻、深度分析、专题报道以及视频广播内容，尤其擅长以多语种进行国际传播，包括提供中文页面服务。BBC News 无需订阅即可访问，内容涵盖政治、科技、文化、健康等广泛领域，适合希望获取权威信息、提升英文阅读能力或关注全球动态的广大读者。</li>
+<li><a href="https://edition.cnn.com/">CNN</a>作为国际知名新闻平台，以实时追踪全球突发新闻为核心特色，24 小时不间断更新政治、经济、科技、文化及娱乐等领域资讯。其报道兼具速度与深度，既提供俄乌冲突、美国大选等热点事件的现场直击，也通过专家分析、纪录片等形式挖掘新闻背后的背景逻辑。</li>
+<li><a href="https://flipboard.com/">Flipboard</a>是一个以“杂志式排版”为特色的新闻聚合与社交内容平台，用户可以根据自己的兴趣订阅特定主题、媒体或用户发布的内容源，并将喜欢的内容整理成属于自己的“杂志”。它强调视觉体验和内容个性化，非常适合喜欢图文并茂、轻松滑阅的移动端用户。Flipboard 支持离线阅读和多平台同步，并通过滑动式界面增强交互感，使其成为许多用户在通勤、碎片时间中快速获取资讯的理想选择。</li>
+<li><a href="https://news.google.com/">Google News</a>是谷歌推出的一项新闻聚合服务，它通过智能算法从全球各大新闻网站实时抓取内容，为用户推送个性化、主题化的新闻报道。平台聚合同一事件来自不同媒体的视角，帮助读者全面了解事件全貌。其界面简洁、使用免费，同时支持桌面和移动端，是获取国际主流新闻、快速了解时事动态的便捷工具。用户还可以设置感兴趣的主题或地区，实现高度定制化的阅读体验，非常适合需要快速掌握新闻全局的用户。</li>
+<li><a href="https://www.newsnow.co.uk/h/">Newsnow</a>作为一个英国的多元新闻聚合平台，具备诸多显著优势。其新闻内容丰富多元，广泛涵盖英国、世界、商业、娱乐、体育及科技等各个领域，能够满足不同用户的多样化阅读需求。网站的界面设计简洁直观，分类清晰，便于用户快速定位感兴趣的新闻板块。其个性化推荐功能有助于用户发现更多符合个人喜好的内容。</li>
+<li><a href="https://emm.newsbrief.eu/NewsBrief/clusteredition/en/latest.html">NewsBrief</a>核心优势在于以分钟级速度聚合全球60+语言信源，通过AI驱动的动态聚类技术，将碎片化新闻提炼为可视化事件脉络，其独家”EU Focus”模块深度追踪28个欧盟机构政策动向，并支持跨事件对比分析，为政策研究者、商业机构提供学术级舆情洞察。</li>
+<li><a href="https://newspapermap.com/">Newspaper Map</a>通过地图可视化交互，直观聚合全球报纸资源，支持按地理位置一键直达各地新闻源，突破传统新闻检索的国界与语言限制。</li>
+<li><a href="https://www.thepaperboy.com/">Paperboy</a>在算法推荐新闻泛滥的时代，反其道而行，成为”数字报亭式”的古典新闻聚合平台，满足用户对传统报纸阅读体验的怀旧需求，同时解决地方性信息获取痛点。</li>
+<li><a href="http://www.pressreader.com/">PressReader</a>是一个汇集全球报纸和杂志的数字阅读平台，提供来自120多个国家、70多种语言的7000多份出版物原版内容。其最大优势在于内容全面、更新及时，涵盖新闻、财经、科技、时尚等多个领域。平台呈现与实体刊物一致的排版，支持全文搜索、多语种翻译、音频朗读与剪藏分享，提升了阅读的互动性和便捷性。</li>
+<li><a href="https://www.nytimes.com/">The New York Times</a>是全球最具影响力的新闻机构之一，提供高质量的新闻报道、评论、深度专题和调查类文章。作为一个付费订阅平台，它以专业记者团队、深入独家的调查报道和精准的国际视角闻名，尤其在政治、经济、国际关系等领域具有广泛权威性。无论是通过网页还是手机 App，纽约时报为读者提供一种深入理解世界的方式，是重度新闻使用者、研究者和政策关注者的重要信息来源。</li>
+<li><a href="https://wn.com/">World News</a>提供全球新闻资讯，整合大量知名媒体的报道，涵盖政治、经济、社会、文化及自然灾害等丰富多样的新闻内容，更新及时，能够快速反映世界各地的最新动态。该网站界面简洁直观，以图文列表形式展示新闻，每条新闻都明确标注了来源媒体和发布时间，增强了新闻的可信度与透明度。</li>
+<li><a href="https://world.huanqiu.com/">环球网国际新闻</a>以 “全球视野、中国视角” 为核心，兼具时效性、权威性与多元覆盖，既关注国际政治经济格局的宏观变化，也聚焦与中国及华人相关的具体议题，通过结构化板块和图文结合的方式，为读者提供全面、及时的国际资讯。 </li>
+<li><a href="https://news.cctv.com/">央视网</a>作为国家级新媒体旗舰平台，既保持主流媒体的权威性，又通过技术创新实现“新闻+政务+服务”深度融合，是媒体融合发展的标杆案例。其核心优势在于依托总台内容资源库构建的全媒体传播体系，以及在无障碍访问等社会责任领域的先行实践。</li>
+</ul>
+<p>&emsp;&emsp;打不开记得爬高一点。</p>]]></content>
+      <categories>
+        <category>杂</category>
+      </categories>
+      <tags>
+        <tag>Fun</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>$&#92;LaTeX$的数学公式表达</title>
     <url>/latex-math-express.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><blockquote>
@@ -5635,34 +5663,6 @@ G --> H[BFS序列提取]</pre>
       </tags>
   </entry>
   <entry>
-    <title>有趣的新闻网站</title>
-    <url>/news-website.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><ul>
-<li><a href="https://www.allyoucanread.com/">AllYouCanRead</a>是一个综合性资讯导航平台，按地域聚合全球六大洲新闻站点，同时以艺术、商业、科技等超 30 个主题精细分类各类网站资源，杂志专区更细分动物、时尚、育儿等数十个品类，通过清晰的结构化导航，为用户提供一站式全球新闻媒体与实用网站的定向检索服务。</li>
-<li><a href="https://www.apple.com/apple-news">Apple News</a>是苹果公司为iOS和macOS设备打造的官方新闻应用，它不仅整合主流新闻媒体的免费内容，还通过订阅服务 Apple News+ 提供大量杂志和深度报道。该平台以用户界面友好、内容精选优质而著称，尤其适合苹果生态中的用户日常阅读使用。借助苹果的算法推荐和编辑精选，用户可以在一个界面中阅读来自多家出版商的新闻、专题和评论。对于追求高品质阅读体验的用户，Apple News 提供了一种简洁但内容丰富的获取方式。</li>
-<li><a href="https://www.bbc.com/news">BBC News</a>是英国广播公司旗下的新闻平台，长期以”客观、权威”lol的报道风格受到全球用户信赖。它提供来自全球各地的实时新闻、深度分析、专题报道以及视频广播内容，尤其擅长以多语种进行国际传播，包括提供中文页面服务。BBC News 无需订阅即可访问，内容涵盖政治、科技、文化、健康等广泛领域，适合希望获取权威信息、提升英文阅读能力或关注全球动态的广大读者。</li>
-<li><a href="https://edition.cnn.com/">CNN</a>作为国际知名新闻平台，以实时追踪全球突发新闻为核心特色，24 小时不间断更新政治、经济、科技、文化及娱乐等领域资讯。其报道兼具速度与深度，既提供俄乌冲突、美国大选等热点事件的现场直击，也通过专家分析、纪录片等形式挖掘新闻背后的背景逻辑。</li>
-<li><a href="https://flipboard.com/">Flipboard</a>是一个以“杂志式排版”为特色的新闻聚合与社交内容平台，用户可以根据自己的兴趣订阅特定主题、媒体或用户发布的内容源，并将喜欢的内容整理成属于自己的“杂志”。它强调视觉体验和内容个性化，非常适合喜欢图文并茂、轻松滑阅的移动端用户。Flipboard 支持离线阅读和多平台同步，并通过滑动式界面增强交互感，使其成为许多用户在通勤、碎片时间中快速获取资讯的理想选择。</li>
-<li><a href="https://news.google.com/">Google News</a>是谷歌推出的一项新闻聚合服务，它通过智能算法从全球各大新闻网站实时抓取内容，为用户推送个性化、主题化的新闻报道。平台聚合同一事件来自不同媒体的视角，帮助读者全面了解事件全貌。其界面简洁、使用免费，同时支持桌面和移动端，是获取国际主流新闻、快速了解时事动态的便捷工具。用户还可以设置感兴趣的主题或地区，实现高度定制化的阅读体验，非常适合需要快速掌握新闻全局的用户。</li>
-<li><a href="https://www.newsnow.co.uk/h/">Newsnow</a>作为一个英国的多元新闻聚合平台，具备诸多显著优势。其新闻内容丰富多元，广泛涵盖英国、世界、商业、娱乐、体育及科技等各个领域，能够满足不同用户的多样化阅读需求。网站的界面设计简洁直观，分类清晰，便于用户快速定位感兴趣的新闻板块。其个性化推荐功能有助于用户发现更多符合个人喜好的内容。</li>
-<li><a href="https://emm.newsbrief.eu/NewsBrief/clusteredition/en/latest.html">NewsBrief</a>核心优势在于以分钟级速度聚合全球60+语言信源，通过AI驱动的动态聚类技术，将碎片化新闻提炼为可视化事件脉络，其独家”EU Focus”模块深度追踪28个欧盟机构政策动向，并支持跨事件对比分析，为政策研究者、商业机构提供学术级舆情洞察。</li>
-<li><a href="https://newspapermap.com/">Newspaper Map</a>通过地图可视化交互，直观聚合全球报纸资源，支持按地理位置一键直达各地新闻源，突破传统新闻检索的国界与语言限制。</li>
-<li><a href="https://www.thepaperboy.com/">Paperboy</a>在算法推荐新闻泛滥的时代，反其道而行，成为”数字报亭式”的古典新闻聚合平台，满足用户对传统报纸阅读体验的怀旧需求，同时解决地方性信息获取痛点。</li>
-<li><a href="http://www.pressreader.com/">PressReader</a>是一个汇集全球报纸和杂志的数字阅读平台，提供来自120多个国家、70多种语言的7000多份出版物原版内容。其最大优势在于内容全面、更新及时，涵盖新闻、财经、科技、时尚等多个领域。平台呈现与实体刊物一致的排版，支持全文搜索、多语种翻译、音频朗读与剪藏分享，提升了阅读的互动性和便捷性。</li>
-<li><a href="https://www.nytimes.com/">The New York Times</a>是全球最具影响力的新闻机构之一，提供高质量的新闻报道、评论、深度专题和调查类文章。作为一个付费订阅平台，它以专业记者团队、深入独家的调查报道和精准的国际视角闻名，尤其在政治、经济、国际关系等领域具有广泛权威性。无论是通过网页还是手机 App，纽约时报为读者提供一种深入理解世界的方式，是重度新闻使用者、研究者和政策关注者的重要信息来源。</li>
-<li><a href="https://wn.com/">World News</a>提供全球新闻资讯，整合大量知名媒体的报道，涵盖政治、经济、社会、文化及自然灾害等丰富多样的新闻内容，更新及时，能够快速反映世界各地的最新动态。该网站界面简洁直观，以图文列表形式展示新闻，每条新闻都明确标注了来源媒体和发布时间，增强了新闻的可信度与透明度。</li>
-<li><a href="https://world.huanqiu.com/">环球网国际新闻</a>以 “全球视野、中国视角” 为核心，兼具时效性、权威性与多元覆盖，既关注国际政治经济格局的宏观变化，也聚焦与中国及华人相关的具体议题，通过结构化板块和图文结合的方式，为读者提供全面、及时的国际资讯。 </li>
-<li><a href="https://news.cctv.com/">央视网</a>作为国家级新媒体旗舰平台，既保持主流媒体的权威性，又通过技术创新实现“新闻+政务+服务”深度融合，是媒体融合发展的标杆案例。其核心优势在于依托总台内容资源库构建的全媒体传播体系，以及在无障碍访问等社会责任领域的先行实践。</li>
-</ul>
-<p>&emsp;&emsp;打不开记得爬高一点。</p>]]></content>
-      <categories>
-        <category>杂</category>
-      </categories>
-      <tags>
-        <tag>Fun</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>PYTHON脚本练习（一）</title>
     <url>/python-script1.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import os</span><br><span class="line">import numpy as np</span><br><span class="line">import pandas as pd</span><br><span class="line">import matplotlib.pyplot as plt</span><br><span class="line">from obspy import read</span><br><span class="line">from obspy.signal.filter import envelope</span><br><span class="line">from concurrent.futures import ThreadPoolExecutor, as_completed</span><br><span class="line">from collections import defaultdict</span><br><span class="line"></span><br><span class="line"># 参数设置 </span><br><span class="line">input_root = &quot;events_20250619&quot;</span><br><span class="line">output_root = &quot;bp_sac&quot;</span><br><span class="line">center_periods = np.arange(25, 150, 10)</span><br><span class="line">bandwidth = 0.010</span><br><span class="line">vmin, vmax = 2.5, 5.0</span><br><span class="line">noise_offset, noise_len = 1000, 1000</span><br><span class="line">snr_threshold = 3.0</span><br><span class="line">max_workers = 8  # 根据 CPU 核心数调整</span><br><span class="line"></span><br><span class="line"># 存储每个周期的 SNR 值</span><br><span class="line">period_snr_map = defaultdict(list)</span><br><span class="line"></span><br><span class="line">def process_file(filepath, root):</span><br><span class="line">    results = []</span><br><span class="line">    try:</span><br><span class="line">        st = read(filepath)</span><br><span class="line">        tr = st[0]</span><br><span class="line">        sac = tr.stats.sac</span><br><span class="line">    except Exception as e:</span><br><span class="line">        print(f&quot;跳过 &#123;filepath&#125;: &#123;e&#125;&quot;)</span><br><span class="line">        return results</span><br><span class="line"></span><br><span class="line">    if not hasattr(sac, &quot;o&quot;) or not hasattr(sac, &quot;dist&quot;):</span><br><span class="line">        return results</span><br><span class="line"></span><br><span class="line">    dist = sac.dist</span><br><span class="line">    starttime = tr.stats.starttime</span><br><span class="line">    win_start = starttime + dist / vmax</span><br><span class="line">    win_end = starttime + dist / vmin</span><br><span class="line">    t = tr.times()</span><br><span class="line">    abs_time = np.array([starttime + float(tt) for tt in t])</span><br><span class="line"></span><br><span class="line">    for period in center_periods:</span><br><span class="line">        fc = 1.0 / period</span><br><span class="line">        fmin, fmax = fc - bandwidth / 2, fc + bandwidth / 2</span><br><span class="line">        if fmin &lt;= 0:</span><br><span class="line">            continue</span><br><span class="line">        tr_filt = tr.copy()</span><br><span class="line">        tr_filt.detrend(&quot;demean&quot;)</span><br><span class="line">        tr_filt.taper(0.05)</span><br><span class="line">        tr_filt.filter(&quot;bandpass&quot;, freqmin=fmin, freqmax=fmax, corners=4, zerophase=True)</span><br><span class="line">        env = envelope(tr_filt.data)</span><br><span class="line">        idx_sig = np.where((abs_time &gt;= win_start) &amp; (abs_time &lt;= win_end))[0]</span><br><span class="line">        if len(idx_sig) == 0:</span><br><span class="line">            continue</span><br><span class="line">        signal_max = np.max(env[idx_sig])</span><br><span class="line">        noise_start = win_end + noise_offset</span><br><span class="line">        noise_end = noise_start + noise_len</span><br><span class="line">        idx_noise = np.where((abs_time &gt;= noise_start) &amp; (abs_time &lt;= noise_end))[0]</span><br><span class="line">        if len(idx_noise) == 0:</span><br><span class="line">            continue</span><br><span class="line">        noise_rms = np.sqrt(np.mean(env[idx_noise] ** 2))</span><br><span class="line">        snr = signal_max / noise_rms if noise_rms &gt; 0 else 0</span><br><span class="line"></span><br><span class="line">        if snr &gt;= snr_threshold:</span><br><span class="line">            tr_filt.stats.sac.user0 = snr</span><br><span class="line">            year = tr.stats.starttime.year</span><br><span class="line">            jday = tr.stats.starttime.julday</span><br><span class="line">            station = tr.stats.station.lower()</span><br><span class="line">            channel = tr.stats.channel.lower()</span><br><span class="line">            outname = f&quot;z.&#123;year&#125;.&#123;jday:03d&#125;.00.&#123;station&#125;.&#123;channel&#125;.&#123;period:03d&#125;&quot;</span><br><span class="line"></span><br><span class="line">            rel_dir = os.path.relpath(root, input_root)</span><br><span class="line">            out_dir = os.path.join(output_root, rel_dir)</span><br><span class="line">            os.makedirs(out_dir, exist_ok=True)</span><br><span class="line">            outpath = os.path.join(out_dir, outname)</span><br><span class="line">            tr_filt.write(outpath, format=&quot;SAC&quot;)</span><br><span class="line"></span><br><span class="line">            results.append((period, snr))</span><br><span class="line">            print(f&quot;✔ 保存: &#123;outname&#125;, SNR=&#123;snr:.2f&#125;&quot;)</span><br><span class="line"></span><br><span class="line">    return results</span><br><span class="line"># ===== 收集所有文件路径 =====</span><br><span class="line">all_files = []</span><br><span class="line">for root, dirs, files in os.walk(input_root):</span><br><span class="line">    for file in files:</span><br><span class="line">        if file.endswith(&quot;bhz.SAC_rm&quot;):</span><br><span class="line">            all_files.append((os.path.join(root, file), root))</span><br><span class="line"></span><br><span class="line">print(f&quot;📁 待处理文件数: &#123;len(all_files)&#125;&quot;)</span><br><span class="line"></span><br><span class="line"># ===== 并行处理 =====</span><br><span class="line">with ThreadPoolExecutor(max_workers=max_workers) as executor:</span><br><span class="line">    future_to_file = &#123;executor.submit(process_file, fpath, root): (fpath, root) for fpath, root in all_files&#125;</span><br><span class="line">    for future in as_completed(future_to_file):</span><br><span class="line">        try:</span><br><span class="line">            result = future.result()</span><br><span class="line">            for period, snr in result:</span><br><span class="line">                period_snr_map[period].append(snr)</span><br><span class="line">        except Exception as e:</span><br><span class="line">            fpath, _ = future_to_file[future]</span><br><span class="line">            print(f&quot;❌ 文件出错 &#123;fpath&#125;: &#123;e&#125;&quot;)</span><br><span class="line"></span><br><span class="line"># ===== 统计与可视化 =====</span><br><span class="line">periods = sorted(period_snr_map.keys())</span><br><span class="line">counts = [len(period_snr_map[p]) for p in periods]</span><br><span class="line">means = [np.mean(period_snr_map[p]) if len(period_snr_map[p]) &gt; 0 else 0 for p in periods]</span><br><span class="line"></span><br><span class="line">df = pd.DataFrame(&#123;</span><br><span class="line">    &quot;Period(s)&quot;: periods,</span><br><span class="line">    &quot;Count(SNR&gt;3)&quot;: counts,</span><br><span class="line">    &quot;Mean_SNR(SNR&gt;3)&quot;: means</span><br><span class="line">&#125;)</span><br><span class="line">df.to_csv(&quot;snr_stats.csv&quot;, index=False)</span><br><span class="line"></span><br><span class="line"># === 可视化 ===</span><br><span class="line">plt.figure(figsize=(10, 6))</span><br><span class="line">plt.bar(periods, counts, width=4, color=&#x27;skyblue&#x27;, edgecolor=&#x27;black&#x27;)</span><br><span class="line">plt.xlabel(&quot;Period (s)&quot;)</span><br><span class="line">plt.ylabel(&quot;Count of SNR &gt; 3&quot;)</span><br><span class="line">plt.title(&quot;Number of Traces with SNR &gt; 3 per Period&quot;)</span><br><span class="line">plt.grid(True, linestyle=&quot;--&quot;, alpha=0.5)</span><br><span class="line">plt.tight_layout()</span><br><span class="line">plt.savefig(&quot;snr_count_bar.png&quot;, dpi=150)</span><br><span class="line"></span><br><span class="line">plt.figure(figsize=(10, 6))</span><br><span class="line">plt.plot(periods, means, marker=&#x27;o&#x27;, linestyle=&#x27;-&#x27;, color=&#x27;orange&#x27;)</span><br><span class="line">plt.xlabel(&quot;Period (s)&quot;)</span><br><span class="line">plt.ylabel(&quot;Mean SNR (SNR &gt; 3)&quot;)</span><br><span class="line">plt.title(&quot;Mean SNR of Traces with SNR &gt; 3 per Period&quot;)</span><br><span class="line">plt.grid(True, linestyle=&quot;--&quot;, alpha=0.5)</span><br><span class="line">plt.tight_layout()</span><br><span class="line">plt.savefig(&quot;snr_mean_line.png&quot;, dpi=150)</span><br><span class="line"></span><br><span class="line">print(&quot;🎉 并行处理完成，统计结果写入 snr_stats.csv&quot;)</span><br></pre></td></tr></table></figure></li>
@@ -5761,6 +5761,27 @@ G --> H[BFS序列提取]</pre>
       </tags>
   </entry>
   <entry>
+    <title>如何将图片转化成视频</title>
+    <url>/png-to-mp4.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;我的图一般都是在linux下生成，大量的图自然用命令来生成是最好的。这里用到程序ffmpeg，没有的话需要自己先安装了啊。<br>接下来用命令:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ffmpeg -pattern_type glob -framerate 24 -i &quot;2*.png&quot; -c:v libx264 -pix_fmt yuv420p output.mp4</span><br></pre></td></tr></table></figure>
+<ul>
+<li>-pattern_type glob: 作用是启用通配符模式匹配输入文件名。</li>
+<li>-framerate 24: 作用是设置输入文件的帧率为24帧&#x2F;秒，那么如果你有100张图片，你生成的视频长度则为100&#x2F;25&#x3D;4.17秒。</li>
+<li>-i &quot;2*.png&quot;:表示指定输入文件为所有以2开头的png文件。</li>
+<li>-c:v libx264: 视频编码器为H.264</li>
+<li>-pix_fmt yuv420p: 设置像素格式为YUV420色彩空间。</li>
+<li>output.mp4: 输出文件。<br>ffmpeg的参数多得很，用到的时候可以去查。这句命令应该没啥问题，有问题就去问ai。另外，生成了mp4以后为了方便在ppt中演示播放可以将其转化为gif。<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ffmpeg -i output.mp4 output.gif</span><br></pre></td></tr></table></figure>
+然后就大功告成了啊。</li>
+</ul>]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>PYTHON脚本练习（三）聚束分析</title>
     <url>/fk.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;以下脚本可完成功能：</p>
@@ -5798,27 +5819,6 @@ G --> H[BFS序列提取]</pre>
       </categories>
       <tags>
         <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>如何将图片转化成视频</title>
-    <url>/png-to-mp4.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;我的图一般都是在linux下生成，大量的图自然用命令来生成是最好的。这里用到程序ffmpeg，没有的话需要自己先安装了啊。<br>接下来用命令:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ffmpeg -pattern_type glob -framerate 24 -i &quot;2*.png&quot; -c:v libx264 -pix_fmt yuv420p output.mp4</span><br></pre></td></tr></table></figure>
-<ul>
-<li>-pattern_type glob: 作用是启用通配符模式匹配输入文件名。</li>
-<li>-framerate 24: 作用是设置输入文件的帧率为24帧&#x2F;秒，那么如果你有100张图片，你生成的视频长度则为100&#x2F;25&#x3D;4.17秒。</li>
-<li>-i &quot;2*.png&quot;:表示指定输入文件为所有以2开头的png文件。</li>
-<li>-c:v libx264: 视频编码器为H.264</li>
-<li>-pix_fmt yuv420p: 设置像素格式为YUV420色彩空间。</li>
-<li>output.mp4: 输出文件。<br>ffmpeg的参数多得很，用到的时候可以去查。这句命令应该没啥问题，有问题就去问ai。另外，生成了mp4以后为了方便在ppt中演示播放可以将其转化为gif。<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ffmpeg -i output.mp4 output.gif</span><br></pre></td></tr></table></figure>
-然后就大功告成了啊。</li>
-</ul>]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -6287,6 +6287,101 @@ G --> H[BFS序列提取]</pre>
       </categories>
       <tags>
         <tag>gmt</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo插入图片</title>
+    <url>/hexo-picture.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>之前讲过怎么引用图片见<a href="/show-picture-in-hexo" title="hexo图片显示">hexo图片显示</a>。但今天发现了奇怪的问题。那就是当我用gmt画图的时候，如果画出来的是球形图片时，这一句</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% asset_img picture_name %&#125;</span><br></pre></td></tr></table></figure>
+<p>就不行了，显示不出来。然后就发现了这句：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;img src=&quot;/post_name/picture_name&quot; &gt;</span><br></pre></td></tr></table></figure>
+<p>这就可以了。不过这也不是办法，因为如果所有图片都存放在post_name目录下，那个人网站就太臃肿了。之前有个<a href="https://sm.ms/">网站</a>，可以免费上传图片，然后分配一个网址给你，然后用这一句</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">![](picture_address)</span><br></pre></td></tr></table></figure>
+<p>然而这个网站在国内登陆出现问题了。于是问了Kimi，它列出了8个：</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>网址</th>
+<th>单张上限</th>
+<th>有效期</th>
+<th>外链速度</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Imgur</strong></td>
+<td><a href="https://imgur.com/">https://imgur.com</a></td>
+<td>200 MB</td>
+<td>永久</td>
+<td>全球 CDN</td>
+<td>免注册即可上传，直链秒开，Hexo 最常用</td>
+</tr>
+<tr>
+<td><strong>PostImage</strong></td>
+<td><a href="https://postimages.org/">https://postimages.org</a></td>
+<td>10 MB</td>
+<td>永久</td>
+<td>全球 CDN</td>
+<td>支持一键论坛&#x2F;Markdown格式，复制即用</td>
+</tr>
+<tr>
+<td><strong>ImgBB</strong></td>
+<td><a href="https://imgbb.com/">https://imgbb.com</a></td>
+<td>32 MB</td>
+<td>永久</td>
+<td>全球 CDN</td>
+<td>可匿名上传，提供HTML&#x2F;Markdown直链</td>
+</tr>
+<tr>
+<td><strong>路过图床</strong></td>
+<td><a href="https://imgchr.com/">https://imgchr.com</a></td>
+<td>10 MB</td>
+<td>永久</td>
+<td>国内 CDN</td>
+<td>中文界面，免登录，支持批量，国内访问飞快</td>
+</tr>
+<tr>
+<td><strong>Voooe图床</strong></td>
+<td><a href="https://voooe.cn/">https://voooe.cn</a></td>
+<td>25 MB</td>
+<td>永久</td>
+<td>全球加速</td>
+<td>拖放上传，自动生成Markdown代码</td>
+</tr>
+<tr>
+<td><strong>魔法师图床</strong></td>
+<td><a href="https://bgm.tv/img">https://bgm.tv/img</a></td>
+<td>20 MB</td>
+<td>永久</td>
+<td>国内节点</td>
+<td>直连不跳转，适合博客插图</td>
+</tr>
+<tr>
+<td><strong>Telegraph-Image</strong></td>
+<td><a href="https://telegra.ph/">https://telegra.ph</a></td>
+<td>5 MB</td>
+<td>永久</td>
+<td>Cloudflare</td>
+<td>免注册，纯静态，上传即得直链</td>
+</tr>
+<tr>
+<td><strong>Imgbox</strong></td>
+<td><a href="https://imgbox.com/">https://imgbox.com</a></td>
+<td>10 MB</td>
+<td>永久</td>
+<td>欧美节点</td>
+<td>界面极简，可原图保存</td>
+</tr>
+</tbody></table>
+<p>看起来很不错。有空试试。</p>]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>web</tag>
       </tags>
   </entry>
 </search>
