@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2025-11-23T12:01:27.607Z</updated>
+  <updated>2025-11-23T12:10:07.014Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>gmt画震源球</title>
+    <link href="http://www.seis-jun.xyz/gmt-meca"/>
+    <id>http://www.seis-jun.xyz/gmt-meca</id>
+    <published>2025-11-23T12:05:15.000Z</published>
+    <updated>2025-11-23T12:10:07.014Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;gmt怎么画震源球？&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="gmt" scheme="http://www.seis-jun.xyz/categories/gmt/"/>
+    
+    
+    <category term="gmt" scheme="http://www.seis-jun.xyz/tags/gmt/"/>
+    
+  </entry>
   
   <entry>
     <title>gmt的投影方式</title>
@@ -379,25 +398,6 @@
     
     
     <category term="Linux" scheme="http://www.seis-jun.xyz/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>python脚本下载连续波形数据更新</title>
-    <link href="http://www.seis-jun.xyz/download-continous-data-update"/>
-    <id>http://www.seis-jun.xyz/download-continous-data-update</id>
-    <published>2025-06-08T12:42:13.000Z</published>
-    <updated>2025-10-26T08:10:19.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;python脚本下载连续波形数据更新。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
-    
-    
-    <category term="python" scheme="http://www.seis-jun.xyz/tags/python/"/>
     
   </entry>
   
