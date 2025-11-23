@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2025-11-08T10:46:25.408Z</updated>
+  <updated>2025-11-23T07:53:05.683Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>gmt的投影方式</title>
+    <link href="http://www.seis-jun.xyz/gmt-projection"/>
+    <id>http://www.seis-jun.xyz/gmt-projection</id>
+    <published>2025-11-23T07:24:13.000Z</published>
+    <updated>2025-11-23T07:53:05.683Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;每次画图都东找西找，多麻烦。别找了看这里就好了。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="gmt" scheme="http://www.seis-jun.xyz/categories/gmt/"/>
+    
+    
+    <category term="gmt" scheme="http://www.seis-jun.xyz/tags/gmt/"/>
+    
+  </entry>
   
   <entry>
     <title>地震学相关程序</title>
@@ -372,27 +391,6 @@
     
     
     <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;python脚本下载连续波形数据更新。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
-    
-    
-    <category term="python" scheme="http://www.seis-jun.xyz/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>urllib3的问题</title>
-    <link href="http://www.seis-jun.xyz/problem-of-urllib3"/>
-    <id>http://www.seis-jun.xyz/problem-of-urllib3</id>
-    <published>2025-06-08T06:12:26.000Z</published>
-    <updated>2025-10-26T08:10:19.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;安装了seisman的&lt;a href=&quot;https://github.com/seisman/HinetPy&quot;&gt;HinetPy&lt;/a&gt;，运行脚本数据下载脚本的时候就遇到这个问题：&lt;/p&gt;
-&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;from HinetPy import Client, win32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  File &amp;quot;/home/junxie/work/Snet/HinetPy-main/HinetPy/__init__.py&amp;quot;, line 23, in &amp;lt;module&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    from .client import Client&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  File &amp;quot;/home/junxie/work/Snet/HinetPy-main/HinetPy/client.py&amp;quot;, line 22, in &amp;lt;module&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    from urllib3.util import create_urllib3_context&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ImportError: cannot import name &amp;#x27;create_urllib3_context&amp;#x27; from &amp;#x27;urllib3.util&amp;#x27; (/home/junxie/.conda/envs/py3/lib/python3.9/site-packages/urllib3/util/__init__.py)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;怎么整？&lt;/p&gt;</summary>
     
     
     
