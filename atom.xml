@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2025-11-23T11:29:57.331Z</updated>
+  <updated>2025-11-23T11:39:33.481Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://www.seis-jun.xyz/gmt-projection"/>
     <id>http://www.seis-jun.xyz/gmt-projection</id>
     <published>2025-11-23T07:24:13.000Z</published>
-    <updated>2025-11-23T11:29:57.331Z</updated>
+    <updated>2025-11-23T11:39:33.481Z</updated>
     
     
       
@@ -49,7 +49,7 @@
     <updated>2025-11-08T10:46:25.408Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;哪里去找地震学相关的程序？&lt;/p&gt;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;哪里去找地震学相关的程序？&lt;/p&gt;</summary>
     
     
     
@@ -68,7 +68,7 @@
     <updated>2025-11-02T05:47:49.753Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;想反演震源机制解怎么办？&lt;/p&gt;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;想反演震源机制解怎么办？&lt;/p&gt;</summary>
     
     
     
@@ -87,7 +87,7 @@
     <updated>2025-11-06T04:04:54.862Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;单台三分量背景噪声数据如何分析极化与信号源背方位角？  &lt;/p&gt;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;单台三分量背景噪声数据如何分析极化与信号源背方位角？  &lt;/p&gt;</summary>
     
     
     
@@ -106,7 +106,7 @@
     <updated>2025-10-26T08:10:19.000Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2011GC003661&quot;&gt;Polarized Earth’s ambient microseismic noise&lt;/a&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2011GC003661&quot;&gt;Polarized Earth’s ambient microseismic noise&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     
@@ -125,7 +125,7 @@
     <updated>2025-10-26T08:10:19.000Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024JB030139?af=R&quot;&gt;SGLOBE-Q2D: A Global 2-D Model of Fundamental and Higher Mode Rayleigh Wave Attenuation From a Large Amplitude Data Set&lt;/a&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024JB030139?af=R&quot;&gt;SGLOBE-Q2D: A Global 2-D Model of Fundamental and Higher Mode Rayleigh Wave Attenuation From a Large Amplitude Data Set&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     
@@ -144,7 +144,7 @@
     <updated>2025-10-26T08:10:19.000Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;Fedora中Apache环境下如何安装FreshRSS&lt;/p&gt;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;Fedora中Apache环境下如何安装FreshRSS&lt;/p&gt;</summary>
     
     
     
@@ -163,7 +163,7 @@
     <updated>2025-10-26T08:10:19.000Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;如果我有一堆图片，如何利用他们生成视频呢？&lt;/p&gt;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;如果我有一堆图片，如何利用他们生成视频呢？&lt;/p&gt;</summary>
     
     
     
@@ -182,7 +182,7 @@
     <updated>2025-10-26T08:10:19.000Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;python脚本练习-fk。&lt;/p&gt;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;python脚本练习-fk。&lt;/p&gt;</summary>
     
     
     
@@ -201,7 +201,7 @@
     <updated>2025-10-26T08:10:19.000Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;你是不是也想让自己的程序像obspy一样，叫全世界的人pip install就可以用？&lt;/p&gt;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;你是不是也想让自己的程序像obspy一样，叫全世界的人pip install就可以用？&lt;/p&gt;</summary>
     
     
     
@@ -220,7 +220,7 @@
     <updated>2025-10-28T09:08:53.367Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;以下是python脚本练习2，功能为读取选定时间段内的hdf5文件，文件名形如20130512_cross_spec.hdf5。该文件总共有24段，每一段是一个小时某台阵平均互相关谱。然后画出这个互相关谱，保存为png格式图片。&lt;/p&gt;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;以下是python脚本练习2，功能为读取选定时间段内的hdf5文件，文件名形如20130512_cross_spec.hdf5。该文件总共有24段，每一段是一个小时某台阵平均互相关谱。然后画出这个互相关谱，保存为png格式图片。&lt;/p&gt;</summary>
     
     
     
@@ -239,7 +239,7 @@
     <updated>2025-10-26T08:10:19.000Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;今天学习匹配场处理（Matched Field Processing, MFP），见&lt;a href=&quot;https://geophydog.cool/post/matched_field_processing/#__1-basic-descriptions__&quot;&gt;这里&lt;/a&gt;。&lt;/p&gt;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;今天学习匹配场处理（Matched Field Processing, MFP），见&lt;a href=&quot;https://geophydog.cool/post/matched_field_processing/#__1-basic-descriptions__&quot;&gt;这里&lt;/a&gt;。&lt;/p&gt;</summary>
     
     
     
@@ -254,7 +254,7 @@
     <updated>2025-10-28T12:32:34.985Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;收集了一些有趣的jupyter notebook插件。&lt;/p&gt;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;收集了一些有趣的jupyter notebook插件。&lt;/p&gt;</summary>
     
     
     
@@ -273,7 +273,7 @@
     <updated>2025-10-28T14:48:24.288Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;哪里去了解有趣全球新闻？&lt;/p&gt;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;哪里去了解有趣全球新闻？&lt;/p&gt;</summary>
     
     
     
@@ -292,7 +292,7 @@
     <updated>2025-10-28T14:55:08.609Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;$&#92;LaTeX$和markdown的数学算符几乎是一样的，那怎么编辑呢？&lt;/p&gt;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;$&#92;LaTeX$和markdown的数学算符几乎是一样的，那怎么编辑呢？&lt;/p&gt;</summary>
     
     
     
@@ -311,7 +311,7 @@
     <updated>2025-10-28T09:16:20.984Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;以下是python脚本练习1，功能包括：&lt;/p&gt;
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;以下是python脚本练习1，功能包括：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;遍历目录events_20250619下所有子目录中以bhz.SAC_rm结尾的SAC文件；&lt;/li&gt;
 &lt;li&gt;对这些数据进行窄带滤波，宽度为中心频率（周期分之一）的$&#92;pm$5mHz，滤波器为4个极点0相位的Butterworth，滤波周期为arange(25,145,10)；&lt;/li&gt;
@@ -339,7 +339,7 @@
     <updated>2025-11-01T09:11:32.940Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;那么Hexo下如何画流程图呢？&lt;/p&gt;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;那么Hexo下如何画流程图呢？&lt;/p&gt;</summary>
     
     
     
@@ -358,7 +358,7 @@
     <updated>2025-10-26T08:10:19.000Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;今天学习Sequencer。&lt;/p&gt;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;今天学习Sequencer。&lt;/p&gt;</summary>
     
     
     
@@ -377,7 +377,7 @@
     <updated>2025-10-26T08:10:19.000Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;没想到腾讯开发了Linux版本下的腾讯会议。&lt;/p&gt;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;没想到腾讯开发了Linux版本下的腾讯会议。&lt;/p&gt;</summary>
     
     
     
@@ -396,7 +396,7 @@
     <updated>2025-10-26T08:10:19.000Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;python脚本下载连续波形数据更新。&lt;/p&gt;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&amp;emsp;&amp;emsp;python脚本下载连续波形数据更新。&lt;/p&gt;</summary>
     
     
     
