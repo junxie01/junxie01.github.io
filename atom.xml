@@ -31,9 +31,9 @@
     <category term="web" scheme="http://www.seis-jun.xyz/categories/web/"/>
     
     
-    <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
-    
     <category term="hexo" scheme="http://www.seis-jun.xyz/tags/hexo/"/>
+    
+    <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
     
   </entry>
   
