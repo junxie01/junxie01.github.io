@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2025-12-09T08:07:02.140Z</updated>
+  <updated>2025-12-09T11:27:06.641Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>文献阅读(34)</title>
+    <link href="http://www.seis-jun.xyz/paper-reading-34"/>
+    <id>http://www.seis-jun.xyz/paper-reading-34</id>
+    <published>2025-12-09T11:22:52.000Z</published>
+    <updated>2025-12-09T11:27:06.641Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://pubs.geoscienceworld.org/seg/tle/article-abstract/42/11/763/628902/Detection-of-a-CO2-plume-by-time-lapse-analysis-of&quot;&gt;Detection of a CO2 plume by time-lapse analysis of Rayleigh-wave amplitudes extracted from downhole DAS recordings of ocean microseisms&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
+    
+    
+    <category term="paper" scheme="http://www.seis-jun.xyz/tags/paper/"/>
+    
+  </entry>
   
   <entry>
     <title>文献阅读(33)</title>
@@ -372,25 +391,6 @@
     
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>有趣的jupyter-notebook插件</title>
-    <link href="http://www.seis-jun.xyz/jupyter-notebook-extensions"/>
-    <id>http://www.seis-jun.xyz/jupyter-notebook-extensions</id>
-    <published>2025-06-21T11:45:32.000Z</published>
-    <updated>2025-10-28T12:32:34.985Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;收集了一些有趣的jupyter notebook插件。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="python" scheme="http://www.seis-jun.xyz/categories/python/"/>
-    
-    
-    <category term="python" scheme="http://www.seis-jun.xyz/tags/python/"/>
     
   </entry>
   
