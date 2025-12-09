@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2025-12-09T08:02:55.237Z</updated>
+  <updated>2025-12-09T08:07:02.140Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -21,16 +21,10 @@
     <link href="http://www.seis-jun.xyz/paper-reading-33"/>
     <id>http://www.seis-jun.xyz/paper-reading-33</id>
     <published>2025-12-09T07:47:26.000Z</published>
-    <updated>2025-12-09T08:02:55.237Z</updated>
+    <updated>2025-12-09T08:07:02.140Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
-        
-      
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://pubs.geoscienceworld.org/seg/geophysics/article/88/6/WC47/627513/Characterizing-hydraulic-fracture-growth-using&quot;&gt;Characterizing hydraulic fracture growth using distributed acoustic sensing-recorded microseismic reflections&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     
@@ -132,9 +126,9 @@
     <category term="web" scheme="http://www.seis-jun.xyz/categories/web/"/>
     
     
-    <category term="hexo" scheme="http://www.seis-jun.xyz/tags/hexo/"/>
-    
     <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
+    
+    <category term="hexo" scheme="http://www.seis-jun.xyz/tags/hexo/"/>
     
   </entry>
   
