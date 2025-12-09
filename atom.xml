@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2025-11-26T06:26:51.112Z</updated>
+  <updated>2025-12-09T02:50:15.238Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>文献阅读(30)</title>
+    <link href="http://www.seis-jun.xyz/paper-reading-30"/>
+    <id>http://www.seis-jun.xyz/paper-reading-30</id>
+    <published>2025-12-09T02:43:25.000Z</published>
+    <updated>2025-12-09T02:50:15.238Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://pubs.geoscienceworld.org/seg/geophysics/article/89/2/D131/633828/Detecting-fractures-and-monitoring-hydraulic&quot;&gt;Detecting fractures and monitoring hydraulic fracturing processes at the first EGS Collab testbed using borehole DAS ambient noise&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
+    
+    
+    <category term="paper" scheme="http://www.seis-jun.xyz/tags/paper/"/>
+    
+  </entry>
   
   <entry>
     <title>Mac中安装FreshRSS</title>
@@ -381,25 +400,6 @@
     
     
     <category term="python" scheme="http://www.seis-jun.xyz/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo下如何画流程图</title>
-    <link href="http://www.seis-jun.xyz/plot-work-flow"/>
-    <id>http://www.seis-jun.xyz/plot-work-flow</id>
-    <published>2025-06-17T13:13:32.000Z</published>
-    <updated>2025-11-01T09:11:32.940Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;那么Hexo下如何画流程图呢？&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="web" scheme="http://www.seis-jun.xyz/categories/web/"/>
-    
-    
-    <category term="Linux" scheme="http://www.seis-jun.xyz/tags/Linux/"/>
     
   </entry>
   
