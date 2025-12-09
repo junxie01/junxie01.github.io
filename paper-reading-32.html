@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/j-icon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/j-icon-16x16.png">
+  <link rel="mask-icon" href="/images/icon.png" color="#222">
+  <meta name="google-site-verification" content="google7b56233b0c90910d.html">
+  <meta name="baidu-site-verification" content="l7XxPhR6zN">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.seis-jun.xyz","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.25.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="&emsp;&emsp;Feasibility of source-free DAS logging for next-generation borehole imaging 摘要准确刻画与监测井周地质体对能源与环境工程至关重要，但常规声波测井在高温环境中无法长期工作，也难以实现时移监测。本文提出并验证了一种无源分布式声波传感（DAS）测井新方法：利用井中天然环境噪声作为震源，无需井下声源即可成像">
+<meta property="og:type" content="article">
+<meta property="og:title" content="文献阅读(32)">
+<meta property="og:url" content="http://www.seis-jun.xyz/paper-reading-32">
+<meta property="og:site_name" content="SEISAMUSE">
+<meta property="og:description" content="&emsp;&emsp;Feasibility of source-free DAS logging for next-generation borehole imaging 摘要准确刻画与监测井周地质体对能源与环境工程至关重要，但常规声波测井在高温环境中无法长期工作，也难以实现时移监测。本文提出并验证了一种无源分布式声波传感（DAS）测井新方法：利用井中天然环境噪声作为震源，无需井下声源即可成像">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-12-09T06:16:14.000Z">
+<meta property="article:modified_time" content="2025-12-09T06:53:29.489Z">
+<meta property="article:author" content="Jun Xie">
+<meta property="article:tag" content="paper">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://www.seis-jun.xyz/paper-reading-32.html">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://www.seis-jun.xyz/paper-reading-32","path":"paper-reading-32.html","title":"文献阅读(32)"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>文献阅读(32) | SEISAMUSE</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168057869-1"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-168057869-1","only_pageview":false,"measure_protocol_api_secret":null}</script>
+  <script src="/js/third-party/analytics/google-analytics.js" defer></script>
+
+  <script src="/js/third-party/analytics/baidu-analytics.js" defer></script>
+  <script async src="https://hm.baidu.com/hm.js?0723cf651cbf165b63377fccb701c171"></script>
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.umd.js" integrity="sha256-a+H7FYzJv6oU2hfsfDGM2Ohw/cR9v+hPfxHCLdmCrE8=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script><script src="/js/bookmark.js" defer></script><script src="/js/pjax.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.5.0/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.10.1/mermaid.min.js","integrity":"sha256-BmQmdWDS8X2OTbrwELWK366LV6escyWhHHe0XCTU/Hk="}}</script>
+  <script src="/js/third-party/tags/mermaid.js" defer></script>
+
+
+  <script src="/js/third-party/fancybox.js" defer></script>
+
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js" defer></script>
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<!-- hexo injector head_end end --><link rel="alternate" href="/atom.xml" title="SEISAMUSE" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">SEISAMUSE</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Jun Xie的博客</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%91%98%E8%A6%81"><span class="nav-number">1.</span> <span class="nav-text">摘要</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E7%A0%94%E7%A9%B6%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%A7"><span class="nav-number">2.</span> <span class="nav-text">相关研究的重要性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E4%BA%BA%E7%A0%94%E7%A9%B6%E5%8F%8A%E4%B8%8D%E8%B6%B3"><span class="nav-number">3.</span> <span class="nav-text">前人研究及不足</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%AC%E6%96%87%E6%95%B0%E6%8D%AE"><span class="nav-number">4.</span> <span class="nav-text">本文数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%AC%E6%96%87%E6%96%B9%E6%B3%95"><span class="nav-number">5.</span> <span class="nav-text">本文方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%AC%E6%96%87%E7%BB%93%E6%9E%9C"><span class="nav-number">6.</span> <span class="nav-text">本文结果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E6%96%B0%E7%82%B9%E4%B8%8E%E8%B4%A1%E7%8C%AE"><span class="nav-number">7.</span> <span class="nav-text">创新点与贡献</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8D%E8%B6%B3%E4%B8%8E%E6%9C%AA%E6%9D%A5%E6%96%B9%E5%90%91"><span class="nav-number">8.</span> <span class="nav-text">不足与未来方向</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Jun Xie"
+      src="/images/seisamuse.png">
+  <p class="site-author-name" itemprop="name">Jun Xie</p>
+  <div class="site-description" itemprop="description">好记性不如烂笔头</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">172</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">77</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/junxie01" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;junxie01" rel="noopener me external nofollow noreferrer" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+  <script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
+  <script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div id="myCanvasContainer" class="widget tagcloud">
+      <canvas width="250" height="250" id="resCanvas" style="width:100%">
+        <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/FreshRSS/" rel="tag">FreshRSS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Fun/" rel="tag">Fun</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LaTeX/" rel="tag">LaTeX</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NCF/" rel="tag">NCF</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Seismology/" rel="tag">Seismology</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ai/" rel="tag">ai</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/axes/" rel="tag">axes</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/" rel="tag">blog</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blogs/" rel="tag">blogs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/code/" rel="tag">code</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/filezilla/" rel="tag">filezilla</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/glacial-seismology/" rel="tag">glacial seismology</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gmt/" rel="tag">gmt</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/grub/" rel="tag">grub</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a><span class="tag-list-count">12</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/model/" rel="tag">model</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/next/" rel="tag">next</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/obspy/" rel="tag">obspy</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/paper/" rel="tag">paper</a><span class="tag-list-count">35</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/project/" rel="tag">project</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a><span class="tag-list-count">18</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/review/" rel="tag">review</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/science/" rel="tag">science</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/script/" rel="tag">script</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sed/" rel="tag">sed</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/seismic/" rel="tag">seismic</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/seismology/" rel="tag">seismology</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sem/" rel="tag">sem</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/video/" rel="tag">video</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web/" rel="tag">web</a><span class="tag-list-count">14</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wiki/" rel="tag">wiki</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/work/" rel="tag">work</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%AD%E6%96%87/" rel="tag">中文</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B9%B1/" rel="tag">乱</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B9%B1%E7%AC%94/" rel="tag">乱笔</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%84%BF%E5%AD%90/" rel="tag">儿子</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag">博客</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8E%86%E5%8F%B2/" rel="tag">历史</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8F%8D%E6%BC%94/" rel="tag">反演</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%91%BD%E9%A2%98%E4%BD%9C%E6%96%87/" rel="tag">命题作文</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%96%E5%85%AC/" rel="tag">外公</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%96%E5%A9%86/" rel="tag">外婆</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%A7%E8%84%91/" rel="tag">大脑</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A5%BD%E5%8F%8B/" rel="tag">好友</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A6%96%E6%80%AA/" rel="tag">妖怪</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%81%E6%B3%A2/" rel="tag">宁波</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%89%E6%81%AF/" rel="tag">安息</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%86%8E%E6%81%A8/" rel="tag">憎恨</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%88%90%E9%83%BD/" rel="tag">成都</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%89%93%E7%89%8C/" rel="tag">打牌</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%A0%E9%A2%98/" rel="tag">无题</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%A5%E8%AE%B0/" rel="tag">日记</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9D%82/" rel="tag">杂</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9F%90%E6%97%A5%E8%AE%B0/" rel="tag">某日记</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B4%BB%E7%9D%80/" rel="tag">活着</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%8C%AB/" rel="tag">猫</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%94%B5%E5%BD%B1/" rel="tag">电影</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%94%B5%E8%A7%86%E5%89%A7/" rel="tag">电视剧</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%98%BE/" rel="tag">瘾</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9B%86%E5%9C%B0/" rel="tag">盆地</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BD%91%E6%98%93/" rel="tag">网易</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%8C%B6%E9%93%BA/" rel="tag">茶铺</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%A1%E5%BC%82/" rel="tag">诡异</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%BB%E5%90%8E%E6%84%9F/" rel="tag">读后感</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BA%AF%E5%A3%B3/" rel="tag">躯壳</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BF%87%E6%B8%A1%E5%B8%A6/" rel="tag">过渡带</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BF%99%E6%98%AF%E5%95%A5/" rel="tag">这是啥</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BF%B7%E9%9B%BE/" rel="tag">迷雾</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%80%9D%E8%80%85/" rel="tag">逝者</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%98%BF%E7%94%98/" rel="tag">阿甘</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9B%BE%E9%9C%BE/" rel="tag">雾霾</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9C%B8%E7%8E%8B%E5%88%AB%E5%A7%AC/" rel="tag">霸王别姬</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%A5%AD%E5%90%8E%E6%84%9F/" rel="tag">饭后感</a><span class="tag-list-count">1</span></li></ul>
+      </canvas>
+    </div>
+  </div>
+
+
+        </div>
+      </div>
+    </div>
+
+    
+        <div class="pjax">
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.seis-jun.xyz/paper-reading-32">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/seisamuse.png">
+      <meta itemprop="name" content="Jun Xie">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SEISAMUSE">
+      <meta itemprop="description" content="好记性不如烂笔头">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="文献阅读(32) | SEISAMUSE">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          文献阅读(32)
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2025-12-09 14:16:14 / 修改时间：14:53:29" itemprop="dateCreated datePublished" datetime="2025-12-09T14:16:14+08:00">2025-12-09</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/work/" itemprop="url" rel="index"><span itemprop="name">work</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.nature.com/articles/s41598-022-16027-3">Feasibility of source-free DAS logging for next-generation borehole imaging</a></p>
+<h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3><p>准确刻画与监测井周地质体对能源与环境工程至关重要，但常规声波测井在高温环境中无法长期工作，也难以实现时移监测。本文提出并验证了一种<strong>无源分布式声波传感（DAS）测井</strong>新方法：利用井中天然环境噪声作为震源，无需井下声源即可成像。光纤缆永久固定于套管后，可耐受高温高压，空间采样密度达1 m，实现全井段、长周期、低成本监测。我们在美国犹他州 FORGE 地热场 1 km 深观测井中采集 14 天 DAS 环境噪声，计算 RMS 振幅深度曲线，发现其峰值与常规测井低速层（LVL）、高孔隙、低泊松比、岩性界面高度吻合，可指示强裂缝带。研究证实：无源 DAS 测井可作为下一代井中成像工具，尤其适用于高温地热储层。</p>
+<hr>
+<h3 id="相关研究的重要性"><a href="#相关研究的重要性" class="headerlink" title="相关研究的重要性"></a>相关研究的重要性</h3><ol>
+<li>高温储层（EGS、深部碳封存）需要<strong>长期、低成本、耐高温</strong>的井周结构与裂缝监测手段。</li>
+<li>常规声波测井：<ul>
+<li>仪器长度 ~3 m，需流体耦合，&gt;150 °C 长期失效；</li>
+<li>完井后难以重新下入，<strong>时移监测经济性差</strong>。</li>
+</ul>
+</li>
+<li>DAS 光纤无电子器件，可<strong>永久安放于套管后</strong>，为“一次部署、终身监测”提供可能。</li>
+<li>前人已将<strong>地表 DAS 环境噪声</strong>用于浅层 S 波速度层析，但<strong>井中 DAS 噪声随深度变化特征</strong>尚未系统研究。</li>
+</ol>
+<hr>
+<h3 id="前人研究及不足"><a href="#前人研究及不足" class="headerlink" title="前人研究及不足"></a>前人研究及不足</h3><table>
+<thead>
+<tr>
+<th>研究</th>
+<th>内容</th>
+<th>不足</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Paillet &amp; Cheng (1991)</strong></td>
+<td>建立常规声波测井理论框架</td>
+<td>仅适用于低温、可重复下入井筒；高温&#x2F;时移监测未解决</td>
+</tr>
+<tr>
+<td><strong>Ajo-Franklin et al. (2019)</strong></td>
+<td>利用暗光纤地表 DAS 噪声做浅层成像</td>
+<td>未涉及井中环境噪声；深度分辨率受限</td>
+</tr>
+<tr>
+<td><strong>Dou et al. (2017)</strong></td>
+<td>交通噪声干涉法获取近地表 S 波速度</td>
+<td>数据来源于地表光缆，无法提供井周精细结构</td>
+</tr>
+<tr>
+<td><strong>Chang &amp; Nakata (2022)</strong></td>
+<td>反褶积干涉法提取 Brady 地热井 DAS 振铃波</td>
+<td>研究对象为<strong>套管振铃机制</strong>，未利用环境噪声成像地层</td>
+</tr>
+<tr>
+<td><strong>Li et al. (2020)</strong></td>
+<td>高斯束成像去除井中频散波</td>
+<td>仍依赖主动声源，未解决“无源”需求</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="本文数据"><a href="#本文数据" class="headerlink" title="本文数据"></a>本文数据</h3><table>
+<thead>
+<tr>
+<th>数据</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>井中 DAS 环境噪声</strong></td>
+<td>美国犹他州 FORGE 78-32 观测井，830–968 m 井段，1 m 道距，10 m  gauge，0.5 ms 采样，连续 14 天（2019-04-19 至 05-03）</td>
+</tr>
+<tr>
+<td><strong>常规测井</strong></td>
+<td>同一井段水泥胶结测井（CBL）、伽马、声波时差、密度、中子孔隙度、Poisson 比等</td>
+</tr>
+<tr>
+<td><strong>邻井（58-32）开井测井</strong></td>
+<td>提供 Vp、Vs、阻抗、反射系数、孔隙度等，用于验证 RMS 峰值地质意义</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="本文方法"><a href="#本文方法" class="headerlink" title="本文方法"></a>本文方法</h3><ol>
+<li><p><strong>噪声分类与清洗</strong></p>
+<ul>
+<li>定义“Type A”为可用环境噪声；</li>
+<li>剔除 Type B（6E5M 规则脉冲）、Type C（ interrogator 端脉冲）、Type D（疑似地震事件）。</li>
+</ul>
+</li>
+<li><p><strong>RMS 振幅深度剖面</strong></p>
+<ul>
+<li>每 15 s 计算一次 RMS，沿 138 通道（830–968 m）平均 48 h，得到稳定深度曲线。</li>
+</ul>
+</li>
+<li><p><strong>多测井对比验证</strong></p>
+<ul>
+<li>与 CBL、伽马、Vp、Vs、Poisson 比、孔隙度、反射系数等对比，确认 RMS 峰值对应低速、高孔隙、低 Poisson 比、岩性界面。</li>
+</ul>
+</li>
+<li><p><strong>时移与频谱分析</strong></p>
+<ul>
+<li>观察 48 h 内 RMS 时序，发现“噪声区”振幅为“安静区”5–10 倍；</li>
+<li>频谱显示噪声区高频能量更丰富，可能与裂缝诱导的局域散射&#x2F;俘获波有关。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="本文结果"><a href="#本文结果" class="headerlink" title="本文结果"></a>本文结果</h3><ol>
+<li><p><strong>RMS 峰值与地质异常一一对应</strong></p>
+<ul>
+<li>849 m 处 1.1 m 厚 LVL（Vp&#x3D;3068 m&#x2F;s）对应 RMS 主峰 Na，伽马谷值，花岗岩-沉积岩界面；</li>
+<li>945 m 处 20 m 厚 LVZ（Vp&#x3D;4770 m&#x2F;s）对应 RMS 主峰 Ne，花岗岩-闪长岩界面，高孔隙、低泊松比（&lt;0.25，脆性域）。</li>
+</ul>
+</li>
+<li><p><strong>次要 RMS 峰与薄 LVL 对应</strong></p>
+<ul>
+<li>880 m、904 m、914 m 等次要峰与薄低速层位置一致，反映次级断裂&#x2F;界面。</li>
+</ul>
+</li>
+<li><p><strong>高泊松比（&gt;0.35，韧性域）LVL 对应安静带</strong></p>
+<ul>
+<li>859–868 m 段虽低速高孔，但 Poisson 比 ~0.35，RMS 无异常，验证“易裂性”控制噪声强度。</li>
+</ul>
+</li>
+<li><p><strong>48 h 内 RMS 形态稳定</strong></p>
+<ul>
+<li>主峰、次峰位置不变，振幅日内小幅波动，证实方法可重复。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="创新点与贡献"><a href="#创新点与贡献" class="headerlink" title="创新点与贡献"></a>创新点与贡献</h3><table>
+<thead>
+<tr>
+<th>创新</th>
+<th>贡献</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>首次提出“无源 DAS 测井”概念</strong></td>
+<td>无需声源，仅利用井中天然环境噪声即可成像，突破高温井无法重复下入难题</td>
+</tr>
+<tr>
+<td><strong>建立 RMS 振幅-地质属性对应关系</strong></td>
+<td>通过多测井对比，证明 RMS 峰值&#x3D;低速+高孔+低泊松比+岩性界面，可直接指示裂缝带</td>
+</tr>
+<tr>
+<td><strong>验证光纤永久安放可行性</strong></td>
+<td>水泥后 1 m 间距 DAS 可稳定获取 14 天连续数据，为“终身监测”提供范例</td>
+</tr>
+<tr>
+<td><strong>提出噪声分区物理机制</strong></td>
+<td>低 Poisson 比脆性域 LVL 易产生俘获波&#x2F;散射，导致 RMS 放大；韧性域 LVL 无此效应</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="不足与未来方向"><a href="#不足与未来方向" class="headerlink" title="不足与未来方向"></a>不足与未来方向</h3><table>
+<thead>
+<tr>
+<th>不足</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>尚未定量反演 Vp、Vs、孔隙度</strong></td>
+<td>目前仅定性对比，需建立 RMS-弹性参数转换模型</td>
+</tr>
+<tr>
+<td><strong>空间分辨率受 1 m 道距限制</strong></td>
+<td>薄至 1.1 m 的 LVL 可识别，但亚米级裂缝需 0.2–0.25 m 道距验证</td>
+</tr>
+<tr>
+<td><strong>未进行深度精确对齐</strong></td>
+<td>DAS 光纤与测井电缆存在 ~1–2 m 深度误差，影响薄层对比精度</td>
+</tr>
+<tr>
+<td><strong>仅单井验证</strong></td>
+<td>需在更多高温地热井或油气井测试方法普适性</td>
+</tr>
+<tr>
+<td><strong>噪声源物理机制待细化</strong></td>
+<td>需结合数值模拟区分“俘获波”“散射波”“微裂隙声发射”等贡献权重</td>
+</tr>
+</tbody></table>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="Jun Xie 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.png" alt="Jun Xie 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/paper/" rel="tag"># paper</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/paper-reading-31" rel="prev" title="文献阅读(31)">
+                  <i class="fa fa-angle-left"></i> 文献阅读(31)
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments utterances-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2020 – 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Jun Xie</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">294k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">4:27</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"junxie01/utt","issue_term":"pathname","theme":"github-light"}</script>
+<script src="/js/third-party/comments/utterances.js" defer></script>
+
+</body>
+</html>
