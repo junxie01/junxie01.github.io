@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2025-12-09T11:27:06.641Z</updated>
+  <updated>2025-12-10T02:20:24.902Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>文献阅读(35)</title>
+    <link href="http://www.seis-jun.xyz/paper-reading-35"/>
+    <id>http://www.seis-jun.xyz/paper-reading-35</id>
+    <published>2025-12-10T02:17:32.000Z</published>
+    <updated>2025-12-10T02:20:24.902Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://www.frontiersin.org/journals/earth-science/articles/10.3389/feart.2022.907749/full&quot;&gt;Fracture Imaging Using DAS-Recorded Microseismic Events&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
+    
+    
+    <category term="paper" scheme="http://www.seis-jun.xyz/tags/paper/"/>
+    
+  </entry>
+  
+  <entry>
     <title>文献阅读(34)</title>
     <link href="http://www.seis-jun.xyz/paper-reading-34"/>
     <id>http://www.seis-jun.xyz/paper-reading-34</id>
     <published>2025-12-09T11:22:52.000Z</published>
-    <updated>2025-12-09T11:27:06.641Z</updated>
+    <updated>2025-12-09T11:27:13.732Z</updated>
     
     
     <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://pubs.geoscienceworld.org/seg/tle/article-abstract/42/11/763/628902/Detection-of-a-CO2-plume-by-time-lapse-analysis-of&quot;&gt;Detection of a CO2 plume by time-lapse analysis of Rayleigh-wave amplitudes extracted from downhole DAS recordings of ocean microseisms&lt;/a&gt;&lt;/p&gt;</summary>
@@ -376,21 +395,6 @@
     
     
     <category term="python" scheme="http://www.seis-jun.xyz/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>学习匹配场</title>
-    <link href="http://www.seis-jun.xyz/mfp"/>
-    <id>http://www.seis-jun.xyz/mfp</id>
-    <published>2025-06-27T00:34:58.000Z</published>
-    <updated>2025-10-26T08:10:19.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;今天学习匹配场处理（Matched Field Processing, MFP），见&lt;a href=&quot;https://geophydog.cool/post/matched_field_processing/#__1-basic-descriptions__&quot;&gt;这里&lt;/a&gt;。&lt;/p&gt;</summary>
-    
-    
-    
     
   </entry>
   
