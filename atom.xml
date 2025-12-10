@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2025-12-10T02:20:31.805Z</updated>
+  <updated>2025-12-10T07:29:32.638Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>文献阅读(36)</title>
+    <link href="http://www.seis-jun.xyz/paper-reading-36"/>
+    <id>http://www.seis-jun.xyz/paper-reading-36</id>
+    <published>2025-12-10T02:49:18.000Z</published>
+    <updated>2025-12-10T07:29:32.638Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
+    
+    
+    <category term="paper" scheme="http://www.seis-jun.xyz/tags/paper/"/>
+    
+  </entry>
   
   <entry>
     <title>文献阅读(35)</title>
@@ -373,25 +398,6 @@
     
     
     <category term="python" scheme="http://www.seis-jun.xyz/categories/python/"/>
-    
-    
-    <category term="python" scheme="http://www.seis-jun.xyz/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PYTHON脚本练习（二）</title>
-    <link href="http://www.seis-jun.xyz/python-script2"/>
-    <id>http://www.seis-jun.xyz/python-script2</id>
-    <published>2025-06-30T13:27:28.000Z</published>
-    <updated>2025-10-28T09:08:53.367Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;以下是python脚本练习2，功能为读取选定时间段内的hdf5文件，文件名形如20130512_cross_spec.hdf5。该文件总共有24段，每一段是一个小时某台阵平均互相关谱。然后画出这个互相关谱，保存为png格式图片。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
     
     
     <category term="python" scheme="http://www.seis-jun.xyz/tags/python/"/>
