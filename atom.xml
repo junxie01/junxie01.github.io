@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2025-12-11T06:36:34.870Z</updated>
+  <updated>2025-12-11T08:36:20.430Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,21 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>paper-reading-40</title>
+    <link href="http://www.seis-jun.xyz/paper-reading-40"/>
+    <id>http://www.seis-jun.xyz/paper-reading-40</id>
+    <published>2025-12-11T08:27:54.000Z</published>
+    <updated>2025-12-11T08:36:20.430Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://pubs.geoscienceworld.org/seg/geophysics/article-abstract/86/4/R383/600866/Seismic-inversion-of-shale-reservoir-properties?redirectedFrom=fulltext&quot;&gt;Luo et al. (2021), Geophysics&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>文献阅读(39)</title>
@@ -372,25 +387,6 @@
     
     
     <category term="paper" scheme="http://www.seis-jun.xyz/tags/paper/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Fedora中安装FreshRSS</title>
-    <link href="http://www.seis-jun.xyz/fedora-install-freshress"/>
-    <id>http://www.seis-jun.xyz/fedora-install-freshress</id>
-    <published>2025-10-06T14:31:32.000Z</published>
-    <updated>2025-10-26T08:10:19.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;Fedora中Apache环境下如何安装FreshRSS&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Linux" scheme="http://www.seis-jun.xyz/categories/Linux/"/>
-    
-    
-    <category term="Linux" scheme="http://www.seis-jun.xyz/tags/Linux/"/>
     
   </entry>
   
