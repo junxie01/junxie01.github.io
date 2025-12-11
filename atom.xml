@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2025-12-10T11:53:57.086Z</updated>
+  <updated>2025-12-11T01:29:35.190Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>文献阅读(38)</title>
+    <link href="http://www.seis-jun.xyz/paper-reading-38"/>
+    <id>http://www.seis-jun.xyz/paper-reading-38</id>
+    <published>2025-12-11T01:26:29.000Z</published>
+    <updated>2025-12-11T01:29:35.190Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://pubs.geoscienceworld.org/seg/geophysics/article-abstract/89/2/P11/634865/Using-distributed-acoustic-sensing-to-characterize&quot;&gt;Using distributed acoustic sensing to characterize unconventional reservoirs via perforation-shot triggered P waves&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
+    
+    
+    <category term="paper" scheme="http://www.seis-jun.xyz/tags/paper/"/>
+    
+  </entry>
+  
+  <entry>
     <title>文献阅读(37)</title>
     <link href="http://www.seis-jun.xyz/paper-reading-37"/>
     <id>http://www.seis-jun.xyz/paper-reading-37</id>
     <published>2025-12-10T11:31:10.000Z</published>
-    <updated>2025-12-10T11:53:57.086Z</updated>
+    <updated>2025-12-10T11:54:10.596Z</updated>
     
     
     <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://pubs.geoscienceworld.org/seg/geophysics/article-abstract/89/4/D183/643890/Distributed-acoustic-sensing-microseismic&quot;&gt;Distributed acoustic sensing microseismic reflection imaging for hydraulic fracture and fault lineament characterization&lt;/a&gt;&lt;/p&gt;</summary>
@@ -376,25 +395,6 @@
     
     
     <category term="Linux" scheme="http://www.seis-jun.xyz/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PYTHON脚本练习（三）聚束分析</title>
-    <link href="http://www.seis-jun.xyz/fk"/>
-    <id>http://www.seis-jun.xyz/fk</id>
-    <published>2025-08-24T03:19:23.000Z</published>
-    <updated>2025-10-26T08:10:19.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;python脚本练习-fk。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="python" scheme="http://www.seis-jun.xyz/categories/python/"/>
-    
-    
-    <category term="python" scheme="http://www.seis-jun.xyz/tags/python/"/>
     
   </entry>
   
