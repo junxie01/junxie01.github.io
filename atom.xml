@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2025-12-11T08:36:20.430Z</updated>
+  <updated>2025-12-11T08:37:52.683Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -17,17 +17,21 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>paper-reading-40</title>
+    <title>文献阅读(40)</title>
     <link href="http://www.seis-jun.xyz/paper-reading-40"/>
     <id>http://www.seis-jun.xyz/paper-reading-40</id>
     <published>2025-12-11T08:27:54.000Z</published>
-    <updated>2025-12-11T08:36:20.430Z</updated>
+    <updated>2025-12-11T08:37:52.683Z</updated>
     
     
     <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://pubs.geoscienceworld.org/seg/geophysics/article-abstract/86/4/R383/600866/Seismic-inversion-of-shale-reservoir-properties?redirectedFrom=fulltext&quot;&gt;Luo et al. (2021), Geophysics&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     
+    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
+    
+    
+    <category term="paper" scheme="http://www.seis-jun.xyz/tags/paper/"/>
     
   </entry>
   
@@ -36,13 +40,17 @@
     <link href="http://www.seis-jun.xyz/paper-reading-39"/>
     <id>http://www.seis-jun.xyz/paper-reading-39</id>
     <published>2025-12-11T06:24:43.000Z</published>
-    <updated>2025-12-11T06:36:34.870Z</updated>
+    <updated>2025-12-11T08:38:07.732Z</updated>
     
     
     <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2019JB017533&quot;&gt;Lellouch et al. (2019), JGR&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     
+    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
+    
+    
+    <category term="paper" scheme="http://www.seis-jun.xyz/tags/paper/"/>
     
   </entry>
   
