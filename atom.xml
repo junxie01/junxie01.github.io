@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2025-12-11T08:45:00.927Z</updated>
+  <updated>2025-12-11T09:22:28.035Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>文献阅读(41)</title>
+    <link href="http://www.seis-jun.xyz/paper-reading-41"/>
+    <id>http://www.seis-jun.xyz/paper-reading-41</id>
+    <published>2025-12-11T09:16:43.000Z</published>
+    <updated>2025-12-11T09:22:28.035Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://pubs.geoscienceworld.org/seg/tle/article-abstract/42/11/763/628902/Detection-of-a-CO2-plume-by-time-lapse-analysis-of&quot;&gt;Pevzner et al. (2023), The Leading Edge&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
+    
+    
+    <category term="paper" scheme="http://www.seis-jun.xyz/tags/paper/"/>
+    
+  </entry>
   
   <entry>
     <title>文献阅读(40)</title>
@@ -369,25 +388,6 @@
     
     
     <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2011GC003661&quot;&gt;Polarized Earth’s ambient microseismic noise&lt;/a&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
-    
-    
-    <category term="paper" scheme="http://www.seis-jun.xyz/tags/paper/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>文献阅读(28)</title>
-    <link href="http://www.seis-jun.xyz/paper-reading-28"/>
-    <id>http://www.seis-jun.xyz/paper-reading-28</id>
-    <published>2025-10-10T05:22:19.000Z</published>
-    <updated>2025-10-26T08:10:19.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024JB030139?af=R&quot;&gt;SGLOBE-Q2D: A Global 2-D Model of Fundamental and Higher Mode Rayleigh Wave Attenuation From a Large Amplitude Data Set&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     
