@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2025-12-11T09:22:35.581Z</updated>
+  <updated>2025-12-21T13:15:32.358Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>gmt特殊字符</title>
+    <link href="http://www.seis-jun.xyz/gmt-special-character"/>
+    <id>http://www.seis-jun.xyz/gmt-special-character</id>
+    <published>2025-12-21T12:28:34.000Z</published>
+    <updated>2025-12-21T13:15:32.358Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;每次想输入特殊字符例如上下标、乘除什么的都得去官方网站找，挺麻烦。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="gmt" scheme="http://www.seis-jun.xyz/categories/gmt/"/>
+    
+    
+    <category term="special character" scheme="http://www.seis-jun.xyz/tags/special-character/"/>
+    
+  </entry>
   
   <entry>
     <title>文献阅读(41)</title>
@@ -376,25 +395,6 @@
     
     
     <category term="seismology" scheme="http://www.seis-jun.xyz/tags/seismology/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>文献阅读(29)</title>
-    <link href="http://www.seis-jun.xyz/paper-reading-29"/>
-    <id>http://www.seis-jun.xyz/paper-reading-29</id>
-    <published>2025-10-19T12:35:53.000Z</published>
-    <updated>2025-10-26T08:10:19.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2011GC003661&quot;&gt;Polarized Earth’s ambient microseismic noise&lt;/a&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
-    
-    
-    <category term="paper" scheme="http://www.seis-jun.xyz/tags/paper/"/>
     
   </entry>
   
