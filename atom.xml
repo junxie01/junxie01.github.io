@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2025-12-21T13:15:41.258Z</updated>
+  <updated>2025-12-22T11:54:30.133Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>文献阅读(42)</title>
+    <link href="http://www.seis-jun.xyz/paper-reading-42"/>
+    <id>http://www.seis-jun.xyz/paper-reading-42</id>
+    <published>2025-12-22T11:47:13.000Z</published>
+    <updated>2025-12-22T11:54:30.133Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.nature.com/articles/s43247-024-01522-4&quot;&gt;Dømgaard et al., 2024&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
+    
+    
+    <category term="paper" scheme="http://www.seis-jun.xyz/tags/paper/"/>
+    
+  </entry>
   
   <entry>
     <title>gmt特殊字符</title>
@@ -369,25 +388,6 @@
     
     
     <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;想反演震源机制解怎么办？&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
-    
-    
-    <category term="seismology" scheme="http://www.seis-jun.xyz/tags/seismology/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>计算背景噪声中噪声源背方位角</title>
-    <link href="http://www.seis-jun.xyz/noise-source-back-azimuth"/>
-    <id>http://www.seis-jun.xyz/noise-source-back-azimuth</id>
-    <published>2025-10-24T02:24:39.000Z</published>
-    <updated>2025-11-06T04:04:54.862Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;单台三分量背景噪声数据如何分析极化与信号源背方位角？  &lt;/p&gt;</summary>
     
     
     
