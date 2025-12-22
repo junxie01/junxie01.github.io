@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2025-12-22T11:58:56.396Z</updated>
+  <updated>2025-12-22T13:27:06.504Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>文献阅读(43)</title>
+    <link href="http://www.seis-jun.xyz/paper-reading-43"/>
+    <id>http://www.seis-jun.xyz/paper-reading-43</id>
+    <published>2025-12-22T13:18:52.000Z</published>
+    <updated>2025-12-22T13:27:06.504Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2012JB009258&quot;&gt;Nishida &amp;amp; Shiomi (2012) JGR&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
+    
+    
+    <category term="paper" scheme="http://www.seis-jun.xyz/tags/paper/"/>
+    
+  </entry>
+  
+  <entry>
     <title>文献阅读(42)</title>
     <link href="http://www.seis-jun.xyz/paper-reading-42"/>
     <id>http://www.seis-jun.xyz/paper-reading-42</id>
     <published>2025-12-22T11:47:13.000Z</published>
-    <updated>2025-12-22T11:58:56.396Z</updated>
+    <updated>2025-12-22T13:21:29.665Z</updated>
     
     
     <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://www.nature.com/articles/s43247-024-01522-4&quot;&gt;Dømgaard et al. (2024), Communications Earth &amp;amp; Environment&lt;/a&gt;&lt;/p&gt;</summary>
@@ -369,25 +388,6 @@
     
     
     <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;哪里去找地震学相关的程序？&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
-    
-    
-    <category term="seismology" scheme="http://www.seis-jun.xyz/tags/seismology/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>震源机制解反演</title>
-    <link href="http://www.seis-jun.xyz/focal-mechanism-inversion"/>
-    <id>http://www.seis-jun.xyz/focal-mechanism-inversion</id>
-    <published>2025-11-01T01:53:23.000Z</published>
-    <updated>2025-11-02T05:47:49.753Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;想反演震源机制解怎么办？&lt;/p&gt;</summary>
     
     
     
