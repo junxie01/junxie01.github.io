@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2025-12-23T01:52:02.230Z</updated>
+  <updated>2025-12-23T07:37:37.321Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>文献阅读(44)</title>
+    <link href="http://www.seis-jun.xyz/paper-reading-44"/>
+    <id>http://www.seis-jun.xyz/paper-reading-44</id>
+    <published>2025-12-23T07:32:34.000Z</published>
+    <updated>2025-12-23T07:37:37.321Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2020GL089108&quot;&gt;Kawano et al. (2020) GRL&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
+    
+    
+    <category term="paper" scheme="http://www.seis-jun.xyz/tags/paper/"/>
+    
+  </entry>
   
   <entry>
     <title>文献阅读(43)</title>
@@ -376,25 +395,6 @@
     
     
     <category term="gmt" scheme="http://www.seis-jun.xyz/tags/gmt/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>地震学相关程序</title>
-    <link href="http://www.seis-jun.xyz/seismology-software"/>
-    <id>http://www.seis-jun.xyz/seismology-software</id>
-    <published>2025-11-01T12:35:26.000Z</published>
-    <updated>2025-11-08T10:46:25.408Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;哪里去找地震学相关的程序？&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
-    
-    
-    <category term="seismology" scheme="http://www.seis-jun.xyz/tags/seismology/"/>
     
   </entry>
   
