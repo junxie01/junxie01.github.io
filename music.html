@@ -362,7 +362,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>&emsp;&emsp;聚束分析技术（Bartlett 聚束成形器）虽然稳定性和稳健性很好，但分辨率较差。Schmidt 提出了一种称为多信号分类 （MUSIC） 的新聚束分析算法，用于在保持波束形成器稳定性的同时解决分辨率问题 （Schmidt, 1986）。这里我们学习 MUSIC 算法，并给出一些Python代码来展示该技术的工作原理。</p>
+    <div class="post-body" itemprop="articleBody"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;聚束分析技术（Bartlett 聚束成形器）虽然稳定性和稳健性很好，但分辨率较差。Schmidt 提出了一种称为多信号分类 （MUSIC） 的新聚束分析算法，用于在保持波束形成器稳定性的同时解决分辨率问题 （Schmidt, 1986）。这里我们学习 MUSIC 算法，并给出一些Python代码来展示该技术的工作原理。</p>
 <p>&emsp;&emsp;假设一个信号为$u(t)$则傅里叶频谱为$U(\omega)$, $N$ 个接收器的向量为,<br>$$ \vec{u}(\omega) &#x3D; [U_{1}(\omega), U_{2}(\omega), \cdots, U_{N}(\omega)]^T \tag{1} $$<br>互相关矩阵由下式给出,<br>$$ \bar{C}(\omega) &#x3D; \frac{1}{N}\vec{u}(\omega) \vec{u}^H(\omega) \tag{2} $$<br>式中$H$表示Hermitian转置算符。互相关矩阵$\bar{C}(\omega)$通常受到非相干信号及仪器产生的噪声干扰。因此该矩阵包括相干信号和噪声。对$\bar{C}(\omega)$进行特征值分解获得，</p>
 <p>$$ \bar{C}(\omega) &#x3D; \bar{E}(\omega) \bar{\Lambda}(\omega) \bar{E}^{-1}(\omega) \tag{3} $$</p>
 <p>式中$\bar{E}(\omega)$由$N$个特征向量$\vec{e}_{i} $ 组成，</p>
