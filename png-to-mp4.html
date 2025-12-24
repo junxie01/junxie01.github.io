@@ -201,7 +201,7 @@
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-count">13</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -331,7 +331,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&emsp;&emsp;我的图一般都是在linux下生成，大量的图自然用命令来生成是最好的。这里用到程序ffmpeg，没有的话需要自己先安装了啊。<br>接下来用命令:</p>
+    <div class="post-body" itemprop="articleBody"><p>&emsp;&emsp;我的图一般都是在linux下生成，大量的图自然用命令来生成是最好的。这里用到程序ffmpeg，没有的话需要自己先安装了啊。<br>接下来用命令:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -pattern_type glob -framerate 24 -i &quot;2*.png&quot; -c:v libx264 -pix_fmt yuv420p output.mp4</span><br></pre></td></tr></table></figure>
 <ul>
 <li>-pattern_type glob: 作用是启用通配符模式匹配输入文件名。</li>
