@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2025-12-23T07:37:37.321Z</updated>
+  <updated>2025-12-24T06:35:24.151Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>文献阅读(45)</title>
+    <link href="http://www.seis-jun.xyz/paper-reading-45"/>
+    <id>http://www.seis-jun.xyz/paper-reading-45</id>
+    <published>2025-12-24T06:31:03.000Z</published>
+    <updated>2025-12-24T06:35:24.151Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://www.pnas.org/doi/abs/10.1073/pnas.2513381122&quot;&gt;Ardhuin et al. (2025) PNAS&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
+    
+    
+    <category term="paper" scheme="http://www.seis-jun.xyz/tags/paper/"/>
+    
+  </entry>
+  
+  <entry>
     <title>文献阅读(44)</title>
     <link href="http://www.seis-jun.xyz/paper-reading-44"/>
     <id>http://www.seis-jun.xyz/paper-reading-44</id>
     <published>2025-12-23T07:32:34.000Z</published>
-    <updated>2025-12-23T07:37:37.321Z</updated>
+    <updated>2025-12-23T07:37:45.739Z</updated>
     
     
     <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2020GL089108&quot;&gt;Kawano et al. (2020) GRL&lt;/a&gt;&lt;/p&gt;</summary>
@@ -369,25 +388,6 @@
     
     
     <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;gmt怎么画震源球？&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="gmt" scheme="http://www.seis-jun.xyz/categories/gmt/"/>
-    
-    
-    <category term="gmt" scheme="http://www.seis-jun.xyz/tags/gmt/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>gmt的投影方式</title>
-    <link href="http://www.seis-jun.xyz/gmt-projection"/>
-    <id>http://www.seis-jun.xyz/gmt-projection</id>
-    <published>2025-11-23T07:24:13.000Z</published>
-    <updated>2025-11-23T12:01:27.607Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;每次画图都东找西找，多麻烦。别找了看这里就好了。&lt;/p&gt;</summary>
     
     
     
