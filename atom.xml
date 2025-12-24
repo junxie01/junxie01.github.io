@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2025-12-24T06:35:24.151Z</updated>
+  <updated>2025-12-24T12:56:20.546Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>文献阅读(46)</title>
+    <link href="http://www.seis-jun.xyz/paper-reading-46"/>
+    <id>http://www.seis-jun.xyz/paper-reading-46</id>
+    <published>2025-12-24T12:48:50.000Z</published>
+    <updated>2025-12-24T12:56:20.546Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020GL088137&quot;&gt;Xia &amp;amp; Chen 2020, GRL &lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
+    
+    
+    <category term="paper" scheme="http://www.seis-jun.xyz/tags/paper/"/>
+    
+  </entry>
+  
+  <entry>
     <title>文献阅读(45)</title>
     <link href="http://www.seis-jun.xyz/paper-reading-45"/>
     <id>http://www.seis-jun.xyz/paper-reading-45</id>
     <published>2025-12-24T06:31:03.000Z</published>
-    <updated>2025-12-24T06:35:24.151Z</updated>
+    <updated>2025-12-24T06:35:32.567Z</updated>
     
     
     <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://www.pnas.org/doi/abs/10.1073/pnas.2513381122&quot;&gt;Ardhuin et al. (2025) PNAS&lt;/a&gt;&lt;/p&gt;</summary>
@@ -376,25 +395,6 @@
     <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
     
     <category term="hexo" scheme="http://www.seis-jun.xyz/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>gmt画震源球</title>
-    <link href="http://www.seis-jun.xyz/gmt-meca"/>
-    <id>http://www.seis-jun.xyz/gmt-meca</id>
-    <published>2025-11-23T12:05:15.000Z</published>
-    <updated>2025-11-26T02:15:09.202Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;gmt怎么画震源球？&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="gmt" scheme="http://www.seis-jun.xyz/categories/gmt/"/>
-    
-    
-    <category term="gmt" scheme="http://www.seis-jun.xyz/tags/gmt/"/>
     
   </entry>
   
