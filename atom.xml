@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2025-12-24T13:37:01.636Z</updated>
+  <updated>2025-12-28T03:31:58.521Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>文献阅读(47)</title>
+    <link href="http://www.seis-jun.xyz/paper-reading-47"/>
+    <id>http://www.seis-jun.xyz/paper-reading-47</id>
+    <published>2025-12-28T03:27:37.000Z</published>
+    <updated>2025-12-28T03:31:58.521Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2025GL118885?af=R&quot;&gt;Phạm 2025 GRL&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
+    
+    
+    <category term="paper" scheme="http://www.seis-jun.xyz/tags/paper/"/>
+    
+  </entry>
   
   <entry>
     <title>文献阅读(46)</title>
@@ -374,27 +393,6 @@
     
     
     <category term="FreshRSS" scheme="http://www.seis-jun.xyz/tags/FreshRSS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo插入图片</title>
-    <link href="http://www.seis-jun.xyz/hexo-picture"/>
-    <id>http://www.seis-jun.xyz/hexo-picture</id>
-    <published>2025-11-23T12:19:43.000Z</published>
-    <updated>2025-11-23T12:37:36.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;hexo显示图片显示有问题，怎么整？&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="web" scheme="http://www.seis-jun.xyz/categories/web/"/>
-    
-    
-    <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
-    
-    <category term="hexo" scheme="http://www.seis-jun.xyz/tags/hexo/"/>
     
   </entry>
   
