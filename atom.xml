@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2025-12-28T03:32:06.382Z</updated>
+  <updated>2026-03-05T14:24:03.605Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>用AI做app</title>
+    <link href="http://www.seis-jun.xyz/app-build-with-ai"/>
+    <id>http://www.seis-jun.xyz/app-build-with-ai</id>
+    <published>2026-03-05T14:09:50.000Z</published>
+    <updated>2026-03-05T14:24:03.605Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;现在AI来做事情太方便了，我也来试试。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="ai" scheme="http://www.seis-jun.xyz/categories/ai/"/>
+    
+    
+    <category term="app" scheme="http://www.seis-jun.xyz/tags/app/"/>
+    
+  </entry>
   
   <entry>
     <title>文献阅读(47)</title>
@@ -374,25 +393,6 @@
     
     
     <category term="paper" scheme="http://www.seis-jun.xyz/tags/paper/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Mac中安装FreshRSS</title>
-    <link href="http://www.seis-jun.xyz/install-freshrss-on-mac"/>
-    <id>http://www.seis-jun.xyz/install-freshrss-on-mac</id>
-    <published>2025-11-26T02:01:14.000Z</published>
-    <updated>2025-11-26T06:26:51.112Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;Mac中如何安装FreshRSS&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="mac" scheme="http://www.seis-jun.xyz/categories/mac/"/>
-    
-    
-    <category term="FreshRSS" scheme="http://www.seis-jun.xyz/tags/FreshRSS/"/>
     
   </entry>
   
