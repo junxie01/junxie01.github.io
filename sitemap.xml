@@ -452,7 +452,7 @@
   </url>
   
   <url>
-    <loc>http://www.seis-jun.xyz/%E5%AF%82%E5%AF%9E/</loc>
+    <loc>http://www.seis-jun.xyz/%E5%A5%BD%E5%BF%AB%E5%88%80/</loc>
     
     <lastmod>2025-10-26</lastmod>
     
@@ -470,7 +470,7 @@
   </url>
   
   <url>
-    <loc>http://www.seis-jun.xyz/%E5%A5%BD%E5%BF%AB%E5%88%80/</loc>
+    <loc>http://www.seis-jun.xyz/%E5%AF%82%E5%AF%9E/</loc>
     
     <lastmod>2025-10-26</lastmod>
     
@@ -560,7 +560,7 @@
   </url>
   
   <url>
-    <loc>http://www.seis-jun.xyz/123/</loc>
+    <loc>http://www.seis-jun.xyz/%E8%8A%B1%E6%9C%A8%E5%85%B0/</loc>
     
     <lastmod>2025-10-26</lastmod>
     
@@ -569,7 +569,7 @@
   </url>
   
   <url>
-    <loc>http://www.seis-jun.xyz/%E8%8A%B1%E6%9C%A8%E5%85%B0/</loc>
+    <loc>http://www.seis-jun.xyz/123/</loc>
     
     <lastmod>2025-10-26</lastmod>
     
@@ -722,6 +722,15 @@
   </url>
   
   <url>
+    <loc>http://www.seis-jun.xyz/Win7%E4%B8%8B%E6%A0%BC%E6%8E%89Linux%E7%9B%98%E5%A6%82%E4%BD%95%E5%90%AF%E5%8A%A8windows/</loc>
+    
+    <lastmod>2025-10-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://www.seis-jun.xyz/%E9%9B%BE%E9%9C%BE%E9%BD%90%E6%AD%A5%E8%B5%B0/</loc>
     
     <lastmod>2025-10-26</lastmod>
@@ -731,7 +740,7 @@
   </url>
   
   <url>
-    <loc>http://www.seis-jun.xyz/Win7%E4%B8%8B%E6%A0%BC%E6%8E%89Linux%E7%9B%98%E5%A6%82%E4%BD%95%E5%90%AF%E5%8A%A8windows/</loc>
+    <loc>http://www.seis-jun.xyz/%E5%90%AF%E7%A8%8B%E5%8E%BB%E7%8E%9B%E9%9B%85/</loc>
     
     <lastmod>2025-10-26</lastmod>
     
@@ -749,7 +758,7 @@
   </url>
   
   <url>
-    <loc>http://www.seis-jun.xyz/%E5%90%AF%E7%A8%8B%E5%8E%BB%E7%8E%9B%E9%9B%85/</loc>
+    <loc>http://www.seis-jun.xyz/%E8%A1%80%E8%89%B2%E4%B9%8E%E6%B5%AA%E6%BC%AB/</loc>
     
     <lastmod>2025-10-26</lastmod>
     
@@ -794,15 +803,6 @@
   </url>
   
   <url>
-    <loc>http://www.seis-jun.xyz/%E8%A1%80%E8%89%B2%E4%B9%8E%E6%B5%AA%E6%BC%AB/</loc>
-    
-    <lastmod>2025-10-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://www.seis-jun.xyz/passwd-free-for-deployment/</loc>
     
     <lastmod>2025-10-26</lastmod>
@@ -830,15 +830,6 @@
   </url>
   
   <url>
-    <loc>http://www.seis-jun.xyz/wangyi-blog-transfer/</loc>
-    
-    <lastmod>2025-10-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://www.seis-jun.xyz/about-diary/</loc>
     
     <lastmod>2025-10-26</lastmod>
@@ -848,7 +839,7 @@
   </url>
   
   <url>
-    <loc>http://www.seis-jun.xyz/history-and-inversion/</loc>
+    <loc>http://www.seis-jun.xyz/wangyi-blog-transfer/</loc>
     
     <lastmod>2025-10-26</lastmod>
     
@@ -866,6 +857,15 @@
   </url>
   
   <url>
+    <loc>http://www.seis-jun.xyz/history-and-inversion/</loc>
+    
+    <lastmod>2025-10-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://www.seis-jun.xyz/no-more-blog-transfer/</loc>
     
     <lastmod>2025-10-26</lastmod>
@@ -875,7 +875,7 @@
   </url>
   
   <url>
-    <loc>http://www.seis-jun.xyz/learn-sed/</loc>
+    <loc>http://www.seis-jun.xyz/what-did-I-do-to-this-blog/</loc>
     
     <lastmod>2025-10-26</lastmod>
     
@@ -884,7 +884,7 @@
   </url>
   
   <url>
-    <loc>http://www.seis-jun.xyz/what-did-I-do-to-this-blog/</loc>
+    <loc>http://www.seis-jun.xyz/learn-sed/</loc>
     
     <lastmod>2025-10-26</lastmod>
     
@@ -1145,7 +1145,7 @@
   </url>
   
   <url>
-    <loc>http://www.seis-jun.xyz/to-desk/</loc>
+    <loc>http://www.seis-jun.xyz/how-to-set-X11-in-fedora/</loc>
     
     <lastmod>2025-10-26</lastmod>
     
@@ -1154,7 +1154,7 @@
   </url>
   
   <url>
-    <loc>http://www.seis-jun.xyz/how-to-set-X11-in-fedora/</loc>
+    <loc>http://www.seis-jun.xyz/to-desk/</loc>
     
     <lastmod>2025-10-26</lastmod>
     
@@ -1199,6 +1199,15 @@
   </url>
   
   <url>
+    <loc>http://www.seis-jun.xyz/object-detection/</loc>
+    
+    <lastmod>2025-10-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://www.seis-jun.xyz/how-to-make-the-brain-sharp/</loc>
     
     <lastmod>2025-10-26</lastmod>
@@ -1209,15 +1218,6 @@
   
   <url>
     <loc>http://www.seis-jun.xyz/paper-reading-1/</loc>
-    
-    <lastmod>2025-10-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.seis-jun.xyz/object-detection/</loc>
     
     <lastmod>2025-10-26</lastmod>
     
@@ -1271,7 +1271,7 @@
   </url>
   
   <url>
-    <loc>http://www.seis-jun.xyz/how-to-review/</loc>
+    <loc>http://www.seis-jun.xyz/paper-reading-6/</loc>
     
     <lastmod>2025-10-26</lastmod>
     
@@ -1280,7 +1280,7 @@
   </url>
   
   <url>
-    <loc>http://www.seis-jun.xyz/paper-reading-6/</loc>
+    <loc>http://www.seis-jun.xyz/how-to-review/</loc>
     
     <lastmod>2025-10-26</lastmod>
     
@@ -1334,7 +1334,7 @@
   </url>
   
   <url>
-    <loc>http://www.seis-jun.xyz/code-and-project1/</loc>
+    <loc>http://www.seis-jun.xyz/paper-reading-11/</loc>
     
     <lastmod>2025-10-26</lastmod>
     
@@ -1343,7 +1343,7 @@
   </url>
   
   <url>
-    <loc>http://www.seis-jun.xyz/paper-reading-11/</loc>
+    <loc>http://www.seis-jun.xyz/code-and-project1/</loc>
     
     <lastmod>2025-10-26</lastmod>
     
@@ -1550,7 +1550,7 @@
   </url>
   
   <url>
-    <loc>http://www.seis-jun.xyz/paper-reading-26/</loc>
+    <loc>http://www.seis-jun.xyz/code-and-project2/</loc>
     
     <lastmod>2025-10-26</lastmod>
     
@@ -1559,7 +1559,7 @@
   </url>
   
   <url>
-    <loc>http://www.seis-jun.xyz/code-and-project2/</loc>
+    <loc>http://www.seis-jun.xyz/paper-reading-26/</loc>
     
     <lastmod>2025-10-26</lastmod>
     
@@ -1748,7 +1748,7 @@
 
   
   <url>
-    <loc>http://www.seis-jun.xyz/tags/%E8%BF%99%E6%98%AF%E5%95%A5/</loc>
+    <loc>http://www.seis-jun.xyz/tags/%E6%9D%82/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1762,7 +1762,7 @@
   </url>
   
   <url>
-    <loc>http://www.seis-jun.xyz/tags/%E6%9D%82/</loc>
+    <loc>http://www.seis-jun.xyz/tags/%E8%BF%99%E6%98%AF%E5%95%A5/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1923,6 +1923,13 @@
   </url>
   
   <url>
+    <loc>http://www.seis-jun.xyz/tags/grub/</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://www.seis-jun.xyz/tags/%E9%9B%BE%E9%9C%BE/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -1930,7 +1937,7 @@
   </url>
   
   <url>
-    <loc>http://www.seis-jun.xyz/tags/grub/</loc>
+    <loc>http://www.seis-jun.xyz/tags/%E7%94%B5%E8%A7%86%E5%89%A7/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1965,14 +1972,14 @@
   </url>
   
   <url>
-    <loc>http://www.seis-jun.xyz/tags/%E7%94%B5%E8%A7%86%E5%89%A7/</loc>
+    <loc>http://www.seis-jun.xyz/tags/hexo/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.seis-jun.xyz/tags/hexo/</loc>
+    <loc>http://www.seis-jun.xyz/tags/%E6%97%A5%E8%AE%B0/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1993,7 +2000,7 @@
   </url>
   
   <url>
-    <loc>http://www.seis-jun.xyz/tags/%E6%97%A5%E8%AE%B0/</loc>
+    <loc>http://www.seis-jun.xyz/tags/%E5%84%BF%E5%AD%90/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2008,13 +2015,6 @@
   
   <url>
     <loc>http://www.seis-jun.xyz/tags/%E5%8E%86%E5%8F%B2/</loc>
-    <lastmod>2026-03-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.seis-jun.xyz/tags/%E5%84%BF%E5%AD%90/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2303,14 +2303,14 @@
 
   
   <url>
-    <loc>http://www.seis-jun.xyz/categories/%E6%9F%90%E6%97%A5%E8%AE%B0/</loc>
+    <loc>http://www.seis-jun.xyz/categories/%E4%B9%B1%E7%AC%94/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.seis-jun.xyz/categories/%E4%B9%B1%E7%AC%94/</loc>
+    <loc>http://www.seis-jun.xyz/categories/%E6%9F%90%E6%97%A5%E8%AE%B0/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
