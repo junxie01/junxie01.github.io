@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2026-03-21T03:57:15.377Z</updated>
+  <updated>2026-03-21T09:54:24.317Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>自动监控地震数据下载脚本</title>
+    <link href="http://www.seis-jun.xyz/auto-monitor-download/"/>
+    <id>http://www.seis-jun.xyz/auto-monitor-download/</id>
+    <published>2026-03-21T09:40:39.000Z</published>
+    <updated>2026-03-21T09:54:24.317Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;又是一个python下载地震数据的脚本，不过这次更好玩一些。设置一下就可以定期到USGS官网看看有没有大于某个震级的地震，然后到IRIS下载。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
+    
+    
+    <category term="python" scheme="http://www.seis-jun.xyz/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>用AI做网页</title>
@@ -367,25 +386,6 @@
     
     
     <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://pubs.geoscienceworld.org/seg/geophysics/article/88/6/WC47/627513/Characterizing-hydraulic-fracture-growth-using&quot;&gt;Characterizing hydraulic fracture growth using distributed acoustic sensing-recorded microseismic reflections&lt;/a&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
-    
-    
-    <category term="paper" scheme="http://www.seis-jun.xyz/tags/paper/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>文献阅读(32)</title>
-    <link href="http://www.seis-jun.xyz/paper-reading-32/"/>
-    <id>http://www.seis-jun.xyz/paper-reading-32/</id>
-    <published>2025-12-09T06:16:14.000Z</published>
-    <updated>2025-12-09T07:00:11.835Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://www.nature.com/articles/s41598-022-16027-3&quot;&gt;Feasibility of source-free DAS logging for next-generation borehole imaging&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     
