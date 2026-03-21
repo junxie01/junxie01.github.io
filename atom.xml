@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2026-03-06T13:59:36.229Z</updated>
+  <updated>2026-03-21T03:53:46.428Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>用AI做网页</title>
+    <link href="http://www.seis-jun.xyz/web-build-with-ai/"/>
+    <id>http://www.seis-jun.xyz/web-build-with-ai/</id>
+    <published>2026-03-21T02:36:31.000Z</published>
+    <updated>2026-03-21T03:53:46.428Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;我又试着做了两个网页，一个是&lt;a href=&quot;https://www.seis-jun.xyz/paper_weekly/frontend/&quot;&gt;论文周报&lt;/a&gt;，另一个是&lt;a href=&quot;https://www.seis-jun.xyz/earthquake_weekly/&quot;&gt;每周地震&lt;/a&gt;。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="ai" scheme="http://www.seis-jun.xyz/categories/ai/"/>
+    
+    
+    <category term="web" scheme="http://www.seis-jun.xyz/tags/web/"/>
+    
+  </entry>
   
   <entry>
     <title>文献阅读(48)</title>
@@ -36,11 +55,11 @@
   </entry>
   
   <entry>
-    <title>用AI做app</title>
+    <title>用AI做APP</title>
     <link href="http://www.seis-jun.xyz/app-build-with-ai/"/>
     <id>http://www.seis-jun.xyz/app-build-with-ai/</id>
     <published>2026-03-05T14:09:50.000Z</published>
-    <updated>2026-03-18T07:32:00.596Z</updated>
+    <updated>2026-03-21T02:37:33.070Z</updated>
     
     
     <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;一直都想做app来着，但恐于学习成本，一直没有做。现在AI太厉害了，终于可以低成本做app了。&lt;/p&gt;</summary>
@@ -367,25 +386,6 @@
     
     
     <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://www.nature.com/articles/s41598-022-16027-3&quot;&gt;Feasibility of source-free DAS logging for next-generation borehole imaging&lt;/a&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
-    
-    
-    <category term="paper" scheme="http://www.seis-jun.xyz/tags/paper/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>文献阅读(31)</title>
-    <link href="http://www.seis-jun.xyz/paper-reading-31/"/>
-    <id>http://www.seis-jun.xyz/paper-reading-31/</id>
-    <published>2025-12-09T03:18:49.000Z</published>
-    <updated>2025-12-09T05:37:05.215Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://www.mdpi.com/2072-4292/14/1/185&quot;&gt;Investigation of Time-Lapse Changes with DAS Borehole Data at the Brady Geothermal Field Using Deconvolution Interferometry&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     
