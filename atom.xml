@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2026-03-21T09:54:24.317Z</updated>
+  <updated>2026-03-21T09:57:48.718Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://www.seis-jun.xyz/auto-monitor-download/"/>
     <id>http://www.seis-jun.xyz/auto-monitor-download/</id>
     <published>2026-03-21T09:40:39.000Z</published>
-    <updated>2026-03-21T09:54:24.317Z</updated>
+    <updated>2026-03-21T09:57:48.718Z</updated>
     
     
     <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;又是一个python下载地震数据的脚本，不过这次更好玩一些。设置一下就可以定期到USGS官网看看有没有大于某个震级的地震，然后到IRIS下载。&lt;/p&gt;</summary>
