@@ -6,7 +6,7 @@
   <link href="http://www.seis-jun.xyz/atom.xml" rel="self"/>
   
   <link href="http://www.seis-jun.xyz/"/>
-  <updated>2026-03-21T09:57:48.718Z</updated>
+  <updated>2026-03-22T03:39:27.694Z</updated>
   <id>http://www.seis-jun.xyz/</id>
   
   <author>
@@ -15,6 +15,21 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>paper-read-49</title>
+    <link href="http://www.seis-jun.xyz/paper-read-49/"/>
+    <id>http://www.seis-jun.xyz/paper-read-49/</id>
+    <published>2026-03-22T03:33:54.000Z</published>
+    <updated>2026-03-22T03:39:27.694Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://academic.oup.com/gji/article-abstract/244/2/ggaf489/8371766&quot;&gt;Fichtner et al., 2026, GJI&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>自动监控地震数据下载脚本</title>
@@ -367,25 +382,6 @@
     
     
     <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://pubs.geoscienceworld.org/seg/tle/article-abstract/42/11/763/628902/Detection-of-a-CO2-plume-by-time-lapse-analysis-of&quot;&gt;Detection of a CO2 plume by time-lapse analysis of Rayleigh-wave amplitudes extracted from downhole DAS recordings of ocean microseisms&lt;/a&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="work" scheme="http://www.seis-jun.xyz/categories/work/"/>
-    
-    
-    <category term="paper" scheme="http://www.seis-jun.xyz/tags/paper/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>文献阅读(33)</title>
-    <link href="http://www.seis-jun.xyz/paper-reading-33/"/>
-    <id>http://www.seis-jun.xyz/paper-reading-33/</id>
-    <published>2025-12-09T07:47:26.000Z</published>
-    <updated>2025-12-09T08:07:02.140Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&lt;a href=&quot;https://pubs.geoscienceworld.org/seg/geophysics/article/88/6/WC47/627513/Characterizing-hydraulic-fracture-growth-using&quot;&gt;Characterizing hydraulic fracture growth using distributed acoustic sensing-recorded microseismic reflections&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     
