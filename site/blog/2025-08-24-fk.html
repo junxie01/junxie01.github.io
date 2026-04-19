@@ -84,233 +84,233 @@
 <li>输出：每天生成一张PNG图片，保存至arr_figures目录。</li>
 </ul>
 <h2 id="_1">脚本</h2>
-<pre class="highlight"><code>#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-&quot;&quot;&quot;
-Custom FK / beamforming array analysis (no obspy.array_processing)
-改进：使用速度 (km/s) 替代慢度，每天输出雷达图，并标注最大能量点
-&quot;&quot;&quot;
-import os
-import glob
-import math
-import numpy as np
-import matplotlib.pyplot as plt
-from obspy import read, UTCDateTime
-from datetime import timedelta
+<div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env python3</span>
+<span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Custom FK / beamforming array analysis (no obspy.array_processing)</span>
+<span class="sd">改进：使用速度 (km/s) 替代慢度，每天输出雷达图，并标注最大能量点</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">glob</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">obspy</span><span class="w"> </span><span class="kn">import</span> <span class="n">read</span><span class="p">,</span> <span class="n">UTCDateTime</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">timedelta</span>
 
-# ---------------- User parameters ----------------
-station_file = &quot;station.lst&quot;
-data_dir = &quot;data&quot;                 # structure: data/YYYYMMDD/NET_STA_LH?.SAC
-output_dir = &quot;arr_figures&quot;
-os.makedirs(output_dir, exist_ok=True)
+<span class="c1"># ---------------- User parameters ----------------</span>
+<span class="n">station_file</span> <span class="o">=</span> <span class="s2">&quot;station.lst&quot;</span>
+<span class="n">data_dir</span> <span class="o">=</span> <span class="s2">&quot;data&quot;</span>                 <span class="c1"># structure: data/YYYYMMDD/NET_STA_LH?.SAC</span>
+<span class="n">output_dir</span> <span class="o">=</span> <span class="s2">&quot;arr_figures&quot;</span>
+<span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-# frequency band of interest
-fmin, fmax = 0.028, 0.032  # Hz
+<span class="c1"># frequency band of interest</span>
+<span class="n">fmin</span><span class="p">,</span> <span class="n">fmax</span> <span class="o">=</span> <span class="mf">0.028</span><span class="p">,</span> <span class="mf">0.032</span>  <span class="c1"># Hz</span>
 
-# window settings
-win_len = 1800             # seconds
-win_frac = 0.5             # 50% overlap
-win_step = int(win_len * (1 - win_frac))
+<span class="c1"># window settings</span>
+<span class="n">win_len</span> <span class="o">=</span> <span class="mi">1800</span>             <span class="c1"># seconds</span>
+<span class="n">win_frac</span> <span class="o">=</span> <span class="mf">0.5</span>             <span class="c1"># 50% overlap</span>
+<span class="n">win_step</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">win_len</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">win_frac</span><span class="p">))</span>
 
-# FK grid
-az_step = 5.0
-az_grid = np.arange(0, 360, az_step)
+<span class="c1"># FK grid</span>
+<span class="n">az_step</span> <span class="o">=</span> <span class="mf">5.0</span>
+<span class="n">az_grid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">360</span><span class="p">,</span> <span class="n">az_step</span><span class="p">)</span>
 
-# speed search (instead of slowness)
-vmin, vmax, vstep = 1, 5.0, 0.05  # km/s
-#s_grid = 1.0 / np.arange(vmax, vmin, -vstep)  # convert to slowness s/km
-speed_grid = np.arange(vmin, vmax, vstep)  # convert to slowness s/km
+<span class="c1"># speed search (instead of slowness)</span>
+<span class="n">vmin</span><span class="p">,</span> <span class="n">vmax</span><span class="p">,</span> <span class="n">vstep</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">,</span> <span class="mf">0.05</span>  <span class="c1"># km/s</span>
+<span class="c1">#s_grid = 1.0 / np.arange(vmax, vmin, -vstep)  # convert to slowness s/km</span>
+<span class="n">speed_grid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">arange</span><span class="p">(</span><span class="n">vmin</span><span class="p">,</span> <span class="n">vmax</span><span class="p">,</span> <span class="n">vstep</span><span class="p">)</span>  <span class="c1"># convert to slowness s/km</span>
 
-#speed_grid = 1.0 / s_grid  # for plotting
-s_grid = 1.0 / speed_grid  # for plotting
+<span class="c1">#speed_grid = 1.0 / s_grid  # for plotting</span>
+<span class="n">s_grid</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="n">speed_grid</span>  <span class="c1"># for plotting</span>
 
-# day range
-start_date = UTCDateTime(&quot;2013-01-01&quot;)
-end_date   = UTCDateTime(&quot;2025-01-01&quot;)
+<span class="c1"># day range</span>
+<span class="n">start_date</span> <span class="o">=</span> <span class="n">UTCDateTime</span><span class="p">(</span><span class="s2">&quot;2013-01-01&quot;</span><span class="p">)</span>
+<span class="n">end_date</span>   <span class="o">=</span> <span class="n">UTCDateTime</span><span class="p">(</span><span class="s2">&quot;2025-01-01&quot;</span><span class="p">)</span>
 
-# minimal number of stations
-min_stations = 3
+<span class="c1"># minimal number of stations</span>
+<span class="n">min_stations</span> <span class="o">=</span> <span class="mi">3</span>
 
-# ---------------- helper functions ----------------
-def read_stations(station_file):
-    stations = []
-    with open(station_file, &quot;r&quot;) as f:
-        for line in f:
-            line = line.strip()
-            if not line or line.startswith(&quot;#&quot;):
-                continue
-            parts = line.split(&quot;|&quot;)
-            if len(parts) &lt; 4:
-                continue
-            net, sta = parts[0].strip(), parts[1].strip()
-            try:
-                lat = float(parts[2]); lon = float(parts[3])
-            except Exception:
-                continue
-            stations.append((net, sta, lat, lon))
-    return stations
+<span class="c1"># ---------------- helper functions ----------------</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">read_stations</span><span class="p">(</span><span class="n">station_file</span><span class="p">):</span>
+    <span class="n">stations</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">station_file</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">line</span> <span class="ow">or</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;#&quot;</span><span class="p">):</span>
+                <span class="k">continue</span>
+            <span class="n">parts</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="kp">split</span><span class="p">(</span><span class="s2">&quot;|&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">parts</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="n">net</span><span class="p">,</span> <span class="n">sta</span> <span class="o">=</span> <span class="n">parts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span> <span class="n">parts</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">lat</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">parts</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span> <span class="n">lon</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">parts</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+            <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="n">stations</span><span class="o">.</span><span class="kp">append</span><span class="p">((</span><span class="n">net</span><span class="p">,</span> <span class="n">sta</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">stations</span>
 
-def geo_to_xy_km(lats, lons):
-    lat0 = np.mean(lats)
-    lon0 = np.mean(lons)
-    deg2km_lat = 110.574
-    deg2km_lon = 111.320 * math.cos(math.radians(lat0))
-    xs = (np.array(lons) - lon0) * deg2km_lon
-    ys = (np.array(lats) - lat0) * deg2km_lat
-    return xs, ys, lat0, lon0
+<span class="k">def</span><span class="w"> </span><span class="nf">geo_to_xy_km</span><span class="p">(</span><span class="n">lats</span><span class="p">,</span> <span class="n">lons</span><span class="p">):</span>
+    <span class="n">lat0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">mean</span><span class="p">(</span><span class="n">lats</span><span class="p">)</span>
+    <span class="n">lon0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">mean</span><span class="p">(</span><span class="n">lons</span><span class="p">)</span>
+    <span class="n">deg2km_lat</span> <span class="o">=</span> <span class="mf">110.574</span>
+    <span class="n">deg2km_lon</span> <span class="o">=</span> <span class="mf">111.320</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="kp">cos</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">lat0</span><span class="p">))</span>
+    <span class="n">xs</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="kp">array</span><span class="p">(</span><span class="n">lons</span><span class="p">)</span> <span class="o">-</span> <span class="n">lon0</span><span class="p">)</span> <span class="o">*</span> <span class="n">deg2km_lon</span>
+    <span class="n">ys</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="kp">array</span><span class="p">(</span><span class="n">lats</span><span class="p">)</span> <span class="o">-</span> <span class="n">lat0</span><span class="p">)</span> <span class="o">*</span> <span class="n">deg2km_lat</span>
+    <span class="k">return</span> <span class="n">xs</span><span class="p">,</span> <span class="n">ys</span><span class="p">,</span> <span class="n">lat0</span><span class="p">,</span> <span class="n">lon0</span>
 
-def window_slices(day_start, win_len, win_step):
-    t0 = int(day_start.timestamp)
-    t_end = int((day_start + 86400).timestamp)
-    slices = []
-    t = t0
-    while t + win_len &lt;= t_end:
-        slices.append((t, t + win_len))
-        t += win_step
-    return slices
+<span class="k">def</span><span class="w"> </span><span class="nf">window_slices</span><span class="p">(</span><span class="n">day_start</span><span class="p">,</span> <span class="n">win_len</span><span class="p">,</span> <span class="n">win_step</span><span class="p">):</span>
+    <span class="n">t0</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">day_start</span><span class="o">.</span><span class="n">timestamp</span><span class="p">)</span>
+    <span class="n">t_end</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">day_start</span> <span class="o">+</span> <span class="mi">86400</span><span class="p">)</span><span class="o">.</span><span class="n">timestamp</span><span class="p">)</span>
+    <span class="n">slices</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">t0</span>
+    <span class="k">while</span> <span class="n">t</span> <span class="o">+</span> <span class="n">win_len</span> <span class="o">&lt;=</span> <span class="n">t_end</span><span class="p">:</span>
+        <span class="n">slices</span><span class="o">.</span><span class="kp">append</span><span class="p">((</span><span class="n">t</span><span class="p">,</span> <span class="n">t</span> <span class="o">+</span> <span class="n">win_len</span><span class="p">))</span>
+        <span class="n">t</span> <span class="o">+=</span> <span class="n">win_step</span>
+    <span class="k">return</span> <span class="n">slices</span>
 
-def next_pow2(n):
-    return 1 &lt;&lt; (n - 1).bit_length()
+<span class="k">def</span><span class="w"> </span><span class="nf">next_pow2</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">bit_length</span><span class="p">()</span>
 
-# ---------------- main pipeline ----------------
-stations = read_stations(station_file)
-if len(stations) == 0:
-    raise SystemExit(&quot;No stations read from station.lst&quot;)
+<span class="c1"># ---------------- main pipeline ----------------</span>
+<span class="n">stations</span> <span class="o">=</span> <span class="n">read_stations</span><span class="p">(</span><span class="n">station_file</span><span class="p">)</span>
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">stations</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">raise</span> <span class="ne">SystemExit</span><span class="p">(</span><span class="s2">&quot;No stations read from station.lst&quot;</span><span class="p">)</span>
 
-print(f&quot;[INFO] Read {len(stations)} stations&quot;)
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[INFO] Read </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">stations</span><span class="p">)</span><span class="si">}</span><span class="s2"> stations&quot;</span><span class="p">)</span>
 
-current = start_date
-while current &lt;= end_date:
-    day_str = current.strftime(&quot;%Y%m%d&quot;)
-    day_path = os.path.join(data_dir, day_str)
-    print(f&quot;\n[INFO] Processing {day_str} ...&quot;)
-    if not os.path.isdir(day_path):
-        print(f&quot;[WARN] {day_path} not found. skip.&quot;)
-        current += timedelta(days=1)
-        continue
+<span class="n">current</span> <span class="o">=</span> <span class="n">start_date</span>
+<span class="k">while</span> <span class="n">current</span> <span class="o">&lt;=</span> <span class="n">end_date</span><span class="p">:</span>
+    <span class="n">day_str</span> <span class="o">=</span> <span class="n">current</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y%m</span><span class="si">%d</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">day_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_dir</span><span class="p">,</span> <span class="n">day_str</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">[INFO] Processing </span><span class="si">{</span><span class="n">day_str</span><span class="si">}</span><span class="s2"> ...&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">day_path</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[WARN] </span><span class="si">{</span><span class="n">day_path</span><span class="si">}</span><span class="s2"> not found. skip.&quot;</span><span class="p">)</span>
+        <span class="n">current</span> <span class="o">+=</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">continue</span>
 
-    # read one trace per station
-    traces = {}
-    lat_list = []; lon_list = []; net_sta_list = []
-    for net, sta, lat, lon in stations:
-        pattern = os.path.join(day_path, f&quot;{net}_{sta}_LHZ.SAC&quot;)
-        files = sorted(glob.glob(pattern))
-        if not files: continue
-        try:
-            tr = read(files[0])[0]
-            traces[(net,sta)] = tr
-            lat_list.append(lat); lon_list.append(lon); net_sta_list.append((net,sta))
-        except Exception as e:
-            print(f&quot;[WARN] read {files[0]} failed: {e}&quot;)
-            continue
+    <span class="c1"># read one trace per station</span>
+    <span class="n">traces</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">lat_list</span> <span class="o">=</span> <span class="p">[];</span> <span class="n">lon_list</span> <span class="o">=</span> <span class="p">[];</span> <span class="n">net_sta_list</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">net</span><span class="p">,</span> <span class="n">sta</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">lon</span> <span class="ow">in</span> <span class="n">stations</span><span class="p">:</span>
+        <span class="n">pattern</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">day_path</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">net</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">sta</span><span class="si">}</span><span class="s2">_LHZ.SAC&quot;</span><span class="p">)</span>
+        <span class="n">files</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="n">pattern</span><span class="p">))</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">files</span><span class="p">:</span> <span class="k">continue</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">tr</span> <span class="o">=</span> <span class="n">read</span><span class="p">(</span><span class="n">files</span><span class="p">[</span><span class="mi">0</span><span class="p">])[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">traces</span><span class="p">[(</span><span class="n">net</span><span class="p">,</span><span class="n">sta</span><span class="p">)]</span> <span class="o">=</span> <span class="n">tr</span>
+            <span class="n">lat_list</span><span class="o">.</span><span class="kp">append</span><span class="p">(</span><span class="n">lat</span><span class="p">);</span> <span class="n">lon_list</span><span class="o">.</span><span class="kp">append</span><span class="p">(</span><span class="n">lon</span><span class="p">);</span> <span class="n">net_sta_list</span><span class="o">.</span><span class="kp">append</span><span class="p">((</span><span class="n">net</span><span class="p">,</span><span class="n">sta</span><span class="p">))</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[WARN] read </span><span class="si">{</span><span class="n">files</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> failed: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">continue</span>
 
-    nsta = len(traces)
-    if nsta &lt; min_stations:
-        print(f&quot;[WARN] Only {nsta} stations available, skip.&quot;)
-        current += timedelta(days=1)
-        continue
+    <span class="n">nsta</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">traces</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">nsta</span> <span class="o">&lt;</span> <span class="n">min_stations</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[WARN] Only </span><span class="si">{</span><span class="n">nsta</span><span class="si">}</span><span class="s2"> stations available, skip.&quot;</span><span class="p">)</span>
+        <span class="n">current</span> <span class="o">+=</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">continue</span>
 
-    # sampling rate
-    sr_target = min([tr.stats.sampling_rate for tr in traces.values()])
-    xs, ys, lat0, lon0 = geo_to_xy_km(lat_list, lon_list)
+    <span class="c1"># sampling rate</span>
+    <span class="n">sr_target</span> <span class="o">=</span> <span class="nb">min</span><span class="p">([</span><span class="n">tr</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">sampling_rate</span> <span class="k">for</span> <span class="n">tr</span> <span class="ow">in</span> <span class="n">traces</span><span class="o">.</span><span class="n">values</span><span class="p">()])</span>
+    <span class="n">xs</span><span class="p">,</span> <span class="n">ys</span><span class="p">,</span> <span class="n">lat0</span><span class="p">,</span> <span class="n">lon0</span> <span class="o">=</span> <span class="n">geo_to_xy_km</span><span class="p">(</span><span class="n">lat_list</span><span class="p">,</span> <span class="n">lon_list</span><span class="p">)</span>
 
-    # reorder traces
-    traces_ordered = [traces[k] for k in net_sta_list]
+    <span class="c1"># reorder traces</span>
+    <span class="n">traces_ordered</span> <span class="o">=</span> <span class="p">[</span><span class="n">traces</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">net_sta_list</span><span class="p">]</span>
 
-    # window slices
-    day_start = UTCDateTime(current.strftime(&quot;%Y-%m-%dT00:00:00&quot;))
-    slices = window_slices(day_start, win_len, win_step)
-    print(f&quot;[INFO] {len(slices)} windows&quot;)
+    <span class="c1"># window slices</span>
+    <span class="n">day_start</span> <span class="o">=</span> <span class="n">UTCDateTime</span><span class="p">(</span><span class="n">current</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2">T00:00:00&quot;</span><span class="p">))</span>
+    <span class="n">slices</span> <span class="o">=</span> <span class="n">window_slices</span><span class="p">(</span><span class="n">day_start</span><span class="p">,</span> <span class="n">win_len</span><span class="p">,</span> <span class="n">win_step</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[INFO] </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">slices</span><span class="p">)</span><span class="si">}</span><span class="s2"> windows&quot;</span><span class="p">)</span>
 
-    # accumulate daily power grid
-    daily_power = np.zeros((len(az_grid), len(s_grid)))
-    nwin_used = 0
+    <span class="c1"># accumulate daily power grid</span>
+    <span class="n">daily_power</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">zeros</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">az_grid</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">s_grid</span><span class="p">)))</span>
+    <span class="n">nwin_used</span> <span class="o">=</span> <span class="mi">0</span>
 
-    for (t0, t1) in slices:
-        specs = []
-        valid = True
-        nfft = None
-        for tr in traces_ordered:
-            try:
-                seg = tr.slice(UTCDateTime(t0), UTCDateTime(t1), nearest_sample=False)
-            except:
-                valid = False; break
-            expected_npts = int(round((t1 - t0) * sr_target))
-            data = seg.data.astype(np.float64)
-            if len(data) &lt; expected_npts:
-                if len(data) == 0: valid = False; break
-                data = np.pad(data, (0, expected_npts-len(data)))
-            elif len(data) &gt; expected_npts:
-                data = data[:expected_npts]
-            data -= np.mean(data)
-            data *= np.hanning(len(data))
-            if nfft is None:
-                nfft = next_pow2(len(data))
-            spec = np.fft.rfft(data, n=nfft)
-            freqs = np.fft.rfftfreq(nfft, d=1.0/sr_target)
-            specs.append(spec)
-        if not valid or nfft is None: continue
+    <span class="k">for</span> <span class="p">(</span><span class="n">t0</span><span class="p">,</span> <span class="n">t1</span><span class="p">)</span> <span class="ow">in</span> <span class="n">slices</span><span class="p">:</span>
+        <span class="n">specs</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">valid</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="n">nfft</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">for</span> <span class="n">tr</span> <span class="ow">in</span> <span class="n">traces_ordered</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">seg</span> <span class="o">=</span> <span class="n">tr</span><span class="o">.</span><span class="kp">slice</span><span class="p">(</span><span class="n">UTCDateTime</span><span class="p">(</span><span class="n">t0</span><span class="p">),</span> <span class="n">UTCDateTime</span><span class="p">(</span><span class="n">t1</span><span class="p">),</span> <span class="n">nearest_sample</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+            <span class="k">except</span><span class="p">:</span>
+                <span class="n">valid</span> <span class="o">=</span> <span class="kc">False</span><span class="p">;</span> <span class="k">break</span>
+            <span class="n">expected_npts</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">round</span><span class="p">((</span><span class="n">t1</span> <span class="o">-</span> <span class="n">t0</span><span class="p">)</span> <span class="o">*</span> <span class="n">sr_target</span><span class="p">))</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">seg</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="kp">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">expected_npts</span><span class="p">:</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="n">valid</span> <span class="o">=</span> <span class="kc">False</span><span class="p">;</span> <span class="k">break</span>
+                <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pad</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">expected_npts</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)))</span>
+            <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">expected_npts</span><span class="p">:</span>
+                <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">[:</span><span class="n">expected_npts</span><span class="p">]</span>
+            <span class="n">data</span> <span class="o">-=</span> <span class="n">np</span><span class="o">.</span><span class="kp">mean</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+            <span class="n">data</span> <span class="o">*=</span> <span class="n">np</span><span class="o">.</span><span class="kp">hanning</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+            <span class="k">if</span> <span class="n">nfft</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">nfft</span> <span class="o">=</span> <span class="n">next_pow2</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+            <span class="n">spec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">fft</span><span class="o">.</span><span class="n">rfft</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="n">nfft</span><span class="p">)</span>
+            <span class="n">freqs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">fft</span><span class="o">.</span><span class="n">rfftfreq</span><span class="p">(</span><span class="n">nfft</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="mf">1.0</span><span class="o">/</span><span class="n">sr_target</span><span class="p">)</span>
+            <span class="n">specs</span><span class="o">.</span><span class="kp">append</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">valid</span> <span class="ow">or</span> <span class="n">nfft</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span> <span class="k">continue</span>
 
-        specs = np.array(specs)
-        freq_mask = (freqs&gt;=fmin)&amp;(freqs&lt;=fmax)
-        if not np.any(freq_mask): continue
-        freqs_sel = freqs[freq_mask]
-        specs_sel = specs[:, freq_mask]
+        <span class="n">specs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">array</span><span class="p">(</span><span class="n">specs</span><span class="p">)</span>
+        <span class="n">freq_mask</span> <span class="o">=</span> <span class="p">(</span><span class="n">freqs</span><span class="o">&gt;=</span><span class="n">fmin</span><span class="p">)</span><span class="o">&amp;</span><span class="p">(</span><span class="n">freqs</span><span class="o">&lt;=</span><span class="n">fmax</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="kp">any</span><span class="p">(</span><span class="n">freq_mask</span><span class="p">):</span> <span class="k">continue</span>
+        <span class="n">freqs_sel</span> <span class="o">=</span> <span class="n">freqs</span><span class="p">[</span><span class="n">freq_mask</span><span class="p">]</span>
+        <span class="n">specs_sel</span> <span class="o">=</span> <span class="n">specs</span><span class="p">[:,</span> <span class="n">freq_mask</span><span class="p">]</span>
 
-        xs_arr = np.array(xs); ys_arr = np.array(ys)
-        spec_power = np.sum(np.abs(specs_sel)**2)
-        if spec_power&lt;=0: continue
+        <span class="n">xs_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">array</span><span class="p">(</span><span class="n">xs</span><span class="p">);</span> <span class="n">ys_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">array</span><span class="p">(</span><span class="n">ys</span><span class="p">)</span>
+        <span class="n">spec_power</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="kp">abs</span><span class="p">(</span><span class="n">specs_sel</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">spec_power</span><span class="o">&lt;=</span><span class="mi">0</span><span class="p">:</span> <span class="k">continue</span>
 
-        two_pi = 2*np.pi
-        power_grid = np.zeros((len(az_grid), len(s_grid)))
-        for ia, az_deg in enumerate(az_grid):
-            az_rad = math.radians(az_deg)
-            proj = xs_arr*np.sin(az_rad) + ys_arr*np.cos(az_rad)
-            for is_idx, s in enumerate(s_grid):
-                delays = proj*s
-                steering = np.exp(-1j*two_pi*np.outer(delays,freqs_sel))
-                beam_spectrum = np.sum(steering*specs_sel, axis=0)
-                power = np.sum(np.abs(beam_spectrum)**2)
-                power_grid[ia,is_idx] = power/spec_power
-        daily_power += power_grid
-        nwin_used += 1
+        <span class="n">two_pi</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+        <span class="n">power_grid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">zeros</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">az_grid</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">s_grid</span><span class="p">)))</span>
+        <span class="k">for</span> <span class="n">ia</span><span class="p">,</span> <span class="n">az_deg</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">az_grid</span><span class="p">):</span>
+            <span class="n">az_rad</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">az_deg</span><span class="p">)</span>
+            <span class="n">proj</span> <span class="o">=</span> <span class="n">xs_arr</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="kp">sin</span><span class="p">(</span><span class="n">az_rad</span><span class="p">)</span> <span class="o">+</span> <span class="n">ys_arr</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="kp">cos</span><span class="p">(</span><span class="n">az_rad</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">is_idx</span><span class="p">,</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">s_grid</span><span class="p">):</span>
+                <span class="n">delays</span> <span class="o">=</span> <span class="n">proj</span><span class="o">*</span><span class="n">s</span>
+                <span class="n">steering</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">exp</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="n">two_pi</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="kp">outer</span><span class="p">(</span><span class="n">delays</span><span class="p">,</span><span class="n">freqs_sel</span><span class="p">))</span>
+                <span class="n">beam_spectrum</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">sum</span><span class="p">(</span><span class="n">steering</span><span class="o">*</span><span class="n">specs_sel</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+                <span class="kp">power</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="kp">abs</span><span class="p">(</span><span class="n">beam_spectrum</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+                <span class="n">power_grid</span><span class="p">[</span><span class="n">ia</span><span class="p">,</span><span class="n">is_idx</span><span class="p">]</span> <span class="o">=</span> <span class="kp">power</span><span class="o">/</span><span class="n">spec_power</span>
+        <span class="n">daily_power</span> <span class="o">+=</span> <span class="n">power_grid</span>
+        <span class="n">nwin_used</span> <span class="o">+=</span> <span class="mi">1</span>
 
-    if nwin_used==0:
-        print(f&quot;[WARN] no valid windows {day_str}&quot;)
-        current += timedelta(days=1)
-        continue
+    <span class="k">if</span> <span class="n">nwin_used</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[WARN] no valid windows </span><span class="si">{</span><span class="n">day_str</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">current</span> <span class="o">+=</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">continue</span>
 
-    daily_power /= nwin_used
-    print(f&quot;[INFO] averaged over {nwin_used} windows&quot;)
+    <span class="n">daily_power</span> <span class="o">/=</span> <span class="n">nwin_used</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[INFO] averaged over </span><span class="si">{</span><span class="n">nwin_used</span><span class="si">}</span><span class="s2"> windows&quot;</span><span class="p">)</span>
 
-    # ---------------- plot daily radar ----------------
-    theta, r = np.meshgrid(np.deg2rad(az_grid), speed_grid)
-    Z = daily_power.T  # shape (len(s_grid), len(az_grid))
+    <span class="c1"># ---------------- plot daily radar ----------------</span>
+    <span class="n">theta</span><span class="p">,</span> <span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">meshgrid</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">az_grid</span><span class="p">),</span> <span class="n">speed_grid</span><span class="p">)</span>
+    <span class="n">Z</span> <span class="o">=</span> <span class="n">daily_power</span><span class="o">.</span><span class="n">T</span>  <span class="c1"># shape (len(s_grid), len(az_grid))</span>
 
-    # locate max power
-    max_idx = np.unravel_index(np.argmax(Z), Z.shape)
-    max_az_deg = az_grid[max_idx[1]]
-    max_speed = r[max_idx]  # km/s
+    <span class="c1"># locate max power</span>
+    <span class="n">max_idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">unravel_index</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="kp">argmax</span><span class="p">(</span><span class="n">Z</span><span class="p">),</span> <span class="n">Z</span><span class="o">.</span><span class="kp">shape</span><span class="p">)</span>
+    <span class="n">max_az_deg</span> <span class="o">=</span> <span class="n">az_grid</span><span class="p">[</span><span class="n">max_idx</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
+    <span class="n">max_speed</span> <span class="o">=</span> <span class="n">r</span><span class="p">[</span><span class="n">max_idx</span><span class="p">]</span>  <span class="c1"># km/s</span>
 
-    fig = plt.figure(figsize=(7,7))
-    ax = fig.add_subplot(111, polar=True)
-    pcm = ax.pcolormesh(theta, r, Z, shading=&quot;auto&quot;, cmap=&quot;viridis&quot;)
-    ax.set_theta_zero_location(&quot;N&quot;)
-    ax.set_theta_direction(-1)
-    ax.set_rmax(vmax)
-    #fig.colorbar(pcm, ax=ax, orientation=&quot;vertical&quot;, label=&quot;Normalized Power&quot;)
-    ax.set_title(f&quot;FK Radar {day_str}\nBand {fmin}-{fmax} Hz&quot;, fontsize=12)
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">))</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">,</span> <span class="n">polar</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">pcm</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="n">theta</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="n">shading</span><span class="o">=</span><span class="s2">&quot;auto&quot;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;viridis&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_theta_zero_location</span><span class="p">(</span><span class="s2">&quot;N&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_theta_direction</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_rmax</span><span class="p">(</span><span class="n">vmax</span><span class="p">)</span>
+    <span class="c1">#fig.colorbar(pcm, ax=ax, orientation=&quot;vertical&quot;, label=&quot;Normalized Power&quot;)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;FK Radar </span><span class="si">{</span><span class="n">day_str</span><span class="si">}</span><span class="se">\n</span><span class="s2">Band </span><span class="si">{</span><span class="n">fmin</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">fmax</span><span class="si">}</span><span class="s2"> Hz&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
 
-    # mark max point
-    ax.plot(np.deg2rad(max_az_deg), max_speed, 'ro', markersize=8, label=f&quot;Max Power\nAz={max_az_deg:.1f}°, v={max_speed:.2f} km/s&quot;)
-    ax.legend(loc='upper right', bbox_to_anchor=(1.3,1.1), fontsize=8)
+    <span class="c1"># mark max point</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">max_az_deg</span><span class="p">),</span> <span class="n">max_speed</span><span class="p">,</span> <span class="s1">&#39;ro&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Max Power</span><span class="se">\n</span><span class="s2">Az=</span><span class="si">{</span><span class="n">max_az_deg</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">°, v=</span><span class="si">{</span><span class="n">max_speed</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> km/s&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper right&#39;</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.3</span><span class="p">,</span><span class="mf">1.1</span><span class="p">),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
 
-    out_png = os.path.join(output_dir, f&quot;fk_radar_{day_str}.png&quot;)
-    plt.savefig(out_png, dpi=200, bbox_inches=&quot;tight&quot;)
-    plt.close()
-    print(f&quot;[INFO] saved {out_png}&quot;)
-    current += timedelta(days=1)
-</code></pre>
+    <span class="n">out_png</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;fk_radar_</span><span class="si">{</span><span class="n">day_str</span><span class="si">}</span><span class="s2">.png&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">out_png</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s2">&quot;tight&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[INFO] saved </span><span class="si">{</span><span class="n">out_png</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">current</span> <span class="o">+=</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div>
   </div>
 
   <div class="post-nav">

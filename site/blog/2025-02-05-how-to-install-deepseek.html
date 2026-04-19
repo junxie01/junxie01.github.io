@@ -47,24 +47,24 @@
 <!--less-->
 <h1 id="windowsdeepseek">Windows下deepseek部署</h1>
 <p>&emsp;&emsp;首先是在windows下下载<a href="https://ollama.com/download">ollama</a>并安装。然后在cmd下运行:</p>
-<pre class="highlight"><code class="language-bash">ollama run deepseek-r1:7b
-</code></pre>
+<div class="highlight"><pre><span></span><code>ollama<span class="w"> </span>run<span class="w"> </span>deepseek-r1:7b
+</code></pre></div>
 
 <p>其实安装时输入deepseek-r1默认就是7b，大小有4.7G。当然还有其他的版本，自己去搜索并根据自己的GPU大小进行安装。
 安装完之后出现了</p>
 <p>&rdquo;&gt;&gt;&gt;&rdquo;</p>
 <p>就可以对话了。下次要调用就在cmd中重新运行命令:</p>
-<pre class="highlight"><code>ollama run deepseek-r1
-</code></pre>
+<div class="highlight"><pre><span></span><code>ollama run deepseek-r1
+</code></pre></div>
 
 <h1 id="linuxdeepseek">Linux下deepseek部署</h1>
 <p>&emsp;&emsp;在Linux下面则这样安装ollama，命令:</p>
-<pre class="highlight"><code>curl -fsSL https://ollama.com/install.sh | sh
-</code></pre>
+<div class="highlight"><pre><span></span><code>curl -fsSL https://ollama.com/install.sh | sh
+</code></pre></div>
 
 <p>这个命令是从github下载ollama进行安装。得保证你能连接到github。接下来安装deepseek:</p>
-<pre class="highlight"><code>ollama run deepseek-r1:7b
-</code></pre>
+<div class="highlight"><pre><span></span><code>ollama run deepseek-r1:7b
+</code></pre></div>
 
 <h1 id="deepseekzotero">deepseek与zotero结合</h1>
 <p>deepseek可以和zotero结合进行本地的文献阅读。
@@ -73,32 +73,32 @@
 <p>&emsp;&emsp;另外DeepSeek发布的多模态大模型Janus-Pro-7B支持图像生成，也可以<a href="https://www.upx8.com/4681">本地部署</a>，超厉害。</p>
 <h2 id="gitconda">安装Git和conda</h2>
 <h2 id="_1">创建环境：</h2>
-<pre class="highlight"><code>conda create -n mp python=3.10 -y
+<div class="highlight"><pre><span></span><code>conda create -n mp python=3.10 -y
 conda activate mp
-</code></pre>
+</code></pre></div>
 
 <h2 id="janus">克隆Janus</h2>
-<pre class="highlight"><code>git clone https://github.com/deepseek-ai/Janus.git
+<div class="highlight"><pre><span></span><code>git clone https://github.com/deepseek-ai/Janus.git
 cd Janus
-</code></pre>
+</code></pre></div>
 
 <h2 id="_2">安装依赖</h2>
-<pre class="highlight"><code>pip install -e .
-</code></pre>
+<div class="highlight"><pre><span></span><code>pip install -e .
+</code></pre></div>
 
 <h2 id="graioui">安装Graio(UI)</h2>
-<pre class="highlight"><code>pip install gradio
-pip uninstall torch torchvision torchaudio -y
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="n">pip</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">gradio</span>
+<span class="n">pip</span><span class="w"> </span><span class="n">uninstall</span><span class="w"> </span><span class="n">torch</span><span class="w"> </span><span class="n">torchvision</span><span class="w"> </span><span class="n">torchaudio</span><span class="w"> </span><span class="o">-</span><span class="n">y</span>
+<span class="n">pip</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">torch</span><span class="w"> </span><span class="n">torchvision</span><span class="w"> </span><span class="n">torchaudio</span><span class="w"> </span><span class="o">--</span><span class="n">index</span><span class="o">-</span><span class="n">url</span><span class="w"> </span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">download</span><span class="o">.</span><span class="n">pytorch</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">whl</span><span class="o">/</span><span class="n">cu121</span>
+</code></pre></div>
 
 <h2 id="_3">运行</h2>
-<pre class="highlight"><code>python demo/app_januspro.py
-</code></pre>
+<div class="highlight"><pre><span></span><code>python demo/app_januspro.py
+</code></pre></div>
 
 <p>调用gpu运行</p>
-<pre class="highlight"><code>python demo/app_januspro.py --device cuda
-</code></pre>
+<div class="highlight"><pre><span></span><code>python demo/app_januspro.py --device cuda
+</code></pre></div>
 
 <p>打开本地链接<a href="http://127.0.0.1:7860">http://127.0.0.1:7860</a>就可以使用。</p>
 <p>理想很丰满，现实很骨感，还是没搞定，有时间再整。</p>

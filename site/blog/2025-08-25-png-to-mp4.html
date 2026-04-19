@@ -47,8 +47,8 @@
 <!--less-->
 <p>&emsp;&emsp;我的图一般都是在linux下生成，大量的图自然用命令来生成是最好的。这里用到程序ffmpeg，没有的话需要自己先安装了啊。
 接下来用命令:</p>
-<pre class="highlight"><code>ffmpeg -pattern_type glob -framerate 24 -i &quot;2*.png&quot; -c:v libx264 -pix_fmt yuv420p output.mp4
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nx">ffmpeg</span><span class="w"> </span><span class="o">-</span><span class="nx">pattern_type</span><span class="w"> </span><span class="nx">glob</span><span class="w"> </span><span class="o">-</span><span class="nx">framerate</span><span class="w"> </span><span class="mi">24</span><span class="w"> </span><span class="o">-</span><span class="nx">i</span><span class="w"> </span><span class="s">&quot;2*.png&quot;</span><span class="w"> </span><span class="o">-</span><span class="nx">c</span><span class="p">:</span><span class="nx">v</span><span class="w"> </span><span class="nx">libx264</span><span class="w"> </span><span class="o">-</span><span class="nx">pix_fmt</span><span class="w"> </span><span class="nx">yuv420p</span><span class="w"> </span><span class="nx">output</span><span class="p">.</span><span class="nx">mp4</span>
+</code></pre></div>
 
 <ul>
 <li>-pattern_type glob: 作用是启用通配符模式匹配输入文件名。</li>
@@ -59,8 +59,8 @@
 <li>output.mp4: 输出文件。
 ffmpeg的参数多得很，用到的时候可以去查。这句命令应该没啥问题，有问题就去问ai。另外，生成了mp4以后为了方便在ppt中演示播放可以将其转化为gif。</li>
 </ul>
-<pre class="highlight"><code>ffmpeg -i output.mp4 output.gif
-</code></pre>
+<div class="highlight"><pre><span></span><code>ffmpeg -i output.mp4 output.gif
+</code></pre></div>
 
 <p>然后就大功告成了啊。</p>
   </div>

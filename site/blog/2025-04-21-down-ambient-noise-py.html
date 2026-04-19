@@ -46,44 +46,44 @@
 
   <div class="post-content">
     <p>利用obspy的MassDownloader下载连续的波形示例。</p>
-<pre class="highlight"><code class="language-python">import obspy
-from obspy.clients.fdsn.mass_downloader import RectangularDomain, CircularDomain, \
-    Restrictions, MassDownloader
-# Rectangular domain containing parts of southern Germany.
-#domain = RectangularDomain(minlatitude=-15, maxlatitude=18,
-#                           minlongitude=10, maxlongitude=22)
-domain = CircularDomain(
-        latitude=0,
-        longitude=0,
-        minradius=0.0,
-        maxradius=12.0
-        )
-restrictions = Restrictions(
-    # Get data for a whole year.
-    starttime=obspy.UTCDateTime(2005, 1, 15),
-    endtime=obspy.UTCDateTime(2007, 10, 15),
-    # Chunk it to have one file per day.
-    chunklength_in_sec=86400,
-    # Considering the enormous amount of data associated with continuous
-    # requests, you might want to limit the data based on SEED identifiers.
-    # If the location code is specified, the location priority list is not
-    # used; the same is true for the channel argument and priority list.
-    network=&quot;??&quot;, station=&quot;????&quot;, location=&quot;*&quot;, channel=&quot;LHZ&quot;,
-    # The typical use case for such a data set are noise correlations where
-    # gaps are dealt with at a later stage.
-    reject_channels_with_gaps=False,
-    # Same is true with the minimum length. All data might be useful.
-    minimum_length=0.0,
-    # Guard against the same station having different names.
-    minimum_interstation_distance_in_m=100.0)
-# Restrict the number of providers if you know which serve the desired
-# data. If in doubt just don't specify - then all providers will be
-# queried.
-#mdl = MassDownloader(providers=[&quot;IRIS&quot;,&quot;USGS&quot;,&quot;GFZ&quot;])
-mdl = MassDownloader()
-mdl.download(domain, restrictions, mseed_storage=&quot;waveforms&quot;,
-             stationxml_storage=&quot;stations&quot;)
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">obspy</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">obspy.clients.fdsn.mass_downloader</span><span class="w"> </span><span class="kn">import</span> <span class="n">RectangularDomain</span><span class="p">,</span> <span class="n">CircularDomain</span><span class="p">,</span> \
+    <span class="n">Restrictions</span><span class="p">,</span> <span class="n">MassDownloader</span>
+<span class="c1"># Rectangular domain containing parts of southern Germany.</span>
+<span class="c1">#domain = RectangularDomain(minlatitude=-15, maxlatitude=18,</span>
+<span class="c1">#                           minlongitude=10, maxlongitude=22)</span>
+<span class="n">domain</span> <span class="o">=</span> <span class="n">CircularDomain</span><span class="p">(</span>
+        <span class="n">latitude</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+        <span class="n">longitude</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+        <span class="n">minradius</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>
+        <span class="n">maxradius</span><span class="o">=</span><span class="mf">12.0</span>
+        <span class="p">)</span>
+<span class="n">restrictions</span> <span class="o">=</span> <span class="n">Restrictions</span><span class="p">(</span>
+    <span class="c1"># Get data for a whole year.</span>
+    <span class="n">starttime</span><span class="o">=</span><span class="n">obspy</span><span class="o">.</span><span class="n">UTCDateTime</span><span class="p">(</span><span class="mi">2005</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">15</span><span class="p">),</span>
+    <span class="n">endtime</span><span class="o">=</span><span class="n">obspy</span><span class="o">.</span><span class="n">UTCDateTime</span><span class="p">(</span><span class="mi">2007</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">),</span>
+    <span class="c1"># Chunk it to have one file per day.</span>
+    <span class="n">chunklength_in_sec</span><span class="o">=</span><span class="mi">86400</span><span class="p">,</span>
+    <span class="c1"># Considering the enormous amount of data associated with continuous</span>
+    <span class="c1"># requests, you might want to limit the data based on SEED identifiers.</span>
+    <span class="c1"># If the location code is specified, the location priority list is not</span>
+    <span class="c1"># used; the same is true for the channel argument and priority list.</span>
+    <span class="n">network</span><span class="o">=</span><span class="s2">&quot;??&quot;</span><span class="p">,</span> <span class="n">station</span><span class="o">=</span><span class="s2">&quot;????&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;*&quot;</span><span class="p">,</span> <span class="n">channel</span><span class="o">=</span><span class="s2">&quot;LHZ&quot;</span><span class="p">,</span>
+    <span class="c1"># The typical use case for such a data set are noise correlations where</span>
+    <span class="c1"># gaps are dealt with at a later stage.</span>
+    <span class="n">reject_channels_with_gaps</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="c1"># Same is true with the minimum length. All data might be useful.</span>
+    <span class="n">minimum_length</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>
+    <span class="c1"># Guard against the same station having different names.</span>
+    <span class="n">minimum_interstation_distance_in_m</span><span class="o">=</span><span class="mf">100.0</span><span class="p">)</span>
+<span class="c1"># Restrict the number of providers if you know which serve the desired</span>
+<span class="c1"># data. If in doubt just don&#39;t specify - then all providers will be</span>
+<span class="c1"># queried.</span>
+<span class="c1">#mdl = MassDownloader(providers=[&quot;IRIS&quot;,&quot;USGS&quot;,&quot;GFZ&quot;])</span>
+<span class="n">mdl</span> <span class="o">=</span> <span class="n">MassDownloader</span><span class="p">()</span>
+<span class="n">mdl</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="n">domain</span><span class="p">,</span> <span class="n">restrictions</span><span class="p">,</span> <span class="n">mseed_storage</span><span class="o">=</span><span class="s2">&quot;waveforms&quot;</span><span class="p">,</span>
+             <span class="n">stationxml_storage</span><span class="o">=</span><span class="s2">&quot;stations&quot;</span><span class="p">)</span>
+</code></pre></div>
   </div>
 
   <div class="post-nav">

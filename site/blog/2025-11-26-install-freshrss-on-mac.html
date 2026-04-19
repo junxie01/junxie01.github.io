@@ -48,29 +48,29 @@
 <p>&emsp;&emsp;参考FreshRSS的github<a href="https://github.com/FreshRSS/FreshRSS/tree/edge">主页</a>。不过还是麻烦，请<a href="https://www.qianwen.com/">千问</a>帮忙，简直不要太简单。步骤如下：</p>
 <h2 id="php-composer">依赖安装（PHP + Composer）</h2>
 <p>用以下命令安装:</p>
-<pre class="highlight"><code>brew install php
+<div class="highlight"><pre><span></span><code>brew install php
 brew install composer
-</code></pre>
+</code></pre></div>
 
 <h2 id="freshrss">安装FreshRSS</h2>
 <p>命令如下：</p>
-<pre class="highlight"><code>git clone https://github.com/FreshRSS/FreshRSS.git
+<div class="highlight"><pre><span></span><code>git clone https://github.com/FreshRSS/FreshRSS.git
 cd FreshRSS
 # 如果想参与开发可切入edge分支：git checkout edge
 php -S localhost:8080 -t .
-</code></pre>
+</code></pre></div>
 
 <p>接下来访问 http://localhost:8080 进行安装。</p>
 <h2 id="_1">迁移和更新</h2>
 <p>数据都在data下面，拷贝他就可以进行迁移。更新的话运行如下脚本。</p>
-<pre class="highlight"><code>git pull origin main
-</code></pre>
+<div class="highlight"><pre><span></span><code>git pull origin main
+</code></pre></div>
 
 <h2 id="_2">下次登录</h2>
 <p>运行以下脚本</p>
-<pre class="highlight"><code>echo 'alias freshrss=&quot;cd ~/FreshRSS &amp;&amp; php -S localhost:8080 -t .&quot;' &gt;&gt; ~/.zshrc
+<div class="highlight"><pre><span></span><code>echo &#39;alias freshrss=&quot;cd ~/FreshRSS &amp;&amp; php -S localhost:8080 -t .&quot;&#39; &gt;&gt; ~/.zshrc
 source ~/.zshrc
-</code></pre>
+</code></pre></div>
 
 <p>然后每次运行freshrss，然后在浏览器访问 http://localhost:8080 就好。
 大功告成。</p>

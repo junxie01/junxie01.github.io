@@ -46,93 +46,93 @@
     <p>&emsp;&emsp;以下是python脚本练习2，功能为读取选定时间段内的hdf5文件，文件名形如20130512_cross_spec.hdf5。该文件总共有24段，每一段是一个小时某台阵平均互相关谱。然后画出这个互相关谱，保存为png格式图片。</p>
 <!--less-->
 
-<pre class="highlight"><code class="language-python">import os
-import h5py
-import numpy as np
-import matplotlib.pyplot as plt
-import matplotlib.dates as mdates
-from datetime import datetime, timedelta
-from matplotlib.dates import DateFormatter
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">h5py</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.dates</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">mdates</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib.dates</span><span class="w"> </span><span class="kn">import</span> <span class="n">DateFormatter</span>
 
 
-def parse_filename_to_start_time(filename):
-    &quot;&quot;&quot;从文件名推断数据起始时间&quot;&quot;&quot;
-    date_str = filename.split('_')[0]  # 提取&quot;20130512&quot;
-    return datetime.strptime(date_str, &quot;%Y%m%d&quot;)  # 转为 datetime
+<span class="k">def</span><span class="w"> </span><span class="nf">parse_filename_to_start_time</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;从文件名推断数据起始时间&quot;&quot;&quot;</span>
+    <span class="n">date_str</span> <span class="o">=</span> <span class="n">filename</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># 提取&quot;20130512&quot;</span>
+    <span class="k">return</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">date_str</span><span class="p">,</span> <span class="s2">&quot;%Y%m</span><span class="si">%d</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># 转为 datetime</span>
 
 
-def load_cross_spec_from_files(hdf5_dir, start_date, end_date):
-    &quot;&quot;&quot;读取目录下所有落在给定时间范围的互相关谱&quot;&quot;&quot;
-    files = sorted([f for f in os.listdir(hdf5_dir) if f.endswith(&quot;_cross_spec.hdf5&quot;)])
-    #files = sorted([f for f in os.listdir(hdf5_dir) if f.endswith(&quot;_power_spec.hdf5&quot;)])
-    time_list = []
-    spec_list = []
-    for file in files:
-        try:
-            base_time = parse_filename_to_start_time(file)
-        except Exception as e:
-            print(f&quot;跳过无法解析时间的文件：{file}&quot;)
-            continue
+<span class="k">def</span><span class="w"> </span><span class="nf">load_cross_spec_from_files</span><span class="p">(</span><span class="n">hdf5_dir</span><span class="p">,</span> <span class="n">start_date</span><span class="p">,</span> <span class="n">end_date</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;读取目录下所有落在给定时间范围的互相关谱&quot;&quot;&quot;</span>
+    <span class="n">files</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">([</span><span class="n">f</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">hdf5_dir</span><span class="p">)</span> <span class="k">if</span> <span class="n">f</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;_cross_spec.hdf5&quot;</span><span class="p">)])</span>
+    <span class="c1">#files = sorted([f for f in os.listdir(hdf5_dir) if f.endswith(&quot;_power_spec.hdf5&quot;)])</span>
+    <span class="n">time_list</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">spec_list</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">base_time</span> <span class="o">=</span> <span class="n">parse_filename_to_start_time</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;跳过无法解析时间的文件：</span><span class="si">{</span><span class="n">file</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">continue</span>
 
-        if not (start_date &lt;= base_time &lt;= end_date):
-            continue
+        <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">start_date</span> <span class="o">&lt;=</span> <span class="n">base_time</span> <span class="o">&lt;=</span> <span class="n">end_date</span><span class="p">):</span>
+            <span class="k">continue</span>
 
-        file_path = os.path.join(hdf5_dir, file)
-        with h5py.File(file_path, 'r') as f:
-            for i in range(1,24):
-                ds_name = f'window_{i}'
-                if ds_name in f:
-                    data = f[ds_name][:]
-                    current_time = base_time + timedelta(hours=i)
-                    time_list.append(current_time)
-                    spec_list.append(data)
-    return time_list, spec_list
+        <span class="n">file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">hdf5_dir</span><span class="p">,</span> <span class="n">file</span><span class="p">)</span>
+        <span class="k">with</span> <span class="n">h5py</span><span class="o">.</span><span class="n">File</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">24</span><span class="p">):</span>
+                <span class="n">ds_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;window_</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">&#39;</span>
+                <span class="k">if</span> <span class="n">ds_name</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+                    <span class="n">data</span> <span class="o">=</span> <span class="n">f</span><span class="p">[</span><span class="n">ds_name</span><span class="p">][:]</span>
+                    <span class="n">current_time</span> <span class="o">=</span> <span class="n">base_time</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="n">i</span><span class="p">)</span>
+                    <span class="n">time_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">current_time</span><span class="p">)</span>
+                    <span class="n">spec_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">time_list</span><span class="p">,</span> <span class="n">spec_list</span>
 
 
-def plot_spectrogram(time_list, spec_list, freqs=None, title=&quot;Cross Spectrogram&quot;, save_path=None):
-    &quot;&quot;&quot;绘制时间-频率图像&quot;&quot;&quot;
-    if not time_list or not spec_list:
-        print(&quot;没有数据可供绘图。&quot;)
-        return
+<span class="k">def</span><span class="w"> </span><span class="nf">plot_spectrogram</span><span class="p">(</span><span class="n">time_list</span><span class="p">,</span> <span class="n">spec_list</span><span class="p">,</span> <span class="n">freqs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Cross Spectrogram&quot;</span><span class="p">,</span> <span class="n">save_path</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;绘制时间-频率图像&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">time_list</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">spec_list</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;没有数据可供绘图。&quot;</span><span class="p">)</span>
+        <span class="k">return</span>
 
-    spec_array = np.array(spec_list).T  # shape: freq x time
-    #spec_array = spec_array - np.mean(spec_array, axis=1, keepdims=True)
-    n_freq = spec_array.shape[0]
+    <span class="n">spec_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">spec_list</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>  <span class="c1"># shape: freq x time</span>
+    <span class="c1">#spec_array = spec_array - np.mean(spec_array, axis=1, keepdims=True)</span>
+    <span class="n">n_freq</span> <span class="o">=</span> <span class="n">spec_array</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 
-    if freqs is None:
-        freqs = np.linspace(0.005, 0.1, n_freq)
+    <span class="k">if</span> <span class="n">freqs</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">freqs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.005</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="n">n_freq</span><span class="p">)</span>
 
-    fig, ax = plt.subplots(figsize=(14, 6))
-    time_nums = mdates.date2num(time_list)
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+    <span class="n">time_nums</span> <span class="o">=</span> <span class="n">mdates</span><span class="o">.</span><span class="n">date2num</span><span class="p">(</span><span class="n">time_list</span><span class="p">)</span>
 
-    cax = ax.pcolormesh(time_nums, freqs, spec_array, shading='auto', cmap='inferno')
-    #cax = ax.pcolormesh(time_nums, freqs, spec_array, shading='auto' )
-    fig.colorbar(cax, label='Cross Spectral Amplitude')
-    ax.set_title(title)
-    ax.set_yscale('log')  # 设置纵轴为对数刻度
-    ax.set_xlabel(&quot;Time (UTC)&quot;)
-    ax.set_ylabel(&quot;Frequency (Hz)&quot;)
-    ax.xaxis.set_major_formatter(DateFormatter(&quot;%Y-%m-%d\n%H:%M&quot;))
-    plt.xticks(rotation=30)
-    plt.tight_layout()
+    <span class="n">cax</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="n">time_nums</span><span class="p">,</span> <span class="n">freqs</span><span class="p">,</span> <span class="n">spec_array</span><span class="p">,</span> <span class="n">shading</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;inferno&#39;</span><span class="p">)</span>
+    <span class="c1">#cax = ax.pcolormesh(time_nums, freqs, spec_array, shading=&#39;auto&#39; )</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">cax</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Cross Spectral Amplitude&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_yscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>  <span class="c1"># 设置纵轴为对数刻度</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Time (UTC)&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Frequency (Hz)&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">DateFormatter</span><span class="p">(</span><span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="se">\n</span><span class="s2">%H:%M&quot;</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 
-    if save_path:
-        plt.savefig(save_path, dpi=300)
-        print(f&quot;图像已保存到：{save_path}&quot;)
+    <span class="k">if</span> <span class="n">save_path</span><span class="p">:</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">save_path</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;图像已保存到：</span><span class="si">{</span><span class="n">save_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
-    plt.show()
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
-# 设置参数
-hdf5_dir = &quot;output_1_0&quot;  # HDF5 文件夹路径
-start_date = datetime(2006, 5, 1)
-end_date = datetime(2006, 5,31)
-# 加载数据
-time_list, spec_list = load_cross_spec_from_files(hdf5_dir, start_date, end_date)
-# 绘图并保存为 PNG（可选）
-plot_spectrogram(time_list, spec_list,
-                 title=f&quot;Cross Spectral Density ({start_date.date()} ~ {end_date.date()})&quot;,
-                 save_path=&quot;cross_spectrogram_2006_1_0.png&quot;)
-</code></pre>
+<span class="c1"># 设置参数</span>
+<span class="n">hdf5_dir</span> <span class="o">=</span> <span class="s2">&quot;output_1_0&quot;</span>  <span class="c1"># HDF5 文件夹路径</span>
+<span class="n">start_date</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2006</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">end_date</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2006</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span><span class="mi">31</span><span class="p">)</span>
+<span class="c1"># 加载数据</span>
+<span class="n">time_list</span><span class="p">,</span> <span class="n">spec_list</span> <span class="o">=</span> <span class="n">load_cross_spec_from_files</span><span class="p">(</span><span class="n">hdf5_dir</span><span class="p">,</span> <span class="n">start_date</span><span class="p">,</span> <span class="n">end_date</span><span class="p">)</span>
+<span class="c1"># 绘图并保存为 PNG（可选）</span>
+<span class="n">plot_spectrogram</span><span class="p">(</span><span class="n">time_list</span><span class="p">,</span> <span class="n">spec_list</span><span class="p">,</span>
+                 <span class="n">title</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Cross Spectral Density (</span><span class="si">{</span><span class="n">start_date</span><span class="o">.</span><span class="n">date</span><span class="p">()</span><span class="si">}</span><span class="s2"> ~ </span><span class="si">{</span><span class="n">end_date</span><span class="o">.</span><span class="n">date</span><span class="p">()</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">,</span>
+                 <span class="n">save_path</span><span class="o">=</span><span class="s2">&quot;cross_spectrogram_2006_1_0.png&quot;</span><span class="p">)</span>
+</code></pre></div>
   </div>
 
   <div class="post-nav">

@@ -44,37 +44,37 @@
 
   <div class="post-content">
     <p>用我的脚本下载了一堆的miniseed放在seed下，仪器响应文件放在resp文件夹下，利用obspy去除仪器响应，还保存为miniseed。</p>
-<pre class="highlight"><code>import os
-from glob import glob
-from obspy import read, read_inventory
-# 设置路径
-seed_folder = &quot;seed&quot;
-resp_folder = &quot;resp&quot;
-output_folder = &quot;seed_corrected&quot;
-os.makedirs(output_folder, exist_ok=True)
-seed_files = glob(os.path.join(seed_folder, &quot;*.seed&quot;))   # 遍历所有 seed 文件
-for seed_file in seed_files:
-    print(f&quot;Processing {os.path.basename(seed_file)}&quot;)
-    try:
-        st = read(seed_file)   # 读取 MiniSEED 数据
-        for tr in st:
-            net = tr.stats.network
-            sta = tr.stats.station
-            loc = tr.stats.location
-            cha = tr.stats.channel
-            resp_file = os.path.join(resp_folder, f&quot;RESP.{net}.{sta}.{loc}.{cha}&quot;) # 构造 RESP 文件路径
-            if not os.path.exists(resp_file):
-                print(f&quot;RESP file not found: {resp_file}, skipping trace.&quot;)
-                continue
-            inventory = read_inventory(resp_file)   # 读取 RESP 文件作为 inventory
-            # 去除仪器响应
-            tr.remove_response(inventory=inventory, output=&quot;VEL&quot;, pre_filt=[0.001, 0.002, 0.3, 0.45 ], zero_mean=True, taper=True)
-        output_file = os.path.join(output_folder, os.path.basename(seed_file)) # 输出文件名
-        st.write(output_file, format=&quot;MSEED&quot;)
-        print(f&quot;Saved corrected data to {output_file}\n&quot;)
-    except Exception as e:
-        print(f&quot;Error processing {seed_file}: {e}&quot;)
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">glob</span><span class="w"> </span><span class="kn">import</span> <span class="n">glob</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">obspy</span><span class="w"> </span><span class="kn">import</span> <span class="n">read</span><span class="p">,</span> <span class="n">read_inventory</span>
+<span class="c1"># 设置路径</span>
+<span class="n">seed_folder</span> <span class="o">=</span> <span class="s2">&quot;seed&quot;</span>
+<span class="n">resp_folder</span> <span class="o">=</span> <span class="s2">&quot;resp&quot;</span>
+<span class="n">output_folder</span> <span class="o">=</span> <span class="s2">&quot;seed_corrected&quot;</span>
+<span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">output_folder</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">seed_files</span> <span class="o">=</span> <span class="n">glob</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">seed_folder</span><span class="p">,</span> <span class="s2">&quot;*.seed&quot;</span><span class="p">))</span>   <span class="c1"># 遍历所有 seed 文件</span>
+<span class="k">for</span> <span class="n">seed_file</span> <span class="ow">in</span> <span class="n">seed_files</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Processing </span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">seed_file</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">st</span> <span class="o">=</span> <span class="n">read</span><span class="p">(</span><span class="n">seed_file</span><span class="p">)</span>   <span class="c1"># 读取 MiniSEED 数据</span>
+        <span class="k">for</span> <span class="n">tr</span> <span class="ow">in</span> <span class="n">st</span><span class="p">:</span>
+            <span class="n">net</span> <span class="o">=</span> <span class="n">tr</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">network</span>
+            <span class="n">sta</span> <span class="o">=</span> <span class="n">tr</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">station</span>
+            <span class="n">loc</span> <span class="o">=</span> <span class="n">tr</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">location</span>
+            <span class="n">cha</span> <span class="o">=</span> <span class="n">tr</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">channel</span>
+            <span class="n">resp_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">resp_folder</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;RESP.</span><span class="si">{</span><span class="n">net</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">sta</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">loc</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">cha</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span> <span class="c1"># 构造 RESP 文件路径</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">resp_file</span><span class="p">):</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;RESP file not found: </span><span class="si">{</span><span class="n">resp_file</span><span class="si">}</span><span class="s2">, skipping trace.&quot;</span><span class="p">)</span>
+                <span class="k">continue</span>
+            <span class="n">inventory</span> <span class="o">=</span> <span class="n">read_inventory</span><span class="p">(</span><span class="n">resp_file</span><span class="p">)</span>   <span class="c1"># 读取 RESP 文件作为 inventory</span>
+            <span class="c1"># 去除仪器响应</span>
+            <span class="n">tr</span><span class="o">.</span><span class="n">remove_response</span><span class="p">(</span><span class="n">inventory</span><span class="o">=</span><span class="n">inventory</span><span class="p">,</span> <span class="n">output</span><span class="o">=</span><span class="s2">&quot;VEL&quot;</span><span class="p">,</span> <span class="n">pre_filt</span><span class="o">=</span><span class="p">[</span><span class="mf">0.001</span><span class="p">,</span> <span class="mf">0.002</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.45</span> <span class="p">],</span> <span class="n">zero_mean</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">taper</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">output_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_folder</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">seed_file</span><span class="p">))</span> <span class="c1"># 输出文件名</span>
+        <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">output_file</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;MSEED&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Saved corrected data to </span><span class="si">{</span><span class="n">output_file</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error processing </span><span class="si">{</span><span class="n">seed_file</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
   </div>
 
   <div class="post-nav">

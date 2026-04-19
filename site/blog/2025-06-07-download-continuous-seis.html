@@ -46,142 +46,142 @@
     <p>&emsp;&emsp;这是连续波形数据下载python脚本更新。</p>
 <!--less-->
 
-<pre class="highlight"><code class="language-python">import os
-import time
-import socket
-import numpy as np
-from obspy import UTCDateTime, Stream
-from obspy.clients.fdsn import Client
-from concurrent.futures import ThreadPoolExecutor, as_completed
-from requests.exceptions import ConnectionError, Timeout
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">socket</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">obspy</span><span class="w"> </span><span class="kn">import</span> <span class="n">UTCDateTime</span><span class="p">,</span> <span class="n">Stream</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">obspy.clients.fdsn</span><span class="w"> </span><span class="kn">import</span> <span class="n">Client</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">concurrent.futures</span><span class="w"> </span><span class="kn">import</span> <span class="n">ThreadPoolExecutor</span><span class="p">,</span> <span class="n">as_completed</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">requests.exceptions</span><span class="w"> </span><span class="kn">import</span> <span class="ne">ConnectionError</span><span class="p">,</span> <span class="n">Timeout</span>
 
-# 参数设置
-client = Client(&quot;IRIS&quot;)
-output_dir = &quot;global_data&quot;
-os.makedirs(output_dir, exist_ok=True)
-sta_file = &quot;station.lst&quot;
-start_date = UTCDateTime(&quot;2013-01-01&quot;)
-end_date = UTCDateTime(&quot;2024-01-01&quot;)  # 包括该天
-thread_workers = 20
-exception_log = &quot;exceptions.txt&quot;
-timing_log = &quot;download_time.txt&quot;
-max_retries = 5  # 最大重试次数
-print(f&quot;📁 当前工作目录: {os.getcwd()}&quot;)
-print(f&quot;📁 波形保存路径: {os.path.abspath(output_dir)}&quot;)
+<span class="c1"># 参数设置</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="s2">&quot;IRIS&quot;</span><span class="p">)</span>
+<span class="n">output_dir</span> <span class="o">=</span> <span class="s2">&quot;global_data&quot;</span>
+<span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">sta_file</span> <span class="o">=</span> <span class="s2">&quot;station.lst&quot;</span>
+<span class="n">start_date</span> <span class="o">=</span> <span class="n">UTCDateTime</span><span class="p">(</span><span class="s2">&quot;2013-01-01&quot;</span><span class="p">)</span>
+<span class="n">end_date</span> <span class="o">=</span> <span class="n">UTCDateTime</span><span class="p">(</span><span class="s2">&quot;2024-01-01&quot;</span><span class="p">)</span>  <span class="c1"># 包括该天</span>
+<span class="n">thread_workers</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">exception_log</span> <span class="o">=</span> <span class="s2">&quot;exceptions.txt&quot;</span>
+<span class="n">timing_log</span> <span class="o">=</span> <span class="s2">&quot;download_time.txt&quot;</span>
+<span class="n">max_retries</span> <span class="o">=</span> <span class="mi">5</span>  <span class="c1"># 最大重试次数</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;📁 当前工作目录: </span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;📁 波形保存路径: </span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">output_dir</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
-# 读取台站列表
-sta_list = []
-with open(sta_file, &quot;r&quot;) as sf:
-    for line in sf:
-        if line.strip() and not line.strip().startswith(&quot;#&quot;):
-            parts = line.strip().split()
-            if len(parts) &gt;= 2:
-                net, sta = parts[0], parts[1]
-                sta_list.append((net, sta))
+<span class="c1"># 读取台站列表</span>
+<span class="n">sta_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">sta_file</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">sf</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">sf</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;#&quot;</span><span class="p">):</span>
+            <span class="n">parts</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">parts</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">:</span>
+                <span class="n">net</span><span class="p">,</span> <span class="n">sta</span> <span class="o">=</span> <span class="n">parts</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">parts</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+                <span class="n">sta_list</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">net</span><span class="p">,</span> <span class="n">sta</span><span class="p">))</span>
 
-def download_station(net, sta, day):
-    &quot;&quot;&quot;
-    下载单个台站某天波形数据，去仪器响应，返回Stream
-    &quot;&quot;&quot;
-    start = UTCDateTime(day)
-    end = start + 86400
-    st = client.get_waveforms(net, sta, &quot;*&quot;, &quot;LH?&quot;, start, end, attach_response=True)
+<span class="k">def</span><span class="w"> </span><span class="nf">download_station</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">sta</span><span class="p">,</span> <span class="n">day</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    下载单个台站某天波形数据，去仪器响应，返回Stream</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="n">UTCDateTime</span><span class="p">(</span><span class="n">day</span><span class="p">)</span>
+    <span class="n">end</span> <span class="o">=</span> <span class="n">start</span> <span class="o">+</span> <span class="mi">86400</span>
+    <span class="n">st</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_waveforms</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">sta</span><span class="p">,</span> <span class="s2">&quot;*&quot;</span><span class="p">,</span> <span class="s2">&quot;LH?&quot;</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">attach_response</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-    st.remove_response(output=&quot;VEL&quot;, pre_filt=(0.008, 0.01, 0.3, 0.4),
-                       taper=True, zero_mean=True, taper_fraction=0.05)
-    return st
-def download_day(day):
-    &quot;&quot;&quot;
-    下载某天所有台站数据，返回合并Stream和日志信息
-    &quot;&quot;&quot;
-    stream_day = Stream()
-    daily_log = []
-    log_lines = []
+    <span class="n">st</span><span class="o">.</span><span class="n">remove_response</span><span class="p">(</span><span class="n">output</span><span class="o">=</span><span class="s2">&quot;VEL&quot;</span><span class="p">,</span> <span class="n">pre_filt</span><span class="o">=</span><span class="p">(</span><span class="mf">0.008</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">),</span>
+                       <span class="n">taper</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">zero_mean</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">taper_fraction</span><span class="o">=</span><span class="mf">0.05</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">st</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">download_day</span><span class="p">(</span><span class="n">day</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    下载某天所有台站数据，返回合并Stream和日志信息</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">stream_day</span> <span class="o">=</span> <span class="n">Stream</span><span class="p">()</span>
+    <span class="n">daily_log</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">log_lines</span> <span class="o">=</span> <span class="p">[]</span>
 
-    with ThreadPoolExecutor(max_workers=thread_workers) as executor:
-        futures = {executor.submit(download_station, net, sta, day): (net, sta) for net, sta in sta_list}
+    <span class="k">with</span> <span class="n">ThreadPoolExecutor</span><span class="p">(</span><span class="n">max_workers</span><span class="o">=</span><span class="n">thread_workers</span><span class="p">)</span> <span class="k">as</span> <span class="n">executor</span><span class="p">:</span>
+        <span class="n">futures</span> <span class="o">=</span> <span class="p">{</span><span class="n">executor</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span><span class="n">download_station</span><span class="p">,</span> <span class="n">net</span><span class="p">,</span> <span class="n">sta</span><span class="p">,</span> <span class="n">day</span><span class="p">):</span> <span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">sta</span><span class="p">)</span> <span class="k">for</span> <span class="n">net</span><span class="p">,</span> <span class="n">sta</span> <span class="ow">in</span> <span class="n">sta_list</span><span class="p">}</span>
 
-        for future in as_completed(futures):
-            net, sta = futures[future]
-            try:
-                st = future.result()
-                stream_day += st
-                print(f&quot;✅ {net}.{sta} 下载成功（{len(st)} traces）&quot;)
-                daily_log.append((net, sta, 1))
-            except Exception as e:
-                print(f&quot;❌ {net}.{sta} 下载失败: {e}&quot;)
-                daily_log.append((net, sta, 0))
-                log_lines.append(f&quot;{day.date} {net}.{sta} ❌ {e}&quot;)
+        <span class="k">for</span> <span class="n">future</span> <span class="ow">in</span> <span class="n">as_completed</span><span class="p">(</span><span class="n">futures</span><span class="p">):</span>
+            <span class="n">net</span><span class="p">,</span> <span class="n">sta</span> <span class="o">=</span> <span class="n">futures</span><span class="p">[</span><span class="n">future</span><span class="p">]</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">st</span> <span class="o">=</span> <span class="n">future</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>
+                <span class="n">stream_day</span> <span class="o">+=</span> <span class="n">st</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;✅ </span><span class="si">{</span><span class="n">net</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">sta</span><span class="si">}</span><span class="s2"> 下载成功（</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">st</span><span class="p">)</span><span class="si">}</span><span class="s2"> traces）&quot;</span><span class="p">)</span>
+                <span class="n">daily_log</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">net</span><span class="p">,</span> <span class="n">sta</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+            <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;❌ </span><span class="si">{</span><span class="n">net</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">sta</span><span class="si">}</span><span class="s2"> 下载失败: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="n">daily_log</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">net</span><span class="p">,</span> <span class="n">sta</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+                <span class="n">log_lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">day</span><span class="o">.</span><span class="n">date</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">net</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">sta</span><span class="si">}</span><span class="s2"> ❌ </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
-    return stream_day, daily_log, log_lines
+    <span class="k">return</span> <span class="n">stream_day</span><span class="p">,</span> <span class="n">daily_log</span><span class="p">,</span> <span class="n">log_lines</span>
 
-def is_network_error(e):
-    &quot;&quot;&quot;
-    判断异常是否为网络相关异常
-    &quot;&quot;&quot;
-    network_error_types = (ConnectionError, Timeout, socket.timeout, socket.error)
-    return isinstance(e, network_error_types) or &quot;timed out&quot; in str(e).lower() or &quot;connection&quot; in str(e).lower()
+<span class="k">def</span><span class="w"> </span><span class="nf">is_network_error</span><span class="p">(</span><span class="n">e</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    判断异常是否为网络相关异常</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">network_error_types</span> <span class="o">=</span> <span class="p">(</span><span class="ne">ConnectionError</span><span class="p">,</span> <span class="n">Timeout</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">timeout</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">error</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">network_error_types</span><span class="p">)</span> <span class="ow">or</span> <span class="s2">&quot;timed out&quot;</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">or</span> <span class="s2">&quot;connection&quot;</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
 
-# 主循环
-current_day = start_date
-while current_day &lt;= end_date:
-    filename = f&quot;{current_day.strftime('%Y%m%d')}.mseed&quot;
-    filepath = os.path.join(output_dir, filename)
+<span class="c1"># 主循环</span>
+<span class="n">current_day</span> <span class="o">=</span> <span class="n">start_date</span>
+<span class="k">while</span> <span class="n">current_day</span> <span class="o">&lt;=</span> <span class="n">end_date</span><span class="p">:</span>
+    <span class="n">filename</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">current_day</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y%m</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">.mseed&quot;</span>
+    <span class="n">filepath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
 
-    # 先判断文件是否存在且非空
-    if os.path.exists(filepath) and os.path.getsize(filepath) &gt; 0:
-        print(f&quot;\n📆 {current_day.date} 文件已存在且非空，跳过下载。&quot;)
-        current_day += 86400
-        continue
+    <span class="c1"># 先判断文件是否存在且非空</span>
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span> <span class="ow">and</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">getsize</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">📆 </span><span class="si">{</span><span class="n">current_day</span><span class="o">.</span><span class="n">date</span><span class="si">}</span><span class="s2"> 文件已存在且非空，跳过下载。&quot;</span><span class="p">)</span>
+        <span class="n">current_day</span> <span class="o">+=</span> <span class="mi">86400</span>
+        <span class="k">continue</span>
 
-    print(f&quot;\n📆 正在处理日期: {current_day.date}&quot;)
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">📆 正在处理日期: </span><span class="si">{</span><span class="n">current_day</span><span class="o">.</span><span class="n">date</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
-    attempt = 0
-    success = False
-    day_start_time = time.time()
+    <span class="n">attempt</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">success</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">day_start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
 
-    while attempt &lt; max_retries and not success:
-        attempt += 1
-        print(f&quot;🔄 尝试第 {attempt} 次下载 {current_day.date} ...&quot;)
+    <span class="k">while</span> <span class="n">attempt</span> <span class="o">&lt;</span> <span class="n">max_retries</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">success</span><span class="p">:</span>
+        <span class="n">attempt</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;🔄 尝试第 </span><span class="si">{</span><span class="n">attempt</span><span class="si">}</span><span class="s2"> 次下载 </span><span class="si">{</span><span class="n">current_day</span><span class="o">.</span><span class="n">date</span><span class="si">}</span><span class="s2"> ...&quot;</span><span class="p">)</span>
 
-        try:
-            stream_day, daily_log, log_lines = download_day(current_day)
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">stream_day</span><span class="p">,</span> <span class="n">daily_log</span><span class="p">,</span> <span class="n">log_lines</span> <span class="o">=</span> <span class="n">download_day</span><span class="p">(</span><span class="n">current_day</span><span class="p">)</span>
 
-            if len(stream_day) == 0:
-                print(f&quot;⚠️ {current_day.date} 没有下载到数据，准备重试...&quot;)
-                raise ValueError(&quot;下载数据为空&quot;)
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">stream_day</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;⚠️ </span><span class="si">{</span><span class="n">current_day</span><span class="o">.</span><span class="n">date</span><span class="si">}</span><span class="s2"> 没有下载到数据，准备重试...&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;下载数据为空&quot;</span><span class="p">)</span>
 
-            # 保存合并后的波形
-            stream_day.write(filepath, format=&quot;MSEED&quot;)
-            print(f&quot;💾 {filename} 保存成功（共 {len(stream_day)} traces）&quot;)
-            success = True
+            <span class="c1"># 保存合并后的波形</span>
+            <span class="n">stream_day</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;MSEED&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;💾 </span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s2"> 保存成功（共 </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">stream_day</span><span class="p">)</span><span class="si">}</span><span class="s2"> traces）&quot;</span><span class="p">)</span>
+            <span class="n">success</span> <span class="o">=</span> <span class="kc">True</span>
 
-            # 写入异常日志
-            if log_lines:
-                with open(exception_log, &quot;a&quot;) as elog:
-                    elog.write(&quot;\n&quot;.join(log_lines) + &quot;\n&quot;)
+            <span class="c1"># 写入异常日志</span>
+            <span class="k">if</span> <span class="n">log_lines</span><span class="p">:</span>
+                <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">exception_log</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">elog</span><span class="p">:</span>
+                    <span class="n">elog</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">log_lines</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 
-        except Exception as e:
-            print(f&quot;❌ 下载异常: {e}&quot;)
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;❌ 下载异常: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
-            # 判断是否为网络错误
-            if is_network_error(e):
-                print(&quot;🌐 网络异常，等待5秒后重试...&quot;)
-                time.sleep(5)
-            else:
-                print(&quot;⚠️ 非网络异常，仍将重试...&quot;)
-                time.sleep(3)
+            <span class="c1"># 判断是否为网络错误</span>
+            <span class="k">if</span> <span class="n">is_network_error</span><span class="p">(</span><span class="n">e</span><span class="p">):</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;🌐 网络异常，等待5秒后重试...&quot;</span><span class="p">)</span>
+                <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;⚠️ 非网络异常，仍将重试...&quot;</span><span class="p">)</span>
+                <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 
-    # 下载耗时记录
-    day_duration = time.time() - day_start_time
-    with open(timing_log, &quot;a&quot;) as tlog:
-        tlog.write(f&quot;{current_day.date}: {day_duration:.2f} seconds\n&quot;)
+    <span class="c1"># 下载耗时记录</span>
+    <span class="n">day_duration</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">day_start_time</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">timing_log</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">tlog</span><span class="p">:</span>
+        <span class="n">tlog</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">current_day</span><span class="o">.</span><span class="n">date</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">day_duration</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> seconds</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 
-    if not success:
-        print(f&quot;❌ {current_day.date} 下载失败，超过最大重试次数。请检查网络或日志。&quot;)
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">success</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;❌ </span><span class="si">{</span><span class="n">current_day</span><span class="o">.</span><span class="n">date</span><span class="si">}</span><span class="s2"> 下载失败，超过最大重试次数。请检查网络或日志。&quot;</span><span class="p">)</span>
 
-    current_day += 86400
-</code></pre>
+    <span class="n">current_day</span> <span class="o">+=</span> <span class="mi">86400</span>
+</code></pre></div>
 
 <p>&emsp;&emsp;这个脚本实现的功能包括：
    * 下载台站列表station.lst的2013-01-01到2024-01-01，LH?数据。

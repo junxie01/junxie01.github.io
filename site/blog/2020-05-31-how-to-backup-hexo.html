@@ -48,39 +48,39 @@
 <p>创建一个和你的hexo目录一样的repo。我的就是hexo。在hexo主目录下执行如下命令：</p>
 <!-- more -->
 
-<pre class="highlight"><code class="language-bash">$echo &quot;# hexo&quot; &gt;&gt;README.md
-$git init
-$git commit -m &quot;&quot;
-$git add README.md 
-$git commit -m &quot;README&quot;
-$git remote add origin https://github.com/junxie01/hexo.git
-$git push -u origin master
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nv">$echo</span><span class="w"> </span><span class="s2">&quot;# hexo&quot;</span><span class="w"> </span>&gt;&gt;README.md
+<span class="nv">$git</span><span class="w"> </span>init
+<span class="nv">$git</span><span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;&quot;</span>
+<span class="nv">$git</span><span class="w"> </span>add<span class="w"> </span>README.md<span class="w"> </span>
+<span class="nv">$git</span><span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;README&quot;</span>
+<span class="nv">$git</span><span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>origin<span class="w"> </span>https://github.com/junxie01/hexo.git
+<span class="nv">$git</span><span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>master
+</code></pre></div>
 
 <h2 id="_1">备份/推送</h2>
 <p>每次完成hexo的更新或者新博文的建立就可以运行如下命令进行推送/备份。</p>
-<pre class="highlight"><code class="language-bash">$git add .
-$git commit -m &quot;hexo备份&quot;
-$git push origin master
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nv">$git</span><span class="w"> </span>add<span class="w"> </span>.
+<span class="nv">$git</span><span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;hexo备份&quot;</span>
+<span class="nv">$git</span><span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>master
+</code></pre></div>
 
 <h2 id="_2">新电脑网站移植</h2>
 <p>需要在新电脑写博客需要安装npm，node.js，hexo。然后把github的repo克隆到本地就好了。</p>
-<pre class="highlight"><code class="language-bash">$git clone git@github.com:junxie01/hexo.git
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nv">$git</span><span class="w"> </span>clone<span class="w"> </span>git@github.com:junxie01/hexo.git
+</code></pre></div>
 
 <h2 id="_3">同步本地网站</h2>
 <p>当github中的repo有更新时，执行一下命令可以同步到本地。</p>
-<pre class="highlight"><code class="language-bash">$git pull origin master
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nv">$git</span><span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>master
+</code></pre></div>
 
 <h2 id="_4">自动推送/备份</h2>
 <p>那位牛人博主还有一篇博文<a href="https://notes.doublemine.me/2015-07-06-%E8%87%AA%E5%8A%A8%E5%A4%87%E4%BB%BDHexo%E5%8D%9A%E5%AE%A2%E6%BA%90%E6%96%87%E4%BB%B6.html">利用nodejs脚本自动备份</a>。我不太懂，省得麻烦。干脆写一个bash脚本(例如do_deploy_push.bash)就可以解决这些问题。脚本如下:</p>
-<pre class="highlight"><code class="language-bash">hexo cl &amp;&amp; hexo g &amp;&amp; hexo d
-git add .
-git commit -m &quot;backup hexo at `date` &quot;
-git push origin master
-</code></pre>
+<div class="highlight"><pre><span></span><code>hexo<span class="w"> </span>cl<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>hexo<span class="w"> </span>g<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>hexo<span class="w"> </span>d
+git<span class="w"> </span>add<span class="w"> </span>.
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;backup hexo at `date` &quot;</span>
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>master
+</code></pre></div>
 
 <p>在hexo主目录下面运行 bash do_deploy_push.bash就大功告成了。</p>
   </div>

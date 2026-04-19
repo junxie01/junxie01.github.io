@@ -46,15 +46,15 @@
     <p>&emsp;&emsp;gmt怎么画震源球？</p>
 <!--less-->
 <p>&emsp;&emsp;就这么画:</p>
-<pre class="highlight"><code>#!/bin/bash
-cat &gt;mec.dat&lt;&lt;eof
-# lon lat depth str dip slip st dip slip mant exp plon plat
-239.384 34.556 12.  270.6   71.3 -124.4 0 72 -90 5.5 0 0 0
-eof
-gmt begin meca png
-gmt psmeca mec.dat -R239/240/34/35.2 -Jm4c -Sc2c 
-gmt end
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+cat<span class="w"> </span>&gt;mec.dat<span class="s">&lt;&lt;eof</span>
+<span class="s"># lon lat depth str dip slip st dip slip mant exp plon plat</span>
+<span class="s">239.384 34.556 12.  270.6   71.3 -124.4 0 72 -90 5.5 0 0 0</span>
+<span class="s">eof</span>
+gmt<span class="w"> </span>begin<span class="w"> </span>meca<span class="w"> </span>png
+gmt<span class="w"> </span>psmeca<span class="w"> </span>mec.dat<span class="w"> </span>-R239/240/34/35.2<span class="w"> </span>-Jm4c<span class="w"> </span>-Sc2c<span class="w"> </span>
+gmt<span class="w"> </span>end
+</code></pre></div>
 
 <p>画出来就长这样：
 <img src="/gmt-meca/meca.png" ></p>

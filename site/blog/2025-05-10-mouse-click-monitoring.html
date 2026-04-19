@@ -46,51 +46,51 @@
     <p>&emsp;&emsp;有些时候需要抓取别人图片中的点的信息，应该怎么整？</p>
 <!--less-->
 <p>&emsp;&emsp;当然是找作者要咯！不过有时可能没办法（例如可能联系不上作者/作者说找不到数据了/作者不想给你/作者说你自己提取吧）或则并不需要他图片中的点的准确信息的时候，我们可以自己去点。之前有个perl脚本，但找不到了（这又体现了整理资料和做笔记的必要性），现在python很方便的，调用pynput的Listener就好了。记录鼠标点击的脚本如下：</p>
-<pre class="highlight"><code>from pynput.mouse import Listener
-import logging
-from datetime import datetime
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pynput.mouse</span><span class="w"> </span><span class="kn">import</span> <span class="n">Listener</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">logging</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span>
 
-# 配置日志记录
-logging.basicConfig(
-    filename=&quot;mouse_clicks.log&quot;,
-    level=logging.INFO,
-    format=&quot;%(asctime)s %(message)s&quot;,
-    datefmt=&quot;%Y-%m-%dT%H:%M:%S&quot;
-)
+<span class="c1"># 配置日志记录</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span>
+    <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;mouse_clicks.log&quot;</span><span class="p">,</span>
+    <span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">,</span>
+    <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">%(asctime)s</span><span class="s2"> </span><span class="si">%(message)s</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="n">datefmt</span><span class="o">=</span><span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2">T%H:%M:%S&quot;</span>
+<span class="p">)</span>
 
-def on_click(x, y, button, pressed):
-    if pressed:
-        message = f&quot;{x} {y}&quot;
-        print(message)  # 输出到屏幕
-        logging.info(message)  # 写入日志文件
-        if button == button.right:
-            # 停止监听器
-            return False
+<span class="k">def</span><span class="w"> </span><span class="nf">on_click</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">button</span><span class="p">,</span> <span class="n">pressed</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">pressed</span><span class="p">:</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>  <span class="c1"># 输出到屏幕</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>  <span class="c1"># 写入日志文件</span>
+        <span class="k">if</span> <span class="n">button</span> <span class="o">==</span> <span class="n">button</span><span class="o">.</span><span class="n">right</span><span class="p">:</span>
+            <span class="c1"># 停止监听器</span>
+            <span class="k">return</span> <span class="kc">False</span>
 
-# 启动鼠标监听器
-with Listener(on_click=on_click) as listener:
-    try:
-        listener.join()
-    except KeyboardInterrupt:
-        print(&quot;监听器已被用户中断。&quot;)
-</code></pre>
+<span class="c1"># 启动鼠标监听器</span>
+<span class="k">with</span> <span class="n">Listener</span><span class="p">(</span><span class="n">on_click</span><span class="o">=</span><span class="n">on_click</span><span class="p">)</span> <span class="k">as</span> <span class="n">listener</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">listener</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+    <span class="k">except</span> <span class="ne">KeyboardInterrupt</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;监听器已被用户中断。&quot;</span><span class="p">)</span>
+</code></pre></div>
 
 <p>&emsp;&emsp;这个脚本会记录鼠标左键的位置，输出到mouse_clicks.log文件中。mouse_clicks.log文件有三列:</p>
 <p>2025-05-07T17:01:33 1977 1576</p>
 <p>分别表示点击的时间，x和y坐标。其中y坐标是下面大上面小。此外点击鼠标右键或者输入Ctrl+C就可以结束记录。我一般是怎么做的呢？我先点击图片左下角得到（x0,y0），点击右下角得到(x1,y0)，点击左上角得到(x0,y1)，然后点击你想要的点。得到mouse_clicks.log以后就可以这么画图（gmt）。</p>
-<pre class="highlight"><code>dat=mouse_clicks.log
+<div class="highlight"><pre><span></span><code>dat=mouse_clicks.log
 #获得x0,y0,x1,y1，他们是参考点
-x0=`awk 'NR==1{print $2}' ${dat}`
-y0=`awk 'NR==1{print $3}' ${dat}`
-x1=`awk 'NR==2{print $2}' ${dat}`
-y1=`awk 'NR==3{print $3}' ${dat}`
+x0=`awk<span class="w"> </span>&#39;NR==1{print<span class="w"> </span>$2}&#39;<span class="w"> </span><span class="cp">${</span><span class="n">dat</span><span class="cp">}</span>`
+y0=`awk<span class="w"> </span>&#39;NR==1{print<span class="w"> </span>$3}&#39;<span class="w"> </span><span class="cp">${</span><span class="n">dat</span><span class="cp">}</span>`
+x1=`awk<span class="w"> </span>&#39;NR==2{print<span class="w"> </span>$2}&#39;<span class="w"> </span><span class="cp">${</span><span class="n">dat</span><span class="cp">}</span>`
+y1=`awk<span class="w"> </span>&#39;NR==3{print<span class="w"> </span>$3}&#39;<span class="w"> </span><span class="cp">${</span><span class="n">dat</span><span class="cp">}</span>`
 #获得横纵轴长度（屏幕尺度）
-xs=`echo &quot;$x1-$x0&quot; |bc` 
-ys=`echo &quot;$y0-$y1&quot; |bc`
+xs=`echo<span class="w"> </span>&quot;<span class="nv">$x1</span>-<span class="nv">$x0</span>&quot;<span class="w"> </span>|bc`<span class="w"> </span>
+ys=`echo<span class="w"> </span>&quot;<span class="nv">$y0</span>-<span class="nv">$y1</span>&quot;<span class="w"> </span>|bc`
 
-awk -v x0=$x0 -v y0=$y0 -v xs=$xs -v ys=$ys 'NR&gt;3{print ($2-x0)/xs*2000-1000,(y0-$3)/ys*1500}' ${dat} | gmt psxy -R -J -O -K -W3p,black &gt;&gt;$ps
+awk<span class="w"> </span>-v<span class="w"> </span>x0=<span class="nv">$x0</span><span class="w"> </span>-v<span class="w"> </span>y0=<span class="nv">$y0</span><span class="w"> </span>-v<span class="w"> </span>xs=<span class="nv">$xs</span><span class="w"> </span>-v<span class="w"> </span>ys=<span class="nv">$ys</span><span class="w"> </span>&#39;NR&gt;3{print<span class="w"> </span>($2-x0)/xs*2000-1000,(y0-$3)/ys*1500}&#39;<span class="w"> </span><span class="cp">${</span><span class="n">dat</span><span class="cp">}</span><span class="w"> </span>|<span class="w"> </span>gmt<span class="w"> </span>psxy<span class="w"> </span>-R<span class="w"> </span>-J<span class="w"> </span>-O<span class="w"> </span>-K<span class="w"> </span>-W3p,black<span class="w"> </span>&gt;&gt;<span class="nv">$ps</span>
 #这里（2000，1500）是横纵轴实际尺度，-1000表示实际位置调整。
-</code></pre>
+</code></pre></div>
 
 <p>&emsp;&emsp;注意，这种方法仅仅适用于线性笛卡尔坐标，其他的各种投影都不行。
 &emsp;&emsp;以后得加上这句：脚本/程序不保证正确性，自求多幅(no warranty/use at your own risk)。</p>

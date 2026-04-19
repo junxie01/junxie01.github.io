@@ -46,19 +46,19 @@
     <p>&emsp;&emsp;如何下载Fnet的台站列表？</p>
 <!--less-->
 <p>&emsp;&emsp;这里其实是一个网页抓取的工作。Fnet台站列表网址是https://www.fnet.bosai.go.jp/st_info/?LANG=en。那么下载其列表并保存到本地的python脚本如下：</p>
-<pre class="highlight"><code>import pandas as pd
-import requests
-url = 'https://www.fnet.bosai.go.jp/st_info/?LANG=en'
-response = requests.get(url)
-print(response.content)
-dfs = pd.read_html(response.content)
-if len(dfs) &gt; 0:
-    df = dfs[2]
-    df.to_csv('fnet_station.csv',index=False)
-    print(&quot;表格已保存为 fent_station.csv 文件。&quot;)
-else:
-    print(&quot;未找到表格。&quot;)
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://www.fnet.bosai.go.jp/st_info/?LANG=en&#39;</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+<span class="n">dfs</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">dfs</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">dfs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;fnet_station.csv&#39;</span><span class="p">,</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;表格已保存为 fent_station.csv 文件。&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;未找到表格。&quot;</span><span class="p">)</span>
+</code></pre></div>
 
 <p>注意到保存下来的是第三个表dfs[2]。事实上该网页有多个表，如果抓取其他网站信息的时候需要打印出dfs，自己判断。</p>
   </div>

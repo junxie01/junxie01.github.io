@@ -46,91 +46,91 @@
     <p>&emsp;&emsp;转学习到的高效bash脚本。</p>
 <!--less-->
 <h1 id="build-in-commands">build-in commands</h1>
-<pre class="highlight"><code class="language-bash">if [[ &quot;$var&quot; -eq 3 ]];then
-   echo &quot;hello&quot;
-fi
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$var</span><span class="s2">&quot;</span><span class="w"> </span>-eq<span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="k">then</span>
+<span class="w">   </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;hello&quot;</span>
+<span class="k">fi</span>
+</code></pre></div>
 
 <h1 id="minimize-subshells">minimize subshells</h1>
-<pre class="highlight"><code class="language-bash">output=$(&lt;input.txt)
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nv">output</span><span class="o">=</span><span class="k">$(</span>&lt;input.txt<span class="k">)</span>
+</code></pre></div>
 
 <h1 id="array">array</h1>
-<pre class="highlight"><code class="language-bash">color=(&quot;red&quot; &quot;yellow&quot; &quot;blue&quot;)
-for col in &quot;${color[@]}&quot;;
-do
-   echo $col
-done
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nv">color</span><span class="o">=(</span><span class="s2">&quot;red&quot;</span><span class="w"> </span><span class="s2">&quot;yellow&quot;</span><span class="w"> </span><span class="s2">&quot;blue&quot;</span><span class="o">)</span>
+<span class="k">for</span><span class="w"> </span>col<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">color</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span>
+<span class="k">do</span>
+<span class="w">   </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$col</span>
+<span class="k">done</span>
+</code></pre></div>
 
 <h1 id="enable-noclobber">enable noclobber</h1>
 <p>可以防止overwrite。</p>
-<pre class="highlight"><code>set -o noclobber
-</code></pre>
+<div class="highlight"><pre><span></span><code>set -o noclobber
+</code></pre></div>
 
 <h1 id="file-operation">file operation</h1>
-<pre class="highlight"><code>while IFS= read -f line
-do
-echo $line
-done &lt;input.txt
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="k">while</span><span class="w"> </span><span class="nv">IFS</span><span class="o">=</span><span class="w"> </span><span class="nv">read</span><span class="w"> </span><span class="o">-</span><span class="nv">f</span><span class="w"> </span><span class="nv">line</span>
+<span class="k">do</span>
+<span class="nv">echo</span><span class="w"> </span>$<span class="nv">line</span>
+<span class="nv">done</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">input</span>.<span class="nv">txt</span>
+</code></pre></div>
 
 <h1 id="parallel-processing">parallel processing</h1>
-<pre class="highlight"><code>cat urls.txt | xargs -n 1 -P 4 curl -O
-</code></pre>
+<div class="highlight"><pre><span></span><code>cat urls.txt | xargs -n 1 -P 4 curl -O
+</code></pre></div>
 
 <h1 id="error-handling">error handling</h1>
 <p>脚本一出错就退出来。</p>
-<pre class="highlight"><code>set -e
-</code></pre>
+<div class="highlight"><pre><span></span><code>set -e
+</code></pre></div>
 
 <p>个性化出错信息。</p>
-<pre class="highlight"><code>command || { echo &quot;command failded&quot;; exit 1; }
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nv">command</span><span class="w"> </span><span class="o">||</span><span class="w"> </span>{<span class="w"> </span><span class="nv">echo</span><span class="w"> </span><span class="s2">&quot;command failded&quot;</span><span class="c1">; exit 1; }</span>
+</code></pre></div>
 
 <p>trap signals </p>
-<pre class="highlight"><code>trap 'echo &quot;error occurred&quot;; cleanup; exit1' ERR
+<div class="highlight"><pre><span></span><code>trap &#39;echo &quot;error occurred&quot;; cleanup; exit1&#39; ERR
 function cleanup(){
    #clean up command
 }
-</code></pre>
+</code></pre></div>
 
 <p>validate inputs</p>
-<pre class="highlight"><code>if [[ -z &quot;$1&quot; ]];then
-   echo &quot;Usage: $0 &lt;argument&gt;&quot;
-   exit 1
-fi
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span>[[<span class="w"> </span><span class="o">-</span><span class="nv">z</span><span class="w"> </span><span class="s2">&quot;$1&quot;</span><span class="w"> </span>]]<span class="c1">;then</span>
+<span class="w">   </span><span class="nv">echo</span><span class="w"> </span><span class="s2">&quot;Usage: $0 &lt;argument&gt;&quot;</span>
+<span class="w">   </span><span class="k">exit</span><span class="w"> </span><span class="mi">1</span>
+<span class="nv">fi</span>
+</code></pre></div>
 
 <p>logging</p>
-<pre class="highlight"><code>logfile=&quot;script.log&quot;
-exec &gt; &gt;(tee -i $logfile)
-exec 2&gt;&amp;1
+<div class="highlight"><pre><span></span><code><span class="nv">logfile</span><span class="o">=</span><span class="s2">&quot;script.log&quot;</span>
+<span class="k">exec</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="ss">(</span><span class="nv">tee</span><span class="w"> </span><span class="o">-</span><span class="nv">i</span><span class="w"> </span>$<span class="nv">logfile</span><span class="ss">)</span>
+<span class="k">exec</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;&amp;</span><span class="mi">1</span>
 
-echo &quot;script started&quot;
-</code></pre>
+<span class="nv">echo</span><span class="w"> </span><span class="s2">&quot;script started&quot;</span>
+</code></pre></div>
 
 <h1 id="_1">系统任务</h1>
 <p>系统备份</p>
-<pre class="highlight"><code>set -e
-trap ' echo &quot;Backup failed&quot;; exit 1' ERR
+<div class="highlight"><pre><span></span><code>set<span class="w"> </span>-e
+trap<span class="w"> </span>&#39;<span class="w"> </span>echo<span class="w"> </span>&quot;Backup<span class="w"> </span>failed&quot;;<span class="w"> </span>exit<span class="w"> </span>1&#39;<span class="w"> </span>ERR
 bk_up=&quot;/bak_dir&quot;
-ts=$(date +%Y%m%d%H%M%S)
-bkup_file=&quot;${bk_up}/backup_${ts}.tar.gz&quot;
-tar czf &quot;$bkup_file&quot; backup_files
-</code></pre>
+ts=$(date<span class="w"> </span>+%Y%m%d%H%M%S)
+bkup_file=&quot;<span class="cp">${</span><span class="n">bk_up</span><span class="cp">}</span>/backup_<span class="cp">${</span><span class="n">ts</span><span class="cp">}</span>.tar.gz&quot;
+tar<span class="w"> </span>czf<span class="w"> </span>&quot;<span class="nv">$bkup_file</span>&quot;<span class="w"> </span>backup_files
+</code></pre></div>
 
 <p>系统监测</p>
-<pre class="highlight"><code>threshold=80
-partition=&quot;/dev/sda1&quot;
-usage=$(df -h | grep &quot;$partition&quot; | awk '{print $5}' | sed 's/%//')
-if [[ &quot;$usage&quot; -gt &quot;$threshold&quot; ]];then
-   echo &quot;disk usage of $partition is above $threshold%&quot;
-fi
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nv">threshold</span><span class="o">=</span><span class="mi">80</span>
+<span class="nv">partition</span><span class="o">=</span><span class="s2">&quot;/dev/sda1&quot;</span>
+<span class="nv">usage</span><span class="o">=</span>$<span class="ss">(</span><span class="nv">df</span><span class="w"> </span><span class="o">-</span><span class="nv">h</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nv">grep</span><span class="w"> </span><span class="s2">&quot;$partition&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nv">awk</span><span class="w"> </span><span class="s1">&#39;{print $5}&#39;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nv">sed</span><span class="w"> </span><span class="s1">&#39;s/%//&#39;</span><span class="ss">)</span>
+<span class="k">if</span><span class="w"> </span>[[<span class="w"> </span><span class="s2">&quot;$usage&quot;</span><span class="w"> </span><span class="o">-</span><span class="nv">gt</span><span class="w"> </span><span class="s2">&quot;$threshold&quot;</span><span class="w"> </span>]]<span class="c1">;then</span>
+<span class="w">   </span><span class="nv">echo</span><span class="w"> </span><span class="s2">&quot;disk usage of $partition is above $threshold%&quot;</span>
+<span class="nv">fi</span>
+</code></pre></div>
 
 <p>用户管理</p>
-<pre class="highlight"><code>function add_user() {
+<div class="highlight"><pre><span></span><code>function add_user() {
     local username=$1
     useradd &quot;$username&quot; &amp;&amp; echo &quot;User $username added successfully.&quot;
 }
@@ -149,31 +149,31 @@ case $1 in
        exit 1
        ;;
 esac
-</code></pre>
+</code></pre></div>
 
 <p>自动更新</p>
-<pre class="highlight"><code>set -e
-trap 'echo &quot;update failed&quot;; exit 1 ' ERR
+<div class="highlight"><pre><span></span><code><span class="nv">set</span><span class="w"> </span><span class="o">-</span><span class="nv">e</span>
+<span class="nv">trap</span><span class="w"> </span><span class="s1">&#39;echo &quot;update failed&quot;; exit 1 &#39;</span><span class="w"> </span><span class="nv">ERR</span>
 
-apt-get update &amp;&amp; apt-get upgrade -y
-</code></pre>
+<span class="nv">apt</span><span class="o">-</span><span class="nv">get</span><span class="w"> </span><span class="nv">update</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nv">apt</span><span class="o">-</span><span class="nv">get</span><span class="w"> </span><span class="nv">upgrade</span><span class="w"> </span><span class="o">-</span><span class="nv">y</span>
+</code></pre></div>
 
 <p>网络配置</p>
-<pre class="highlight"><code>function configure_network(){
-     local interface=$1
-     local ip_address=$$2
-     local gateway=$3
+<div class="highlight"><pre><span></span><code><span class="nx">function</span><span class="w"> </span><span class="nx">configure_network</span><span class="p">(){</span>
+<span class="w">     </span><span class="nx">local</span><span class="w"> </span><span class="kd">interface</span><span class="p">=</span><span class="err">$</span><span class="mi">1</span>
+<span class="w">     </span><span class="nx">local</span><span class="w"> </span><span class="nx">ip_address</span><span class="p">=</span><span class="err">$$</span><span class="mi">2</span>
+<span class="w">     </span><span class="nx">local</span><span class="w"> </span><span class="nx">gateway</span><span class="p">=</span><span class="err">$</span><span class="mi">3</span>
 
-     cat &lt;&lt;EOF &gt;/etc/network/interfaces
-auto $interface
-iface $interface inet static
-     address $ip_address
-     gateway $gateway
-EOF
-     systemctl restart networking
-     echo &quot;network configured on $interface&quot;
-}
-</code></pre>
+<span class="w">     </span><span class="nx">cat</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="nx">EOF</span><span class="w"> </span><span class="p">&gt;</span><span class="o">/</span><span class="nx">etc</span><span class="o">/</span><span class="nx">network</span><span class="o">/</span><span class="nx">interfaces</span>
+<span class="kt">auto</span><span class="w"> </span><span class="err">$</span><span class="kd">interface</span>
+<span class="nx">iface</span><span class="w"> </span><span class="err">$</span><span class="kd">interface</span><span class="w"> </span><span class="nx">inet</span><span class="w"> </span><span class="nx">static</span>
+<span class="w">     </span><span class="nx">address</span><span class="w"> </span><span class="err">$</span><span class="nx">ip_address</span>
+<span class="w">     </span><span class="nx">gateway</span><span class="w"> </span><span class="err">$</span><span class="nx">gateway</span>
+<span class="nx">EOF</span>
+<span class="w">     </span><span class="nx">systemctl</span><span class="w"> </span><span class="nx">restart</span><span class="w"> </span><span class="nx">networking</span>
+<span class="w">     </span><span class="nx">echo</span><span class="w"> </span><span class="s">&quot;network configured on $interface&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
   </div>
 
   <div class="post-nav">

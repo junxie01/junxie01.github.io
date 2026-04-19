@@ -46,135 +46,135 @@
     <p>&emsp;&emsp;要是指定台站列表怎么下载地震数据呢？</p>
 <!--less-->
 <p>&emsp;&emsp;python脚本如下。</p>
-<pre class="highlight"><code>import os
-from obspy import UTCDateTime
-from obspy.clients.fdsn import Client
-from obspy.taup import TauPyModel
-from obspy.geodetics import locations2degrees
-from concurrent.futures import ThreadPoolExecutor, as_completed
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">obspy</span><span class="w"> </span><span class="kn">import</span> <span class="n">UTCDateTime</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">obspy.clients.fdsn</span><span class="w"> </span><span class="kn">import</span> <span class="n">Client</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">obspy.taup</span><span class="w"> </span><span class="kn">import</span> <span class="n">TauPyModel</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">obspy.geodetics</span><span class="w"> </span><span class="kn">import</span> <span class="n">locations2degrees</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">concurrent.futures</span><span class="w"> </span><span class="kn">import</span> <span class="n">ThreadPoolExecutor</span><span class="p">,</span> <span class="n">as_completed</span>
 
-client = Client(&quot;IRIS&quot;)
-model = TauPyModel(&quot;iasp91&quot;)
+<span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="s2">&quot;IRIS&quot;</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">TauPyModel</span><span class="p">(</span><span class="s2">&quot;iasp91&quot;</span><span class="p">)</span>
 
-output_dir = &quot;processed_sac&quot;
-os.makedirs(output_dir, exist_ok=True)
+<span class="n">output_dir</span> <span class="o">=</span> <span class="s2">&quot;processed_sac&quot;</span>
+<span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-event_file = &quot;event.lst&quot;
-sta_file = &quot;sta.lst&quot;
-exception_log = &quot;exceptions.txt&quot;
-thread_workers = 4
+<span class="n">event_file</span> <span class="o">=</span> <span class="s2">&quot;event.lst&quot;</span>
+<span class="n">sta_file</span> <span class="o">=</span> <span class="s2">&quot;sta.lst&quot;</span>
+<span class="n">exception_log</span> <span class="o">=</span> <span class="s2">&quot;exceptions.txt&quot;</span>
+<span class="n">thread_workers</span> <span class="o">=</span> <span class="mi">4</span>
 
-# 读取台站信息：net, sta, lat, lon, elev
-with open(sta_file, &quot;r&quot;) as sf:
-    sta_lines = [line.strip() for line in sf if line.strip()]
-sta_list = []
-for line in sta_lines:
-    parts = line.split(&quot;|&quot;)
-    if len(parts) &gt;= 5:
-        net = parts[0].strip()
-        sta = parts[1].strip()
-        lat = float(parts[2])
-        lon = float(parts[3])
-        elev = float(parts[4])
-        sta_list.append((net, sta, lat, lon, elev))
+<span class="c1"># 读取台站信息：net, sta, lat, lon, elev</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">sta_file</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">sf</span><span class="p">:</span>
+    <span class="n">sta_lines</span> <span class="o">=</span> <span class="p">[</span><span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">sf</span> <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()]</span>
+<span class="n">sta_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">sta_lines</span><span class="p">:</span>
+    <span class="n">parts</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;|&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">parts</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="n">net</span> <span class="o">=</span> <span class="n">parts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="n">sta</span> <span class="o">=</span> <span class="n">parts</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="n">lat</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">parts</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+        <span class="n">lon</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">parts</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+        <span class="n">elev</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">parts</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+        <span class="n">sta_list</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">net</span><span class="p">,</span> <span class="n">sta</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">,</span> <span class="n">elev</span><span class="p">))</span>
 
-# 清空异常日志
-with open(exception_log, &quot;w&quot;) as elog:
-    elog.write(&quot;&quot;)
+<span class="c1"># 清空异常日志</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">exception_log</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">elog</span><span class="p">:</span>
+    <span class="n">elog</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
 
-def process_station(event_id, origin_time, magnitude, ev_lat, ev_lon, ev_dep,
-                    net, sta, sta_lat, sta_lon, sta_elev):
-    try:
-        dist_deg = locations2degrees(ev_lat, ev_lon, sta_lat, sta_lon)
-        arrivals = model.get_travel_times(source_depth_in_km=ev_dep,
-                                          distance_in_degree=dist_deg,
-                                          phase_list=[&quot;P&quot;])
-        if not arrivals:
-            raise Exception(&quot;No P arrival&quot;)
+<span class="k">def</span><span class="w"> </span><span class="nf">process_station</span><span class="p">(</span><span class="n">event_id</span><span class="p">,</span> <span class="n">origin_time</span><span class="p">,</span> <span class="n">magnitude</span><span class="p">,</span> <span class="n">ev_lat</span><span class="p">,</span> <span class="n">ev_lon</span><span class="p">,</span> <span class="n">ev_dep</span><span class="p">,</span>
+                    <span class="n">net</span><span class="p">,</span> <span class="n">sta</span><span class="p">,</span> <span class="n">sta_lat</span><span class="p">,</span> <span class="n">sta_lon</span><span class="p">,</span> <span class="n">sta_elev</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">dist_deg</span> <span class="o">=</span> <span class="n">locations2degrees</span><span class="p">(</span><span class="n">ev_lat</span><span class="p">,</span> <span class="n">ev_lon</span><span class="p">,</span> <span class="n">sta_lat</span><span class="p">,</span> <span class="n">sta_lon</span><span class="p">)</span>
+        <span class="n">arrivals</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">get_travel_times</span><span class="p">(</span><span class="n">source_depth_in_km</span><span class="o">=</span><span class="n">ev_dep</span><span class="p">,</span>
+                                          <span class="n">distance_in_degree</span><span class="o">=</span><span class="n">dist_deg</span><span class="p">,</span>
+                                          <span class="n">phase_list</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;P&quot;</span><span class="p">])</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">arrivals</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;No P arrival&quot;</span><span class="p">)</span>
 
-        p_arrival = origin_time + arrivals[0].time
-        start_dl = p_arrival - 50
-        end_dl = p_arrival + 150
+        <span class="n">p_arrival</span> <span class="o">=</span> <span class="n">origin_time</span> <span class="o">+</span> <span class="n">arrivals</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">time</span>
+        <span class="n">start_dl</span> <span class="o">=</span> <span class="n">p_arrival</span> <span class="o">-</span> <span class="mi">50</span>
+        <span class="n">end_dl</span> <span class="o">=</span> <span class="n">p_arrival</span> <span class="o">+</span> <span class="mi">150</span>
 
-        st = client.get_waveforms(network=net, station=sta, location=&quot;*&quot;, channel=&quot;BH?&quot;,
-                                  starttime=start_dl, endtime=end_dl,
-                                  attach_response=True)
+        <span class="n">st</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_waveforms</span><span class="p">(</span><span class="n">network</span><span class="o">=</span><span class="n">net</span><span class="p">,</span> <span class="n">station</span><span class="o">=</span><span class="n">sta</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;*&quot;</span><span class="p">,</span> <span class="n">channel</span><span class="o">=</span><span class="s2">&quot;BH?&quot;</span><span class="p">,</span>
+                                  <span class="n">starttime</span><span class="o">=</span><span class="n">start_dl</span><span class="p">,</span> <span class="n">endtime</span><span class="o">=</span><span class="n">end_dl</span><span class="p">,</span>
+                                  <span class="n">attach_response</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-        st.remove_response(output=&quot;VEL&quot;, pre_filt=(0.01, 0.02, 8, 10),
-                           taper=True, zero_mean=True, taper_fraction=0.05)
+        <span class="n">st</span><span class="o">.</span><span class="n">remove_response</span><span class="p">(</span><span class="n">output</span><span class="o">=</span><span class="s2">&quot;VEL&quot;</span><span class="p">,</span> <span class="n">pre_filt</span><span class="o">=</span><span class="p">(</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>
+                           <span class="n">taper</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">zero_mean</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">taper_fraction</span><span class="o">=</span><span class="mf">0.05</span><span class="p">)</span>
 
-        st.trim(starttime=p_arrival - 10, endtime=p_arrival + 60)
+        <span class="n">st</span><span class="o">.</span><span class="n">trim</span><span class="p">(</span><span class="n">starttime</span><span class="o">=</span><span class="n">p_arrival</span> <span class="o">-</span> <span class="mi">10</span><span class="p">,</span> <span class="n">endtime</span><span class="o">=</span><span class="n">p_arrival</span> <span class="o">+</span> <span class="mi">60</span><span class="p">)</span>
 
-        comps = [tr.stats.channel[-1] for tr in st]
-        if not all(comp in comps for comp in [&quot;N&quot;, &quot;E&quot;, &quot;Z&quot;]):
-            raise Exception(&quot;Incomplete 3-component data&quot;)
+        <span class="n">comps</span> <span class="o">=</span> <span class="p">[</span><span class="n">tr</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">channel</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">tr</span> <span class="ow">in</span> <span class="n">st</span><span class="p">]</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">all</span><span class="p">(</span><span class="n">comp</span> <span class="ow">in</span> <span class="n">comps</span> <span class="k">for</span> <span class="n">comp</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;N&quot;</span><span class="p">,</span> <span class="s2">&quot;E&quot;</span><span class="p">,</span> <span class="s2">&quot;Z&quot;</span><span class="p">]):</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Incomplete 3-component data&quot;</span><span class="p">)</span>
 
-        for tr in st:
-            tr.stats.sac = tr.stats.get(&quot;sac&quot;, {})
-            tr.stats.sac.stla = sta_lat
-            tr.stats.sac.stlo = sta_lon
-            tr.stats.sac.stel = sta_elev
-            tr.stats.sac.evla = ev_lat
-            tr.stats.sac.evlo = ev_lon
-            tr.stats.sac.evdp = ev_dep
-            tr.stats.sac.mag = float(magnitude) if magnitude != &quot;NA&quot; else 0.0
+        <span class="k">for</span> <span class="n">tr</span> <span class="ow">in</span> <span class="n">st</span><span class="p">:</span>
+            <span class="n">tr</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">sac</span> <span class="o">=</span> <span class="n">tr</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;sac&quot;</span><span class="p">,</span> <span class="p">{})</span>
+            <span class="n">tr</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">sac</span><span class="o">.</span><span class="n">stla</span> <span class="o">=</span> <span class="n">sta_lat</span>
+            <span class="n">tr</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">sac</span><span class="o">.</span><span class="n">stlo</span> <span class="o">=</span> <span class="n">sta_lon</span>
+            <span class="n">tr</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">sac</span><span class="o">.</span><span class="n">stel</span> <span class="o">=</span> <span class="n">sta_elev</span>
+            <span class="n">tr</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">sac</span><span class="o">.</span><span class="n">evla</span> <span class="o">=</span> <span class="n">ev_lat</span>
+            <span class="n">tr</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">sac</span><span class="o">.</span><span class="n">evlo</span> <span class="o">=</span> <span class="n">ev_lon</span>
+            <span class="n">tr</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">sac</span><span class="o">.</span><span class="n">evdp</span> <span class="o">=</span> <span class="n">ev_dep</span>
+            <span class="n">tr</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">sac</span><span class="o">.</span><span class="n">mag</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">magnitude</span><span class="p">)</span> <span class="k">if</span> <span class="n">magnitude</span> <span class="o">!=</span> <span class="s2">&quot;NA&quot;</span> <span class="k">else</span> <span class="mf">0.0</span>
 
-            time_tag = origin_time.strftime(&quot;%Y%m%dT%H%M%S&quot;)
-            chan = tr.stats.channel
-            filename = f&quot;{time_tag}_M{magnitude}_{net}.{sta}.{chan}.sac&quot;
-            filepath = os.path.join(output_dir, filename)
-            tr.write(filepath, format=&quot;SAC&quot;)
+            <span class="n">time_tag</span> <span class="o">=</span> <span class="n">origin_time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y%m</span><span class="si">%d</span><span class="s2">T%H%M%S&quot;</span><span class="p">)</span>
+            <span class="n">chan</span> <span class="o">=</span> <span class="n">tr</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">channel</span>
+            <span class="n">filename</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">time_tag</span><span class="si">}</span><span class="s2">_M</span><span class="si">{</span><span class="n">magnitude</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">net</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">sta</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">chan</span><span class="si">}</span><span class="s2">.sac&quot;</span>
+            <span class="n">filepath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+            <span class="n">tr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;SAC&quot;</span><span class="p">)</span>
 
-        return f&quot;{net}.{sta} ✅&quot;
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">net</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">sta</span><span class="si">}</span><span class="s2"> ✅&quot;</span>
 
-    except Exception as e:
-        with open(exception_log, &quot;a&quot;) as elog:
-            elog.write(f&quot;{event_id} {net}.{sta} ❌ {str(e)}\n&quot;)
-        return f&quot;{net}.{sta} ❌ {str(e)}&quot;
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">exception_log</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">elog</span><span class="p">:</span>
+            <span class="n">elog</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">event_id</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">net</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">sta</span><span class="si">}</span><span class="s2"> ❌ </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">net</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">sta</span><span class="si">}</span><span class="s2"> ❌ </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
 
-def process_event(line):
-    results = []
-    parts = line.split(&quot;|&quot;)
-    if len(parts) &lt; 10:
-        return [&quot;跳过格式错误行&quot;]
+<span class="k">def</span><span class="w"> </span><span class="nf">process_event</span><span class="p">(</span><span class="n">line</span><span class="p">):</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">parts</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;|&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">parts</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="s2">&quot;跳过格式错误行&quot;</span><span class="p">]</span>
 
-    evid = parts[0].strip()
-    time_str = parts[1].strip()
-    ev_lat = float(parts[2].strip())
-    ev_lon = float(parts[3].strip())
-    ev_dep = float(parts[4].strip())
-    mag_info = parts[8].strip()
-    magnitude = mag_info.split(&quot;,&quot;)[1] if &quot;,&quot; in mag_info else &quot;NA&quot;
+    <span class="n">evid</span> <span class="o">=</span> <span class="n">parts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="n">time_str</span> <span class="o">=</span> <span class="n">parts</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="n">ev_lat</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">parts</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+    <span class="n">ev_lon</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">parts</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+    <span class="n">ev_dep</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">parts</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+    <span class="n">mag_info</span> <span class="o">=</span> <span class="n">parts</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="n">magnitude</span> <span class="o">=</span> <span class="n">mag_info</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="s2">&quot;,&quot;</span> <span class="ow">in</span> <span class="n">mag_info</span> <span class="k">else</span> <span class="s2">&quot;NA&quot;</span>
 
-    origin_time = UTCDateTime(time_str)
-    print(f&quot;\n🟡 Processing event {evid} M{magnitude} @ {origin_time} ({ev_lat}, {ev_lon}, {ev_dep}km)&quot;)
+    <span class="n">origin_time</span> <span class="o">=</span> <span class="n">UTCDateTime</span><span class="p">(</span><span class="n">time_str</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">🟡 Processing event </span><span class="si">{</span><span class="n">evid</span><span class="si">}</span><span class="s2"> M</span><span class="si">{</span><span class="n">magnitude</span><span class="si">}</span><span class="s2"> @ </span><span class="si">{</span><span class="n">origin_time</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">ev_lat</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">ev_lon</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">ev_dep</span><span class="si">}</span><span class="s2">km)&quot;</span><span class="p">)</span>
 
-    try:
-        task_list = []
-        with ThreadPoolExecutor(max_workers=thread_workers) as executor:
-            for net, sta, sta_lat, sta_lon, sta_elev in sta_list:
-                task = executor.submit(process_station, evid, origin_time, magnitude,
-                                       ev_lat, ev_lon, ev_dep, net, sta, sta_lat, sta_lon, sta_elev)
-                task_list.append(task)
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">task_list</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">with</span> <span class="n">ThreadPoolExecutor</span><span class="p">(</span><span class="n">max_workers</span><span class="o">=</span><span class="n">thread_workers</span><span class="p">)</span> <span class="k">as</span> <span class="n">executor</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">net</span><span class="p">,</span> <span class="n">sta</span><span class="p">,</span> <span class="n">sta_lat</span><span class="p">,</span> <span class="n">sta_lon</span><span class="p">,</span> <span class="n">sta_elev</span> <span class="ow">in</span> <span class="n">sta_list</span><span class="p">:</span>
+                <span class="n">task</span> <span class="o">=</span> <span class="n">executor</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span><span class="n">process_station</span><span class="p">,</span> <span class="n">evid</span><span class="p">,</span> <span class="n">origin_time</span><span class="p">,</span> <span class="n">magnitude</span><span class="p">,</span>
+                                       <span class="n">ev_lat</span><span class="p">,</span> <span class="n">ev_lon</span><span class="p">,</span> <span class="n">ev_dep</span><span class="p">,</span> <span class="n">net</span><span class="p">,</span> <span class="n">sta</span><span class="p">,</span> <span class="n">sta_lat</span><span class="p">,</span> <span class="n">sta_lon</span><span class="p">,</span> <span class="n">sta_elev</span><span class="p">)</span>
+                <span class="n">task_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">task</span><span class="p">)</span>
 
-            for task in as_completed(task_list):
-                results.append(task.result())
+            <span class="k">for</span> <span class="n">task</span> <span class="ow">in</span> <span class="n">as_completed</span><span class="p">(</span><span class="n">task_list</span><span class="p">):</span>
+                <span class="n">results</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">task</span><span class="o">.</span><span class="n">result</span><span class="p">())</span>
 
-    except Exception as e:
-        with open(exception_log, &quot;a&quot;) as elog:
-            elog.write(f&quot;{evid} XB ERROR: {str(e)}\n&quot;)
-        results.append(f&quot;⚠️ Failed to process event {evid}: {e}&quot;)
-    return results
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">exception_log</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">elog</span><span class="p">:</span>
+            <span class="n">elog</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">evid</span><span class="si">}</span><span class="s2"> XB ERROR: </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">results</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;⚠️ Failed to process event </span><span class="si">{</span><span class="n">evid</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">results</span>
 
-# 读取事件列表并执行
-with open(event_file, &quot;r&quot;) as f:
-    event_lines = [line.strip() for line in f if line.strip()]
+<span class="c1"># 读取事件列表并执行</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">event_file</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">event_lines</span> <span class="o">=</span> <span class="p">[</span><span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span> <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()]</span>
 
-for line in event_lines:
-    results = process_event(line)
-    for r in results:
-        print(r)
-</code></pre>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">event_lines</span><span class="p">:</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">process_event</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">results</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+</code></pre></div>
 
 <p>&emsp;&emsp;与之前的脚本:{% post_link 下载地震数据练习 %}不同的地方是多了文件sta.lst。其格式为：
 TA|140A|32.6408|-93.573997|56.0|

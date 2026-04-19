@@ -55,24 +55,24 @@
 <ol>
 <li>匹配包含date行，在该行后添加copyright: true。</li>
 </ol>
-<pre class="highlight"><code class="language-bash">sed -i '/date/a\copyright: true' a.md 
-</code></pre>
+<div class="highlight"><pre><span></span><code>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;/date/a\copyright: true&#39;</span><span class="w"> </span>a.md<span class="w"> </span>
+</code></pre></div>
 
 <p>在行前添加就把a换做i。</p>
 <ol>
 <li>删除包含copyright的行。</li>
 </ol>
-<pre class="highlight"><code class="language-bash">sed -i '/copyright/d' a.md
-</code></pre>
+<div class="highlight"><pre><span></span><code>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;/copyright/d&#39;</span><span class="w"> </span>a.md
+</code></pre></div>
 
 <ol>
 <li>批量处理就这样。</li>
 </ol>
-<pre class="highlight"><code class="language-bash">for md in *md
-do
-   sed -i '/copyright/d' $md
-done
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span>md<span class="w"> </span><span class="k">in</span><span class="w"> </span>*md
+<span class="k">do</span>
+<span class="w">   </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;/copyright/d&#39;</span><span class="w"> </span><span class="nv">$md</span>
+<span class="k">done</span>
+</code></pre></div>
 
 <p>&emsp;&emsp;题外话，是不是觉得我找抽啊，插入了copyright之后又删掉。说来话长。我怕有人copy了我的东西不打声招呼，于是就想申明一下许可权益啊版权信息啊什么的（申明之后别人爱拿还得拿）。于是搜索到<a href="https://juejin.im/post/5c7dd8675188251b6406e7b5">上仙</a>那里，根据教程开始弄。过程中就得来个批量处理，用sed添加copyright。结果出来还不错。可谁知那个“署名”前面的cc图标老是乱码（一个叉）。哎呀，我这个暴脾气（洁癖），如何受得了。于是就搜啊搜，怎么才能显示出来呢？结果，啥办法没有。最后只能根据另一位<a href="https://wylu.me/posts/e0424f3f/">上神</a>的教程重新弄了一个简单的主题默认的版权信息。然后就得批处理copyright。啊，世界安静了。</p>
   </div>

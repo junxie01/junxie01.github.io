@@ -217,312 +217,312 @@ $$
 <hr />
 <h2 id="_14">筛选与聚合输出</h2>
 <h3 id="_15">筛选规则</h3>
-<pre class="highlight"><code class="language-text">DOP &gt;= 0.8
+<div class="highlight"><pre><span></span><code>DOP &gt;= 0.8
 planarity_angle &gt; 60°
-</code></pre>
+</code></pre></div>
 
 <h2 id="_16">脚本</h2>
-<pre class="highlight"><code>#!/usr/bin/env python3
-&quot;&quot;&quot;
-DOP-E style polarization + BAZ extraction using paper-consistent S-transform
-Implements Schimmel et al. (2011) S-transform definition with speed optimizations (Numba).
+<div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env python3</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">DOP-E style polarization + BAZ extraction using paper-consistent S-transform</span>
+<span class="sd">Implements Schimmel et al. (2011) S-transform definition with speed optimizations (Numba).</span>
 
-Usage:
-    python dop_e_st_paper.py /path/to/sac_dir --target-freq 0.03 --outs out
+<span class="sd">Usage:</span>
+<span class="sd">    python dop_e_st_paper.py /path/to/sac_dir --target-freq 0.03 --outs out</span>
 
-References:
-- Schimmel, Stutzmann, Ardhuin &amp; Gallart (2011), Polarized Earth's ambient microseismic noise, G³
-&quot;&quot;&quot;
-import os
-import glob
-import argparse
-from collections import defaultdict
-import numpy as np
-import matplotlib.pyplot as plt
-from obspy import read
-from scipy.signal import get_window
-from numba import njit, prange
-import math
-import warnings
+<span class="sd">References:</span>
+<span class="sd">- Schimmel, Stutzmann, Ardhuin &amp; Gallart (2011), Polarized Earth&#39;s ambient microseismic noise, G³</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">glob</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">argparse</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">defaultdict</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">obspy</span><span class="w"> </span><span class="kn">import</span> <span class="n">read</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.signal</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_window</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">numba</span><span class="w"> </span><span class="kn">import</span> <span class="n">njit</span><span class="p">,</span> <span class="n">prange</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
 
-warnings.filterwarnings(&quot;ignore&quot;)
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span>
 
-# ======================================================
-# S-transform implementation per Schimmel et al. (2011)
-# ======================================================
+<span class="c1"># ======================================================</span>
+<span class="c1"># S-transform implementation per Schimmel et al. (2011)</span>
+<span class="c1"># ======================================================</span>
 
-def s_transform(x, fs, freqs, pad=True):
-    &quot;&quot;&quot;
-    Paper-consistent S-transform:
-    S(t,f) = ∫ x(τ) * |f|/√(2π) * exp[-(t-τ)^2 f^2 / 2] * exp[-i2π f τ] dτ
-    Implemented via FFT multiplication.
-    &quot;&quot;&quot;
-    n = len(x)
-    dt = 1.0 / fs
-    if pad:
-        Nfft = 1 &lt;&lt; ((2 * n - 1).bit_length())
-    else:
-        Nfft = n
-    t = np.arange(n) * dt
-    X = np.fft.fft(x, n=Nfft)
-    freqs_fft = np.fft.fftfreq(Nfft, d=dt)
+<span class="k">def</span><span class="w"> </span><span class="nf">s_transform</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">fs</span><span class="p">,</span> <span class="n">freqs</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Paper-consistent S-transform:</span>
+<span class="sd">    S(t,f) = ∫ x(τ) * |f|/√(2π) * exp[-(t-τ)^2 f^2 / 2] * exp[-i2π f τ] dτ</span>
+<span class="sd">    Implemented via FFT multiplication.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">dt</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="n">fs</span>
+    <span class="k">if</span> <span class="n">pad</span><span class="p">:</span>
+        <span class="n">Nfft</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="p">((</span><span class="mi">2</span> <span class="o">*</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">bit_length</span><span class="p">())</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">Nfft</span> <span class="o">=</span> <span class="n">n</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">arange</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">*</span> <span class="n">dt</span>
+    <span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">fft</span><span class="o">.</span><span class="kp">fft</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="n">Nfft</span><span class="p">)</span>
+    <span class="n">freqs_fft</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">fft</span><span class="o">.</span><span class="kp">fftfreq</span><span class="p">(</span><span class="n">Nfft</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="n">dt</span><span class="p">)</span>
 
-    S = np.zeros((len(freqs), n), dtype=np.complex128)
-    # time index array
-    for i, f in enumerate(freqs):
-        if f &lt;= 0:
-            continue
-        # build Gaussian window in frequency domain for convolution
-        # Using exact analytical equivalence:
-        # G(f') = exp[-2π^2 (f'-f)^2 / f^2]
-        g_f = np.exp(-2.0 * (np.pi ** 2) * ((freqs_fft - f) ** 2) / (f ** 2))
-        # convolution via inverse FFT
-        s_ifft = np.fft.ifft(X * g_f, n=Nfft)
-        s_ifft = s_ifft[:n]
-        # normalization factor |f|/sqrt(2π)
-        S[i, :] = (abs(f) / np.sqrt(2.0 * np.pi)) * s_ifft * np.exp(1j * 2 * np.pi * f * t)
-    return S
-
-
-# ======================================================
-# Polarization &amp; BAZ analysis (Numba optimized)
-# ======================================================
-
-@njit(parallel=True, fastmath=True)
-def compute_dop_baz(cz, cn, ce, periods, fs, dop_thresh):
-    nfr, nt = cz.shape
-    DOP = np.zeros((nfr, nt))
-    BAZ = np.full((nfr, nt), np.nan)
-    QUALITY = np.zeros((nfr, nt))
-
-    for ifr in prange(nfr):
-        for it in range(nt):
-            # spectral matrix (3x3)
-            Z = cz[ifr, it]
-            N = cn[ifr, it]
-            E = ce[ifr, it]
-            S00 = (Z * np.conj(Z)).real
-            S01 = (Z * np.conj(N))
-            S02 = (Z * np.conj(E))
-            S11 = (N * np.conj(N)).real
-            S12 = (N * np.conj(E))
-            S22 = (E * np.conj(E)).real
-
-            # Hermitian matrix
-            S = np.array([[S00, S01.real, S02.real],
-                          [S01.real, S11, S12.real],
-                          [S02.real, S12.real, S22]], dtype=np.float64)
-
-            # eigen decomposition
-            w, v = np.linalg.eigh(S)
-            idx = np.argsort(w)[::-1]
-            w = w[idx]
-            v = v[:, idx]
-            # DOP = (λ1 - λ2)/(λ1+λ2+λ3)
-            denom = w.sum()
-            if denom &lt;= 0:
-                dop_val = 0.0
-            else:
-                dop_val = (w[0] - w[1]) / denom
-                if dop_val &lt; 0:
-                    dop_val = 0.0
-                elif dop_val &gt; 1.0:
-                    dop_val = 1.0
-            DOP[ifr, it] = dop_val
-
-            if dop_val &lt; dop_thresh:
-                continue
-
-            # horizontal azimuth from first eigenvector (v[:,0])
-            a = v[:, 0]
-            rn = a[1]
-            re = a[2]
-            az = math.degrees(math.atan2(re, rn))
-            if az &lt; 0:
-                az += 360.0
-            BAZ[ifr, it] = az
-            QUALITY[ifr, it] = 1
-
-    return DOP, BAZ, QUALITY
+    <span class="n">S</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">zeros</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">freqs</span><span class="p">),</span> <span class="n">n</span><span class="p">),</span> <span class="kp">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">complex128</span><span class="p">)</span>
+    <span class="c1"># time index array</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">f</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">freqs</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">f</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="c1"># build Gaussian window in frequency domain for convolution</span>
+        <span class="c1"># Using exact analytical equivalence:</span>
+        <span class="c1"># G(f&#39;) = exp[-2π^2 (f&#39;-f)^2 / f^2]</span>
+        <span class="n">g_f</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">2.0</span> <span class="o">*</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="p">((</span><span class="n">freqs_fft</span> <span class="o">-</span> <span class="n">f</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">f</span> <span class="o">**</span> <span class="mi">2</span><span class="p">))</span>
+        <span class="c1"># convolution via inverse FFT</span>
+        <span class="n">s_ifft</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">fft</span><span class="o">.</span><span class="kp">ifft</span><span class="p">(</span><span class="n">X</span> <span class="o">*</span> <span class="n">g_f</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="n">Nfft</span><span class="p">)</span>
+        <span class="n">s_ifft</span> <span class="o">=</span> <span class="n">s_ifft</span><span class="p">[:</span><span class="n">n</span><span class="p">]</span>
+        <span class="c1"># normalization factor |f|/sqrt(2π)</span>
+        <span class="n">S</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">f</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="kp">sqrt</span><span class="p">(</span><span class="mf">2.0</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">))</span> <span class="o">*</span> <span class="n">s_ifft</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="kp">exp</span><span class="p">(</span><span class="mi">1</span><span class="n">j</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">f</span> <span class="o">*</span> <span class="n">t</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">S</span>
 
 
-# ======================================================
-# DOPAnalyzer class
-# ======================================================
+<span class="c1"># ======================================================</span>
+<span class="c1"># Polarization &amp; BAZ analysis (Numba optimized)</span>
+<span class="c1"># ======================================================</span>
 
-class DOPAnalyzer:
-    def __init__(self, fs=1.0, target_freq=None, freq_band=None,
-                 dop_thresh=0.8, n_freqs=80, step=1):
-        &quot;&quot;&quot;
-        Parameters:
-            fs: sampling rate
-            target_freq: center frequency (Hz)
-            freq_band: (fmin,fmax)
-            dop_thresh: threshold
-            n_freqs: number of frequency points
-            step: downsample factor for time (e.g. 5 -&gt; 5 s resolution)
-        &quot;&quot;&quot;
-        self.fs = fs
-        self.dt = 1.0 / fs
-        self.target_freq = target_freq
-        self.freq_band = freq_band
-        self.dop_thresh = dop_thresh
-        self.n_freqs = n_freqs
-        self.step = step
+<span class="nd">@njit</span><span class="p">(</span><span class="n">parallel</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">fastmath</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">compute_dop_baz</span><span class="p">(</span><span class="n">cz</span><span class="p">,</span> <span class="n">cn</span><span class="p">,</span> <span class="n">ce</span><span class="p">,</span> <span class="n">periods</span><span class="p">,</span> <span class="n">fs</span><span class="p">,</span> <span class="n">dop_thresh</span><span class="p">):</span>
+    <span class="n">nfr</span><span class="p">,</span> <span class="n">nt</span> <span class="o">=</span> <span class="n">cz</span><span class="o">.</span><span class="kp">shape</span>
+    <span class="n">DOP</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">zeros</span><span class="p">((</span><span class="n">nfr</span><span class="p">,</span> <span class="n">nt</span><span class="p">))</span>
+    <span class="n">BAZ</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">((</span><span class="n">nfr</span><span class="p">,</span> <span class="n">nt</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="kp">nan</span><span class="p">)</span>
+    <span class="n">QUALITY</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">zeros</span><span class="p">((</span><span class="n">nfr</span><span class="p">,</span> <span class="n">nt</span><span class="p">))</span>
 
-    def _read_triple(self, fz, fn, fe):
-        stz = read(fz)[0]
-        stn = read(fn)[0]
-        ste = read(fe)[0]
-        start = max(stz.stats.starttime, stn.stats.starttime, ste.stats.starttime)
-        end = min(stz.stats.endtime, stn.stats.endtime, ste.stats.endtime)
-        stz.trim(start, end)
-        stn.trim(start, end)
-        ste.trim(start, end)
-        return stz.data.astype(float), stn.data.astype(float), ste.data.astype(float), stz.stats
+    <span class="k">for</span> <span class="n">ifr</span> <span class="ow">in</span> <span class="n">prange</span><span class="p">(</span><span class="n">nfr</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">it</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nt</span><span class="p">):</span>
+            <span class="c1"># spectral matrix (3x3)</span>
+            <span class="n">Z</span> <span class="o">=</span> <span class="n">cz</span><span class="p">[</span><span class="n">ifr</span><span class="p">,</span> <span class="n">it</span><span class="p">]</span>
+            <span class="n">N</span> <span class="o">=</span> <span class="n">cn</span><span class="p">[</span><span class="n">ifr</span><span class="p">,</span> <span class="n">it</span><span class="p">]</span>
+            <span class="n">E</span> <span class="o">=</span> <span class="n">ce</span><span class="p">[</span><span class="n">ifr</span><span class="p">,</span> <span class="n">it</span><span class="p">]</span>
+            <span class="n">S00</span> <span class="o">=</span> <span class="p">(</span><span class="n">Z</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="kp">conj</span><span class="p">(</span><span class="n">Z</span><span class="p">))</span><span class="o">.</span><span class="kp">real</span>
+            <span class="n">S01</span> <span class="o">=</span> <span class="p">(</span><span class="n">Z</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="kp">conj</span><span class="p">(</span><span class="n">N</span><span class="p">))</span>
+            <span class="n">S02</span> <span class="o">=</span> <span class="p">(</span><span class="n">Z</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="kp">conj</span><span class="p">(</span><span class="n">E</span><span class="p">))</span>
+            <span class="n">S11</span> <span class="o">=</span> <span class="p">(</span><span class="n">N</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="kp">conj</span><span class="p">(</span><span class="n">N</span><span class="p">))</span><span class="o">.</span><span class="kp">real</span>
+            <span class="n">S12</span> <span class="o">=</span> <span class="p">(</span><span class="n">N</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="kp">conj</span><span class="p">(</span><span class="n">E</span><span class="p">))</span>
+            <span class="n">S22</span> <span class="o">=</span> <span class="p">(</span><span class="n">E</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="kp">conj</span><span class="p">(</span><span class="n">E</span><span class="p">))</span><span class="o">.</span><span class="kp">real</span>
 
-    def _choose_freqs(self):
-        if self.freq_band:
-            fmin, fmax = self.freq_band
-        elif self.target_freq:
-            fmin = self.target_freq * 0.8
-            fmax = self.target_freq * 1.2
-        else:
-            fmin, fmax = 0.005, 0.25
-        freqs = np.logspace(np.log10(fmin), np.log10(fmax), self.n_freqs)
-        return freqs
+            <span class="c1"># Hermitian matrix</span>
+            <span class="n">S</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">array</span><span class="p">([[</span><span class="n">S00</span><span class="p">,</span> <span class="n">S01</span><span class="o">.</span><span class="kp">real</span><span class="p">,</span> <span class="n">S02</span><span class="o">.</span><span class="kp">real</span><span class="p">],</span>
+                          <span class="p">[</span><span class="n">S01</span><span class="o">.</span><span class="kp">real</span><span class="p">,</span> <span class="n">S11</span><span class="p">,</span> <span class="n">S12</span><span class="o">.</span><span class="kp">real</span><span class="p">],</span>
+                          <span class="p">[</span><span class="n">S02</span><span class="o">.</span><span class="kp">real</span><span class="p">,</span> <span class="n">S12</span><span class="o">.</span><span class="kp">real</span><span class="p">,</span> <span class="n">S22</span><span class="p">]],</span> <span class="kp">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
 
-    def analyze_triple(self, z, n, e):
-        npts = len(z)
-        tvec = np.arange(0, npts, self.step) / self.fs
-        freqs = self._choose_freqs()
-        periods = 1.0 / freqs
+            <span class="c1"># eigen decomposition</span>
+            <span class="n">w</span><span class="p">,</span> <span class="n">v</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eigh</span><span class="p">(</span><span class="n">S</span><span class="p">)</span>
+            <span class="n">idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">argsort</span><span class="p">(</span><span class="n">w</span><span class="p">)[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">w</span> <span class="o">=</span> <span class="n">w</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+            <span class="n">v</span> <span class="o">=</span> <span class="n">v</span><span class="p">[:,</span> <span class="n">idx</span><span class="p">]</span>
+            <span class="c1"># DOP = (λ1 - λ2)/(λ1+λ2+λ3)</span>
+            <span class="n">denom</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="kp">sum</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">denom</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">dop_val</span> <span class="o">=</span> <span class="mf">0.0</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">dop_val</span> <span class="o">=</span> <span class="p">(</span><span class="n">w</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">w</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="n">denom</span>
+                <span class="k">if</span> <span class="n">dop_val</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="n">dop_val</span> <span class="o">=</span> <span class="mf">0.0</span>
+                <span class="k">elif</span> <span class="n">dop_val</span> <span class="o">&gt;</span> <span class="mf">1.0</span><span class="p">:</span>
+                    <span class="n">dop_val</span> <span class="o">=</span> <span class="mf">1.0</span>
+            <span class="n">DOP</span><span class="p">[</span><span class="n">ifr</span><span class="p">,</span> <span class="n">it</span><span class="p">]</span> <span class="o">=</span> <span class="n">dop_val</span>
 
-        cz = s_transform(z, self.fs, freqs)
-        cn = s_transform(n, self.fs, freqs)
-        ce = s_transform(e, self.fs, freqs)
+            <span class="k">if</span> <span class="n">dop_val</span> <span class="o">&lt;</span> <span class="n">dop_thresh</span><span class="p">:</span>
+                <span class="k">continue</span>
 
-        # downsample in time for speed
-        cz = cz[:, ::self.step]
-        cn = cn[:, ::self.step]
-        ce = ce[:, ::self.step]
+            <span class="c1"># horizontal azimuth from first eigenvector (v[:,0])</span>
+            <span class="n">a</span> <span class="o">=</span> <span class="n">v</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
+            <span class="n">rn</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">re</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+            <span class="n">az</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">degrees</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">atan2</span><span class="p">(</span><span class="n">re</span><span class="p">,</span> <span class="n">rn</span><span class="p">))</span>
+            <span class="k">if</span> <span class="n">az</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">az</span> <span class="o">+=</span> <span class="mf">360.0</span>
+            <span class="n">BAZ</span><span class="p">[</span><span class="n">ifr</span><span class="p">,</span> <span class="n">it</span><span class="p">]</span> <span class="o">=</span> <span class="n">az</span>
+            <span class="n">QUALITY</span><span class="p">[</span><span class="n">ifr</span><span class="p">,</span> <span class="n">it</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
 
-        DOP, BAZ, QUALITY = compute_dop_baz(cz, cn, ce, periods, self.fs, self.dop_thresh)
-
-        return {&quot;times&quot;: tvec, &quot;freqs&quot;: freqs, &quot;DOP&quot;: DOP, &quot;BAZ&quot;: BAZ, &quot;QUALITY&quot;: QUALITY}
-
-    def plot_results(self, res, out_prefix=&quot;result&quot;, target_freq=None):
-        times = res[&quot;times&quot;]
-        freqs = res[&quot;freqs&quot;]
-        DOP = res[&quot;DOP&quot;]
-        BAZ = res[&quot;BAZ&quot;]
-        Q = res[&quot;QUALITY&quot;]
-
-        t_hr = times / 3600.0
-
-        plt.figure(figsize=(12, 4))
-        plt.pcolormesh(t_hr, freqs, DOP, shading=&quot;auto&quot;)
-        plt.colorbar(label=&quot;DOP&quot;)
-        plt.yscale(&quot;log&quot;)
-        plt.ylabel(&quot;Frequency (Hz)&quot;)
-        plt.xlabel(&quot;Time (hours)&quot;)
-        plt.title(&quot;DOP (S-transform)&quot;)
-        plt.tight_layout()
-        plt.savefig(out_prefix + &quot;_DOP.png&quot;, dpi=200)
-
-        plt.figure(figsize=(12, 4))
-        baz_masked = np.where(Q &gt; 0, BAZ, np.nan)
-        plt.pcolormesh(t_hr, freqs, baz_masked, shading=&quot;auto&quot;, cmap=&quot;hsv&quot;, vmin=0, vmax=360)
-        plt.colorbar(label=&quot;Back Azimuth (°)&quot;)
-        plt.yscale(&quot;log&quot;)
-        plt.ylabel(&quot;Frequency (Hz)&quot;)
-        plt.xlabel(&quot;Time (hours)&quot;)
-        plt.title(f&quot;BAZ (DOP&gt;{self.dop_thresh})&quot;)
-        plt.tight_layout()
-        plt.savefig(out_prefix + &quot;_BAZ_timefreq.png&quot;, dpi=200)
-
-        if target_freq is not None:
-            idx = np.argmin(np.abs(freqs - target_freq))
-            baz_vals = BAZ[idx, Q[idx, :] &gt; 0]
-        else:
-            baz_vals = BAZ[Q &gt; 0]
-
-        plt.figure(figsize=(6, 4))
-        plt.hist(baz_vals[~np.isnan(baz_vals)], bins=np.arange(0, 361, 10))
-        plt.xlabel(&quot;Back Azimuth (°)&quot;)
-        plt.ylabel(&quot;Count&quot;)
-        plt.title(&quot;BAZ Histogram&quot;)
-        plt.tight_layout()
-        plt.savefig(out_prefix + &quot;_BAZ_hist.png&quot;, dpi=200)
-        plt.close(&quot;all&quot;)
+    <span class="k">return</span> <span class="n">DOP</span><span class="p">,</span> <span class="n">BAZ</span><span class="p">,</span> <span class="n">QUALITY</span>
 
 
-# ======================================================
-# Utility: find 3-component sets
-# ======================================================
+<span class="c1"># ======================================================</span>
+<span class="c1"># DOPAnalyzer class</span>
+<span class="c1"># ======================================================</span>
 
-def find_triples_in_dir(sac_dir):
-    files = glob.glob(os.path.join(sac_dir, &quot;*.SAC&quot;)) + glob.glob(os.path.join(sac_dir, &quot;*.sac&quot;))
-    idx = defaultdict(dict)
-    for f in files:
-        b = os.path.basename(f)
-        up = b.upper()
-        if &quot;LHZ&quot; in up or &quot;HZ&quot; in up:
-            base = up.replace(&quot;LHZ&quot;, &quot;&quot;).replace(&quot;HZ&quot;, &quot;&quot;).strip(&quot;_&quot;)
-            idx[base][&quot;Z&quot;] = f
-        elif &quot;LHN&quot; in up or &quot;HN&quot; in up:
-            base = up.replace(&quot;LHN&quot;, &quot;&quot;).replace(&quot;HN&quot;, &quot;&quot;).strip(&quot;_&quot;)
-            idx[base][&quot;N&quot;] = f
-        elif &quot;LHE&quot; in up or &quot;HE&quot; in up:
-            base = up.replace(&quot;LHE&quot;, &quot;&quot;).replace(&quot;HE&quot;, &quot;&quot;).strip(&quot;_&quot;)
-            idx[base][&quot;E&quot;] = f
-    triples = []
-    for base, d in idx.items():
-        if all(k in d for k in (&quot;Z&quot;, &quot;N&quot;, &quot;E&quot;)):
-            triples.append((base, d[&quot;Z&quot;], d[&quot;N&quot;], d[&quot;E&quot;]))
-    return triples
+<span class="k">class</span><span class="w"> </span><span class="nc">DOPAnalyzer</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fs</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">target_freq</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">freq_band</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">dop_thresh</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">n_freqs</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Parameters:</span>
+<span class="sd">            fs: sampling rate</span>
+<span class="sd">            target_freq: center frequency (Hz)</span>
+<span class="sd">            freq_band: (fmin,fmax)</span>
+<span class="sd">            dop_thresh: threshold</span>
+<span class="sd">            n_freqs: number of frequency points</span>
+<span class="sd">            step: downsample factor for time (e.g. 5 -&gt; 5 s resolution)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fs</span> <span class="o">=</span> <span class="n">fs</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dt</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="n">fs</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">target_freq</span> <span class="o">=</span> <span class="n">target_freq</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">freq_band</span> <span class="o">=</span> <span class="n">freq_band</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dop_thresh</span> <span class="o">=</span> <span class="n">dop_thresh</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">n_freqs</span> <span class="o">=</span> <span class="n">n_freqs</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">step</span> <span class="o">=</span> <span class="n">step</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_read_triple</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fz</span><span class="p">,</span> <span class="n">fn</span><span class="p">,</span> <span class="n">fe</span><span class="p">):</span>
+        <span class="n">stz</span> <span class="o">=</span> <span class="n">read</span><span class="p">(</span><span class="n">fz</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">stn</span> <span class="o">=</span> <span class="n">read</span><span class="p">(</span><span class="n">fn</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">ste</span> <span class="o">=</span> <span class="n">read</span><span class="p">(</span><span class="n">fe</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">start</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">stz</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">starttime</span><span class="p">,</span> <span class="n">stn</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">starttime</span><span class="p">,</span> <span class="n">ste</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">starttime</span><span class="p">)</span>
+        <span class="n">end</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">stz</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">endtime</span><span class="p">,</span> <span class="n">stn</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">endtime</span><span class="p">,</span> <span class="n">ste</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">endtime</span><span class="p">)</span>
+        <span class="n">stz</span><span class="o">.</span><span class="n">trim</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span>
+        <span class="n">stn</span><span class="o">.</span><span class="n">trim</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span>
+        <span class="n">ste</span><span class="o">.</span><span class="n">trim</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">stz</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="kp">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">),</span> <span class="n">stn</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="kp">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">),</span> <span class="n">ste</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="kp">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">),</span> <span class="n">stz</span><span class="o">.</span><span class="n">stats</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_choose_freqs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">freq_band</span><span class="p">:</span>
+            <span class="n">fmin</span><span class="p">,</span> <span class="n">fmax</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">freq_band</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">target_freq</span><span class="p">:</span>
+            <span class="n">fmin</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">target_freq</span> <span class="o">*</span> <span class="mf">0.8</span>
+            <span class="n">fmax</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">target_freq</span> <span class="o">*</span> <span class="mf">1.2</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">fmin</span><span class="p">,</span> <span class="n">fmax</span> <span class="o">=</span> <span class="mf">0.005</span><span class="p">,</span> <span class="mf">0.25</span>
+        <span class="n">freqs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">logspace</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="kp">log10</span><span class="p">(</span><span class="n">fmin</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="kp">log10</span><span class="p">(</span><span class="n">fmax</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_freqs</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">freqs</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">analyze_triple</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
+        <span class="n">npts</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+        <span class="n">tvec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">npts</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">step</span><span class="p">)</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">fs</span>
+        <span class="n">freqs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_choose_freqs</span><span class="p">()</span>
+        <span class="n">periods</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="n">freqs</span>
+
+        <span class="n">cz</span> <span class="o">=</span> <span class="n">s_transform</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">fs</span><span class="p">,</span> <span class="n">freqs</span><span class="p">)</span>
+        <span class="n">cn</span> <span class="o">=</span> <span class="n">s_transform</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">fs</span><span class="p">,</span> <span class="n">freqs</span><span class="p">)</span>
+        <span class="n">ce</span> <span class="o">=</span> <span class="n">s_transform</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">fs</span><span class="p">,</span> <span class="n">freqs</span><span class="p">)</span>
+
+        <span class="c1"># downsample in time for speed</span>
+        <span class="n">cz</span> <span class="o">=</span> <span class="n">cz</span><span class="p">[:,</span> <span class="p">::</span><span class="bp">self</span><span class="o">.</span><span class="n">step</span><span class="p">]</span>
+        <span class="n">cn</span> <span class="o">=</span> <span class="n">cn</span><span class="p">[:,</span> <span class="p">::</span><span class="bp">self</span><span class="o">.</span><span class="n">step</span><span class="p">]</span>
+        <span class="n">ce</span> <span class="o">=</span> <span class="n">ce</span><span class="p">[:,</span> <span class="p">::</span><span class="bp">self</span><span class="o">.</span><span class="n">step</span><span class="p">]</span>
+
+        <span class="n">DOP</span><span class="p">,</span> <span class="n">BAZ</span><span class="p">,</span> <span class="n">QUALITY</span> <span class="o">=</span> <span class="n">compute_dop_baz</span><span class="p">(</span><span class="n">cz</span><span class="p">,</span> <span class="n">cn</span><span class="p">,</span> <span class="n">ce</span><span class="p">,</span> <span class="n">periods</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">fs</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">dop_thresh</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;times&quot;</span><span class="p">:</span> <span class="n">tvec</span><span class="p">,</span> <span class="s2">&quot;freqs&quot;</span><span class="p">:</span> <span class="n">freqs</span><span class="p">,</span> <span class="s2">&quot;DOP&quot;</span><span class="p">:</span> <span class="n">DOP</span><span class="p">,</span> <span class="s2">&quot;BAZ&quot;</span><span class="p">:</span> <span class="n">BAZ</span><span class="p">,</span> <span class="s2">&quot;QUALITY&quot;</span><span class="p">:</span> <span class="n">QUALITY</span><span class="p">}</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">plot_results</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">res</span><span class="p">,</span> <span class="n">out_prefix</span><span class="o">=</span><span class="s2">&quot;result&quot;</span><span class="p">,</span> <span class="n">target_freq</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="n">times</span> <span class="o">=</span> <span class="n">res</span><span class="p">[</span><span class="s2">&quot;times&quot;</span><span class="p">]</span>
+        <span class="n">freqs</span> <span class="o">=</span> <span class="n">res</span><span class="p">[</span><span class="s2">&quot;freqs&quot;</span><span class="p">]</span>
+        <span class="n">DOP</span> <span class="o">=</span> <span class="n">res</span><span class="p">[</span><span class="s2">&quot;DOP&quot;</span><span class="p">]</span>
+        <span class="n">BAZ</span> <span class="o">=</span> <span class="n">res</span><span class="p">[</span><span class="s2">&quot;BAZ&quot;</span><span class="p">]</span>
+        <span class="n">Q</span> <span class="o">=</span> <span class="n">res</span><span class="p">[</span><span class="s2">&quot;QUALITY&quot;</span><span class="p">]</span>
+
+        <span class="n">t_hr</span> <span class="o">=</span> <span class="n">times</span> <span class="o">/</span> <span class="mf">3600.0</span>
+
+        <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="n">t_hr</span><span class="p">,</span> <span class="n">freqs</span><span class="p">,</span> <span class="n">DOP</span><span class="p">,</span> <span class="n">shading</span><span class="o">=</span><span class="s2">&quot;auto&quot;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;DOP&quot;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">yscale</span><span class="p">(</span><span class="s2">&quot;log&quot;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Frequency (Hz)&quot;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Time (hours)&quot;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;DOP (S-transform)&quot;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">out_prefix</span> <span class="o">+</span> <span class="s2">&quot;_DOP.png&quot;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+
+        <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+        <span class="n">baz_masked</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">where</span><span class="p">(</span><span class="n">Q</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="n">BAZ</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="kp">nan</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="n">t_hr</span><span class="p">,</span> <span class="n">freqs</span><span class="p">,</span> <span class="n">baz_masked</span><span class="p">,</span> <span class="n">shading</span><span class="o">=</span><span class="s2">&quot;auto&quot;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;hsv&quot;</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">360</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Back Azimuth (°)&quot;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">yscale</span><span class="p">(</span><span class="s2">&quot;log&quot;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Frequency (Hz)&quot;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Time (hours)&quot;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;BAZ (DOP&gt;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">dop_thresh</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">out_prefix</span> <span class="o">+</span> <span class="s2">&quot;_BAZ_timefreq.png&quot;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">target_freq</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">argmin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="kp">abs</span><span class="p">(</span><span class="n">freqs</span> <span class="o">-</span> <span class="n">target_freq</span><span class="p">))</span>
+            <span class="n">baz_vals</span> <span class="o">=</span> <span class="n">BAZ</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span> <span class="n">Q</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span> <span class="p">:]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">baz_vals</span> <span class="o">=</span> <span class="n">BAZ</span><span class="p">[</span><span class="n">Q</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">]</span>
+
+        <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">baz_vals</span><span class="p">[</span><span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="kp">isnan</span><span class="p">(</span><span class="n">baz_vals</span><span class="p">)],</span> <span class="n">bins</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="kp">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">361</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Back Azimuth (°)&quot;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Count&quot;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;BAZ Histogram&quot;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">out_prefix</span> <span class="o">+</span> <span class="s2">&quot;_BAZ_hist.png&quot;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">(</span><span class="s2">&quot;all&quot;</span><span class="p">)</span>
 
 
-# ======================================================
-# Main
-# ======================================================
+<span class="c1"># ======================================================</span>
+<span class="c1"># Utility: find 3-component sets</span>
+<span class="c1"># ======================================================</span>
 
-if __name__ == &quot;__main__&quot;:
-    p = argparse.ArgumentParser(description=&quot;DOP-E S-transform (paper consistent, optimized)&quot;)
-    p.add_argument(&quot;sacdir&quot;, help=&quot;Directory with 3-component SAC files&quot;)
-    p.add_argument(&quot;--target-freq&quot;, type=float, default=0.03, help=&quot;Center frequency (Hz)&quot;)
-    p.add_argument(&quot;--fmin&quot;, type=float, default=None, help=&quot;Min frequency&quot;)
-    p.add_argument(&quot;--fmax&quot;, type=float, default=None, help=&quot;Max frequency&quot;)
-    p.add_argument(&quot;--outs&quot;, default=&quot;out&quot;, help=&quot;Output prefix&quot;)
-    p.add_argument(&quot;--dop-thresh&quot;, type=float, default=0.8, help=&quot;DOP threshold&quot;)
-    p.add_argument(&quot;--n-freqs&quot;, type=int, default=60, help=&quot;Number of frequency points&quot;)
-    p.add_argument(&quot;--step&quot;, type=int, default=5, help=&quot;Downsample step for time (1 = full)&quot;)
-    args = p.parse_args()
+<span class="k">def</span><span class="w"> </span><span class="nf">find_triples_in_dir</span><span class="p">(</span><span class="n">sac_dir</span><span class="p">):</span>
+    <span class="n">files</span> <span class="o">=</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">sac_dir</span><span class="p">,</span> <span class="s2">&quot;*.SAC&quot;</span><span class="p">))</span> <span class="o">+</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">sac_dir</span><span class="p">,</span> <span class="s2">&quot;*.sac&quot;</span><span class="p">))</span>
+    <span class="n">idx</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">dict</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+        <span class="n">b</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+        <span class="n">up</span> <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+        <span class="k">if</span> <span class="s2">&quot;LHZ&quot;</span> <span class="ow">in</span> <span class="n">up</span> <span class="ow">or</span> <span class="s2">&quot;HZ&quot;</span> <span class="ow">in</span> <span class="n">up</span><span class="p">:</span>
+            <span class="n">base</span> <span class="o">=</span> <span class="n">up</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;LHZ&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;HZ&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">)</span>
+            <span class="n">idx</span><span class="p">[</span><span class="n">base</span><span class="p">][</span><span class="s2">&quot;Z&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">f</span>
+        <span class="k">elif</span> <span class="s2">&quot;LHN&quot;</span> <span class="ow">in</span> <span class="n">up</span> <span class="ow">or</span> <span class="s2">&quot;HN&quot;</span> <span class="ow">in</span> <span class="n">up</span><span class="p">:</span>
+            <span class="n">base</span> <span class="o">=</span> <span class="n">up</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;LHN&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;HN&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">)</span>
+            <span class="n">idx</span><span class="p">[</span><span class="n">base</span><span class="p">][</span><span class="s2">&quot;N&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">f</span>
+        <span class="k">elif</span> <span class="s2">&quot;LHE&quot;</span> <span class="ow">in</span> <span class="n">up</span> <span class="ow">or</span> <span class="s2">&quot;HE&quot;</span> <span class="ow">in</span> <span class="n">up</span><span class="p">:</span>
+            <span class="n">base</span> <span class="o">=</span> <span class="n">up</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;LHE&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;HE&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">)</span>
+            <span class="n">idx</span><span class="p">[</span><span class="n">base</span><span class="p">][</span><span class="s2">&quot;E&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">f</span>
+    <span class="n">triples</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">base</span><span class="p">,</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">idx</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="nb">all</span><span class="p">(</span><span class="n">k</span> <span class="ow">in</span> <span class="n">d</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;Z&quot;</span><span class="p">,</span> <span class="s2">&quot;N&quot;</span><span class="p">,</span> <span class="s2">&quot;E&quot;</span><span class="p">)):</span>
+            <span class="n">triples</span><span class="o">.</span><span class="kp">append</span><span class="p">((</span><span class="n">base</span><span class="p">,</span> <span class="n">d</span><span class="p">[</span><span class="s2">&quot;Z&quot;</span><span class="p">],</span> <span class="n">d</span><span class="p">[</span><span class="s2">&quot;N&quot;</span><span class="p">],</span> <span class="n">d</span><span class="p">[</span><span class="s2">&quot;E&quot;</span><span class="p">]))</span>
+    <span class="k">return</span> <span class="n">triples</span>
 
-    triples = find_triples_in_dir(args.sacdir)
-    if not triples:
-        print(&quot;No 3-component SAC sets found.&quot;)
-        raise SystemExit
 
-    for base, fz, fn, fe in triples:
-        print(&quot;Processing:&quot;, base)
-        z, n, e, stats = DOPAnalyzer()._read_triple(fz, fn, fe)
-        fs = stats.sampling_rate
-        if args.fmin and args.fmax:
-            freq_band = (args.fmin, args.fmax)
-        else:
-            freq_band = None
-        analyzer = DOPAnalyzer(fs=fs,
-                               target_freq=args.target_freq,
-                               freq_band=freq_band,
-                               dop_thresh=args.dop_thresh,
-                               n_freqs=args.n_freqs,
-                               step=args.step)
-        res = analyzer.analyze_triple(z, n, e)
-        outpref = f&quot;{args.outs}_{base}&quot;
-        analyzer.plot_results(res, out_prefix=outpref, target_freq=args.target_freq)
-        print(&quot;Saved:&quot;, outpref)
-</code></pre>
+<span class="c1"># ======================================================</span>
+<span class="c1"># Main</span>
+<span class="c1"># ======================================================</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;DOP-E S-transform (paper consistent, optimized)&quot;</span><span class="p">)</span>
+    <span class="n">p</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;sacdir&quot;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Directory with 3-component SAC files&quot;</span><span class="p">)</span>
+    <span class="n">p</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;--target-freq&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mf">0.03</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Center frequency (Hz)&quot;</span><span class="p">)</span>
+    <span class="n">p</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;--fmin&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Min frequency&quot;</span><span class="p">)</span>
+    <span class="n">p</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;--fmax&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Max frequency&quot;</span><span class="p">)</span>
+    <span class="n">p</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;--outs&quot;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="s2">&quot;out&quot;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Output prefix&quot;</span><span class="p">)</span>
+    <span class="n">p</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;--dop-thresh&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;DOP threshold&quot;</span><span class="p">)</span>
+    <span class="n">p</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;--n-freqs&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Number of frequency points&quot;</span><span class="p">)</span>
+    <span class="n">p</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;--step&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Downsample step for time (1 = full)&quot;</span><span class="p">)</span>
+    <span class="n">args</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+
+    <span class="n">triples</span> <span class="o">=</span> <span class="n">find_triples_in_dir</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">sacdir</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">triples</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No 3-component SAC sets found.&quot;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">SystemExit</span>
+
+    <span class="k">for</span> <span class="n">base</span><span class="p">,</span> <span class="n">fz</span><span class="p">,</span> <span class="n">fn</span><span class="p">,</span> <span class="n">fe</span> <span class="ow">in</span> <span class="n">triples</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Processing:&quot;</span><span class="p">,</span> <span class="n">base</span><span class="p">)</span>
+        <span class="n">z</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">stats</span> <span class="o">=</span> <span class="n">DOPAnalyzer</span><span class="p">()</span><span class="o">.</span><span class="n">_read_triple</span><span class="p">(</span><span class="n">fz</span><span class="p">,</span> <span class="n">fn</span><span class="p">,</span> <span class="n">fe</span><span class="p">)</span>
+        <span class="n">fs</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">sampling_rate</span>
+        <span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">fmin</span> <span class="ow">and</span> <span class="n">args</span><span class="o">.</span><span class="n">fmax</span><span class="p">:</span>
+            <span class="n">freq_band</span> <span class="o">=</span> <span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">fmin</span><span class="p">,</span> <span class="n">args</span><span class="o">.</span><span class="n">fmax</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">freq_band</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">analyzer</span> <span class="o">=</span> <span class="n">DOPAnalyzer</span><span class="p">(</span><span class="n">fs</span><span class="o">=</span><span class="n">fs</span><span class="p">,</span>
+                               <span class="n">target_freq</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">target_freq</span><span class="p">,</span>
+                               <span class="n">freq_band</span><span class="o">=</span><span class="n">freq_band</span><span class="p">,</span>
+                               <span class="n">dop_thresh</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">dop_thresh</span><span class="p">,</span>
+                               <span class="n">n_freqs</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">n_freqs</span><span class="p">,</span>
+                               <span class="n">step</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">step</span><span class="p">)</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">analyzer</span><span class="o">.</span><span class="n">analyze_triple</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+        <span class="n">outpref</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">args</span><span class="o">.</span><span class="n">outs</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">base</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">analyzer</span><span class="o">.</span><span class="n">plot_results</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">out_prefix</span><span class="o">=</span><span class="n">outpref</span><span class="p">,</span> <span class="n">target_freq</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">target_freq</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Saved:&quot;</span><span class="p">,</span> <span class="n">outpref</span><span class="p">)</span>
+</code></pre></div>
   </div>
 
   <div class="post-nav">

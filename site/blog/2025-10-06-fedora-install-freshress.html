@@ -48,61 +48,61 @@
 <p>&emsp;&emsp;之前总是蹭一个小伙子自己建的<a href="https://rss.othing.xyz/">RSS</a>，白嫖，怕哪天人家不搞了，还是自己建一个吧。详细脚本安装请查看其<a href="https://github.com/FreshRSS/FreshRSS/blob/edge/cli/README.md">github</a>。废话不多说，具体如下：</p>
 <h1 id="_1">一、安装依赖</h1>
 <p>FreshRSS是基于PHP的自建RSS聚合器，需要Apache+PHP环境：</p>
-<pre class="highlight"><code>sudo dnf install httpd php php-cli php-common php-json php-gd php-mbstring php-intl php-xml php-pdo php-mysqlnd unzip git -y
-</code></pre>
+<div class="highlight"><pre><span></span><code>sudo dnf install httpd php php-cli php-common php-json php-gd php-mbstring php-intl php-xml php-pdo php-mysqlnd unzip git -y
+</code></pre></div>
 
 <p>启用并启动 Apache：</p>
-<pre class="highlight"><code>sudo systemctl enable --now httpd
-</code></pre>
+<div class="highlight"><pre><span></span><code>sudo systemctl enable --now httpd
+</code></pre></div>
 
 <p>确认端口 80 正在监听：</p>
-<pre class="highlight"><code>sudo ss -tulnp | grep :80
-</code></pre>
+<div class="highlight"><pre><span></span><code>sudo ss -tulnp | grep :80
+</code></pre></div>
 
 <h1 id="freshrss">二、下载并安装 FreshRSS</h1>
 <p>推荐安装到 /usr/share/FreshRSS：</p>
-<pre class="highlight"><code>cd /usr/share
+<div class="highlight"><pre><span></span><code>cd /usr/share
 sudo git clone https://github.com/FreshRSS/FreshRSS.git
 cd FreshRSS
 sudo git checkout stable   # 或 edge 分支（开发版）
-</code></pre>
+</code></pre></div>
 
 <p>设置权限（Fedora 的 Apache 用户是 apache）：</p>
-<pre class="highlight"><code>sudo chown -R apache:apache /usr/share/FreshRSS
+<div class="highlight"><pre><span></span><code>sudo chown -R apache:apache /usr/share/FreshRSS
 sudo chmod -R 755 /usr/share/FreshRSS
-</code></pre>
+</code></pre></div>
 
 <h1 id="apache">三、配置 Apache</h1>
 <p>新建配置文件：</p>
-<pre class="highlight"><code>sudo vim /etc/httpd/conf.d/freshrss.conf
-</code></pre>
+<div class="highlight"><pre><span></span><code>sudo vim /etc/httpd/conf.d/freshrss.conf
+</code></pre></div>
 
 <p>写入以下内容：</p>
-<pre class="highlight"><code>Alias /FreshRSS /usr/share/FreshRSS
+<div class="highlight"><pre><span></span><code>Alias<span class="w"> </span>/FreshRSS<span class="w"> </span>/usr/share/FreshRSS
 
-&lt;Directory /usr/share/FreshRSS&gt;
-    AllowOverride All
-    Options Indexes FollowSymLinks
-    Require all granted
-&lt;/Directory&gt;
-</code></pre>
+<span class="nt">&lt;Directory</span><span class="w"> </span><span class="err">/usr/share/FreshRSS</span><span class="nt">&gt;</span>
+<span class="w">    </span>AllowOverride<span class="w"> </span>All
+<span class="w">    </span>Options<span class="w"> </span>Indexes<span class="w"> </span>FollowSymLinks
+<span class="w">    </span>Require<span class="w"> </span>all<span class="w"> </span>granted
+<span class="nt">&lt;/Directory&gt;</span>
+</code></pre></div>
 
 <p>保存退出后，重启 Apache：</p>
-<pre class="highlight"><code>sudo systemctl restart httpd
-</code></pre>
+<div class="highlight"><pre><span></span><code>sudo systemctl restart httpd
+</code></pre></div>
 
 <h1 id="selinux-fedora">四、处理 SELinux 限制（Fedora 特有）</h1>
 <p>Fedora 默认启用了 SELinux，会阻止 Apache 访问 /usr/share 下的应用。
 执行以下命令放行：</p>
-<pre class="highlight"><code>sudo chcon -R -t httpd_sys_rw_content_t /usr/share/FreshRSS
+<div class="highlight"><pre><span></span><code>sudo chcon -R -t httpd_sys_rw_content_t /usr/share/FreshRSS
 sudo setsebool -P httpd_can_network_connect on
-</code></pre>
+</code></pre></div>
 
 <p>（若仍被拒绝，可临时关闭测试：sudo setenforce 0）</p>
 <h1 id="web">五、访问 Web 界面</h1>
 <p>打开浏览器访问：</p>
-<pre class="highlight"><code>http://localhost/FreshRSS
-</code></pre>
+<div class="highlight"><pre><span></span><code>http://localhost/FreshRSS
+</code></pre></div>
 
 <p>你应看到 FreshRSS 的安装页面。
 根据提示创建管理员账号、数据库配置（SQLite/MySQL 都可）。</p>
@@ -112,28 +112,28 @@ sudo setsebool -P httpd_can_network_connect on
 <h1 id="_2">六、命令行工具（可选）</h1>
 <p>FreshRSS 提供强大的 CLI 管理工具，位于 cli/ 目录。
 例如列出用户：</p>
-<pre class="highlight"><code>cd /usr/share/FreshRSS
+<div class="highlight"><pre><span></span><code>cd /usr/share/FreshRSS
 sudo -u apache php cli/list-users.php
-</code></pre>
+</code></pre></div>
 
 <p>Fedora 用的是 apache 用户，而不是 Debian/Ubuntu 的 www-data。</p>
 <h1 id="_3">七、日志与排错</h1>
 <p>查看 Apache 错误日志：</p>
-<pre class="highlight"><code>sudo tail -n 30 /var/log/httpd/error_log
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="n">sudo</span><span class="w"> </span><span class="n">tail</span><span class="w"> </span><span class="o">-</span><span class="n">n</span><span class="w"> </span><span class="mi">30</span><span class="w"> </span><span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="nb">log</span><span class="o">/</span><span class="n">httpd</span><span class="o">/</span><span class="n">error_log</span>
+</code></pre></div>
 
 <p>查看 SELinux 拒绝记录：</p>
-<pre class="highlight"><code>sudo ausearch -m AVC,USER_AVC -ts recent
-</code></pre>
+<div class="highlight"><pre><span></span><code>sudo ausearch -m AVC,USER_AVC -ts recent
+</code></pre></div>
 
 <h1 id="_4">八、（可选）设置自动更新任务</h1>
 <p>添加一个定时任务更新 RSS 源：</p>
-<pre class="highlight"><code>sudo -u apache php /usr/share/FreshRSS/app/actualize_script.php &gt; /dev/null 2&gt;&amp;1
-</code></pre>
+<div class="highlight"><pre><span></span><code>sudo -u apache php /usr/share/FreshRSS/app/actualize_script.php &gt; /dev/null 2&gt;&amp;1
+</code></pre></div>
 
 <p>在 /etc/cron.d/freshrss 中添加：</p>
-<pre class="highlight"><code>*/20 * * * * apache php /usr/share/FreshRSS/app/actualize_script.php &gt; /dev/null 2&gt;&amp;1
-</code></pre>
+<div class="highlight"><pre><span></span><code>*/20 <span class="gs">* *</span> * * apache php /usr/share/FreshRSS/app/actualize_script.php &gt; /dev/null 2&gt;&amp;1
+</code></pre></div>
 
 <p>表示每20分钟更新一次。</p>
   </div>

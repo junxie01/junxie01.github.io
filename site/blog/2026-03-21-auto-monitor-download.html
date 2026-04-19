@@ -92,14 +92,14 @@
 <p>推荐使用 Python 3.8 或更高版本。</p>
 <h3 id="2">2. 依赖库</h3>
 <p>安装 ObsPy 及其绘图依赖：</p>
-<pre class="highlight"><code class="language-bash">pip install obspy matplotlib numpy
-</code></pre>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>obspy<span class="w"> </span>matplotlib<span class="w"> </span>numpy
+</code></pre></div>
 
 <h2 id="_3">🚀 快速开始</h2>
 <h3 id="1">1. 运行程序</h3>
 <p>直接运行脚本即可开始检索：</p>
-<pre class="highlight"><code class="language-bash">python auto_seismo_monitor.py
-</code></pre>
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>auto_seismo_monitor.py
+</code></pre></div>
 
 <h3 id="2_1">2. 设置定时任务 (推荐)</h3>
 <p>为了实现每 12 小时自动运行一次，建议设置定时任务。</p>
@@ -108,9 +108,9 @@
 <li>输入 <code>crontab -e</code>。</li>
 <li>添加以下内容（注意修改路径）：</li>
 </ol>
-<pre class="highlight"><code class="language-cron"># 每 12 小时执行一次（0点和12点）
-0 */12 * * * /usr/bin/python3 /Users/junxie/Work/auto_download/auto_seismo_monitor.py &gt;&gt; /Users/junxie/Work/auto_download/log.txt 2&gt;&amp;1
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="c1"># 每 12 小时执行一次（0点和12点）</span>
+<span class="mi">0</span><span class="w"> </span><span class="o">*/</span><span class="mi">12</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">python3</span><span class="w"> </span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">junxie</span><span class="o">/</span><span class="n">Work</span><span class="o">/</span><span class="n">auto_download</span><span class="o">/</span><span class="n">auto_seismo_monitor</span><span class="o">.</span><span class="n">py</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">junxie</span><span class="o">/</span><span class="n">Work</span><span class="o">/</span><span class="n">auto_download</span><span class="o">/</span><span class="nb">log</span><span class="o">.</span><span class="n">txt</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;&amp;</span><span class="mi">1</span>
+</code></pre></div>
 
 <h4 id="windows"><strong>Windows (任务计划程序)</strong></h4>
 <ol>
@@ -119,7 +119,7 @@
 <li>启动程序选择 <code>python.exe</code>，参数为脚本的完整路径。</li>
 </ol>
 <h2 id="_4">📂 项目结构</h2>
-<pre class="highlight"><code class="language-text">auto_download/
+<div class="highlight"><pre><span></span><code>auto_download/
 ├── auto_seismo_monitor.py    # 主程序脚本
 ├── README.md                 # 说明文档
 ├── earthquake_data/          # 数据输出根目录
@@ -129,7 +129,7 @@
 │       ├── plot_0.01_0.1Hz.png # 长周期波形图
 │       └── plot_0.1_2Hz.png    # 短周期波形图
 └── log.txt                   # 运行日志（设置crontab后生成）
-</code></pre>
+</code></pre></div>
 
 <h2 id="_5">⚙️ 配置说明</h2>
 <p>您可以在 <code>auto_seismo_monitor.py</code> 开头的“配置参数”部分调整：

@@ -9,6 +9,7 @@ title: Projects & Resources
 ## Tools & Scripts
 
 - [Auto Seismo Monitor](/scripts/auto_seismo_monitor.py) - Python script for automated seismic data monitoring and downloading.
+- [AI Paper Analysis](/scipts/paper_analysis.py) - Python script to use AI for paper analysis.
 
 ---
 

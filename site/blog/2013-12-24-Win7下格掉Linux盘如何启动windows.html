@@ -45,11 +45,11 @@
   <div class="post-content">
     <p>&emsp;&emsp;在win7下用系统的磁盘管理工具把原来的fedora14给格了，然后重启就只能进入grub，试了安装盘修复也不行。</p>
 <p>在grub中输入命令：</p>
-<pre class="highlight"><code class="language-bash">grub&gt;rootnoverify (hd0,0) 
-grub&gt;makeactive 
-grub&gt;chainloader +1
+<div class="highlight"><pre><span></span><code>grub&gt;rootnoverify<span class="w"> </span><span class="o">(</span>hd0,0<span class="o">)</span><span class="w"> </span>
+grub&gt;makeactive<span class="w"> </span>
+grub&gt;chainloader<span class="w"> </span>+1
 grub&gt;boot
-</code></pre>
+</code></pre></div>
 
 <p>&emsp;&emsp;奏效。进入了windows。然后下载clear mbr （还原清新畅快的mbr，大概格掉了grub）。</p>
 <p>然后大功告成。</p>

@@ -48,15 +48,15 @@
     <p><img src="/images/spec.png" alt="gmt时间轴"></p>
 <!-- less -->
 <p>&emsp;&emsp;有些时候画图需要用到时间轴。gmt<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>里面的时间轴是比较简单的。画basemap的时候对于对于rangeR来说加上T就好了。例如</p>
-<pre class="highlight"><code>-R1990T/1991T/0/1
-</code></pre>
+<div class="highlight"><pre><span></span><code>-R1990T/1991T/0/1
+</code></pre></div>
 
 <p 1.png="1.png" _="%" asset_img="asset_img" 时间轴单位_="时间轴单位%">&emsp;&emsp;就可以画1990年到1991年的图。然后重要的是横轴的标注annotation怎么设置，见下图：</p>
 <p>&emsp;&emsp;要让这些单位显示出来还涉及到FORMAT_DATE_MAP的设置。其设置如下图：
 <img src="/images/2.png" alt="FORMAT_DATE_MAP设">
 &emsp;&emsp;例如封面的标注就是将FORMAT_DATE_MAP设置成jjj</p>
-<pre class="highlight"><code>gmt set FORMAT_DATE_MAP jjj
-</code></pre>
+<div class="highlight"><pre><span></span><code>gmt set FORMAT_DATE_MAP jjj
+</code></pre></div>
 
 <p>&emsp;&emsp;然后在B选项用-Bsxa10D。</p>
 <div class="footnote">

@@ -46,361 +46,361 @@
     <p>&emsp;&emsp;python脚本下载连续波形数据更新。</p>
 <!--less-->
 
-<pre class="highlight"><code class="language-python">import os
-import numpy as np
-from obspy import UTCDateTime, Stream, Trace
-from obspy.io.sac import SACTrace
-from obspy.clients.fdsn import Client
-from obspy.signal.rotate import rotate_ne_rt
-from concurrent.futures import ThreadPoolExecutor, as_completed
-import traceback
-from collections import defaultdict
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">obspy</span><span class="w"> </span><span class="kn">import</span> <span class="n">UTCDateTime</span><span class="p">,</span> <span class="n">Stream</span><span class="p">,</span> <span class="n">Trace</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">obspy.io.sac</span><span class="w"> </span><span class="kn">import</span> <span class="n">SACTrace</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">obspy.clients.fdsn</span><span class="w"> </span><span class="kn">import</span> <span class="n">Client</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">obspy.signal.rotate</span><span class="w"> </span><span class="kn">import</span> <span class="n">rotate_ne_rt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">concurrent.futures</span><span class="w"> </span><span class="kn">import</span> <span class="n">ThreadPoolExecutor</span><span class="p">,</span> <span class="n">as_completed</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">traceback</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">defaultdict</span>
 
-# 参数设置
-client = Client(&quot;IRIS&quot;)
-output_dir = &quot;daily_waveforms&quot;
-os.makedirs(output_dir, exist_ok=True)
-sta_file = &quot;station.list&quot;
-start_date = UTCDateTime(&quot;2023-09-16&quot;)
-end_date = UTCDateTime(&quot;2023-09-27&quot;)  # 包括该天
-thread_workers = 6
-exception_log = &quot;exceptions.txt&quot;
-sampling_rate = 1.0  # LH通道的采样率 (1 Hz)
-expected_npts = 86400  # 86400秒 * 1Hz采样率
+<span class="c1"># 参数设置</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="s2">&quot;IRIS&quot;</span><span class="p">)</span>
+<span class="n">output_dir</span> <span class="o">=</span> <span class="s2">&quot;daily_waveforms&quot;</span>
+<span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">sta_file</span> <span class="o">=</span> <span class="s2">&quot;station.list&quot;</span>
+<span class="n">start_date</span> <span class="o">=</span> <span class="n">UTCDateTime</span><span class="p">(</span><span class="s2">&quot;2023-09-16&quot;</span><span class="p">)</span>
+<span class="n">end_date</span> <span class="o">=</span> <span class="n">UTCDateTime</span><span class="p">(</span><span class="s2">&quot;2023-09-27&quot;</span><span class="p">)</span>  <span class="c1"># 包括该天</span>
+<span class="n">thread_workers</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">exception_log</span> <span class="o">=</span> <span class="s2">&quot;exceptions.txt&quot;</span>
+<span class="n">sampling_rate</span> <span class="o">=</span> <span class="mf">1.0</span>  <span class="c1"># LH通道的采样率 (1 Hz)</span>
+<span class="n">expected_npts</span> <span class="o">=</span> <span class="mi">86400</span>  <span class="c1"># 86400秒 * 1Hz采样率</span>
 
-# 打印工作目录与输出目录
-print(f&quot;📁📁📁📁 当前工作目录: {os.getcwd()}&quot;)
-print(f&quot;📁📁📁📁 保存路径: {os.path.abspath(output_dir)}&quot;)
+<span class="c1"># 打印工作目录与输出目录</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;📁📁📁📁 当前工作目录: </span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;📁📁📁📁 保存路径: </span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">output_dir</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
-# 读取台站列表
-sta_list = []
-with open(sta_file, &quot;r&quot;) as sf:
-    for line in sf:
-        if line.strip() and not line.strip().startswith(&quot;#&quot;):
-            parts = line.strip().split()
-            if len(parts) &gt;= 2:
-                net, sta = parts[0], parts[1]
-                sta_list.append((net, sta))
+<span class="c1"># 读取台站列表</span>
+<span class="n">sta_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">sta_file</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">sf</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">sf</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;#&quot;</span><span class="p">):</span>
+            <span class="n">parts</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">parts</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">:</span>
+                <span class="n">net</span><span class="p">,</span> <span class="n">sta</span> <span class="o">=</span> <span class="n">parts</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">parts</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+                <span class="n">sta_list</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">net</span><span class="p">,</span> <span class="n">sta</span><span class="p">))</span>
 
-# 记录异常到文件
-def log_exception(msg):
-    with open(exception_log, &quot;a&quot;) as f:
-        f.write(f&quot;{UTCDateTime.now().isoformat()} - {msg}\n&quot;)
+<span class="c1"># 记录异常到文件</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">log_exception</span><span class="p">(</span><span class="n">msg</span><span class="p">):</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">exception_log</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">UTCDateTime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">isoformat</span><span class="p">()</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="n">msg</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 
-# 保存为SAC文件（每个通道一个文件）
-def save_channel_sac(tr, day_dir, net, sta, station_coords):
-    try:
-        # 确保目录存在
-        os.makedirs(day_dir, exist_ok=True)
+<span class="c1"># 保存为SAC文件（每个通道一个文件）</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">save_channel_sac</span><span class="p">(</span><span class="n">tr</span><span class="p">,</span> <span class="n">day_dir</span><span class="p">,</span> <span class="n">net</span><span class="p">,</span> <span class="n">sta</span><span class="p">,</span> <span class="n">station_coords</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># 确保目录存在</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">day_dir</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-        # 文件名格式: NET_STA_CHAN.SAC
-        chan = tr.stats.channel
-        filename = f&quot;{net}_{sta}_{chan}.SAC&quot;
-        filepath = os.path.join(day_dir, filename)
+        <span class="c1"># 文件名格式: NET_STA_CHAN.SAC</span>
+        <span class="n">chan</span> <span class="o">=</span> <span class="n">tr</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">channel</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">net</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">sta</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">chan</span><span class="si">}</span><span class="s2">.SAC&quot;</span>
+        <span class="n">filepath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">day_dir</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
 
-        # 创建SACTrace对象
-        sac = SACTrace.from_obspy_trace(tr)
+        <span class="c1"># 创建SACTrace对象</span>
+        <span class="n">sac</span> <span class="o">=</span> <span class="n">SACTrace</span><span class="o">.</span><span class="n">from_obspy_trace</span><span class="p">(</span><span class="n">tr</span><span class="p">)</span>
 
-        # 设置台站信息
-        sac.kstnm = sta
-        sac.knetwk = net
+        <span class="c1"># 设置台站信息</span>
+        <span class="n">sac</span><span class="o">.</span><span class="n">kstnm</span> <span class="o">=</span> <span class="n">sta</span>
+        <span class="n">sac</span><span class="o">.</span><span class="n">knetwk</span> <span class="o">=</span> <span class="n">net</span>
 
-        # 设置坐标信息
-        if station_coords is not None:
-            sac.stla = station_coords[&quot;latitude&quot;]
-            sac.stlo = station_coords[&quot;longitude&quot;]
-            sac.stel = station_coords[&quot;elevation&quot;]
-            sac.stdp = station_coords.get(&quot;local_depth&quot;, 0.0)
-            print(f&quot;    ✅ 添加坐标: {sac.stla:.4f}, {sac.stlo:.4f}&quot;)
-        else:
-            sac.stla = 0.0
-            sac.stlo = 0.0
-            sac.stel = 0.0
-            sac.stdp = 0.0
-            print(f&quot;    ⚠⚠⚠️ 无坐标信息&quot;)
+        <span class="c1"># 设置坐标信息</span>
+        <span class="k">if</span> <span class="n">station_coords</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">sac</span><span class="o">.</span><span class="n">stla</span> <span class="o">=</span> <span class="n">station_coords</span><span class="p">[</span><span class="s2">&quot;latitude&quot;</span><span class="p">]</span>
+            <span class="n">sac</span><span class="o">.</span><span class="n">stlo</span> <span class="o">=</span> <span class="n">station_coords</span><span class="p">[</span><span class="s2">&quot;longitude&quot;</span><span class="p">]</span>
+            <span class="n">sac</span><span class="o">.</span><span class="n">stel</span> <span class="o">=</span> <span class="n">station_coords</span><span class="p">[</span><span class="s2">&quot;elevation&quot;</span><span class="p">]</span>
+            <span class="n">sac</span><span class="o">.</span><span class="n">stdp</span> <span class="o">=</span> <span class="n">station_coords</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;local_depth&quot;</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;    ✅ 添加坐标: </span><span class="si">{</span><span class="n">sac</span><span class="o">.</span><span class="n">stla</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">sac</span><span class="o">.</span><span class="n">stlo</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">sac</span><span class="o">.</span><span class="n">stla</span> <span class="o">=</span> <span class="mf">0.0</span>
+            <span class="n">sac</span><span class="o">.</span><span class="n">stlo</span> <span class="o">=</span> <span class="mf">0.0</span>
+            <span class="n">sac</span><span class="o">.</span><span class="n">stel</span> <span class="o">=</span> <span class="mf">0.0</span>
+            <span class="n">sac</span><span class="o">.</span><span class="n">stdp</span> <span class="o">=</span> <span class="mf">0.0</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;    ⚠⚠⚠️ 无坐标信息&quot;</span><span class="p">)</span>
 
-        # 保存文件
-        sac.write(filepath)
+        <span class="c1"># 保存文件</span>
+        <span class="n">sac</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
 
-        print(f&quot;  保存: {filename}&quot;)
-        return filepath
-    except Exception as e:
-        log_exception(f&quot;保存SAC文件失败 {net}.{sta}.{chan}: {str(e)}&quot;)
-        traceback.print_exc()
-        return None
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  保存: </span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">filepath</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="n">log_exception</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;保存SAC文件失败 </span><span class="si">{</span><span class="n">net</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">sta</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">chan</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">traceback</span><span class="o">.</span><span class="n">print_exc</span><span class="p">()</span>
+        <span class="k">return</span> <span class="kc">None</span>
 
-# 数据补零处理
-def fill_gaps(tr, start_time):
-    &quot;&quot;&quot;
-    确保数据有完整的86400个点，缺失部分补零
-    &quot;&quot;&quot;
-    try:
-        # 创建新的头信息
-        new_header = tr.stats.copy()
-        new_header.starttime = start_time  # 确保从当天00:00:00开始
-        new_header.npts = expected_npts
-        new_header.sampling_rate = sampling_rate
+<span class="c1"># 数据补零处理</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">fill_gaps</span><span class="p">(</span><span class="n">tr</span><span class="p">,</span> <span class="n">start_time</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    确保数据有完整的86400个点，缺失部分补零</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># 创建新的头信息</span>
+        <span class="n">new_header</span> <span class="o">=</span> <span class="n">tr</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="n">new_header</span><span class="o">.</span><span class="n">starttime</span> <span class="o">=</span> <span class="n">start_time</span>  <span class="c1"># 确保从当天00:00:00开始</span>
+        <span class="n">new_header</span><span class="o">.</span><span class="n">npts</span> <span class="o">=</span> <span class="n">expected_npts</span>
+        <span class="n">new_header</span><span class="o">.</span><span class="n">sampling_rate</span> <span class="o">=</span> <span class="n">sampling_rate</span>
 
-        # 创建全零数据数组
-        new_data = np.zeros(expected_npts, dtype=tr.data.dtype)
+        <span class="c1"># 创建全零数据数组</span>
+        <span class="n">new_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">expected_npts</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">tr</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
 
-        # 计算数据偏移量（当前数据在当天中的起始位置）
-        start_diff = int((tr.stats.starttime - start_time))
+        <span class="c1"># 计算数据偏移量（当前数据在当天中的起始位置）</span>
+        <span class="n">start_diff</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">tr</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">starttime</span> <span class="o">-</span> <span class="n">start_time</span><span class="p">))</span>
 
-        # 确保偏移量在合理范围内
-        if 0 &lt;= start_diff &lt; expected_npts:
-            end_index = min(start_diff + tr.stats.npts, expected_npts)
-            valid_length = end_index - start_diff
+        <span class="c1"># 确保偏移量在合理范围内</span>
+        <span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">start_diff</span> <span class="o">&lt;</span> <span class="n">expected_npts</span><span class="p">:</span>
+            <span class="n">end_index</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">start_diff</span> <span class="o">+</span> <span class="n">tr</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">npts</span><span class="p">,</span> <span class="n">expected_npts</span><span class="p">)</span>
+            <span class="n">valid_length</span> <span class="o">=</span> <span class="n">end_index</span> <span class="o">-</span> <span class="n">start_diff</span>
 
-            # 将实际数据复制到全零数组的相应位置
-            if valid_length &gt; 0:
-                new_data[start_diff:end_index] = tr.data[:valid_length]
+            <span class="c1"># 将实际数据复制到全零数组的相应位置</span>
+            <span class="k">if</span> <span class="n">valid_length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">new_data</span><span class="p">[</span><span class="n">start_diff</span><span class="p">:</span><span class="n">end_index</span><span class="p">]</span> <span class="o">=</span> <span class="n">tr</span><span class="o">.</span><span class="n">data</span><span class="p">[:</span><span class="n">valid_length</span><span class="p">]</span>
 
-        # 创建新的Trace
-        return Trace(data=new_data, header=new_header)
-    except Exception as e:
-        log_exception(f&quot;数据补零失败: {str(e)}&quot;)
-        return tr
+        <span class="c1"># 创建新的Trace</span>
+        <span class="k">return</span> <span class="n">Trace</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">new_data</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="n">new_header</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="n">log_exception</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;数据补零失败: </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">tr</span>
 
-# 旋转LH1/LH2分量到LHE/LHN
-def rotate_to_EN(tr1, tr2):
-    &quot;&quot;&quot;将两个水平分量(LH1/LH2)旋转到地理坐标系(LHE/LHN)&quot;&quot;&quot;
-    try:
-        # 假设LH1是北分量，LH2是东分量
-        north = tr1.data
-        east = tr2.data
+<span class="c1"># 旋转LH1/LH2分量到LHE/LHN</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">rotate_to_EN</span><span class="p">(</span><span class="n">tr1</span><span class="p">,</span> <span class="n">tr2</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;将两个水平分量(LH1/LH2)旋转到地理坐标系(LHE/LHN)&quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># 假设LH1是北分量，LH2是东分量</span>
+        <span class="n">north</span> <span class="o">=</span> <span class="n">tr1</span><span class="o">.</span><span class="n">data</span>
+        <span class="n">east</span> <span class="o">=</span> <span class="n">tr2</span><span class="o">.</span><span class="n">data</span>
 
-        # 旋转分量
-        n, e = rotate_ne_rt(north, east, 0)
+        <span class="c1"># 旋转分量</span>
+        <span class="n">n</span><span class="p">,</span> <span class="n">e</span> <span class="o">=</span> <span class="n">rotate_ne_rt</span><span class="p">(</span><span class="n">north</span><span class="p">,</span> <span class="n">east</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 
-        # 创建新的Trace对象
-        trN = Trace(data=n)
-        trN.stats = tr1.stats.copy()
-        trN.stats.channel = &quot;LHN&quot;
+        <span class="c1"># 创建新的Trace对象</span>
+        <span class="n">trN</span> <span class="o">=</span> <span class="n">Trace</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
+        <span class="n">trN</span><span class="o">.</span><span class="n">stats</span> <span class="o">=</span> <span class="n">tr1</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="n">trN</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">channel</span> <span class="o">=</span> <span class="s2">&quot;LHN&quot;</span>
 
-        trE = Trace(data=e)
-        trE.stats = tr2.stats.copy()
-        trE.stats.channel = &quot;LHE&quot;
+        <span class="n">trE</span> <span class="o">=</span> <span class="n">Trace</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">e</span><span class="p">)</span>
+        <span class="n">trE</span><span class="o">.</span><span class="n">stats</span> <span class="o">=</span> <span class="n">tr2</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="n">trE</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">channel</span> <span class="o">=</span> <span class="s2">&quot;LHE&quot;</span>
 
-        return trN, trE
-    except Exception as e:
-        log_exception(f&quot;旋转分量失败: {e}&quot;)
-        return tr1, tr2
+        <span class="k">return</span> <span class="n">trN</span><span class="p">,</span> <span class="n">trE</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="n">log_exception</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;旋转分量失败: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">tr1</span><span class="p">,</span> <span class="n">tr2</span>
 
-# 处理水平分量
-def process_horizontal_components(st):
-    &quot;&quot;&quot;
-    处理水平分量：
-    1. 如果只有LH1和LH2，旋转为LHE和LHN，并删除原始的极LH1/LH2
-    2. 如果存在LHN和LHE，优先使用它们，并删除任何LH1/LH2分量
-    &quot;&quot;&quot;
-    try:
-        # 按通道类型分组
-        comp_groups = defaultdict(list)
-        for tr in st:
-            comp_groups[tr.stats.channel].append(tr)
+<span class="c1"># 处理水平分量</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">process_horizontal_components</span><span class="p">(</span><span class="n">st</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    处理水平分量：</span>
+<span class="sd">    1. 如果只有LH1和LH2，旋转为LHE和LHN，并删除原始的极LH1/LH2</span>
+<span class="sd">    2. 如果存在LHN和LHE，优先使用它们，并删除任何LH1/LH2分量</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># 按通道类型分组</span>
+        <span class="n">comp_groups</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">tr</span> <span class="ow">in</span> <span class="n">st</span><span class="p">:</span>
+            <span class="n">comp_groups</span><span class="p">[</span><span class="n">tr</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">channel</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tr</span><span class="p">)</span>
 
-        # 处理水平分量
-        horizontal_stream = Stream()
+        <span class="c1"># 处理水平分量</span>
+        <span class="n">horizontal_stream</span> <span class="o">=</span> <span class="n">Stream</span><span class="p">()</span>
 
-        # 优先选择LHN和LHE分量
-        en_comps = [&quot;LHE&quot;, &quot;LHN&quot;]
-        has_EN = any(comp in comp_groups for comp in en_comps)
+        <span class="c1"># 优先选择LHN和LHE分量</span>
+        <span class="n">en_comps</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;LHE&quot;</span><span class="p">,</span> <span class="s2">&quot;LHN&quot;</span><span class="p">]</span>
+        <span class="n">has_EN</span> <span class="o">=</span> <span class="nb">any</span><span class="p">(</span><span class="n">comp</span> <span class="ow">in</span> <span class="n">comp_groups</span> <span class="k">for</span> <span class="n">comp</span> <span class="ow">in</span> <span class="n">en_comps</span><span class="p">)</span>
 
-        if has_EN:
-            # 使用已有的LHN/LHE分量（只取第一个）
-            for comp in en_comps:
-                if comp in comp_groups:
-                    horizontal_stream.append(comp_groups[comp][0])
-            print(&quot;  使用现有的LHN/LHE分量&quot;)
+        <span class="k">if</span> <span class="n">has_EN</span><span class="p">:</span>
+            <span class="c1"># 使用已有的LHN/LHE分量（只取第一个）</span>
+            <span class="k">for</span> <span class="n">comp</span> <span class="ow">in</span> <span class="n">en_comps</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">comp</span> <span class="ow">in</span> <span class="n">comp_groups</span><span class="p">:</span>
+                    <span class="n">horizontal_stream</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">comp_groups</span><span class="p">[</span><span class="n">comp</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  使用现有的LHN/LHE分量&quot;</span><span class="p">)</span>
 
-            # 删除任何存在的LH1/LH2分量
-            if &quot;LH1&quot; in comp_groups or &quot;LH2&quot; in comp_groups:
-                print(&quot;  删除原始的LH1/LH2分量&quot;)
-        else:
-            # 检查是否有LH1和LH2
-            rt_comps = [&quot;LH1&quot;, &quot;LH2&quot;]
-            if all(comp in comp_groups for comp in rt_comps):
-                # 获取LH1和LH2分量（只取第一个）
-                lh1 = comp_groups[&quot;LH1&quot;][0]
-                lh2 = comp_groups[&quot;LH2&quot;][0]
+            <span class="c1"># 删除任何存在的LH1/LH2分量</span>
+            <span class="k">if</span> <span class="s2">&quot;LH1&quot;</span> <span class="ow">in</span> <span class="n">comp_groups</span> <span class="ow">or</span> <span class="s2">&quot;LH2&quot;</span> <span class="ow">in</span> <span class="n">comp_groups</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  删除原始的LH1/LH2分量&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># 检查是否有LH1和LH2</span>
+            <span class="n">rt_comps</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;LH1&quot;</span><span class="p">,</span> <span class="s2">&quot;LH2&quot;</span><span class="p">]</span>
+            <span class="k">if</span> <span class="nb">all</span><span class="p">(</span><span class="n">comp</span> <span class="ow">in</span> <span class="n">comp_groups</span> <span class="k">for</span> <span class="n">comp</span> <span class="ow">in</span> <span class="n">rt_comps</span><span class="p">):</span>
+                <span class="c1"># 获取LH1和LH2分量（只取第一个）</span>
+                <span class="n">lh1</span> <span class="o">=</span> <span class="n">comp_groups</span><span class="p">[</span><span class="s2">&quot;LH1&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+                <span class="n">lh2</span> <span class="o">=</span> <span class="n">comp_groups</span><span class="p">[</span><span class="s2">&quot;LH2&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
 
-                # 旋转到EN分量
-                trN, trE = rotate_to_EN(lh1, lh2)
-                horizontal_stream.append(trN)
-                horizontal_stream.append(trE)
-                print(&quot;  旋转LH1/LH2为LHN/LHE&quot;)
+                <span class="c1"># 旋转到EN分量</span>
+                <span class="n">trN</span><span class="p">,</span> <span class="n">trE</span> <span class="o">=</span> <span class="n">rotate_to_EN</span><span class="p">(</span><span class="n">lh1</span><span class="p">,</span> <span class="n">lh2</span><span class="p">)</span>
+                <span class="n">horizontal_stream</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">trN</span><span class="p">)</span>
+                <span class="n">horizontal_stream</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">trE</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  旋转LH1/LH2为LHN/LHE&quot;</span><span class="p">)</span>
 
-                # 删除原始的LH1/LH2分量
-                print(&quot;  删除原始的LH1/LH2分量&quot;)
+                <span class="c1"># 删除原始的LH1/LH2分量</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  删除原始的LH1/LH2分量&quot;</span><span class="p">)</span>
 
-        return horizontal_stream
-    except Exception as e:
-        log_exception(f&quot;处理水平分量失败: {e}&quot;)
-        return Stream()
+        <span class="k">return</span> <span class="n">horizontal_stream</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="n">log_exception</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;处理水平分量失败: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">Stream</span><span class="p">()</span>
 
-# 下载并处理单个台站某天的数据
-def download_station(net, sta, day):
-    station_coords = None  # 存储台站坐标
-    try:
-        start = UTCDateTime(day)
-        end = start + 86400
-        day_str = start.strftime(&quot;%Y%m%d&quot;)
+<span class="c1"># 下载并处理单个台站某天的数据</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">download_station</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">sta</span><span class="p">,</span> <span class="n">day</span><span class="p">):</span>
+    <span class="n">station_coords</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># 存储台站坐标</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">start</span> <span class="o">=</span> <span class="n">UTCDateTime</span><span class="p">(</span><span class="n">day</span><span class="p">)</span>
+        <span class="n">end</span> <span class="o">=</span> <span class="n">start</span> <span class="o">+</span> <span class="mi">86400</span>
+        <span class="n">day_str</span> <span class="o">=</span> <span class="n">start</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y%m</span><span class="si">%d</span><span class="s2">&quot;</span><span class="p">)</span>
 
-        # 获取台站元数据
-        print(f&quot;  获取 {net}.{sta} 元数据...&quot;)
-        try:
-            inv = client.get_stations(
-                network=net, 
-                station=sta, 
-                starttime=start, 
-                endtime=end, 
-                level=&quot;channel&quot;
-            )
+        <span class="c1"># 获取台站元数据</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  获取 </span><span class="si">{</span><span class="n">net</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">sta</span><span class="si">}</span><span class="s2"> 元数据...&quot;</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">inv</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_stations</span><span class="p">(</span>
+                <span class="n">network</span><span class="o">=</span><span class="n">net</span><span class="p">,</span> 
+                <span class="n">station</span><span class="o">=</span><span class="n">sta</span><span class="p">,</span> 
+                <span class="n">starttime</span><span class="o">=</span><span class="n">start</span><span class="p">,</span> 
+                <span class="n">endtime</span><span class="o">=</span><span class="n">end</span><span class="p">,</span> 
+                <span class="n">level</span><span class="o">=</span><span class="s2">&quot;channel&quot;</span>
+            <span class="p">)</span>
 
-            # 尝试获取台站坐标（使用LHZ通道）
-            try:
-                station_coords = inv.get_coordinates(f&quot;{net}.{sta}.00.LHZ&quot;, start)
-                print(f&quot;    ✅ 获取坐标: {station_coords['latitude']:.4f}, {station_coords['longitude']:.4f}&quot;)
-            except:
-                # 如果LHZ失败，尝试其他LH通道
-                for chan in [&quot;LHN&quot;, &quot;LHE&quot;, &quot;LH1&quot;, &quot;LH2&quot;]:
-                    try:
-                        station_coords = inv.get_coordinates(f&quot;{net}.{sta}.00.{chan}&quot;, start)
-                        print(f&quot;    ✅ 获取坐标: {station_coords['latitude']:.4f}, {station_coords['longitude']:.4f}&quot;)
-                        break
-                    except:
-                        continue
-                if station_coords is None:
-                    print(&quot;    ⚠⚠⚠️ 无法获取坐标&quot;)
-        except Exception as e:
-            print(f&quot;  ⚠⚠⚠️ 元数据获取失败: {str(e)}&quot;)
+            <span class="c1"># 尝试获取台站坐标（使用LHZ通道）</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">station_coords</span> <span class="o">=</span> <span class="n">inv</span><span class="o">.</span><span class="n">get_coordinates</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">net</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">sta</span><span class="si">}</span><span class="s2">.00.LHZ&quot;</span><span class="p">,</span> <span class="n">start</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;    ✅ 获取坐标: </span><span class="si">{</span><span class="n">station_coords</span><span class="p">[</span><span class="s1">&#39;latitude&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">station_coords</span><span class="p">[</span><span class="s1">&#39;longitude&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">except</span><span class="p">:</span>
+                <span class="c1"># 如果LHZ失败，尝试其他LH通道</span>
+                <span class="k">for</span> <span class="n">chan</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;LHN&quot;</span><span class="p">,</span> <span class="s2">&quot;LHE&quot;</span><span class="p">,</span> <span class="s2">&quot;LH1&quot;</span><span class="p">,</span> <span class="s2">&quot;LH2&quot;</span><span class="p">]:</span>
+                    <span class="k">try</span><span class="p">:</span>
+                        <span class="n">station_coords</span> <span class="o">=</span> <span class="n">inv</span><span class="o">.</span><span class="n">get_coordinates</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">net</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">sta</span><span class="si">}</span><span class="s2">.00.</span><span class="si">{</span><span class="n">chan</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">start</span><span class="p">)</span>
+                        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;    ✅ 获取坐标: </span><span class="si">{</span><span class="n">station_coords</span><span class="p">[</span><span class="s1">&#39;latitude&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">station_coords</span><span class="p">[</span><span class="s1">&#39;longitude&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                        <span class="k">break</span>
+                    <span class="k">except</span><span class="p">:</span>
+                        <span class="k">continue</span>
+                <span class="k">if</span> <span class="n">station_coords</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;    ⚠⚠⚠️ 无法获取坐标&quot;</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  ⚠⚠⚠️ 元数据获取失败: </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
-        # 下载波形数据
-        print(f&quot;  下载 {net}.{sta} 波形数据...&quot;)
-        st = client.get_waveforms(net, sta, &quot;*&quot;, &quot;LH?&quot;, start, end, attach_response=True)
+        <span class="c1"># 下载波形数据</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  下载 </span><span class="si">{</span><span class="n">net</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">sta</span><span class="si">}</span><span class="s2"> 波形数据...&quot;</span><span class="p">)</span>
+        <span class="n">st</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_waveforms</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">sta</span><span class="p">,</span> <span class="s2">&quot;*&quot;</span><span class="p">,</span> <span class="s2">&quot;LH?&quot;</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">attach_response</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-        # 如果没数据，直接返回
-        if len(st) == 0:
-            return (net, sta, False, &quot;无数据&quot;)
+        <span class="c1"># 如果没数据，直接返回</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">st</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">sta</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="s2">&quot;无数据&quot;</span><span class="p">)</span>
 
-        # 检查是否有LHZ分量（只取第一个）
-        vertical_st = st.select(channel=&quot;LHZ&quot;)
-        if len(vertical_st) == 0:
-            print(f&quot;  ⚠⚠⚠️ 跳过 {net}.{sta} - 无LHZ分量&quot;)
-            return (net, sta, False, &quot;无LHZ分量&quot;)
-        else:
-            # 只保留第一个LHZ分量
-            vertical_tr = vertical_st[0]
+        <span class="c1"># 检查是否有LHZ分量（只取第一个）</span>
+        <span class="n">vertical_st</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">channel</span><span class="o">=</span><span class="s2">&quot;LHZ&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">vertical_st</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  ⚠⚠⚠️ 跳过 </span><span class="si">{</span><span class="n">net</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">sta</span><span class="si">}</span><span class="s2"> - 无LHZ分量&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">sta</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="s2">&quot;无LHZ分量&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># 只保留第一个LHZ分量</span>
+            <span class="n">vertical_tr</span> <span class="o">=</span> <span class="n">vertical_st</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 
-        # 去除仪器响应
-        print(&quot;  去除仪器响应...&quot;)
-        st.remove_response(output=&quot;VEL&quot;, pre_filt=(0.008, 0.01, 0.3, 0.4),
-                           taper=True, zero_mean=True, taper_fraction=0.05)
+        <span class="c1"># 去除仪器响应</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  去除仪器响应...&quot;</span><span class="p">)</span>
+        <span class="n">st</span><span class="o">.</span><span class="n">remove_response</span><span class="p">(</span><span class="n">output</span><span class="o">=</span><span class="s2">&quot;VEL&quot;</span><span class="p">,</span> <span class="n">pre_filt</span><span class="o">=</span><span class="p">(</span><span class="mf">0.008</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">),</span>
+                           <span class="n">taper</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">zero_mean</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">taper_fraction</span><span class="o">=</span><span class="mf">0.05</span><span class="p">)</span>
 
-        # 处理水平分量
-        print(&quot;  处理水平分量...&quot;)
-        horizontal_st = process_horizontal_components(st)
+        <span class="c1"># 处理水平分量</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  处理水平分量...&quot;</span><span class="p">)</span>
+        <span class="n">horizontal_st</span> <span class="o">=</span> <span class="n">process_horizontal_components</span><span class="p">(</span><span class="n">st</span><span class="p">)</span>
 
-        # 合并垂直和水平分量
-        processed_st = Stream([vertical_tr]) + horizontal_st
+        <span class="c1"># 合并垂直和水平分量</span>
+        <span class="n">processed_st</span> <span class="o">=</span> <span class="n">Stream</span><span class="p">([</span><span class="n">vertical_tr</span><span class="p">])</span> <span class="o">+</span> <span class="n">horizontal_st</span>
 
-        # 确保只有三个分量：LHZ, LHN, LHE
-        final_st = Stream()
-        channels = set()
-        for tr in processed_st:
-            # 只添加LHZ、LHN和LHE分量
-            if tr.stats.channel in [&quot;LHZ&quot;, &quot;LHN&quot;, &quot;LHE&quot;]:
-                if tr.stats.channel not in channels:
-                    final_st.append(tr)
-                    channels.add(tr.stats.channel)
-                else:
-                    print(f&quot;  ⚠⚠⚠️ 跳过重复通道: {tr.stats.channel}&quot;)
+        <span class="c1"># 确保只有三个分量：LHZ, LHN, LHE</span>
+        <span class="n">final_st</span> <span class="o">=</span> <span class="n">Stream</span><span class="p">()</span>
+        <span class="n">channels</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">tr</span> <span class="ow">in</span> <span class="n">processed_st</span><span class="p">:</span>
+            <span class="c1"># 只添加LHZ、LHN和LHE分量</span>
+            <span class="k">if</span> <span class="n">tr</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">channel</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;LHZ&quot;</span><span class="p">,</span> <span class="s2">&quot;LHN&quot;</span><span class="p">,</span> <span class="s2">&quot;LHE&quot;</span><span class="p">]:</span>
+                <span class="k">if</span> <span class="n">tr</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">channel</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">channels</span><span class="p">:</span>
+                    <span class="n">final_st</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tr</span><span class="p">)</span>
+                    <span class="n">channels</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">tr</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">channel</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  ⚠⚠⚠️ 跳过重复通道: </span><span class="si">{</span><span class="n">tr</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">channel</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
-        # 数据补零处理
-        print(&quot;  数据补零处理...&quot;)
-        filled_st = Stream()
-        for tr in final_st:
-            filled_tr = fill_gaps(tr, start)
-            filled_st.append(filled_tr)
+        <span class="c1"># 数据补零处理</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  数据补零处理...&quot;</span><span class="p">)</span>
+        <span class="n">filled_st</span> <span class="o">=</span> <span class="n">Stream</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">tr</span> <span class="ow">in</span> <span class="n">final_st</span><span class="p">:</span>
+            <span class="n">filled_tr</span> <span class="o">=</span> <span class="n">fill_gaps</span><span class="p">(</span><span class="n">tr</span><span class="p">,</span> <span class="n">start</span><span class="p">)</span>
+            <span class="n">filled_st</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">filled_tr</span><span class="p">)</span>
 
-        # 创建日期目录
-        day_dir = os.path.join(output_dir, day_str)
+        <span class="c1"># 创建日期目录</span>
+        <span class="n">day_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="n">day_str</span><span class="p">)</span>
 
-        # 保存每个通道的数据
-        saved_files = []
-        for tr in filled_st:
-            filepath = save_channel_sac(tr, day_dir, net, sta, station_coords)
-            if filepath:
-                saved_files.append(filepath)
+        <span class="c1"># 保存每个通道的数据</span>
+        <span class="n">saved_files</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">tr</span> <span class="ow">in</span> <span class="n">filled_st</span><span class="p">:</span>
+            <span class="n">filepath</span> <span class="o">=</span> <span class="n">save_channel_sac</span><span class="p">(</span><span class="n">tr</span><span class="p">,</span> <span class="n">day_dir</span><span class="p">,</span> <span class="n">net</span><span class="p">,</span> <span class="n">sta</span><span class="p">,</span> <span class="n">station_coords</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">filepath</span><span class="p">:</span>
+                <span class="n">saved_files</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
 
-        return (net, sta, True, saved_files)
-    except Exception as e:
-        error_msg = f&quot;{str(e)}&quot;
-        if hasattr(e, 'response') and e.response is not None:
-            error_msg += f&quot; (Status: {e.response.status_code})&quot;
-        return (net, sta, False, error_msg)
+        <span class="k">return</span> <span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">sta</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="n">saved_files</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="n">error_msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="s1">&#39;response&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">e</span><span class="o">.</span><span class="n">response</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">error_msg</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot; (Status: </span><span class="si">{</span><span class="n">e</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s2">)&quot;</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">sta</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="n">error_msg</span><span class="p">)</span>
 
-# 遍历日期，按天下载并保存
-current_day = start_date
-while current_day &lt;= end_date:
-    day_str = current_day.strftime(&quot;%Y%m%d&quot;)
-    day_dir = os.path.join(output_dir, day_str)
+<span class="c1"># 遍历日期，按天下载并保存</span>
+<span class="n">current_day</span> <span class="o">=</span> <span class="n">start_date</span>
+<span class="k">while</span> <span class="n">current_day</span> <span class="o">&lt;=</span> <span class="n">end_date</span><span class="p">:</span>
+    <span class="n">day_str</span> <span class="o">=</span> <span class="n">current_day</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y%m</span><span class="si">%d</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">day_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="n">day_str</span><span class="p">)</span>
 
-    # 检查是否已下载
-    if os.path.exists(day_dir) and os.path.isdir(day_dir):
-        print(f&quot;\n📆📆📆📆 日期 {current_day.date} 已存在，跳过处理&quot;)
-        # 进入下一天
-        current_day += 86400
-        continue
+    <span class="c1"># 检查是否已下载</span>
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">day_dir</span><span class="p">)</span> <span class="ow">and</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">day_dir</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">📆📆📆📆 日期 </span><span class="si">{</span><span class="n">current_day</span><span class="o">.</span><span class="n">date</span><span class="si">}</span><span class="s2"> 已存在，跳过处理&quot;</span><span class="p">)</span>
+        <span class="c1"># 进入下一天</span>
+        <span class="n">current_day</span> <span class="o">+=</span> <span class="mi">86400</span>
+        <span class="k">continue</span>
 
-    print(f&quot;\n📆📆📆📆 正在处理日期: {current_day.date}&quot;)
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">📆📆📆📆 正在处理日期: </span><span class="si">{</span><span class="n">current_day</span><span class="o">.</span><span class="n">date</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
-    # 创建日期目录
-    os.makedirs(day_dir, exist_ok=True)
+    <span class="c1"># 创建日期目录</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">day_dir</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-    # 异常记录每天追加
-    log_lines = []
-    success_count = 0
-    fail_count = 0
+    <span class="c1"># 异常记录每天追加</span>
+    <span class="n">log_lines</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">success_count</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">fail_count</span> <span class="o">=</span> <span class="mi">0</span>
 
-    # 启动多线程下载当天所有台站数据
-    with ThreadPoolExecutor(max_workers=thread_workers) as executor:
-        futures = {executor.submit(download_station, net, sta, current_day): (net, sta) for net, sta in sta_list}
+    <span class="c1"># 启动多线程下载当天所有台站数据</span>
+    <span class="k">with</span> <span class="n">ThreadPoolExecutor</span><span class="p">(</span><span class="n">max_workers</span><span class="o">=</span><span class="n">thread_workers</span><span class="p">)</span> <span class="k">as</span> <span class="n">executor</span><span class="p">:</span>
+        <span class="n">futures</span> <span class="o">=</span> <span class="p">{</span><span class="n">executor</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span><span class="n">download_station</span><span class="p">,</span> <span class="n">net</span><span class="p">,</span> <span class="n">sta</span><span class="p">,</span> <span class="n">current_day</span><span class="p">):</span> <span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">sta</span><span class="p">)</span> <span class="k">for</span> <span class="n">net</span><span class="p">,</span> <span class="n">sta</span> <span class="ow">in</span> <span class="n">sta_list</span><span class="p">}</span>
 
-        for future in as_completed(futures):
-            net, sta = futures[future]
-            try:
-                net, sta, ok, result = future.result()
-                if ok:
-                    success_count += 1
-                    file_count = len(result)
-                    print(f&quot;✅ {net}.{sta} 处理成功 - 保存了 {file_count} 个SAC文件&quot;)
-                    for filepath in result:
-                        print(f&quot;   ↳↳ {os.path.basename(filepath)}&quot;)
-                else:
-                    fail_count += 1
-                    print(f&quot;❌❌❌❌ {net}.{sta} 处理失败: {result}&quot;)
-                    log_lines.append(f&quot;{current_day.date} {net}.{sta} ❌❌❌❌ {result}&quot;)
-            except Exception as e:
-                fail_count += 1
-                error_msg = f&quot;{str(e)}&quot;
-                print(f&quot;❌❌❌❌ {net}.{sta} 异常: {error_msg}&quot;)
-                log_lines.append(f&quot;{current_day.date} {net}.{sta} ❌❌❌❌ {error_msg}&quot;)
-                traceback.print_exc()
+        <span class="k">for</span> <span class="n">future</span> <span class="ow">in</span> <span class="n">as_completed</span><span class="p">(</span><span class="n">futures</span><span class="p">):</span>
+            <span class="n">net</span><span class="p">,</span> <span class="n">sta</span> <span class="o">=</span> <span class="n">futures</span><span class="p">[</span><span class="n">future</span><span class="p">]</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">net</span><span class="p">,</span> <span class="n">sta</span><span class="p">,</span> <span class="n">ok</span><span class="p">,</span> <span class="n">result</span> <span class="o">=</span> <span class="n">future</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>
+                <span class="k">if</span> <span class="n">ok</span><span class="p">:</span>
+                    <span class="n">success_count</span> <span class="o">+=</span> <span class="mi">1</span>
+                    <span class="n">file_count</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;✅ </span><span class="si">{</span><span class="n">net</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">sta</span><span class="si">}</span><span class="s2"> 处理成功 - 保存了 </span><span class="si">{</span><span class="n">file_count</span><span class="si">}</span><span class="s2"> 个SAC文件&quot;</span><span class="p">)</span>
+                    <span class="k">for</span> <span class="n">filepath</span> <span class="ow">in</span> <span class="n">result</span><span class="p">:</span>
+                        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   ↳↳ </span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">fail_count</span> <span class="o">+=</span> <span class="mi">1</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;❌❌❌❌ </span><span class="si">{</span><span class="n">net</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">sta</span><span class="si">}</span><span class="s2"> 处理失败: </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                    <span class="n">log_lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">current_day</span><span class="o">.</span><span class="n">date</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">net</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">sta</span><span class="si">}</span><span class="s2"> ❌❌❌❌ </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="n">fail_count</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="n">error_msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;❌❌❌❌ </span><span class="si">{</span><span class="n">net</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">sta</span><span class="si">}</span><span class="s2"> 异常: </span><span class="si">{</span><span class="n">error_msg</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="n">log_lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">current_day</span><span class="o">.</span><span class="n">date</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">net</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">sta</span><span class="si">}</span><span class="s2"> ❌❌❌❌ </span><span class="si">{</span><span class="n">error_msg</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="n">traceback</span><span class="o">.</span><span class="n">print_exc</span><span class="p">()</span>
 
-    print(f&quot;\n📊📊 本日统计: {success_count} 个台站成功, {fail_count} 个台站失败&quot;)
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">📊📊 本日统计: </span><span class="si">{</span><span class="n">success_count</span><span class="si">}</span><span class="s2"> 个台站成功, </span><span class="si">{</span><span class="n">fail_count</span><span class="si">}</span><span class="s2"> 个台站失败&quot;</span><span class="p">)</span>
 
-    # 写入异常日志
-    if log_lines:
-        with open(exception_log, &quot;a&quot;) as elog:
-            elog.write(&quot;\n&quot;.join(log_lines) + &quot;\n&quot;)
+    <span class="c1"># 写入异常日志</span>
+    <span class="k">if</span> <span class="n">log_lines</span><span class="p">:</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">exception_log</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">elog</span><span class="p">:</span>
+            <span class="n">elog</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">log_lines</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 
-    # 进入下一天
-    current_day += 86400
+    <span class="c1"># 进入下一天</span>
+    <span class="n">current_day</span> <span class="o">+=</span> <span class="mi">86400</span>
 
-print(&quot;\n🎉🎉 所有日期处理完成!&quot;)
-</code></pre>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">🎉🎉 所有日期处理完成!&quot;</span><span class="p">)</span>
+</code></pre></div>
 
 <p>&emsp;&emsp;此脚本完成以下操作:
    * 多线程下载指定定时间段的LH分量数据。

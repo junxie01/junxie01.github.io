@@ -44,31 +44,31 @@
 
   <div class="post-content">
     <p>之前安装todesk没有搞定，总是连不上，于是又把它卸载了。卸载的时候把pulseaudio.x86_64也给卸载了。然后发现没有音量控制条了。然后又给安装回来</p>
-<pre class="highlight"><code>sudo dnf install pulseaudio
-</code></pre>
+<div class="highlight"><pre><span></span><code>sudo dnf install pulseaudio
+</code></pre></div>
 
 <p>结果mplayer也出问题了。播放视频的时候卡住，其中一个问题是：</p>
-<pre class="highlight"><code>do_connect: could not connect to socket
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="n">do_connect</span><span class="o">:</span><span class="w"> </span><span class="n">could</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">connect</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">socket</span>
+</code></pre></div>
 
 <p>于是在~/.mplayer/config中加入：</p>
-<pre class="highlight"><code>lirc=no
-</code></pre>
+<div class="highlight"><pre><span></span><code>lirc=no
+</code></pre></div>
 
 <p>然后还是播放不了，出现问题：</p>
-<pre class="highlight"><code>MPlayer SVN-r38423-13 (C) 2000-2023 MPlayer Team
+<div class="highlight"><pre><span></span><code><span class="n">MPlayer</span><span class="w"> </span><span class="n">SVN</span><span class="o">-</span><span class="n">r38423</span><span class="o">-</span><span class="mi">13</span><span class="w"> </span><span class="p">(</span><span class="n">C</span><span class="p">)</span><span class="w"> </span><span class="mi">2000</span><span class="o">-</span><span class="mi">2023</span><span class="w"> </span><span class="n">MPlayer</span><span class="w"> </span><span class="n">Team</span>
 
-Playing let_it_go_original.mp4.
-libavformat version 58.76.100 (external)
-libavformat file format detected.
-[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f6043a46660]Protocol name not provided, cannot determine if input is local or a network protocol, buffers and access patterns cannot be configured optimally without knowing the protocol
-[lavf] stream 0: video (h264), -vid 0
-[lavf] stream 1: audio (aac), -aid 0, -alang und
-VIDEO:  [H264]  1280x720  24bpp  24.000 fps  1593.8 kbps (194.5 kbyte/s)
-X11 error: BadMatch (invalid parameter attributes)
-Failed to open VDPAU backend libvdpau_nvidia.so: cannot open shared object file: No such file or directory
-[vdpau] Error when calling vdp_device_create_x11: 1
-</code></pre>
+<span class="n">Playing</span><span class="w"> </span><span class="n">let_it_go_original</span><span class="p">.</span><span class="n">mp4</span><span class="p">.</span>
+<span class="n">libavformat</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="mf">58.76.100</span><span class="w"> </span><span class="p">(</span><span class="k">external</span><span class="p">)</span>
+<span class="n">libavformat</span><span class="w"> </span><span class="k">file</span><span class="w"> </span><span class="nf">format</span><span class="w"> </span><span class="n">detected</span><span class="p">.</span>
+<span class="o">[</span><span class="n">mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f6043a46660</span><span class="o">]</span><span class="n">Protocol</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">provided</span><span class="p">,</span><span class="w"> </span><span class="n">cannot</span><span class="w"> </span><span class="n">determine</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="k">input</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="k">local</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">network</span><span class="w"> </span><span class="n">protocol</span><span class="p">,</span><span class="w"> </span><span class="n">buffers</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">access</span><span class="w"> </span><span class="n">patterns</span><span class="w"> </span><span class="n">cannot</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">configured</span><span class="w"> </span><span class="n">optimally</span><span class="w"> </span><span class="k">without</span><span class="w"> </span><span class="n">knowing</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">protocol</span>
+<span class="o">[</span><span class="n">lavf</span><span class="o">]</span><span class="w"> </span><span class="n">stream</span><span class="w"> </span><span class="mi">0</span><span class="err">:</span><span class="w"> </span><span class="n">video</span><span class="w"> </span><span class="p">(</span><span class="n">h264</span><span class="p">),</span><span class="w"> </span><span class="o">-</span><span class="n">vid</span><span class="w"> </span><span class="mi">0</span>
+<span class="o">[</span><span class="n">lavf</span><span class="o">]</span><span class="w"> </span><span class="n">stream</span><span class="w"> </span><span class="mi">1</span><span class="err">:</span><span class="w"> </span><span class="n">audio</span><span class="w"> </span><span class="p">(</span><span class="n">aac</span><span class="p">),</span><span class="w"> </span><span class="o">-</span><span class="n">aid</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="n">alang</span><span class="w"> </span><span class="n">und</span>
+<span class="nl">VIDEO</span><span class="p">:</span><span class="w">  </span><span class="o">[</span><span class="n">H264</span><span class="o">]</span><span class="w">  </span><span class="mi">1280</span><span class="n">x720</span><span class="w">  </span><span class="mi">24</span><span class="n">bpp</span><span class="w">  </span><span class="mf">24.000</span><span class="w"> </span><span class="n">fps</span><span class="w">  </span><span class="mf">1593.8</span><span class="w"> </span><span class="n">kbps</span><span class="w"> </span><span class="p">(</span><span class="mf">194.5</span><span class="w"> </span><span class="n">kbyte</span><span class="o">/</span><span class="n">s</span><span class="p">)</span>
+<span class="n">X11</span><span class="w"> </span><span class="nl">error</span><span class="p">:</span><span class="w"> </span><span class="n">BadMatch</span><span class="w"> </span><span class="p">(</span><span class="n">invalid</span><span class="w"> </span><span class="k">parameter</span><span class="w"> </span><span class="n">attributes</span><span class="p">)</span>
+<span class="n">Failed</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="k">open</span><span class="w"> </span><span class="n">VDPAU</span><span class="w"> </span><span class="n">backend</span><span class="w"> </span><span class="n">libvdpau_nvidia</span><span class="p">.</span><span class="nl">so</span><span class="p">:</span><span class="w"> </span><span class="n">cannot</span><span class="w"> </span><span class="k">open</span><span class="w"> </span><span class="n">shared</span><span class="w"> </span><span class="k">object</span><span class="w"> </span><span class="k">file</span><span class="err">:</span><span class="w"> </span><span class="k">No</span><span class="w"> </span><span class="n">such</span><span class="w"> </span><span class="k">file</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">directory</span>
+<span class="o">[</span><span class="n">vdpau</span><span class="o">]</span><span class="w"> </span><span class="n">Error</span><span class="w"> </span><span class="k">when</span><span class="w"> </span><span class="n">calling</span><span class="w"> </span><span class="nl">vdp_device_create_x11</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+</code></pre></div>
 
 <p>然后目前还没搞定。不知哪位大神能帮忙啊。</p>
   </div>

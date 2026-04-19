@@ -49,37 +49,37 @@
 <!-- more -->
 <h2 id="ssh">生成SSH密钥</h2>
 <p>使用ssh-kergen生成密钥：</p>
-<pre class="highlight"><code class="language-bash">$ssh-keygen -t rsa -C &quot;junxie01@gmail.com&quot;
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nv">$ssh</span>-keygen<span class="w"> </span>-t<span class="w"> </span>rsa<span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;junxie01@gmail.com&quot;</span>
+</code></pre></div>
 
 <p>一路enter就行了。生成的秘钥在主目录的.ssh/id_rsa.pub中。复制一下。</p>
 <h2 id="githubdeploy-keys">添加Github项目的Deploy keys</h2>
 <p>在项目junxie01.github.io点击settings&ndash;&gt;Deploy keys&ndash;&gt;Add deploy key.把拷贝好的秘钥粘贴在这里。然后勾选可写。</p>
 <p>测试是否配置成功。</p>
-<pre class="highlight"><code class="language-bash">$ssh -T git@github.com
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nv">$ssh</span><span class="w"> </span>-T<span class="w"> </span>git@github.com
+</code></pre></div>
 
 <p>如果出现如下内容则表示配置成功。</p>
-<pre class="highlight"><code>Hi junxie01/junxie01.github.io! You've successfully authenticated, but GitHub does not provide shell access.
-</code></pre>
+<div class="highlight"><pre><span></span><code>Hi junxie01/junxie01.github.io! You&#39;ve successfully authenticated, but GitHub does not provide shell access.
+</code></pre></div>
 
 <h2 id="_1">网站设置文件设置</h2>
 <p>在网站设置文件deploy字段设置：</p>
-<pre class="highlight"><code>deploy:
-  type: git
-  repository: git@github.com:junxie01/junxie01.github.io.git
-  branch: master
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="n">deploy</span><span class="o">:</span>
+<span class="w">  </span><span class="n">type</span><span class="o">:</span><span class="w"> </span><span class="n">git</span>
+<span class="w">  </span><span class="n">repository</span><span class="o">:</span><span class="w"> </span><span class="n">git</span><span class="err">@</span><span class="n">github</span><span class="o">.</span><span class="na">com</span><span class="o">:</span><span class="n">junxie01</span><span class="o">/</span><span class="n">junxie01</span><span class="o">.</span><span class="na">github</span><span class="o">.</span><span class="na">io</span><span class="o">.</span><span class="na">git</span>
+<span class="w">  </span><span class="n">branch</span><span class="o">:</span><span class="w"> </span><span class="n">master</span>
+</code></pre></div>
 
 <p>好了，发布网站时hexo d就不用输入用户名和密码了。大功告成。</p>
 <h2 id="git">Git自带配置文件</h2>
 <p>这个方法是针对github的，配置好了推送克隆什么的都万事大吉了。是这位大神<a href="https://www.jianshu.com/p/28efda0555bb">博文</a>里看到的。里面介绍了两种方法，我用的是第一种，因为它看起来更简单。</p>
-<pre class="highlight"><code class="language-bash">$ git config --global credential.helper store  
-</code></pre>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>credential.helper<span class="w"> </span>store<span class="w">  </span>
+</code></pre></div>
 
 <p>如果有多个账号什么的去掉&ndash;global就好了。为安全性着想还要给store设置一个时限。</p>
-<pre class="highlight"><code class="language-bash">git config --global credential.helper 'cache --timeout=3600'
-</code></pre>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>credential.helper<span class="w"> </span><span class="s1">&#39;cache --timeout=3600&#39;</span>
+</code></pre></div>
 
 <p>这个我就没有管了。问题不大吧。</p>
   </div>

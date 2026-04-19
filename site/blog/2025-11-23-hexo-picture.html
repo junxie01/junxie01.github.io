@@ -48,16 +48,16 @@
     <p>&emsp;&emsp;hexo显示图片显示有问题，怎么整？</p>
 <!--less-->
 <p>之前讲过怎么引用图片见{% post_link show-picture-in-hexo hexo图片显示 %}。但今天发现了奇怪的问题。那就是当我用gmt画图的时候，如果画出来的是球形图片时，这一句</p>
-<pre class="highlight"><code><img src="/images/picture_name" alt="">
-</code></pre>
+<div class="highlight"><pre><span></span><code><img src="/images/picture_name" alt="">
+</code></pre></div>
 
 <p>就不行了，显示不出来。然后就发现了这句：</p>
-<pre class="highlight"><code>&lt;img src=&quot;/post_name/picture_name&quot; &gt;
-</code></pre>
+<div class="highlight"><pre><span></span><code>&lt;img src=&quot;/post_name/picture_name&quot; &gt;
+</code></pre></div>
 
 <p>这就可以了。不过这也不是办法，因为如果所有图片都存放在post_name目录下，那个人网站就太臃肿了。之前有个<a href="https://sm.ms/">网站</a>，可以免费上传图片，然后分配一个网址给你，然后用这一句</p>
-<pre class="highlight"><code>![](picture_address)
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">![](</span><span class="nx">picture_address</span><span class="p">)</span>
+</code></pre></div>
 
 <p>然而这个网站在国内登陆出现问题了。于是问了Kimi，它列出了8个：
 | 名称 | 网址 | 单张上限 | 有效期 | 外链速度 | 备注 |

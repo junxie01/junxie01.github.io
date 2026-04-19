@@ -92,35 +92,35 @@
   后向：h_backward = LSTM(从t=T到t=0)
   最终状态：h = [h_forward; h_backward]</p>
 <p>异常检测机制</p>
-<pre class="highlight"><code class="language-mermaid">graph LR
-    A[原始正弦波] --&gt; B[随机位置]
-    --&gt; C[插入平坦段]
-    --&gt; D[长度随机]
-    --&gt; E[振幅/频率随机]
-    --&gt; F[形成异常样本]
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nf">graph</span><span class="w"> </span><span class="n">LR</span>
+<span class="w">    </span><span class="n">A</span><span class="p">[</span><span class="err">原始正弦波</span><span class="p">]</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">B</span><span class="p">[</span><span class="err">随机位置</span><span class="p">]</span>
+<span class="w">    </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">C</span><span class="p">[</span><span class="err">插入平坦段</span><span class="p">]</span>
+<span class="w">    </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">D</span><span class="p">[</span><span class="err">长度随机</span><span class="p">]</span>
+<span class="w">    </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">E</span><span class="p">[</span><span class="err">振幅</span><span class="o">/</span><span class="err">频率随机</span><span class="p">]</span>
+<span class="w">    </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">F</span><span class="p">[</span><span class="err">形成异常样本</span><span class="p">]</span>
+</code></pre></div>
 
 <p>模型架构</p>
-<pre class="highlight"><code class="language-python">AttentionModel(
-  (lstm): LSTM(1, 32, bidirectional=True)
-  (attention): Sequential(
-    (0): Linear(in_features=64, out_features=64)
-    (1): Tanh()
-    (2): Linear(in_features=64, out_features=1)
-  )
-  (classifier): Sequential(
-    (0): Linear(in_features=64, out_features=1)
-    (1): Sigmoid()
-  )
-)
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="n">AttentionModel</span><span class="p">(</span>
+  <span class="p">(</span><span class="n">lstm</span><span class="p">):</span> <span class="n">LSTM</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="n">bidirectional</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+  <span class="p">(</span><span class="n">attention</span><span class="p">):</span> <span class="n">Sequential</span><span class="p">(</span>
+    <span class="p">(</span><span class="mi">0</span><span class="p">):</span> <span class="n">Linear</span><span class="p">(</span><span class="n">in_features</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">out_features</span><span class="o">=</span><span class="mi">64</span><span class="p">)</span>
+    <span class="p">(</span><span class="mi">1</span><span class="p">):</span> <span class="n">Tanh</span><span class="p">()</span>
+    <span class="p">(</span><span class="mi">2</span><span class="p">):</span> <span class="n">Linear</span><span class="p">(</span><span class="n">in_features</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">out_features</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+  <span class="p">)</span>
+  <span class="p">(</span><span class="n">classifier</span><span class="p">):</span> <span class="n">Sequential</span><span class="p">(</span>
+    <span class="p">(</span><span class="mi">0</span><span class="p">):</span> <span class="n">Linear</span><span class="p">(</span><span class="n">in_features</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">out_features</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="p">(</span><span class="mi">1</span><span class="p">):</span> <span class="n">Sigmoid</span><span class="p">()</span>
+  <span class="p">)</span>
+<span class="p">)</span>
+</code></pre></div>
 
 <p>评估指标
 ROC-AUC：衡量模型区分正负样本的能力</p>
 <p>值域[0,1]，&gt;0.9表示优秀模型
 F1-Score：精确率和召回率的调和平均</p>
-<pre class="highlight"><code>   F1 = 2  (Precision  Recall) / (Precision + Recall)
-</code></pre>
+<div class="highlight"><pre><span></span><code>   F1 = 2  (Precision  Recall) / (Precision + Recall)
+</code></pre></div>
 
 <p>混淆矩阵：</p>
 <table>
@@ -150,11 +150,11 @@ F1-Score：精确率和召回率的调和平均</p>
 <h3 id="nlp">NLP需要词嵌入/位置编码等额外层</h3>
 <h3 id="_1">时间序列可直接使用原始数值数据</h3>
 <h3 id="nlp-vs">示例：NLP处理流程 vs 时间序列处理</h3>
-<pre class="highlight"><code>     # NLP
+<div class="highlight"><pre><span></span><code>     # NLP
      文本 → 分词 → 嵌入 → 位置编码 → 注意力
      # 时间序列
      原始信号 → 注意力
-</code></pre>
+</code></pre></div>
 
 <ol>
 <li>直观可视化：
@@ -173,66 +173,66 @@ F1-Score：精确率和召回率的调和平均</p>
   时间序列注意力研究相对较少</p>
 <p>改进建议:
 1. 混合学习路径（推荐）</p>
-<pre class="highlight"><code class="language-mermaid">graph TD
-    A[基础概念] --&gt; B[时间序列示例]
---&gt; C[可视化理解]
---&gt; D[NLP进阶]
---&gt; E[CV扩展]
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="n">graph</span><span class="w"> </span><span class="n">TD</span>
+<span class="w">    </span><span class="n">A</span><span class="o">[</span><span class="n">基础概念</span><span class="o">]</span><span class="w"> </span><span class="c1">--&gt; B[时间序列示例]</span>
+<span class="c1">--&gt; C[可视化理解]</span>
+<span class="c1">--&gt; D[NLP进阶]</span>
+<span class="c1">--&gt; E[CV扩展]</span>
+</code></pre></div>
 
 <ol>
 <li>增强时间序列实验设计
   多类型异常：</li>
 </ol>
-<pre class="highlight"><code class="language-python">  # 当前：仅平坦异常
-  wave[loc:end] = wave[loc] 
+<div class="highlight"><pre><span></span><code>  <span class="c1"># 当前：仅平坦异常</span>
+  <span class="n">wave</span><span class="p">[</span><span class="n">loc</span><span class="p">:</span><span class="n">end</span><span class="p">]</span> <span class="o">=</span> <span class="n">wave</span><span class="p">[</span><span class="n">loc</span><span class="p">]</span> 
 
-  # 建议增加：
-  wave[loc:end] = 0  # 零值异常
-  wave[loc:end] = random_noise()  # 噪声异常
-  wave = add_spike(loc)  # 尖峰异常
-</code></pre>
+  <span class="c1"># 建议增加：</span>
+  <span class="n">wave</span><span class="p">[</span><span class="n">loc</span><span class="p">:</span><span class="n">end</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># 零值异常</span>
+  <span class="n">wave</span><span class="p">[</span><span class="n">loc</span><span class="p">:</span><span class="n">end</span><span class="p">]</span> <span class="o">=</span> <span class="n">random_noise</span><span class="p">()</span>  <span class="c1"># 噪声异常</span>
+  <span class="n">wave</span> <span class="o">=</span> <span class="n">add_spike</span><span class="p">(</span><span class="n">loc</span><span class="p">)</span>  <span class="c1"># 尖峰异常</span>
+</code></pre></div>
 
 <p>多变量时间序列：</p>
-<pre class="highlight"><code class="language-python">    # 当前：单变量正弦波
-  X.shape = (5000, 500, 1)
+<div class="highlight"><pre><span></span><code>    <span class="c1"># 当前：单变量正弦波</span>
+  <span class="n">X</span><span class="o">.</span><span class="n">shape</span> <span class="o">=</span> <span class="p">(</span><span class="mi">5000</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 
-  # 改进：多变量
-  X_multi = np.stack([sine_wave, 
-                      cosine_wave, 
-                      random_walk], axis=-1)
-</code></pre>
+  <span class="c1"># 改进：多变量</span>
+  <span class="n">X_multi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">stack</span><span class="p">([</span><span class="n">sine_wave</span><span class="p">,</span> 
+                      <span class="n">cosine_wave</span><span class="p">,</span> 
+                      <span class="n">random_walk</span><span class="p">],</span> <span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div>
 
 <ol>
 <li>模型架构优化</li>
 </ol>
 <p>多头注意力（Multi-Head Attention）：</p>
-<pre class="highlight"><code class="language-python">    # 当前：单头
-  self.attention = nn.Sequential(...)
+<div class="highlight"><pre><span></span><code>    <span class="c1"># 当前：单头</span>
+  <span class="bp">self</span><span class="o">.</span><span class="n">attention</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
 
-  # 改进：多头
-  self.multihead_attn = nn.MultiheadAttention(
-      embed_dim=64, num_heads=4
-  )
-</code></pre>
+  <span class="c1"># 改进：多头</span>
+  <span class="bp">self</span><span class="o">.</span><span class="n">multihead_attn</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">MultiheadAttention</span><span class="p">(</span>
+      <span class="n">embed_dim</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">num_heads</span><span class="o">=</span><span class="mi">4</span>
+  <span class="p">)</span>
+</code></pre></div>
 
 <p>位置编码增强：</p>
-<pre class="highlight"><code class="language-python">    # 当前：依赖LSTM的顺序处理
-  # 改进：显式位置编码
-  position = torch.arange(0, seq_len).unsqueeze(1)
-  pe = torch.sin(position / 10000(2*i/d_model))
-</code></pre>
+<div class="highlight"><pre><span></span><code>    <span class="c1"># 当前：依赖LSTM的顺序处理</span>
+  <span class="c1"># 改进：显式位置编码</span>
+  <span class="n">position</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">seq_len</span><span class="p">)</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+  <span class="n">pe</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">position</span> <span class="o">/</span> <span class="mi">10000</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">i</span><span class="o">/</span><span class="n">d_model</span><span class="p">))</span>
+</code></pre></div>
 
 <ol>
 <li>可解释性增强</li>
 </ol>
 <p>定量评估指标：</p>
-<pre class="highlight"><code class="language-python">    def attention_accuracy(att_weights, anomaly_loc):
-      &quot;&quot;&quot;计算注意力聚焦异常区域的准确度&quot;&quot;&quot;
-      focus_region = att_weights.argmax()-10 : att_weights.argmax()+10
-      overlap = len(set(focus_region) &amp; set(anomaly_loc))
-      return overlap / len(anomaly_loc)
-</code></pre>
+<div class="highlight"><pre><span></span><code>    <span class="k">def</span><span class="w"> </span><span class="nf">attention_accuracy</span><span class="p">(</span><span class="n">att_weights</span><span class="p">,</span> <span class="n">anomaly_loc</span><span class="p">):</span>
+<span class="w">      </span><span class="sd">&quot;&quot;&quot;计算注意力聚焦异常区域的准确度&quot;&quot;&quot;</span>
+      <span class="n">focus_region</span> <span class="o">=</span> <span class="n">att_weights</span><span class="o">.</span><span class="n">argmax</span><span class="p">()</span><span class="o">-</span><span class="mi">10</span> <span class="p">:</span> <span class="n">att_weights</span><span class="o">.</span><span class="n">argmax</span><span class="p">()</span><span class="o">+</span><span class="mi">10</span>
+      <span class="n">overlap</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">focus_region</span><span class="p">)</span> <span class="o">&amp;</span> <span class="nb">set</span><span class="p">(</span><span class="n">anomaly_loc</span><span class="p">))</span>
+      <span class="k">return</span> <span class="n">overlap</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">anomaly_loc</span><span class="p">)</span>
+</code></pre></div>
 
 <p>对比可视化：</p>
 <table>
@@ -262,310 +262,310 @@ F1-Score：精确率和召回率的调和平均</p>
 3. 最终扩展到多模态应用
 &ldquo;注意力机制不是领域特定的工具，而是数据关系的动态透镜——时间序列提供了最干净的镜片来观察其本质。&rdquo;</p>
 <p>python脚本例子：</p>
-<pre class="highlight"><code>import numpy as np
-import matplotlib.pyplot as plt
-import torch
-import torch.nn as nn
-import torch.optim as optim
-from torch.utils.data import Dataset, DataLoader, TensorDataset
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix, roc_auc_score
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch.nn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nn</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch.optim</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">optim</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">torch.utils.data</span><span class="w"> </span><span class="kn">import</span> <span class="n">Dataset</span><span class="p">,</span> <span class="n">DataLoader</span><span class="p">,</span> <span class="n">TensorDataset</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">accuracy_score</span><span class="p">,</span> <span class="n">precision_score</span><span class="p">,</span> <span class="n">recall_score</span><span class="p">,</span> <span class="n">f1_score</span><span class="p">,</span> <span class="n">confusion_matrix</span><span class="p">,</span> <span class="n">roc_auc_score</span>
 
-# 配置参数
-class Config:
-    num_points = 500        # 时间序列长度
-    dataset_size = 5000     # 数据集大小
-    normal_ratio = 0.5      # 正常样本比例
-    min_freq = 1            # 最小频率
-    max_freq = 4            # 最大频率
-    min_amp = 1             # 最小振幅
-    max_amp = 10            # 最大振幅
-    min_loc_ratio = 0.0     # 异常位置最小比例
-    max_loc_ratio = 0.9     # 异常位置最大比例
-    min_length_ratio = 0.1  # 异常长度最小比例
-    max_length_ratio = 0.5  # 异常长度最大比例
-    batch_size = 32         # 批大小
-    lr = 0.001              # 学习率
-    num_epochs = 15         # 训练轮数
-    hidden_dim = 32         # LSTM隐藏层维度
-    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    patience = 5            # 早停耐心值
+<span class="c1"># 配置参数</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Config</span><span class="p">:</span>
+    <span class="n">num_points</span> <span class="o">=</span> <span class="mi">500</span>        <span class="c1"># 时间序列长度</span>
+    <span class="n">dataset_size</span> <span class="o">=</span> <span class="mi">5000</span>     <span class="c1"># 数据集大小</span>
+    <span class="n">normal_ratio</span> <span class="o">=</span> <span class="mf">0.5</span>      <span class="c1"># 正常样本比例</span>
+    <span class="n">min_freq</span> <span class="o">=</span> <span class="mi">1</span>            <span class="c1"># 最小频率</span>
+    <span class="n">max_freq</span> <span class="o">=</span> <span class="mi">4</span>            <span class="c1"># 最大频率</span>
+    <span class="n">min_amp</span> <span class="o">=</span> <span class="mi">1</span>             <span class="c1"># 最小振幅</span>
+    <span class="n">max_amp</span> <span class="o">=</span> <span class="mi">10</span>            <span class="c1"># 最大振幅</span>
+    <span class="n">min_loc_ratio</span> <span class="o">=</span> <span class="mf">0.0</span>     <span class="c1"># 异常位置最小比例</span>
+    <span class="n">max_loc_ratio</span> <span class="o">=</span> <span class="mf">0.9</span>     <span class="c1"># 异常位置最大比例</span>
+    <span class="n">min_length_ratio</span> <span class="o">=</span> <span class="mf">0.1</span>  <span class="c1"># 异常长度最小比例</span>
+    <span class="n">max_length_ratio</span> <span class="o">=</span> <span class="mf">0.5</span>  <span class="c1"># 异常长度最大比例</span>
+    <span class="n">batch_size</span> <span class="o">=</span> <span class="mi">32</span>         <span class="c1"># 批大小</span>
+    <span class="n">lr</span> <span class="o">=</span> <span class="mf">0.001</span>              <span class="c1"># 学习率</span>
+    <span class="n">num_epochs</span> <span class="o">=</span> <span class="mi">15</span>         <span class="c1"># 训练轮数</span>
+    <span class="n">hidden_dim</span> <span class="o">=</span> <span class="mi">32</span>         <span class="c1"># LSTM隐藏层维度</span>
+    <span class="n">device</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s1">&#39;cuda&#39;</span> <span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">()</span> <span class="k">else</span> <span class="s1">&#39;cpu&#39;</span><span class="p">)</span>
+    <span class="n">patience</span> <span class="o">=</span> <span class="mi">5</span>            <span class="c1"># 早停耐心值</span>
 
-config = Config()
+<span class="n">config</span> <span class="o">=</span> <span class="n">Config</span><span class="p">()</span>
 
-# 1. 数据生成
-def generate_sine_wave(length, freq, amp):
-    &quot;&quot;&quot;生成正弦波&quot;&quot;&quot;
-    t = np.linspace(0, 2*np.pi, length)
-    return amp * np.sin(freq * t)
+<span class="c1"># 1. 数据生成</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">generate_sine_wave</span><span class="p">(</span><span class="n">length</span><span class="p">,</span> <span class="n">freq</span><span class="p">,</span> <span class="n">amp</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;生成正弦波&quot;&quot;&quot;</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">length</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">amp</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="kp">sin</span><span class="p">(</span><span class="n">freq</span> <span class="o">*</span> <span class="n">t</span><span class="p">)</span>
 
-def generate_dataset(config):
-    &quot;&quot;&quot;生成数据集&quot;&quot;&quot;
-    X = []
-    y = []
+<span class="k">def</span><span class="w"> </span><span class="nf">generate_dataset</span><span class="p">(</span><span class="n">config</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;生成数据集&quot;&quot;&quot;</span>
+    <span class="n">X</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="p">[]</span>
 
-    for _ in range(config.dataset_size):
-        # 随机生成频率和振幅
-        freq = np.random.uniform(config.min_freq, config.max_freq)
-        amp = np.random.uniform(config.min_amp, config.max_amp)
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">dataset_size</span><span class="p">):</span>
+        <span class="c1"># 随机生成频率和振幅</span>
+        <span class="n">freq</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="kp">uniform</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">min_freq</span><span class="p">,</span> <span class="n">config</span><span class="o">.</span><span class="n">max_freq</span><span class="p">)</span>
+        <span class="n">amp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="kp">uniform</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">min_amp</span><span class="p">,</span> <span class="n">config</span><span class="o">.</span><span class="n">max_amp</span><span class="p">)</span>
 
-        # 生成正常或异常样本
-        if np.random.rand() &lt; config.normal_ratio:
-            # 正常样本
-            wave = generate_sine_wave(config.num_points, freq, amp)
-            label = 0
-        else:
-            # 异常样本：生成正弦波并在随机位置插入平坦段
-            wave = generate_sine_wave(config.num_points, freq, amp)
-            # 随机选择异常位置和长度（按比例）
-            loc_ratio = np.random.uniform(config.min_loc_ratio, config.max_loc_ratio)
-            length_ratio = np.random.uniform(config.min_length_ratio, config.max_length_ratio)
-            loc = int(loc_ratio * config.num_points)
-            length = int(length_ratio * config.num_points)
-            end = min(loc + length, config.num_points)
-            # 将选定区域替换为常数值（取开始点的值）
-            wave[loc:end] = wave[loc]
-            label = 1
+        <span class="c1"># 生成正常或异常样本</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">config</span><span class="o">.</span><span class="n">normal_ratio</span><span class="p">:</span>
+            <span class="c1"># 正常样本</span>
+            <span class="n">wave</span> <span class="o">=</span> <span class="n">generate_sine_wave</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">num_points</span><span class="p">,</span> <span class="n">freq</span><span class="p">,</span> <span class="n">amp</span><span class="p">)</span>
+            <span class="n">label</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># 异常样本：生成正弦波并在随机位置插入平坦段</span>
+            <span class="n">wave</span> <span class="o">=</span> <span class="n">generate_sine_wave</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">num_points</span><span class="p">,</span> <span class="n">freq</span><span class="p">,</span> <span class="n">amp</span><span class="p">)</span>
+            <span class="c1"># 随机选择异常位置和长度（按比例）</span>
+            <span class="n">loc_ratio</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="kp">uniform</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">min_loc_ratio</span><span class="p">,</span> <span class="n">config</span><span class="o">.</span><span class="n">max_loc_ratio</span><span class="p">)</span>
+            <span class="n">length_ratio</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="kp">uniform</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">min_length_ratio</span><span class="p">,</span> <span class="n">config</span><span class="o">.</span><span class="n">max_length_ratio</span><span class="p">)</span>
+            <span class="n">loc</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">loc_ratio</span> <span class="o">*</span> <span class="n">config</span><span class="o">.</span><span class="n">num_points</span><span class="p">)</span>
+            <span class="n">length</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">length_ratio</span> <span class="o">*</span> <span class="n">config</span><span class="o">.</span><span class="n">num_points</span><span class="p">)</span>
+            <span class="n">end</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">loc</span> <span class="o">+</span> <span class="n">length</span><span class="p">,</span> <span class="n">config</span><span class="o">.</span><span class="n">num_points</span><span class="p">)</span>
+            <span class="c1"># 将选定区域替换为常数值（取开始点的值）</span>
+            <span class="n">wave</span><span class="p">[</span><span class="n">loc</span><span class="p">:</span><span class="n">end</span><span class="p">]</span> <span class="o">=</span> <span class="n">wave</span><span class="p">[</span><span class="n">loc</span><span class="p">]</span>
+            <span class="n">label</span> <span class="o">=</span> <span class="mi">1</span>
 
-        X.append(wave)
-        y.append(label)
+        <span class="n">X</span><span class="o">.</span><span class="kp">append</span><span class="p">(</span><span class="n">wave</span><span class="p">)</span>
+        <span class="n">y</span><span class="o">.</span><span class="kp">append</span><span class="p">(</span><span class="n">label</span><span class="p">)</span>
 
-    # 转换为numpy数组
-    X = np.array(X)
-    y = np.array(y)
+    <span class="c1"># 转换为numpy数组</span>
+    <span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">array</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">array</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
 
-    # 转换为PyTorch张量
-    X_tensor = torch.tensor(X, dtype=torch.float32).unsqueeze(-1)  # (N, T, 1)
-    y_tensor = torch.tensor(y, dtype=torch.float32)  # (N,)
+    <span class="c1"># 转换为PyTorch张量</span>
+    <span class="n">X_tensor</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="kp">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># (N, T, 1)</span>
+    <span class="n">y_tensor</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="kp">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>  <span class="c1"># (N,)</span>
 
-    return X_tensor, y_tensor
+    <span class="k">return</span> <span class="n">X_tensor</span><span class="p">,</span> <span class="n">y_tensor</span>
 
-# 2. 模型定义
-class AttentionModel(nn.Module):
-    def __init__(self, input_dim=1, hidden_dim=32):
-        super(AttentionModel, self).__init__()
-        # 双向LSTM
-        self.lstm = nn.LSTM(
-            input_size=input_dim,
-            hidden_size=hidden_dim,
-            batch_first=True,
-            bidirectional=True
-        )
-        # 注意力权重计算
-        self.attention = nn.Sequential(
-            nn.Linear(2 * hidden_dim, 64),
-            nn.Tanh(),
-            nn.Linear(64, 1)
-        )
-        # 分类器
-        self.classifier = nn.Sequential(
-            nn.Linear(2 * hidden_dim, 1),
-            nn.Sigmoid()
-        )
+<span class="c1"># 2. 模型定义</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">AttentionModel</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_dim</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">hidden_dim</span><span class="o">=</span><span class="mi">32</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">AttentionModel</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="c1"># 双向LSTM</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lstm</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">LSTM</span><span class="p">(</span>
+            <span class="n">input_size</span><span class="o">=</span><span class="n">input_dim</span><span class="p">,</span>
+            <span class="n">hidden_size</span><span class="o">=</span><span class="n">hidden_dim</span><span class="p">,</span>
+            <span class="n">batch_first</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">bidirectional</span><span class="o">=</span><span class="kc">True</span>
+        <span class="p">)</span>
+        <span class="c1"># 注意力权重计算</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">attention</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span>
+            <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">hidden_dim</span><span class="p">,</span> <span class="mi">64</span><span class="p">),</span>
+            <span class="n">nn</span><span class="o">.</span><span class="n">Tanh</span><span class="p">(),</span>
+            <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="c1"># 分类器</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">classifier</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span>
+            <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">hidden_dim</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+            <span class="n">nn</span><span class="o">.</span><span class="n">Sigmoid</span><span class="p">()</span>
+        <span class="p">)</span>
 
-    def forward(self, x):
-        # LSTM处理
-        lstm_out, _ = self.lstm(x)  # (batch_size, seq_len, 2*hidden_dim)
+    <span class="k">def</span><span class="w"> </span><span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="c1"># LSTM处理</span>
+        <span class="n">lstm_out</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lstm</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="c1"># (batch_size, seq_len, 2*hidden_dim)</span>
 
-        # 计算注意力权重
-        e = self.attention(lstm_out).squeeze(-1)  # (batch_size, seq_len)
-        alpha = torch.softmax(e, dim=1)  # 归一化权重
-        alpha_expanded = alpha.unsqueeze(-1)  # (batch_size, seq_len, 1)
+        <span class="c1"># 计算注意力权重</span>
+        <span class="n">e</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">attention</span><span class="p">(</span><span class="n">lstm_out</span><span class="p">)</span><span class="o">.</span><span class="kp">squeeze</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># (batch_size, seq_len)</span>
+        <span class="n">alpha</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">softmax</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># 归一化权重</span>
+        <span class="n">alpha_expanded</span> <span class="o">=</span> <span class="n">alpha</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># (batch_size, seq_len, 1)</span>
 
-        # 加权得到上下文向量
-        context = torch.sum(alpha_expanded * lstm_out, dim=1)  # (batch_size, 2*hidden_dim)
+        <span class="c1"># 加权得到上下文向量</span>
+        <span class="n">context</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="kp">sum</span><span class="p">(</span><span class="n">alpha_expanded</span> <span class="o">*</span> <span class="n">lstm_out</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># (batch_size, 2*hidden_dim)</span>
 
-        # 分类
-        out = self.classifier(context).squeeze(-1)  # (batch_size,)
-        return out, alpha
+        <span class="c1"># 分类</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">classifier</span><span class="p">(</span><span class="n">context</span><span class="p">)</span><span class="o">.</span><span class="kp">squeeze</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># (batch_size,)</span>
+        <span class="k">return</span> <span class="n">out</span><span class="p">,</span> <span class="n">alpha</span>
 
-# 3. 训练函数
-def train_model(model, train_loader, val_loader, config):
-    model.to(config.device)
-    criterion = nn.BCELoss()
-    optimizer = optim.Adam(model.parameters(), lr=config.lr)
+<span class="c1"># 3. 训练函数</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">train_model</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">train_loader</span><span class="p">,</span> <span class="n">val_loader</span><span class="p">,</span> <span class="n">config</span><span class="p">):</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">device</span><span class="p">)</span>
+    <span class="n">criterion</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">BCELoss</span><span class="p">()</span>
+    <span class="n">optimizer</span> <span class="o">=</span> <span class="n">optim</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">parameters</span><span class="p">(),</span> <span class="n">lr</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">lr</span><span class="p">)</span>
 
-    best_val_loss = float('inf')
-    patience_counter = 0
+    <span class="n">best_val_loss</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)</span>
+    <span class="n">patience_counter</span> <span class="o">=</span> <span class="mi">0</span>
 
-    train_losses = []
-    val_losses = []
+    <span class="n">train_losses</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">val_losses</span> <span class="o">=</span> <span class="p">[]</span>
 
-    for epoch in range(config.num_epochs):
-        # 训练阶段
-        model.train()
-        train_loss = 0.0
-        for batch_X, batch_y in train_loader:
-            batch_X, batch_y = batch_X.to(config.device), batch_y.to(config.device)
+    <span class="k">for</span> <span class="n">epoch</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">num_epochs</span><span class="p">):</span>
+        <span class="c1"># 训练阶段</span>
+        <span class="n">model</span><span class="o">.</span><span class="n">train</span><span class="p">()</span>
+        <span class="n">train_loss</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="k">for</span> <span class="n">batch_X</span><span class="p">,</span> <span class="n">batch_y</span> <span class="ow">in</span> <span class="n">train_loader</span><span class="p">:</span>
+            <span class="n">batch_X</span><span class="p">,</span> <span class="n">batch_y</span> <span class="o">=</span> <span class="n">batch_X</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">device</span><span class="p">),</span> <span class="n">batch_y</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">device</span><span class="p">)</span>
 
-            optimizer.zero_grad()
-            outputs, _ = model(batch_X)
-            loss = criterion(outputs, batch_y)
-            loss.backward()
-            optimizer.step()
+            <span class="n">optimizer</span><span class="o">.</span><span class="n">zero_grad</span><span class="p">()</span>
+            <span class="n">outputs</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">batch_X</span><span class="p">)</span>
+            <span class="n">loss</span> <span class="o">=</span> <span class="n">criterion</span><span class="p">(</span><span class="n">outputs</span><span class="p">,</span> <span class="n">batch_y</span><span class="p">)</span>
+            <span class="n">loss</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
+            <span class="n">optimizer</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
 
-            train_loss += loss.item() * batch_X.size(0)
+            <span class="n">train_loss</span> <span class="o">+=</span> <span class="n">loss</span><span class="o">.</span><span class="kp">item</span><span class="p">()</span> <span class="o">*</span> <span class="n">batch_X</span><span class="o">.</span><span class="kp">size</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 
-        # 计算平均训练损失
-        train_loss = train_loss / len(train_loader.dataset)
-        train_losses.append(train_loss)
+        <span class="c1"># 计算平均训练损失</span>
+        <span class="n">train_loss</span> <span class="o">=</span> <span class="n">train_loss</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">train_loader</span><span class="o">.</span><span class="n">dataset</span><span class="p">)</span>
+        <span class="n">train_losses</span><span class="o">.</span><span class="kp">append</span><span class="p">(</span><span class="n">train_loss</span><span class="p">)</span>
 
-        # 验证阶段
-        model.eval()
-        val_loss = 0.0
-        with torch.no_grad():
-            for batch_X, batch_y in val_loader:
-                batch_X, batch_y = batch_X.to(config.device), batch_y.to(config.device)
-                outputs, _ = model(batch_X)
-                loss = criterion(outputs, batch_y)
-                val_loss += loss.item() * batch_X.size(0)
+        <span class="c1"># 验证阶段</span>
+        <span class="n">model</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
+        <span class="n">val_loss</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">no_grad</span><span class="p">():</span>
+            <span class="k">for</span> <span class="n">batch_X</span><span class="p">,</span> <span class="n">batch_y</span> <span class="ow">in</span> <span class="n">val_loader</span><span class="p">:</span>
+                <span class="n">batch_X</span><span class="p">,</span> <span class="n">batch_y</span> <span class="o">=</span> <span class="n">batch_X</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">device</span><span class="p">),</span> <span class="n">batch_y</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">device</span><span class="p">)</span>
+                <span class="n">outputs</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">batch_X</span><span class="p">)</span>
+                <span class="n">loss</span> <span class="o">=</span> <span class="n">criterion</span><span class="p">(</span><span class="n">outputs</span><span class="p">,</span> <span class="n">batch_y</span><span class="p">)</span>
+                <span class="n">val_loss</span> <span class="o">+=</span> <span class="n">loss</span><span class="o">.</span><span class="kp">item</span><span class="p">()</span> <span class="o">*</span> <span class="n">batch_X</span><span class="o">.</span><span class="kp">size</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 
-        val_loss = val_loss / len(val_loader.dataset)
-        val_losses.append(val_loss)
+        <span class="n">val_loss</span> <span class="o">=</span> <span class="n">val_loss</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">val_loader</span><span class="o">.</span><span class="n">dataset</span><span class="p">)</span>
+        <span class="n">val_losses</span><span class="o">.</span><span class="kp">append</span><span class="p">(</span><span class="n">val_loss</span><span class="p">)</span>
 
-        print(f'Epoch {epoch+1}/{config.num_epochs} | Train Loss: {train_loss:.4f} | Val Loss: {val_loss:.4f}')
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Epoch </span><span class="si">{</span><span class="n">epoch</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">num_epochs</span><span class="si">}</span><span class="s1"> | Train Loss: </span><span class="si">{</span><span class="n">train_loss</span><span class="si">:</span><span class="s1">.4f</span><span class="si">}</span><span class="s1"> | Val Loss: </span><span class="si">{</span><span class="n">val_loss</span><span class="si">:</span><span class="s1">.4f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 
-        # 早停检查
-        if val_loss &lt; best_val_loss:
-            best_val_loss = val_loss
-            patience_counter = 0
-            torch.save(model.state_dict(), 'best_model.pth')
-        else:
-            patience_counter += 1
-            if patience_counter &gt;= config.patience:
-                print(f'Early stopping at epoch {epoch+1}')
-                break
+        <span class="c1"># 早停检查</span>
+        <span class="k">if</span> <span class="n">val_loss</span> <span class="o">&lt;</span> <span class="n">best_val_loss</span><span class="p">:</span>
+            <span class="n">best_val_loss</span> <span class="o">=</span> <span class="n">val_loss</span>
+            <span class="n">patience_counter</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="n">torch</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">state_dict</span><span class="p">(),</span> <span class="s1">&#39;best_model.pth&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">patience_counter</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">if</span> <span class="n">patience_counter</span> <span class="o">&gt;=</span> <span class="n">config</span><span class="o">.</span><span class="n">patience</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Early stopping at epoch </span><span class="si">{</span><span class="n">epoch</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+                <span class="k">break</span>
 
-    # 加载最佳模型
-    model.load_state_dict(torch.load('best_model.pth'))
-    return model, train_losses, val_losses
+    <span class="c1"># 加载最佳模型</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">load_state_dict</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="kp">load</span><span class="p">(</span><span class="s1">&#39;best_model.pth&#39;</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">model</span><span class="p">,</span> <span class="n">train_losses</span><span class="p">,</span> <span class="n">val_losses</span>
 
-# 4. 评估函数
-def evaluate_model(model, test_loader, config):
-    model.eval()
-    y_true = []
-    y_pred = []
-    y_score = []
+<span class="c1"># 4. 评估函数</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">evaluate_model</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">test_loader</span><span class="p">,</span> <span class="n">config</span><span class="p">):</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
+    <span class="n">y_true</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">y_pred</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">y_score</span> <span class="o">=</span> <span class="p">[]</span>
 
-    with torch.no_grad():
-        for batch_X, batch_y in test_loader:
-            batch_X, batch_y = batch_X.to(config.device), batch_y.to(config.device)
-            outputs, _ = model(batch_X)
+    <span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">no_grad</span><span class="p">():</span>
+        <span class="k">for</span> <span class="n">batch_X</span><span class="p">,</span> <span class="n">batch_y</span> <span class="ow">in</span> <span class="n">test_loader</span><span class="p">:</span>
+            <span class="n">batch_X</span><span class="p">,</span> <span class="n">batch_y</span> <span class="o">=</span> <span class="n">batch_X</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">device</span><span class="p">),</span> <span class="n">batch_y</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">device</span><span class="p">)</span>
+            <span class="n">outputs</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">batch_X</span><span class="p">)</span>
 
-            # 收集真实标签和预测概率
-            y_true.extend(batch_y.cpu().numpy())
-            y_score.extend(outputs.cpu().numpy())
-            y_pred.extend((outputs &gt; 0.5).float().cpu().numpy())
+            <span class="c1"># 收集真实标签和预测概率</span>
+            <span class="n">y_true</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">batch_y</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span><span class="o">.</span><span class="n">numpy</span><span class="p">())</span>
+            <span class="n">y_score</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">outputs</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span><span class="o">.</span><span class="n">numpy</span><span class="p">())</span>
+            <span class="n">y_pred</span><span class="o">.</span><span class="n">extend</span><span class="p">((</span><span class="n">outputs</span> <span class="o">&gt;</span> <span class="mf">0.5</span><span class="p">)</span><span class="o">.</span><span class="n">float</span><span class="p">()</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span><span class="o">.</span><span class="n">numpy</span><span class="p">())</span>
 
-    # 计算指标
-    acc = accuracy_score(y_true, y_pred)
-    prec = precision_score(y_true, y_pred)
-    rec = recall_score(y_true, y_pred)
-    f1 = f1_score(y_true, y_pred)
-    auc = roc_auc_score(y_true, y_score)
-    cm = confusion_matrix(y_true, y_pred)
+    <span class="c1"># 计算指标</span>
+    <span class="n">acc</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+    <span class="n">prec</span> <span class="o">=</span> <span class="n">precision_score</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+    <span class="n">rec</span> <span class="o">=</span> <span class="n">recall_score</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+    <span class="n">f1</span> <span class="o">=</span> <span class="n">f1_score</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+    <span class="n">auc</span> <span class="o">=</span> <span class="n">roc_auc_score</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_score</span><span class="p">)</span>
+    <span class="n">cm</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
 
-    print(f'Accuracy: {acc:.4f}')
-    print(f'Precision: {prec:.4f}')
-    print(f'Recall: {rec:.4f}')
-    print(f'F1 Score: {f1:.4f}')
-    print(f'ROC AUC: {auc:.4f}')
-    print('Confusion Matrix:')
-    print(cm)
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Accuracy: </span><span class="si">{</span><span class="n">acc</span><span class="si">:</span><span class="s1">.4f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Precision: </span><span class="si">{</span><span class="n">prec</span><span class="si">:</span><span class="s1">.4f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Recall: </span><span class="si">{</span><span class="n">rec</span><span class="si">:</span><span class="s1">.4f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;F1 Score: </span><span class="si">{</span><span class="n">f1</span><span class="si">:</span><span class="s1">.4f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;ROC AUC: </span><span class="si">{</span><span class="n">auc</span><span class="si">:</span><span class="s1">.4f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Confusion Matrix:&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">cm</span><span class="p">)</span>
 
-    return acc, prec, rec, f1, auc, cm
+    <span class="k">return</span> <span class="n">acc</span><span class="p">,</span> <span class="n">prec</span><span class="p">,</span> <span class="n">rec</span><span class="p">,</span> <span class="n">f1</span><span class="p">,</span> <span class="n">auc</span><span class="p">,</span> <span class="n">cm</span>
 
-# 5. 可视化注意力
-def plot_attention(wave, attention_weights, title='Attention Visualization'):
-    &quot;&quot;&quot;可视化注意力权重&quot;&quot;&quot;
-    wave = wave.squeeze()
-    attention_weights = attention_weights.squeeze()
+<span class="c1"># 5. 可视化注意力</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">plot_attention</span><span class="p">(</span><span class="n">wave</span><span class="p">,</span> <span class="n">attention_weights</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Attention Visualization&#39;</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;可视化注意力权重&quot;&quot;&quot;</span>
+    <span class="n">wave</span> <span class="o">=</span> <span class="n">wave</span><span class="o">.</span><span class="kp">squeeze</span><span class="p">()</span>
+    <span class="n">attention_weights</span> <span class="o">=</span> <span class="n">attention_weights</span><span class="o">.</span><span class="kp">squeeze</span><span class="p">()</span>
 
-    fig, ax1 = plt.subplots(figsize=(12, 4))
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
 
-    # 绘制原始波形
-    ax1.plot(wave, 'b-', label='Signal')
-    ax1.set_xlabel('Time Step')
-    ax1.set_ylabel('Amplitude', color='b')
-    ax1.tick_params('y', colors='b')
+    <span class="c1"># 绘制原始波形</span>
+    <span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">wave</span><span class="p">,</span> <span class="s1">&#39;b-&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Signal&#39;</span><span class="p">)</span>
+    <span class="n">ax1</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Time Step&#39;</span><span class="p">)</span>
+    <span class="n">ax1</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Amplitude&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+    <span class="n">ax1</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
 
-    # 绘制注意力权重（红色虚线）
-    ax2 = ax1.twinx()
-    ax2.plot(attention_weights, 'r--', alpha=0.7, label='Attention')
-    ax2.set_ylabel('Attention Weight', color='r')
-    ax2.tick_params('y', colors='r')
-    ax2.set_ylim(0, 1.0)
+    <span class="c1"># 绘制注意力权重（红色虚线）</span>
+    <span class="n">ax2</span> <span class="o">=</span> <span class="n">ax1</span><span class="o">.</span><span class="n">twinx</span><span class="p">()</span>
+    <span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">attention_weights</span><span class="p">,</span> <span class="s1">&#39;r--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Attention&#39;</span><span class="p">)</span>
+    <span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Attention Weight&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+    <span class="n">ax2</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+    <span class="n">ax2</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
 
-    plt.title(title)
-    fig.tight_layout()
-    plt.show()
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
-# 主函数
-def main():
-    # 生成数据
-    print(&quot;Generating dataset...&quot;)
-    X, y = generate_dataset(config)
+<span class="c1"># 主函数</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># 生成数据</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Generating dataset...&quot;</span><span class="p">)</span>
+    <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">generate_dataset</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
 
-    # 划分训练集、验证集、测试集
-    X_train, X_temp, y_train, y_temp = train_test_split(
-        X, y, test_size=0.3, random_state=42
-    )
-    X_val, X_test, y_val, y_test = train_test_split(
-        X_temp, y_temp, test_size=0.5, random_state=42
-    )
+    <span class="c1"># 划分训练集、验证集、测试集</span>
+    <span class="n">X_train</span><span class="p">,</span> <span class="n">X_temp</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_temp</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
+        <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span>
+    <span class="p">)</span>
+    <span class="n">X_val</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_val</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
+        <span class="n">X_temp</span><span class="p">,</span> <span class="n">y_temp</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span>
+    <span class="p">)</span>
 
-    # 创建数据加载器
-    train_dataset = TensorDataset(X_train, y_train)
-    val_dataset = TensorDataset(X_val, y_val)
-    test_dataset = TensorDataset(X_test, y_test)
+    <span class="c1"># 创建数据加载器</span>
+    <span class="n">train_dataset</span> <span class="o">=</span> <span class="n">TensorDataset</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+    <span class="n">val_dataset</span> <span class="o">=</span> <span class="n">TensorDataset</span><span class="p">(</span><span class="n">X_val</span><span class="p">,</span> <span class="n">y_val</span><span class="p">)</span>
+    <span class="n">test_dataset</span> <span class="o">=</span> <span class="n">TensorDataset</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
 
-    train_loader = DataLoader(train_dataset, batch_size=config.batch_size, shuffle=True)
-    val_loader = DataLoader(val_dataset, batch_size=config.batch_size)
-    test_loader = DataLoader(test_dataset, batch_size=config.batch_size)
+    <span class="n">train_loader</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span><span class="n">train_dataset</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">batch_size</span><span class="p">,</span> <span class="kp">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">val_loader</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span><span class="n">val_dataset</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">batch_size</span><span class="p">)</span>
+    <span class="n">test_loader</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span><span class="n">test_dataset</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">batch_size</span><span class="p">)</span>
 
-    # 初始化模型
-    model = AttentionModel(input_dim=1, hidden_dim=config.hidden_dim)
+    <span class="c1"># 初始化模型</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">AttentionModel</span><span class="p">(</span><span class="n">input_dim</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">hidden_dim</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">hidden_dim</span><span class="p">)</span>
 
-    # 训练模型
-    print(&quot;Training model...&quot;)
-    model, train_losses, val_losses = train_model(model, train_loader, val_loader, config)
+    <span class="c1"># 训练模型</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Training model...&quot;</span><span class="p">)</span>
+    <span class="n">model</span><span class="p">,</span> <span class="n">train_losses</span><span class="p">,</span> <span class="n">val_losses</span> <span class="o">=</span> <span class="n">train_model</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">train_loader</span><span class="p">,</span> <span class="n">val_loader</span><span class="p">,</span> <span class="n">config</span><span class="p">)</span>
 
-    # 评估模型
-    print(&quot;\nEvaluating model on test set...&quot;)
-    evaluate_model(model, test_loader, config)
+    <span class="c1"># 评估模型</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Evaluating model on test set...&quot;</span><span class="p">)</span>
+    <span class="n">evaluate_model</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">test_loader</span><span class="p">,</span> <span class="n">config</span><span class="p">)</span>
 
-    # 可视化训练过程
-    plt.figure(figsize=(10, 5))
-    plt.plot(train_losses, label='Train Loss')
-    plt.plot(val_losses, label='Validation Loss')
-    plt.xlabel('Epochs')
-    plt.ylabel('Loss')
-    plt.legend()
-    plt.title('Training and Validation Loss')
-    plt.show()
+    <span class="c1"># 可视化训练过程</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">train_losses</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Train Loss&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">val_losses</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Validation Loss&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Epochs&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Loss&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Training and Validation Loss&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
-    # 可视化注意力机制
-    print(&quot;\nVisualizing attention for sample examples...&quot;)
-    model.eval()
-    with torch.no_grad():
-        # 随机选择一些测试样本
-        indices = np.random.choice(len(test_dataset), 4, replace=False)
-        for i in indices:
-            sample_X, sample_y = test_dataset[i]
-            sample_X = sample_X.unsqueeze(0).to(config.device)  # 增加批次维度
-            _, attention_weights = model(sample_X)
+    <span class="c1"># 可视化注意力机制</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Visualizing attention for sample examples...&quot;</span><span class="p">)</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
+    <span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">no_grad</span><span class="p">():</span>
+        <span class="c1"># 随机选择一些测试样本</span>
+        <span class="kp">indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">test_dataset</span><span class="p">),</span> <span class="mi">4</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="kp">indices</span><span class="p">:</span>
+            <span class="n">sample_X</span><span class="p">,</span> <span class="n">sample_y</span> <span class="o">=</span> <span class="n">test_dataset</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">sample_X</span> <span class="o">=</span> <span class="n">sample_X</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">device</span><span class="p">)</span>  <span class="c1"># 增加批次维度</span>
+            <span class="n">_</span><span class="p">,</span> <span class="n">attention_weights</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">sample_X</span><span class="p">)</span>
 
-            # 转换回CPU和numpy
-            sample_X = sample_X.cpu().numpy().squeeze()
-            attention_weights = attention_weights.cpu().numpy().squeeze()
+            <span class="c1"># 转换回CPU和numpy</span>
+            <span class="n">sample_X</span> <span class="o">=</span> <span class="n">sample_X</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span><span class="o">.</span><span class="n">numpy</span><span class="p">()</span><span class="o">.</span><span class="kp">squeeze</span><span class="p">()</span>
+            <span class="n">attention_weights</span> <span class="o">=</span> <span class="n">attention_weights</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span><span class="o">.</span><span class="n">numpy</span><span class="p">()</span><span class="o">.</span><span class="kp">squeeze</span><span class="p">()</span>
 
-            # 绘制
-            title = f&quot;Sample {i} - {'Anomaly' if sample_y.item() == 1 else 'Normal'}&quot;
-            plot_attention(sample_X, attention_weights, title)
+            <span class="c1"># 绘制</span>
+            <span class="n">title</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Sample </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="s1">&#39;Anomaly&#39;</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">sample_y</span><span class="o">.</span><span class="kp">item</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="s1">&#39;Normal&#39;</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="n">plot_attention</span><span class="p">(</span><span class="n">sample_X</span><span class="p">,</span> <span class="n">attention_weights</span><span class="p">,</span> <span class="n">title</span><span class="p">)</span>
 
-if __name__ == &quot;__main__&quot;:
-    main()
-</code></pre>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</code></pre></div>
   </div>
 
   <div class="post-nav">

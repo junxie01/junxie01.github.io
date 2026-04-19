@@ -138,8 +138,8 @@
     <h3><a href="/blog/2024-06-06-no-audio-in-playing-browser-video.html">Fedora下浏览器播放视频卡住没有声音</a></h3>
     <p class="excerpt"><p>之前整了nodesk之后就出现了视频播放的问题。用mplayer播放视频时，卡住。用浏览器播放视频的时候卡住，关掉音频之后视频正常播放了。但是没有声音。
 然后</p>
-<pre class="highlight"><code>systemctl --user stop wireplumber
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="n">systemctl</span><span class="w"> </span><span class="o">--</span><span class="n">user</span><span class="w"> </span><span class="n">stop</span><span class="w"> </span><span class="n">wireplumber</span>
+</code></pre></div>
 
 <p>关掉了wireplumber以后mplayer和浏览器上都能正常播放了。但每&hellip;</p></p>
     
@@ -155,8 +155,8 @@
     <span class="post-date">2024-06-06</span>
     <h3><a href="/blog/2024-06-06-no-audio-control.html">Fedora下没有音量控制了</a></h3>
     <p class="excerpt"><p>之前安装todesk没有搞定，总是连不上，于是又把它卸载了。卸载的时候把pulseaudio.x86_64也给卸载了。然后发现没有音量控制条了。然后又给安装回来</p>
-<pre class="highlight"><code>sudo dnf install pulseaudio
-</code></pre>
+<div class="highlight"><pre><span></span><code>sudo dnf install pulseaudio
+</code></pre></div>
 
 <p>结果mplayer也出问题了。播放视频的时候卡住，其中一个问题是：
 ```
@@ -176,8 +176,8 @@ do_co&hellip;</p></p>
     <p class="excerpt"><p>运行LaTeX的时候遇到! LaTeX Error: File `xxx&rsquo; not found.这个错误的时候该怎么办？</p>
 <!--less-->
 <p>这样就可以了</p>
-<pre class="highlight"><code>sudo dnf install 'tex(xxx)'
-</code></pre>
+<div class="highlight"><pre><span></span><code>sudo dnf install &#39;tex(xxx)&#39;
+</code></pre></div>
 
 <p>然后就会帮你安装缺失的文件。</p></p>
     
@@ -284,14 +284,14 @@ do_co&hellip;</p></p>
 <!-- less -->
 <h1 id="_1">安装插件</h1>
 <p>命令：</p>
-<pre class="highlight"><code>npm install hexo-blog-encrypt
-</code></pre>
+<div class="highlight"><pre><span></span><code>npm install hexo-blog-encrypt
+</code></pre></div>
 
 <h1 id="_2">修改配置</h1>
 <p>在本目录配置文件_config.yml加入：</p>
-<pre class="highlight"><code>encrypt:
-   enable: true
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="n">encrypt</span><span class="o">:</span>
+<span class="w">   </span><span class="n">enable</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
+</code></pre></div>
 
 <h1 id="_3">博客文章加密&hellip;</h1></p>
     

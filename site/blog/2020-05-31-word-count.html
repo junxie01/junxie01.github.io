@@ -48,23 +48,23 @@
     <p>想给网站显示字数统计，搜到<a href="https://www.jianshu.com/p/baea8c95e39b">这里</a>。根据说明开始设置。结果网站都差点挂掉。检查了好久也没有发现问题，以为玩完了。然后马上开始重新建hexo。结果还是有问题。后来终于发现在网站设置文件插入功能字段时误插到其他字段导致出错。注销以后问题就修复了。然后又搜索到<a href="https://blog.csdn.net/mqdxiaoxiao/article/details/93670772">这里</a>。没想到搞定了，使用的插件是hexo-symbols-count-time。设置步骤如下：</p>
 <!-- more -->
 <h2 id="1">1. 安装插件</h2>
-<pre class="highlight"><code class="language-bash">$ npm install hexo-symbols-count-time --save
-</code></pre>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>npm<span class="w"> </span>install<span class="w"> </span>hexo-symbols-count-time<span class="w"> </span>--save
+</code></pre></div>
 
 <h2 id="2">2. 配置文件设置</h2>
 <p>在网站配置文件中加入如下字段：</p>
-<pre class="highlight"><code>symbols_count_time:
-  symbols: true                # 文章字数统计
-  time: true                   # 文章阅读时长
-  total_symbols: true          # 站点总字数统计
-  total_time: true             # 站点总阅读时长
-  exclude_codeblock: false     # 排除代码字数统计
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="n">symbols_count_time</span><span class="o">:</span>
+<span class="w">  </span><span class="n">symbols</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w">                </span><span class="err">#</span><span class="w"> </span><span class="err">文章字数统计</span>
+<span class="w">  </span><span class="n">time</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w">                   </span><span class="err">#</span><span class="w"> </span><span class="err">文章阅读时长</span>
+<span class="w">  </span><span class="n">total_symbols</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w">          </span><span class="err">#</span><span class="w"> </span><span class="err">站点总字数统计</span>
+<span class="w">  </span><span class="n">total_time</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w">             </span><span class="err">#</span><span class="w"> </span><span class="err">站点总阅读时长</span>
+<span class="w">  </span><span class="n">exclude_codeblock</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="w">     </span><span class="err">#</span><span class="w"> </span><span class="err">排除代码字数统计</span>
+</code></pre></div>
 
 <h2 id="3">3. 主题配置文件设置</h2>
 <p>在主题配置文件加入如下字段：</p>
-<pre class="highlight"><code># Post wordcount display settings
-# Dependencies: https://github.com/theme-next/hexo-symbols-count-time
+<div class="highlight"><pre><span></span><code><span class="gh">#</span> Post wordcount display settings
+<span class="gh">#</span> Dependencies: https://github.com/theme-next/hexo-symbols-count-time
 symbols_count_time:
   separated_meta: true     # 是否另起一行（true的话不和发表时间等同一行）
   item_text_post: true     # 首页文章统计数量前是否显示文字描述（本文字数、阅读时长）
@@ -72,7 +72,7 @@ symbols_count_time:
   awl: 4                   # Average Word Length
   wpm: 275                 # Words Per Minute（每分钟阅读词数）
   suffix: mins
-</code></pre>
+</code></pre></div>
 
 <p>然后大功告成。</p>
   </div>

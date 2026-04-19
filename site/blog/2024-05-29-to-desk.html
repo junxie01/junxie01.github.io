@@ -46,32 +46,32 @@
     <p>&emsp;&emsp;远程登陆服务器进行工作是牛马必备技能。之前用的是teamviewer，老是掉线。从学生那里知道todesk还不错。于是就安装之。</p>
 <!--less-->
 <p>&emsp;&emsp;先从todesk<a href="https://www.todesk.com/linux.html">主页</a>下载适合的Linux版本。然后用命令：</p>
-<pre class="highlight"><code class="language-bash">sudo dnf rpm Uvh todesk-v4.7.2.0-x86_64.rpm
-</code></pre>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>dnf<span class="w"> </span>rpm<span class="w"> </span>Uvh<span class="w"> </span>todesk-v4.7.2.0-x86_64.rpm
+</code></pre></div>
 
 <p>&emsp;&emsp;此外还得安装一个库</p>
-<pre class="highlight"><code>sudo dnf install libappindicator-gtk3
-</code></pre>
+<div class="highlight"><pre><span></span><code>sudo dnf install libappindicator-gtk3
+</code></pre></div>
 
 <p>&emsp;&emsp;然后运行todesk，结果显示“error while loading shared libraries: libappindicator3.so.1: cannot open shared object file: No such file or directory“,明明已经安装了。很奇怪。
 &emsp;&emsp;然后</p>
-<pre class="highlight"><code>find / -name libappindicator3.so.1
-</code></pre>
+<div class="highlight"><pre><span></span><code>find / -name libappindicator3.so.1
+</code></pre></div>
 
 <p>&emsp;&emsp;找到在/usr/lib下。
 &emsp;&emsp;然后在.bashrc中加入</p>
-<pre class="highlight"><code>export LD_LIBRARY_PATH:${LD_LIBRARY_PATH}:/usr/lib/
-source ~/.bashrc
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="k">export</span><span class="w"> </span><span class="n">LD_LIBRARY_PATH</span><span class="p">:</span><span class="o">$</span><span class="p">{</span><span class="n">LD_LIBRARY_PATH</span><span class="p">}:</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span>
+<span class="n">source</span><span class="w"> </span><span class="o">~/.</span><span class="n">bashrc</span>
+</code></pre></div>
 
 <p>&emsp;&emsp;然后再运行todesk。结果显示安装的是libappindicator安装的是32位的，不匹配。
 然后</p>
-<pre class="highlight"><code>sudo dnf search libappindicator
-</code></pre>
+<div class="highlight"><pre><span></span><code>sudo dnf search libappindicator
+</code></pre></div>
 
 <p>&emsp;&emsp;找到libappindicator-gtk3.x86_64，然后：</p>
-<pre class="highlight"><code>sudo dnf install libappindicator-gtk3.x86_64
-</code></pre>
+<div class="highlight"><pre><span></span><code>sudo dnf install libappindicator-gtk3.x86_64
+</code></pre></div>
 
 <p>&emsp;&emsp;然后就可以了。</p>
   </div>

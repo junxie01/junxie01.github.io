@@ -50,56 +50,56 @@
 <p>首先是Mercator投影，最开始学的时候就是用这个。GMT主页说它可能是最著名的。它是等角圆柱形投影。</p>
 <p><img src="/images/mercater.png" alt="蒙卡托投影"></p>
 <p>脚本如下：</p>
-<pre class="highlight"><code>#!/bin/bash
-gmt begin mercater png
-gmt coast -R90/140/10/50 -JM6i -Bxa10f5 -Bya10f5 -Dl -W0p -A5000 -Ggray
-gmt end
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+gmt<span class="w"> </span>begin<span class="w"> </span>mercater<span class="w"> </span>png
+gmt<span class="w"> </span>coast<span class="w"> </span>-R90/140/10/50<span class="w"> </span>-JM6i<span class="w"> </span>-Bxa10f5<span class="w"> </span>-Bya10f5<span class="w"> </span>-Dl<span class="w"> </span>-W0p<span class="w"> </span>-A5000<span class="w"> </span>-Ggray
+gmt<span class="w"> </span>end
+</code></pre></div>
 
 <h2 id="_2">米勒投影</h2>
 <p>米勒投影把整个地球搞的挺方，比其他的扁的好看一点儿。</p>
 <p><img src="/images/miller.png" alt="米勒投影"></p>
-<pre class="highlight"><code>#!/bin/bash
-gmt begin miller png
-gmt coast -R-180/180/-90/90 -JJ6i -Ggray -Swhite -Dl -Bxa90 -Bya45 -A30000 -W0p 
-gmt end
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+gmt<span class="w"> </span>begin<span class="w"> </span>miller<span class="w"> </span>png
+gmt<span class="w"> </span>coast<span class="w"> </span>-R-180/180/-90/90<span class="w"> </span>-JJ6i<span class="w"> </span>-Ggray<span class="w"> </span>-Swhite<span class="w"> </span>-Dl<span class="w"> </span>-Bxa90<span class="w"> </span>-Bya45<span class="w"> </span>-A30000<span class="w"> </span>-W0p<span class="w"> </span>
+gmt<span class="w"> </span>end
+</code></pre></div>
 
 <h2 id="_3">圆柱等积投影</h2>
 <p>可以画矩形扁扁的地球。</p>
 <p><img src="/images/cyl1.png" alt="&ldquo;圆柱等积投影&rdquo; &ldquo;width:800,height:600&rdquo;"></p>
-<pre class="highlight"><code>#!/bin/bash
-gmt begin cyl1 png
-gmt coast -R-180/180/-90/90 -JY0/0/6i -Ggray -Swhite -Dl -Bxa90 -Bya45 -A30000 -W0p 
-gmt end
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+gmt<span class="w"> </span>begin<span class="w"> </span>cyl1<span class="w"> </span>png
+gmt<span class="w"> </span>coast<span class="w"> </span>-R-180/180/-90/90<span class="w"> </span>-JY0/0/6i<span class="w"> </span>-Ggray<span class="w"> </span>-Swhite<span class="w"> </span>-Dl<span class="w"> </span>-Bxa90<span class="w"> </span>-Bya45<span class="w"> </span>-A30000<span class="w"> </span>-W0p<span class="w"> </span>
+gmt<span class="w"> </span>end
+</code></pre></div>
 
 <h2 id="_4">圆柱等距投影</h2>
 <p>也是扁扁的地球。</p>
 <p><img src="/images/cyl2.png" alt="圆柱等距投影"></p>
-<pre class="highlight"><code>#!/bin/bash
-gmt begin cyl2 png
-gmt coast -R-180/180/-90/90 -JQ6i -Ggray -Swhite -Dl -Bxa90 -Bya45 -A30000 -W0p 
-gmt end
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+gmt<span class="w"> </span>begin<span class="w"> </span>cyl2<span class="w"> </span>png
+gmt<span class="w"> </span>coast<span class="w"> </span>-R-180/180/-90/90<span class="w"> </span>-JQ6i<span class="w"> </span>-Ggray<span class="w"> </span>-Swhite<span class="w"> </span>-Dl<span class="w"> </span>-Bxa90<span class="w"> </span>-Bya45<span class="w"> </span>-A30000<span class="w"> </span>-W0p<span class="w"> </span>
+gmt<span class="w"> </span>end
+</code></pre></div>
 
 <h2 id="_5">方位等距投影</h2>
 <p>一般以某个点为中心的画法，例如接收函数台站和事件分布。</p>
 <p><img src="/gmt-projection/azi1.png" ></p>
-<pre class="highlight"><code>#!/bin/bash
-gmt begin azi1 png
-gmt coast -Rg -JE0/0/6i -Ggray -Swhite -Dl -Bxa90 -Bya45 -A30000 -W0p 
-gmt end
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+gmt<span class="w"> </span>begin<span class="w"> </span>azi1<span class="w"> </span>png
+gmt<span class="w"> </span>coast<span class="w"> </span>-Rg<span class="w"> </span>-JE0/0/6i<span class="w"> </span>-Ggray<span class="w"> </span>-Swhite<span class="w"> </span>-Dl<span class="w"> </span>-Bxa90<span class="w"> </span>-Bya45<span class="w"> </span>-A30000<span class="w"> </span>-W0p<span class="w"> </span>
+gmt<span class="w"> </span>end
+</code></pre></div>
 
 <h2 id="_6">正投影</h2>
 <p>从无限远处看地球。可以简单理解为外星人视角。</p>
 <p><img src="/gmt-projection/orth.png" ></p>
-<pre class="highlight"><code>#!/bin/bash
-gmt begin orth png
-gmt coast -R-180/180/-90/90 -JG0/0/6i -Ggray -Swhite -Dl -Bxa90 -Bya45 -A30000 -W0p 
-gmt end
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+gmt<span class="w"> </span>begin<span class="w"> </span>orth<span class="w"> </span>png
+gmt<span class="w"> </span>coast<span class="w"> </span>-R-180/180/-90/90<span class="w"> </span>-JG0/0/6i<span class="w"> </span>-Ggray<span class="w"> </span>-Swhite<span class="w"> </span>-Dl<span class="w"> </span>-Bxa90<span class="w"> </span>-Bya45<span class="w"> </span>-A30000<span class="w"> </span>-W0p<span class="w"> </span>
+gmt<span class="w"> </span>end
+</code></pre></div>
 
 <h2 id="_7">透视投影</h2>
 <p>gmt文档说是飞行器视角，我愿意称之为上帝视角，你想怎么看怎么看。</p>
@@ -113,36 +113,36 @@ gmt end
 <li>视场的宽度和高度以度为单位（60）。这个数字取决于你是用肉眼观察（在这种情况下，你的视野大约为 60º 宽），还是用双筒望远镜等工具观察。</li>
 </ul>
 <p><img src="/gmt-projection/per.png" ></p>
-<pre class="highlight"><code>#!/bin/bash
-gmt begin per png
-gmt coast -R-180/180/-90/90 -JG0/0/6000/90/0/0/60/60/5i -Ggray -Swhite -Dl -Bxa90 -Bya45 -A30000 -W0p 
-gmt end
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+gmt<span class="w"> </span>begin<span class="w"> </span>per<span class="w"> </span>png
+gmt<span class="w"> </span>coast<span class="w"> </span>-R-180/180/-90/90<span class="w"> </span>-JG0/0/6000/90/0/0/60/60/5i<span class="w"> </span>-Ggray<span class="w"> </span>-Swhite<span class="w"> </span>-Dl<span class="w"> </span>-Bxa90<span class="w"> </span>-Bya45<span class="w"> </span>-A30000<span class="w"> </span>-W0p<span class="w"> </span>
+gmt<span class="w"> </span>end
+</code></pre></div>
 
 <h2 id="_8">罗宾逊投影</h2>
 <p><img src="/gmt-projection/rob.png" ></p>
-<pre class="highlight"><code>#!/bin/bash
-gmt begin rob png
-gmt coast -R-180/180/-90/90 -JN5i -Ggray -Swhite -Dl -Bxa90 -Bya45 -A30000 -W0p 
-gmt end
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+gmt<span class="w"> </span>begin<span class="w"> </span>rob<span class="w"> </span>png
+gmt<span class="w"> </span>coast<span class="w"> </span>-R-180/180/-90/90<span class="w"> </span>-JN5i<span class="w"> </span>-Ggray<span class="w"> </span>-Swhite<span class="w"> </span>-Dl<span class="w"> </span>-Bxa90<span class="w"> </span>-Bya45<span class="w"> </span>-A30000<span class="w"> </span>-W0p<span class="w"> </span>
+gmt<span class="w"> </span>end
+</code></pre></div>
 
 <h2 id="_9">莫尔维德投影</h2>
 <p><img src="/gmt-projection/moll.png"></p>
-<pre class="highlight"><code>#!/bin/bash
-gmt begin moll png
-gmt coast -Rd -JW5i -Ggray -Swhite -Dl -Bxa90 -Bya45 -A30000 -W0p 
-gmt end
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+gmt<span class="w"> </span>begin<span class="w"> </span>moll<span class="w"> </span>png
+gmt<span class="w"> </span>coast<span class="w"> </span>-Rd<span class="w"> </span>-JW5i<span class="w"> </span>-Ggray<span class="w"> </span>-Swhite<span class="w"> </span>-Dl<span class="w"> </span>-Bxa90<span class="w"> </span>-Bya45<span class="w"> </span>-A30000<span class="w"> </span>-W0p<span class="w"> </span>
+gmt<span class="w"> </span>end
+</code></pre></div>
 
 <h2 id="_10">埃克特投影</h2>
 <p>好像很多全球成像结果就是用的这个投影。</p>
 <p><img src="/gmt-projection/eck.png" ></p>
-<pre class="highlight"><code>#!/bin/bash
-gmt begin eck png
-gmt coast -Rd -JKf5i -Ggray -Swhite -Dl -Bxa90 -Bya45 -A30000 -W0p 
-gmt end
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+gmt<span class="w"> </span>begin<span class="w"> </span>eck<span class="w"> </span>png
+gmt<span class="w"> </span>coast<span class="w"> </span>-Rd<span class="w"> </span>-JKf5i<span class="w"> </span>-Ggray<span class="w"> </span>-Swhite<span class="w"> </span>-Dl<span class="w"> </span>-Bxa90<span class="w"> </span>-Bya45<span class="w"> </span>-A30000<span class="w"> </span>-W0p<span class="w"> </span>
+gmt<span class="w"> </span>end
+</code></pre></div>
   </div>
 
   <div class="post-nav">

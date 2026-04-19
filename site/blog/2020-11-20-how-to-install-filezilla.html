@@ -50,66 +50,66 @@
 &emsp;&emsp;于是下载libfilezilla-0.25.0.tar.bz2，解压，安装libfilezilla-0.25.0，编译过程出错，显示没有安装有nettle。
 &emsp;&emsp;于是下载nettle-3.6.tar.gz，解压编译安装nettle-3.6一次通过。
 &emsp;&emsp;然后在libfilezilla-0.25.0下预编译，出错，显示：</p>
-<pre class="highlight"><code class="language-bash">configure: error: hogweed 3.3 greater was not found. You can get it from https://www.lysator.liu.se/~nisse/nettle/
-</code></pre>
+<div class="highlight"><pre><span></span><code>configure:<span class="w"> </span>error:<span class="w"> </span>hogweed<span class="w"> </span><span class="m">3</span>.3<span class="w"> </span>greater<span class="w"> </span>was<span class="w"> </span>not<span class="w"> </span>found.<span class="w"> </span>You<span class="w"> </span>can<span class="w"> </span>get<span class="w"> </span>it<span class="w"> </span>from<span class="w"> </span>https://www.lysator.liu.se/~nisse/nettle/
+</code></pre></div>
 
 <p>&emsp;&emsp;于是重装nettle-3.6</p>
-<pre class="highlight"><code class="language-bash">./configure --enable-mini-gmp
+<div class="highlight"><pre><span></span><code>./configure<span class="w"> </span>--enable-mini-gmp
 make
-make check
-make install
-</code></pre>
+make<span class="w"> </span>check
+make<span class="w"> </span>install
+</code></pre></div>
 
 <p>&emsp;&emsp;安装成功，然后在libfilezilla-0.25.0下预编译，出错，显示：</p>
-<pre class="highlight"><code class="language-bash">configure: error: GnuTLS 3.5.8 or greater was not found. You can get it from https://gnutls.org/
-</code></pre>
+<div class="highlight"><pre><span></span><code>configure:<span class="w"> </span>error:<span class="w"> </span>GnuTLS<span class="w"> </span><span class="m">3</span>.5.8<span class="w"> </span>or<span class="w"> </span>greater<span class="w"> </span>was<span class="w"> </span>not<span class="w"> </span>found.<span class="w"> </span>You<span class="w"> </span>can<span class="w"> </span>get<span class="w"> </span>it<span class="w"> </span>from<span class="w"> </span>https://gnutls.org/
+</code></pre></div>
 
 <p>&emsp;&emsp;然后下载gnutls-3.6.15.tar.xz，解压gnutls-3.6.15编译出错，显示：</p>
-<pre class="highlight"><code class="language-bash">configure: error: 
+<div class="highlight"><pre><span></span><code>configure:<span class="w"> </span>error:<span class="w"> </span>
 ***
-*** gmp was not found.
-</code></pre>
+***<span class="w"> </span>gmp<span class="w"> </span>was<span class="w"> </span>not<span class="w"> </span>found.
+</code></pre></div>
 
 <p>&emsp;&emsp;然后下载gmp-6.1.0.tar.bz2，解压gmp-6.1.0，编译安装完成。回到gnutls-3.6.15再次编译出错，显示：</p>
-<pre class="highlight"><code class="language-bash">configure: error: 
-  ***
-  *** Libtasn1 4.9 was not found. To use the included one, use --with-included-libtasn1
-</code></pre>
+<div class="highlight"><pre><span></span><code>configure:<span class="w"> </span>error:<span class="w"> </span>
+<span class="w">  </span>***
+<span class="w">  </span>***<span class="w"> </span>Libtasn1<span class="w"> </span><span class="m">4</span>.9<span class="w"> </span>was<span class="w"> </span>not<span class="w"> </span>found.<span class="w"> </span>To<span class="w"> </span>use<span class="w"> </span>the<span class="w"> </span>included<span class="w"> </span>one,<span class="w"> </span>use<span class="w"> </span>--with-included-libtasn1
+</code></pre></div>
 
 <p>&emsp;&emsp;然后下载libtasn1-4.9.tar.gz，解压libtasn1-4.9，编译出错，显示：</p>
-<pre class="highlight"><code class="language-bash">ASN1.c: In function '_asn1_yyparse':
-ASN1.y:152:47: error: '__builtin___snprintf_chk' output may be truncated before the last format character [-Werror=format-truncation=]
- neg_num : '-' NUM     {snprintf($$,sizeof($$),&quot;-%s&quot;,$2);}
-                                               ^~~~~
-In file included from /usr/include/stdio.h:862:0,
-                 from ./int.h:31,
-                 from ASN1.y:30:
-/usr/include/x86_64-linux-gnu/bits/stdio2.h:64:10: note: '__builtin___snprintf_chk' output between 2 and 66 bytes into a destination of size 65
-   return __builtin___snprintf_chk (__s, __n, __USE_FORTIFY_LEVEL - 1,
-          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        __bos (__s), __fmt, __va_arg_pack ());
-        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-ASN1.y:164:47: error: '__builtin___snprintf_chk' output may be truncated before the last format character [-Werror=format-truncation=]
-                 | '-' NUM        {snprintf($$,sizeof($$),&quot;-%s&quot;,$2);}
-                                               ^~~~~
-In file included from /usr/include/stdio.h:862:0,
-                 from ./int.h:31,
-                 from ASN1.y:30:
-/usr/include/x86_64-linux-gnu/bits/stdio2.h:64:10: note: '__builtin___snprintf_chk' output between 2 and 66 bytes into a destination of size 65
-   return __builtin___snprintf_chk (__s, __n, __USE_FORTIFY_LEVEL - 1,
-          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        __bos (__s), __fmt, __va_arg_pack ());
-        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-cc1: all warnings being treated as errors
-Makefile:1112: recipe for target 'ASN1.lo' failed
-make[2]: *** [ASN1.lo] Error 1
-make[2]: Leaving directory '/home/junxie/Downloads/libtasn1-4.9/lib'
-Makefile:1176: recipe for target 'check-recursive' failed
-make[1]: *** [check-recursive] Error 1
-make[1]: Leaving directory '/home/junxie/Downloads/libtasn1-4.9/lib'
-Makefile:1009: recipe for target 'check-recursive' failed
-make: *** [check-recursive] Error 1
-</code></pre>
+<div class="highlight"><pre><span></span><code>ASN1.c:<span class="w"> </span>In<span class="w"> </span><span class="k">function</span><span class="w"> </span><span class="s1">&#39;_asn1_yyparse&#39;</span>:
+ASN1.y:152:47:<span class="w"> </span>error:<span class="w"> </span><span class="s1">&#39;__builtin___snprintf_chk&#39;</span><span class="w"> </span>output<span class="w"> </span>may<span class="w"> </span>be<span class="w"> </span>truncated<span class="w"> </span>before<span class="w"> </span>the<span class="w"> </span>last<span class="w"> </span>format<span class="w"> </span>character<span class="w"> </span><span class="o">[</span>-Werror<span class="o">=</span>format-truncation<span class="o">=]</span>
+<span class="w"> </span>neg_num<span class="w"> </span>:<span class="w"> </span><span class="s1">&#39;-&#39;</span><span class="w"> </span>NUM<span class="w">     </span><span class="o">{</span>snprintf<span class="o">(</span><span class="nv">$$</span>,sizeof<span class="o">(</span><span class="nv">$$</span><span class="o">)</span>,<span class="s2">&quot;-%s&quot;</span>,<span class="nv">$2</span><span class="o">)</span><span class="p">;</span><span class="o">}</span>
+<span class="w">                                               </span>^~~~~
+In<span class="w"> </span>file<span class="w"> </span>included<span class="w"> </span>from<span class="w"> </span>/usr/include/stdio.h:862:0,
+<span class="w">                 </span>from<span class="w"> </span>./int.h:31,
+<span class="w">                 </span>from<span class="w"> </span>ASN1.y:30:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:64:10:<span class="w"> </span>note:<span class="w"> </span><span class="s1">&#39;__builtin___snprintf_chk&#39;</span><span class="w"> </span>output<span class="w"> </span>between<span class="w"> </span><span class="m">2</span><span class="w"> </span>and<span class="w"> </span><span class="m">66</span><span class="w"> </span>bytes<span class="w"> </span>into<span class="w"> </span>a<span class="w"> </span>destination<span class="w"> </span>of<span class="w"> </span>size<span class="w"> </span><span class="m">65</span>
+<span class="w">   </span><span class="k">return</span><span class="w"> </span>__builtin___snprintf_chk<span class="w"> </span><span class="o">(</span>__s,<span class="w"> </span>__n,<span class="w"> </span>__USE_FORTIFY_LEVEL<span class="w"> </span>-<span class="w"> </span><span class="m">1</span>,
+<span class="w">          </span>^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="w">        </span>__bos<span class="w"> </span><span class="o">(</span>__s<span class="o">)</span>,<span class="w"> </span>__fmt,<span class="w"> </span>__va_arg_pack<span class="w"> </span><span class="o">())</span><span class="p">;</span>
+<span class="w">        </span>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ASN1.y:164:47:<span class="w"> </span>error:<span class="w"> </span><span class="s1">&#39;__builtin___snprintf_chk&#39;</span><span class="w"> </span>output<span class="w"> </span>may<span class="w"> </span>be<span class="w"> </span>truncated<span class="w"> </span>before<span class="w"> </span>the<span class="w"> </span>last<span class="w"> </span>format<span class="w"> </span>character<span class="w"> </span><span class="o">[</span>-Werror<span class="o">=</span>format-truncation<span class="o">=]</span>
+<span class="w">                 </span><span class="p">|</span><span class="w"> </span><span class="s1">&#39;-&#39;</span><span class="w"> </span>NUM<span class="w">        </span><span class="o">{</span>snprintf<span class="o">(</span><span class="nv">$$</span>,sizeof<span class="o">(</span><span class="nv">$$</span><span class="o">)</span>,<span class="s2">&quot;-%s&quot;</span>,<span class="nv">$2</span><span class="o">)</span><span class="p">;</span><span class="o">}</span>
+<span class="w">                                               </span>^~~~~
+In<span class="w"> </span>file<span class="w"> </span>included<span class="w"> </span>from<span class="w"> </span>/usr/include/stdio.h:862:0,
+<span class="w">                 </span>from<span class="w"> </span>./int.h:31,
+<span class="w">                 </span>from<span class="w"> </span>ASN1.y:30:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:64:10:<span class="w"> </span>note:<span class="w"> </span><span class="s1">&#39;__builtin___snprintf_chk&#39;</span><span class="w"> </span>output<span class="w"> </span>between<span class="w"> </span><span class="m">2</span><span class="w"> </span>and<span class="w"> </span><span class="m">66</span><span class="w"> </span>bytes<span class="w"> </span>into<span class="w"> </span>a<span class="w"> </span>destination<span class="w"> </span>of<span class="w"> </span>size<span class="w"> </span><span class="m">65</span>
+<span class="w">   </span><span class="k">return</span><span class="w"> </span>__builtin___snprintf_chk<span class="w"> </span><span class="o">(</span>__s,<span class="w"> </span>__n,<span class="w"> </span>__USE_FORTIFY_LEVEL<span class="w"> </span>-<span class="w"> </span><span class="m">1</span>,
+<span class="w">          </span>^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="w">        </span>__bos<span class="w"> </span><span class="o">(</span>__s<span class="o">)</span>,<span class="w"> </span>__fmt,<span class="w"> </span>__va_arg_pack<span class="w"> </span><span class="o">())</span><span class="p">;</span>
+<span class="w">        </span>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cc1:<span class="w"> </span>all<span class="w"> </span>warnings<span class="w"> </span>being<span class="w"> </span>treated<span class="w"> </span>as<span class="w"> </span>errors
+Makefile:1112:<span class="w"> </span>recipe<span class="w"> </span><span class="k">for</span><span class="w"> </span>target<span class="w"> </span><span class="s1">&#39;ASN1.lo&#39;</span><span class="w"> </span>failed
+make<span class="o">[</span><span class="m">2</span><span class="o">]</span>:<span class="w"> </span>***<span class="w"> </span><span class="o">[</span>ASN1.lo<span class="o">]</span><span class="w"> </span>Error<span class="w"> </span><span class="m">1</span>
+make<span class="o">[</span><span class="m">2</span><span class="o">]</span>:<span class="w"> </span>Leaving<span class="w"> </span>directory<span class="w"> </span><span class="s1">&#39;/home/junxie/Downloads/libtasn1-4.9/lib&#39;</span>
+Makefile:1176:<span class="w"> </span>recipe<span class="w"> </span><span class="k">for</span><span class="w"> </span>target<span class="w"> </span><span class="s1">&#39;check-recursive&#39;</span><span class="w"> </span>failed
+make<span class="o">[</span><span class="m">1</span><span class="o">]</span>:<span class="w"> </span>***<span class="w"> </span><span class="o">[</span>check-recursive<span class="o">]</span><span class="w"> </span>Error<span class="w"> </span><span class="m">1</span>
+make<span class="o">[</span><span class="m">1</span><span class="o">]</span>:<span class="w"> </span>Leaving<span class="w"> </span>directory<span class="w"> </span><span class="s1">&#39;/home/junxie/Downloads/libtasn1-4.9/lib&#39;</span>
+Makefile:1009:<span class="w"> </span>recipe<span class="w"> </span><span class="k">for</span><span class="w"> </span>target<span class="w"> </span><span class="s1">&#39;check-recursive&#39;</span><span class="w"> </span>failed
+make:<span class="w"> </span>***<span class="w"> </span><span class="o">[</span>check-recursive<span class="o">]</span><span class="w"> </span>Error<span class="w"> </span><span class="m">1</span>
+</code></pre></div>
 
 <p>&emsp;&emsp;至此，我已几近崩溃，已经不知道自己在哪儿，是要干啥。网上已经几乎找不到相关问题词条，估计还没有人遇到过这些问题。
 &emsp;&emsp;很想吐槽一下Linux。虽然用户可以随心所欲DIY，但是起点似乎有点太高。所谓的DIY也不过是把好多人写的代码集合在自己电脑上编译，源代码长什么样我虽然比较关心，但哪有时间闲情和精力去看？

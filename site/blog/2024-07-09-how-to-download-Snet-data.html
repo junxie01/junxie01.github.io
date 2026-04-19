@@ -51,56 +51,56 @@
 <ol>
 <li>用命令安装HinetPy，用python3.8以上版本，命令为。</li>
 </ol>
-<pre class="highlight"><code>python -m pip install HinetPy
-</code></pre>
+<div class="highlight"><pre><span></span><code>python -m pip install HinetPy
+</code></pre></div>
 
 <ol>
 <li>安装win32tools
 在<a href="https://hinetwww11.bosai.go.jp/auth/manual/?LANG=en">hinet</a>网站下载安装包<a href="https://hinetwww11.bosai.go.jp/auth/manual/dlDialogue.php?r=win32tools">win32tools.tar.gz</a>，运行:</li>
 </ol>
-<pre class="highlight"><code class="language-bash">tar -xvf win32tools.tar.gz
-cd win32tools/
+<div class="highlight"><pre><span></span><code>tar<span class="w"> </span>-xvf<span class="w"> </span>win32tools.tar.gz
+<span class="nb">cd</span><span class="w"> </span>win32tools/
 make
-</code></pre>
+</code></pre></div>
 
 <p>把catwin32.src/catwin32和win2sac.src/win2sac_32拷贝到环境变量认识的位置。</p>
 <h3 id="_2">运行</h3>
 <p>&emsp;&emsp;具体怎么下载数据自己去看说明就好了。我想要下载连续数据，所以写了个循环脚本，如下：</p>
-<pre class="highlight"><code>import os
-from HinetPy import Client
-from HinetPy import win32
-from datetime import datetime,timedelta
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">HinetPy</span><span class="w"> </span><span class="kn">import</span> <span class="n">Client</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">HinetPy</span><span class="w"> </span><span class="kn">import</span> <span class="n">win32</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span><span class="n">timedelta</span>
 
-client = Client (&quot;xxxx&quot;,&quot;xxxx&quot;)
-# 这里输入你自己的账号和密码。自己申请就好了。
-endtime=datetime(2016,8,16,2,0) # 截至时间
-time=datetime(2016,8,16,1,40)   # 开始时间
-dt=timedelta(minutes=20)        # 时间增量（分钟记）
-dir=&quot;data&quot;                      # 数据存在dir下面
-while (time&lt;endtime):
-    print(time,endtime)
-    y=&quot;%04d&quot;%time.year
-    m=&quot;%02d&quot;%time.month
-    d=&quot;%02d&quot;%time.day
-    h=&quot;%02d&quot;%time.hour
-    mm=&quot;%02d&quot;%time.minute
-    name=y+&quot;_&quot;+m+&quot;_&quot;+d+&quot;_&quot;+h+&quot;_&quot;+mm+&quot;.cnt&quot;
-    cname=y+&quot;_&quot;+m+&quot;_&quot;+d+&quot;_&quot;+h+&quot;_&quot;+mm+&quot;.ch&quot;
-    outd=dir+&quot;/&quot;+y+&quot;_&quot;+m+&quot;_&quot;+d+&quot;_&quot;+h+&quot;_&quot;+mm #每20分钟一个文件夹
-    data=dir+&quot;/&quot;+y+&quot;_&quot;+m+&quot;_&quot;+d+&quot;_&quot;+h+&quot;_&quot;+mm+&quot;.cnt&quot;
-    ctable=dir+&quot;/&quot;+y+&quot;_&quot;+m+&quot;_&quot;+d+&quot;_&quot;+h+&quot;_&quot;+mm+&quot;.ch&quot;
-    if not os.path.exists(ctable):
-        # 如果仪器信息文件没有则创建一个空的，这样做可以多跑几个进程，同时下载，并保证不重复。
-        with open(ctable, 'w') as file:
-            pass
-        dat,ctabl = client.get_continuous_waveform(&quot;0120&quot;,time,20,data=name,ctable=cname,outdir=dir) # 下载数据，这里0120就是指代S-net。client.info()可以查看所有台网。 outdir指定保存数据的文件夹。
-        if os.access(data, os.F_OK):
-        # 如果下载成功则进行解压。如果没有数据，强行进行解压，程序就出错跳出来。
-        #if os.path.getsize(data) != 0:
-            win32.extract_sac(data,ctable,outdir=outd) #解压sac。
-            win32.extract_sacpz(ctable, outdir=outd) #解压仪器响应。
-    time=time+dt
-</code></pre>
+<span class="n">client</span> <span class="o">=</span> <span class="n">Client</span> <span class="p">(</span><span class="s2">&quot;xxxx&quot;</span><span class="p">,</span><span class="s2">&quot;xxxx&quot;</span><span class="p">)</span>
+<span class="c1"># 这里输入你自己的账号和密码。自己申请就好了。</span>
+<span class="n">endtime</span><span class="o">=</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2016</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="c1"># 截至时间</span>
+<span class="n">time</span><span class="o">=</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2016</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">40</span><span class="p">)</span>   <span class="c1"># 开始时间</span>
+<span class="n">dt</span><span class="o">=</span><span class="n">timedelta</span><span class="p">(</span><span class="n">minutes</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>        <span class="c1"># 时间增量（分钟记）</span>
+<span class="nb">dir</span><span class="o">=</span><span class="s2">&quot;data&quot;</span>                      <span class="c1"># 数据存在dir下面</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">time</span><span class="o">&lt;</span><span class="n">endtime</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">time</span><span class="p">,</span><span class="n">endtime</span><span class="p">)</span>
+    <span class="n">y</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">%04d</span><span class="s2">&quot;</span><span class="o">%</span><span class="n">time</span><span class="o">.</span><span class="n">year</span>
+    <span class="n">m</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">%02d</span><span class="s2">&quot;</span><span class="o">%</span><span class="n">time</span><span class="o">.</span><span class="n">month</span>
+    <span class="n">d</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">%02d</span><span class="s2">&quot;</span><span class="o">%</span><span class="n">time</span><span class="o">.</span><span class="n">day</span>
+    <span class="n">h</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">%02d</span><span class="s2">&quot;</span><span class="o">%</span><span class="n">time</span><span class="o">.</span><span class="n">hour</span>
+    <span class="n">mm</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">%02d</span><span class="s2">&quot;</span><span class="o">%</span><span class="n">time</span><span class="o">.</span><span class="n">minute</span>
+    <span class="n">name</span><span class="o">=</span><span class="n">y</span><span class="o">+</span><span class="s2">&quot;_&quot;</span><span class="o">+</span><span class="n">m</span><span class="o">+</span><span class="s2">&quot;_&quot;</span><span class="o">+</span><span class="n">d</span><span class="o">+</span><span class="s2">&quot;_&quot;</span><span class="o">+</span><span class="n">h</span><span class="o">+</span><span class="s2">&quot;_&quot;</span><span class="o">+</span><span class="n">mm</span><span class="o">+</span><span class="s2">&quot;.cnt&quot;</span>
+    <span class="n">cname</span><span class="o">=</span><span class="n">y</span><span class="o">+</span><span class="s2">&quot;_&quot;</span><span class="o">+</span><span class="n">m</span><span class="o">+</span><span class="s2">&quot;_&quot;</span><span class="o">+</span><span class="n">d</span><span class="o">+</span><span class="s2">&quot;_&quot;</span><span class="o">+</span><span class="n">h</span><span class="o">+</span><span class="s2">&quot;_&quot;</span><span class="o">+</span><span class="n">mm</span><span class="o">+</span><span class="s2">&quot;.ch&quot;</span>
+    <span class="n">outd</span><span class="o">=</span><span class="nb">dir</span><span class="o">+</span><span class="s2">&quot;/&quot;</span><span class="o">+</span><span class="n">y</span><span class="o">+</span><span class="s2">&quot;_&quot;</span><span class="o">+</span><span class="n">m</span><span class="o">+</span><span class="s2">&quot;_&quot;</span><span class="o">+</span><span class="n">d</span><span class="o">+</span><span class="s2">&quot;_&quot;</span><span class="o">+</span><span class="n">h</span><span class="o">+</span><span class="s2">&quot;_&quot;</span><span class="o">+</span><span class="n">mm</span> <span class="c1">#每20分钟一个文件夹</span>
+    <span class="n">data</span><span class="o">=</span><span class="nb">dir</span><span class="o">+</span><span class="s2">&quot;/&quot;</span><span class="o">+</span><span class="n">y</span><span class="o">+</span><span class="s2">&quot;_&quot;</span><span class="o">+</span><span class="n">m</span><span class="o">+</span><span class="s2">&quot;_&quot;</span><span class="o">+</span><span class="n">d</span><span class="o">+</span><span class="s2">&quot;_&quot;</span><span class="o">+</span><span class="n">h</span><span class="o">+</span><span class="s2">&quot;_&quot;</span><span class="o">+</span><span class="n">mm</span><span class="o">+</span><span class="s2">&quot;.cnt&quot;</span>
+    <span class="n">ctable</span><span class="o">=</span><span class="nb">dir</span><span class="o">+</span><span class="s2">&quot;/&quot;</span><span class="o">+</span><span class="n">y</span><span class="o">+</span><span class="s2">&quot;_&quot;</span><span class="o">+</span><span class="n">m</span><span class="o">+</span><span class="s2">&quot;_&quot;</span><span class="o">+</span><span class="n">d</span><span class="o">+</span><span class="s2">&quot;_&quot;</span><span class="o">+</span><span class="n">h</span><span class="o">+</span><span class="s2">&quot;_&quot;</span><span class="o">+</span><span class="n">mm</span><span class="o">+</span><span class="s2">&quot;.ch&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">ctable</span><span class="p">):</span>
+        <span class="c1"># 如果仪器信息文件没有则创建一个空的，这样做可以多跑几个进程，同时下载，并保证不重复。</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">ctable</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+            <span class="k">pass</span>
+        <span class="n">dat</span><span class="p">,</span><span class="n">ctabl</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_continuous_waveform</span><span class="p">(</span><span class="s2">&quot;0120&quot;</span><span class="p">,</span><span class="n">time</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="n">data</span><span class="o">=</span><span class="n">name</span><span class="p">,</span><span class="n">ctable</span><span class="o">=</span><span class="n">cname</span><span class="p">,</span><span class="n">outdir</span><span class="o">=</span><span class="nb">dir</span><span class="p">)</span> <span class="c1"># 下载数据，这里0120就是指代S-net。client.info()可以查看所有台网。 outdir指定保存数据的文件夹。</span>
+        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">access</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">F_OK</span><span class="p">):</span>
+        <span class="c1"># 如果下载成功则进行解压。如果没有数据，强行进行解压，程序就出错跳出来。</span>
+        <span class="c1">#if os.path.getsize(data) != 0:</span>
+            <span class="n">win32</span><span class="o">.</span><span class="n">extract_sac</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="n">ctable</span><span class="p">,</span><span class="n">outdir</span><span class="o">=</span><span class="n">outd</span><span class="p">)</span> <span class="c1">#解压sac。</span>
+            <span class="n">win32</span><span class="o">.</span><span class="n">extract_sacpz</span><span class="p">(</span><span class="n">ctable</span><span class="p">,</span> <span class="n">outdir</span><span class="o">=</span><span class="n">outd</span><span class="p">)</span> <span class="c1">#解压仪器响应。</span>
+    <span class="n">time</span><span class="o">=</span><span class="n">time</span><span class="o">+</span><span class="n">dt</span>
+</code></pre></div>
 
 <p>&emsp;&emsp;NEID下载数据有个限制就是道数X时间（按分钟记）&lt;12000。S-net有150个台，三分量就是450道，因此12000/450=26.666分钟，即每次最长可下载不超过26分钟数据。为了方便我搞的是20分钟。
 &emsp;&emsp;其他没有什么问题，就是下载数据好慢。</p>

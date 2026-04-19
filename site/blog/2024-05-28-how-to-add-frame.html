@@ -49,27 +49,27 @@
 <!-- less -->
 <p>找到hexo/themes/next/source/css/_common/components/post/index.styl
 将：</p>
-<pre class="highlight"><code>  if (hexo-config('motion.transition.post_block')) {
-    .post-block, .pagination, .comments {
-      visibility: hidden;
-    }
-  }
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="nt">if</span><span class="w"> </span><span class="o">(</span><span class="nt">hexo-config</span><span class="o">(</span><span class="s1">&#39;motion.transition.post_block&#39;</span><span class="o">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="err">.post-block,</span><span class="w"> </span><span class="err">.pagination,</span><span class="w"> </span><span class="err">.comments</span><span class="w"> </span><span class="err">{</span>
+<span class="w">      </span><span class="k">visibility</span><span class="p">:</span><span class="w"> </span><span class="kc">hidden</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="err">}</span>
+</code></pre></div>
 
 <p>改为：</p>
-<pre class="highlight"><code>  if (hexo-config('motion.transition.post_block')) {
-   .post-block{
-     visibility: hidden;
-     margin-top: 60px;
-     margin-bottom: 60px;
-     padding: 25px;
-     -webkit-box-shadow: 0 0 5px rgba(202, 203, 203, 1);
-     -moz-box-shadow: 0 0 5px rgba(202, 203, 204, 1);
-     }
-   .pagination, .comments {
-      visibility: hidden;
-    }
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="nt">if</span><span class="w"> </span><span class="o">(</span><span class="nt">hexo-config</span><span class="o">(</span><span class="s1">&#39;motion.transition.post_block&#39;</span><span class="o">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="err">.post-block{</span>
+<span class="w">     </span><span class="k">visibility</span><span class="p">:</span><span class="w"> </span><span class="kc">hidden</span><span class="p">;</span>
+<span class="w">     </span><span class="k">margin-top</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">     </span><span class="k">margin-bottom</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">     </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">     </span><span class="kp">-webkit-</span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">202</span><span class="p">,</span><span class="w"> </span><span class="mi">203</span><span class="p">,</span><span class="w"> </span><span class="mi">203</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">     </span><span class="kp">-moz-</span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">202</span><span class="p">,</span><span class="w"> </span><span class="mi">203</span><span class="p">,</span><span class="w"> </span><span class="mi">204</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">     </span><span class="p">}</span>
+<span class="w">   </span><span class="p">.</span><span class="nc">pagination</span><span class="o">,</span><span class="w"> </span><span class="p">.</span><span class="nc">comments</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">visibility</span><span class="p">:</span><span class="w"> </span><span class="kc">hidden</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div>
   </div>
 
   <div class="post-nav">

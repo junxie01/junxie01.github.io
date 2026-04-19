@@ -46,180 +46,180 @@
     <p>&emsp;&emsp;数据下载好后怎么统计数据连续性？</p>
 <!--less-->
 <p>&emsp;&emsp;python脚本如下。</p>
-<pre class="highlight"><code class="language-python">import os
-from obspy import read
-from datetime import datetime as dt
-import numpy as np
-import matplotlib.pyplot as plt
-import matplotlib.cm as cm
-import matplotlib.dates as mdates
-from collections import defaultdict
-from matplotlib.transforms import blended_transform_factory
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">obspy</span><span class="w"> </span><span class="kn">import</span> <span class="n">read</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span> <span class="k">as</span> <span class="n">dt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.cm</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">cm</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.dates</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">mdates</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">defaultdict</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib.transforms</span><span class="w"> </span><span class="kn">import</span> <span class="n">blended_transform_factory</span>
 
-# ===== 配置 =====
-data_dir = &quot;daily_waveforms&quot;  # 存放YYYYMMDD.mseed文件目录
-station_file = &quot;station.list&quot;  # 台站列表，格式：NET STA（两列）
-components = [&quot;LHZ&quot;, &quot;LHN&quot;, &quot;LHE&quot;]
-start_year = 2020
-end_year = 2020
+<span class="c1"># ===== 配置 =====</span>
+<span class="n">data_dir</span> <span class="o">=</span> <span class="s2">&quot;daily_waveforms&quot;</span>  <span class="c1"># 存放YYYYMMDD.mseed文件目录</span>
+<span class="n">station_file</span> <span class="o">=</span> <span class="s2">&quot;station.list&quot;</span>  <span class="c1"># 台站列表，格式：NET STA（两列）</span>
+<span class="n">components</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;LHZ&quot;</span><span class="p">,</span> <span class="s2">&quot;LHN&quot;</span><span class="p">,</span> <span class="s2">&quot;LHE&quot;</span><span class="p">]</span>
+<span class="n">start_year</span> <span class="o">=</span> <span class="mi">2020</span>
+<span class="n">end_year</span> <span class="o">=</span> <span class="mi">2020</span>
 
-# ===== 读取台站列表 =====
-stations = []
-with open(station_file, &quot;r&quot;) as f:
-    for line in f:
-        if line.strip():
-            net, sta = line.strip().split()[:2]
-            stations.append((net, sta))
+<span class="c1"># ===== 读取台站列表 =====</span>
+<span class="n">stations</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">station_file</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">():</span>
+            <span class="n">net</span><span class="p">,</span> <span class="n">sta</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()[:</span><span class="mi">2</span><span class="p">]</span>
+            <span class="n">stations</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">net</span><span class="p">,</span> <span class="n">sta</span><span class="p">))</span>
 
-station_set = set(f&quot;{net}.{sta}&quot; for net, sta in stations)
+<span class="n">station_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">net</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">sta</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">net</span><span class="p">,</span> <span class="n">sta</span> <span class="ow">in</span> <span class="n">stations</span><span class="p">)</span>
 
-# ===== 初始化 =====
-station_dates = {comp: defaultdict(set) for comp in components}  # comp -&gt; {net.sta -&gt; set(date)}
-station_file_sizes = defaultdict(int)  # 台站对应所有文件大小
-total_files = 0
-total_file_size = 0
+<span class="c1"># ===== 初始化 =====</span>
+<span class="n">station_dates</span> <span class="o">=</span> <span class="p">{</span><span class="n">comp</span><span class="p">:</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">set</span><span class="p">)</span> <span class="k">for</span> <span class="n">comp</span> <span class="ow">in</span> <span class="n">components</span><span class="p">}</span>  <span class="c1"># comp -&gt; {net.sta -&gt; set(date)}</span>
+<span class="n">station_file_sizes</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>  <span class="c1"># 台站对应所有文件大小</span>
+<span class="n">total_files</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">total_file_size</span> <span class="o">=</span> <span class="mi">0</span>
 
-# ===== 遍历所有mseed文件 =====
-all_files = sorted(f for f in os.listdir(data_dir) if f.endswith(&quot;.mseed&quot;))
-for filename in all_files:
-    filepath = os.path.join(data_dir, filename)
+<span class="c1"># ===== 遍历所有mseed文件 =====</span>
+<span class="n">all_files</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">f</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">data_dir</span><span class="p">)</span> <span class="k">if</span> <span class="n">f</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.mseed&quot;</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">all_files</span><span class="p">:</span>
+    <span class="n">filepath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_dir</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
 
-    size = os.path.getsize(filepath)
-    total_files += 1
-    total_file_size += size
+    <span class="n">size</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">getsize</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+    <span class="n">total_files</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">total_file_size</span> <span class="o">+=</span> <span class="n">size</span>
 
-    try:
-        st = read(filepath)
-    except Exception as e:
-        print(f&quot;读取文件失败 {filename}: {e}&quot;)
-        continue
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">st</span> <span class="o">=</span> <span class="n">read</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;读取文件失败 </span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">continue</span>
 
-    # 解析文件日期 YYYYMMDD
-    try:
-        file_date = dt.strptime(filename[:8], &quot;%Y%m%d&quot;).date()
-    except Exception as e:
-        print(f&quot;无法解析日期 {filename}: {e}&quot;)
-        continue
+    <span class="c1"># 解析文件日期 YYYYMMDD</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">file_date</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">filename</span><span class="p">[:</span><span class="mi">8</span><span class="p">],</span> <span class="s2">&quot;%Y%m</span><span class="si">%d</span><span class="s2">&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">date</span><span class="p">()</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;无法解析日期 </span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">continue</span>
 
-    for tr in st:
-        net = tr.stats.network
-        sta = tr.stats.station
-        comp = tr.stats.channel[-3:]
+    <span class="k">for</span> <span class="n">tr</span> <span class="ow">in</span> <span class="n">st</span><span class="p">:</span>
+        <span class="n">net</span> <span class="o">=</span> <span class="n">tr</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">network</span>
+        <span class="n">sta</span> <span class="o">=</span> <span class="n">tr</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">station</span>
+        <span class="n">comp</span> <span class="o">=</span> <span class="n">tr</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">channel</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:]</span>
 
-        key = f&quot;{net}.{sta}&quot;
-        if key not in station_set:
-            continue
-        if comp not in components:
-            continue
+        <span class="n">key</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">net</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">sta</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">if</span> <span class="n">key</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">station_set</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="k">if</span> <span class="n">comp</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">components</span><span class="p">:</span>
+            <span class="k">continue</span>
 
-        station_dates[comp][key].add(file_date)
-        station_file_sizes[key] += size
+        <span class="n">station_dates</span><span class="p">[</span><span class="n">comp</span><span class="p">][</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">file_date</span><span class="p">)</span>
+        <span class="n">station_file_sizes</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">+=</span> <span class="n">size</span>
 
-print(f&quot;共计读取文件数: {total_files}&quot;)
-print(f&quot;所有文件总大小: {total_file_size / (1024**2):.2f} MB&quot;)
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;共计读取文件数: </span><span class="si">{</span><span class="n">total_files</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;所有文件总大小: </span><span class="si">{</span><span class="n">total_file_size</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="mi">1024</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> MB&quot;</span><span class="p">)</span>
 
-# ===== 删除无有效数据台站 =====
-for comp in components:
-    keys_to_remove = [k for k, dates in station_dates[comp].items() if len(dates) == 0]
-    for k in keys_to_remove:
-        del station_dates[comp][k]
+<span class="c1"># ===== 删除无有效数据台站 =====</span>
+<span class="k">for</span> <span class="n">comp</span> <span class="ow">in</span> <span class="n">components</span><span class="p">:</span>
+    <span class="n">keys_to_remove</span> <span class="o">=</span> <span class="p">[</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">dates</span> <span class="ow">in</span> <span class="n">station_dates</span><span class="p">[</span><span class="n">comp</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">dates</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">keys_to_remove</span><span class="p">:</span>
+        <span class="k">del</span> <span class="n">station_dates</span><span class="p">[</span><span class="n">comp</span><span class="p">][</span><span class="n">k</span><span class="p">]</span>
 
-# ===== 输出有效天数统计文本 =====
-for comp in components:
-    with open(f&quot;station_day_count_{comp}.txt&quot;, &quot;w&quot;) as f:
-        for key in sorted(station_dates[comp].keys()):
-            f.write(f&quot;{key} {len(station_dates[comp][key])}\n&quot;)
+<span class="c1"># ===== 输出有效天数统计文本 =====</span>
+<span class="k">for</span> <span class="n">comp</span> <span class="ow">in</span> <span class="n">components</span><span class="p">:</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;station_day_count_</span><span class="si">{</span><span class="n">comp</span><span class="si">}</span><span class="s2">.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">station_dates</span><span class="p">[</span><span class="n">comp</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">()):</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">station_dates</span><span class="p">[</span><span class="n">comp</span><span class="p">][</span><span class="n">key</span><span class="p">])</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 
-# ===== 台网颜色映射 =====
-all_nets = sorted(set(net for net, sta in stations))
-net_color_map = {net: cm.get_cmap(&quot;tab20&quot;)(i / max(len(all_nets)-1,1)) for i, net in enumerate(all_nets)}
+<span class="c1"># ===== 台网颜色映射 =====</span>
+<span class="n">all_nets</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">net</span> <span class="k">for</span> <span class="n">net</span><span class="p">,</span> <span class="n">sta</span> <span class="ow">in</span> <span class="n">stations</span><span class="p">))</span>
+<span class="n">net_color_map</span> <span class="o">=</span> <span class="p">{</span><span class="n">net</span><span class="p">:</span> <span class="n">cm</span><span class="o">.</span><span class="n">get_cmap</span><span class="p">(</span><span class="s2">&quot;tab20&quot;</span><span class="p">)(</span><span class="n">i</span> <span class="o">/</span> <span class="nb">max</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">all_nets</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">net</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">all_nets</span><span class="p">)}</span>
 
-# ===== 绘图函数 =====
-def plot_component_availability(comp, station_dates_comp):
-    valid_stations = sorted(station_dates_comp.keys(), key=lambda x: (x.split(&quot;.&quot;)[0], x.split(&quot;.&quot;)[1]))
-    fig, ax = plt.subplots(figsize=(14, max(6, 0.3 * len(valid_stations))))
+<span class="c1"># ===== 绘图函数 =====</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">plot_component_availability</span><span class="p">(</span><span class="n">comp</span><span class="p">,</span> <span class="n">station_dates_comp</span><span class="p">):</span>
+    <span class="n">valid_stations</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">station_dates_comp</span><span class="o">.</span><span class="n">keys</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]))</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mf">0.3</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">valid_stations</span><span class="p">))))</span>
 
-    def to_datetime(d):
-        return dt(d.year, d.month, d.day)
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_datetime</span><span class="p">(</span><span class="n">d</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">dt</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">year</span><span class="p">,</span> <span class="n">d</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="n">d</span><span class="o">.</span><span class="n">day</span><span class="p">)</span>
 
-    for idx, key in enumerate(valid_stations):
-        net = key.split(&quot;.&quot;)[0]
-        dates = sorted(station_dates_comp[key])
-        x_vals = [to_datetime(d) for d in dates]
-        ax.plot(x_vals, [idx]*len(dates), &quot;.&quot;, color=net_color_map[net], markersize=2)
+    <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">key</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">valid_stations</span><span class="p">):</span>
+        <span class="n">net</span> <span class="o">=</span> <span class="n">key</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">dates</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">station_dates_comp</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+        <span class="n">x_vals</span> <span class="o">=</span> <span class="p">[</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">dates</span><span class="p">]</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_vals</span><span class="p">,</span> <span class="p">[</span><span class="n">idx</span><span class="p">]</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">dates</span><span class="p">),</span> <span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">net_color_map</span><span class="p">[</span><span class="n">net</span><span class="p">],</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 
-    ax.set_xlabel(&quot;时间&quot;)
-    ax.set_ylabel(&quot;台站&quot;)
-    ax.set_yticks(range(len(valid_stations)))
-    ax.set_yticklabels(valid_stations, fontsize=5)
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;时间&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;台站&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">valid_stations</span><span class="p">)))</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_yticklabels</span><span class="p">(</span><span class="n">valid_stations</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 
-    ax.grid(True, linestyle=&quot;:&quot;, alpha=0.5)
+    <span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
 
-    x_start = dt(start_year, 1, 1)
-    x_end = dt(end_year, 12, 31)
-    ax.set_xlim(x_start, x_end)
+    <span class="n">x_start</span> <span class="o">=</span> <span class="n">dt</span><span class="p">(</span><span class="n">start_year</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">x_end</span> <span class="o">=</span> <span class="n">dt</span><span class="p">(</span><span class="n">end_year</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">31</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="n">x_start</span><span class="p">,</span> <span class="n">x_end</span><span class="p">)</span>
 
-    ax.xaxis.set_major_locator(mdates.YearLocator())
-    ax.xaxis.set_major_formatter(mdates.DateFormatter(&quot;%Y&quot;))
+    <span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">mdates</span><span class="o">.</span><span class="n">YearLocator</span><span class="p">())</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">mdates</span><span class="o">.</span><span class="n">DateFormatter</span><span class="p">(</span><span class="s2">&quot;%Y&quot;</span><span class="p">))</span>
 
-    plt.tight_layout(rect=[0, 0, 0.85, 1])
+    <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">(</span><span class="n">rect</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.85</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
 
-    # 右侧外部标注台网名
-    trans = blended_transform_factory(ax.transAxes, ax.transData)
-    net_indices = defaultdict(list)
-    for idx, key in enumerate(valid_stations):
-        net = key.split(&quot;.&quot;)[0]
-        net_indices[net].append(idx)
+    <span class="c1"># 右侧外部标注台网名</span>
+    <span class="n">trans</span> <span class="o">=</span> <span class="n">blended_transform_factory</span><span class="p">(</span><span class="n">ax</span><span class="o">.</span><span class="n">transAxes</span><span class="p">,</span> <span class="n">ax</span><span class="o">.</span><span class="n">transData</span><span class="p">)</span>
+    <span class="n">net_indices</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">key</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">valid_stations</span><span class="p">):</span>
+        <span class="n">net</span> <span class="o">=</span> <span class="n">key</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">net_indices</span><span class="p">[</span><span class="n">net</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span>
 
-    for net, indices in net_indices.items():
-        mid_idx = indices[len(indices)//2]
-        color = net_color_map[net]
-        ax.text(1.02, mid_idx, net, color=color, fontsize=8, fontweight='bold',
-                verticalalignment='center', horizontalalignment='left',
-                transform=trans)
+    <span class="k">for</span> <span class="n">net</span><span class="p">,</span> <span class="n">indices</span> <span class="ow">in</span> <span class="n">net_indices</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">mid_idx</span> <span class="o">=</span> <span class="n">indices</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">indices</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span><span class="p">]</span>
+        <span class="n">color</span> <span class="o">=</span> <span class="n">net_color_map</span><span class="p">[</span><span class="n">net</span><span class="p">]</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">1.02</span><span class="p">,</span> <span class="n">mid_idx</span><span class="p">,</span> <span class="n">net</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span>
+                <span class="n">verticalalignment</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">horizontalalignment</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span>
+                <span class="n">transform</span><span class="o">=</span><span class="n">trans</span><span class="p">)</span>
 
-    plt.savefig(f&quot;{comp}_availability_2013_2022.png&quot;, dpi=300, bbox_inches='tight')
-    plt.close()
-    print(f&quot;已保存图像: {comp}_availability_2013_2022.png&quot;)
+    <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">comp</span><span class="si">}</span><span class="s2">_availability_2013_2022.png&quot;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;已保存图像: </span><span class="si">{</span><span class="n">comp</span><span class="si">}</span><span class="s2">_availability_2013_2022.png&quot;</span><span class="p">)</span>
 
-# ===== 画三分量图 =====
-for comp in components:
-    plot_component_availability(comp, station_dates[comp])
+<span class="c1"># ===== 画三分量图 =====</span>
+<span class="k">for</span> <span class="n">comp</span> <span class="ow">in</span> <span class="n">components</span><span class="p">:</span>
+    <span class="n">plot_component_availability</span><span class="p">(</span><span class="n">comp</span><span class="p">,</span> <span class="n">station_dates</span><span class="p">[</span><span class="n">comp</span><span class="p">])</span>
 
-# ===== 台网统计 =====
-network_stats = defaultdict(lambda: {&quot;total&quot;: 0, &quot;valid&quot;: 0, &quot;day_counts&quot;: []})
+<span class="c1"># ===== 台网统计 =====</span>
+<span class="n">network_stats</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;total&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;valid&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;day_counts&quot;</span><span class="p">:</span> <span class="p">[]})</span>
 
-for net, sta in stations:
-    network_stats[net][&quot;total&quot;] += 1
+<span class="k">for</span> <span class="n">net</span><span class="p">,</span> <span class="n">sta</span> <span class="ow">in</span> <span class="n">stations</span><span class="p">:</span>
+    <span class="n">network_stats</span><span class="p">[</span><span class="n">net</span><span class="p">][</span><span class="s2">&quot;total&quot;</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
 
-all_valid_keys = set()
-for comp in components:
-    all_valid_keys.update(station_dates[comp].keys())
+<span class="n">all_valid_keys</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">comp</span> <span class="ow">in</span> <span class="n">components</span><span class="p">:</span>
+    <span class="n">all_valid_keys</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">station_dates</span><span class="p">[</span><span class="n">comp</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
 
-for key in all_valid_keys:
-    net = key.split(&quot;.&quot;)[0]
-    days_list = [len(station_dates[comp].get(key, [])) for comp in components]
-    valid_days = max(days_list)
-    network_stats[net][&quot;valid&quot;] += 1
-    network_stats[net][&quot;day_counts&quot;].append(valid_days)
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">all_valid_keys</span><span class="p">:</span>
+    <span class="n">net</span> <span class="o">=</span> <span class="n">key</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">days_list</span> <span class="o">=</span> <span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">station_dates</span><span class="p">[</span><span class="n">comp</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="p">[]))</span> <span class="k">for</span> <span class="n">comp</span> <span class="ow">in</span> <span class="n">components</span><span class="p">]</span>
+    <span class="n">valid_days</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">days_list</span><span class="p">)</span>
+    <span class="n">network_stats</span><span class="p">[</span><span class="n">net</span><span class="p">][</span><span class="s2">&quot;valid&quot;</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">network_stats</span><span class="p">[</span><span class="n">net</span><span class="p">][</span><span class="s2">&quot;day_counts&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">valid_days</span><span class="p">)</span>
 
-print(&quot;\n台网统计汇总：&quot;)
-print(f&quot;{'Net':&lt;6} {'Total':&gt;6} {'Valid':&gt;6} {'AvgDays':&gt;10}&quot;)
-print(&quot;-&quot; * 32)
-with open(&quot;network_summary_all_components.txt&quot;, &quot;w&quot;) as f:
-    f.write(f&quot;{'Net':&lt;6} {'Total':&gt;6} {'Valid':&gt;6} {'AvgDays':&gt;10}\n&quot;)
-    for net in sorted(network_stats.keys()):
-        total = network_stats[net][&quot;total&quot;]
-        valid = network_stats[net][&quot;valid&quot;]
-        avg_days = np.mean(network_stats[net][&quot;day_counts&quot;]) if network_stats[net][&quot;day_counts&quot;] else 0
-        line = f&quot;{net:&lt;6} {total:&gt;6} {valid:&gt;6} {avg_days:&gt;10.1f}&quot;
-        print(line)
-        f.write(line + &quot;\n&quot;)
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">台网统计汇总：&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="s1">&#39;Net&#39;</span><span class="si">:</span><span class="s2">&lt;6</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">&#39;Total&#39;</span><span class="si">:</span><span class="s2">&gt;6</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">&#39;Valid&#39;</span><span class="si">:</span><span class="s2">&gt;6</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">&#39;AvgDays&#39;</span><span class="si">:</span><span class="s2">&gt;10</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">32</span><span class="p">)</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;network_summary_all_components.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="s1">&#39;Net&#39;</span><span class="si">:</span><span class="s2">&lt;6</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">&#39;Total&#39;</span><span class="si">:</span><span class="s2">&gt;6</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">&#39;Valid&#39;</span><span class="si">:</span><span class="s2">&gt;6</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">&#39;AvgDays&#39;</span><span class="si">:</span><span class="s2">&gt;10</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">net</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">network_stats</span><span class="o">.</span><span class="n">keys</span><span class="p">()):</span>
+        <span class="n">total</span> <span class="o">=</span> <span class="n">network_stats</span><span class="p">[</span><span class="n">net</span><span class="p">][</span><span class="s2">&quot;total&quot;</span><span class="p">]</span>
+        <span class="n">valid</span> <span class="o">=</span> <span class="n">network_stats</span><span class="p">[</span><span class="n">net</span><span class="p">][</span><span class="s2">&quot;valid&quot;</span><span class="p">]</span>
+        <span class="n">avg_days</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">network_stats</span><span class="p">[</span><span class="n">net</span><span class="p">][</span><span class="s2">&quot;day_counts&quot;</span><span class="p">])</span> <span class="k">if</span> <span class="n">network_stats</span><span class="p">[</span><span class="n">net</span><span class="p">][</span><span class="s2">&quot;day_counts&quot;</span><span class="p">]</span> <span class="k">else</span> <span class="mi">0</span>
+        <span class="n">line</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">net</span><span class="si">:</span><span class="s2">&lt;6</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">total</span><span class="si">:</span><span class="s2">&gt;6</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">valid</span><span class="si">:</span><span class="s2">&gt;6</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">avg_days</span><span class="si">:</span><span class="s2">&gt;10.1f</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">line</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 
-# ===== 总结 =====
-print(f&quot;\n文件总数: {total_files}&quot;)
-print(f&quot;文件总大小: {total_file_size/(1024**2):.2f} MB ({total_file_size/(1024**3):.2f} GB)&quot;)
-</code></pre>
+<span class="c1"># ===== 总结 =====</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">文件总数: </span><span class="si">{</span><span class="n">total_files</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;文件总大小: </span><span class="si">{</span><span class="n">total_file_size</span><span class="o">/</span><span class="p">(</span><span class="mi">1024</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> MB (</span><span class="si">{</span><span class="n">total_file_size</span><span class="o">/</span><span class="p">(</span><span class="mi">1024</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> GB)&quot;</span><span class="p">)</span>
+</code></pre></div>
 
 <p>&emsp;&emsp;这个脚本实现的功能包括：
    * 统计开始时间start_year到结束时间end_year的数据下载情况
