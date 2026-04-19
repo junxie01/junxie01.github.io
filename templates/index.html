@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block description %}Jun Xie — Seismologist at Academy of Precision Measurement Science and Technology{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <img src="{{ root }}images/seisamuse.png" alt="Jun Xie" class="avatar">
+  <h1>Jun Xie</h1>
+  <p class="subtitle">Seismologist &middot; Geophysicist</p>
+  <p class="affiliation">Academy of Precision Measurement Science and Technology</p>
+  <p class="bio">A nerd researching seismology, also involved in interdisciplinary fields such as environmental seismology and glacial seismology.</p>
+  <div class="social-links">
+    <a href="{{ root }}about/">About Me</a>
+    <a href="https://github.com/" target="_blank">GitHub</a>
+    <a href="mailto:your-email@example.com">Email</a>
+  </div>
+</section>
+
+<section>
+  <div class="section-header">
+    <h2>Recent Posts</h2>
+    <a href="{{ root }}blog/">View all &rarr;</a>
+  </div>
+  <ul class="post-list">
+    {% for post in recent_posts %}
+    <li class="post-item">
+      <span class="post-date">{{ post.date }}</span>
+      <h3><a href="{{ root }}blog/{{ post.slug }}.html">{{ post.title }}</a></h3>
+      {% if post.excerpt %}<p class="excerpt">{{ post.excerpt|safe }}</p>{% endif %}
+      {% if post.tags %}
+      <div class="post-tags">
+        {% for tag in post.tags %}
+        <a href="/blog/tag/{{ tag|lower|replace(' ', '-')|replace('/', '-') }}/">{{ tag }}</a>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section>
+  <div class="section-header">
+    <h2>Projects &amp; Resources</h2>
+    <a href="{{ root }}links/">See all &rarr;</a>
+  </div>
+  <div class="link-grid">
+    <div class="link-card">
+      <a href="https://www.seis-jun.xyz/daily_news/" target="_blank">
+        <h3>Daily News</h3>
+        <p>Curated daily updates on seismology and geoscience.</p>
+      </a>
+    </div>
+    <div class="link-card">
+      <a href="https://www.seis-jun.xyz/paper_weekly/" target="_blank">
+        <h3>Paper Weekly</h3>
+        <p>Weekly highlights of notable research papers.</p>
+      </a>
+    </div>
+    <div class="link-card">
+      <a href="https://www.seis-jun.xyz/earthquake_weekly/" target="_blank">
+        <h3>Earthquake Weekly</h3>
+        <p>Weekly earthquake activity reports and analysis.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="support-section">
+  <p>If you find my work helpful, consider supporting my work.</p>
+  <button class="btn" onclick="document.getElementById('donate-modal').style.display='flex'">Support My Work</button>
+</section>
+
+<div id="donate-modal" class="modal-overlay" onclick="if(event.target===this)this.style.display='none'">
+  <div class="modal-content">
+    <button class="modal-close" onclick="this.parentElement.parentElement.style.display='none'">&times;</button>
+    <h3>Buy Me a Cup of Coffee</h3>
+    <p>Thank you for your support!</p>
+    <div class="qr-codes">
+      <div class="qr-item">
+        <img src="{{ root }}images/alipay.png" alt="Alipay">
+        <span>Alipay</span>
+      </div>
+      <div class="qr-item">
+        <img src="{{ root }}images/wechatpay.png" alt="WeChat Pay">
+        <span>WeChat Pay</span>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

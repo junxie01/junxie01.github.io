@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}{{ page_title }} — Links{% endblock %}
+{% block description %}{{ page_description }}{% endblock %}
+
+{% block content %}
+<nav class="breadcrumb">
+  <a href="{{ root }}links/">Links</a> <span>&rsaquo;</span> <span>{{ page_title }}</span>
+</nav>
+
+<h1 class="page-title">{{ page_title }}</h1>
+
+<div class="links-content link-subpage">
+  {{ page_content }}
+</div>
+
+<div class="back-link">
+  <a href="{{ root }}links/">&larr; Back to Links</a>
+</div>
+{% endblock %}

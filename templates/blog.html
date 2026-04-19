@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}Blog{% endblock %}
+{% block description %}Blog posts by Jun Xie on seismology and geophysics{% endblock %}
+
+{% block content %}
+<h1 class="page-title">Blog</h1>
+
+<ul class="post-list">
+  {% for post in posts %}
+  <li class="post-item">
+    <span class="post-date">{{ post.date }}</span>
+    <h3><a href="{{ root }}blog/{{ post.slug }}.html">{{ post.title }}</a></h3>
+    {% if post.excerpt %}<p class="excerpt">{{ post.excerpt|safe }}</p>{% endif %}
+    {% if post.tags %}
+    <div class="post-tags">
+      {% for tag in post.tags %}
+      <a href="/blog/tag/{{ tag|lower|replace(' ', '-')|replace('/', '-') }}/">{{ tag }}</a>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>
+
+{% if not posts %}
+<p style="color: var(--muted); font-style: italic;">No posts yet. Check back soon!</p>
+{% endif %}
+
+{% if total_pages > 1 %}
+<nav class="pagination">
+  {% if current_page > 1 %}
+    {% if current_page == 2 %}
+    <a href="/blog/">&larr; Newer</a>
+    {% else %}
+    <a href="/blog/page/{{ current_page - 1 }}/">&larr; Newer</a>
+    {% endif %}
+  {% else %}
+    <span class="disabled">&larr; Newer</span>
+  {% endif %}
+
+  <span class="page-info">Page {{ current_page }} / {{ total_pages }}</span>
+
+  {% if current_page < total_pages %}
+    <a href="/blog/page/{{ current_page + 1 }}/">Older &rarr;</a>
+  {% else %}
+    <span class="disabled">Older &rarr;</span>
+  {% endif %}
+</nav>
+{% endif %}
+{% endblock %}

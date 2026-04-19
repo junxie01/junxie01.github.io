@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Tag: {{ tag }}{% endblock %}
+{% block description %}Posts tagged with \"{{ tag }}\"{% endblock %}
+
+{% block content %}
+<h1 class="page-title">Tag: {{ tag }}</h1>
+
+<p><a href="/blog/">&larr; Back to all posts</a></p>
+
+<ul class="post-list">
+  {% for post in posts %}
+  <li class="post-item">
+    <span class="post-date">{{ post.date }}</span>
+    <h3><a href="/blog/{{ post.slug }}.html">{{ post.title }}</a></h3>
+    {% if post.excerpt %}<p class="excerpt">{{ post.excerpt|safe }}</p>{% endif %}
+  </li>
+  {% endfor %}
+</ul>
+
+{% if not posts %}
+<p style="color: var(--muted); font-style: italic;">No posts with this tag.</p>
+{% endif %}
+{% endblock %}
