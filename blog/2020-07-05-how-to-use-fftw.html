@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>如何调用fftw进行Fast Fourier Transform | Jun Xie</title>
+  <meta name="description" content="如何调用fftw进行Fast Fourier Transform">
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+  <!-- MathJax for LaTeX rendering -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <a href="/" class="site-title">SEISAMUSE</a>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/links/">Links</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      
+<article>
+  <div class="post-header">
+    <h1>如何调用fftw进行Fast Fourier Transform</h1>
+    <div class="post-meta">
+      <time>2020-07-05</time>
+       &middot; 1 min read
+      
+    </div>
+  </div>
+
+  <div class="post-content">
+    <p>&emsp;&emsp;我们常常要看信号的振幅谱来进行分析，那傅里叶变换就必不可少。如果水平不错你可以试着自己写。当然有很多已经写好的包，非常方便，例如这里要讲到的fftw<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>。</p>
+<!-- more -->
+
+<p>&emsp;&emsp;他的用法其实人家<a href="http://www.fftw.org/">主页</a>说明文档讲的很清楚。我这里就记录一下怎么用之来对sac文件进行读取并计算fft。程序是用fortran写的，C的话可以参考fftw说明文档。
+首先把主程序贴出来：</p>
+<div class="highlight"><pre><span></span><code><span class="nx">program</span><span class="w"> </span><span class="nx">main</span>
+<span class="nx">use</span><span class="w"> </span><span class="nx">globe_data</span><span class="w">  </span><span class="c1">// 全局变量</span>
+<span class="nx">use</span><span class="w"> </span><span class="nx">sacio</span><span class="w">       </span><span class="c1">// sac 头变量</span>
+<span class="nx">implicit</span><span class="w"> </span><span class="nx">none</span>
+<span class="nx">integer</span><span class="w"> </span><span class="nx">i</span><span class="p">,</span><span class="nx">nerr</span><span class="p">,</span><span class="nx">itest</span>
+<span class="nx">character</span><span class="w"> </span><span class="p">(</span><span class="mi">180</span><span class="p">)</span><span class="w"> </span><span class="o">::</span><span class="w"> </span><span class="nx">sacfile</span><span class="p">,</span><span class="nx">tmp</span>
+<span class="k">type</span><span class="p">(</span><span class="nx">sac_head</span><span class="p">)</span><span class="w"> </span><span class="o">::</span><span class="w"> </span><span class="nx">sachead</span>
+<span class="nx">complex</span><span class="p">(</span><span class="mi">8</span><span class="p">),</span><span class="nx">allocatable</span><span class="p">,</span><span class="nx">dimension</span><span class="p">(:)</span><span class="w"> </span><span class="o">::</span><span class="w"> </span><span class="nx">s1</span><span class="p">,</span><span class="nx">s2</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">iargc</span><span class="p">().</span><span class="nx">ne</span><span class="m m-Double">.2</span><span class="p">)</span><span class="nx">stop</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">Usage</span><span class="p">:</span><span class="w"> </span><span class="nx">fft</span><span class="w"> </span><span class="nx">sacfile</span><span class="w"> </span><span class="err">&#39;</span>
+<span class="nx">call</span><span class="w"> </span><span class="nx">getarg</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nx">sacfile</span><span class="p">)</span><span class="w">    </span><span class="c1">// 读参数到sacfile，即sac 文件</span>
+<span class="nx">call</span><span class="w"> </span><span class="nx">read_sachead</span><span class="p">(</span><span class="nx">trim</span><span class="p">(</span><span class="nx">sacfile</span><span class="p">),</span><span class="nx">sachead</span><span class="p">,</span><span class="nx">nerr</span><span class="p">)</span><span class="w"> </span><span class="c1">//读sac文件头变量</span>
+<span class="nx">npts</span><span class="p">=</span><span class="nx">sachead</span><span class="o">%</span><span class="nx">npts</span>
+<span class="nx">dt</span><span class="p">=</span><span class="nx">sachead</span><span class="o">%</span><span class="nx">delta</span>
+<span class="nx">nn</span><span class="p">=</span><span class="mi">2</span>
+<span class="nx">npow</span><span class="p">=</span><span class="mi">1</span>
+<span class="nx">do</span><span class="w"> </span><span class="k">while</span><span class="p">(</span><span class="nx">nn</span><span class="p">.</span><span class="nx">le</span><span class="p">.</span><span class="nx">npts</span><span class="p">)</span>
+<span class="w">   </span><span class="nx">nn</span><span class="p">=</span><span class="nx">nn</span><span class="o">*</span><span class="mi">2</span>
+<span class="w">   </span><span class="nx">npow</span><span class="p">=</span><span class="nx">npow</span><span class="o">+</span><span class="mi">1</span>
+<span class="nx">enddo</span>
+<span class="nx">nk</span><span class="p">=</span><span class="nx">nn</span><span class="o">/</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span>
+<span class="nx">halfn</span><span class="p">=</span><span class="mi">20</span>
+<span class="nx">dom</span><span class="p">=</span><span class="nx">dble</span><span class="p">(</span><span class="m m-Double">1.0</span><span class="o">/</span><span class="nx">nn</span><span class="o">/</span><span class="nx">dt</span><span class="p">)</span>
+<span class="nx">allocate</span><span class="p">(</span><span class="nx">sig</span><span class="p">(</span><span class="nx">nn</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="nx">call</span><span class="w"> </span><span class="nx">read_sac</span><span class="p">(</span><span class="nx">trim</span><span class="p">(</span><span class="nx">sacfile</span><span class="p">),</span><span class="w"> </span><span class="nx">sig</span><span class="p">(:,</span><span class="mi">1</span><span class="p">),</span><span class="nx">sachead</span><span class="p">,</span><span class="nx">nerr</span><span class="p">)</span><span class="w"> </span><span class="c1">//读sac文件数据到sig(:,1)</span>
+<span class="nx">allocate</span><span class="p">(</span><span class="nx">s1</span><span class="p">(</span><span class="nx">nn</span><span class="p">),</span><span class="nx">s2</span><span class="p">(</span><span class="nx">nn</span><span class="p">))</span>
+<span class="nx">s1</span><span class="p">=</span><span class="nx">czero</span>
+<span class="nx">s1</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="nx">npts</span><span class="p">)=</span><span class="nx">dcmplx</span><span class="p">(</span><span class="nx">dble</span><span class="p">(</span><span class="nx">sig</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="nx">npts</span><span class="p">,</span><span class="mi">1</span><span class="p">)),</span><span class="m m-Double">0.0</span><span class="nx">d0</span><span class="p">)</span>
+<span class="nx">call</span><span class="w"> </span><span class="nx">dfftw_plan_dft_1d</span><span class="p">(</span><span class="nx">plan</span><span class="p">,</span><span class="nx">nn</span><span class="p">,</span><span class="nx">s1</span><span class="p">,</span><span class="nx">s2</span><span class="p">,</span><span class="nx">FFTW_FORWARD</span><span class="p">,</span><span class="w"> </span><span class="nx">FFTW_ESTIMATE</span><span class="p">)</span>
+<span class="nx">call</span><span class="w"> </span><span class="nx">dfftw_execute</span><span class="p">(</span><span class="nx">plan</span><span class="p">)</span>
+<span class="nx">call</span><span class="w"> </span><span class="nx">dfftw_destroy_plan</span><span class="p">(</span><span class="nx">plan</span><span class="p">)</span>
+<span class="nx">sachead</span><span class="o">%</span><span class="nx">npts</span><span class="p">=</span><span class="nx">nk</span>
+<span class="nx">sig</span><span class="p">(:,</span><span class="mi">1</span><span class="p">)=</span><span class="nx">real</span><span class="p">(</span><span class="nx">dreal</span><span class="p">(</span><span class="nx">s2</span><span class="p">))</span>
+<span class="nx">call</span><span class="w"> </span><span class="nx">write_sac</span><span class="p">(</span><span class="nx">trim</span><span class="p">(</span><span class="nx">sacfile</span><span class="p">)</span><span class="c1">//&#39;_fft&#39;,sig(:,1),sachead,nerr) ! problem with nerr=-1</span>
+<span class="nx">deallocate</span><span class="p">(</span><span class="nx">sig</span><span class="p">,</span><span class="nx">s1</span><span class="p">,</span><span class="nx">s2</span><span class="p">)</span>
+<span class="nx">end</span><span class="w"> </span><span class="nx">program</span>
+</code></pre></div>
+
+<p>这里sig(:,:)是个二维数组，其实用一维的就够了哈。
+sacio.f90 是一个module，定义了sac文件的头，并含有sac读写程序。需要的话给我发信息，或者邮件^_^。
+globe_data.f90也是一个module，定义了全局变量：</p>
+<div class="highlight"><pre><span></span><code><span class="k">module</span> <span class="n">globe_data</span>
+<span class="n">integer</span>,<span class="nb">parameter</span> :: <span class="n">nmax</span>=<span class="mi">2000000</span>,<span class="n">nstmax</span>=<span class="mi">1000</span>
+<span class="n">real</span>(<span class="mi">4</span>),<span class="n">dimension</span>(<span class="mi">4</span>,<span class="mi">2</span>):: <span class="n">fre</span>
+<span class="n">real</span>(<span class="mi">4</span>),<span class="n">allocatable</span>,<span class="n">dimension</span>(:,:):: <span class="n">sig</span>,<span class="n">sigo</span>
+<span class="n">real</span>(<span class="mi">4</span>),<span class="n">allocatable</span>,<span class="n">dimension</span>(:) :: <span class="n">sigt</span>
+<span class="n">real</span> :: <span class="n">dt</span>
+<span class="n">real</span>(<span class="mi">8</span>) :: <span class="n">dom</span>
+<span class="n">integer</span> :: <span class="n">halfn</span>
+<span class="n">integer</span> :: <span class="n">ncom</span>,<span class="nb">comb</span>,<span class="n">npts</span>
+<span class="n">integer</span> :: <span class="n">nn</span>,<span class="n">npow</span>,<span class="n">nk</span>,<span class="n">nf</span>
+<span class="n">complex</span>(<span class="mi">8</span>),<span class="n">allocatable</span>,<span class="n">dimension</span>(:,:):: <span class="n">seisout</span>
+<span class="n">complex</span>(<span class="mi">8</span>),<span class="n">parameter::</span> <span class="n">czero</span>=(<span class="mf">0.0</span><span class="n">d0</span>,<span class="mf">0.0</span><span class="n">d0</span>)
+<span class="n">integer</span>,<span class="nb">parameter</span> :: <span class="n">FFTW_ESTIMATE</span>=<span class="mi">64</span>,<span class="n">FFTW_MEASURE</span>=<span class="mi">1</span>
+<span class="n">integer</span>,<span class="nb">parameter</span> :: <span class="n">FFTW_FORWARD</span>=-<span class="mi">1</span>,<span class="n">FFTW_BACKWARD</span>=<span class="mi">1</span>
+<span class="n">integer</span>(<span class="mi">8</span>) :: <span class="nb">plan</span>,<span class="n">plan1</span>,<span class="n">plan2</span>,<span class="n">plan3</span>
+<span class="nb">end</span> <span class="k">module</span>
+</code></pre></div>
+
+<p>编译需要一个makefile：</p>
+<div class="highlight"><pre><span></span><code><span class="n">FC</span><span class="p">=</span><span class="n">gfortran</span>
+<span class="n">FFLAG</span><span class="p">=</span><span class="o">-</span><span class="n">lfftw3</span><span class="w"> </span><span class="o">-</span><span class="n">I</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">include</span><span class="w"> </span><span class="o">-</span><span class="n">L</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib64</span><span class="w"> </span><span class="o">-</span><span class="n">fbounds</span><span class="o">-</span><span class="n">check</span>
+<span class="n">objects</span><span class="p">=</span><span class="n">call_fft</span><span class="p">.</span><span class="n">o</span><span class="w"> </span><span class="n">sacio</span><span class="p">.</span><span class="n">o</span><span class="w"> </span><span class="n">globe_data</span><span class="p">.</span><span class="n">o</span>
+<span class="nb">all</span><span class="p">:</span><span class="n">sacio</span><span class="p">.</span><span class="n">mod</span><span class="w"> </span><span class="n">globe_data</span><span class="p">.</span><span class="n">mod</span><span class="w"> </span><span class="n">call_fft</span>
+<span class="p">.</span><span class="n">f</span><span class="p">.</span><span class="n">o</span><span class="p">:</span>
+<span class="w">    </span>$<span class="p">(</span><span class="n">FC</span><span class="p">)</span><span class="w"> </span>$<span class="p">(</span><span class="n">FFLAG</span><span class="p">)</span><span class="w"> </span>$<span class="o">&lt;</span><span class="w"> </span><span class="o">-</span><span class="n">c</span>
+<span class="c">%.o:%.f90</span>
+<span class="w">    </span>$<span class="p">(</span><span class="n">FC</span><span class="p">)</span><span class="w"> </span>$<span class="p">(</span><span class="n">FFLAG</span><span class="p">)</span><span class="w"> </span>$<span class="o">&lt;</span><span class="w"> </span><span class="o">-</span><span class="n">c</span><span class="w"> </span>
+<span class="n">sacio</span><span class="p">.</span><span class="n">mod</span><span class="p">:</span><span class="n">sacio</span><span class="p">.</span><span class="n">f90</span>
+<span class="w">    </span>$<span class="p">(</span><span class="n">FC</span><span class="p">)</span><span class="w"> </span>$<span class="o">&lt;</span><span class="w"> </span><span class="o">-</span><span class="n">c</span>
+<span class="n">globe_data</span><span class="p">.</span><span class="n">mod</span><span class="p">:</span><span class="n">globe_data</span><span class="p">.</span><span class="n">f90</span>
+<span class="w">    </span>$<span class="p">(</span><span class="n">FC</span><span class="p">)</span><span class="w"> </span>$<span class="o">&lt;</span><span class="w"> </span><span class="o">-</span><span class="n">c</span>
+<span class="n">call_fft</span><span class="p">:</span>$<span class="p">(</span><span class="n">objects</span><span class="p">)</span>
+<span class="w">    </span>$<span class="p">(</span><span class="n">FC</span><span class="p">)</span><span class="w"> </span>$<span class="o">^</span><span class="w"> </span><span class="o">-</span><span class="n">o</span><span class="w"> </span>$<span class="p">@</span><span class="w"> </span>$<span class="p">(</span><span class="n">FFLAG</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="n">lm</span>
+<span class="n">clean</span><span class="p">:</span>
+<span class="w">    </span><span class="o">-</span><span class="n">rm</span><span class="w"> </span><span class="o">*</span><span class="p">.</span><span class="n">o</span><span class="w"> </span><span class="o">*</span><span class="p">.</span><span class="n">mod</span><span class="w"> </span>
+</code></pre></div>
+
+<p>注意这里要加上-lfftw3表示调用fftw，-I给定fftw头的路径，-L给定fftw的lib。如果是按照默认路径安装的fftw，那一般都不用指定-I和-L，因为默认路径一般已经包含在编译环境里了。
+好了大功告成了，但不保证拷贝下来就能运行通过哦。有问题发邮件吧，我们再交流^_^</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>http://www.fftw.org/&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+  </div>
+
+  <div class="post-nav">
+    
+      <a href="/blog/2020-07-04-gmt-time-axes.html">&larr; gmt画时间轴</a>
+    
+    
+    <a href="/blog/">Blog</a>
+    
+    
+      <a href="/blog/2020-07-08-how-to-access-google.html">如何访问google &rarr;</a>
+    
+  </div>
+</article>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Jun Xie &middot; Built with Python &amp; Markdown &middot;
+        <a href="https://github.com/" target="_blank">GitHub</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

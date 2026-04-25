@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>去仪器响应练习 | Jun Xie</title>
+  <meta name="description" content="去仪器响应练习">
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+  <!-- MathJax for LaTeX rendering -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <a href="/" class="site-title">SEISAMUSE</a>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/links/">Links</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      
+<article>
+  <div class="post-header">
+    <h1>去仪器响应练习</h1>
+    <div class="post-meta">
+      <time>2025-04-23</time>
+       &middot; 1 min read
+      
+       &middot;
+      
+        <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">python</span>
+      
+      
+    </div>
+  </div>
+
+  <div class="post-content">
+    <p>用我的脚本下载了一堆的miniseed放在seed下，仪器响应文件放在resp文件夹下，利用obspy去除仪器响应，还保存为miniseed。</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">glob</span><span class="w"> </span><span class="kn">import</span> <span class="n">glob</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">obspy</span><span class="w"> </span><span class="kn">import</span> <span class="n">read</span><span class="p">,</span> <span class="n">read_inventory</span>
+<span class="c1"># 设置路径</span>
+<span class="n">seed_folder</span> <span class="o">=</span> <span class="s2">&quot;seed&quot;</span>
+<span class="n">resp_folder</span> <span class="o">=</span> <span class="s2">&quot;resp&quot;</span>
+<span class="n">output_folder</span> <span class="o">=</span> <span class="s2">&quot;seed_corrected&quot;</span>
+<span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">output_folder</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">seed_files</span> <span class="o">=</span> <span class="n">glob</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">seed_folder</span><span class="p">,</span> <span class="s2">&quot;*.seed&quot;</span><span class="p">))</span>   <span class="c1"># 遍历所有 seed 文件</span>
+<span class="k">for</span> <span class="n">seed_file</span> <span class="ow">in</span> <span class="n">seed_files</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Processing </span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">seed_file</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">st</span> <span class="o">=</span> <span class="n">read</span><span class="p">(</span><span class="n">seed_file</span><span class="p">)</span>   <span class="c1"># 读取 MiniSEED 数据</span>
+        <span class="k">for</span> <span class="n">tr</span> <span class="ow">in</span> <span class="n">st</span><span class="p">:</span>
+            <span class="n">net</span> <span class="o">=</span> <span class="n">tr</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">network</span>
+            <span class="n">sta</span> <span class="o">=</span> <span class="n">tr</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">station</span>
+            <span class="n">loc</span> <span class="o">=</span> <span class="n">tr</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">location</span>
+            <span class="n">cha</span> <span class="o">=</span> <span class="n">tr</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">channel</span>
+            <span class="n">resp_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">resp_folder</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;RESP.</span><span class="si">{</span><span class="n">net</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">sta</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">loc</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">cha</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span> <span class="c1"># 构造 RESP 文件路径</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">resp_file</span><span class="p">):</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;RESP file not found: </span><span class="si">{</span><span class="n">resp_file</span><span class="si">}</span><span class="s2">, skipping trace.&quot;</span><span class="p">)</span>
+                <span class="k">continue</span>
+            <span class="n">inventory</span> <span class="o">=</span> <span class="n">read_inventory</span><span class="p">(</span><span class="n">resp_file</span><span class="p">)</span>   <span class="c1"># 读取 RESP 文件作为 inventory</span>
+            <span class="c1"># 去除仪器响应</span>
+            <span class="n">tr</span><span class="o">.</span><span class="n">remove_response</span><span class="p">(</span><span class="n">inventory</span><span class="o">=</span><span class="n">inventory</span><span class="p">,</span> <span class="n">output</span><span class="o">=</span><span class="s2">&quot;VEL&quot;</span><span class="p">,</span> <span class="n">pre_filt</span><span class="o">=</span><span class="p">[</span><span class="mf">0.001</span><span class="p">,</span> <span class="mf">0.002</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.45</span> <span class="p">],</span> <span class="n">zero_mean</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">taper</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">output_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_folder</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">seed_file</span><span class="p">))</span> <span class="c1"># 输出文件名</span>
+        <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">output_file</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;MSEED&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Saved corrected data to </span><span class="si">{</span><span class="n">output_file</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error processing </span><span class="si">{</span><span class="n">seed_file</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+  </div>
+
+  <div class="post-nav">
+    
+      <a href="/blog/2025-04-22-download-fnet-data-py.html">&larr; 如何下载Fnet数据</a>
+    
+    
+    <a href="/blog/">Blog</a>
+    
+    
+      <a href="/blog/2025-04-23-paper-reading-27.html">文献阅读(27) &rarr;</a>
+    
+  </div>
+</article>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Jun Xie &middot; Built with Python &amp; Markdown &middot;
+        <a href="https://github.com/" target="_blank">GitHub</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

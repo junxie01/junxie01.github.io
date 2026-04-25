@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我对这个博客做了什么 | Jun Xie</title>
+  <meta name="description" content="我对这个博客做了什么">
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+  <!-- MathJax for LaTeX rendering -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <a href="/" class="site-title">SEISAMUSE</a>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/links/">Links</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      
+<article>
+  <div class="post-header">
+    <h1>我对这个博客做了什么</h1>
+    <div class="post-meta">
+      <time>2020-06-10</time>
+       &middot; 2 min read
+      
+       &middot;
+      
+        <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">hexo</span>
+      
+        <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">next</span>
+      
+      
+    </div>
+  </div>
+
+  <div class="post-content">
+    <p>&emsp;&emsp;原本是想记笔记，写一些技术性的东西。然而现在为止好像还没有干啥正事。那我对这个博客做了些什么呢？干了这些：</p>
+<!-- more -->
+
+<h2 id="_1">重新配置</h2>
+<p>按{% post_link how-I-build-this-web 这个步骤 %}重新配置了一遍。之前不知道从哪里下载的一个山寨版还是啥的，应该是老版本，很多东西都没有。所以重新下载了最新版本。折腾了好久。对了，还干了好多无用功。网上搜来的很多教程版本都比较老。别马上按着别人的办法干，先看看主题的配置文件，或官方的文档。</p>
+<h2 id="_2">插入脚注</h2>
+<p>请参见此神仙<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>。 </p>
+<h2 id="_3">封面模式</h2>
+<p>参见<sup id="fnref:11"><a class="footnote-ref" href="#fn:11">11</a></sup>。下载这个插件：</p>
+<div class="highlight"><pre><span></span><code>npm install --save hexo-less
+</code></pre></div>
+
+<p>语法是在封面后面加上</p>
+<div class="highlight"><pre><span></span><code><span class="o">&lt;!--</span><span class="n">less</span><span class="o">--&gt;</span>
+</code></pre></div>
+
+<p>这样前面的部分不会显示到文章主题部分。可以搞一张图片就完美了。</p>
+<div class="highlight"><pre><span></span><code><span class="o">!</span><span class="p">[</span><span class="err">封面</span><span class="p">](</span><span class="err">图片地址</span><span class="p">)</span>
+<span class="o">&lt;!--</span><span class="n">less</span><span class="o">-&gt;</span>
+</code></pre></div>
+
+<h2 id="_4">设置标签云</h2>
+<p>按照这位大仙<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup>的操作弄好了标签云，但是发现它不在正中啊。于是找到了tag cloud的<a href="https://github.com/MikeCoder/hexo-tag-cloud">github</a>。里面有一句：</p>
+<div class="highlight"><pre><span></span><code>&lt;canvas width=&quot;250&quot; height=&quot;250&quot; id=&quot;resCanvas&quot; style=&quot;width:100%&quot;&gt;
+</code></pre></div>
+
+<p>那个100%前面是一个冒号，而大仙<sup id="fnref2:3"><a class="footnote-ref" href="#fn:3">3</a></sup>写做等号。我发现等号就偏右边，冒号就在正中，很奇怪。</p>
+<h2 id="_5">侧边栏圆角</h2>
+<p>搜索到这位大神<sup id="fnref:8"><a class="footnote-ref" href="#fn:8">8</a></sup>。我的Scheme选的是Pisces，所以先在next/source/css/_variables/Pisces.styl里面改一下变量</p>
+<div class="highlight"><pre><span></span><code>$border-radius                    = 5px;
+</code></pre></div>
+
+<p>然后到next/source/css/_schemes/Pisces/_layout.styl里面的.header-inner(对应菜单栏)字段改</p>
+<div class="highlight"><pre><span></span><code><span class="nt">border-radius</span><span class="o">:</span><span class="w"> </span><span class="o">$</span><span class="nt">border-radius</span><span class="o">;</span>
+</code></pre></div>
+
+<p>在.content-wrap(对应文章页面)字段改</p>
+<div class="highlight"><pre><span></span><code><span class="nt">border-radius</span><span class="o">:</span><span class="w"> </span><span class="o">$</span><span class="nt">border-radius</span><span class="o">;</span>
+</code></pre></div>
+
+<p>如此改完，然后......不对劲。在主页菜单栏和文章页面确实变圆角了，然而站点概况不是圆角。然而往下拖动，直到看不到菜单栏的时候，站点概况就变圆角了，不能忍。所以可能还要改siderbar字段。可惜_layout.styl里面木有。诶，我发现有next/source/css/_schemes/Pisces/_sidebar.styl文件。打开看。果然找到了。.sidebar字段是没有border-radius变量的，于是我添加了</p>
+<div class="highlight"><pre><span></span><code><span class="nt">border-radius</span><span class="o">:</span><span class="w"> </span><span class="o">$</span><span class="nt">border-radius</span><span class="o">;</span>
+</code></pre></div>
+
+<p>除此以外，还看到了.sidebar-inner字段。也一并改了。这下就大功告成了。忘了说。这些字段的另一个变量是background，把它替换成</p>
+<div class="highlight"><pre><span></span><code><span class="n">background</span><span class="o">:</span><span class="w"> </span><span class="n">rgba</span><span class="o">(</span><span class="mi">255</span><span class="o">,</span><span class="mi">255</span><span class="o">,</span><span class="mi">255</span><span class="o">,</span><span class="mf">0.9</span><span class="o">);</span>
+</code></pre></div>
+
+<p>就可以让博客变透明了。</p>
+<h2 id="_6">站内引用语法</h2>
+<p>这样:</p>
+<div class="highlight"><pre><span></span><code>{% post_link post_name %}
+</code></pre></div>
+
+<p>出来默认是博文题目，或者自己取个名字。</p>
+<div class="highlight"><pre><span></span><code>{% post_link post_name 点击查看%}
+</code></pre></div>
+
+<h2 id="_7">设置网站图标</h2>
+<p>同样来自这位大神<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>。最重要的是找到自己喜欢的图片放在next/source/images里，然后在next/_config.yml里这样干就好了：</p>
+<div class="highlight"><pre><span></span><code><span class="n">favicon</span><span class="o">:</span>
+<span class="w">  </span><span class="n">small</span><span class="o">:</span><span class="w"> </span><span class="sr">/images/</span><span class="n">j</span><span class="o">-</span><span class="n">icon</span><span class="o">-</span><span class="mi">16</span><span class="n">x16</span><span class="o">.</span><span class="na">png</span>
+<span class="w">  </span><span class="n">medium</span><span class="o">:</span><span class="w"> </span><span class="sr">/images/</span><span class="n">j</span><span class="o">-</span><span class="n">icon</span><span class="o">-</span><span class="mi">32</span><span class="n">x32</span><span class="o">.</span><span class="na">png</span>
+<span class="w">  </span><span class="n">apple_touch_icon</span><span class="o">:</span><span class="w"> </span><span class="sr">/images/i</span><span class="n">con</span><span class="o">.</span><span class="na">png</span>
+<span class="w">  </span><span class="n">safari_pinned_tab</span><span class="o">:</span><span class="w"> </span><span class="sr">/images/i</span><span class="n">con</span><span class="o">.</span><span class="na">png</span>
+</code></pre></div>
+
+<h2 id="_8">首页文章加框</h2>
+<p>设置请查看{% post_link how-to-add-frame-in-hexo-next %}</p>
+<h2 id="_9">添加版权信息</h2>
+<p>根据此大仙<sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup>的说明弄好了以后，发现署名”前面的cc图标老是乱码（一个叉）。那怎么可以，弄了半天没弄好。结果人家next已经集成了。在next/_config.yml里面这样就好了。</p>
+<div class="highlight"><pre><span></span><code><span class="n">creative_commons</span><span class="o">:</span>
+<span class="w">  </span><span class="n">license</span><span class="o">:</span><span class="w"> </span><span class="n">by</span><span class="o">-</span><span class="n">nc</span><span class="o">-</span><span class="n">sa</span>
+<span class="w">  </span><span class="n">sidebar</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">  </span><span class="n">post</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">  </span><span class="n">language</span><span class="o">:</span>
+</code></pre></div>
+
+<h2 id="_10">加动态背景图片</h2>
+<p>根据这位大仙<sup id="fnref:7"><a class="footnote-ref" href="#fn:7">7</a></sup>的方法弄的。
+动态图片感觉太慢了。我在百度下了一个，有阳光森林，人，牛。感觉还不错，希望不要侵权。</p>
+<h2 id="_11">点击头像回到主页</h2>
+<p>设置请查看{% post_link avatar-to-homepage 这篇文章 %}</p>
+<h2 id="permalink">永久链接permalink</h2>
+<p>参见<sup id="fnref:10"><a class="footnote-ref" href="#fn:10">10</a></sup>。首先安装程序：</p>
+<div class="highlight"><pre><span></span><code>npm install hexo-abbrlink --save
+</code></pre></div>
+
+<p>然后在_config.yml中设置：</p>
+<div class="highlight"><pre><span></span><code><span class="n">permalink</span><span class="o">:</span><span class="w"> </span><span class="n">posts</span><span class="sr">/:abbrlink/</span>
+<span class="n">abbrlink</span><span class="o">:</span>
+<span class="w">  </span><span class="n">alg</span><span class="o">:</span><span class="w"> </span><span class="n">crc32</span>
+<span class="w">  </span><span class="n">rep</span><span class="o">:</span><span class="w"> </span><span class="n">hex</span>
+<span class="n">permalink_defaults</span><span class="o">:</span>
+<span class="n">pretty_urls</span><span class="o">:</span>
+<span class="w">  </span><span class="n">trailing_index</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="n">Set</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">remove</span><span class="w"> </span><span class="n">trailing</span><span class="w"> </span><span class="s1">&#39;index.html&#39;</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">permalinks</span>
+<span class="w">  </span><span class="n">trailing_html</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="n">Set</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">remove</span><span class="w"> </span><span class="n">trailing</span><span class="w"> </span><span class="s1">&#39;.html&#39;</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">permalinks</span>
+</code></pre></div>
+
+<h2 id="footer">footer添加运行时间</h2>
+<p>参见<sup id="fnref:9"><a class="footnote-ref" href="#fn:9">9</a></sup>。找到/next/layout/_partials/footer.swig，在里面添加：</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;div&gt;</span>
+<span class="nt">&lt;span</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;timeDate&quot;</span><span class="nt">&gt;</span>Loading<span class="w"> </span>days...<span class="nt">&lt;/span&gt;&lt;span</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;times&quot;</span><span class="nt">&gt;</span>Loading<span class="w"> </span>sec....<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;script&gt;</span>
+<span class="w">    </span>var<span class="w"> </span>now<span class="w"> </span>=<span class="w"> </span>new<span class="w"> </span>Date();
+<span class="w">    </span>function<span class="w"> </span>createtime()<span class="w"> </span>{
+<span class="w">        </span>var<span class="w"> </span>grt=<span class="w"> </span>new<span class="w"> </span>Date(&quot;05/26/2020<span class="w"> </span>00:00:00&quot;);
+<span class="w">        </span>now.setTime(now.getTime()+250);
+<span class="w">        </span>days<span class="w"> </span>=<span class="w"> </span>(now<span class="w"> </span>-<span class="w"> </span>grt<span class="w"> </span>)<span class="w"> </span>/<span class="w"> </span>1000<span class="w"> </span>/<span class="w"> </span>60<span class="w"> </span>/<span class="w"> </span>60<span class="w"> </span>/<span class="w"> </span>24;<span class="w"> </span>dnum<span class="w"> </span>=<span class="w"> </span>Math.floor(days);
+<span class="w">        </span>hours<span class="w"> </span>=<span class="w"> </span>(now<span class="w"> </span>-<span class="w"> </span>grt<span class="w"> </span>)<span class="w"> </span>/<span class="w"> </span>1000<span class="w"> </span>/<span class="w"> </span>60<span class="w"> </span>/<span class="w"> </span>60<span class="w"> </span>-<span class="w"> </span>(24<span class="w"> </span>*<span class="w"> </span>dnum);<span class="w"> </span>hnum<span class="w"> </span>=<span class="w"> </span>Math.floor(hours);
+<span class="w">        </span>if(String(hnum).length<span class="w"> </span>==1<span class="w"> </span>){hnum<span class="w"> </span>=<span class="w"> </span>&quot;0&quot;<span class="w"> </span>+<span class="w"> </span>hnum;}<span class="w"> </span>minutes<span class="w"> </span>=<span class="w"> </span>(now<span class="w"> </span>-<span class="w"> </span>grt<span class="w"> </span>)<span class="w"> </span>/<span class="w"> </span>1000<span class="w"> </span>/60<span class="w"> </span>-<span class="w"> </span>(24<span class="w"> </span>*<span class="w"> </span>60<span class="w"> </span>*<span class="w"> </span>dnum)<span class="w"> </span>-<span class="w"> </span>(60<span class="w"> </span>*<span class="w"> </span>hnum);
+<span class="w">        </span>mnum<span class="w"> </span>=<span class="w"> </span>Math.floor(minutes);<span class="w"> </span>if(String(mnum).length<span class="w"> </span>==1<span class="w"> </span>){mnum<span class="w"> </span>=<span class="w"> </span>&quot;0&quot;<span class="w"> </span>+<span class="w"> </span>mnum;}
+<span class="w">        </span>seconds<span class="w"> </span>=<span class="w"> </span>(now<span class="w"> </span>-<span class="w"> </span>grt<span class="w"> </span>)<span class="w"> </span>/<span class="w"> </span>1000<span class="w"> </span>-<span class="w"> </span>(24<span class="w"> </span>*<span class="w"> </span>60<span class="w"> </span>*<span class="w"> </span>60<span class="w"> </span>*<span class="w"> </span>dnum)<span class="w"> </span>-<span class="w"> </span>(60<span class="w"> </span>*<span class="w"> </span>60<span class="w"> </span>*<span class="w"> </span>hnum)<span class="w"> </span>-<span class="w"> </span>(60<span class="w"> </span>*<span class="w"> </span>mnum);
+<span class="w">        </span>snum<span class="w"> </span>=<span class="w"> </span>Math.round(seconds);<span class="w"> </span>if(String(snum).length<span class="w"> </span>==1<span class="w"> </span>){snum<span class="w"> </span>=<span class="w"> </span>&quot;0&quot;<span class="w"> </span>+<span class="w"> </span>snum;}
+<span class="w">        </span>document.getElementById(&quot;timeDate&quot;).innerHTML<span class="w"> </span>=<span class="w"> </span>&quot;Running<span class="w"> </span>safely<span class="w"> </span>for:<span class="w"> </span>&quot;+dnum+&quot;<span class="w"> </span>d<span class="w"> </span>&quot;;
+<span class="w">        </span>document.getElementById(&quot;times&quot;).innerHTML<span class="w"> </span>=<span class="w"> </span>hnum<span class="w"> </span>+<span class="w"> </span>&quot;<span class="w"> </span>h<span class="w"> </span>&quot;<span class="w"> </span>+<span class="w"> </span>mnum<span class="w"> </span>+<span class="w"> </span>&quot;<span class="w"> </span>m<span class="w"> </span>&quot;<span class="w"> </span>+<span class="w"> </span>snum<span class="w"> </span>+<span class="w"> </span>&quot;<span class="w"> </span>s&quot;;
+<span class="w">    </span>}
+setInterval(&quot;createtime()&quot;,250);
+<span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+
+<p>本来大神<sup id="fnref2:9"><a class="footnote-ref" href="#fn:9">9</a></sup>是写的中文，但我的出来是乱码，就改成了英文了。</p>
+<h2 id="_12">字数和阅读时长统计</h2>
+<p>请参见<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup>，或者请查看{% post_link word-count %}。</p>
+<h2 id="googlepost">添加google广告到post</h2>
+<p>参见<sup id="fnref:6"><a class="footnote-ref" href="#fn:6">6</a></sup>。</p>
+<h2 id="powered-by-hexo">隐藏网页底部 powered By Hexo</h2>
+<p>股沟出此大神<sup id="fnref2:2"><a class="footnote-ref" href="#fn:2">2</a></sup>的方法。
+但事实上next已经集成了这个功能，直接在next/_config.yml里将powered改为false就可以了，像这样：</p>
+<div class="highlight"><pre><span></span><code>footer：
+   xxx
+   powered: false
+   xxx
+</code></pre></div>
+
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>https://github.com/kchen0x/hexo-reference&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>https://blog.csdn.net/as480133937/article/details/100138838&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>https://blog.csdn.net/Aoman_Hao/article/details/89416634&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>https://github.com/theme-next/hexo-symbols-count-time&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:5">
+<p>https://wylu.me/posts/e0424f3f/&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:6">
+<p>https://juejin.im/post/5c95d230e51d45124e35cef6#comment&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:7">
+<p>https://blog.diqigan.cn/posts/add-background-picture-for-next.html&#160;<a class="footnote-backref" href="#fnref:7" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:8">
+<p>http://eternalzttz.com/hexo-next.html&#160;<a class="footnote-backref" href="#fnref:8" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:9">
+<p>https://www.93bok.com/Hexo网站运行时间添加/&#160;<a class="footnote-backref" href="#fnref:9" title="Jump back to footnote 9 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:9" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+</li>
+<li id="fn:10">
+<p>https://github.com/Rozbo/hexo-abbrlink&#160;<a class="footnote-backref" href="#fnref:10" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+</li>
+<li id="fn:11">
+<p>https://github.com/fuchen/hexo-less&#160;<a class="footnote-backref" href="#fnref:11" title="Jump back to footnote 11 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+  </div>
+
+  <div class="post-nav">
+    
+      <a href="/blog/2020-06-05-history-and-inversion.html">&larr; 历史和反演</a>
+    
+    
+    <a href="/blog/">Blog</a>
+    
+    
+      <a href="/blog/2020-06-12-learn-sed.html">sed插入和删除匹配行 &rarr;</a>
+    
+  </div>
+</article>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Jun Xie &middot; Built with Python &amp; Markdown &middot;
+        <a href="https://github.com/" target="_blank">GitHub</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

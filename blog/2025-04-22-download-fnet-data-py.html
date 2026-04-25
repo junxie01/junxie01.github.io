@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>如何下载Fnet数据 | Jun Xie</title>
+  <meta name="description" content="如何下载Fnet数据">
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+  <!-- MathJax for LaTeX rendering -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <a href="/" class="site-title">SEISAMUSE</a>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/links/">Links</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      
+<article>
+  <div class="post-header">
+    <h1>如何下载Fnet数据</h1>
+    <div class="post-meta">
+      <time>2025-04-22</time>
+       &middot; 1 min read
+      
+       &middot;
+      
+        <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">python</span>
+      
+      
+    </div>
+  </div>
+
+  <div class="post-content">
+    <p>感谢Seisman写了<a href="https://github.com/seisman/FnetPy">FnetPy</a>,可以很方便地下载数据。
+安装：</p>
+<div class="highlight"><pre><span></span><code>pip install https://github.com/seisman/FnetPy/archive/master.zip
+</code></pre></div>
+
+<p>例子：</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">obspy.io.xseed</span><span class="w"> </span><span class="kn">import</span> <span class="n">Parser</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">FnetPy</span><span class="w"> </span><span class="kn">import</span> <span class="n">Client</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span><span class="n">timedelta</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">obspy</span><span class="w"> </span><span class="kn">import</span> <span class="n">read_inventory</span><span class="p">,</span><span class="n">read</span><span class="p">,</span><span class="n">Trace</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="s1">&#39;用户名&#39;</span><span class="p">,</span> <span class="s1">&#39;密码&#39;</span><span class="p">)</span>
+
+<span class="n">current_date</span><span class="o">=</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2013</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="c1">#current_date=datetime(2004,12,30,0,0)</span>
+<span class="n">end_date</span><span class="o">=</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2025</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">output_dir</span><span class="o">=</span><span class="s1">&#39;./seed&#39;</span>
+<span class="n">raw_dir</span><span class="o">=</span><span class="s1">&#39;./raw&#39;</span>
+<span class="n">resp_dir</span><span class="o">=</span><span class="s1">&#39;./resp&#39;</span>
+<span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">raw_dir</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">resp_dir</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">current_date</span><span class="o">&lt;</span><span class="n">end_date</span><span class="p">):</span>
+    <span class="n">start_time</span> <span class="o">=</span> <span class="n">current_data</span>
+    <span class="n">start_str</span> <span class="o">=</span> <span class="n">current_date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y_%m_</span><span class="si">%d</span><span class="s2">_%H_%M_%S&quot;</span><span class="p">)</span>
+    <span class="n">name</span><span class="o">=</span><span class="n">start_str</span><span class="o">+</span><span class="s2">&quot;.seed&quot;</span>
+    <span class="n">fname</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">raw_dir</span><span class="p">,</span><span class="n">name</span><span class="p">)</span>
+    <span class="n">output_file</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">output_file</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[跳过] 文件已存在: </span><span class="si">{</span><span class="n">output_file</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">current_date</span><span class="o">+=</span><span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">continue</span>
+    <span class="nb">open</span><span class="p">(</span><span class="n">output_file</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>  <span class="c1"># 创建空文件</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">fname</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;download data from &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">start_time</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; to &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">end_time</span><span class="p">))</span>
+        <span class="n">client</span><span class="o">.</span><span class="n">get_waveform</span><span class="p">(</span><span class="n">start_time</span><span class="p">,</span> <span class="n">duration_in_seconds</span><span class="o">=</span><span class="mi">86400</span><span class="o">+</span><span class="mi">3600</span><span class="p">,</span><span class="n">component</span><span class="o">=</span><span class="s2">&quot;LHZ&quot;</span><span class="p">,</span><span class="n">filename</span><span class="o">=</span><span class="n">fname</span><span class="p">)</span> <span class="c1"># download</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;download &#39;</span><span class="o">+</span><span class="n">fname</span><span class="o">+</span><span class="s1">&#39; down!&#39;</span><span class="p">)</span>
+    <span class="n">current_date</span><span class="o">+=</span><span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">st</span> <span class="o">=</span> <span class="n">read</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span> <span class="c1"># read</span>
+    <span class="n">parser</span> <span class="o">=</span> <span class="n">Parser</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span> <span class="c1">#parse</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">write_resp</span><span class="p">(</span><span class="n">resp_dir</span><span class="p">,</span> <span class="n">zipped</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">tr</span> <span class="ow">in</span> <span class="n">st</span><span class="p">:</span>
+        <span class="n">resp_file</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;RESP.</span><span class="si">{</span><span class="n">tr</span><span class="o">.</span><span class="n">get_id</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">inv</span> <span class="o">=</span> <span class="n">read_inventory</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">resp_dir</span><span class="p">,</span> <span class="n">resp_file</span><span class="p">))</span>
+        <span class="n">tr</span><span class="o">.</span><span class="n">remove_response</span><span class="p">(</span><span class="n">inventory</span><span class="o">=</span><span class="n">inv</span><span class="p">,</span> <span class="n">output</span><span class="o">=</span><span class="s2">&quot;VEL&quot;</span><span class="p">)</span>
+        <span class="c1">#print(tr.stats)</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">output_file</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;MSEED&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Finished&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<p>这个脚本可以下载2013到2025年Fnet所有台站的LHZ连续波形数据，数据长度为25小时，overlap 1小时。去除仪器响应后的速度记录存放在seed文件夹中。每天的数据名称为%Y_%m_%d_%H_%M_%S.seed。账户需要去NIED去申请，当然用我的也可以。</p>
+  </div>
+
+  <div class="post-nav">
+    
+      <a href="/blog/2025-04-21-down-ambient-noise-py.html">&larr; obspy下载连续背景噪声数据</a>
+    
+    
+    <a href="/blog/">Blog</a>
+    
+    
+      <a href="/blog/2025-04-23-remove-response-miniseed.html">去仪器响应练习 &rarr;</a>
+    
+  </div>
+</article>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Jun Xie &middot; Built with Python &amp; Markdown &middot;
+        <a href="https://github.com/" target="_blank">GitHub</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

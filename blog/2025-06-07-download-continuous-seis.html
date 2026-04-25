@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>python脚本下载连续波形数据 | Jun Xie</title>
+  <meta name="description" content="python脚本下载连续波形数据">
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+  <!-- MathJax for LaTeX rendering -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <a href="/" class="site-title">SEISAMUSE</a>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/links/">Links</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      
+<article>
+  <div class="post-header">
+    <h1>python脚本下载连续波形数据</h1>
+    <div class="post-meta">
+      <time>2025-06-07</time>
+       &middot; 2 min read
+      
+       &middot;
+      
+        <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">python</span>
+      
+      
+    </div>
+  </div>
+
+  <div class="post-content">
+    <p>&emsp;&emsp;这是连续波形数据下载python脚本更新。</p>
+<!--less-->
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">socket</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">obspy</span><span class="w"> </span><span class="kn">import</span> <span class="n">UTCDateTime</span><span class="p">,</span> <span class="n">Stream</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">obspy.clients.fdsn</span><span class="w"> </span><span class="kn">import</span> <span class="n">Client</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">concurrent.futures</span><span class="w"> </span><span class="kn">import</span> <span class="n">ThreadPoolExecutor</span><span class="p">,</span> <span class="n">as_completed</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">requests.exceptions</span><span class="w"> </span><span class="kn">import</span> <span class="ne">ConnectionError</span><span class="p">,</span> <span class="n">Timeout</span>
+
+<span class="c1"># 参数设置</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="s2">&quot;IRIS&quot;</span><span class="p">)</span>
+<span class="n">output_dir</span> <span class="o">=</span> <span class="s2">&quot;global_data&quot;</span>
+<span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">sta_file</span> <span class="o">=</span> <span class="s2">&quot;station.lst&quot;</span>
+<span class="n">start_date</span> <span class="o">=</span> <span class="n">UTCDateTime</span><span class="p">(</span><span class="s2">&quot;2013-01-01&quot;</span><span class="p">)</span>
+<span class="n">end_date</span> <span class="o">=</span> <span class="n">UTCDateTime</span><span class="p">(</span><span class="s2">&quot;2024-01-01&quot;</span><span class="p">)</span>  <span class="c1"># 包括该天</span>
+<span class="n">thread_workers</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">exception_log</span> <span class="o">=</span> <span class="s2">&quot;exceptions.txt&quot;</span>
+<span class="n">timing_log</span> <span class="o">=</span> <span class="s2">&quot;download_time.txt&quot;</span>
+<span class="n">max_retries</span> <span class="o">=</span> <span class="mi">5</span>  <span class="c1"># 最大重试次数</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;📁 当前工作目录: </span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;📁 波形保存路径: </span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">output_dir</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># 读取台站列表</span>
+<span class="n">sta_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">sta_file</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">sf</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">sf</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;#&quot;</span><span class="p">):</span>
+            <span class="n">parts</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">parts</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">:</span>
+                <span class="n">net</span><span class="p">,</span> <span class="n">sta</span> <span class="o">=</span> <span class="n">parts</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">parts</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+                <span class="n">sta_list</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">net</span><span class="p">,</span> <span class="n">sta</span><span class="p">))</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">download_station</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">sta</span><span class="p">,</span> <span class="n">day</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    下载单个台站某天波形数据，去仪器响应，返回Stream</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="n">UTCDateTime</span><span class="p">(</span><span class="n">day</span><span class="p">)</span>
+    <span class="n">end</span> <span class="o">=</span> <span class="n">start</span> <span class="o">+</span> <span class="mi">86400</span>
+    <span class="n">st</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_waveforms</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">sta</span><span class="p">,</span> <span class="s2">&quot;*&quot;</span><span class="p">,</span> <span class="s2">&quot;LH?&quot;</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">attach_response</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="n">st</span><span class="o">.</span><span class="n">remove_response</span><span class="p">(</span><span class="n">output</span><span class="o">=</span><span class="s2">&quot;VEL&quot;</span><span class="p">,</span> <span class="n">pre_filt</span><span class="o">=</span><span class="p">(</span><span class="mf">0.008</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">),</span>
+                       <span class="n">taper</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">zero_mean</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">taper_fraction</span><span class="o">=</span><span class="mf">0.05</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">st</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">download_day</span><span class="p">(</span><span class="n">day</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    下载某天所有台站数据，返回合并Stream和日志信息</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">stream_day</span> <span class="o">=</span> <span class="n">Stream</span><span class="p">()</span>
+    <span class="n">daily_log</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">log_lines</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">with</span> <span class="n">ThreadPoolExecutor</span><span class="p">(</span><span class="n">max_workers</span><span class="o">=</span><span class="n">thread_workers</span><span class="p">)</span> <span class="k">as</span> <span class="n">executor</span><span class="p">:</span>
+        <span class="n">futures</span> <span class="o">=</span> <span class="p">{</span><span class="n">executor</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span><span class="n">download_station</span><span class="p">,</span> <span class="n">net</span><span class="p">,</span> <span class="n">sta</span><span class="p">,</span> <span class="n">day</span><span class="p">):</span> <span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">sta</span><span class="p">)</span> <span class="k">for</span> <span class="n">net</span><span class="p">,</span> <span class="n">sta</span> <span class="ow">in</span> <span class="n">sta_list</span><span class="p">}</span>
+
+        <span class="k">for</span> <span class="n">future</span> <span class="ow">in</span> <span class="n">as_completed</span><span class="p">(</span><span class="n">futures</span><span class="p">):</span>
+            <span class="n">net</span><span class="p">,</span> <span class="n">sta</span> <span class="o">=</span> <span class="n">futures</span><span class="p">[</span><span class="n">future</span><span class="p">]</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">st</span> <span class="o">=</span> <span class="n">future</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>
+                <span class="n">stream_day</span> <span class="o">+=</span> <span class="n">st</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;✅ </span><span class="si">{</span><span class="n">net</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">sta</span><span class="si">}</span><span class="s2"> 下载成功（</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">st</span><span class="p">)</span><span class="si">}</span><span class="s2"> traces）&quot;</span><span class="p">)</span>
+                <span class="n">daily_log</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">net</span><span class="p">,</span> <span class="n">sta</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+            <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;❌ </span><span class="si">{</span><span class="n">net</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">sta</span><span class="si">}</span><span class="s2"> 下载失败: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="n">daily_log</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">net</span><span class="p">,</span> <span class="n">sta</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+                <span class="n">log_lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">day</span><span class="o">.</span><span class="n">date</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">net</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">sta</span><span class="si">}</span><span class="s2"> ❌ </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">stream_day</span><span class="p">,</span> <span class="n">daily_log</span><span class="p">,</span> <span class="n">log_lines</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">is_network_error</span><span class="p">(</span><span class="n">e</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    判断异常是否为网络相关异常</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">network_error_types</span> <span class="o">=</span> <span class="p">(</span><span class="ne">ConnectionError</span><span class="p">,</span> <span class="n">Timeout</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">timeout</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">error</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">network_error_types</span><span class="p">)</span> <span class="ow">or</span> <span class="s2">&quot;timed out&quot;</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">or</span> <span class="s2">&quot;connection&quot;</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+
+<span class="c1"># 主循环</span>
+<span class="n">current_day</span> <span class="o">=</span> <span class="n">start_date</span>
+<span class="k">while</span> <span class="n">current_day</span> <span class="o">&lt;=</span> <span class="n">end_date</span><span class="p">:</span>
+    <span class="n">filename</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">current_day</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y%m</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">.mseed&quot;</span>
+    <span class="n">filepath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+
+    <span class="c1"># 先判断文件是否存在且非空</span>
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span> <span class="ow">and</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">getsize</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">📆 </span><span class="si">{</span><span class="n">current_day</span><span class="o">.</span><span class="n">date</span><span class="si">}</span><span class="s2"> 文件已存在且非空，跳过下载。&quot;</span><span class="p">)</span>
+        <span class="n">current_day</span> <span class="o">+=</span> <span class="mi">86400</span>
+        <span class="k">continue</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">📆 正在处理日期: </span><span class="si">{</span><span class="n">current_day</span><span class="o">.</span><span class="n">date</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="n">attempt</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">success</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">day_start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+    <span class="k">while</span> <span class="n">attempt</span> <span class="o">&lt;</span> <span class="n">max_retries</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">success</span><span class="p">:</span>
+        <span class="n">attempt</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;🔄 尝试第 </span><span class="si">{</span><span class="n">attempt</span><span class="si">}</span><span class="s2"> 次下载 </span><span class="si">{</span><span class="n">current_day</span><span class="o">.</span><span class="n">date</span><span class="si">}</span><span class="s2"> ...&quot;</span><span class="p">)</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">stream_day</span><span class="p">,</span> <span class="n">daily_log</span><span class="p">,</span> <span class="n">log_lines</span> <span class="o">=</span> <span class="n">download_day</span><span class="p">(</span><span class="n">current_day</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">stream_day</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;⚠️ </span><span class="si">{</span><span class="n">current_day</span><span class="o">.</span><span class="n">date</span><span class="si">}</span><span class="s2"> 没有下载到数据，准备重试...&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;下载数据为空&quot;</span><span class="p">)</span>
+
+            <span class="c1"># 保存合并后的波形</span>
+            <span class="n">stream_day</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;MSEED&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;💾 </span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s2"> 保存成功（共 </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">stream_day</span><span class="p">)</span><span class="si">}</span><span class="s2"> traces）&quot;</span><span class="p">)</span>
+            <span class="n">success</span> <span class="o">=</span> <span class="kc">True</span>
+
+            <span class="c1"># 写入异常日志</span>
+            <span class="k">if</span> <span class="n">log_lines</span><span class="p">:</span>
+                <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">exception_log</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">elog</span><span class="p">:</span>
+                    <span class="n">elog</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">log_lines</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;❌ 下载异常: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+            <span class="c1"># 判断是否为网络错误</span>
+            <span class="k">if</span> <span class="n">is_network_error</span><span class="p">(</span><span class="n">e</span><span class="p">):</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;🌐 网络异常，等待5秒后重试...&quot;</span><span class="p">)</span>
+                <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;⚠️ 非网络异常，仍将重试...&quot;</span><span class="p">)</span>
+                <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+    <span class="c1"># 下载耗时记录</span>
+    <span class="n">day_duration</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">day_start_time</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">timing_log</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">tlog</span><span class="p">:</span>
+        <span class="n">tlog</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">current_day</span><span class="o">.</span><span class="n">date</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">day_duration</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> seconds</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">success</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;❌ </span><span class="si">{</span><span class="n">current_day</span><span class="o">.</span><span class="n">date</span><span class="si">}</span><span class="s2"> 下载失败，超过最大重试次数。请检查网络或日志。&quot;</span><span class="p">)</span>
+
+    <span class="n">current_day</span> <span class="o">+=</span> <span class="mi">86400</span>
+</code></pre></div>
+
+<p>&emsp;&emsp;这个脚本实现的功能包括：
+   * 下载台站列表station.lst的2013-01-01到2024-01-01，LH?数据。
+   * 每天的数据存储为global_data/YYYYMMDD.mseed。
+   * 去仪器响应，保留VEL，滤波频率为0.008, 0.01, 0.3, 0.4。
+   * 记录每天数据下载的耗时，保存在“download_time.txt”中。
+   * 判断是否是网络中断错误，如果是则做5次尝试重新下载，每次间隔5秒。
+   * 判断当天数据是否已经被下载，如果没有或者大小是0则开始下载。
+   * 将错误输出到exceptions.txt中。
+   * 每天数据下载时，启用20个进程进行下载。</p>
+  </div>
+
+  <div class="post-nav">
+    
+      <a href="/blog/2025-06-07-statistic-data-download.html">&larr; 统计数据下载情况</a>
+    
+    
+    <a href="/blog/">Blog</a>
+    
+    
+      <a href="/blog/2025-06-08-problem-of-urllib3.html">urllib3的问题 &rarr;</a>
+    
+  </div>
+</article>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Jun Xie &middot; Built with Python &amp; Markdown &middot;
+        <a href="https://github.com/" target="_blank">GitHub</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

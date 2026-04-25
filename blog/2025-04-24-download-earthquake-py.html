@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>下载地震数据练习 | Jun Xie</title>
+  <meta name="description" content="下载地震数据练习">
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+  <!-- MathJax for LaTeX rendering -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <a href="/" class="site-title">SEISAMUSE</a>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/links/">Links</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      
+<article>
+  <div class="post-header">
+    <h1>下载地震数据练习</h1>
+    <div class="post-meta">
+      <time>2025-04-24</time>
+       &middot; 3 min read
+      
+       &middot;
+      
+        <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">python</span>
+      
+      
+    </div>
+  </div>
+
+  <div class="post-content">
+    <p>&emsp;&emsp;地震波形数据怎么下载？</p>
+<!--less-->
+<p>&emsp;&emsp;可以去<a href="http://iris.edu/">IRIS</a>网站下啊。这里给出结合FetchEvent和obspy进行数据下载的例子，还比较简单哈。
+&emsp;&emsp;FetchEvent从地址https://github.com/EarthScope/fetch-scripts下载。他是用perl脚本写的。运行例子如下：</p>
+<div class="highlight"><pre><span></span><code>./FetchEvent -s 2006-01-01 -e 2007-05-01 --radius 5:12:95:28 --mag 5:10 -o event.lst
+</code></pre></div>
+
+<p>&emsp;&emsp;表示下载发生时间为2006-01-01到2007-05-01，位于以(5,12)(lat,lon)为中心，半径28-95度，震级5-10级的地震信息，保存到event.lst中。
+&emsp;&emsp;下载到的event.lst内容如下：</p>
+<div class="highlight"><pre><span></span><code><span class="mf">8037834</span><span class="w"> </span><span class="err">|</span><span class="mf">2006</span><span class="o">/</span><span class="mf">01</span><span class="o">/</span><span class="mf">23</span><span class="w"> </span><span class="mf">20</span><span class="p">:</span><span class="mf">50</span><span class="p">:</span><span class="mf">46.19</span><span class="n">Z</span><span class="w"> </span><span class="err">|</span><span class="w">  </span><span class="mf">6.9168</span><span class="err">|</span><span class="w"> </span><span class="o">-</span><span class="mf">77.7951</span><span class="err">|</span><span class="w">  </span><span class="mf">24.0355</span><span class="err">|</span><span class="n">ISC</span><span class="err">|||</span><span class="n">MS</span><span class="p">,</span><span class="mf">5.86</span><span class="p">,</span><span class="n">ISC</span><span class="err">|</span><span class="n">mb</span><span class="p">,</span><span class="mf">6.16</span><span class="p">,</span><span class="n">ISC</span><span class="err">|</span><span class="n">Near</span><span class="w"> </span><span class="n">west</span><span class="w"> </span><span class="n">coast</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">Colombia</span>
+</code></pre></div>
+
+<p>&emsp;&emsp;表示ID|时间|纬度|经度|深度|目录|||震级类型,震级,目录|震级类型,震级,目录|位置
+&emsp;&emsp;可以看出地震信息来自ISC目录，其实到<a href="https://www.isc.ac.uk/iscbulletin/search/catalogue/">ISC</a>直接检索也很方便。</p>
+<p>&emsp;&emsp;接下来，下载XB台网所有台站接收到的地震理论P波到时前50秒到后150秒三分量数据。其中P波到时调用taup来计算。接下来去仪器响应，最后再截取P波前10秒到后60秒。保存为SAC格式，每个地震每个台站保存一个SAC，名称需包含地震时间震级及台站名。利用多线程ThreadPoolExecutor加速。脚本如下：</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">obspy</span><span class="w"> </span><span class="kn">import</span> <span class="n">UTCDateTime</span><span class="p">,</span> <span class="n">read_inventory</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">obspy.clients.fdsn</span><span class="w"> </span><span class="kn">import</span> <span class="n">Client</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">obspy.taup</span><span class="w"> </span><span class="kn">import</span> <span class="n">TauPyModel</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">obspy.geodetics</span><span class="w"> </span><span class="kn">import</span> <span class="n">locations2degrees</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">concurrent.futures</span><span class="w"> </span><span class="kn">import</span> <span class="n">ThreadPoolExecutor</span><span class="p">,</span> <span class="n">as_completed</span>
+
+<span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="s2">&quot;IRIS&quot;</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">TauPyModel</span><span class="p">(</span><span class="s2">&quot;iasp91&quot;</span><span class="p">)</span>
+
+<span class="n">output_dir</span> <span class="o">=</span> <span class="s2">&quot;processed_sac&quot;</span>
+<span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">event_file</span> <span class="o">=</span> <span class="s2">&quot;event.lst&quot;</span>
+<span class="n">exception_log</span> <span class="o">=</span> <span class="s2">&quot;exceptions.txt&quot;</span>
+<span class="n">thread_workers</span> <span class="o">=</span> <span class="mi">4</span>  <span class="c1"># 可调线程数</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">event_file</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">event_lines</span> <span class="o">=</span> <span class="p">[</span><span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span> <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()]</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">exception_log</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">elog</span><span class="p">:</span>
+    <span class="n">elog</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">process_station</span><span class="p">(</span><span class="n">event_id</span><span class="p">,</span> <span class="n">origin_time</span><span class="p">,</span> <span class="n">magnitude</span><span class="p">,</span> <span class="n">ev_lat</span><span class="p">,</span> <span class="n">ev_lon</span><span class="p">,</span> <span class="n">ev_dep</span><span class="p">,</span> <span class="n">net</span><span class="p">,</span> <span class="n">sta</span><span class="p">,</span> <span class="n">sta_lat</span><span class="p">,</span> <span class="n">sta_lon</span><span class="p">,</span> <span class="n">sta_elev</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># 使用 locations2degrees 计算震中距</span>
+        <span class="n">dist_deg</span> <span class="o">=</span> <span class="n">locations2degrees</span><span class="p">(</span><span class="n">ev_lat</span><span class="p">,</span> <span class="n">ev_lon</span><span class="p">,</span> <span class="n">sta_lat</span><span class="p">,</span> <span class="n">sta_lon</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">dist_deg</span><span class="p">)</span>
+        <span class="n">arrivals</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">get_travel_times</span><span class="p">(</span><span class="n">source_depth_in_km</span><span class="o">=</span><span class="n">ev_dep</span><span class="p">,</span>
+                                          <span class="n">distance_in_degree</span><span class="o">=</span><span class="n">dist_deg</span><span class="p">,</span>
+                                          <span class="n">phase_list</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;P&quot;</span><span class="p">])</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">arrivals</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;No P arrival&quot;</span><span class="p">)</span>
+
+        <span class="n">p_arrival</span> <span class="o">=</span> <span class="n">origin_time</span> <span class="o">+</span> <span class="n">arrivals</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">time</span>
+        <span class="n">start_dl</span> <span class="o">=</span> <span class="n">p_arrival</span> <span class="o">-</span> <span class="mi">50</span>
+        <span class="n">end_dl</span> <span class="o">=</span> <span class="n">p_arrival</span> <span class="o">+</span> <span class="mi">150</span>
+
+        <span class="c1"># 下载三分量数据</span>
+        <span class="n">st</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_waveforms</span><span class="p">(</span><span class="n">network</span><span class="o">=</span><span class="n">net</span><span class="p">,</span> <span class="n">station</span><span class="o">=</span><span class="n">sta</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;*&quot;</span><span class="p">,</span> <span class="n">channel</span><span class="o">=</span><span class="s2">&quot;BH?&quot;</span><span class="p">,</span>
+                                  <span class="n">starttime</span><span class="o">=</span><span class="n">start_dl</span><span class="p">,</span> <span class="n">endtime</span><span class="o">=</span><span class="n">end_dl</span><span class="p">,</span>
+                                  <span class="n">attach_response</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="c1"># 去响应</span>
+        <span class="n">st</span><span class="o">.</span><span class="n">remove_response</span><span class="p">(</span><span class="n">output</span><span class="o">=</span><span class="s2">&quot;VEL&quot;</span><span class="p">,</span> <span class="n">pre_filt</span><span class="o">=</span><span class="p">(</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="n">taper</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">zero_mean</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">taper_fraction</span><span class="o">=</span><span class="mf">0.05</span><span class="p">)</span>
+
+        <span class="c1"># 截取有效窗口</span>
+        <span class="n">st</span><span class="o">.</span><span class="n">trim</span><span class="p">(</span><span class="n">starttime</span><span class="o">=</span><span class="n">p_arrival</span> <span class="o">-</span> <span class="mi">10</span><span class="p">,</span> <span class="n">endtime</span><span class="o">=</span><span class="n">p_arrival</span> <span class="o">+</span> <span class="mi">60</span><span class="p">)</span>
+
+        <span class="c1"># 检查是否为三分量</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">all</span><span class="p">(</span><span class="n">comp</span> <span class="ow">in</span> <span class="p">[</span><span class="n">tr</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">channel</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">tr</span> <span class="ow">in</span> <span class="n">st</span><span class="p">]</span> <span class="k">for</span> <span class="n">comp</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;N&quot;</span><span class="p">,</span> <span class="s2">&quot;E&quot;</span><span class="p">,</span> <span class="s2">&quot;Z&quot;</span><span class="p">]):</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Incomplete 3-component data&quot;</span><span class="p">)</span>
+
+        <span class="c1"># 写入 SAC 文件并添加头段信息</span>
+        <span class="k">for</span> <span class="n">tr</span> <span class="ow">in</span> <span class="n">st</span><span class="p">:</span>
+            <span class="n">tr</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">sac</span> <span class="o">=</span> <span class="n">tr</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;sac&quot;</span><span class="p">,</span> <span class="p">{})</span>
+            <span class="n">tr</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">sac</span><span class="o">.</span><span class="n">stla</span> <span class="o">=</span> <span class="n">sta_lat</span>
+            <span class="n">tr</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">sac</span><span class="o">.</span><span class="n">stlo</span> <span class="o">=</span> <span class="n">sta_lon</span>
+            <span class="n">tr</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">sac</span><span class="o">.</span><span class="n">stel</span> <span class="o">=</span> <span class="n">sta_elev</span>
+            <span class="n">tr</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">sac</span><span class="o">.</span><span class="n">evla</span> <span class="o">=</span> <span class="n">ev_lat</span>
+            <span class="n">tr</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">sac</span><span class="o">.</span><span class="n">evlo</span> <span class="o">=</span> <span class="n">ev_lon</span>
+            <span class="n">tr</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">sac</span><span class="o">.</span><span class="n">evdp</span> <span class="o">=</span> <span class="n">ev_dep</span>
+            <span class="n">tr</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">sac</span><span class="o">.</span><span class="n">mag</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">magnitude</span><span class="p">)</span> <span class="k">if</span> <span class="n">magnitude</span> <span class="o">!=</span> <span class="s2">&quot;NA&quot;</span> <span class="k">else</span> <span class="mf">0.0</span>
+
+            <span class="n">time_tag</span> <span class="o">=</span> <span class="n">origin_time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y%m</span><span class="si">%d</span><span class="s2">T%H%M%S&quot;</span><span class="p">)</span>
+            <span class="n">chan</span> <span class="o">=</span> <span class="n">tr</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">channel</span>
+            <span class="n">filename</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">time_tag</span><span class="si">}</span><span class="s2">_M</span><span class="si">{</span><span class="n">magnitude</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">net</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">sta</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">chan</span><span class="si">}</span><span class="s2">.sac&quot;</span>
+            <span class="n">filepath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+            <span class="n">tr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;SAC&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">net</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">sta</span><span class="si">}</span><span class="s2"> ✅&quot;</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">exception_log</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">elog</span><span class="p">:</span>
+            <span class="n">elog</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">event_id</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">net</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">sta</span><span class="si">}</span><span class="s2"> ❌ </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">net</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">sta</span><span class="si">}</span><span class="s2"> ❌ </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">process_event</span><span class="p">(</span><span class="n">line</span><span class="p">):</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">parts</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;|&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">parts</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="s2">&quot;跳过格式错误行&quot;</span><span class="p">]</span>
+
+    <span class="n">evid</span> <span class="o">=</span> <span class="n">parts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="n">time_str</span> <span class="o">=</span> <span class="n">parts</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="n">ev_lat</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">parts</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+    <span class="n">ev_lon</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">parts</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+    <span class="n">ev_dep</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">parts</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+    <span class="n">mag_info</span> <span class="o">=</span> <span class="n">parts</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="n">magnitude</span> <span class="o">=</span> <span class="n">mag_info</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="s2">&quot;,&quot;</span> <span class="ow">in</span> <span class="n">mag_info</span> <span class="k">else</span> <span class="s2">&quot;NA&quot;</span>
+
+    <span class="n">origin_time</span> <span class="o">=</span> <span class="n">UTCDateTime</span><span class="p">(</span><span class="n">time_str</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">🟡 Processing event </span><span class="si">{</span><span class="n">evid</span><span class="si">}</span><span class="s2"> M</span><span class="si">{</span><span class="n">magnitude</span><span class="si">}</span><span class="s2"> @ </span><span class="si">{</span><span class="n">origin_time</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">ev_lat</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">ev_lon</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">ev_dep</span><span class="si">}</span><span class="s2">km)&quot;</span><span class="p">)</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">inventory</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_stations</span><span class="p">(</span><span class="n">network</span><span class="o">=</span><span class="s2">&quot;XB&quot;</span><span class="p">,</span> <span class="n">starttime</span><span class="o">=</span><span class="n">origin_time</span><span class="p">,</span>
+                                        <span class="n">endtime</span><span class="o">=</span><span class="n">origin_time</span> <span class="o">+</span> <span class="mi">3600</span><span class="p">,</span>
+                                        <span class="n">level</span><span class="o">=</span><span class="s2">&quot;station&quot;</span><span class="p">,</span> <span class="n">channel</span><span class="o">=</span><span class="s2">&quot;BH?&quot;</span><span class="p">)</span>
+        <span class="n">task_list</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">with</span> <span class="n">ThreadPoolExecutor</span><span class="p">(</span><span class="n">max_workers</span><span class="o">=</span><span class="n">thread_workers</span><span class="p">)</span> <span class="k">as</span> <span class="n">executor</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">network</span> <span class="ow">in</span> <span class="n">inventory</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">station</span> <span class="ow">in</span> <span class="n">network</span><span class="p">:</span>
+                    <span class="n">sta_lat</span> <span class="o">=</span> <span class="n">station</span><span class="o">.</span><span class="n">latitude</span>
+                    <span class="n">sta_lon</span> <span class="o">=</span> <span class="n">station</span><span class="o">.</span><span class="n">longitude</span>
+                    <span class="n">sta_elev</span> <span class="o">=</span> <span class="n">station</span><span class="o">.</span><span class="n">elevation</span>
+                    <span class="n">sta</span> <span class="o">=</span> <span class="n">station</span><span class="o">.</span><span class="n">code</span>
+                    <span class="n">net</span> <span class="o">=</span> <span class="n">network</span><span class="o">.</span><span class="n">code</span>
+                    <span class="n">task</span> <span class="o">=</span> <span class="n">executor</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span><span class="n">process_station</span><span class="p">,</span> <span class="n">evid</span><span class="p">,</span> <span class="n">origin_time</span><span class="p">,</span> <span class="n">magnitude</span><span class="p">,</span>
+                                           <span class="n">ev_lat</span><span class="p">,</span> <span class="n">ev_lon</span><span class="p">,</span> <span class="n">ev_dep</span><span class="p">,</span> <span class="n">net</span><span class="p">,</span> <span class="n">sta</span><span class="p">,</span> <span class="n">sta_lat</span><span class="p">,</span> <span class="n">sta_lon</span><span class="p">,</span> <span class="n">sta_elev</span><span class="p">)</span>
+                    <span class="n">task_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">task</span><span class="p">)</span>
+
+            <span class="k">for</span> <span class="n">task</span> <span class="ow">in</span> <span class="n">as_completed</span><span class="p">(</span><span class="n">task_list</span><span class="p">):</span>
+                <span class="n">results</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">task</span><span class="o">.</span><span class="n">result</span><span class="p">())</span>
+
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">exception_log</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">elog</span><span class="p">:</span>
+            <span class="n">elog</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">evid</span><span class="si">}</span><span class="s2"> XB ERROR: </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">results</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;⚠️ Failed to process event </span><span class="si">{</span><span class="n">evid</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">results</span>
+
+<span class="c1"># 执行所有事件处理</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">event_lines</span><span class="p">:</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">process_event</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">results</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+</code></pre></div>
+  </div>
+
+  <div class="post-nav">
+    
+      <a href="/blog/2025-04-23-paper-reading-27.html">&larr; 文献阅读(27)</a>
+    
+    
+    <a href="/blog/">Blog</a>
+    
+    
+      <a href="/blog/2025-05-10-gmt-arrow.html">gmt怎么画箭头 &rarr;</a>
+    
+  </div>
+</article>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Jun Xie &middot; Built with Python &amp; Markdown &middot;
+        <a href="https://github.com/" target="_blank">GitHub</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

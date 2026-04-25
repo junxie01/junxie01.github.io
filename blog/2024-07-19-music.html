@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>学习聚束分析(一) | Jun Xie</title>
+  <meta name="description" content="学习聚束分析(一)">
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+  <!-- MathJax for LaTeX rendering -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <a href="/" class="site-title">SEISAMUSE</a>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/links/">Links</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      
+<article>
+  <div class="post-header">
+    <h1>学习聚束分析(一)</h1>
+    <div class="post-meta">
+      <time>2024-07-19</time>
+       &middot; 4 min read
+      
+       &middot;
+      
+        <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">Seismology</span>
+      
+      
+    </div>
+  </div>
+
+  <div class="post-content">
+    <p>&emsp;&emsp;这是聚束分析学习一，参见<a href="https://geophydog.cool/post/music_array_process/">这里</a>。</p>
+<!--less-->
+
+<p>&emsp;&emsp;聚束分析技术（Bartlett 聚束成形器）虽然稳定性和稳健性很好，但分辨率较差。Schmidt 提出了一种称为多信号分类 （MUSIC） 的新聚束分析算法，用于在保持波束形成器稳定性的同时解决分辨率问题 （Schmidt, 1986）。这里我们学习 MUSIC 算法，并给出一些Python代码来展示该技术的工作原理。</p>
+<p>&emsp;&emsp;假设一个信号为$u(t)$则傅里叶频谱为$U(\omega)$, $N$ 个接收器的向量为, 
+$$ \vec{u}(\omega) = [U_{1}(\omega), U_{2}(\omega), \cdots, U_{N}(\omega)]^T \tag{1} $$ 
+互相关矩阵由下式给出,
+$$ \bar{C}(\omega) = \frac{1}{N}\vec{u}(\omega) \vec{u}^H(\omega) \tag{2} $$ 
+式中$H$表示Hermitian转置算符。互相关矩阵$\bar{C}(\omega)$通常受到非相干信号及仪器产生的噪声干扰。因此该矩阵包括相干信号和噪声。对$\bar{C}(\omega)$进行特征值分解获得，</p>
+<p>$$ \bar{C}(\omega) = \bar{E}(\omega) \bar{\Lambda}(\omega) \bar{E}^{-1}(\omega) \tag{3} $$</p>
+<p>式中$\bar{E}(\omega)$由$N$个特征向量$\vec{e}_{i} $ 组成，</p>
+<p>$$ \bar{E}(\omega) = [\vec{e}_1, \vec{e}_2, \cdots, \vec{e}_N] \tag{4} $$</p>
+<p>$\bar{\Lambda}(\omega)$ 是对角矩阵，对角元素$\lambda_{i}$是$\bar{C}(\omega)$的特征值，</p>
+<p>$$ \bar{\Lambda}(\omega) = diag { \lambda_{1}, \lambda_{2}, \cdots, \lambda_{N} } \tag{5} $$</p>
+<p>&emsp;&emsp;最大的特征值表示相干信号（可能有多个相干信号），左边的特征值及其特征向量被噪声占据，这意味着这些噪声是正交的。在这里，我们使用噪声的特征向量构造一个新矩阵</p>
+<p>$$ \bar{N}<em ne="ne">e(\omega) = [\vec{e}_1, \vec{e}_2, \cdots, \vec{e}</em>}] [\vec{e<em ne="ne">1, \vec{e}_2, \cdots, \vec{e}</em> $$}]^H \tag{6</p>
+<p>&emsp;&emsp;Barlett聚束器从 </p>
+<p>$$ P(\omega) = \vec{a}(\omega) \bar{C}(\omega) \vec{a}^H(\omega) \tag{7} $$</p>
+<p>变为，</p>
+<p>$$ P(\omega) =\frac{1}{ \vec{a}(\omega) \bar{N}_e(\omega) \vec{a}^H(\omega) } \tag{8} $$ 
+式中 $\vec{a}(\omega)$ 表示转向向量 $\vec{a}_n=e^{-i\omega \Delta t_n}$。 当我们将转向向量投影到噪声特征向量跨越的噪声矩阵子空间时, 公式$(8)$的分母项将为零。在这种情况下 $P(\omega)$ 将取极大值。$\Delta t_n$ 是时间延迟，其形式为，</p>
+<p>$$ \Delta t_{n} = \vec{s} \cdot \vec{r}_n \tag{9} $$</p>
+<p>式中$\vec{s}=s[-sin\theta, -cos\theta]^T$ 和 $\vec{r}_{n}$ 是慢度和位置矢量，其中接收器的反方位角为$\theta$。$\vec{r}_s$ 和 $v$ 是源位置向量和传播速度。</p>
+<p>&emsp;&emsp;MUSIC 算法在分辨率上优于 Bartlett 波束成形器。然而，与 MUSIC 相比，Bartlett 波束成形器具有更好的稳定性。以下是两种算法的python脚本示例。</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="c1"># ARF of the Bartlett beamformer.</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">arf_beam_barlett</span><span class="p">(</span><span class="n">c0</span><span class="p">,</span> <span class="n">xy</span><span class="p">,</span> <span class="n">f0</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">b0</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span> <span class="n">s0</span><span class="o">=</span><span class="mf">3.5e-3</span><span class="p">,</span> <span class="n">b1</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">b2</span><span class="o">=</span><span class="mi">360</span><span class="p">,</span> <span class="n">nb</span><span class="o">=</span><span class="mi">181</span><span class="p">,</span> <span class="n">s1</span><span class="o">=</span><span class="mf">1e-3</span><span class="p">,</span> <span class="n">s2</span><span class="o">=</span><span class="mf">5e-3</span><span class="p">,</span> <span class="n">ns</span><span class="o">=</span><span class="mi">81</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">xy</span><span class="o">.</span><span class="kp">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">zeros</span><span class="p">((</span><span class="n">n</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="kp">dtype</span><span class="o">=</span><span class="nb">complex</span><span class="p">)</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">linspace</span><span class="p">(</span><span class="n">b1</span><span class="p">,</span> <span class="n">b2</span><span class="p">,</span> <span class="n">nb</span><span class="p">)</span>
+    <span class="n">bb</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">linspace</span><span class="p">(</span><span class="n">s1</span><span class="p">,</span> <span class="n">s2</span><span class="p">,</span> <span class="n">ns</span><span class="p">)</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">zeros</span><span class="p">((</span><span class="n">ns</span><span class="p">,</span> <span class="n">nb</span><span class="p">),</span> <span class="kp">dtype</span><span class="o">=</span><span class="nb">complex</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">ns</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nb</span><span class="p">):</span>
+            <span class="n">shift</span> <span class="o">=</span> <span class="o">-</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="kp">sin</span><span class="p">(</span><span class="n">bb</span><span class="p">[</span><span class="n">j</span><span class="p">])</span><span class="o">*</span><span class="n">xy</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">np</span><span class="o">.</span><span class="kp">cos</span><span class="p">(</span><span class="n">bb</span><span class="p">[</span><span class="n">j</span><span class="p">])</span><span class="o">*</span><span class="n">xy</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">])</span>
+            <span class="n">a</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">exp</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="n">j</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">f0</span><span class="o">*</span><span class="n">shift</span><span class="p">)</span>
+            <span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">conjugate</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">T</span><span class="p">)</span> <span class="o">@</span> <span class="n">c0</span> <span class="o">@</span> <span class="n">a</span>
+    <span class="k">return</span> <span class="n">b</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">p</span><span class="o">/</span><span class="n">n</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="c1"># ARF of the MUSIC beamformer.</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">arf_beam_music</span><span class="p">(</span><span class="n">c0</span><span class="p">,</span> <span class="n">xy</span><span class="p">,</span> <span class="n">f0</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">b0</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span> <span class="n">s0</span><span class="o">=</span><span class="mf">3.5e-3</span><span class="p">,</span> <span class="n">b1</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">b2</span><span class="o">=</span><span class="mi">360</span><span class="p">,</span> <span class="n">nb</span><span class="o">=</span><span class="mi">181</span><span class="p">,</span> <span class="n">s1</span><span class="o">=</span><span class="mf">1e-3</span><span class="p">,</span> <span class="n">s2</span><span class="o">=</span><span class="mf">5e-3</span><span class="p">,</span> <span class="n">ns</span><span class="o">=</span><span class="mi">81</span><span class="p">,</span> <span class="n">ne</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">xy</span><span class="o">.</span><span class="kp">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">zeros</span><span class="p">((</span><span class="n">n</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="kp">dtype</span><span class="o">=</span><span class="nb">complex</span><span class="p">)</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">linspace</span><span class="p">(</span><span class="n">b1</span><span class="p">,</span> <span class="n">b2</span><span class="p">,</span> <span class="n">nb</span><span class="p">)</span>
+    <span class="n">bb</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">linspace</span><span class="p">(</span><span class="n">s1</span><span class="p">,</span> <span class="n">s2</span><span class="p">,</span> <span class="n">ns</span><span class="p">)</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">zeros</span><span class="p">((</span><span class="n">ns</span><span class="p">,</span> <span class="n">nb</span><span class="p">),</span> <span class="kp">dtype</span><span class="o">=</span><span class="nb">complex</span><span class="p">)</span>
+    <span class="n">w</span><span class="p">,</span> <span class="n">v</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eigh</span><span class="p">(</span><span class="n">c0</span><span class="p">)</span>
+    <span class="n">ve</span> <span class="o">=</span> <span class="n">v</span><span class="p">[:,</span> <span class="p">:</span><span class="n">ne</span><span class="p">]</span>
+    <span class="n">ne</span> <span class="o">=</span> <span class="n">ve</span> <span class="o">@</span> <span class="n">np</span><span class="o">.</span><span class="kp">conjugate</span><span class="p">(</span><span class="n">ve</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">ns</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nb</span><span class="p">):</span>
+            <span class="n">shift</span> <span class="o">=</span> <span class="o">-</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="kp">sin</span><span class="p">(</span><span class="n">bb</span><span class="p">[</span><span class="n">j</span><span class="p">])</span><span class="o">*</span><span class="n">xy</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">np</span><span class="o">.</span><span class="kp">cos</span><span class="p">(</span><span class="n">bb</span><span class="p">[</span><span class="n">j</span><span class="p">])</span><span class="o">*</span><span class="n">xy</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">])</span>
+            <span class="n">a</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">exp</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="n">j</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">f0</span><span class="o">*</span><span class="n">shift</span><span class="p">)</span>
+            <span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="kp">conjugate</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">T</span><span class="p">)</span> <span class="o">@</span> <span class="n">ne</span> <span class="o">@</span> <span class="n">a</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">b</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">p</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="kp">abs</span><span class="p">(</span><span class="n">p</span><span class="p">)</span><span class="o">.</span><span class="kp">max</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Number of receivers</span>
+<span class="n">nr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">15</span>
+<span class="c1"># Aperture of the array</span>
+<span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1e2</span>
+<span class="c1"># Randomly generating the Cartician coordinates</span>
+<span class="n">xy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="n">nr</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">))</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">r</span>
+<span class="c1"># Frequency, back-azimuth and slowness of signal</span>
+<span class="n">f0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">b0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">90</span><span class="p">;</span><span class="w"> </span><span class="n">s0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.5e-3</span>
+<span class="c1"># From degree to radian</span>
+<span class="n">bb0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">b0</span><span class="p">)</span>
+<span class="c1"># Fourier vector if signal</span>
+<span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">nr</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">dtype</span><span class="o">=</span><span class="n">complex</span><span class="p">)</span>
+<span class="n">u</span><span class="p">[:,</span><span class="w"> </span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mi">2j</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">f0</span><span class="o">*</span><span class="n">s0</span><span class="o">*</span><span class="p">(</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">bb0</span><span class="p">)</span><span class="o">*</span><span class="n">xy</span><span class="p">[:,</span><span class="w"> </span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">bb0</span><span class="p">)</span><span class="o">*</span><span class="n">xy</span><span class="p">[:,</span><span class="w"> </span><span class="mi">1</span><span class="p">]))</span>
+<span class="c1"># Generating correlation matrix using u</span>
+<span class="n">c0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="err">@</span><span class="w"> </span><span class="n">np</span><span class="o">.</span><span class="n">conjugate</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+<span class="n">c0</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">c0</span><span class="p">);</span><span class="w"> </span><span class="n">c0</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">c0</span><span class="p">)]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span>
+<span class="c1"># Back-azimuth and slowness ranges of computing</span>
+<span class="n">b1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">b2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">360</span><span class="p">;</span><span class="w"> </span><span class="n">nb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">361</span>
+<span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1e-3</span><span class="p">;</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5e-3</span><span class="p">;</span><span class="w"> </span><span class="n">ns</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">81</span>
+<span class="c1"># Adding noise to the correlation matrix</span>
+<span class="n">noiser</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">nr</span><span class="p">,</span><span class="w"> </span><span class="n">nr</span><span class="p">)</span>
+<span class="n">noisei</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">nr</span><span class="p">,</span><span class="w"> </span><span class="n">nr</span><span class="p">)</span>
+<span class="n">ratio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.25</span>
+<span class="n">c0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c0</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">noiser</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">ratio</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1j</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">noisei</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">ratio</span>
+<span class="c1"># Computing the Bartlett beamformer</span>
+<span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">p1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arf_beam_barlett</span><span class="p">(</span><span class="n">c0</span><span class="p">,</span><span class="w"> </span><span class="n">xy</span><span class="p">,</span><span class="w"> </span><span class="n">f0</span><span class="o">=</span><span class="n">f0</span><span class="p">,</span><span class="w"> </span><span class="n">b0</span><span class="o">=</span><span class="n">b0</span><span class="p">,</span><span class="w"> </span><span class="n">s0</span><span class="o">=</span><span class="n">s0</span><span class="p">,</span><span class="w"> </span><span class="n">b1</span><span class="o">=</span><span class="n">b1</span><span class="p">,</span><span class="w"> </span><span class="n">b2</span><span class="o">=</span><span class="n">b2</span><span class="p">,</span><span class="w"> </span><span class="n">nb</span><span class="o">=</span><span class="n">nb</span><span class="p">,</span><span class="w"> </span><span class="n">s1</span><span class="o">=</span><span class="n">s1</span><span class="p">,</span><span class="w"> </span><span class="n">s2</span><span class="o">=</span><span class="n">s2</span><span class="p">,</span><span class="w"> </span><span class="n">ns</span><span class="o">=</span><span class="n">ns</span><span class="p">)</span>
+<span class="c1"># Computing the MUSIC beamformer.</span>
+<span class="n">_</span><span class="p">,</span><span class="w"> </span><span class="n">_</span><span class="p">,</span><span class="w"> </span><span class="n">p2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arf_beam_music</span><span class="p">(</span><span class="n">c0</span><span class="p">,</span><span class="w"> </span><span class="n">xy</span><span class="p">,</span><span class="w"> </span><span class="n">f0</span><span class="o">=</span><span class="n">f0</span><span class="p">,</span><span class="w"> </span><span class="n">b0</span><span class="o">=</span><span class="n">b0</span><span class="p">,</span><span class="w"> </span><span class="n">s0</span><span class="o">=</span><span class="n">s0</span><span class="p">,</span><span class="w"> </span><span class="n">b1</span><span class="o">=</span><span class="n">b1</span><span class="p">,</span><span class="w"> </span><span class="n">b2</span><span class="o">=</span><span class="n">b2</span><span class="p">,</span><span class="w"> </span><span class="n">nb</span><span class="o">=</span><span class="n">nb</span><span class="p">,</span><span class="w"> </span><span class="n">s1</span><span class="o">=</span><span class="n">s1</span><span class="p">,</span><span class="w"> </span><span class="n">s2</span><span class="o">=</span><span class="n">s2</span><span class="p">,</span><span class="w"> </span><span class="n">ns</span><span class="o">=</span><span class="n">ns</span><span class="p">,</span><span class="w"> </span><span class="n">ne</span><span class="o">=</span><span class="n">nr</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="c1"># Normalizing beam power</span>
+<span class="n">p1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">p1</span><span class="p">);</span><span class="w"> </span><span class="n">p1</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="n">p1</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="n">p2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">p2</span><span class="p">);</span><span class="w"> </span><span class="n">p2</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="n">p2</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+
+
+<span class="c1">## Visualizing the beam power results.</span>
+<span class="c1"># Array configuration</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">221</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">xy</span><span class="p">[:,</span><span class="w"> </span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="n">xy</span><span class="p">[:,</span><span class="w"> </span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="n">marker</span><span class="o">=</span><span class="s1">&#39;v&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Easting (m)&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Northing (m)&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">labelsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
+
+<span class="c1"># Comparing the accuracy</span>
+<span class="n">sn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb nb-Type">int</span><span class="p">((</span><span class="n">s0</span><span class="o">-</span><span class="n">s</span><span class="o">.</span><span class="n">min</span><span class="p">())</span><span class="o">/</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]));</span><span class="w"> </span><span class="n">dsn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
+<span class="n">pp1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">p1</span><span class="p">[</span><span class="n">sn</span><span class="o">-</span><span class="n">dsn</span><span class="p">:</span><span class="n">sn</span><span class="o">+</span><span class="n">dsn</span><span class="p">],</span><span class="w"> </span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">pp2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">p2</span><span class="p">[</span><span class="n">sn</span><span class="o">-</span><span class="n">dsn</span><span class="p">:</span><span class="n">sn</span><span class="o">+</span><span class="n">dsn</span><span class="p">],</span><span class="w"> </span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">pp1</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="n">pp1</span><span class="o">.</span><span class="n">max</span><span class="p">();</span><span class="w"> </span><span class="n">pp2</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="n">pp2</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="n">ax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">222</span><span class="p">,</span><span class="w"> </span><span class="n">projection</span><span class="o">=</span><span class="s1">&#39;polar&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">b</span><span class="p">),</span><span class="w"> </span><span class="n">pp1</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Bartlett&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">b</span><span class="p">),</span><span class="w"> </span><span class="n">pp2</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;MUSIC&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">b0</span><span class="p">),</span><span class="w"> </span><span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">b0</span><span class="p">)],</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="s1">&#39;k--&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;True&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">11</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_theta_zero_location</span><span class="p">(</span><span class="s1">&#39;N&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_theta_direction</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">labelsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
+
+<span class="c1"># Barlett beam power</span>
+<span class="n">ax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">223</span><span class="p">,</span><span class="w"> </span><span class="n">projection</span><span class="o">=</span><span class="s1">&#39;polar&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">b</span><span class="p">),</span><span class="w"> </span><span class="n">s</span><span class="o">*</span><span class="mf">1e3</span><span class="p">,</span><span class="w"> </span><span class="n">p1</span><span class="p">,</span><span class="w"> </span><span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gnuplot2_r&#39;</span><span class="p">)</span>
+<span class="n">cbar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">shrink</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span><span class="w"> </span><span class="n">pad</span><span class="o">=</span><span class="mf">0.075</span><span class="p">)</span>
+<span class="n">cbar</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Barlett beam power&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
+<span class="n">cbar</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">labelsize</span><span class="o">=</span><span class="mi">11</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;#333333&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">ls</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">)),</span><span class="w"> </span><span class="n">lw</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">colors</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">labelsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_theta_zero_location</span><span class="p">(</span><span class="s1">&#39;N&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_theta_direction</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Slowness (s/km)&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">labelsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">bb0</span><span class="p">,</span><span class="w"> </span><span class="n">s0</span><span class="o">*</span><span class="mf">1e3</span><span class="p">,</span><span class="w"> </span><span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># MUSIC beam power</span>
+<span class="n">ax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">224</span><span class="p">,</span><span class="w"> </span><span class="n">projection</span><span class="o">=</span><span class="s1">&#39;polar&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">b</span><span class="p">),</span><span class="w"> </span><span class="n">s</span><span class="o">*</span><span class="mf">1e3</span><span class="p">,</span><span class="w"> </span><span class="n">p2</span><span class="p">,</span><span class="w"> </span><span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gnuplot2_r&#39;</span><span class="p">)</span>
+<span class="n">cbar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">shrink</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span><span class="w"> </span><span class="n">pad</span><span class="o">=</span><span class="mf">0.075</span><span class="p">)</span>
+<span class="n">cbar</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;MUSIC beam power&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
+<span class="n">cbar</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">labelsize</span><span class="o">=</span><span class="mi">11</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;#333333&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">ls</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">)),</span><span class="w"> </span><span class="n">lw</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">colors</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">labelsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_theta_zero_location</span><span class="p">(</span><span class="s1">&#39;N&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_theta_direction</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Slowness (s/km)&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">labelsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">bb0</span><span class="p">,</span><span class="w"> </span><span class="n">s0</span><span class="o">*</span><span class="mf">1e3</span><span class="p">,</span><span class="w"> </span><span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+
+<p>参考文献：
+Schmidt, R.O, “Multiple Emitter Location and Signal Parameter Estimation,” IEEE Trans. Antennas Propagation, Vol. AP-34 (March 1986), pp. 276–280.</p>
+  </div>
+
+  <div class="post-nav">
+    
+      <a href="/blog/2024-07-09-how-to-download-Snet-data.html">&larr; 如何下载S-net数据</a>
+    
+    
+    <a href="/blog/">Blog</a>
+    
+    
+      <a href="/blog/2024-07-25-obspy-paz.html">obspy去polezero类型仪器仪响应 &rarr;</a>
+    
+  </div>
+</article>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Jun Xie &middot; Built with Python &amp; Markdown &middot;
+        <a href="https://github.com/" target="_blank">GitHub</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

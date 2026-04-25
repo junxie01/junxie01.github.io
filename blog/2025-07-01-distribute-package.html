@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>如何发布你自己的脚本 | Jun Xie</title>
+  <meta name="description" content="如何发布你自己的脚本">
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+  <!-- MathJax for LaTeX rendering -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <a href="/" class="site-title">SEISAMUSE</a>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/links/">Links</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      
+<article>
+  <div class="post-header">
+    <h1>如何发布你自己的脚本</h1>
+    <div class="post-meta">
+      <time>2025-07-01</time>
+       &middot; 1 min read
+      
+       &middot;
+      
+        <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">python</span>
+      
+      
+    </div>
+  </div>
+
+  <div class="post-content">
+    <p>&emsp;&emsp;你是不是也想让自己的程序像obspy一样，叫全世界的人pip install就可以用？</p>
+<!--less-->
+<p>&emsp;&emsp;这里以一个简单的例子来说明如何创建自己的程序、打包并发布到PyPI。</p>
+<h1 id="_1">创建自己的项目</h1>
+<p>首先创建一个目录mypkg_project，结构如下：</p>
+<div class="highlight"><pre><span></span><code>mypkg_project/
+├── mypkg/
+│   ├── __init__.py
+│   └── utils.py
+├── README.md
+├── setup.py
+├── pyproject.toml
+</code></pre></div>
+
+<h1 id="_2">编写包的内容</h1>
+<p>在mypkg/utils.py内写入：</p>
+<div class="highlight"><pre><span></span><code><span class="nv">def</span><span class="w"> </span><span class="nv">add</span><span class="ss">(</span><span class="nv">a</span>,<span class="w"> </span><span class="nv">b</span><span class="ss">)</span>:
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">b</span>
+</code></pre></div>
+
+<p>在mypkg/<strong>init</strong>.py内写入：</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">add</span>
+</code></pre></div>
+
+<h1 id="readmemd">添加元数据文件README.md</h1>
+<p>在README.md中写入：</p>
+<div class="highlight"><pre><span></span><code><span class="err">#</span><span class="w"> </span><span class="nx">mypkg</span>
+<span class="nx">A</span><span class="w"> </span><span class="nx">simple</span><span class="w"> </span><span class="nx">Python</span><span class="w"> </span><span class="kn">package</span><span class="w"> </span><span class="nx">with</span><span class="w"> </span><span class="nx">an</span><span class="w"> </span><span class="nx">add</span><span class="w"> </span><span class="nx">function</span><span class="p">.</span>
+</code></pre></div>
+
+<p>在setup.py中写入：</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">setuptools</span><span class="w"> </span><span class="kn">import</span> <span class="n">setup</span><span class="p">,</span> <span class="n">find_packages</span>
+<span class="n">setup</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;mypkg&#39;</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="s1">&#39;0.1&#39;</span><span class="p">,</span>
+    <span class="n">author</span><span class="o">=</span><span class="s1">&#39;Your Name&#39;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s1">&#39;A simple example package&#39;</span><span class="p">,</span>
+    <span class="n">long_description</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;README.md&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">(),</span>
+    <span class="n">long_description_content_type</span><span class="o">=</span><span class="s1">&#39;text/markdown&#39;</span><span class="p">,</span>
+    <span class="n">packages</span><span class="o">=</span><span class="n">find_packages</span><span class="p">(),</span>
+    <span class="n">classifiers</span><span class="o">=</span><span class="p">[</span>
+        <span class="s1">&#39;Programming Language :: Python :: 3&#39;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">python_requires</span><span class="o">=</span><span class="s1">&#39;&gt;=3.6&#39;</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div>
+
+<p>在pyproject.toml中写入：</p>
+<div class="highlight"><pre><span></span><code><span class="k">[build-system]</span>
+<span class="na">requires</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">[&quot;setuptools&quot;, &quot;wheel&quot;]</span>
+<span class="na">build-backend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;setuptools.build_meta&quot;</span>
+</code></pre></div>
+
+<h1 id="_3">项目打包</h1>
+<p>在根目录mypkg_project/中运行：</p>
+<div class="highlight"><pre><span></span><code>python3 -m pip install --upgrade build
+python3 -m build
+</code></pre></div>
+
+<p>会生成：</p>
+<div class="highlight"><pre><span></span><code>dist/
+├── mypkg-0.1-py3-none-any.whl
+└── mypkg-0.1.tar.gz
+</code></pre></div>
+
+<h1 id="_4">本地安装</h1>
+<p>用pip就可以本地安装：</p>
+<div class="highlight"><pre><span></span><code>pip install dist/mypkg-0.1-py3-none-any.whl
+</code></pre></div>
+
+<p>利用python就可以调用：</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">mypkg</span><span class="w"> </span><span class="kn">import</span> <span class="n">add</span>
+<span class="n">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</code></pre></div>
+
+<h1 id="pypi">上传到PyPI（公开发布）</h1>
+<p>首先安装twine：</p>
+<div class="highlight"><pre><span></span><code>pip install twine
+</code></pre></div>
+
+<p>发布：</p>
+<div class="highlight"><pre><span></span><code><span class="n">twine</span><span class="w"> </span><span class="n">upload</span><span class="w"> </span><span class="n">dist</span><span class="o">/*</span>
+</code></pre></div>
+
+<p>这里会提示你输入PyPI的用户名和密码。这一步需要首先到<a href="https://pypi.org/account/register/">PyPI</a>注册账号，发布的时候需要用token</p>
+<div class="highlight"><pre><span></span><code><span class="n">twine</span><span class="w"> </span><span class="n">upload</span><span class="w"> </span><span class="o">--</span><span class="n">repository</span><span class="w"> </span><span class="n">pypi</span><span class="w"> </span><span class="n">dist</span><span class="o">/*</span><span class="w"> </span><span class="o">-</span><span class="n">u</span><span class="w"> </span><span class="n">__token__</span><span class="w"> </span><span class="o">-</span><span class="n">p</span><span class="w"> </span><span class="n">pypi</span><span class="o">-&lt;</span><span class="n">your_token</span><span class="o">&gt;</span>
+</code></pre></div>
+
+<p>上传成功之后可以在https://pypi.org/project/mypkg/访问。
+然后任何人都可以安装你的脚本了：</p>
+<div class="highlight"><pre><span></span><code>pip install mypkg
+</code></pre></div>
+  </div>
+
+  <div class="post-nav">
+    
+      <a href="/blog/2025-06-30-python-script2.html">&larr; PYTHON脚本练习（二）</a>
+    
+    
+    <a href="/blog/">Blog</a>
+    
+    
+      <a href="/blog/2025-08-24-fk.html">PYTHON脚本练习（三）聚束分析 &rarr;</a>
+    
+  </div>
+</article>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Jun Xie &middot; Built with Python &amp; Markdown &middot;
+        <a href="https://github.com/" target="_blank">GitHub</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hexo如何给文章加框 | Jun Xie</title>
+  <meta name="description" content="hexo如何给文章加框">
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+  <!-- MathJax for LaTeX rendering -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <a href="/" class="site-title">SEISAMUSE</a>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/links/">Links</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      
+<article>
+  <div class="post-header">
+    <h1>hexo如何给文章加框</h1>
+    <div class="post-meta">
+      <time>2024-05-28</time>
+       &middot; 1 min read
+      
+       &middot;
+      
+        <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">hexo</span>
+      
+        <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">web</span>
+      
+      
+    </div>
+  </div>
+
+  <div class="post-content">
+    <p>hexo next主题如何给文章加框？</p>
+<!-- less -->
+<p>找到hexo/themes/next/source/css/_common/components/post/index.styl
+将：</p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="nt">if</span><span class="w"> </span><span class="o">(</span><span class="nt">hexo-config</span><span class="o">(</span><span class="s1">&#39;motion.transition.post_block&#39;</span><span class="o">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="err">.post-block,</span><span class="w"> </span><span class="err">.pagination,</span><span class="w"> </span><span class="err">.comments</span><span class="w"> </span><span class="err">{</span>
+<span class="w">      </span><span class="k">visibility</span><span class="p">:</span><span class="w"> </span><span class="kc">hidden</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="err">}</span>
+</code></pre></div>
+
+<p>改为：</p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="nt">if</span><span class="w"> </span><span class="o">(</span><span class="nt">hexo-config</span><span class="o">(</span><span class="s1">&#39;motion.transition.post_block&#39;</span><span class="o">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="err">.post-block{</span>
+<span class="w">     </span><span class="k">visibility</span><span class="p">:</span><span class="w"> </span><span class="kc">hidden</span><span class="p">;</span>
+<span class="w">     </span><span class="k">margin-top</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">     </span><span class="k">margin-bottom</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">     </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">     </span><span class="kp">-webkit-</span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">202</span><span class="p">,</span><span class="w"> </span><span class="mi">203</span><span class="p">,</span><span class="w"> </span><span class="mi">203</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">     </span><span class="kp">-moz-</span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">202</span><span class="p">,</span><span class="w"> </span><span class="mi">203</span><span class="p">,</span><span class="w"> </span><span class="mi">204</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">     </span><span class="p">}</span>
+<span class="w">   </span><span class="p">.</span><span class="nc">pagination</span><span class="o">,</span><span class="w"> </span><span class="p">.</span><span class="nc">comments</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">visibility</span><span class="p">:</span><span class="w"> </span><span class="kc">hidden</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div>
+  </div>
+
+  <div class="post-nav">
+    
+      <a href="/blog/2024-05-28-how-to-use-utterances.html">&larr; Hexo next 使用utterances评论</a>
+    
+    
+    <a href="/blog/">Blog</a>
+    
+    
+      <a href="/blog/2024-05-28-how-to-encrypt.html">hexo 如何给文章设密码 &rarr;</a>
+    
+  </div>
+</article>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Jun Xie &middot; Built with Python &amp; Markdown &middot;
+        <a href="https://github.com/" target="_blank">GitHub</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

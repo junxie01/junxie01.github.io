@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hexo下如何画流程图 | Jun Xie</title>
+  <meta name="description" content="Hexo下如何画流程图">
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+  <!-- MathJax for LaTeX rendering -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <a href="/" class="site-title">SEISAMUSE</a>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/links/">Links</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      
+<article>
+  <div class="post-header">
+    <h1>Hexo下如何画流程图</h1>
+    <div class="post-meta">
+      <time>2025-06-17</time>
+       &middot; 1 min read
+      
+       &middot;
+      
+        <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">Linux</span>
+      
+      
+    </div>
+  </div>
+
+  <div class="post-content">
+    <p>&emsp;&emsp;那么Hexo下如何画流程图呢？</p>
+<!--less-->
+<p>&emsp;&emsp;因为Hexo是用的Markdown的语法，所以是指Markdown的语法。这里我用的是mermaid。用之前需要安装啊。</p>
+<div class="highlight"><pre><span></span><code>npm install hexo-filter-mermaid-diagrams --save
+</code></pre></div>
+
+<p>然后
+在三个反引号+mermaid和三个反引号之间输入:</p>
+<p>graph TD
+A[开始] &ndash;&gt; B{条件判断}
+B &ndash;&gt;|是| C[操作1]
+B &ndash;&gt;|否| D[操作2]
+C &ndash;&gt; E[结束]
+D &ndash;&gt; E</p>
+<p>就会生成:</p>
+<div class="highlight"><pre><span></span><code><span class="nf">graph</span><span class="w"> </span><span class="n">TD</span>
+<span class="n">A</span><span class="p">[</span><span class="err">开始</span><span class="p">]</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">B</span><span class="p">{</span><span class="err">条件判断</span><span class="p">}</span>
+<span class="n">B</span><span class="w"> </span><span class="o">--&gt;|</span><span class="err">是</span><span class="o">|</span><span class="w"> </span><span class="n">C</span><span class="p">[</span><span class="err">操作</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">B</span><span class="w"> </span><span class="o">--&gt;|</span><span class="err">否</span><span class="o">|</span><span class="w"> </span><span class="n">D</span><span class="p">[</span><span class="err">操作</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">C</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">E</span><span class="p">[</span><span class="err">结束</span><span class="p">]</span>
+<span class="n">D</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">E</span>
+</code></pre></div>
+
+<p>大功告成。</p>
+  </div>
+
+  <div class="post-nav">
+    
+      <a href="/blog/2025-06-17-how-to-install-wemeet.html">&larr; Fedora 40如何安装腾讯会议</a>
+    
+    
+    <a href="/blog/">Blog</a>
+    
+    
+      <a href="/blog/2025-06-21-news-website.html">有趣的新闻网站 &rarr;</a>
+    
+  </div>
+</article>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Jun Xie &middot; Built with Python &amp; Markdown &middot;
+        <a href="https://github.com/" target="_blank">GitHub</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

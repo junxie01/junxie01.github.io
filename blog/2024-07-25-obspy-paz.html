@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>obspy去polezero类型仪器仪响应 | Jun Xie</title>
+  <meta name="description" content="obspy去polezero类型仪器仪响应">
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+  <!-- MathJax for LaTeX rendering -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <a href="/" class="site-title">SEISAMUSE</a>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/links/">Links</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      
+<article>
+  <div class="post-header">
+    <h1>obspy去polezero类型仪器仪响应</h1>
+    <div class="post-meta">
+      <time>2024-07-25</time>
+       &middot; 1 min read
+      
+       &middot;
+      
+        <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">python</span>
+      
+        <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">seismology</span>
+      
+      
+    </div>
+  </div>
+
+  <div class="post-content">
+    <p>&emsp;&emsp;有些时候数据下载下来只有polezero格式的仪器响应，那python脚本怎么去仪器响应呢？</p>
+<!--less-->
+<p>&emsp;&emsp;如果有polezero文件，那可以用attach_paz来读取。然后去仪器响应的脚本如下：</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">obspy</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">obspy</span><span class="w"> </span><span class="kn">import</span> <span class="n">read</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">obspy.io.sac</span><span class="w"> </span><span class="kn">import</span> <span class="n">attach_paz</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">obspy.signal.invsim</span><span class="w"> </span><span class="kn">import</span> <span class="n">corn_freq_2_paz</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<span class="n">fpath</span><span class="o">=</span><span class="s2">&quot;/home/junxie/work/Snet/data/2016_08_16_01_00&quot;</span>
+<span class="n">p</span><span class="o">=</span><span class="n">Path</span><span class="p">(</span><span class="n">fpath</span><span class="p">)</span>
+<span class="n">i</span><span class="o">=</span><span class="mi">0</span>
+<span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">p</span><span class="o">.</span><span class="n">rglob</span><span class="p">(</span><span class="s1">&#39;*VX*.SAC&#39;</span><span class="p">):</span> <span class="c1">#循环读取文件</span>
+    <span class="n">st</span><span class="o">=</span><span class="n">read</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">debug_headers</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">tr</span><span class="o">=</span><span class="n">st</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">aa</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">file</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
+    <span class="n">pz</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">file</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;_PZ&quot;</span> <span class="c1"># 这就是paz文件</span>
+    <span class="n">attach_paz</span><span class="p">(</span><span class="n">tr</span><span class="p">,</span><span class="n">pz</span><span class="p">)</span>  <span class="c1"># 贴到tr中</span>
+    <span class="n">paz_1hz</span> <span class="o">=</span> <span class="n">corn_freq_2_paz</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">damp</span><span class="o">=</span><span class="mf">0.707</span><span class="p">)</span>  <span class="c1"># 1Hz instrument</span>
+    <span class="n">paz_1hz</span><span class="p">[</span><span class="s1">&#39;sensitivity&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.0</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">simulate</span><span class="p">(</span><span class="n">paz_simulate</span><span class="o">=</span><span class="n">paz_1hz</span><span class="p">)</span> <span class="c1">#去仪器响应</span>
+</code></pre></div>
+
+<p>&emsp;&emsp;如果没有的话找到零点、极点和放大系数，赋值到paz里面，例如：</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">obspy</span><span class="w"> </span><span class="kn">import</span> <span class="n">read</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">obspy.signal.invsim</span><span class="w"> </span><span class="kn">import</span> <span class="n">corn_freq_2_paz</span>
+<span class="n">st</span> <span class="o">=</span> <span class="n">read</span><span class="p">()</span>
+<span class="n">paz_sts2</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;poles&#39;</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mf">0.037004</span><span class="o">+</span><span class="mf">0.037016</span><span class="n">j</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.037004</span><span class="o">-</span><span class="mf">0.037016</span><span class="n">j</span><span class="p">,</span>
+                      <span class="o">-</span><span class="mf">251.33</span><span class="o">+</span><span class="mi">0</span><span class="n">j</span><span class="p">,</span>
+                      <span class="o">-</span><span class="mf">131.04</span><span class="o">-</span><span class="mf">467.29</span><span class="n">j</span><span class="p">,</span> <span class="o">-</span><span class="mf">131.04</span><span class="o">+</span><span class="mf">467.29</span><span class="n">j</span><span class="p">],</span>
+            <span class="s1">&#39;zeros&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="n">j</span><span class="p">,</span> <span class="mi">0</span><span class="n">j</span><span class="p">],</span>
+            <span class="s1">&#39;gain&#39;</span><span class="p">:</span> <span class="mf">60077000.0</span><span class="p">,</span>
+            <span class="s1">&#39;sensitivity&#39;</span><span class="p">:</span> <span class="mf">2516778400.0</span><span class="p">}</span>
+<span class="n">paz_1hz</span> <span class="o">=</span> <span class="n">corn_freq_2_paz</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">damp</span><span class="o">=</span><span class="mf">0.707</span><span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">simulate</span><span class="p">(</span><span class="n">paz_remove</span><span class="o">=</span><span class="n">paz_sts2</span><span class="p">,</span> <span class="n">paz_simulate</span><span class="o">=</span><span class="n">paz_1hz</span><span class="p">)</span>
+</code></pre></div>
+  </div>
+
+  <div class="post-nav">
+    
+      <a href="/blog/2024-07-19-music.html">&larr; 学习聚束分析(一)</a>
+    
+    
+    <a href="/blog/">Blog</a>
+    
+    
+      <a href="/blog/2024-09-01-how-to-download-fnet-station-list.html">如何下载Fnet的台站列表 &rarr;</a>
+    
+  </div>
+</article>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Jun Xie &middot; Built with Python &amp; Markdown &middot;
+        <a href="https://github.com/" target="_blank">GitHub</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

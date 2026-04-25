@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Links | Jun Xie</title>
+  <meta name="description" content="Projects and resources by Jun Xie">
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+  <!-- MathJax for LaTeX rendering -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <a href="/" class="site-title">SEISAMUSE</a>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/links/" class="active">Links</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      
+<h1 class="page-title">Projects &amp; Resources</h1>
+
+
+<div class="links-content">
+  <h2 id="resource-categories">Resource Categories</h2>
+<ul>
+<li><a href="/links/seismology-software/">Software in Seismology</a> - Summary of Commonly Used Software and Tools in Seismological Research.</li>
+<li><a href="/links/interesting-projects/">Interesting Projects</a> - Open-source projects and academic projects worth following.</li>
+<li><a href="/links/news-sources/">Links of News</a> - Global news and information websites.</li>
+</ul>
+<h2 id="my-projects">My Projects</h2>
+<ul>
+<li><a href="https://www.seis-jun.xyz/daily_news/">Daily News</a> - Curated daily updates on global news.</li>
+<li><a href="https://www.seis-jun.xyz/paper_weekly/">Paper Weekly</a> - Weekly highlights and brief reviews of notable research papers in seismology and related disciplines.</li>
+<li><a href="https://www.seis-jun.xyz/earthquake_weekly/">Earthquake Weekly</a> - Weekly summary and analysis of significant earthquake activity around the globe.</li>
+</ul>
+<h2 id="tools-scripts">Tools &amp; Scripts</h2>
+<ul>
+<li><a href="/scripts/auto_seismo_monitor.py">Auto Seismo Monitor</a> - Python script for automated seismic data monitoring and downloading. Please refer to <a href="/blog/2026-03-21-auto-monitor-download.html">this link</a> to learn how to use it.</li>
+<li><a href="/scripts/paper_analysis.py">AI Paper Analysis</a> - Python script to use AI for paper analysis.</li>
+<li><a href="/scripts/dope.py">Noise Backazimuth</a> - Python script to <a href="/blog/2025-10-24-noise-source-back-azimuth.html">analysis the backazimuth of noise source</a>.</li>
+<li><a href="/scripts/do_array_fk.py">do_array_fk.py</a> - Python script to <a href="/blog/2025-08-24-fk.html">do beamforming</a>.</li>
+</ul>
+<hr />
+<p><em>More resources coming soon&hellip;</em></p>
+</div>
+
+
+<section class="support-section">
+  <p>If you find these resources helpful, consider supporting my work.</p>
+  <button class="btn" onclick="document.getElementById('donate-modal').style.display='flex'">Support My Work</button>
+</section>
+
+<div id="donate-modal" class="modal-overlay" onclick="if(event.target===this)this.style.display='none'">
+  <div class="modal-content">
+    <button class="modal-close" onclick="this.parentElement.parentElement.style.display='none'">&times;</button>
+    <h3>Buy Me a Cup of Coffee</h3>
+    <p>Thank you for your support!</p>
+    <div class="qr-codes">
+      <div class="qr-item">
+        <img src="/images/alipay.png" alt="Alipay">
+        <span>Alipay</span>
+      </div>
+      <div class="qr-item">
+        <img src="/images/wechatpay.png" alt="WeChat Pay">
+        <span>WeChat Pay</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Jun Xie &middot; Built with Python &amp; Markdown &middot;
+        <a href="https://github.com/" target="_blank">GitHub</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

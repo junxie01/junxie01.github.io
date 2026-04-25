@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hexo next首页文章加框 | Jun Xie</title>
+  <meta name="description" content="hexo next首页文章加框">
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+  <!-- MathJax for LaTeX rendering -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <a href="/" class="site-title">SEISAMUSE</a>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/links/">Links</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      
+<article>
+  <div class="post-header">
+    <h1>hexo next首页文章加框</h1>
+    <div class="post-meta">
+      <time>2020-06-20</time>
+       &middot; 1 min read
+      
+       &middot;
+      
+        <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">hexo</span>
+      
+        <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">blog</span>
+      
+      
+    </div>
+  </div>
+
+  <div class="post-content">
+    <p>&emsp;&emsp;我的博客首页的文章列表一直是连起来的，看起来不爽。因而一直在搜索如何加边框，搜出来的是如何添加文章边框阴影效果。看起来也对。于是就开始照猫画虎。</p>
+<!-- more -->
+
+<p>例如这位<a href="https://www.jianshu.com/p/428244cd2caa">大仙</a>说要在themes/next/source/css/_custom/custom.styl里面加入：</p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">post</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="k">margin-top</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">   </span><span class="k">margin-bottom</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">   </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">   </span><span class="kp">-webkit-</span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">202</span><span class="p">,</span><span class="w"> </span><span class="mi">203</span><span class="p">,</span><span class="w"> </span><span class="mi">203</span><span class="p">,</span><span class="w"> </span><span class="mf">.5</span><span class="p">);</span>
+<span class="w">   </span><span class="kp">-moz-</span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">202</span><span class="p">,</span><span class="w"> </span><span class="mi">203</span><span class="p">,</span><span class="w"> </span><span class="mi">204</span><span class="p">,</span><span class="w"> </span><span class="mf">.5</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>&emsp;&emsp;可是我没有custom.styl啊，连_custom文件夹都没有啊。咋办呢？直接建一个呗。建了以后也不行。我还一度怀疑自己的next版本不对，用不了custom.styl。</p>
+<p>&emsp;&emsp;后来又搜到这位<a href="https://blog.csdn.net/qq_39119496/article/details/103372437?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase">神仙</a>。是这个样子干的。</p>
+<p>&emsp;&emsp;在themes/next/source/css/_common/components/post/post.styl中找到.post-block
+然后改成这个样子：</p>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="nt">if</span><span class="w"> </span><span class="nt">xxxxx</span>
+<span class="w"> </span><span class="p">.</span><span class="nc">post-block</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="k">opacity</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">   </span><span class="k">margin-top</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">   </span><span class="k">margin-bottom</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">   </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">   </span><span class="kp">-webkit-</span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">202</span><span class="p">,</span><span class="w"> </span><span class="mi">203</span><span class="p">,</span><span class="w"> </span><span class="mi">203</span><span class="p">,</span><span class="w"> </span><span class="mf">.5</span><span class="p">);</span>
+<span class="w">   </span><span class="kp">-moz-</span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">202</span><span class="p">,</span><span class="w"> </span><span class="mi">203</span><span class="p">,</span><span class="w"> </span><span class="mi">204</span><span class="p">,</span><span class="w"> </span><span class="mf">.5</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="p">.</span><span class="nc">pgaination</span><span class="o">,</span><span class="w"> </span><span class="nt">xxxx</span>
+</code></pre></div>
+
+<p>&emsp;&emsp;谁知我用的是copy，也没仔细看那个神仙的脚本里面可能估计将post-block中的短横线敲作了下划线。我拷贝过来试了，没用。一度以为这个边框是永远加不上了。谁知今天鬼使神差的对比了一下神仙贴出的图，发现了问题。于是改了过来，结果就可以了。我估计神仙是故意打错了，让我们这些小白出错了长记性。只可惜自己不懂css啊，懂的话就没那么麻烦了。</p>
+<p><img src="/images/frame.png" alt="边框"></p>
+<p>&emsp;&emsp;这个边框效果还凑合吧。</p>
+  </div>
+
+  <div class="post-nav">
+    
+      <a href="/blog/2020-06-18-stop-os-update.html">&larr; 如何让Elementary OS取消自动更新检查</a>
+    
+    
+    <a href="/blog/">Blog</a>
+    
+    
+      <a href="/blog/2020-06-22-install-and-backup-mediawiki.html">How to install and backup mediawiki &rarr;</a>
+    
+  </div>
+</article>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Jun Xie &middot; Built with Python &amp; Markdown &middot;
+        <a href="https://github.com/" target="_blank">GitHub</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

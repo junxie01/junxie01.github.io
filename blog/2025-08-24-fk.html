@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PYTHON脚本练习（三）聚束分析 | Jun Xie</title>
+  <meta name="description" content="PYTHON脚本练习（三）聚束分析">
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+  <!-- MathJax for LaTeX rendering -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <a href="/" class="site-title">SEISAMUSE</a>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/links/">Links</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      
+<article>
+  <div class="post-header">
+    <h1>PYTHON脚本练习（三）聚束分析</h1>
+    <div class="post-meta">
+      <time>2025-08-24</time>
+       &middot; 1 min read
+      
+       &middot;
+      
+        <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">python</span>
+      
+      
+    </div>
+  </div>
+
+  <div class="post-content">
+    <p>&emsp;&emsp;python脚本练习-fk。</p>
+<!--less-->
+<p>&emsp;&emsp;以下脚本可完成功能：</p>
+<h2 id="1">1.数据预处理与筛选</h2>
+<ul>
+<li>台站管理：从station.lst读取台站信息（网络名、台站名、经纬度）。</li>
+<li>数据加载：按日期遍历数据目录，加载每个台站的LHZ分量SAC文件。</li>
+<li>有效性检查：仅使用具有有效数据且台站数≥3天的数据。</li>
+</ul>
+<h2 id="2">2.时间窗口分割</h2>
+<ul>
+<li>将每天数据分割为1800秒长、50%重叠的窗口（步长900秒）。</li>
+<li>对每个窗口提取对应时间段的数据。</li>
+</ul>
+<h2 id="3">3. 频域分析</h2>
+<ul>
+<li>滤波与窗函数：对每个台站数据加汉宁窗，去均值。</li>
+<li>FFT计算：使用下一个2的幂次长度进行FFT，提取[fmin, fmax]频段的频谱。</li>
+</ul>
+<h2 id="4-fk">4. 聚束分析（FK分析）</h2>
+<ul>
+<li>参数网格：
+  方位角（az_grid）：0°\~360°，步长5°。
+  速度（speed_grid）：1\~5 km/s，步长0.05 km/s（通过慢度1/v参与计算）。</li>
+<li>波束功率计算：</li>
+<li>坐标转换：将台站经纬度转换为以平均位置为中心的直角坐标系（单位：公里）。</li>
+<li>相位延迟计算：
+    对每个方位角，计算台站投影位置proj = x<em>sin(az) + y</em>cos(az)。
+    对每个速度，计算时延delays = proj * 慢度（s=1/v）。</li>
+<li>导向向量：生成复相位因子exp(-j<em>2π</em>f*delays)。</li>
+<li>波束频谱：将各台站频谱与导向向量加权求和，得到波束频谱。</li>
+<li>功率归一化：计算波束功率并除以总功率（各台站功率之和）。</li>
+</ul>
+<h2 id="5">5.结果可视化</h2>
+<ul>
+<li>雷达图绘制：
+  极坐标下，横轴为方位角，纵轴为速度，颜色表示归一化功率。
+  标注最大能量点，显示其方位角和速度。</li>
+<li>输出：每天生成一张PNG图片，保存至arr_figures目录。</li>
+</ul>
+<h2 id="_1">脚本</h2>
+<p><a href="/scripts/do_array_fk.py">do_array_fk.py</a></p>
+  </div>
+
+  <div class="post-nav">
+    
+      <a href="/blog/2025-07-01-distribute-package.html">&larr; 如何发布你自己的脚本</a>
+    
+    
+    <a href="/blog/">Blog</a>
+    
+    
+      <a href="/blog/2025-08-25-png-to-mp4.html">如何将图片转化成视频 &rarr;</a>
+    
+  </div>
+</article>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Jun Xie &middot; Built with Python &amp; Markdown &middot;
+        <a href="https://github.com/" target="_blank">GitHub</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

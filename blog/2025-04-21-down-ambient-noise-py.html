@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>obspy下载连续背景噪声数据 | Jun Xie</title>
+  <meta name="description" content="obspy下载连续背景噪声数据">
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+  <!-- MathJax for LaTeX rendering -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <a href="/" class="site-title">SEISAMUSE</a>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/links/">Links</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      
+<article>
+  <div class="post-header">
+    <h1>obspy下载连续背景噪声数据</h1>
+    <div class="post-meta">
+      <time>2025-04-21</time>
+       &middot; 2 min read
+      
+       &middot;
+      
+        <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">obspy</span>
+      
+        <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">python</span>
+      
+      
+    </div>
+  </div>
+
+  <div class="post-content">
+    <p>利用obspy的MassDownloader下载连续的波形示例。</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">obspy</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">obspy.clients.fdsn.mass_downloader</span><span class="w"> </span><span class="kn">import</span> <span class="n">RectangularDomain</span><span class="p">,</span> <span class="n">CircularDomain</span><span class="p">,</span> \
+    <span class="n">Restrictions</span><span class="p">,</span> <span class="n">MassDownloader</span>
+<span class="c1"># Rectangular domain containing parts of southern Germany.</span>
+<span class="c1">#domain = RectangularDomain(minlatitude=-15, maxlatitude=18,</span>
+<span class="c1">#                           minlongitude=10, maxlongitude=22)</span>
+<span class="n">domain</span> <span class="o">=</span> <span class="n">CircularDomain</span><span class="p">(</span>
+        <span class="n">latitude</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+        <span class="n">longitude</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+        <span class="n">minradius</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>
+        <span class="n">maxradius</span><span class="o">=</span><span class="mf">12.0</span>
+        <span class="p">)</span>
+<span class="n">restrictions</span> <span class="o">=</span> <span class="n">Restrictions</span><span class="p">(</span>
+    <span class="c1"># Get data for a whole year.</span>
+    <span class="n">starttime</span><span class="o">=</span><span class="n">obspy</span><span class="o">.</span><span class="n">UTCDateTime</span><span class="p">(</span><span class="mi">2005</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">15</span><span class="p">),</span>
+    <span class="n">endtime</span><span class="o">=</span><span class="n">obspy</span><span class="o">.</span><span class="n">UTCDateTime</span><span class="p">(</span><span class="mi">2007</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">),</span>
+    <span class="c1"># Chunk it to have one file per day.</span>
+    <span class="n">chunklength_in_sec</span><span class="o">=</span><span class="mi">86400</span><span class="p">,</span>
+    <span class="c1"># Considering the enormous amount of data associated with continuous</span>
+    <span class="c1"># requests, you might want to limit the data based on SEED identifiers.</span>
+    <span class="c1"># If the location code is specified, the location priority list is not</span>
+    <span class="c1"># used; the same is true for the channel argument and priority list.</span>
+    <span class="n">network</span><span class="o">=</span><span class="s2">&quot;??&quot;</span><span class="p">,</span> <span class="n">station</span><span class="o">=</span><span class="s2">&quot;????&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;*&quot;</span><span class="p">,</span> <span class="n">channel</span><span class="o">=</span><span class="s2">&quot;LHZ&quot;</span><span class="p">,</span>
+    <span class="c1"># The typical use case for such a data set are noise correlations where</span>
+    <span class="c1"># gaps are dealt with at a later stage.</span>
+    <span class="n">reject_channels_with_gaps</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="c1"># Same is true with the minimum length. All data might be useful.</span>
+    <span class="n">minimum_length</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>
+    <span class="c1"># Guard against the same station having different names.</span>
+    <span class="n">minimum_interstation_distance_in_m</span><span class="o">=</span><span class="mf">100.0</span><span class="p">)</span>
+<span class="c1"># Restrict the number of providers if you know which serve the desired</span>
+<span class="c1"># data. If in doubt just don&#39;t specify - then all providers will be</span>
+<span class="c1"># queried.</span>
+<span class="c1">#mdl = MassDownloader(providers=[&quot;IRIS&quot;,&quot;USGS&quot;,&quot;GFZ&quot;])</span>
+<span class="n">mdl</span> <span class="o">=</span> <span class="n">MassDownloader</span><span class="p">()</span>
+<span class="n">mdl</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="n">domain</span><span class="p">,</span> <span class="n">restrictions</span><span class="p">,</span> <span class="n">mseed_storage</span><span class="o">=</span><span class="s2">&quot;waveforms&quot;</span><span class="p">,</span>
+             <span class="n">stationxml_storage</span><span class="o">=</span><span class="s2">&quot;stations&quot;</span><span class="p">)</span>
+</code></pre></div>
+  </div>
+
+  <div class="post-nav">
+    
+      <a href="/blog/2025-04-17-code-and-project2.html">&larr; 有趣的程序和项目（二）</a>
+    
+    
+    <a href="/blog/">Blog</a>
+    
+    
+      <a href="/blog/2025-04-22-download-fnet-data-py.html">如何下载Fnet数据 &rarr;</a>
+    
+  </div>
+</article>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Jun Xie &middot; Built with Python &amp; Markdown &middot;
+        <a href="https://github.com/" target="_blank">GitHub</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

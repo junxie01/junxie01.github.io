@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Jun Xie</title>
+  <meta name="description" content="Blog posts by Jun Xie on seismology and geophysics">
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+  <!-- MathJax for LaTeX rendering -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <a href="/" class="site-title">SEISAMUSE</a>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/links/">Links</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      
+<h1 class="page-title">Blog</h1>
+
+<ul class="post-list">
+  
+  <li class="post-item">
+    <span class="post-date">2020-07-10</span>
+    <h3><a href="/blog/2020-07-10-IQ-decrease.html">现代人的智商在退步</a></h3>
+    <p class="excerpt"><p><img alt="智商捉急" src="/images/iq.jpg" />
+图片来自一篇2018年PANS期刊的<a href="https://www.pnas.org/content/115/26/6674?fbclid=IwAR3CVcH75ppH836xV4c5s99p11421Puo6ljF9hlQtg7kcRcXDa9_mdPSfU0">文章</a>.
+&lt;&hellip;</p></p>
+    
+    <div class="post-tags">
+      
+      <a href="/blog/tag/乱/">乱</a>
+      
+    </div>
+    
+  </li>
+  
+  <li class="post-item">
+    <span class="post-date">2020-07-08</span>
+    <h3><a href="/blog/2020-07-08-how-to-access-google.html">如何访问google</a></h3>
+    <p class="excerpt"><p>&emsp;&emsp;Google产品尤其是Google scholar非常的方便，对于我这种有完美主义倾向，不喜欢山寨的人来讲真的太必要了。但是由于某些原因，在国内上不了google怎么办呢？</p>
+<!-- more -->
+<p>&emsp;&emsp;很早就接触了google，自从墙了以后一直用的是IPv6进行访问，在号&hellip;</p></p>
+    
+  </li>
+  
+  <li class="post-item">
+    <span class="post-date">2020-07-05</span>
+    <h3><a href="/blog/2020-07-05-how-to-use-fftw.html">如何调用fftw进行Fast Fourier Transform</a></h3>
+    <p class="excerpt"><p>&emsp;&emsp;我们常常要看信号的振幅谱来进行分析，那傅里叶变换就必不可少。如果水平不错你可以试着自己写。当然有很多已经写好的包，非常方便，例如这里要讲到的fftw[^1]。</p>
+<!-- more --></p>
+    
+  </li>
+  
+  <li class="post-item">
+    <span class="post-date">2020-07-04</span>
+    <h3><a href="/blog/2020-07-04-gmt-time-axes.html">gmt画时间轴</a></h3>
+    <p class="excerpt"><p>{% asset_img spec.png gmt时间轴 %}</p>
+<!-- less -->
+<p>&emsp;&emsp;有些时候画图需要用到时间轴。gmt[^1]里面的时间轴是比较简单的。画basemap的时候对于对于rangeR来说加上T就好了。例如</p>
+<div class="highlight"><pre><span></span><code>-R1990T/1991T/0/1
+</code></pre></div>
+
+<p>&emsp;&amp;em&hellip;</p></p>
+    
+    <div class="post-tags">
+      
+      <a href="/blog/tag/linux/">linux</a>
+      
+      <a href="/blog/tag/axes/">axes</a>
+      
+    </div>
+    
+  </li>
+  
+  <li class="post-item">
+    <span class="post-date">2020-06-23</span>
+    <h3><a href="/blog/2020-06-23-avatar-to-homepage.html">hexo next点击头像回到主页</a></h3>
+    <p class="excerpt"><p>&emsp;&emsp;有了头像以后，看到头像一般就想点一点，点击了可以回到主页不是挺好的吗。</p>
+<!-- more -->
+<p>&emsp;&emsp;网上高手还是挺多。例如这位<a href="http://eternalzttz.com/hexo-next.html">上仙</a>说要找到文件/themes/next/layout/_mac&hellip;</p></p>
+    
+    <div class="post-tags">
+      
+      <a href="/blog/tag/web/">web</a>
+      
+      <a href="/blog/tag/hexo/">hexo</a>
+      
+      <a href="/blog/tag/next/">next</a>
+      
+    </div>
+    
+  </li>
+  
+  <li class="post-item">
+    <span class="post-date">2020-06-22</span>
+    <h3><a href="/blog/2020-06-22-install-and-backup-mediawiki.html">How to install and backup mediawiki</a></h3>
+    <p class="excerpt"><p>Meidawiki is a good tool to organise the information and knowledge. I even use it to keep some notes. My first mediawiki was established like in 2012. There are&hellip;</p></p>
+    
+    <div class="post-tags">
+      
+      <a href="/blog/tag/wiki/">wiki</a>
+      
+    </div>
+    
+  </li>
+  
+  <li class="post-item">
+    <span class="post-date">2020-06-20</span>
+    <h3><a href="/blog/2020-06-20-how-to-add-frame-in-hexo-next.html">hexo next首页文章加框</a></h3>
+    <p class="excerpt"><p>&emsp;&emsp;我的博客首页的文章列表一直是连起来的，看起来不爽。因而一直在搜索如何加边框，搜出来的是如何添加文章边框阴影效果。看起来也对。于是就开始照猫画虎。</p>
+<!-- more --></p>
+    
+    <div class="post-tags">
+      
+      <a href="/blog/tag/hexo/">hexo</a>
+      
+      <a href="/blog/tag/blog/">blog</a>
+      
+    </div>
+    
+  </li>
+  
+  <li class="post-item">
+    <span class="post-date">2020-06-18</span>
+    <h3><a href="/blog/2020-06-18-stop-os-update.html">如何让Elementary OS取消自动更新检查</a></h3>
+    <p class="excerpt"><p>&emsp;&emsp;我的HP笔记本上的Linux系统安装的是Elementary OS。这是个基于Ubuntu的注重界面美观的系统。是挺漂亮的，但几乎每天那个引用中心都会跳出来，帮我检查更新。</p>
+<!-- more -->
+<p>{% asset_img app.png 应用中心 %}
+&emsp;&emsp;这很烦人，尤&hellip;</p></p>
+    
+    <div class="post-tags">
+      
+      <a href="/blog/tag/linux/">Linux</a>
+      
+    </div>
+    
+  </li>
+  
+  <li class="post-item">
+    <span class="post-date">2020-06-12</span>
+    <h3><a href="/blog/2020-06-12-learn-sed.html">sed插入和删除匹配行</a></h3>
+    <p class="excerpt"><p>&emsp;&emsp;sed功能非常强大，利用来处理文本文件不要太爽。要是能熟练掌握，在文本江湖简直随心所欲，无往而不利。我自然也想学学，不过入坑awk有点久。通常习惯了一种方式以后就难以醉心到另一种。这也大约是少林72绝技一般和尚难同时融汇多种的原因吧。一般人也很难精通多个领域。这两天在配置这个博客时遇到一些要对所&hellip;</p></p>
+    
+    <div class="post-tags">
+      
+      <a href="/blog/tag/sed/">sed</a>
+      
+      <a href="/blog/tag/hexo/">hexo</a>
+      
+      <a href="/blog/tag/next/">next</a>
+      
+      <a href="/blog/tag/web/">web</a>
+      
+    </div>
+    
+  </li>
+  
+  <li class="post-item">
+    <span class="post-date">2020-06-10</span>
+    <h3><a href="/blog/2020-06-10-what-did-I-do-to-this-blog.html">我对这个博客做了什么</a></h3>
+    <p class="excerpt"><p>&emsp;&emsp;原本是想记笔记，写一些技术性的东西。然而现在为止好像还没有干啥正事。那我对这个博客做了些什么呢？干了这些：</p>
+<!-- more --></p>
+    
+    <div class="post-tags">
+      
+      <a href="/blog/tag/hexo/">hexo</a>
+      
+      <a href="/blog/tag/next/">next</a>
+      
+    </div>
+    
+  </li>
+  
+  <li class="post-item">
+    <span class="post-date">2020-06-05</span>
+    <h3><a href="/blog/2020-06-05-history-and-inversion.html">历史和反演</a></h3>
+    <p class="excerpt"><p>&emsp;&emsp;研一的时候上过一节外系的选修课。现在已经想不起来是什么课了。那为啥我还记得这个课呢？</p>
+<!-- more --></p>
+    
+    <div class="post-tags">
+      
+      <a href="/blog/tag/反演/">反演</a>
+      
+      <a href="/blog/tag/历史/">历史</a>
+      
+    </div>
+    
+  </li>
+  
+  <li class="post-item">
+    <span class="post-date">2020-06-05</span>
+    <h3><a href="/blog/2020-06-05-no-more-blog-transfer.html">不继续搬迁网易博客了</a></h3>
+    <p class="excerpt"><p>&emsp;&emsp;那个网易博客太多私人的话题和内容就不往这里搬了。自己也不是明星，八卦什么的也不值钱。这里还是用来记好玩的吧。</p>
+<!-- more --></p>
+    
+    <div class="post-tags">
+      
+      <a href="/blog/tag/杂/">杂</a>
+      
+    </div>
+    
+  </li>
+  
+  <li class="post-item">
+    <span class="post-date">2020-06-04</span>
+    <h3><a href="/blog/2020-06-04-funny-thing-about-Eric.html">Eric的趣事</a></h3>
+    <p class="excerpt"><p>&emsp;&emsp;记录一下儿子好玩的事情，以免以后忘记了。以后他看到应该会觉得好玩吧。</p>
+<!-- more --></p>
+    
+    <div class="post-tags">
+      
+      <a href="/blog/tag/儿子/">儿子</a>
+      
+    </div>
+    
+  </li>
+  
+  <li class="post-item">
+    <span class="post-date">2020-06-03</span>
+    <h3><a href="/blog/2020-06-03-about-diary.html">关于写日记</a></h3>
+    <p class="excerpt"><p>&emsp;&emsp;好久都没有写日记的习惯了。今天勉强写一些吧。</p>
+<!-- more --></p>
+    
+    <div class="post-tags">
+      
+      <a href="/blog/tag/日记/">日记</a>
+      
+    </div>
+    
+  </li>
+  
+  <li class="post-item">
+    <span class="post-date">2020-06-03</span>
+    <h3><a href="/blog/2020-06-03-wangyi-blog-transfer.html">网易博客迁移</a></h3>
+    <p class="excerpt"><p>&emsp;&emsp;今天想到自己在网易上的博客。翻出来一看，乖乖人家网易在2018年就把博客给停了。估计是看我不在上面更新了，伤心欲绝了吧。笑。</p>
+<!-- more --></p>
+    
+    <div class="post-tags">
+      
+      <a href="/blog/tag/博客/">博客</a>
+      
+      <a href="/blog/tag/网易/">网易</a>
+      
+    </div>
+    
+  </li>
+  
+  <li class="post-item">
+    <span class="post-date">2020-05-31</span>
+    <h3><a href="/blog/2020-05-31-reward-configuration.html">hexo next开启打赏</a></h3>
+    <p class="excerpt"><p>厚颜无耻的开始想要打赏。如何配置打赏呢？原来next是有打赏的选项字段的。直接修改主题配置文件如下：</p>
+<!--more -->
+<p><img alt="打赏字段" src="/images/donate.png" />
+然后把微信和支付宝的二维码图片放在/themes/next/source/images中。然后就大功告成了。</p></p>
+    
+    <div class="post-tags">
+      
+      <a href="/blog/tag/web/">web</a>
+      
+      <a href="/blog/tag/next/">next</a>
+      
+    </div>
+    
+  </li>
+  
+  <li class="post-item">
+    <span class="post-date">2020-05-31</span>
+    <h3><a href="/blog/2020-05-31-word-count.html">next网站字数统计</a></h3>
+    <p class="excerpt"><p>想给网站显示字数统计，搜到<a href="https://www.jianshu.com/p/baea8c95e39b">这里</a>。根据说明开始设置。结果网站都差点挂掉。检查了好久也没有发现问题，以为玩完了。然后马上开始重新建hexo。结果还是有问题。后来终于发现在网站设置文件插入功能字段时误插到其他字段导致出错。注销以后问题就修复了&hellip;</p></p>
+    
+    <div class="post-tags">
+      
+      <a href="/blog/tag/next/">next</a>
+      
+      <a href="/blog/tag/web/">web</a>
+      
+    </div>
+    
+  </li>
+  
+  <li class="post-item">
+    <span class="post-date">2020-05-31</span>
+    <h3><a href="/blog/2020-05-31-how-to-backup-hexo.html">如何备份hexo</a></h3>
+    <p class="excerpt"><p>要是换了电脑网站怎么办？那当然是需要备份的了。u盘什么的，网盘什么的也不错。不过搜到大神的[博文](https://notes.doublemine.me/2015-04-06-%E5%A4%87%E4%BB%BDHexo%E5%8D%9A%E5%AE%A2%E6%BA%90%E6%96%87%E4%BB%B6.htm&hellip;</p></p>
+    
+    <div class="post-tags">
+      
+      <a href="/blog/tag/web/">web</a>
+      
+    </div>
+    
+  </li>
+  
+  <li class="post-item">
+    <span class="post-date">2020-05-31</span>
+    <h3><a href="/blog/2020-05-31-passwd-free-for-deployment.html">hexo免密发布</a></h3>
+    <p class="excerpt"><p>每次发布都得输入用户名和密码，挺麻烦费事。网上<a href="https://blog.csdn.net/hhgggggg/article/details/77853665">大神</a>可真多，搜搜就能解决。和ssh登录服务器类似，步骤如下：</p></p>
+    
+    <div class="post-tags">
+      
+      <a href="/blog/tag/hexo/">hexo</a>
+      
+      <a href="/blog/tag/web/">web</a>
+      
+    </div>
+    
+  </li>
+  
+  <li class="post-item">
+    <span class="post-date">2020-05-31</span>
+    <h3><a href="/blog/2020-05-31-show-picture-in-hexo.html">hexo图片显示</a></h3>
+    <p class="excerpt"><p>网站上没有图片是不行的，无图无真相。解决办法在<a href="https://blog.csdn.net/qq_38148394/article/details/79997971">这里</a>，主要是利用了插件hexo-assrt-image。所以先安装这个插件：
+``` bash
+npm install hexo-asset-imag&hellip;</p></p>
+    
+    <div class="post-tags">
+      
+      <a href="/blog/tag/hexo/">hexo</a>
+      
+      <a href="/blog/tag/web/">web</a>
+      
+    </div>
+    
+  </li>
+  
+</ul>
+
+
+
+
+<nav class="pagination">
+  
+    
+    <a href="/blog/page/7/">&larr; Newer</a>
+    
+  
+
+  <span class="page-info">Page 8 / 10</span>
+
+  
+    <a href="/blog/page/9/">Older &rarr;</a>
+  
+</nav>
+
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Jun Xie &middot; Built with Python &amp; Markdown &middot;
+        <a href="https://github.com/" target="_blank">GitHub</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
