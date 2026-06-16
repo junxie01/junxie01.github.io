@@ -3,89 +3,137 @@
 {% block description %}Jun Xie — Seismologist at Academy of Precision Measurement Science and Technology{% endblock %}
 
 {% block content %}
-<section class="hero">
-  <img src="{{ root }}images/seisamuse.png" alt="Jun Xie" class="avatar">
-  <h1>Jun Xie</h1>
-  <p class="subtitle">Seismologist &middot; Geophysicist</p>
-  <p class="affiliation">Academy of Precision Measurement Science and Technology</p>
-  <p class="bio">A nerd researching seismology, also involved in interdisciplinary fields such as environmental seismology and glacial seismology.</p>
-  <div class="social-links">
-    <a href="{{ root }}about/">About Me</a>
-    <a href="https://github.com/" target="_blank">GitHub</a>
-    <a href="mailto:your-email@example.com">Email</a>
-  </div>
-</section>
-
-<section>
-  <div class="section-header">
-    <h2>Recent Posts</h2>
-    <a href="{{ root }}blog/">View all &rarr;</a>
-  </div>
-  <ul class="post-list">
-    {% for post in recent_posts %}
-    <li class="post-item">
-      <span class="post-date">{{ post.date }}</span>
-      <h3><a href="{{ root }}blog/{{ post.slug }}.html">{{ post.title }}</a></h3>
-      {% if post.excerpt %}<p class="excerpt">{{ post.excerpt|safe }}</p>{% endif %}
-      {% if post.tags %}
-      <div class="post-tags">
-        {% for tag in post.tags %}
-        <a href="/blog/tag/{{ tag|lower|replace(' ', '-')|replace('/', '-') }}/">{{ tag }}</a>
-        {% endfor %}
-      </div>
-      {% endif %}
-    </li>
-    {% endfor %}
-  </ul>
-</section>
-
-<section>
-  <div class="section-header">
-    <h2>Projects &amp; Resources</h2>
-    <a href="{{ root }}links/">See all &rarr;</a>
-  </div>
-  <div class="link-grid">
-    <div class="link-card">
-      <a href="https://www.seis-jun.xyz/daily_news/" target="_blank">
-        <h3>Daily News</h3>
-        <p>Curated daily updates on seismology and geoscience.</p>
-      </a>
+<div class="home-main">
+  <section class="feed-section recent-posts-section">
+    <div class="section-header">
+      <h2>Recent Posts</h2>
+      <a href="{{ root }}blog/">View all &rarr;</a>
     </div>
-    <div class="link-card">
-      <a href="https://www.seis-jun.xyz/paper_weekly/" target="_blank">
-        <h3>Paper Weekly</h3>
-        <p>Weekly highlights of notable research papers.</p>
-      </a>
+    <div class="feed-list">
+      {% for post in recent_posts %}
+      <article class="feed-card">
+        <div class="feed-meta">
+          <img src="{{ root }}images/seisamuse.png" alt="" class="feed-avatar">
+          <span>Jun Xie</span>
+          <time datetime="{{ post.date }}">{{ post.date }}</time>
+        </div>
+        <h2><a href="{{ root }}blog/{{ post.slug }}.html">{{ post.title }}</a></h2>
+        {% if post.excerpt %}<div class="feed-excerpt">{{ post.excerpt|safe }}</div>{% endif %}
+        {% if post.tags %}
+        <div class="feed-tags">
+          {% for tag in post.tags %}
+          <a href="/blog/tag/{{ tag|lower|replace(' ', '-')|replace('/', '-') }}/">{{ tag }}</a>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </article>
+      {% endfor %}
     </div>
-    <div class="link-card">
-      <a href="https://www.seis-jun.xyz/earthquake_weekly/" target="_blank">
-        <h3>Earthquake Weekly</h3>
-        <p>Weekly earthquake activity reports and analysis.</p>
-      </a>
-    </div>
-  </div>
-</section>
-
-<section class="support-section">
-  <p>If you find my work helpful, consider supporting my work.</p>
-  <button class="btn" onclick="document.getElementById('donate-modal').style.display='flex'">Support My Work</button>
-</section>
-
-<div id="donate-modal" class="modal-overlay" onclick="if(event.target===this)this.style.display='none'">
-  <div class="modal-content">
-    <button class="modal-close" onclick="this.parentElement.parentElement.style.display='none'">&times;</button>
-    <h3>Buy Me a Cup of Coffee</h3>
-    <p>Thank you for your support!</p>
-    <div class="qr-codes">
-      <div class="qr-item">
-        <img src="{{ root }}images/alipay.png" alt="Alipay">
-        <span>Alipay</span>
-      </div>
-      <div class="qr-item">
-        <img src="{{ root }}images/wechatpay.png" alt="WeChat Pay">
-        <span>WeChat Pay</span>
-      </div>
-    </div>
-  </div>
+  </section>
 </div>
+{% endblock %}
+
+{% block sidebar_right %}
+<aside class="home-sidebar">
+  <section class="sidebar-card daily-line-block">
+    <h2>Today's Note</h2>
+    <p id="daily-line" class="daily-line">先别优化，先保存。</p>
+  </section>
+
+  <section class="sidebar-card thoughts-preview">
+    <div class="sidebar-card-header">
+      <h2>Latest Thoughts</h2>
+      <a href="{{ root }}thoughts/">All &rarr;</a>
+    </div>
+    {% if thoughts_preview %}
+    <div class="thoughts-preview-label">{{ thoughts_preview_label }}</div>
+    <ul class="thought-list thought-list-preview">
+      {% for thought in thoughts_preview %}
+      <li class="thought-item" id="thought-{{ thought.slug }}">
+        <span class="thought-meta">
+          <time datetime="{{ thought.datetime }}">{{ thought.date }} {{ thought.time }}</time>
+        </span>
+        {% if thought.content_inline %}
+        <span class="thought-content">{{ thought.content_inline|safe }}</span>
+        {% else %}
+        <div class="thought-content">{{ thought.content|safe }}</div>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p class="thought-empty">No thoughts yet.</p>
+    {% endif %}
+  </section>
+
+  <section class="sidebar-card">
+    <div class="sidebar-card-header">
+      <h2>Projects</h2>
+      <a href="{{ root }}links/">See all &rarr;</a>
+    </div>
+    <ul class="project-list compact-project-list">
+      {% for project in home_projects %}
+      <li>
+        <span class="project-type">{{ project.type }}</span>
+        <a href="{{ project.url }}" {% if project.url.startswith('http') %}target="_blank" rel="noopener"{% endif %}>{{ project.title }}</a>
+        {% if project.description_html %}<div class="project-desc">{{ project.description_html|safe }}</div>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section class="sidebar-card status-block">
+    <h2>Status</h2>
+    <dl class="sidebar-stats">
+      {% for item in site_stats %}
+      <div>
+        <dt>{{ item.label }}</dt>
+        <dd>{{ item.value }}</dd>
+      </div>
+      {% endfor %}
+      <div>
+        <dt>👀 Visitors</dt>
+        <dd id="sidebar-site-visitors" aria-live="polite">...</dd>
+      </div>
+    </dl>
+  </section>
+
+</aside>
+
+<script>
+  (function () {
+    const lines = [
+      "先别优化，先保存。",
+      "今天也在和噪声互相关。",
+      "反演人生，正演今天。",
+      "所有 bug 最后都会变成笔记。",
+      "读论文读到最后，发现摘要已经说完了。",
+      "参数别乱调，人生也是。",
+      "先画图，再假装自己懂了。",
+      "数据不会说谎，但会沉默。",
+      "今天的目标：少开一个新坑。",
+      "能跑起来，就是阶段性胜利。"
+    ];
+    const day = Math.floor(new Date().setHours(0, 0, 0, 0) / 86400000);
+    const target = document.getElementById("daily-line");
+    if (target) target.textContent = lines[day % lines.length];
+
+    function syncVisitors(tries) {
+      const source = document.getElementById("busuanzi_value_site_uv");
+      const target = document.getElementById("sidebar-site-visitors");
+      const value = source ? source.textContent.trim() : "";
+      if (target && value) {
+        target.textContent = value;
+        return;
+      }
+      if (tries > 0) window.setTimeout(function () { syncVisitors(tries - 1); }, 500);
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", function () { syncVisitors(40); });
+    } else {
+      syncVisitors(40);
+    }
+  }());
+</script>
 {% endblock %}

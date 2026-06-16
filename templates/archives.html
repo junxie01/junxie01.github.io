@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}Archives{% endblock %}
+{% block description %}Archive of blog posts by Jun Xie{% endblock %}
+
+{% block content %}
+<div class="archives-hero">
+  <h1 class="archives-title">Archives</h1>
+  <p>
+    {{ archive_summary.total }} posts{% if archive_summary.since %} since {{ archive_summary.since }}{% endif %}.
+    A chronological index of notes, papers, tools, and fragments.
+  </p>
+</div>
+
+{% if archive_years %}
+<nav class="archive-year-nav" aria-label="Archive years">
+  {% for year in archive_years %}
+  <a href="#{{ year.anchor }}">{{ year.year }} <span>{{ year.count }}</span></a>
+  {% endfor %}
+</nav>
+{% endif %}
+
+<div class="archives">
+  {% for year_group in archive_groups %}
+  <section class="archive-year" id="year-{{ year_group.year }}">
+    <h2>{{ year_group.year }} <span>{{ year_group.count }} post{% if year_group.count != 1 %}s{% endif %}</span></h2>
+    {% for month_group in year_group.months %}
+    <section class="archive-month">
+      <h3>{{ month_group.label }} <span>{{ month_group.count }} post{% if month_group.count != 1 %}s{% endif %}</span></h3>
+      <ul class="archive-post-list">
+        {% for post in month_group.posts %}
+        <li>
+          <time datetime="{{ post.date }}">{{ post.archive_date }}</time>
+          <a href="{{ root }}blog/{{ post.slug }}.html">{{ post.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+    {% endfor %}
+  </section>
+  {% endfor %}
+</div>
+{% endblock %}
