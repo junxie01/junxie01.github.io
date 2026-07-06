@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>关于Codex Skills | Jun Xie</title>
+  <meta name="description" content="关于Codex Skills">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/atom.xml">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+  <!-- MathJax for LaTeX rendering -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        ignoreHtmlClass: 'mermaid'
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <!-- Umami Analytics -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="21a99622-5a23-45f4-be80-edef627a68e3"></script>
+  <!-- Busuanzi for public visitor counter -->
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container masthead">
+      <a class="masthead-identity" href="/" aria-label="SEISAMUSE home">
+        <img src="/images/seisamuse.png" alt="" class="masthead-avatar">
+        <span class="masthead-title">SEISAMUSE</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="/blog/" class="active">Blog</a>
+        <a href="/thoughts/">Thoughts</a>
+        <a href="/archives/">Archives</a>
+        <a href="/about/">About</a>
+        <a href="/links/">Links</a>
+      </nav>
+
+      <div class="masthead-actions" aria-label="Site shortcuts">
+        <form class="masthead-search" action="/search/" method="get">
+          <input type="search" name="q" placeholder="Search notes" aria-label="Search notes">
+        </form>
+        <a href="https://www.travellings.cn/go" target="_blank" rel="noopener" title="Travellings" aria-label="Travellings"><i class="fa-solid fa-train"></i></a>
+        <a href="mailto:junxie01@gmail.com" title="Email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="/atom.xml" title="Atom feed" aria-label="Atom feed"><i class="fa-solid fa-rss"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container page-wide">
+      
+      
+<div class="main-content">
+  <article>
+    <div class="post-header">
+      <h1>关于Codex Skills</h1>
+      <div class="post-meta">
+        <time>2026-06-05</time>
+         &middot; 1 min read
+        
+         &middot;
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">日记</span>
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">codex</span>
+        
+        
+      </div>
+    </div>
+
+    <div class="post-content">
+      <p><img alt="" src="/images/skill.png" />
+前几天折腾了一堆 Codex Skills。</p>
+<p>这东西怎么理解呢？大概就是给 Codex 塞一堆小抄。你不可能每次都从头教它“帮我检查 NSFC 标书时要先看科学问题”“读论文不要只看摘要”“改代码前先找根因”“写我的博客不要写成公众号腔”。于是就把这些稳定的工作习惯写成 skill，下次直接点名调用。</p>
+<p>当然，装多了也挺吓人。现在一看，已经不是三五个小工具了，而是一整个工具箱。工具箱这种东西有个问题：工具越多，不代表干活越快。有时候你只是站在工具箱前面发呆，想半天到底该拿螺丝刀还是扳手。</p>
+<p>所以我给已经安装的 skills 写了一个使用手册，把它们分了几类。</p>
+<p>第一类是科研和 NSFC。这类对我最有用。</p>
+<p>比如 <code>bibliography-deep-research</code>，适合读一个主题文件夹里的所有 PDF，写综述，整理研究方向。这个对我很关键，因为我经常不是缺论文，而是缺一个人帮我把一堆论文串起来。</p>
+<p>NSFC 这一组就更像标书流水线了。<code>nsfc-qc</code> 做质量检查，<code>nsfc-ref-alignment</code> 查正文引用和参考文献是否对得上，<code>nsfc-justification-writer</code> 改立项依据，<code>nsfc-reviewers</code> 模拟专家评审。以前这些事情都要靠自己憋，憋到后来脑子都糊了。现在至少可以让 Codex 先当一个不太客气的同事，把问题指出来。</p>
+<p>不过这类 skill 也不能当神仙。它可以提醒我逻辑不顺、引用不稳、篇幅不对，但真正的科学问题还是得自己想。AI 能帮你打磨刀，但不能替你决定砍哪棵树。</p>
+<p>第二类是 Obsidian 和知识库。</p>
+<p>这里有 <code>obsidian-markdown</code>、<code>obsidian-cli</code>、<code>obsidian-bases</code>、<code>json-canvas</code>、<code>defuddle</code>、<code>canghe-url-to-markdown</code> 这些。它们的目标很明确：把资料变成能放进 vault 的东西。</p>
+<p>以前我收藏网页，经常是收藏完就等于没有收藏。因为网页在浏览器里，笔记在 Obsidian 里，想法在脑子里，三者互相看不见。现在比较理想的流程是，看到网页先用 <code>defuddle</code> 或 <code>canghe-url-to-markdown</code> 抓成 Markdown，再用 <code>obsidian-markdown</code> 整理成笔记，需要关系图就丢给 <code>json-canvas</code>。</p>
+<p>这样至少不会出现“我记得我看过，但是我完全不知道放哪了”的经典惨案。</p>
+<p>第三类是调研、学习和思考。</p>
+<p>这里有 <code>huashu-research</code>、<code>hv-analysis</code>、<code>ljg-read</code>、<code>ljg-learn</code>、<code>ljg-think</code>、<code>ljg-plain</code>。名字看起来有点玄，但用途其实很清楚。</p>
+<p><code>huashu-research</code> 是联网调研，适合查最新东西。<code>hv-analysis</code> 是横纵分析，适合看一个产品、公司、技术到底怎么来的，现在和别人比又处在什么位置。<code>ljg-read</code> 是陪读，<code>ljg-plain</code> 是说人话，<code>ljg-think</code> 是往下追问。</p>
+<p>这几个我觉得适合在“我大概知道问题，但还没有想清楚”的时候用。比如看到一个新工具，先别急着安装，先让它横向纵向分析一下。否则很容易见一个爱一个，最后电脑里全是工具，人还是那个手忙脚乱的人。</p>
+<p>第四类是写作、内容生产和可视化。</p>
+<p>这类包括 <code>qiaomu-info-card-designer</code>、<code>guizang-ppt-skill</code>、<code>canghe-infographic</code>、<code>canghe-format-markdown</code>、<code>ljg-present</code>，还有我刚做的 <code>seisamuse-blog-writer</code>。</p>
+<p><code>seisamuse-blog-writer</code> 是给我自己写博客用的。它读了我 200 多篇博客，总结出我的写法：别写得像公众号，别太端着，问题先摆出来，技术就给步骤，想法就慢慢绕，最后不用强行升华。听起来有点羞耻，但确实有用。因为 AI 默认会把文章写得太圆滑，太像“在当今快速发展的时代”。这种句子一出来，我就想把网页关了。</p>
+<p>所以以后如果要写博客，我大概就直接说：</p>
+<div class="highlight"><pre><span></span><code>用 seisamuse-blog-writer 帮我写一篇关于 XXX 的博客。
+</code></pre></div>
+
+<p>它至少会记得，不要把我写成一个培训机构讲师。</p>
+<p>第五类是代码开发。</p>
+<p>这里就多了。<code>diagnose</code>、<code>debugging-and-error-recovery</code>、<code>source-driven-development</code>、<code>code-review-and-quality</code>、<code>tdd</code>、<code>prototype</code>、<code>playwright</code>、<code>performance-optimization</code>、<code>security-and-hardening</code>，还有一堆 git 和项目管理相关的。</p>
+<p>这类 skill 的意义不是让 Codex 更会写代码，而是让它少犯“上来就改”的毛病。比如出了 bug，先用 <code>diagnose</code> 查根因；涉及新库，先用 <code>source-driven-development</code> 查官方文档；改完了再用 <code>code-review-and-quality</code> 过一遍；前端页面就用 <code>playwright</code> 真的打开看看。</p>
+<p>说到底，代码这种东西不是写出来就完了。能跑、能测、能维护、下次还能看懂，这才算完。否则现在爽了，未来的自己就要还债。</p>
+<p>还有一类是多代理和 skill 维护，比如 <code>awesome-code</code>、<code>parallel-vibe</code>、<code>auto-test-project</code>、<code>better-prompt</code>、<code>compact-bensz-skills</code>。这些不太适合天天用。小任务用它们就像切一颗葱还要召集一个项目组开会，阵仗太大。</p>
+<p>我现在觉得最常用的大概就十来个：</p>
+<ul>
+<li><code>bibliography-deep-research</code></li>
+<li><code>nsfc-qc</code></li>
+<li><code>nsfc-ref-alignment</code></li>
+<li><code>nsfc-justification-writer</code></li>
+<li><code>obsidian-markdown</code></li>
+<li><code>huashu-research</code></li>
+<li><code>hv-analysis</code></li>
+<li><code>diagnose</code></li>
+<li><code>source-driven-development</code></li>
+<li><code>code-review-and-quality</code></li>
+<li><code>qiaomu-info-card-designer</code></li>
+<li><code>guizang-ppt-skill</code></li>
+</ul>
+<p>以后调用也不要说得太虚。最稳的格式应该是这样：</p>
+<div class="highlight"><pre><span></span><code>帮我用 &lt;skill-name&gt; 做 &lt;任务&gt;。
+输入是：&lt;文件/目录/网页/目标&gt;。
+重点关注：&lt;最多三个重点&gt;。
+输出到：&lt;路径或格式&gt;。
+限制：&lt;不要改文件/不要联网/不要 push/先给报告&gt;。
+</code></pre></div>
+
+<p>这其实也不是给 AI 看的，是给自己看的。你把需求说清楚了，AI 才不会到处乱跑。你自己都没想清楚，skill 再多也没用。</p>
+<p>总之，Codex Skills 这事很像给实验室整理工具柜。以前锤子、胶带、螺丝、万用表全堆在抽屉里，找得到算运气好。现在终于贴上了标签：这个用来读论文，这个用来查标书，这个用来写笔记，这个用来查 bug。</p>
+<p>但是工具柜再整齐，也不会自己做实验。</p>
+<p>该想的问题，还是得自己想。该做的判断，还是得自己做。Skills 最好的用法，大概不是让 AI 替我干所有事，而是让我少在重复的小事里打转，把脑子留给真正麻烦的地方。</p>
+    </div>
+
+  <div class="comments-section">
+  <h3>Comments</h3>
+  <script src="https://utteranc.es/client.js"
+          repo="junxie01/junxie01.github.io"
+          issue-term="pathname"
+          label="comment"
+          theme="preferred-color-scheme"
+          crossorigin="anonymous"
+          async>
+  </script>
+</div>
+
+  <div class="post-nav">
+    
+      <a class="post-nav-prev" href="/blog/2026-05-31-humanity3.html">&larr; 关于人性（3）</a>
+    
+
+    <a class="post-nav-blog" href="/blog/">Blog</a>
+
+    
+      <a class="post-nav-next" href="/blog/2026-06-08-codex2.html">关于Codex (2) &rarr;</a>
+    
+  </div>
+</article>
+</div>
+
+      
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Jun Xie &middot; Built with Python &amp; Markdown &middot;
+        <a href="https://github.com/junxie01" target="_blank">GitHub</a> &middot;
+        <a href="/atom.xml" target="_blank">Atom</a>
+      </p>
+      <p class="site-stats">
+        <span id="busuanzi_container_site_pv">
+          👁 Total visits: <span id="busuanzi_value_site_pv"></span>
+        </span>
+        &middot;
+        <span id="busuanzi_container_site_uv">
+          Visitors: <span id="busuanzi_value_site_uv"></span>
+        </span>
+      </p>
+    </div>
+  </footer>
+
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+      startOnLoad: true,
+      securityLevel: 'strict',
+      theme: window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'neutral'
+    });
+  </script>
+
+</body>
+</html>

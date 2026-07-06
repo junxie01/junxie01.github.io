@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paper Reading (60) | Jun Xie</title>
+  <meta name="description" content="Paper Reading (60)">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/atom.xml">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+  <!-- MathJax for LaTeX rendering -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        ignoreHtmlClass: 'mermaid'
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <!-- Umami Analytics -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="21a99622-5a23-45f4-be80-edef627a68e3"></script>
+  <!-- Busuanzi for public visitor counter -->
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container masthead">
+      <a class="masthead-identity" href="/" aria-label="SEISAMUSE home">
+        <img src="/images/seisamuse.png" alt="" class="masthead-avatar">
+        <span class="masthead-title">SEISAMUSE</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="/blog/" class="active">Blog</a>
+        <a href="/thoughts/">Thoughts</a>
+        <a href="/archives/">Archives</a>
+        <a href="/about/">About</a>
+        <a href="/links/">Links</a>
+      </nav>
+
+      <div class="masthead-actions" aria-label="Site shortcuts">
+        <form class="masthead-search" action="/search/" method="get">
+          <input type="search" name="q" placeholder="Search notes" aria-label="Search notes">
+        </form>
+        <a href="https://www.travellings.cn/go" target="_blank" rel="noopener" title="Travellings" aria-label="Travellings"><i class="fa-solid fa-train"></i></a>
+        <a href="mailto:junxie01@gmail.com" title="Email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="/atom.xml" title="Atom feed" aria-label="Atom feed"><i class="fa-solid fa-rss"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container page-wide">
+      
+      
+<div class="main-content">
+  <article>
+    <div class="post-header">
+      <h1>Paper Reading (60)</h1>
+      <div class="post-meta">
+        <time>2026-06-23</time>
+         &middot; 3 min read
+        
+         &middot;
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">paper</span>
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">seismology</span>
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">cryoseismology</span>
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">glacier</span>
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">DAS</span>
+        
+        
+      </div>
+    </div>
+
+    <div class="post-content">
+      <h2 id="paper-information">Paper Information</h2>
+<ul>
+<li><strong>Title</strong>: Cryoseismic activity and dynamics of the Astrolabe Coastal Glacier, East Antarctica – The SEIS-ADELICE experiment (2020-2025)</li>
+<li><strong>First Author</strong>: Guilhem Barruol</li>
+<li><strong>Corresponding Author</strong>: Guilhem Barruol</li>
+<li><strong>Affiliation</strong>: Université Grenoble Alpes / CNRS / INRAE / IRD / Grenoble INP / IGE; with collaborators from EOST, SEISTREAM, IPGP, GEUS and related institutions</li>
+<li><strong>Journal</strong>: Seismica, 5(1), 2026</li>
+<li><strong>DOI</strong>: 10.26443/seismica.v5i1.2047</li>
+</ul>
+<h2 id="abstract">Abstract</h2>
+<p>这篇文章介绍了 SEIS-ADELICE 在 2020-2025 年间围绕东南极 Terre Adélie 的 Astrolabe Coastal Glacier 开展的冰震观测实验。该项目在冰川、岩岛和近海区域部署了接近 200 台地震仪器，包括长期宽频带和中频带台站、海底地震仪、短周期密集节点阵列，以及两条用于分布式光纤声波传感的 DAS 光缆。</p>
+<p>文章的目标不是给出一个单一结论，而是展示这一套观测系统可以如何用于理解冰川到达海洋时的动力学过程：包括冰川内部结构和厚度、接地线附近的潮汐调制、表面冰震、基底 stick-slip、冰崩信号、环境噪声成像，以及冰川与海洋和基岩之间的相互作用。作者也对不同观测环境下的噪声水平进行了量化，并给出了若干初步分析例子。</p>
+<h2 id="research-context">Research Context</h2>
+<h3 id="importance">Importance</h3>
+<p>我觉得这篇文章有意思的地方在于，它不是“拿一个现成数据做一个算法验证”，而是完整展示了一个冰川野外观测系统是如何被搭起来的。Astrolabe Glacier 是一个流向海洋的南极出口冰川，冰流速度可达约 500 m/yr，接地线附近冰厚约 700 m，冰舌前缘附近约 300 m。对于这类出口冰川来说，海洋、潮汐、基底条件和侧向剪切边界都会影响冰川稳定性。</p>
+<p>遥感和 GNSS 可以看见冰川表面的变化，但很多关键过程发生在冰体内部、接地线附近或者冰-基岩界面。冰震学的价值就在这里：它可以把冰川看成一个会自己“发声”的系统，通过连续地震记录去捕捉断裂、滑动、潮汐弯曲和冰崩等过程。</p>
+<h3 id="previous-studies">Previous Studies</h3>
+<ul>
+<li><strong>Podolskiy and Walter (2016); Aster and Winberry (2017)</strong>: 论文把它们作为 cryoseismology 的基础背景，用来说明冰震学可以通过地震事件检测和定位来研究冰川系统。</li>
+<li><strong>Le Meur et al. (2014)</strong>: 论文采用了前人给出的 Astrolabe Glacier grounding line 位置，这说明该区域已经有一定的冰川学和测地学基础。</li>
+<li><strong>Walter et al. (2020), Brisbourne et al. (2021), Hudson et al. (2021)</strong>: 论文在讨论节点阵列、DAS 和冰内结构成像时引用了这些工作，说明密集阵列和光纤观测正在成为冰川动力学研究中的重要工具。</li>
+<li><strong>Le Bris et al. (2025, 2026)</strong>: 这两项 companion studies 进一步分析了 SEIS-ADELICE 中的表面冰震和基底 stick-slip 事件。本文更像是总览和数据说明，而不是把每一类事件都分析到底。</li>
+</ul>
+<h3 id="limitations-of-previous-research">Limitations of Previous Research</h3>
+<p>从这篇文章的写法看，之前工作的一个限制是观测维度常常不够完整：要么是长期但稀疏的台站，要么是短期但空间覆盖有限的密集阵列；要么只看冰上，要么只看海底或遥感。SEIS-ADELICE 的主要补充，是把长期宽频带台站、海底地震仪、GNSS、短周期节点阵列和 DAS 放在同一个冰川系统里，尤其是围绕 grounding zone、lateral shear zone 和 terminus 做多尺度观测。</p>
+<p><img alt="图1 SEIS-ADELICE 在 Astrolabe Glacier 周围的观测部署" src="/images/paper-cryoseismic-astrolabe-glacier/figure4.jpg" /></p>
+<center><em>图1 SEIS-ADELICE 在 Astrolabe Glacier 周围的观测部署。图中可以看到海底地震仪、宽频带台站、GNSS、节点阵列、光纤线路、接地线和冰流方向。</em></center>
+
+<h2 id="methodology">Methodology</h2>
+<h3 id="data">Data</h3>
+<p>这篇文章最核心的不是某一个处理流程，而是一套观测系统：</p>
+<ul>
+<li><strong>长期宽频带和中频带台站</strong>: 2020-2025 年部署在基岩岛、稳定冰、接地冰和漂浮冰上，并与 Dumont d&rsquo;Urville 附近的 Geoscope DRV 台站形成长期参照。</li>
+<li><strong>2022 年 grounding zone 临时宽频带阵列</strong>: 6 台宽频带地震仪，约 3 周，采样率 200 Hz。</li>
+<li><strong>2022-2023 年 OBS</strong>: 在冰川前缘附近近海部署，目标是从海底一侧记录冰崩、海洋-冰川相互作用和地震背景噪声。</li>
+<li><strong>2023 年节点阵列</strong>: 50 台 SmartSolo 三分量 5 Hz 节点，500 Hz 采样，覆盖 grounding zone 附近约 2 km x 2 km 区域。</li>
+<li><strong>2024 年 DAS 和节点联合观测</strong>: 两条约 2 km 光纤，一条沿冰流方向穿过 grounding zone，另一条为 Z 形布设；Febus-1A interrogator，10 m gauge length，2.4 m channel spacing，500 Hz 采样。</li>
+<li><strong>2025 年 lateral shear zone 节点阵列</strong>: 45 台节点，覆盖西侧剪切带约 1500 m x 700 m。</li>
+<li><strong>GNSS 和潮位数据</strong>: 多个 GNSS 台站以 15 s 采样，潮位来自 DDU 附近 tide gauge。</li>
+</ul>
+<h3 id="methods">Methods</h3>
+<p>作者使用的方法都比较朴素，但很适合数据说明型文章：</p>
+<ul>
+<li>用 <strong>PPSD</strong> 比较不同环境下的噪声水平，包括岩岛、稳定冰、漂浮冰、OBS 和节点阵列。</li>
+<li>用 <strong>STA/LTA</strong> 在 DAS 和节点数据里检测可能的短时冰震活动。DAS 示例中使用了 5-100 Hz 频带，STA 为 0.5 s，LTA 为 5 s，trigger-on 为 5，trigger-off 为 2。</li>
+<li>用 <strong>template matching / waveform correlation</strong> 检测重复的基底 stick-slip 事件。</li>
+<li>用 <strong>ambient noise cross-correlation</strong> 从 2023 年 50 台节点数据中重建面波和可能的体波信号。预处理包括 10 分钟窗口、瞬态事件剔除、0.125-50 Hz whitening 和 clipping。</li>
+<li>用 <strong>GNSS 与潮位对比</strong> 解释表面冰震和冰体运动对潮汐的响应。</li>
+</ul>
+<h2 id="results">Results</h2>
+<p>第一，SEIS-ADELICE 的噪声分析显示，不同观测环境差别很大。稳定冰和基岩台站在 1-30 s 周期范围内都能记录到清楚的二次微震峰值；漂浮冰在长周期端更吵，并出现约 16 s 和 50 s 的峰值。作者认为这些长周期信号可能和漂浮冰舌的自然振动或 infragravity waves 进入冰下空腔有关，但这一解释还需要进一步验证。</p>
+<p>第二，surface icequakes 明显受到潮汐调制。论文给出的例子中，2023 年 1 月 18-22 日节点 01x07 附近可以检测到大量短时、高频、宽频带事件。某些高峰期每小时超过 400 个事件，并且主要出现在高潮或涨潮阶段。这说明 grounding zone 附近的潮汐弯曲会直接影响冰体脆性破裂。</p>
+<p>第三，作者展示了 basal stick-slip 事件。这类事件比表面冰震更规则，频率主要在 20-100 Hz，具有较清楚的 P/S 到时，波形重复性强。论文中一个例子是在 2023 年 1 月 27 日节点 03x01 上检测到的事件簇，150 个相似事件叠加后可以看到稳定的三分量波形。作者把它们解释为固定冰-基岩接触位置附近的重复滑动事件。</p>
+<p>第四，密集节点阵列可以用于冰川结构成像。2023 年节点阵列的环境噪声互相关重建出了 Rayleigh 波、Love 波，以及可能的 P 波。论文给出的速度量级大致为：Rayleigh 波约 1700 m/s，Love 波约 2000 m/s，可能的 P 波约 3700-3800 m/s。这个结果很重要，因为它说明短期节点阵列不只是用来数事件，也可以为后续剪切波速度结构和冰厚约束提供数据基础。</p>
+<p><img alt="图2 由环境噪声互相关重建出的不同分量相关函数" src="/images/paper-cryoseismic-astrolabe-glacier/figure11.jpg" /></p>
+<center><em>图2 2023 年节点阵列的环境噪声互相关结果。不同分量中可以看到 Rayleigh wave、Love wave 和可能的 P wave 能量。</em></center>
+
+<p>第五，DAS 结果很值得看，但也要谨慎。作者明确说目前 DAS 分析还只是 preliminary exploration，而且光纤耦合并不理想，尤其在跨越裂隙、表面融化或光缆没有很好埋入冰体的位置。锤击测试中，节点可以记录到最远约 650 m 的信号，但 DAS 只清楚记录到约 45 m。这其实是很有价值的负结果：在冰川表面部署 DAS，耦合方式可能比设备本身更关键。</p>
+<p>第六，论文也讨论了 ice calving 和 anthropogenic noise。冰崩信号持续数秒，低频能量丰富，也可以在岛上台站或 OBS 中记录到；而直升机等人为信号会产生很典型的 Doppler 变化和约 20 Hz 的旋翼频率。对于这类野外数据，区分自然信号和人为信号是后续 catalog 工作中绕不开的一步。</p>
+<h2 id="discussion">Discussion</h2>
+<h3 id="innovations">Innovations</h3>
+<p>这篇文章真正新的地方，不是提出了一个复杂算法，而是建立了一套覆盖面很广的冰川观测框架。它把 ice, rock, ocean bottom, GNSS, DAS, dense nodes 放在同一个研究对象上，而且观测时间跨度从几天、几周到多年都有。这种设计让研究者可以同时看短时断裂、日潮汐响应、季节变化、长期噪声背景和结构成像。</p>
+<p>我尤其喜欢的一点是作者没有回避仪器部署中的问题。比如 DAS 耦合差、OBS 之间耦合差异明显、漂浮冰上的长周期峰值尚不能解释，这些都被写进了文章。对于野外观测来说，这些“不完美”本身就是非常重要的经验。</p>
+<h3 id="contributions">Contributions</h3>
+<p>这篇文章的贡献可以概括为三点：</p>
+<ol>
+<li>它把 Astrolabe Glacier 建成了一个可持续分析的 cryoseismology test site。</li>
+<li>它证明了 grounding zone 附近的 surface icequakes 和 basal stick-slip 可以被密集阵列清楚捕捉，并且和潮汐过程相关。</li>
+<li>它展示了密集节点和环境噪声互相关在冰川内部结构成像中的潜力。</li>
+</ol>
+<h3 id="limitations">Limitations</h3>
+<p>这篇文章本身更像 dataset / field experiment paper，所以很多结果还没有完全收口。比如 16 s 和 50 s 长周期峰值的物理机制还没有确定；DAS 数据质量受耦合影响很大；stick-slip 与潮汐相位之间的定量关系还留给后续 companion paper；DAS 数据目前还没有在线公开，需要等数据保留期结束或向作者请求。</p>
+<p>另外，节点阵列虽然空间分辨率高，但观测时间相对短。对于 seasonal change 或多年趋势，还是要依赖长期宽频带台站、GNSS 和海底台站。也就是说，这篇文章展示的是一个很强的观测平台，而不是一个已经完全闭合的物理模型。</p>
+<h2 id="personal-thoughts">Personal Thoughts</h2>
+<p>这篇文章给我的感觉是：真正好的野外观测论文，应该把“怎么观测到的”讲清楚。它不是只给读者一个漂亮结论，而是把台站放在哪里、为什么放在那里、哪些频带能用、哪些地方耦合不好、哪些信号还不能解释，都摆出来。</p>
+<p>对我自己来说，这篇文章最值得借鉴的是 grounding zone 这个问题的组织方式。表面冰震、基底 stick-slip、环境噪声成像、DAS、GNSS 和潮汐，本来可以各写成一篇很分散的文章，但 SEIS-ADELICE 把它们统一到“冰川接地线附近的动力学”这个问题里。这个结构很适合科研：先把观测系统搭稳，再让不同方法围绕同一个物理问题说话。</p>
+<p>如果以后我要读这套工作的后续，我会优先看 Le Bris et al. 对 surface icequakes 和 basal stick-slip 的细节分析。本文已经把舞台搭好了，真正的机制解释应该会在那些 companion studies 里展开。</p>
+    </div>
+
+  <div class="comments-section">
+  <h3>Comments</h3>
+  <script src="https://utteranc.es/client.js"
+          repo="junxie01/junxie01.github.io"
+          issue-term="pathname"
+          label="comment"
+          theme="preferred-color-scheme"
+          crossorigin="anonymous"
+          async>
+  </script>
+</div>
+
+  <div class="post-nav">
+    
+      <a class="post-nav-prev" href="/blog/2026-06-23-cloudflare-tunnel-paper-hot.html">&larr; 用Cloudflare Tunnel继续继续搬paper-hot</a>
+    
+
+    <a class="post-nav-blog" href="/blog/">Blog</a>
+
+    
+      <a class="post-nav-next" href="/blog/2026-06-24-cloudflare-tunnel.html">用 Cloudflare Tunnel 在家连回办公室 Fedora &rarr;</a>
+    
+  </div>
+</article>
+</div>
+
+      
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Jun Xie &middot; Built with Python &amp; Markdown &middot;
+        <a href="https://github.com/junxie01" target="_blank">GitHub</a> &middot;
+        <a href="/atom.xml" target="_blank">Atom</a>
+      </p>
+      <p class="site-stats">
+        <span id="busuanzi_container_site_pv">
+          👁 Total visits: <span id="busuanzi_value_site_pv"></span>
+        </span>
+        &middot;
+        <span id="busuanzi_container_site_uv">
+          Visitors: <span id="busuanzi_value_site_uv"></span>
+        </span>
+      </p>
+    </div>
+  </footer>
+
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+      startOnLoad: true,
+      securityLevel: 'strict',
+      theme: window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'neutral'
+    });
+  </script>
+
+</body>
+</html>

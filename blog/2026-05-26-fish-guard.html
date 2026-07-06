@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fish Guard | Jun Xie</title>
+  <meta name="description" content="Fish Guard">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/atom.xml">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+  <!-- MathJax for LaTeX rendering -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        ignoreHtmlClass: 'mermaid'
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <!-- Umami Analytics -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="21a99622-5a23-45f4-be80-edef627a68e3"></script>
+  <!-- Busuanzi for public visitor counter -->
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container masthead">
+      <a class="masthead-identity" href="/" aria-label="SEISAMUSE home">
+        <img src="/images/seisamuse.png" alt="" class="masthead-avatar">
+        <span class="masthead-title">SEISAMUSE</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="/blog/" class="active">Blog</a>
+        <a href="/thoughts/">Thoughts</a>
+        <a href="/archives/">Archives</a>
+        <a href="/about/">About</a>
+        <a href="/links/">Links</a>
+      </nav>
+
+      <div class="masthead-actions" aria-label="Site shortcuts">
+        <form class="masthead-search" action="/search/" method="get">
+          <input type="search" name="q" placeholder="Search notes" aria-label="Search notes">
+        </form>
+        <a href="https://www.travellings.cn/go" target="_blank" rel="noopener" title="Travellings" aria-label="Travellings"><i class="fa-solid fa-train"></i></a>
+        <a href="mailto:junxie01@gmail.com" title="Email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="/atom.xml" title="Atom feed" aria-label="Atom feed"><i class="fa-solid fa-rss"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container page-wide">
+      
+      
+<div class="main-content">
+  <article>
+    <div class="post-header">
+      <h1>Fish Guard</h1>
+      <div class="post-meta">
+        <time>2026-05-26</time>
+         &middot; 1 min read
+        
+         &middot;
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">fun</span>
+        
+        
+      </div>
+    </div>
+
+    <div class="post-content">
+      <p><img alt="" src="/images/fishguard.png" /></p>
+<p>作为打工人，是绝对不会在办公室摸鱼的，要是你看到，一定要<del>全当没看到</del>对我教育一番。
+当然和我不一样，可能你会忍不住摸鱼，为此我帮你写了一个摸鱼小卫士。它帮你监控门口有没有动静，有没有敲门声。如果有，那它自动就会帮你把桌面切出来。<del>神不知鬼不觉</del>老板肯定看不到。</p>
+<p>下面详细介绍一下：</p>
+<h1 id="fish-guard">Fish Guard：一个用摄像头和麦克风帮你守门的小工具</h1>
+<p>Fish Guard 是一个跨平台桌面小工具。它的用途很直接：用摄像头盯住门口或走廊区域，用麦克风监听敲门声；一旦检测到门口变化或疑似敲门，就自动静音、隐藏当前窗口并显示桌面。</p>
+<p>这个项目不是复杂的 AI 系统，而是一个实用型的小自动化工具。它把几个简单但有效的信号组合起来：视频侧使用 ROI 区域的帧间差分，音频侧使用 RMS 能量、频谱质心、低频能量占比和短促脉冲间隔来判断敲门。这样做的好处是依赖轻、运行快，也比较容易根据自己的办公室环境调参数。</p>
+<h2 id="_1">主要功能</h2>
+<ul>
+<li>摄像头实时预览，并支持鼠标框选检测区域。</li>
+<li>检测门口区域的明显运动变化。</li>
+<li>麦克风监听短促、低频占比较高的敲门声。</li>
+<li>触发后自动执行保护动作：静音、隐藏当前窗口、显示桌面。</li>
+<li>支持 macOS、Windows 和 Linux。</li>
+<li>提供音频样本分析脚本，方便以后继续调敲门检测参数。</li>
+</ul>
+<h2 id="_2">使用方式</h2>
+<p>安装依赖：</p>
+<div class="highlight"><pre><span></span><code>pip3<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</code></pre></div>
+
+<p>macOS 或 Linux 上如果需要音频检测，还要先安装 PortAudio。macOS 可以用：</p>
+<div class="highlight"><pre><span></span><code>brew<span class="w"> </span>install<span class="w"> </span>portaudio
+</code></pre></div>
+
+<p>启动：</p>
+<div class="highlight"><pre><span></span><code>python3<span class="w"> </span>fish_guard.py
+</code></pre></div>
+
+<p>或者在 macOS/Linux 上运行：</p>
+<div class="highlight"><pre><span></span><code>./start.sh
+</code></pre></div>
+
+<p>启动后先在摄像头画面里框选门的位置，再点击“开始监控”。如果没有框选区域，也可以选择使用全画面检测，但实际使用时推荐框选门口区域，这样误报会少很多。</p>
+<h2 id="_3">实现思路</h2>
+<p>视频检测部分没有用复杂模型，而是对选中的 ROI 区域做帧间差分。程序会把画面转成灰度、做高斯模糊，然后计算当前帧和上一帧的差异。如果差异区域面积超过阈值，就认为门口发生了明显变化。</p>
+<p>音频检测部分也尽量保持可解释。敲门声通常是短促脉冲，而且能量集中在比较低的频段。程序会先做环境噪声校准，然后在实时音频流里检测高于动态阈值的片段，再用频谱质心、低频能量占比、脉冲数量和脉冲间隔过滤掉说话声、音乐声和持续噪声。</p>
+<p>跨平台动作封装在单独的系统层里。macOS 使用 AppleScript，Windows 使用系统 API，Linux 优先调用常见桌面工具和音频后端命令。</p>
+<h2 id="_4">适用场景和限制</h2>
+<p>Fish Guard 更适合固定机位、固定办公环境下使用。如果摄像头经常移动，或者门口光线变化很强，就需要重新框选检测区域并降低视频灵敏度。音频检测也会受环境影响，如果办公室里一直有音乐、电视或密集键盘声，可以直接关闭音频检测，只保留视频检测。</p>
+<p>这个项目的定位是轻量实用，不追求“识别所有情况”。它更像是一个可以自己调、可以理解、可以快速运行的小工具。</p>
+<h2 id="_5">项目地址</h2>
+<p>GitHub：<code>git@github.com:junxie01/fish_guard.git</code></p>
+    </div>
+
+  <div class="comments-section">
+  <h3>Comments</h3>
+  <script src="https://utteranc.es/client.js"
+          repo="junxie01/junxie01.github.io"
+          issue-term="pathname"
+          label="comment"
+          theme="preferred-color-scheme"
+          crossorigin="anonymous"
+          async>
+  </script>
+</div>
+
+  <div class="post-nav">
+    
+      <a class="post-nav-prev" href="/blog/2026-05-25-connect-to-server.html">&larr; 在家怎么连服务器</a>
+    
+
+    <a class="post-nav-blog" href="/blog/">Blog</a>
+
+    
+      <a class="post-nav-next" href="/blog/2026-05-28-humanity1.html">关于人性（1） &rarr;</a>
+    
+  </div>
+</article>
+</div>
+
+      
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Jun Xie &middot; Built with Python &amp; Markdown &middot;
+        <a href="https://github.com/junxie01" target="_blank">GitHub</a> &middot;
+        <a href="/atom.xml" target="_blank">Atom</a>
+      </p>
+      <p class="site-stats">
+        <span id="busuanzi_container_site_pv">
+          👁 Total visits: <span id="busuanzi_value_site_pv"></span>
+        </span>
+        &middot;
+        <span id="busuanzi_container_site_uv">
+          Visitors: <span id="busuanzi_value_site_uv"></span>
+        </span>
+      </p>
+    </div>
+  </footer>
+
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+      startOnLoad: true,
+      securityLevel: 'strict',
+      theme: window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'neutral'
+    });
+  </script>
+
+</body>
+</html>

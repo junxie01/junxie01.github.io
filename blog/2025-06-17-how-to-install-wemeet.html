@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fedora 40如何安装腾讯会议 | Jun Xie</title>
+  <meta name="description" content="Fedora 40如何安装腾讯会议">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/atom.xml">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+  <!-- MathJax for LaTeX rendering -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        ignoreHtmlClass: 'mermaid'
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <!-- Umami Analytics -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="21a99622-5a23-45f4-be80-edef627a68e3"></script>
+  <!-- Busuanzi for public visitor counter -->
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container masthead">
+      <a class="masthead-identity" href="/" aria-label="SEISAMUSE home">
+        <img src="/images/seisamuse.png" alt="" class="masthead-avatar">
+        <span class="masthead-title">SEISAMUSE</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="/blog/" class="active">Blog</a>
+        <a href="/thoughts/">Thoughts</a>
+        <a href="/archives/">Archives</a>
+        <a href="/about/">About</a>
+        <a href="/links/">Links</a>
+      </nav>
+
+      <div class="masthead-actions" aria-label="Site shortcuts">
+        <form class="masthead-search" action="/search/" method="get">
+          <input type="search" name="q" placeholder="Search notes" aria-label="Search notes">
+        </form>
+        <a href="https://www.travellings.cn/go" target="_blank" rel="noopener" title="Travellings" aria-label="Travellings"><i class="fa-solid fa-train"></i></a>
+        <a href="mailto:junxie01@gmail.com" title="Email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="/atom.xml" title="Atom feed" aria-label="Atom feed"><i class="fa-solid fa-rss"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container page-wide">
+      
+      
+<div class="main-content">
+  <article>
+    <div class="post-header">
+      <h1>Fedora 40如何安装腾讯会议</h1>
+      <div class="post-meta">
+        <time>2025-06-17</time>
+         &middot; 1 min read
+        
+         &middot;
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">Linux</span>
+        
+        
+      </div>
+    </div>
+
+    <div class="post-content">
+      <p>&emsp;&emsp;没想到腾讯开发了Linux版本下的腾讯会议。</p>
+<!--less-->
+<p>&emsp;&emsp;那怎么安装呢？
+&emsp;&emsp;我用了老办法，就是google咯，呃不是，我用的bing。搜索出来的第一条是知乎答案。于是按照说明开始安装了。首先在<a href="https://meeting.tencent.com/download">腾讯主页</a>下载deb安装包。只有deb安装包，看样子还是ubuntu比较流行啊。
+&emsp;&emsp;接下来按照说明安装alien。</p>
+<div class="highlight"><pre><span></span><code>sudo dnf install alien
+</code></pre></div>
+
+<p>&emsp;&emsp;alien可以将deb格式和rpm格式进行转换。还挺不错。转换命令是：</p>
+<div class="highlight"><pre><span></span><code>sudo alien -r deb包
+</code></pre></div>
+
+<p>&emsp;&emsp;然后就生成了一个rpm包，就可以安装了。。。吧。。。
+&emsp;&emsp;不好意思，有依赖问题，怎么都搞不定。
+&emsp;&emsp;事实上我犯了个错误啊，现在搜索引擎已经落伍了啊。我立马把问题输给了豆包啊。它说可以这么安装：
+ * 安装Flatpak</p>
+<div class="highlight"><pre><span></span><code>sudo dnf install flatpak
+</code></pre></div>
+
+<p>嗯，我已经安装了。什么时候安装的呢。
+ * 添加Flathub仓库：</p>
+<div class="highlight"><pre><span></span><code><span class="nv">sudo</span><span class="w"> </span><span class="nv">flatpak</span><span class="w"> </span><span class="nv">remote</span><span class="o">-</span><span class="nv">add</span><span class="w"> </span><span class="o">--</span><span class="k">if</span><span class="o">-</span><span class="nv">not</span><span class="o">-</span><span class="nv">exists</span><span class="w"> </span><span class="nv">flathub</span><span class="w"> </span><span class="nv">https</span>:<span class="o">//</span><span class="nv">flathub</span>.<span class="nv">org</span><span class="o">/</span><span class="nv">repo</span><span class="o">/</span><span class="nv">flathub</span>.<span class="nv">flatpakrepo</span>
+</code></pre></div>
+
+<ul>
+<li>按转腾讯会议：</li>
+</ul>
+<div class="highlight"><pre><span></span><code>flatpak install flathub com.tencent.wemeet
+</code></pre></div>
+
+<ul>
+<li>运行</li>
+</ul>
+<div class="highlight"><pre><span></span><code>flatpak run com.tencent.wemeet
+</code></pre></div>
+
+<p>&emsp;&emsp;然后。。。安装速度慢的可以啊。我直接Ctrl+C掐了。
+&emsp;&emsp;然后我在应用中心直接搜wemeet，就出现了WemeetApp，点击就安装了。好用的很。
+&emsp;&emsp;Linux也变成了点击就运行的玩意儿了啊。</p>
+    </div>
+
+  <div class="comments-section">
+  <h3>Comments</h3>
+  <script src="https://utteranc.es/client.js"
+          repo="junxie01/junxie01.github.io"
+          issue-term="pathname"
+          label="comment"
+          theme="preferred-color-scheme"
+          crossorigin="anonymous"
+          async>
+  </script>
+</div>
+
+  <div class="post-nav">
+    
+      <a class="post-nav-prev" href="/blog/2025-06-08-download-continous-data-update.html">&larr; python脚本下载连续波形数据更新</a>
+    
+
+    <a class="post-nav-blog" href="/blog/">Blog</a>
+
+    
+      <a class="post-nav-next" href="/blog/2025-06-17-run-sequencer.html">学习Sequencer &rarr;</a>
+    
+  </div>
+</article>
+</div>
+
+      
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Jun Xie &middot; Built with Python &amp; Markdown &middot;
+        <a href="https://github.com/junxie01" target="_blank">GitHub</a> &middot;
+        <a href="/atom.xml" target="_blank">Atom</a>
+      </p>
+      <p class="site-stats">
+        <span id="busuanzi_container_site_pv">
+          👁 Total visits: <span id="busuanzi_value_site_pv"></span>
+        </span>
+        &middot;
+        <span id="busuanzi_container_site_uv">
+          Visitors: <span id="busuanzi_value_site_uv"></span>
+        </span>
+      </p>
+    </div>
+  </footer>
+
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+      startOnLoad: true,
+      securityLevel: 'strict',
+      theme: window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'neutral'
+    });
+  </script>
+
+</body>
+</html>

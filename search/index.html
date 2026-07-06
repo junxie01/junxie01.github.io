@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search | Jun Xie</title>
+  <meta name="description" content="Search blog posts by Jun Xie">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/atom.xml">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+  <!-- MathJax for LaTeX rendering -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        ignoreHtmlClass: 'mermaid'
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <!-- Umami Analytics -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="21a99622-5a23-45f4-be80-edef627a68e3"></script>
+  <!-- Busuanzi for public visitor counter -->
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container masthead">
+      <a class="masthead-identity" href="/" aria-label="SEISAMUSE home">
+        <img src="/images/seisamuse.png" alt="" class="masthead-avatar">
+        <span class="masthead-title">SEISAMUSE</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="/blog/">Blog</a>
+        <a href="/thoughts/">Thoughts</a>
+        <a href="/archives/">Archives</a>
+        <a href="/about/">About</a>
+        <a href="/links/">Links</a>
+      </nav>
+
+      <div class="masthead-actions" aria-label="Site shortcuts">
+        <form class="masthead-search" action="/search/" method="get">
+          <input type="search" name="q" placeholder="Search notes" aria-label="Search notes">
+        </form>
+        <a href="https://www.travellings.cn/go" target="_blank" rel="noopener" title="Travellings" aria-label="Travellings"><i class="fa-solid fa-train"></i></a>
+        <a href="mailto:junxie01@gmail.com" title="Email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="/atom.xml" title="Atom feed" aria-label="Atom feed"><i class="fa-solid fa-rss"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container page-wide">
+      
+      
+<h1 class="page-title">Search</h1>
+
+<form class="search-form search-page-form" action="/search/" method="get">
+  <input id="search-input" class="search-input" type="search" name="q" placeholder="Search title, tag, or content" autocomplete="off" autofocus>
+  <button class="search-button" type="submit">Search</button>
+</form>
+
+<p id="search-status" class="search-status">Type one or more keywords to search the blog.</p>
+<ul id="search-results" class="post-list search-results"></ul>
+
+<noscript>
+  <p class="search-status">Search needs JavaScript because this is a static site.</p>
+</noscript>
+
+<script>
+(function () {
+  var input = document.getElementById("search-input");
+  var status = document.getElementById("search-status");
+  var results = document.getElementById("search-results");
+  var posts = [];
+
+  function normalize(value) {
+    return (value || "").toString().toLowerCase();
+  }
+
+  function termsFromQuery(query) {
+    return normalize(query).trim().split(/\s+/).filter(Boolean);
+  }
+
+  function scorePost(post, terms) {
+    var title = normalize(post.title);
+    var tags = normalize((post.tags || []).join(" "));
+    var excerpt = normalize(post.excerpt);
+    var slug = normalize(post.slug);
+    var content = normalize(post.content);
+    var combined = [title, tags, excerpt, slug, content].join(" ");
+    var compactCombined = combined.replace(/[\s\-_\/]+/g, "");
+    var score = 0;
+
+    for (var i = 0; i < terms.length; i += 1) {
+      var term = terms[i];
+      var compactTerm = term.replace(/[\s\-_\/]+/g, "");
+      if (combined.indexOf(term) === -1 && compactCombined.indexOf(compactTerm) === -1) {
+        return 0;
+      }
+      if (title.indexOf(term) !== -1) score += 12;
+      if (tags.indexOf(term) !== -1) score += 8;
+      if (excerpt.indexOf(term) !== -1) score += 4;
+      if (slug.indexOf(term) !== -1 || slug.replace(/[\s\-_\/]+/g, "").indexOf(compactTerm) !== -1) score += 5;
+      if (content.indexOf(term) !== -1) score += 1;
+    }
+    return score;
+  }
+
+  function makeSnippet(post, terms) {
+    var text = post.excerpt || post.content || "";
+    var lower = normalize(text);
+    var firstHit = -1;
+
+    for (var i = 0; i < terms.length; i += 1) {
+      var hit = lower.indexOf(terms[i]);
+      if (hit !== -1 && (firstHit === -1 || hit < firstHit)) {
+        firstHit = hit;
+      }
+    }
+
+    if (firstHit === -1) {
+      return text.slice(0, 180);
+    }
+
+    var start = Math.max(0, firstHit - 70);
+    var end = Math.min(text.length, firstHit + 150);
+    return (start > 0 ? "..." : "") + text.slice(start, end) + (end < text.length ? "..." : "");
+  }
+
+  function clearResults() {
+    while (results.firstChild) {
+      results.removeChild(results.firstChild);
+    }
+  }
+
+  function render(query) {
+    var terms = termsFromQuery(query);
+    clearResults();
+
+    if (!terms.length) {
+      status.textContent = "Type one or more keywords to search the blog.";
+      return;
+    }
+
+    var matches = posts
+      .map(function (post) {
+        return { post: post, score: scorePost(post, terms) };
+      })
+      .filter(function (item) {
+        return item.score > 0;
+      })
+      .sort(function (a, b) {
+        return b.score - a.score || b.post.date.localeCompare(a.post.date);
+      })
+      .slice(0, 30);
+
+    status.textContent = matches.length
+      ? "Found " + matches.length + " result" + (matches.length === 1 ? "." : "s.")
+      : "No matching posts.";
+
+    matches.forEach(function (item) {
+      var post = item.post;
+      var li = document.createElement("li");
+      li.className = "post-item";
+
+      var date = document.createElement("span");
+      date.className = "post-date";
+      date.textContent = post.date;
+      li.appendChild(date);
+
+      var heading = document.createElement("h3");
+      var link = document.createElement("a");
+      link.href = post.url;
+      link.textContent = post.title;
+      heading.appendChild(link);
+      li.appendChild(heading);
+
+      var excerpt = document.createElement("p");
+      excerpt.className = "excerpt";
+      excerpt.textContent = makeSnippet(post, terms);
+      li.appendChild(excerpt);
+
+      if (post.tags && post.tags.length) {
+        var tagWrap = document.createElement("div");
+        tagWrap.className = "post-tags";
+        post.tags.forEach(function (tag) {
+          var tagLink = document.createElement("a");
+          tagLink.href = "/blog/tag/" + normalize(tag).replace(/\s+/g, "-").replace(/\//g, "-") + "/";
+          tagLink.textContent = tag;
+          tagWrap.appendChild(tagLink);
+        });
+        li.appendChild(tagWrap);
+      }
+
+      results.appendChild(li);
+    });
+  }
+
+  function setQueryParam(query) {
+    var url = new URL(window.location.href);
+    if (query.trim()) {
+      url.searchParams.set("q", query.trim());
+    } else {
+      url.searchParams.delete("q");
+    }
+    window.history.replaceState({}, "", url);
+  }
+
+  fetch("/search.json")
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      posts = data;
+      var params = new URLSearchParams(window.location.search);
+      var initialQuery = params.get("q") || "";
+      input.value = initialQuery;
+      render(initialQuery);
+    })
+    .catch(function () {
+      status.textContent = "Search index could not be loaded.";
+    });
+
+  input.addEventListener("input", function () {
+    render(input.value);
+    setQueryParam(input.value);
+  });
+}());
+</script>
+
+      
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Jun Xie &middot; Built with Python &amp; Markdown &middot;
+        <a href="https://github.com/junxie01" target="_blank">GitHub</a> &middot;
+        <a href="/atom.xml" target="_blank">Atom</a>
+      </p>
+      <p class="site-stats">
+        <span id="busuanzi_container_site_pv">
+          👁 Total visits: <span id="busuanzi_value_site_pv"></span>
+        </span>
+        &middot;
+        <span id="busuanzi_container_site_uv">
+          Visitors: <span id="busuanzi_value_site_uv"></span>
+        </span>
+      </p>
+    </div>
+  </footer>
+
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+      startOnLoad: true,
+      securityLevel: 'strict',
+      theme: window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'neutral'
+    });
+  </script>
+
+</body>
+</html>

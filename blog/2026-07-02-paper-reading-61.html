@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paper Reading (61) | Jun Xie</title>
+  <meta name="description" content="Paper Reading (61)">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/atom.xml">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+  <!-- MathJax for LaTeX rendering -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        ignoreHtmlClass: 'mermaid'
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <!-- Umami Analytics -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="21a99622-5a23-45f4-be80-edef627a68e3"></script>
+  <!-- Busuanzi for public visitor counter -->
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container masthead">
+      <a class="masthead-identity" href="/" aria-label="SEISAMUSE home">
+        <img src="/images/seisamuse.png" alt="" class="masthead-avatar">
+        <span class="masthead-title">SEISAMUSE</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="/blog/" class="active">Blog</a>
+        <a href="/thoughts/">Thoughts</a>
+        <a href="/archives/">Archives</a>
+        <a href="/about/">About</a>
+        <a href="/links/">Links</a>
+      </nav>
+
+      <div class="masthead-actions" aria-label="Site shortcuts">
+        <form class="masthead-search" action="/search/" method="get">
+          <input type="search" name="q" placeholder="Search notes" aria-label="Search notes">
+        </form>
+        <a href="https://www.travellings.cn/go" target="_blank" rel="noopener" title="Travellings" aria-label="Travellings"><i class="fa-solid fa-train"></i></a>
+        <a href="mailto:junxie01@gmail.com" title="Email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="/atom.xml" title="Atom feed" aria-label="Atom feed"><i class="fa-solid fa-rss"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container page-wide">
+      
+      
+<div class="main-content">
+  <article>
+    <div class="post-header">
+      <h1>Paper Reading (61)</h1>
+      <div class="post-meta">
+        <time>2026-07-02</time>
+         &middot; 3 min read
+        
+         &middot;
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">paper</span>
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">seismology</span>
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">cryosphere</span>
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">lake ice</span>
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">DAS</span>
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">ambient noise</span>
+        
+        
+      </div>
+    </div>
+
+    <div class="post-content">
+      <h2 id="paper-information">Paper Information</h2>
+<ul>
+<li><strong>Title</strong>: An experiment to resolve system-scale lake ice properties shaped by environmental processes</li>
+<li><strong>First Author</strong>: Felix Strobel</li>
+<li><strong>Corresponding Author</strong>: Felix Strobel</li>
+<li><strong>Affiliation</strong>: Institute of Seismology, University of Helsinki; with collaborators from University of Helsinki, Stockholm University, University of Hamburg, KTH Royal Institute of Technology, Geological Survey of Denmark and Greenland, ETH Zurich, ISTerre, and related institutions</li>
+<li><strong>Journal</strong>: EGUsphere preprint, discussion started 4 June 2026</li>
+<li><strong>DOI</strong>: 10.5194/egusphere-2026-2106</li>
+</ul>
+<h2 id="abstract">Abstract</h2>
+<p>这篇文章介绍了 2025 年 2 月在芬兰南部 Lake Pääjärvi 上开展的一次湖冰综合观测实验。作者希望把季节性淡水湖冰看成一个完整系统，而不是只测几个点上的冰厚或温度。这个系统同时受到气温、风、降雪、湖水、沉积物、气泡和人为活动影响，因此它的厚度、弹性、裂隙和声学响应都可能在空间和时间上变化。</p>
+<p>实验的核心是一套布设在约 25 cm 厚湖冰上的 210 台地震仪阵列。这个阵列采用 Specter aperiodic monotile geometry，尺度达到约 10 km。除此之外，作者还布设了岸边地震台、宽频带地震仪、加速度计、旋转地震仪、1 km 主动 DAS 光缆、GPR、声呐、麦克风，并同步采集了冰厚、冰芯、水化学、沉积物孔隙水和气象数据。</p>
+<p>论文给出的初步结果显示，湖冰中可以观测到明显的导波模式，包括慢速、强频散的 QS flexural mode，以及速度更高的 QS0 和 SH0 模式。环境噪声互相关、锤击实验、DAS 和声学记录之间可以互相验证。与此同时，湖水和冰样中的甲烷浓度表明 Lake Pääjärvi 是一个潜在的甲烷来源，但冰中甲烷只是被困气体中的一小部分。整体上，这篇文章更像是一个大型野外实验和数据集说明，为之后用地震学方法成像湖冰厚度、弹性和气体结构打基础。</p>
+<h2 id="research-context">Research Context</h2>
+<h3 id="importance">Importance</h3>
+<p>我觉得这篇文章有意思的地方在于，它把“湖冰”从一个简单的冰层厚度问题，扩展成了一个环境地球物理问题。季节性湖冰不仅影响湖泊和大气之间的热量交换，也会影响冬季生态、水体混合、交通安全，以及甲烷等温室气体从湖底沉积物到大气的释放过程。</p>
+<p>传统上，湖冰研究可以用人工钻孔、冰芯、GPR、遥感或者局部声学测量来做。但这些方法各有盲区：人工测量很准确，却很稀疏；遥感覆盖大，却需要地面校准；声呐和水化学可以看水体和气体，但空间范围有限。地震学和 DAS 的价值在这里就很清楚了：如果湖冰本身会因为温度变化、风浪、水体振动、人为活动和裂隙而不断发声，那么连续波场就可能用来监测整片湖冰的弹性和厚度变化。</p>
+<h3 id="previous-studies">Previous Studies</h3>
+<ul>
+<li><strong>Brown and Duguay (2010); Perovich and Polashenski (2012)</strong>: 论文把湖冰和气候系统联系起来，强调冰盖会改变湖泊和大气之间的能量交换。</li>
+<li><strong>Engram et al. (2020)</strong>: 利用遥感识别北方湖泊中与甲烷逸出相关的气泡，为“从湖冰看甲烷释放”提供了重要背景。</li>
+<li><strong>Moreau et al. (2020, 2023); Chmiel et al. (2023); Umlauft et al. (2023)</strong>: 这些工作说明海冰或湖冰中的导波、微震和被动地震记录可以用于冰厚和冰性质监测。</li>
+<li><strong>Smith et al. (2024); Mordret and Grushin (2025)</strong>: 提供了 aperiodic monotile array 的几何基础和地震成像动机。本文的 210 台湖冰阵列就是基于这种思路设计的。</li>
+</ul>
+<h3 id="limitations-of-previous-research">Limitations of Previous Research</h3>
+<p>这篇文章隐含指出的一个问题是：很多湖冰观测要么很局部，要么只看单一物理量。对于一个有空间尺度、有环境驱动、有气体交换、有裂隙活动的湖冰系统来说，只靠单点冰厚或者单一遥感图像，很难知道冰层内部到底在怎么变化。</p>
+<p>所以本文的主要补充不是提出一个复杂算法，而是把多种观测手段放到同一片湖冰上。这样一来，冰厚、弹性波速度、环境噪声、声学信号、水下目标、气泡和化学浓度可以互相对照。</p>
+<p><img alt="图1 Lake Pääjärvi 的位置和观测环境" src="/images/paper-experiment-resolve-system-scale-lake-ice/figure1.jpeg" /></p>
+<center><em>图1 Lake Pääjärvi 位于芬兰南部，实验围绕湖冰、岸边、湖水和沉积物同步布设了多种观测。本文真正有价值的地方，就是把这些观测放在同一个湖泊系统里。</em></center>
+
+<h2 id="methodology">Methodology</h2>
+<h3 id="data">Data</h3>
+<p>这次实验的数据量很大，而且观测类型非常杂。作者使用了 340 台 geophones、8 台 broadband seismometers、3 台 accelerometers、一台 rotational seismometer、一条 DAS cable、GPR、echosounder、microphone、ice coring、manual ice thickness measurements、水化学采样和气象资料。</p>
+<p>最核心的湖冰地震阵列由 210 台三分量 geophones 组成，采样率为 2000 Hz，2025 年 2 月 10-13 日部署，3 月 2-3 日回收。阵列的最近邻台距中位数约 188 m，覆盖了 Lake Pääjärvi 的大部分冰面。岸边还有 31 台 geophones，从 2024 年 11 月 22 日一直工作到 2025 年 4 月 24 日，用来记录冻冰前、结冰期和融冰前后的背景变化。</p>
+<p>DAS 系统由 FEBUS A1 interrogator 和 1200 m 光纤组成，其中约 1000 m 为有效主动段。光纤在湖冰上布成几段折线，采样率为 2500 Hz，gauge length 约 10 m。作者还在 DAS 第一段附近布设了一条 26 台 geophones 的线阵，用来比较 DAS strain-rate 和传统地震仪记录。</p>
+<p>冰厚方面，作者进行了两轮人工测量。部署期间冰厚约为 11-30 cm，平均 20.7 cm；回收期间约为 21-35 cm，平均 26.4 cm。配对位置显示 19-22 天内冰厚增加了 1-10 cm，平均增加 5.6 cm。GPR 则提供了约 9.98 km 的剖面，用于补充空间连续的冰厚变化。</p>
+<h3 id="methods">Methods</h3>
+<p>处理方法总体比较直接，但组合得很完整。</p>
+<p>地震数据方面，作者分析锤击实验、冰震、环境源和环境噪声互相关。对于 210 台湖冰阵列，他们把连续波形切成 daily segments，去均值、去趋势、去仪器响应，并降采样到 100 Hz。随后用 30 分钟窗口，在 1-30 Hz 内做 spectral whitening，并计算所有台站对的 RR、TT 和 ZZ 分量互相关，最后按距离 bin 叠加。</p>
+<p>DAS 数据方面，作者先用 PSD 检查不同通道的噪声和耦合状态，再人工检查不同频带中的冰震信号。对于某些冰震事件，DAS 记录可以同时看到低频的慢速 QS 波和高频的 QS0 / SH0 模式。</p>
+<p>冰厚和气体方面，作者结合人工冰厚、GPR、电磁波速度、声学 coincidence frequency、冰芯气体体积分数、溶解甲烷、DIC 和沉积物孔隙水浓度。这样做的好处是，地震波速度或声学频率推出来的冰厚，可以和人工测量及 GPR 互相校验。</p>
+<h2 id="results">Results</h2>
+<p>第一，湖冰导波非常清楚。锤击、冰震和环境源都会激发强频散的 QS flexural mode，以及相对更快、更不频散的 QS0 和 SH0 模式。锤击实验中，QS0 速度约为 3009 ± 60 m/s，SH0 速度约为 1638 ± 20 m/s。环境噪声互相关给出的速度略高，RR 分量的 QS0 约为 3380 ± 140 m/s，TT 分量的 SH0 约为 1824 ± 80 m/s。慢速 QS 模式的速度则大约在 20-100 m/s。</p>
+<p>第二，作者用这些波速估计了湖冰的弹性参数。假定冰密度为 910 kg/m3，并使用 cSH0 = 1850 m/s、cQS0 = 3400 m/s，得到 Poisson&rsquo;s ratio 约为 0.42，Young&rsquo;s modulus 约为 8.59 GPa。这个结果说明 Lake Pääjärvi 当时的湖冰相当 stiff，和作者现场看到的硬质透明 basal ice 比较一致。</p>
+<p>第三，环境驱动很明显。高频地震能量在 2 月 21 日之前更强，尤其和 2 月 13、16、19、20 日的快速降温过程有关。论文认为这可能反映了湖冰在温度变化下的机械响应。低频宽频带能量则更受风速和阵风影响，在 0.03-0.2 Hz 内能持续几个小时到几天，和 wind gust speed 的相关系数最高可达 0.8。</p>
+<p>第四，DAS 观测说明光纤可以捕捉到冰震和导波，但耦合问题仍然很重要。作者在 DAS 记录中人工识别出数百个冰震事件。一个 2025 年 2 月 19 日 21:42 UTC 的事件显示，10 Hz 以下可以看到 10-50 m/s 的慢速 QS 波，10 Hz 以上则可以看到约 3400 m/s 的 QS0 和约 1850 m/s 的 SH0。第一到时出现在约 615 m 附近，可能和现场观测到的一条持续裂缝有关。</p>
+<p><img alt="图2 DAS 通道的频率内容和空间变化" src="/images/paper-experiment-resolve-system-scale-lake-ice/figure28.png" /></p>
+<center><em>图2 DAS 通道的 PSD 可以看到频率内容随光纤位置变化明显。对于冰上 DAS 来说，数据质量不仅取决于设备，也取决于光纤布设、弯折、冰面耦合和裂缝环境。</em></center>
+
+<p>第五，声学和水声数据把“湖冰”扩展到了冰下水体。麦克风记录到的冰震声学信号在夜间更明显，其中一个事件出现了约 120 Hz 的 monochromatic air-coupled wave。根据 coincidence frequency，作者估计当时冰厚约为 26-28 cm，和人工测量一致。声呐剖面中可以看到移动声学目标，作者认为可能包括鱼类，也可能包括上升气泡，但气泡通量的定量识别还没有完成。</p>
+<p><img alt="图3 冰下声呐观测示意和回波剖面" src="/images/paper-experiment-resolve-system-scale-lake-ice/figure13.jpeg" /></p>
+<center><em>图3 声呐观测把湖冰研究和冰下水体连接起来。图中既有水柱中的移动目标，也有湖底附近的回波结构；作者认为其中一部分目标可能和鱼类或气泡有关。</em></center>
+
+<p>第六，甲烷结果比较克制。沉积物孔隙水中的 CH4 浓度最高，可以达到 10-1000 µmol/L，而水体和冰中的 CH4 大致只有 0.01-0.1 µmol/L。不过所有 161 个溶解甲烷样品都高于大气平衡浓度，说明 Lake Pääjärvi 可能向大气释放甲烷。与此同时，冰中甲烷只是被困气体中的一小部分，冰内气体体积分数更可能主要来自 trapped air，尤其是上部 superimposed ice。</p>
+<h2 id="discussion">Discussion</h2>
+<h3 id="innovations">Innovations</h3>
+<p>这篇文章的创新不在于单个算法，而在于实验组织方式。作者把湖冰当作一个系统，把地震、DAS、GPR、声学、水声、冰芯、气体和气象放到同一时空框架里。这种设计可以让研究者同时回答几个层次的问题：冰有多厚，冰有多硬，裂缝什么时候活动，风和降温如何影响波场，湖底气泡是否能被声呐和冰内观测间接捕捉。</p>
+<p>另一个值得注意的点是 monotile lake-scale array。常规规则网格在湖这种不规则边界上并不方便，而 Specter aperiodic monotile geometry 可以在一定程度上兼顾空间覆盖和波束形成/噪声成像需求。对环境地震学来说，这种阵列设计很有启发性，因为真实研究对象往往不是规则矩形。</p>
+<h3 id="contributions">Contributions</h3>
+<p>这篇文章的贡献可以概括为三点。</p>
+<p>第一，它为 Lake Pääjärvi 建立了一个完整的 system-scale lake ice dataset。虽然数据还要等到 2028 年 5 月 1 日 embargo 结束后公开，但论文已经把仪器、采样率、部署时间、数据量和初步观测结果写得很清楚。</p>
+<p>第二，它说明了冰层导波可以作为湖冰弹性和厚度变化的观测工具。QS、QS0 和 SH0 模式在锤击、冰震、DAS 和环境噪声中都有对应，这为后续做 ambient field correlation tomography 或冰厚反演提供了基础。</p>
+<p>第三，它把湖冰地震学和甲烷问题连了起来。论文并没有直接声称已经定量解析了甲烷逸出，但它给出了一个合理路径：用声呐看水体目标和气泡，用化学采样约束甲烷浓度，用湖冰中的弹性和气体结构变化做空间补充，最后再和遥感联系起来。</p>
+<h3 id="limitations">Limitations</h3>
+<p>这篇文章仍然是一篇 preprint 和数据实验论文，很多结果只是初步展示。比如湖冰的三维厚度和弹性成像还没有真正做完；声呐中的鱼类和气泡目标还需要进一步分类；DAS 振幅校准和光纤耦合仍然会影响解释；rotational seismometer 数据也存在时间戳、间隙和校准问题。</p>
+<p>另外，数据集要等到 2028 年 5 月 1 日之后才完全开放。对于想立即复现实验处理流程的人来说，这会有一定限制。不过从论文写作角度看，作者已经把参数和处理思路交代得比较完整。</p>
+<h2 id="personal-thoughts">Personal Thoughts</h2>
+<p>我喜欢这篇文章的原因，不是因为它给出了一个特别惊人的结论，而是因为它把一个野外观测系统搭得很完整。很多时候我们读论文会直接跳到结果图，但真正难的事情可能是：怎么选一个合适的湖，怎么在冰上安全布设 200 多台仪器，怎么让 DAS、GPR、声呐、冰芯和气象数据能对上时间，怎么判断一个信号到底来自冰裂、风、车、人，还是水下目标。</p>
+<p>这篇文章也让我想到之前读 SEIS-ADELICE 那类冰川实验论文。它们的共同点是：先把一个自然系统当作观测对象，而不是先拿一个算法去找例子。Lake Pääjärvi 的尺度比南极出口冰川小得多，但思路类似：密集阵列、连续记录、多物理量约束，然后再去谈成像、监测和机制。</p>
+<p>对我来说，这篇文章最值得借鉴的是“系统尺度观测”的设计方式。如果以后要做类似冰川、湖冰、海冰或者浅表环境地震学问题，不能只问“我有什么仪器”，更应该问“这个系统里哪些物理量必须同时被约束”。只有这样，地震波速度、DAS strain-rate、声学频率、冰厚和气体浓度才不会是互相孤立的数字，而会变成同一个自然系统的不同投影。</p>
+<p>还有一点不得不说，它没有引用我的论文，这家伙。</p>
+    </div>
+
+  <div class="comments-section">
+  <h3>Comments</h3>
+  <script src="https://utteranc.es/client.js"
+          repo="junxie01/junxie01.github.io"
+          issue-term="pathname"
+          label="comment"
+          theme="preferred-color-scheme"
+          crossorigin="anonymous"
+          async>
+  </script>
+</div>
+
+  <div class="post-nav">
+    
+      <a class="post-nav-prev" href="/blog/2026-06-30-light-lie.html">&larr; Light lie (1)</a>
+    
+
+    <a class="post-nav-blog" href="/blog/">Blog</a>
+
+    
+      <a class="post-nav-next" href="/blog/2026-07-04-about-paper.html">关于论文 &rarr;</a>
+    
+  </div>
+</article>
+</div>
+
+      
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Jun Xie &middot; Built with Python &amp; Markdown &middot;
+        <a href="https://github.com/junxie01" target="_blank">GitHub</a> &middot;
+        <a href="/atom.xml" target="_blank">Atom</a>
+      </p>
+      <p class="site-stats">
+        <span id="busuanzi_container_site_pv">
+          👁 Total visits: <span id="busuanzi_value_site_pv"></span>
+        </span>
+        &middot;
+        <span id="busuanzi_container_site_uv">
+          Visitors: <span id="busuanzi_value_site_uv"></span>
+        </span>
+      </p>
+    </div>
+  </footer>
+
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+      startOnLoad: true,
+      securityLevel: 'strict',
+      theme: window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'neutral'
+    });
+  </script>
+
+</body>
+</html>
