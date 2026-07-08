@@ -853,7 +853,9 @@ main > .container.page-wide {
   font-size: 1.1rem;
 }
 
-.comments-section .utterances {
+.comments-section .utterances,
+.comments-section .giscus,
+.comments-section .giscus-frame {
   max-width: 100%;
 }
 
@@ -1600,8 +1602,10 @@ footer a:hover {
     --soft-bg: #202038;
   }
   
-  /* Utterances dark theme */
-  .utterances {
+  /* GitHub comments dark theme */
+  .utterances,
+  .giscus,
+  .giscus-frame {
     color-scheme: dark;
   }
 }
