@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paper Reading (63) | Jun Xie</title>
+  <meta name="description" content="Paper Reading (63)">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/atom.xml">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+  <!-- MathJax for LaTeX rendering -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        ignoreHtmlClass: 'mermaid'
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <!-- Umami Analytics -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="21a99622-5a23-45f4-be80-edef627a68e3"></script>
+  <!-- Busuanzi for public visitor counter -->
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container masthead">
+      <a class="masthead-identity" href="/" aria-label="SEISAMUSE home">
+        <img src="/images/seisamuse.png" alt="" class="masthead-avatar">
+        <span class="masthead-title">SEISAMUSE</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="/blog/" class="active">Blog</a>
+        <a href="/thoughts/">Thoughts</a>
+        <a href="/archives/">Archives</a>
+        <a href="/about/">About</a>
+        <a href="/links/">Links</a>
+      </nav>
+
+      <div class="masthead-actions" aria-label="Site shortcuts">
+        <form class="masthead-search" action="/search/" method="get">
+          <input type="search" name="q" placeholder="Search notes" aria-label="Search notes">
+        </form>
+        <a href="https://www.travellings.cn/go" target="_blank" rel="noopener" title="Travellings" aria-label="Travellings"><i class="fa-solid fa-train"></i></a>
+        <a href="mailto:junxie01@gmail.com" title="Email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="/atom.xml" title="Atom feed" aria-label="Atom feed"><i class="fa-solid fa-rss"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container page-wide">
+      
+      
+<div class="main-content">
+  <article>
+    <div class="post-header">
+      <h1>Paper Reading (63)</h1>
+      <div class="post-meta">
+        <time>2026-07-13</time>
+         &middot; 4 min read
+        
+         &middot;
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">paper</span>
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">seismology</span>
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">tsunami</span>
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">landslide</span>
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">Greenland</span>
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">hazard</span>
+        
+        
+      </div>
+    </div>
+
+    <div class="post-content">
+      <h2 id="paper-information">Paper Information</h2>
+<ul>
+<li><strong>Title</strong>: Coupled simulation of landslide, tsunami, and ground deformation for the 2017 Nuugaatsiaq event in Greenland</li>
+<li><strong>First Author</strong>: Hideo Aochi</li>
+<li><strong>Corresponding Author</strong>: Hideo Aochi</li>
+<li><strong>Affiliation</strong>: BRGM, France; Disaster Prevention Research Institute, Kyoto University; Asiaq Greenland Survey; Danish Meteorological Institute</li>
+<li><strong>Journal</strong>: EGUsphere preprint, discussion started 18 September 2025</li>
+<li><strong>DOI</strong>: 10.5194/egusphere-2025-3803</li>
+</ul>
+<h2 id="abstract-translated">Abstract (Translated)</h2>
+<p>这篇文章研究的是 2017 年 6 月 17 日 Greenland 西部 Karrat Fjord 附近的 Nuugaatsiaq landslide-tsunami 事件。这个事件由一次大规模山体滑坡触发，滑坡进入 fjord 后产生海啸，最终影响了约 30 km 外的 Nuugaatsiaq 村庄。作者想做的不是单独解释“滑坡有多大”或者“海啸有多高”，而是把整个级联过程串起来：滑坡产生地震信号，滑坡进入水体生成海啸，海啸沿 fjord 传播，最后海水载荷变化又让海岸附近的固体地球产生可被地震仪记录到的形变。</p>
+<p>作者首先利用 Greenland 上 7 个地震台站的数据做地震学分析，并用 single-force inversion 估计滑坡体积。随后做顺序耦合模拟：第一步模拟滑坡沿地形下降进入 fjord，第二步模拟海啸生成和大尺度传播，第三步计算海啸引起的海岸地面形变，并比较 static Boussinesq solution 和 elastodynamic finite-difference solution。论文认为，约 1 m 的海平面变化可以在海岸附近造成约 0.1-1.0 mm 量级的地面形变，这个量级是可能被宽频带地震仪看到的。</p>
+<p>这篇文章的关键意义在于：在没有直接海岸水位测量的情况下，局部地震记录仍然可以用来约束滑坡、海啸和地面响应之间的因果链。模拟过程在时间上与 NUUG 台站观测比较一致，但振幅仍然偏小。作者认为主要不确定性来自滑坡体积、地下介质刚度、海底/地形数据和滤波处理。</p>
+<h2 id="research-context">Research Context</h2>
+<h3 id="importance">Importance</h3>
+<p>我觉得这篇文章有意思的地方，是它把一个典型的 cascading hazard 写得很完整。很多灾害不是单一过程：不是“发生一个地震”这么简单，而是一个过程触发另一个过程。这里是气候变暖背景下，Greenland fjord 附近的冻土和陡坡稳定性降低，山体滑坡进入水体，形成海啸，然后海啸又通过水体载荷让地面产生长周期响应。</p>
+<p>对于 fjord 环境来说，这个问题很现实。fjord 两侧地形陡，水深大，社区可能就在岸边。滑坡本身发生得快，海啸传播也快，如果完全依赖肉眼或海岸水位计，可能已经晚了。地震波传播速度比海啸快得多，所以如果地震台可以先识别滑坡源，再结合地形和水深估计海啸传播，就有可能服务于预警。</p>
+<p>当然，论文没有说“现在已经可以直接上线一个预警系统”。它更像是在证明一个 concept：用地震台站、地形/水深数据和耦合模拟，能不能把一个没有直接水位记录的 fjord tsunami 事件解释清楚。</p>
+<h3 id="previous-studies">Previous Studies</h3>
+<ul>
+<li><strong>Gauthier et al. (2018)</strong>: 对 2017 Karrat Fjord landslide-tsunami 做了初步三维观测，给出滑坡规模的重要约束。</li>
+<li><strong>Chao et al. (2018)</strong>: 讨论 2017 Greenland landslide 是否可能产生 tsunami warning，并对滑坡和海啸过程做了地震学分析。</li>
+<li><strong>Paris et al. (2019)</strong>: 对 2017 年 Karrat Fjord landslide and tsunami 做数值模拟，是本文 AP landslide volume model 的重要来源。</li>
+<li><strong>Svennevig et al. (2020)</strong>: 用多学科方法研究 Karrat Fjord rock avalanche 前后的演化，强调 remote Arctic area 中不稳定坡体识别的重要性。</li>
+<li><strong>Ekström and Stark (2013)</strong>: 提供 catastrophic landslide dynamics 的 single-force scaling 思路，本文用它从地震反演结果估计滑坡质量和体积。</li>
+<li><strong>Nishida et al. (2019), Boudin et al. (2013), Kimura et al. (2013), Kubota et al. (2020)</strong>: 这些研究说明 tsunami 可以通过宽频带地震仪、倾斜仪或压力计等陆地/海底地球物理仪器被观测到。</li>
+</ul>
+<h3 id="limitations-of-previous-research">Limitations of Previous Research</h3>
+<p>这篇文章之前的研究其实已经分别做了很多事情：有人研究滑坡源，有人做海啸模拟，有人讨论 Greenland fjord 的不稳定坡体，也有人研究海啸造成的地震/倾斜信号。但是这些环节经常是分开的。</p>
+<p>本文想补上的，就是从 seismogram 到 landslide mass，再到 tsunami propagation，再到 ground deformation 的连续链条。这样做的好处是，NUUG 台站上那个长周期振荡就不只是一个“奇怪的后续信号”，而可以被放回到海啸波经过岸边时的水体载荷变化中去理解。</p>
+<p><img alt="Figure 1 Greenland 地震台站和 2017 landslide 位置" src="/images/paper-coupled-simulation-landslide-tsunami-ground-deformation/figure1.png" /></p>
+<center><em>Figure 1 事件位于 Greenland 西部 Karrat Fjord 附近，NUUG 是最靠近 Nuugaatsiaq 的地震台站。这个台站既记录了滑坡早期的地震信号，也记录了后续海啸相关的长周期振荡。</em></center>
+
+<h2 id="methodology">Methodology</h2>
+<h3 id="data">Data</h3>
+<p>地震数据方面，作者使用 Greenland 上的多个区域台站。NUUG 台站距离 Nuugaatsiaq 很近，记录到了滑坡和后续可能由海啸引起的长周期地面运动。single-force inversion 中作者使用 6 个较远的 Greenland 台站，而把 NUUG 排除在反演之外，因为 NUUG 太近，不适合点源近似。</p>
+<p>地形和水深方面，作者使用 GEBCO 的 bathymetry/topography 数据，投影为 Polar Stereographic 坐标 EPSG:3996。滑坡模拟和海啸传播模拟都在这个地形-水深框架里完成。</p>
+<p>事件本身是 2017 年 6 月 17 日 23:39:12 UTC 左右发生的 Karrat Fjord landslide。USGS 把它检测为等效 M4.2 的事件。前人估计约 58 million m3 物质参与滑坡，其中约 45 million m3 进入 fjord 并生成海啸。本文 single-force scaling 给出的滑坡体积约为 44 x 10^6 m3；海啸模拟中采用 Paris et al. (2019) 的 49.7 x 10^6 m3 作为 reference AP model，并测试了更大的体积情形。</p>
+<h3 id="methods">Methods</h3>
+<p>方法上，这篇文章是一个顺序耦合链条。</p>
+<p>第一步是 single-force inversion。作者假定滑坡可以近似为位于 52.34 W、71.64 N、深度 0 km 的点源单力机制。使用 AK135 速度模型计算 Green&rsquo;s functions，对地震记录去仪器响应，并在 0.02-0.1 Hz 频带内做频域反演。得到的 source time function 显示主要持续时间约 80 s，最大力幅约 0.2 x 10^12 N。根据 Ekström and Stark (2013) 的经验关系，滑坡质量约 0.11 x 10^12 kg，假设岩石密度 2.5 x 10^3 kg/m3，体积约 44 x 10^6 m3。</p>
+<p>第二步是 landslide-tsunami simulation。作者用 VolcFlow 模拟滑坡动力学和入水过程，用 FUNWAVE-TVD 模拟 120 s 之后的海啸传播。网格分辨率为 100 m，滑坡密度设为 2500 kg/m3，海水密度设为 1027 kg/m3。VolcFlow 用浅水方程描述滑坡和水体相互作用，FUNWAVE-TVD 则处理非线性、频散、破碎和传播等海岸波过程。</p>
+<p>第三步是地面形变模拟。作者用两类方法计算海啸水位变化造成的地面响应：一种是半无限弹性介质中的 Boussinesq analytical solution，另一种是 elastodynamic finite-difference method。介质被简化为均匀弹性体，rigidity 取 34.1 GPa，对应 S-wave velocity 约 3530 m/s。FDM 时间步长为 0.005 s，最后把速度积分为位移。</p>
+<h2 id="results">Results</h2>
+<p>第一，地震反演给出的滑坡体积和前人估计比较一致。single-force inversion 估计滑坡体积约 44 x 10^6 m3，而文中使用的 AP tsunami model 为 49.7 x 10^6 m3。考虑到前人给出的体积范围约为 33.4-76 x 10^6 m3，这个结果算是落在合理范围内。</p>
+<p>第二，滑坡进入 fjord 后，海啸的时间演化可以在模拟里比较清楚地出现。滑坡大约在几十秒内进入水体并生成第一波；在 reference AP model 中，海啸波前大约 500 s 到达 NUUG 附近，约 1000 s 时在整个 fjord 宽度上形成较连贯的波前。NUUG 附近模拟水位变化约为 0.7-0.8 m。</p>
+<p><img alt="Figure 5 模拟的海啸在 fjord 中传播" src="/images/paper-coupled-simulation-landslide-tsunami-ground-deformation/figure5.png" /></p>
+<center><em>Figure 5 滑坡生成的海啸沿 Karrat Fjord 传播。这个图最直观地说明了为什么 fjord 环境麻烦：波会被狭窄地形导引、反射和重组，后续波列会越来越复杂。</em></center>
+
+<p>第三，NUUG 台站后续的长周期振荡在时间上可以和海啸通过相联系。模拟显示，滑坡入水后的直接弹性波影响在一分钟内很快衰减；海啸接近 NUUG 后，约 400 s 以后地面响应开始明显，500-1200 s 之间出现近似单频的周期振荡。这和观测中长周期信号出现的时间段比较一致。</p>
+<p>第四，静态 Boussinesq solution 和 dynamic FDM 在位移时间序列上总体接近，说明这个海啸载荷引起的地面形变很大程度上是 quasi-static response。不过经过 0.005-0.01 Hz 滤波后，dynamic solution 的振荡比 static solution 更明显，更接近地震记录中看到的长周期振荡。</p>
+<p><img alt="Figure 6 NUUG 处模拟地面形变和观测记录对比" src="/images/paper-coupled-simulation-landslide-tsunami-ground-deformation/figure6.png" /></p>
+<center><em>Figure 6 上半部分是 Boussinesq 和 FDM 得到的模拟位移，下半部分是 NUUG 观测记录。时间大体能对上，但模拟振幅明显小于观测。</em></center>
+
+<p>第五，振幅仍然是主要问题。作者的模拟在时间上与观测匹配较好，但地面位移振幅偏小。可能原因包括：介质 rigidity 取值偏高，真实近岸结构可能更软；滑坡体积不确定性至少有 factor of 2；滑坡地形和水深数据也有误差；另外滤波本身可能引入相位或假信号。</p>
+<p>第六，滑坡体积对海啸振幅影响直接。AP model 在 Nuugaatsiaq 附近给出的最大/最小水位约为 0.72 m 和 -0.83 m；AP x 2 模型可以达到约 1.3 m 和 -1.58 m。水位变化和地面形变近似成正比，所以滑坡体积的不确定性会直接传递到地震记录振幅解释中。</p>
+<p><img alt="Figure 8 不同滑坡体积模型对应的 Nuugaatsiaq 水位变化" src="/images/paper-coupled-simulation-landslide-tsunami-ground-deformation/figure8.png" /></p>
+<center><em>Figure 8 不同滑坡体积模型的相位差别不大，但振幅差别很明显。这也是本文反复强调 landslide volume uncertainty 的原因。</em></center>
+
+<h2 id="discussion">Discussion</h2>
+<h3 id="innovations">Innovations</h3>
+<p>这篇文章的新意不在于某一个单独方法，而在于把方法接起来。滑坡 single-force inversion、VolcFlow、FUNWAVE-TVD、Boussinesq solution、FDM simulation，这些东西单看都不陌生，但把它们放进同一个事件里，就形成了一个可检验的物理故事。</p>
+<p>我觉得它最有价值的地方，是把地震记录从“事件检测工具”变成了“级联过程约束工具”。地震台不仅能告诉你滑坡发生了，还可能通过后续长周期响应告诉你海啸波何时经过岸边、海水载荷变化有多大。这对 fjord 这种缺少海岸水位计或近场观测的地方特别重要。</p>
+<h3 id="contributions">Contributions</h3>
+<p>这篇文章至少有三个贡献。</p>
+<p>第一，它用 Greenland 区域地震台站估计了 2017 Nuugaatsiaq landslide 的质量和体积，并说明这个估计和前人的遥感/模拟结果处在同一量级。</p>
+<p>第二，它说明海啸传播造成的水位变化可以通过固体地球形变被地震台记录到。虽然模拟振幅偏小，但时间上的一致性支持这个解释。</p>
+<p>第三，它把这个案例放到了 Arctic hazard 和 climate-change-induced cascading risks 的框架下。随着 glacier retreat、permafrost thaw 和 fjord 陡坡失稳风险增加，这类 landslide-tsunami 可能不只是一个孤立事件。</p>
+<h3 id="limitations">Limitations</h3>
+<p>这篇文章的局限也比较明显。</p>
+<p>第一，滑坡体积不确定性很大。体积从 33.4 到 76 x 10^6 m3 都可能被认为合理，而海啸和地面形变振幅又对体积非常敏感。</p>
+<p>第二，地下介质被简化为均匀弹性体。作者取 rigidity 为 34.1 GPa，但如果真实近岸结构更软，地面响应会显著变大。这个参数可以带来几倍的振幅差异。</p>
+<p>第三，缺少直接水位记录。Nuugaatsiaq 的海啸高度主要来自现场调查、视频和间接估计，模型很难用 tide gauge 之类的数据直接校准。</p>
+<p>第四，fjord 中的后续波列很复杂。地形狭窄、反射强、波列多次相互作用，晚期波形很难完全拟合。论文也提醒滤波过程要谨慎，因为错误滤波可能制造人工相位。</p>
+<h2 id="personal-thoughts">Personal Thoughts</h2>
+<p>这篇文章我觉得挺适合拿来当“灾害链条建模”的例子。它不是只在某一个环节上秀算法，而是问：如果一个滑坡-海啸事件已经发生，我们能不能从地震记录开始，一步步把它推到海啸传播和地面形变？这个问题很实际，也很工程。</p>
+<p>我尤其喜欢它对时间关系的重视。滑坡大概几十秒到一百秒内完成，海啸几百秒后到达 NUUG，地面长周期响应在 500-1200 s 之间出现。这个时间链条一旦对上，解释就比单纯看振幅要稳一些。振幅可以被体积、刚度和地形搞乱，但时间顺序是一个更硬的约束。</p>
+<p>不过这篇文章也提醒我，耦合模拟最怕的不是代码写不出来，而是每一步的不确定性都会传下去。single-force inversion 估体积有误差，体积进入 VolcFlow 后影响初始海啸，水深影响传播速度和波形，水位再进入地面形变模拟，最后还要经过滤波和地震仪响应。链条越长，越要小心每个环节的“看起来合理”。</p>
+<p>如果以后做类似 fjord、冰川湖、海底滑坡或者冰架崩塌相关的工作，我觉得这篇文章可以借鉴两个思路：一是先把事件按物理过程拆开，每个过程用尽量简单但可解释的模型；二是不要只盯着振幅，先把 timing、period 和 spatial pattern 对上。否则很容易陷入“调参数调到像”的尴尬境地。</p>
+<p>最后一个很实用的点是，作者提到了沿海岸或海底布设 optical-fibre sensing 的可能性。DAS 如果能沿 fjord 或海岸线布设，可能既能看到滑坡/冰川相关地震信号，也能看到海啸载荷引起的长周期响应。这个方向听起来确实有点贵，但对于 remote Arctic communities 来说，也许比事后搬家便宜。</p>
+    </div>
+
+  <div class="comments-section">
+  <h3>Comments</h3>
+  <script src="https://giscus.app/client.js"
+          data-repo="junxie01/junxie01.github.io"
+          data-repo-id="R_kgDOSGl1Dg"
+          data-category="General"
+          data-category-id="DIC_kwDOSGl1Ds4DAuif"
+          data-mapping="specific"
+          data-term="blog/2026-07-13-paper-reading-63"
+          data-strict="0"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="bottom"
+          data-theme="preferred_color_scheme"
+          data-lang="en"
+          crossorigin="anonymous"
+          async>
+  </script>
+</div>
+
+  <div class="post-nav">
+    
+      <a class="post-nav-prev" href="/blog/2026-07-04-paper-reading-62.html">&larr; Paper Reading (62)</a>
+    
+
+    <a class="post-nav-blog" href="/blog/">Blog</a>
+
+    
+      <span class="post-nav-next"></span>
+    
+  </div>
+</article>
+</div>
+
+      
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Jun Xie &middot; Built with Python &amp; Markdown &middot;
+        <a href="https://github.com/junxie01" target="_blank">GitHub</a> &middot;
+        <a href="/atom.xml" target="_blank">Atom</a>
+      </p>
+      <p class="site-stats">
+        <span id="busuanzi_container_site_pv">
+          👁 Total visits: <span id="busuanzi_value_site_pv"></span>
+        </span>
+        &middot;
+        <span id="busuanzi_container_site_uv">
+          Visitors: <span id="busuanzi_value_site_uv"></span>
+        </span>
+      </p>
+    </div>
+  </footer>
+
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+      startOnLoad: true,
+      securityLevel: 'strict',
+      theme: window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'neutral'
+    });
+  </script>
+
+</body>
+</html>
