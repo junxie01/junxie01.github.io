@@ -3,11 +3,43 @@
   <title>SEISAMUSE</title>
   <link href="https://www.seis-jun.xyz/atom.xml" rel="self" />
   <link href="https://www.seis-jun.xyz" />
-  <updated>2026-07-13T10:44:23+08:00</updated>
+  <updated>2026-07-21T08:13:55+08:00</updated>
   <id>https://www.seis-jun.xyz/</id>
   <author>
     <name>Jun Xie</name>
   </author>
+  
+  <entry>
+    <title>关于认知</title>
+    <link href="https://www.seis-jun.xyz/blog/2026-07-21-about-cognition.html" />
+    <id>https://www.seis-jun.xyz/blog/2026-07-21-about-cognition.html</id>
+    <updated>2026-07-21T08:13:55+08:00</updated>
+    <published>2026-07-21T08:13:55+08:00</published>
+    <summary type="html"><p>关于xx这种题目真的是个万金油，不仅可以讲对xx的看法，而且可以讲跟xx相关的一切话题。 今天讲一下认知。 相信你常常会在网上刷到这类话题: 为什会出现那么多高认知的穷人?道理都懂，怎么就过不好自己的一生?怎么才能做到知行合一? 看了这些恐怕你已开始感到焦虑了，既然制造了焦虑自然你会想到这人要来卖课了。 不过放心，我不...</p></summary>
+    <content type="html"><![CDATA[<p>关于xx这种题目真的是个万金油，不仅可以讲对xx的看法，而且可以讲跟xx相关的一切话题。</p>
+<p>今天讲一下认知。</p>
+<p>相信你常常会在网上刷到这类话题: 为什会出现那么多高认知的穷人?道理都懂，怎么就过不好自己的一生?怎么才能做到知行合一?</p>
+<p>看了这些恐怕你已开始感到焦虑了，既然制造了焦虑自然你会想到这人要来卖课了。</p>
+<p>不过放心，我不卖课，我也只是想通过写作来整理我的思绪，让我自己知行合一。</p>
+<p>认知和人的意识、思维、智力通常都是热门话题，原因可能是因为这些名词的概念不清不楚，谁都可以来指点一二。不过不确认是否每个人都愿意来指指点点，但有一点比较明确，那就是没有几个人愿意被指点。</p>
+<p>因为人一般都有一套自洽的三观。不自洽的可能马上要顿悟、或者暴跳如雷又或者直接疯掉。</p>
+<p>认知大约就是你的那套三观吧。</p>
+<p>例如有的人认为付出就会有收获。这种认知大约是在学校里经过努力学习得到好成绩的实践获得的。这与科学探索极其相似。科学是要获得观测，提出理论，拟合观测，并预测未来行为。</p>
+<p>认知对应科学理论，都是指导我们认识世界的因果论。</p>
+<p>我觉得这已非常清楚。一个理论，道听途说而来你觉得你就懂了吗？你不会以为老师教了你牛顿三定律，你就真懂了吧？结果你发现任何一个运动学的题也不会。</p>
+<p>道听途说的认知你以为就是你的认知，就像马云说我捡了个井盖就发达了，然后你也去捡。岂知那只是人家的hypothesis啊，理论要落地要经得起验证和考验的啊。</p>
+<p>你会说，那不跟养鸡场的火鸡一样吗？每天掐表记录投喂时间，最后发现养鸡场公理，笑掉大牙。那不可笑，那对于火鸡短暂一生而言，那就是公理，是放诸养鸡场皆准的公理。</p>
+<p>所以，在你拿到一个认知的时候，你需看清，这个认知是放诸四海而皆准的吗？</p>
+<p>我们多半是没思考，刚刚才说，那是别人的推论，可能仅被他的一个观测证实。一方面，可能他只是凑巧，凑巧被关在了他的养鸡场，因而他的认知是没错的。但放在你的养鸡里可就不一定。另一方面，那个所谓认知可能仅仅是因为看到兔子窜死于树桩而得到的。你等上数年也未必有另一只。</p>
+<p>第二，你得想想这个认知对你有没有用啊？你不炒股，跑去研究俄乌冲突利益纠葛干嘛？是国家把你喂的太饱了吗？</p>
+<p>话又说回来，何必那么功利主义，凡事都讲有没有用那太不可爱了。有涯之生尽论功利之事，悲矣。</p>
+<p>其实我们无时无刻不被灌输所谓认知，被灌得最厉害的地方莫过于学校。王阳明说要知行合一，那是因为很多认知你不去实践那就不会成为你的认知。那在学校，我们的实践是什么的？是服从，是攀比，于是我们的牛马认知，我们的功利认知得到强化，危矣。</p>
+<p>我的暴论是世界前一刻是其后一刻的因。放弃你的认知吧，因为你的认知都是错的，穷尽一生你也看不透这世界。</p>
+<p>所以我建议知行知行，行知行之。不是让你走一步看一步，而是想一想再做，做了又思考一下，不要太关注结果，一做了之。</p>]]></content>
+    
+    <category term="日记" />
+    
+  </entry>
   
   <entry>
     <title>Paper Reading (63)</title>
@@ -6663,237 +6695,6 @@ ICESat-2 ATL06 (2018-2023年)</li>
 <tr>
 <td>未考虑 3-D 射线弯曲与各向异性</td>
 <td>结合走时层析或全波形反演进一步提高精度</td>
-</tr>
-</tbody>
-</table>]]></content>
-    
-    <category term="paper" />
-    
-  </entry>
-  
-  <entry>
-    <title>文献阅读(38)</title>
-    <link href="https://www.seis-jun.xyz/blog/2025-12-11-paper-reading-38.html" />
-    <id>https://www.seis-jun.xyz/blog/2025-12-11-paper-reading-38.html</id>
-    <updated>2025-12-11T09:26:29+08:00</updated>
-    <published>2025-12-11T09:26:29+08:00</published>
-    <summary type="html"><p>&#8195;&#8195;<a href="https://pubs.geoscienceworld.org/seg/geophysics/article-abstract/89/2/P11/634865/Using-distributed-acoustic-sensing-to-characterize">Li &amp; Jin (2024), Geophysics</a></p></summary>
-    <content type="html"><![CDATA[<p>&#8195;&#8195;<a href="https://pubs.geoscienceworld.org/seg/geophysics/article-abstract/89/2/P11/634865/Using-distributed-acoustic-sensing-to-characterize">Li &amp; Jin (2024), Geophysics</a></p>
-<!--less-->
-
-<h3 id="_1">题目</h3>
-<p>Using distributed acoustic sensing to characterize unconventional reservoirs via perforation-shot triggered P waves</p>
-<h3 id="_2">第一作者与通讯作者信息</h3>
-<ul>
-<li><strong>第一作者</strong>：Peiyao Li</li>
-<li>单位：美国科罗拉多矿业学院（Colorado School of Mines）地球物理系  </li>
-<li>邮箱：lipeiyao@mines.edu</li>
-</ul>
-<hr />
-<h3 id="_3">第一作者其他三篇代表性著作</h3>
-<ol>
-<li>Li, P., and Jin, G., 2024. <em>Using distributed acoustic sensing to characterize unconventional reservoirs via perforation-shot triggered P waves</em>. Geophysics, 89(2): P11–P19.  </li>
-<li>Li, P., Jin, G., and Lellouch, A., 2023. <em>Guided-wave dispersion inversion for shale reservoir properties using DAS-recorded perforation shots</em>. SEG Technical Program Expanded Abstracts, 342–346.  </li>
-<li>Li, P., Jin, G., 2022. <em>P-wave dispersion analysis of DAS-recorded perforation shots for lateral heterogeneity detection in horizontal wells</em>. Unconventional Resources Technology Conference (URTeC), 2341–2350.</li>
-</ol>
-<hr />
-<h3 id="_4">摘要</h3>
-<p>非常规储层横向非均质性认识不足常对钻井、完井效率及产量产生负面影响，而现有测井与地震调查手段在刻画此类非均性方面能力有限。我们提出一种替代地球物理方法：利用分布式声波传感（DAS）记录射孔弹激发P波，以刻画非常规储层。在实测数据中，DAS记录的射孔弹产生强P波信号，其波形呈现明显频散。通过对相邻射孔弹信号进行平均，可可靠测量沿水平井的相速度变化。我们观测到一段低相速度异常区，其与测井曲线及三维地震体均方根振幅在空间上吻合。数值模拟验证了P波频散行为的合理性。与建模结果及其他测量对比表明，该方法对非常规储层刻画具有合理探测半径，并可通过对比压裂前后相速度差异推断压裂效果。数据采集可与射孔作业同步进行，成本低且适合现场推广。</p>
-<hr />
-<h3 id="_5">相关研究的重要性</h3>
-<table>
-<thead>
-<tr>
-<th>研究方向</th>
-<th>重要性</th>
-<th>前人研究</th>
-<th>不足</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>非常规储层横向非均质性</strong></td>
-<td>直接影响水平井靶窗选择、压裂设计与产量</td>
-<td>NguyenLe &amp; Shin (2019) 指出厚度变化影响产能；Maus et al. (2020) 提出断层导致导向失误</td>
-<td>测井探测半径&lt;1 m，地震分辨率&gt;25 m，均无法匹配储层厚度（7–12 m）</td>
-</tr>
-<tr>
-<td><strong>射孔弹信号利用</strong></td>
-<td>利用现有作业源，无需额外震源</td>
-<td>Zhang et al. (2019) 用井中检波器记录射孔弹研究各向异性；Lellouch et al. (2019) 用DAS记录导波</td>
-<td>检波器数量稀疏（11级），空间采样不足；未定量提取相速度</td>
-</tr>
-<tr>
-<td><strong>DAS高频P波分析</strong></td>
-<td>DAS具1 m空间采样、10 kHz采样率，可捕捉短波长</td>
-<td>Jin &amp; Roy (2017) 用DAS低频应变研究裂缝；Byerley et al. (2018) 用DAS-VSP监测压裂</td>
-<td>多聚焦微震或低频应变，忽视射孔弹P波频散信息</td>
-</tr>
-<tr>
-<td><strong>波导频散反演</strong></td>
-<td>频散曲线可反演层速度、厚度</td>
-<td>Luo et al. (2021) 用导波频散反演页岩属性</td>
-<td>仅研究导波，未利用体波P波；缺乏现场验证</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h3 id="_6">本文使用的数据</h3>
-<table>
-<thead>
-<tr>
-<th>数据类型</th>
-<th>来源</th>
-<th>特点</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>DAS原始炮集</strong></td>
-<td>美国DJ盆地Codell砂岩水平井，永久光纤外置</td>
-<td>76段压裂，&gt;300次射孔弹，10 kHz采样，~1 m道距，2500 m水平段</td>
-</tr>
-<tr>
-<td><strong>辅助资料</strong></td>
-<td>邻井声波时差测井、伽马测井、声幅成像测井</td>
-<td>厚度7–12 m，速度约3800–4500 m/s</td>
-</tr>
-<tr>
-<td><strong>三维地震</strong></td>
-<td>地表3D地震体</td>
-<td>提取Codell层均方根振幅，垂向分辨率~25 m</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h3 id="_7">采用的方法</h3>
-<table>
-<thead>
-<tr>
-<th>步骤</th>
-<th>方法</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>信号提取</strong></td>
-<td>带通滤波（50–1000 Hz）+ 时空软掩模</td>
-<td>去除强管波，保留P波</td>
-</tr>
-<tr>
-<td><strong>频散分析</strong></td>
-<td>多道面波分析（MASW）</td>
-<td>将炮集T(t,x)→频率-相速度域D(f,V)，拾取局部最大脊线</td>
-</tr>
-<tr>
-<td><strong>空间平均</strong></td>
-<td>100 m滑动窗</td>
-<td>每窗≥3次射孔弹测量，计算均值与标准误</td>
-</tr>
-<tr>
-<td><strong>数值验证</strong></td>
-<td>Devito 2D 有限差分</td>
-<td>建立高-低-高速波导模型，重复观测系统，复现频散与高阶模态</td>
-</tr>
-<tr>
-<td><strong>压裂前后对比</strong></td>
-<td>heel-ward（压裂前）vs toe-ward（压裂后）</td>
-<td>计算相速度差ΔVp，评估压裂诱导变化</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h3 id="_8">获得的结果</h3>
-<table>
-<thead>
-<tr>
-<th>评估维度</th>
-<th>主要结果</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>频散特征</strong></td>
-<td>P波呈明显正频散：频率↑ 相速度↓；异常区内仅基阶模态，外区出现一阶高阶模态</td>
-</tr>
-<tr>
-<td><strong>异常区一致性</strong></td>
-<td>低相速度区（1000–2300 m）与低伽马、高裂缝密度、低地震振幅吻合，空间范围介于测井与地震之间</td>
-</tr>
-<tr>
-<td><strong>数值验证</strong></td>
-<td>模拟复现频散曲线形态与高阶模态激发条件，证实波导陷阱效应</td>
-</tr>
-<tr>
-<td><strong>压裂前后差异</strong></td>
-<td>平均ΔVp ≈ −26 m/s（↓0.7%），局部最大↓200 m/s（↓5%），显著大于测量不确定度（±33 m/s）</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h3 id="_9">创新之处与贡献</h3>
-<table>
-<thead>
-<tr>
-<th>类别</th>
-<th>具体内容</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>理论创新</strong></td>
-<td>首次提出<strong>“射孔弹P波频散+ DAS”</strong>刻画非常规储层横向非均质性，填补测井与地震之间的尺度空白（探测半径~50–200 m，空间分辨率~100 m）</td>
-</tr>
-<tr>
-<td><strong>方法创新</strong></td>
-<td>开发<strong>“软掩模-MASW-局部脊线拾取”</strong>流程，实现&gt;300次射孔弹自动频散提取；引入<strong>heel/toe双向采样</strong>策略，天然获得压裂前后对比</td>
-</tr>
-<tr>
-<td><strong>工程贡献</strong></td>
-<td>无需额外震源与作业停顿，<strong>“光纤随射孔”</strong>成本低；可实时指导后续段簇间距、液量调整</td>
-</tr>
-<tr>
-<td><strong>数据贡献</strong></td>
-<td>公开DJ盆地完整DAS射孔弹炮集及配套测井，为社区提供新的基准数据集</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h3 id="_10">不足与未来方向</h3>
-<table>
-<thead>
-<tr>
-<th>不足</th>
-<th>具体描述</th>
-<th>未来工作</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>一维速度模型</strong></td>
-<td>仅用垂直速度剖面，未考虑横向速度变化</td>
-<td>2D/3D反演，联合拾取频散与振幅</td>
-</tr>
-<tr>
-<td><strong>高阶模态利用不足</strong></td>
-<td>仅拾取基阶，未反演厚度与高阶联合</td>
-<td>多模态联合反演，提高厚度分辨率</td>
-</tr>
-<tr>
-<td><strong>缺乏定量岩石物理</strong></td>
-<td>仅对比伽马、裂缝计数，未直接输出孔隙度、脆性指数</td>
-<td>建立<strong>相速度-岩石物性</strong>转换关系，耦合测井校准</td>
-</tr>
-<tr>
-<td><strong>永久光纤成本高</strong></td>
-<td>目前依赖永久光缆</td>
-<td>推广<strong>钢丝光缆DAS</strong>，开发实时自动处理模块</td>
-</tr>
-<tr>
-<td><strong>未考虑各向异性</strong></td>
-<td>忽略页岩TI/HTI影响</td>
-<td>引入各向异性频散理论，联合S波偏振分析</td>
 </tr>
 </tbody>
 </table>]]></content>
