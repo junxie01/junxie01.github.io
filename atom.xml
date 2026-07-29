@@ -3,11 +3,533 @@
   <title>SEISAMUSE</title>
   <link href="https://www.seis-jun.xyz/atom.xml" rel="self" />
   <link href="https://www.seis-jun.xyz" />
-  <updated>2026-07-27T10:00:06+08:00</updated>
+  <updated>2026-07-28T22:02:24+08:00</updated>
   <id>https://www.seis-jun.xyz/</id>
   <author>
     <name>Jun Xie</name>
   </author>
+  
+  <entry>
+    <title>YOLO图片监测怎么整</title>
+    <link href="https://www.seis-jun.xyz/blog/2026-07-28-yolo-training-on-gpu1.html" />
+    <id>https://www.seis-jun.xyz/blog/2026-07-28-yolo-training-on-gpu1.html</id>
+    <updated>2026-07-28T22:02:24+08:00</updated>
+    <published>2026-07-28T22:02:24+08:00</published>
+    <summary type="html"><p>之前在服务器上跑了YOLO的图像检测，是2022年的工作，用的是当年的YOLOv5 6.0。旧代码、旧权重、旧数据配置都还在，但现在服务器上的 Conda 环境已经没有一个能直接丝滑运行它。好吧，深度学习工程就是这样，模型还在，环境先老了。</p></summary>
+    <content type="html"><![CDATA[<p>之前在服务器上跑了YOLO的图像检测，是2022年的工作，用的是当年的YOLOv5 6.0。旧代码、旧权重、旧数据配置都还在，但现在服务器上的 Conda 环境已经没有一个能直接丝滑运行它。好吧，深度学习工程就是这样，模型还在，环境先老了。</p>
+<!--less-->
+
+<p>现在要捡起来做新的项目，旧工程不要动，新任务另起炉灶。旧目录留作复现和旧权重检测；新的训练任务准备使用当前最新的 Ultralytics YOLO，建新环境、新目录、新数据集。</p>
+<h2 id="_1">旧项目长什么样</h2>
+<p>旧目录长这样：</p>
+<div class="highlight"><pre><span></span><code>/home/junxie/data/yolo_lh/
+├── train.py
+├── detect.py
+├── val.py
+├── requirements.txt
+├── models/yolov5n.yaml
+├── data/*.yaml
+├── runs/train/
+├── runs/detect/
+├── best.pt / last.pt
+└── yolov5-6.0/
+</code></pre></div>
+
+<p>大致情况是：</p>
+<table>
+<thead>
+<tr>
+<th>环境</th>
+<th>情况</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>base</code></td>
+<td>PyTorch 是 CPU 版，不能用 GPU</td>
+</tr>
+<tr>
+<td><code>py3_noise311_candidate</code></td>
+<td>PyTorch 2.5.1 + CUDA 12.1，可识别 GPU，但缺少 <code>cv2</code></td>
+</tr>
+<tr>
+<td><code>ms</code>、<code>py3</code></td>
+<td>没有 PyTorch</td>
+</tr>
+<tr>
+<td><code>swd310</code></td>
+<td>PyTorch CUDA 版本高于当前驱动支持范围</td>
+</tr>
+<tr>
+<td><code>swd310_cupy122</code></td>
+<td>CUDA 动态库不完整</td>
+</tr>
+</tbody>
+</table>
+<p>所以，在这些已有环境里东补一个包、西改一个版本不太靠谱。看起来省事，最后大概率变成“为什么昨天能跑今天不能跑”。做人可以糊涂，环境还是别糊涂。</p>
+<h2 id="_2">旧结果怎么留</h2>
+<p>旧训练主要都是 <code>yolov5n</code>，图像尺寸 640，batch size 16，从零训练。</p>
+<p>几个主要结果如下：</p>
+<table>
+<thead>
+<tr>
+<th>结果目录</th>
+<th>数据配置</th>
+<th style="text-align: right;">Epoch</th>
+<th style="text-align: right;">最后一轮 mAP@0.5</th>
+<th style="text-align: right;">最后一轮 mAP@0.5:0.95</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>runs/train/20220401_05_50</code></td>
+<td><code>data/ice.yaml</code></td>
+<td style="text-align: right;">200</td>
+<td style="text-align: right;">0.97781</td>
+<td style="text-align: right;">0.65803</td>
+</tr>
+<tr>
+<td><code>runs/train/0407</code></td>
+<td><code>data/ice_0407.yaml</code></td>
+<td style="text-align: right;">原计划 300，实际到 284</td>
+<td style="text-align: right;">0.80549</td>
+<td style="text-align: right;">0.51122</td>
+</tr>
+<tr>
+<td><code>runs/train/20220408</code></td>
+<td><code>data/ice_0407.yaml</code></td>
+<td style="text-align: right;">300</td>
+<td style="text-align: right;">0.96759</td>
+<td style="text-align: right;">0.64546</td>
+</tr>
+</tbody>
+</table>
+<p>如果要用旧的三分类模型，优先认这个：</p>
+<div class="highlight"><pre><span></span><code>/home/junxie/data/yolo_lh/runs/train/20220408/weights/best.pt
+</code></pre></div>
+
+<p>根目录下的 <code>best.pt</code> 和这些训练目录里的 <code>best.pt</code> 哈希都不同，来源暂时不清楚。这个最好不要在正式结果里直接用，除非先确认它对应的类别定义和训练来源。</p>
+<p>旧数据集 <code>data/ice_0407.yaml</code> 是三分类：</p>
+<div class="highlight"><pre><span></span><code><span class="nt">train</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./data/0407_1/train/images</span>
+<span class="nt">val</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./data/0407_1/val/images</span>
+<span class="nt">test</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./data/0407_1/test/images</span>
+<span class="nt">nc</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="nt">names</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&#39;Icequake&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;Airgun&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;LFS&#39;</span><span class="p p-Indicator">]</span>
+</code></pre></div>
+
+<p>文件数是：</p>
+<table>
+<thead>
+<tr>
+<th>划分</th>
+<th style="text-align: right;">图片数</th>
+<th style="text-align: right;">标签数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>train</td>
+<td style="text-align: right;">482</td>
+<td style="text-align: right;">482</td>
+</tr>
+<tr>
+<td>val</td>
+<td style="text-align: right;">120</td>
+<td style="text-align: right;">120</td>
+</tr>
+<tr>
+<td>test</td>
+<td style="text-align: right;">120</td>
+<td style="text-align: right;">120</td>
+</tr>
+</tbody>
+</table>
+<p>另一个 <code>data/0406</code> 里面图片数和标签数明显不一致。这个不一定错，因为无目标图片可能没有标签；但差距很大，重新用之前必须确认它们到底是负样本，还是当年漏标了。</p>
+<h2 id="_3">新任务应该怎么做</h2>
+<p>新任务这样干：</p>
+<div class="highlight"><pre><span></span><code>生成图片
+        ↓
+确定检测类别和标注规则
+        ↓
+保留一份未经修改的原始图片
+        ↓
+用 LabelImg 标注矩形框并保存为 YOLO 格式
+        ↓
+人工复查标签
+        ↓
+按事件、日期或台站划分 train / val / test
+        ↓
+整理 images/ 和 labels/ 镜像目录
+        ↓
+编写 dataset.yaml
+        ↓
+上传到 gpu1
+        ↓
+先跑 3 epoch 小样例
+        ↓
+检查标签图、loss、GPU 和输出目录
+        ↓
+正式训练
+        ↓
+独立验证和测试
+        ↓
+用 best.pt 检测新图片
+</code></pre></div>
+
+<h2 id="_4">生成图片</h2>
+<p>原始图片建议满足：</p>
+<p>长边大约 800–1600 像素；</p>
+<p>图片间尽量采用一致的宽高比；</p>
+<p>不需要全部是正方形；</p>
+<p>不要为了训练提前放大低分辨率图片；</p>
+<p>避免大量无关白边、标题、图例和界面元素；</p>
+<p>保留未经缩放的原始图片。</p>
+<p>对于时频图或波形图，可以考虑统一生成成：</p>
+<div class="highlight"><pre><span></span><code><span class="mf">640</span><span class="w"> </span><span class="err">×</span><span class="w"> </span><span class="mf">640</span>
+<span class="mf">800</span><span class="w"> </span><span class="err">×</span><span class="w"> </span><span class="mf">800</span>
+<span class="mf">1024</span><span class="w"> </span><span class="err">×</span><span class="w"> </span><span class="mf">1024</span>
+</code></pre></div>
+
+<p>训练时可使用 imgsz=640。</p>
+<h2 id="labelimg">标注先用 LabelImg</h2>
+<p>最不能省的是标注复查和小样例训练。一个类别编号错了，或者相邻时间窗被随机分到训练集和验证集里，训练曲线可能看起来很好，但科学上不太站得住。</p>
+<p>我用LabelImg来进行标注，虽然它已经停止开发，但简单矩形框标注还是够用。它适合本地有图形界面的电脑，不适合装到无桌面的服务器上。</p>
+<p>本地得单独建一个环境：</p>
+<div class="highlight"><pre><span></span><code>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>labelimg<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.9<span class="w"> </span>-y
+conda<span class="w"> </span>activate<span class="w"> </span>labelimg
+python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>labelImg
+labelImg
+</code></pre></div>
+
+<p>如果沿用旧三分类，先建一个 <code>predefined_classes.txt</code>：</p>
+<div class="highlight"><pre><span></span><code>Icequake
+Airgun
+LFS
+</code></pre></div>
+
+<p>顺序就是类别编号：</p>
+<div class="highlight"><pre><span></span><code>0 = Icequake
+1 = Airgun
+2 = LFS
+</code></pre></div>
+
+<p>这个顺序必须和后面的 <code>dataset.yaml</code> 完全一致。标注到一半再改类别顺序，很容易把自己坑晕。</p>
+<p>当然新的分类自己看着办。</p>
+<p>建议本地标注目录这样放：</p>
+<div class="highlight"><pre><span></span><code>project/
+├── raw_images/
+├── annotation_work/
+│   ├── images_all/
+│   ├── labels_all/
+│   └── predefined_classes.txt
+└── split_manifest.csv
+</code></pre></div>
+
+<p><code>raw_images/</code> 只读保留所有原始图片，不要直接在唯一一份原始图片上改名、覆盖和删除。未来找不到原始数据时，通常会对今天的自己很有意见。</p>
+<p>LabelImg 里主要就是：</p>
+<ol>
+<li><code>Open Dir</code> 选择 <code>images_all/</code>；</li>
+<li><code>Change Save Dir</code> 选择 <code>labels_all/</code>；</li>
+<li>格式切换为 <code>YOLO</code>；</li>
+<li><code>W</code> 新建矩形框；</li>
+<li><code>Ctrl+S</code> 保存；</li>
+<li><code>D</code> 下一张，<code>A</code> 上一张。</li>
+</ol>
+<p>YOLO 标签文件每个目标一行：</p>
+<div class="highlight"><pre><span></span><code>class_id x_center y_center width height
+</code></pre></div>
+
+<p>后四个数字都是 0 到 1 之间的归一化坐标。无目标图片可以作为负样本，但最好保留同名空 <code>.txt</code>，这样能区分“已经检查过没有目标”和“还没标注”。</p>
+<p>对于波形图或时频图，还要先说清楚框到底表示什么：事件时间范围？频率范围？还是整段信号？这不是软件问题，是科学定义问题。</p>
+<h2 id="_5">新数据目录</h2>
+<p>推荐在服务器上另建：</p>
+<div class="highlight"><pre><span></span><code>/home/junxie/data/yolo_new_dataset/
+├── images/
+│   ├── train/
+│   ├── val/
+│   └── test/
+├── labels/
+│   ├── train/
+│   ├── val/
+│   └── test/
+├── dataset.yaml
+└── split_manifest.csv
+</code></pre></div>
+
+<p>图片和标签必须同名，例如：</p>
+<div class="highlight"><pre><span></span><code>images/train/2026_001.png
+labels/train/2026_001.txt
+</code></pre></div>
+
+<p><code>dataset.yaml</code> 可以先写成：</p>
+<div class="highlight"><pre><span></span><code><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/home/junxie/data/yolo_new_dataset</span>
+<span class="nt">train</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">images/train</span>
+<span class="nt">val</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">images/val</span>
+<span class="nt">test</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">images/test</span>
+
+<span class="nt">names</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">0</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Icequake</span>
+<span class="w">  </span><span class="nt">1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Airgun</span>
+<span class="w">  </span><span class="nt">2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LFS</span>
+</code></pre></div>
+
+<p>起始划分可以是：</p>
+<div class="highlight"><pre><span></span><code>train: 70%
+val:   15%
+test:  15%
+</code></pre></div>
+
+<p>但这不是铁律。更重要的是不要数据泄漏。同一个物理事件、同一天、同一台站、同一连续记录，或者同一个原始文件派生出来的一组图，最好作为一个 group，只进入一个划分。</p>
+<p>我会额外保存一个 <code>split_manifest.csv</code>：</p>
+<div class="highlight"><pre><span></span><code>filename,split,group_id,class_source,checked
+example001.png,train,event_001,Icequake,yes
+example002.png,train,event_001,Icequake,yes
+example101.png,val,event_021,Airgun,yes
+</code></pre></div>
+
+<p>这比口头说“我随机分了一下”靠谱多了。</p>
+<h2 id="yolo_modern">新环境：yolo_modern</h2>
+<p>当前新建了一个环境和新目录：</p>
+<div class="highlight"><pre><span></span><code>Conda 环境：yolo_modern
+工作目录：/home/junxie/data/yolo_modern
+</code></pre></div>
+
+<p>登录服务器：</p>
+<div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>gpu1
+<span class="nb">source</span><span class="w"> </span>/home/junxie/opt/anaconda/etc/profile.d/conda.sh
+</code></pre></div>
+
+<p>创建环境：</p>
+<div class="highlight"><pre><span></span><code>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>yolo_modern<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.11<span class="w"> </span>-y
+conda<span class="w"> </span>activate<span class="w"> </span>yolo_modern
+which<span class="w"> </span>python
+python<span class="w"> </span>--version
+</code></pre></div>
+
+<p>环境提示符显示 <code>(yolo_modern)</code>，但找不到 <code>python</code>，先修：</p>
+<div class="highlight"><pre><span></span><code>conda<span class="w"> </span>install<span class="w"> </span>-n<span class="w"> </span>yolo_modern<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.11<span class="w"> </span>pip<span class="w"> </span>-y
+conda<span class="w"> </span>deactivate
+conda<span class="w"> </span>activate<span class="w"> </span>yolo_modern
+<span class="nb">hash</span><span class="w"> </span>-r
+</code></pre></div>
+
+<p>服务器驱动检查时是 535.171.04，用 CUDA 12.1 构建的 PyTorch 比较稳妥：</p>
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">torch</span><span class="o">==</span><span class="m">2</span>.5.1<span class="w"> </span><span class="nv">torchvision</span><span class="o">==</span><span class="m">0</span>.20.1<span class="w"> </span>--index-url<span class="w"> </span>https://download.pytorch.org/whl/cu121
+python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>ultralytics
+</code></pre></div>
+
+<p>记录环境：</p>
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>/home/junxie/data/yolo_modern
+python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>freeze<span class="w"> </span>&gt;<span class="w"> </span>/home/junxie/data/yolo_modern/requirements-lock.txt
+</code></pre></div>
+
+<p>检查：</p>
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;import torch; print(torch.__version__); print(torch.cuda.is_available()); print(torch.cuda.get_device_name(0))&quot;</span>
+yolo<span class="w"> </span>checks
+</code></pre></div>
+
+<p>如果安装当天 PyTorch 或 Ultralytics 官方命令变了，以当天官方说明为准。不要安装一个当前驱动带不动的 CUDA 版本。</p>
+<h2 id="3-epoch">先跑 3 epoch 小样例</h2>
+<p>不要一上来就正式训练。先用小模型和 3 个 epoch 检查流程：</p>
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>/home/junxie/data/yolo_modern
+<span class="nb">cd</span><span class="w"> </span>/home/junxie/data/yolo_modern
+conda<span class="w"> </span>activate<span class="w"> </span>yolo_modern
+
+yolo<span class="w"> </span>detect<span class="w"> </span>train<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="nv">model</span><span class="o">=</span>yolo26n.pt<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="nv">data</span><span class="o">=</span>/home/junxie/data/yolo_new_dataset/dataset.yaml<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="nv">epochs</span><span class="o">=</span><span class="m">3</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="nv">imgsz</span><span class="o">=</span><span class="m">640</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="nv">batch</span><span class="o">=</span><span class="m">16</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="nv">device</span><span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="nv">workers</span><span class="o">=</span><span class="m">8</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="nv">project</span><span class="o">=</span>/home/junxie/data/yolo_modern/runs/train<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="nv">name</span><span class="o">=</span>smoke_test
+</code></pre></div>
+
+<p>这里 <code>yolo26n.pt</code> 是检查当天官方文档里较新的小模型选择。如果更想稳一点，也可以用 <code>yolo11n.pt</code>。不要一开始就上大模型，流程都没通时，大模型只是更贵的错误提示器。</p>
+<p>小样例主要看：</p>
+<ul>
+<li>类别数和类别名是否正确；</li>
+<li>有没有缺失或损坏标签；</li>
+<li>训练和验证示意图中的框是否对；</li>
+<li>loss 是否正常；</li>
+<li>GPU 是否真的在用；</li>
+<li>输出目录是否写对。</li>
+</ul>
+<p>小样例通过后，再正式训练：</p>
+<div class="highlight"><pre><span></span><code>yolo<span class="w"> </span>detect<span class="w"> </span>train<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="nv">model</span><span class="o">=</span>yolo26n.pt<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="nv">data</span><span class="o">=</span>/home/junxie/data/yolo_new_dataset/dataset.yaml<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="nv">epochs</span><span class="o">=</span><span class="m">200</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="nv">imgsz</span><span class="o">=</span><span class="m">640</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="nv">batch</span><span class="o">=</span><span class="m">16</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="nv">device</span><span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="nv">workers</span><span class="o">=</span><span class="m">8</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="nv">patience</span><span class="o">=</span><span class="m">50</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="nv">project</span><span class="o">=</span>/home/junxie/data/yolo_modern/runs/train<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="nv">name</span><span class="o">=</span>new_dataset_yolo26n_20260728
+</code></pre></div>
+
+<p>这些参数不一定是最优参数。<code>batch=16</code> 和 <code>imgsz=640</code> 只是沿用旧项目；阈值、图像尺寸和增强策略都应该在小样例通过后再单独比较。</p>
+<p>正式训练建议放到 <code>tmux</code> 里：</p>
+<div class="highlight"><pre><span></span><code>tmux<span class="w"> </span>new<span class="w"> </span>-s<span class="w"> </span>yolo_train
+</code></pre></div>
+
+<p>暂时离开：</p>
+<div class="highlight"><pre><span></span><code>Ctrl+B，然后按 D
+</code></pre></div>
+
+<p>重新进入：</p>
+<div class="highlight"><pre><span></span><code>tmux<span class="w"> </span>attach<span class="w"> </span>-t<span class="w"> </span>yolo_train
+</code></pre></div>
+
+<h2 id="_6">怎么看训练有没有卡住</h2>
+<p>另开一个 SSH 终端，先找进程：</p>
+<div class="highlight"><pre><span></span><code>ps<span class="w"> </span>-u<span class="w"> </span>junxie<span class="w"> </span>-o<span class="w"> </span>user,pid,stat,etime,time,%cpu,%mem,cmd<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;yolo|train&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-v<span class="w"> </span>grep
+</code></pre></div>
+
+<p>按 PID 确认：</p>
+<div class="highlight"><pre><span></span><code>ps<span class="w"> </span>-p<span class="w"> </span>PID号<span class="w"> </span>-o<span class="w"> </span>user,pid,stat,etime,time,%cpu,%mem,cmd
+</code></pre></div>
+
+<p>看 GPU 1：</p>
+<div class="highlight"><pre><span></span><code>nvidia-smi<span class="w"> </span>dmon<span class="w"> </span>-i<span class="w"> </span><span class="m">1</span><span class="w"> </span>-s<span class="w"> </span>pucm<span class="w"> </span>-d<span class="w"> </span><span class="m">1</span>
+</code></pre></div>
+
+<p>单次看到 <code>GPU-Util 0%</code> 不代表训练停了，可能正好在读数据、验证、保存权重或切 epoch。更靠谱的是看 <code>results.csv</code> 有没有推进：</p>
+<div class="highlight"><pre><span></span><code>watch<span class="w"> </span>-n<span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="s2">&quot;tail -n 3 /home/junxie/data/yolo_modern/runs/train/new_dataset_yolo26n/results.csv&quot;</span>
+</code></pre></div>
+
+<p>如果连续 5 到 10 分钟同时出现 GPU 利用率为 0、<code>results.csv</code> 不更新、训练终端没输出、CPU 占用接近 0，才比较像真的卡住了。不要因为 <code>nvidia-smi</code> 看了一眼是 0% 就冲上去杀进程，冲动是科研训练的敌人。</p>
+<h2 id="_7">训练结果和检测</h2>
+<p>正式训练输出目录大概是：</p>
+<div class="highlight"><pre><span></span><code>/home/junxie/data/yolo_modern/runs/train/new_dataset_yolo26n_20260728/
+</code></pre></div>
+
+<p>重点看：</p>
+<div class="highlight"><pre><span></span><code>weights/best.pt
+weights/last.pt
+results.csv
+results.png
+confusion_matrix.png
+PR_curve.png
+val_batch*_pred.jpg
+</code></pre></div>
+
+<p>正式检测优先用 <code>best.pt</code>：</p>
+<div class="highlight"><pre><span></span><code>conda<span class="w"> </span>activate<span class="w"> </span>yolo_modern
+
+yolo<span class="w"> </span>detect<span class="w"> </span>predict<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="nv">model</span><span class="o">=</span>/home/junxie/data/yolo_modern/runs/train/new_dataset_yolo26n_20260728/weights/best.pt<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="nv">source</span><span class="o">=</span>/home/junxie/data/yolo_new_images<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="nv">imgsz</span><span class="o">=</span><span class="m">640</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="nv">conf</span><span class="o">=</span><span class="m">0</span>.25<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="nv">iou</span><span class="o">=</span><span class="m">0</span>.45<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="nv">device</span><span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="nv">save</span><span class="o">=</span>True<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="nv">save_txt</span><span class="o">=</span>True<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="nv">save_conf</span><span class="o">=</span>True<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="nv">project</span><span class="o">=</span>/home/junxie/data/yolo_modern/runs/detect<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="nv">name</span><span class="o">=</span>new_images_20260728
+</code></pre></div>
+
+<p>输出在：</p>
+<div class="highlight"><pre><span></span><code>/home/junxie/data/yolo_modern/runs/detect/new_images_20260728/
+</code></pre></div>
+
+<p><code>conf=0.25</code> 和 <code>iou=0.45</code> 只是起始值。正式批量检测前，还是要用独立验证集看误检和漏检，再决定阈值。</p>
+<p>单独验证模型：</p>
+<div class="highlight"><pre><span></span><code>yolo<span class="w"> </span>detect<span class="w"> </span>val<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="nv">model</span><span class="o">=</span>/home/junxie/data/yolo_modern/runs/train/new_dataset_yolo26n_20260728/weights/best.pt<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="nv">data</span><span class="o">=</span>/home/junxie/data/yolo_new_dataset/dataset.yaml<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="nv">imgsz</span><span class="o">=</span><span class="m">640</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="nv">batch</span><span class="o">=</span><span class="m">16</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="nv">device</span><span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="nv">project</span><span class="o">=</span>/home/junxie/data/yolo_modern/runs/val<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="nv">name</span><span class="o">=</span>new_dataset_yolo26n_20260728
+</code></pre></div>
+
+<p>最后至少记录：</p>
+<ul>
+<li>每类 precision 和 recall；</li>
+<li>mAP@0.5；</li>
+<li>mAP@0.5:0.95；</li>
+<li>混淆矩阵；</li>
+<li>独立 test 集结果；</li>
+<li>数据划分方法；</li>
+<li>软件版本、权重、阈值、图像尺寸和数据版本。</li>
+</ul>
+<h2 id="yolov5">旧 YOLOv5 路线怎么保留</h2>
+<p>如果只是想用 2022 年旧权重做检测，不必马上迁移模型。可以另建旧版环境：</p>
+<div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>gpu1
+<span class="nb">source</span><span class="w"> </span>/home/junxie/opt/anaconda/etc/profile.d/conda.sh
+conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>yolo5_legacy<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.8<span class="w"> </span>-y
+conda<span class="w"> </span>activate<span class="w"> </span>yolo5_legacy
+<span class="nb">cd</span><span class="w"> </span>/home/junxie/data/yolo_lh
+</code></pre></div>
+
+<p>旧模型检测格式是：</p>
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>detect.py<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--weights<span class="w"> </span>/home/junxie/data/yolo_lh/runs/train/20220408/weights/best.pt<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--source<span class="w"> </span>/绝对路径/待检测图片目录<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--imgsz<span class="w"> </span><span class="m">640</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--conf-thres<span class="w"> </span><span class="m">0</span>.25<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--iou-thres<span class="w"> </span><span class="m">0</span>.45<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--device<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--save-txt<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--save-conf<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--project<span class="w"> </span>/home/junxie/data/yolo_lh/runs/detect<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--name<span class="w"> </span>legacy_new_images
+</code></pre></div>
+
+<p>旧版从零复现训练：</p>
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>train.py<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--weights<span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--cfg<span class="w"> </span>models/yolov5n.yaml<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--data<span class="w"> </span>data/ice_0407.yaml<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--hyp<span class="w"> </span>data/hyps/hyp.scratch.yaml<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--epochs<span class="w"> </span><span class="m">300</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--batch-size<span class="w"> </span><span class="m">16</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--imgsz<span class="w"> </span><span class="m">640</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--device<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--workers<span class="w"> </span><span class="m">8</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--project<span class="w"> </span>runs/train<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--name<span class="w"> </span>20220408_reproduction
+</code></pre></div>
+
+<p>不过，对新的正式任务，我还是倾向于新版 Ultralytics 路线。旧版不丢，是为了有历史和基线；新版另开，是为了别把旧账和新账搅在一起。</p>
+<h2 id="_8">每次运行前看一眼</h2>
+<p>最后给未来的自己留一个短检查清单：</p>
+<div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>gpu1
+<span class="nb">source</span><span class="w"> </span>/home/junxie/opt/anaconda/etc/profile.d/conda.sh
+conda<span class="w"> </span>activate<span class="w"> </span>yolo_modern
+nvidia-smi
+which<span class="w"> </span>python
+python<span class="w"> </span>--version
+python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;import torch; print(torch.__version__, torch.cuda.is_available())&quot;</span>
+</code></pre></div>
+
+<p>确认这些事：</p>
+<ul>
+<li>当前环境确实是 <code>yolo_modern</code>；</li>
+<li>指定 GPU 有足够空闲显存；</li>
+<li><code>torch.cuda.is_available()</code> 是 <code>True</code>；</li>
+<li><code>dataset.yaml</code> 路径无歧义；</li>
+<li>类别名和编号顺序正确；</li>
+<li>输出目录和实验名清楚；</li>
+<li>先跑了 3 epoch 小样例；</li>
+<li>没有覆盖旧数据和旧结果。</li>
+</ul>
+<p>这篇记录最重要的不是某条命令，而是边界：旧工程留着，新工程另建；原始数据留着，训练数据另拷；小样例先跑，正式结果再说。这样麻烦一点，但比后面追问“这个结果到底从哪里来的”要省命。</p>]]></content>
+    
+    <category term="python" />
+    
+    <category term="Linux" />
+    
+    <category term="work" />
+    
+  </entry>
   
   <entry>
     <title>花钱买了票看了电影也来评《八仙！》</title>
@@ -6321,196 +6843,6 @@ ICESat-2 ATL06 (2018-2023年)</li>
 <tr>
 <td>仅五口井，平面分辨率有限</td>
 <td>在更多新钻井或老井增加光纤，形成 3D 井网，实现全储层振幅-压力联合反演</td>
-</tr>
-</tbody>
-</table>]]></content>
-    
-    <category term="paper" />
-    
-  </entry>
-  
-  <entry>
-    <title>文献阅读(40)</title>
-    <link href="https://www.seis-jun.xyz/blog/2025-12-11-paper-reading-40.html" />
-    <id>https://www.seis-jun.xyz/blog/2025-12-11-paper-reading-40.html</id>
-    <updated>2025-12-11T16:27:54+08:00</updated>
-    <published>2025-12-11T16:27:54+08:00</published>
-    <summary type="html"><p>&#8195;&#8195;<a href="https://pubs.geoscienceworld.org/seg/geophysics/article-abstract/86/4/R383/600866/Seismic-inversion-of-shale-reservoir-properties?redirectedFrom=fulltext">Luo et al. (2021), Geophysics</a></p></summary>
-    <content type="html"><![CDATA[<p>&#8195;&#8195;<a href="https://pubs.geoscienceworld.org/seg/geophysics/article-abstract/86/4/R383/600866/Seismic-inversion-of-shale-reservoir-properties?redirectedFrom=fulltext">Luo et al. (2021), Geophysics</a></p>
-<!--less-->
-
-<h2 id="_1">引文信息</h2>
-<p>&#8195;&#8195;Luo, B., Lellouch, A., Jin, G., Biondi, B., &amp; Simmons, J. (2021). Seismic inversion of shale reservoir properties using microseismic-induced guided waves recorded by distributed acoustic sensing. Geophysics, 86(4), R383–R397. https://doi.org/10.1190/geo2020-0607.1</p>
-<h2 id="_2">第一作者与通讯作者</h2>
-<ul>
-<li>第一作者：Bin Luo（科罗拉多矿业学院 → 现斯坦福大学）  </li>
-<li>通讯作者：Bin Luo（邮箱 bluo@mines.edu）  </li>
-<li>单位：斯坦福大学地球物理系 + 科罗拉多矿业学院地球物理系联合团队  </li>
-</ul>
-<h2 id="_3">一作同期另外三篇代表性著作</h2>
-<ol>
-<li>Luo, B., Lellouch, A., Jin, G., Biondi, B., &amp; Simmons, J. (2021). Seismic inversion of shale reservoir properties using microseismic-induced guided waves recorded by distributed acoustic sensing. <em>Geophysics</em>, 86(4), R383–R397.（即本文）  </li>
-<li>Luo, B., Trainor-Guitton, W., Bozdağ, E., et al. (2020). Horizontally orthogonal DAS array for multichannel analysis of surface waves. <em>Geophysical Journal International</em>, 222, 2147–2161.  </li>
-<li>Luo, B., et al. (2020). DAS traffic-noise interferometry for near-surface characterization. <em>Scientific Reports</em>, 7, 11620.</li>
-</ol>
-<h2 id="_4">摘要</h2>
-<p>&gt; 页岩储层物性直接影响非常规油气产能。水力压裂诱发之导波（guided waves）被束缚于低速页岩层内，是估算层厚、速度与各向异性的理想载体。本文将水平井中 DAS 光纤记录之微地震导波用于储层参数反演：① 推广传播矩阵法至 VTI 介质，计算导波频散；② 用 3D 弹性正演验证；③ 构建多模蒙特卡洛反演流程，一次性获得厚度、VS0、VP0 与 Thomsen 参数。合成测试表明：层厚与 S 波速度敏感度最高，10 m/s 级速度误差即可分辨米级厚度；Eagle Ford 实际数据反演结果与 500 m 外声波测井吻合，页岩厚度 50 ± 4 m，VS0 1639 ± 24 m/s，(ε–δ) 中值 0.46。研究证实：微地震导波+DAS 可成为一种经济、原位、米级分辨率的页岩储层表征新工具，并有望与产能数据空间叠合，指导压裂决策。</p>
-<h2 id="_5">相关研究的重要性</h2>
-<table>
-<thead>
-<tr>
-<th>序号</th>
-<th>重要性</th>
-<th>前人具体工作</th>
-<th>存在的不足</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>页岩厚度/速度是压裂设计与产能评估的核心输入</td>
-<td>地面 3D 地震垂向分辨不足（&gt;1/4 波长，≈25–30 m）</td>
-<td>无法分辨米级厚度变化；薄层调谐误差大</td>
-</tr>
-<tr>
-<td>2</td>
-<td>水平段需“沿井”高分辨率物性，而垂直测井稀疏</td>
-<td>常规声波测井仅过井点 1D 信息</td>
-<td>缺少沿 2500 m 水平段的横向连续剖面</td>
-</tr>
-<tr>
-<td>3</td>
-<td>导波天然被低速层束缚，可“就地”取样</td>
-<td>Krey (1963)、Buchanan (1978) 利用煤层槽波探测断层</td>
-<td>未引入非常规页岩；无各向异性；无反演框架</td>
-</tr>
-<tr>
-<td>4</td>
-<td>DAS 高密度记录为导波分析提供契机</td>
-<td>Lellouch et al. (2019) 首次观察到压裂导波</td>
-<td>仅定性解释，未建立正演-反演流程；未估算厚度/速度</td>
-</tr>
-<tr>
-<td>5</td>
-<td>需要同时考虑页岩强 VTI 各向异性</td>
-<td>Sone &amp; Zoback (2013) 给出 Eagle Ford 岩心各向异性</td>
-<td>缺少原位、大尺度、非取心手段验证</td>
-</tr>
-</tbody>
-</table>
-<h2 id="_6">使用的数据</h2>
-<table>
-<thead>
-<tr>
-<th>类型</th>
-<th>细节</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>合成数据</td>
-<td>3D 弹性有限差分（Madagascar 软件）；三层层状 VTI 模型；LVL 厚 45 m，VS 1650 m/s；双力偶源，频带 10–150 Hz；1200 m 水平接收线，道距 1.5 m，采样 2 kHz</td>
-</tr>
-<tr>
-<td>现场数据</td>
-<td>Eagle Ford 2015 压裂监测；处理井与监测井平行，水平段各 1600 m，垂距 30 m，横向距 200 m；DAS 道距 8 m，标距 14 m，采样 2 kHz；共 959 个微地震事件，取 17 个高质量导波事件（20 %）用于反演；对比数据：距监测井 500 m 的垂直声波测井</td>
-</tr>
-</tbody>
-</table>
-<h2 id="_7">采用的方法</h2>
-<table>
-<thead>
-<tr>
-<th>步骤</th>
-<th>要点</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>正演：推广传播矩阵法至 VTI 介质，统一边界条件，一次性求解散射矩阵 det=0 得导波频散曲线</td>
-</tr>
-<tr>
-<td>2</td>
-<td>验证：3D 弹性正演（FD）生成多分量炮集；用“改进柱面波相移法”提取频散，与理论曲线对比，误差 &lt;1 %</td>
-</tr>
-<tr>
-<td>3</td>
-<td>反演：多模蒙特卡洛采样（10⁷ 模型）→ 目标函数=频散方程 L1 范数，免根查找；保留前 10³ 优模型得等效集合，用中值与四分位量化不确定度</td>
-</tr>
-<tr>
-<td>4</td>
-<td>实用：采用“长偏移 (&gt;2dH)” 段 DAS 数据，压制 SH 模，保留 P-SV 模，提高反演稳定性</td>
-</tr>
-</tbody>
-</table>
-<h2 id="_8">获得的结果</h2>
-<ul>
-<li>合成反演：层厚 42.6 m（真 45 m），VS0 偏差 &lt;30 m/s，(ε–δ) 0.085（真 0.1）；不确定度：厚度 4.3 m，VS0 11 m/s。  </li>
-<li>现场反演：Eagle Ford 页岩厚 50.1 ± 4.2 m，VS0 1639 ± 24 m/s，(ε–δ) 中值 0.46（强各向异性），与声波测井整体吻合；高频段（&gt;60 Hz）对顶部 Austin Chalk（2700 m/s）约束好，底部 Buda Limestone（3000 m/s）约束差。  </li>
-<li>敏感度：1 % 厚度变化 → 10–15 m/s 相移；1 % VS0 变化 → 25–30 m/s 相移；VP、ρ 敏感度可忽略。</li>
-</ul>
-<h2 id="_9">创新之处</h2>
-<table>
-<thead>
-<tr>
-<th>创新点</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>首次</td>
-<td>将 VTI 传播矩阵法与多模蒙特卡洛反演结合，用于微地震导波储层参数估算</td>
-</tr>
-<tr>
-<td>首次</td>
-<td>在非常规页岩给出“米级厚度 + 10 m/s 级速度” 现场验证，并与 500 m 外声波测井对比</td>
-</tr>
-<tr>
-<td>方法</td>
-<td>提出“长偏移选道 + 柱面波相移” 实用流程，解决 DAS 方向敏感与模态混叠问题</td>
-</tr>
-<tr>
-<td>应用</td>
-<td>把导波反演结果与产能数据空间叠合，为“地质-工程一体化”提供新数据链</td>
-</tr>
-</tbody>
-</table>
-<h2 id="_10">主要贡献</h2>
-<ol>
-<li>建立“微地震导波 → 厚度/速度/各向异性” 完整正-反演框架，填补 DAS 导波定量解释空白。  </li>
-<li>证实即使 20 % 事件含导波，已足以给出统计稳定、米级分辨的储层剖面，对压裂段优化与地质导向有直接价值。  </li>
-<li>为低成本、随钻、原位页岩表征提供新工具，可与现有 DAS 微地震监测共用光纤，无需额外采集成本。</li>
-</ol>
-<h2 id="_11">不足与展望</h2>
-<table>
-<thead>
-<tr>
-<th>不足</th>
-<th>展望</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>仅恢复 1D 层状模型，未考虑横向变化</td>
-<td>引入滚动窗口/层析，实现 2D/3D 导波成像</td>
-</tr>
-<tr>
-<td>对 VP、密度、强各向异性 (&gt;0.2) 敏感度下降</td>
-<td>联合 PP/PS 反射或全波形反演，提高 VP/ε/δ 精度</td>
-</tr>
-<tr>
-<td>需“足够强”导波事件（≈20 %），弱事件无法利用</td>
-<td>研究震源机制与辐射花样，优化布纤几何，提高导波激发概率</td>
-</tr>
-<tr>
-<td>幅值信息分钟未利用（仅走相）</td>
-<td>未来开展含衰减、耦合、源机制的完全波形反演</td>
-</tr>
-<tr>
-<td>现场缺乏压裂后重复导波监测</td>
-<td>设计时移实验，定量评估压裂-闭合-应力变化对速度的影响</td>
 </tr>
 </tbody>
 </table>]]></content>
