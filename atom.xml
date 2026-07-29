@@ -38,7 +38,7 @@
 <p>如何验证呢？</p>
 <p>有内符合和外符合。</p>
 <p>内符合就是你的结果用来解释你自己的数据是对的，你可以用bootstrapping，给误差什么的。</p>
-<p>外符合就是，你要去找其他数据，看你的数据能不能解释其他数据，能不能符合其他人的结果。</p>
+<p>外符合就是，你要去找其他数据，看你的结果能不能解释其他数据，能不能符合其他人的结果。</p>
 <p>另外，讨论部分不知道怎么写的话，可用我老板总结的m+n法。</p>
 <p>m是指m个正面结果，包括正确性和优越性：</p>
 <div class="highlight"><pre><span></span><code><span class="mf">1</span><span class="err">，</span><span class="n">你可以解释其他数据</span><span class="err">（</span><span class="n">正确性</span><span class="err">）；</span>
