@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>关于论文（2） | Jun Xie</title>
+  <meta name="description" content="关于论文（2）">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/atom.xml">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+  <!-- MathJax for LaTeX rendering -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        ignoreHtmlClass: 'mermaid'
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <!-- Umami Analytics -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="21a99622-5a23-45f4-be80-edef627a68e3"></script>
+  <!-- Busuanzi for public visitor counter -->
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container masthead">
+      <a class="masthead-identity" href="/" aria-label="SEISAMUSE home">
+        <img src="/images/seisamuse.png" alt="" class="masthead-avatar">
+        <span class="masthead-title">SEISAMUSE</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="/blog/" class="active">Blog</a>
+        <a href="/thoughts/">Thoughts</a>
+        <a href="/archives/">Archives</a>
+        <a href="/about/">About</a>
+        <a href="/links/">Links</a>
+      </nav>
+
+      <div class="masthead-actions" aria-label="Site shortcuts">
+        <form class="masthead-search" action="/search/" method="get">
+          <input type="search" name="q" placeholder="Search notes" aria-label="Search notes">
+        </form>
+        <a href="https://www.travellings.cn/go" target="_blank" rel="noopener" title="Travellings" aria-label="Travellings"><i class="fa-solid fa-train"></i></a>
+        <a href="mailto:junxie01@gmail.com" title="Email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="/atom.xml" title="Atom feed" aria-label="Atom feed"><i class="fa-solid fa-rss"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container page-wide">
+      
+      
+<div class="main-content">
+  <article>
+    <div class="post-header">
+      <h1>关于论文（2）</h1>
+      <div class="post-meta">
+        <time>2026-07-29</time>
+         &middot; 1 min read
+        
+         &middot;
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">日记</span>
+        
+        
+      </div>
+    </div>
+
+    <div class="post-content">
+      <p>我觉得需要适时插播一些干货。</p>
+<p>否则可能会被说是不学无术乱开腔。</p>
+<p>有点像某些知名网络红人老是发表一些不知所云的言论<del>但这么一插播更像了</del>。</p>
+<p>总之我不管，我对于论文我还是要说点什么。</p>
+<p>可能我能说的也不太多，因为你可以在网上找到很多关于论文怎么写的相关话题和文章。</p>
+<p>关于怎么写文章我就不细说了。</p>
+<p>不过在我看来论文还是很像八股文的，结构也就那么些个结构。</p>
+<p>不过写论文的时候还是要看你投稿的期刊。</p>
+<div class="highlight"><pre><span></span><code>有些期刊爱听故事；
+
+有些爱纠结你做的东西新不新；
+
+有些在意你做的东西多不多;
+
+还有些关注你做的东西对不对。
+</code></pre></div>
+
+<p>好吧，最后一条说的不太准确，应该所有的期刊都会在意你做的对不对。</p>
+<p>所以你在结果和讨论部分一定是要验证你结果的正确性的。</p>
+<p>如何验证呢？</p>
+<p>有内符合和外符合。</p>
+<p>内符合就是你的结果用来解释你自己的数据是对的，你可以用bootstrapping，给误差什么的。</p>
+<p>外符合就是，你要去找其他数据，看你的数据能不能解释其他数据，能不能符合其他人的结果。</p>
+<p>另外，讨论部分不知道怎么写的话，可用我老板总结的m+n法。</p>
+<p>m是指m个正面结果，包括正确性和优越性：</p>
+<div class="highlight"><pre><span></span><code><span class="mf">1</span><span class="err">，</span><span class="n">你可以解释其他数据</span><span class="err">（</span><span class="n">正确性</span><span class="err">）；</span>
+
+<span class="mf">2</span><span class="err">，</span><span class="n">你的结果比别人的好</span><span class="err">，</span><span class="n">为什么</span><span class="err">（</span><span class="n">优越性</span><span class="err">）；</span>
+
+<span class="mf">3</span><span class="err">，</span><span class="n">你的发现可以解释其他现象</span><span class="err">（</span><span class="n">有什么用</span><span class="err">）。</span>
+</code></pre></div>
+
+<p>m建议$&gt;=3$。</p>
+<p>n是指n个负面结果。负面结果并不是说你的不对，而是讲你的工作的局限性：</p>
+<div class="highlight"><pre><span></span><code><span class="mf">1</span><span class="err">，</span><span class="n">你的结果在什么情况下不能用</span><span class="err">（</span><span class="n">边界</span><span class="err">）；</span>
+
+<span class="mf">2</span><span class="err">，</span><span class="n">什么情况下不能用</span><span class="err">，</span><span class="n">未来怎么做</span><span class="err">（</span><span class="n">提出畅想</span><span class="err">）。</span>
+</code></pre></div>
+
+<p>m建议$&gt;=2$，不过也不要太多，多了就把你的工作的优越性比下去了，瑕都掩瑜了。</p>
+<p>别看说起来简单，但真的能把这些讲清楚，那是要点水平的啊。</p>
+<p>有些文章你看到平平无奇<del>讲故事</del>，但就是能够发到好期刊<del>羡慕</del>。</p>
+<p>不管怎么样，多读多写你就能写出文章了。</p>
+<p>但能不能写好文章还要看造化。</p>
+    </div>
+
+  <div class="comments-section">
+  <h3>Comments</h3>
+  <script src="https://giscus.app/client.js"
+          data-repo="junxie01/junxie01.github.io"
+          data-repo-id="R_kgDOSGl1Dg"
+          data-category="General"
+          data-category-id="DIC_kwDOSGl1Ds4DAuif"
+          data-mapping="specific"
+          data-term="blog/2026-07-29-about-paper2"
+          data-strict="0"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="bottom"
+          data-theme="preferred_color_scheme"
+          data-lang="en"
+          crossorigin="anonymous"
+          async>
+  </script>
+</div>
+
+  <div class="post-nav">
+    
+      <a class="post-nav-prev" href="/blog/2026-07-29-about-research.html">&larr; 关于科研</a>
+    
+
+    <a class="post-nav-blog" href="/blog/">Blog</a>
+
+    
+      <span class="post-nav-next"></span>
+    
+  </div>
+</article>
+</div>
+
+      
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Jun Xie &middot; Built with Python &amp; Markdown &middot;
+        <a href="https://github.com/junxie01" target="_blank">GitHub</a> &middot;
+        <a href="/atom.xml" target="_blank">Atom</a>
+      </p>
+      <p class="site-stats">
+        <span id="busuanzi_container_site_pv">
+          👁 Total visits: <span id="busuanzi_value_site_pv"></span>
+        </span>
+        &middot;
+        <span id="busuanzi_container_site_uv">
+          Visitors: <span id="busuanzi_value_site_uv"></span>
+        </span>
+      </p>
+    </div>
+  </footer>
+
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+      startOnLoad: true,
+      securityLevel: 'strict',
+      theme: window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'neutral'
+    });
+  </script>
+
+</body>
+</html>

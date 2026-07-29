@@ -3,11 +3,94 @@
   <title>SEISAMUSE</title>
   <link href="https://www.seis-jun.xyz/atom.xml" rel="self" />
   <link href="https://www.seis-jun.xyz" />
-  <updated>2026-07-28T22:02:24+08:00</updated>
+  <updated>2026-07-29T22:45:52+08:00</updated>
   <id>https://www.seis-jun.xyz/</id>
   <author>
     <name>Jun Xie</name>
   </author>
+  
+  <entry>
+    <title>关于论文（2）</title>
+    <link href="https://www.seis-jun.xyz/blog/2026-07-29-about-paper2.html" />
+    <id>https://www.seis-jun.xyz/blog/2026-07-29-about-paper2.html</id>
+    <updated>2026-07-29T22:45:52+08:00</updated>
+    <published>2026-07-29T22:45:52+08:00</published>
+    <summary type="html"><p>我觉得需要适时插播一些干货。 否则可能会被说是不学无术乱开腔。 有点像某些知名网络红人老是发表一些不知所云的言论 但这么一插播更像了 。 总之我不管，我对于论文我还是要说点什么。 可能我能说的也不太多，因为你可以在网上找到很多关于论文怎么写的相关话题和文章。 关于怎么写文章我就不细说了。 不过在我看来论文还是很像八股文...</p></summary>
+    <content type="html"><![CDATA[<p>我觉得需要适时插播一些干货。</p>
+<p>否则可能会被说是不学无术乱开腔。</p>
+<p>有点像某些知名网络红人老是发表一些不知所云的言论<del>但这么一插播更像了</del>。</p>
+<p>总之我不管，我对于论文我还是要说点什么。</p>
+<p>可能我能说的也不太多，因为你可以在网上找到很多关于论文怎么写的相关话题和文章。</p>
+<p>关于怎么写文章我就不细说了。</p>
+<p>不过在我看来论文还是很像八股文的，结构也就那么些个结构。</p>
+<p>不过写论文的时候还是要看你投稿的期刊。</p>
+<div class="highlight"><pre><span></span><code>有些期刊爱听故事；
+
+有些爱纠结你做的东西新不新；
+
+有些在意你做的东西多不多;
+
+还有些关注你做的东西对不对。
+</code></pre></div>
+
+<p>好吧，最后一条说的不太准确，应该所有的期刊都会在意你做的对不对。</p>
+<p>所以你在结果和讨论部分一定是要验证你结果的正确性的。</p>
+<p>如何验证呢？</p>
+<p>有内符合和外符合。</p>
+<p>内符合就是你的结果用来解释你自己的数据是对的，你可以用bootstrapping，给误差什么的。</p>
+<p>外符合就是，你要去找其他数据，看你的数据能不能解释其他数据，能不能符合其他人的结果。</p>
+<p>另外，讨论部分不知道怎么写的话，可用我老板总结的m+n法。</p>
+<p>m是指m个正面结果，包括正确性和优越性：</p>
+<div class="highlight"><pre><span></span><code><span class="mf">1</span><span class="err">，</span><span class="n">你可以解释其他数据</span><span class="err">（</span><span class="n">正确性</span><span class="err">）；</span>
+
+<span class="mf">2</span><span class="err">，</span><span class="n">你的结果比别人的好</span><span class="err">，</span><span class="n">为什么</span><span class="err">（</span><span class="n">优越性</span><span class="err">）；</span>
+
+<span class="mf">3</span><span class="err">，</span><span class="n">你的发现可以解释其他现象</span><span class="err">（</span><span class="n">有什么用</span><span class="err">）。</span>
+</code></pre></div>
+
+<p>m建议$&gt;=3$。</p>
+<p>n是指n个负面结果。负面结果并不是说你的不对，而是讲你的工作的局限性：</p>
+<div class="highlight"><pre><span></span><code><span class="mf">1</span><span class="err">，</span><span class="n">你的结果在什么情况下不能用</span><span class="err">（</span><span class="n">边界</span><span class="err">）；</span>
+
+<span class="mf">2</span><span class="err">，</span><span class="n">什么情况下不能用</span><span class="err">，</span><span class="n">未来怎么做</span><span class="err">（</span><span class="n">提出畅想</span><span class="err">）。</span>
+</code></pre></div>
+
+<p>m建议$&gt;=2$，不过也不要太多，多了就把你的工作的优越性比下去了，瑕都掩瑜了。</p>
+<p>别看说起来简单，但真的能把这些讲清楚，那是要点水平的啊。</p>
+<p>有些文章你看到平平无奇<del>讲故事</del>，但就是能够发到好期刊<del>羡慕</del>。</p>
+<p>不管怎么样，多读多写你就能写出文章了。</p>
+<p>但能不能写好文章还要看造化。</p>]]></content>
+    
+    <category term="日记" />
+    
+  </entry>
+  
+  <entry>
+    <title>关于科研</title>
+    <link href="https://www.seis-jun.xyz/blog/2026-07-29-about-research.html" />
+    <id>https://www.seis-jun.xyz/blog/2026-07-29-about-research.html</id>
+    <updated>2026-07-29T20:57:24+08:00</updated>
+    <published>2026-07-29T20:57:24+08:00</published>
+    <summary type="html"><p>“关于xx”这个题目简直百试不爽。“关于”完所有身边东西之后差不多就可以完结这一生了啊。 今天聊一下科研吧。 多多少少我也算做过科研，并且正在做科研的人，虽说世界和人物观的少，但对“科研”还是有那么一点点认识的。在我看来“科研”应该至少有两层意思。 第一就是大家通常认为的科学研究。 那什么是科学研究呢？就是用科学的手段...</p></summary>
+    <content type="html"><![CDATA[<p>“关于xx”这个题目简直百试不爽。“关于”完所有身边东西之后差不多就可以完结这一生了啊。</p>
+<p>今天聊一下科研吧。</p>
+<p>多多少少我也算做过科研，并且正在做科研的人，虽说世界和人物观的少，但对“科研”还是有那么一点点认识的。在我看来“科研”应该至少有两层意思。</p>
+<p>第一就是大家通常认为的科学研究。</p>
+<p>那什么是科学研究呢？就是用科学的手段，努力挖掘并拓展人类对于世界，对于宇宙认知的边界；或者找到我们默认的不过如是的事物的底层规律。科学研究的作用除了满足于人的求知欲以外，还可以服务于人的生产生活。科学研究手段通常被称为称为范式，早期有公式推导、模拟对观测、还有实验验证。现在AI出来了，有人就鼓吹说有新的范式了。无非是用黑箱子程序，跑出一茬不知道啥的规律，然后用蹩脚的相关性论证因果。我不知道我是不是飘了，但只觉得这很可笑。然而近年来，它很火，火得一踏糊涂。要是谁不跟上，不用它来做点什么总觉得会被时代抛弃。因此不管有没有AI经验或基础的，只要拿来用一下，沾一下光也显得自己跟上了趟，要是做得早就成了这个领域开拓者了。但很多时候，就你那二亩三分地用AI来做个啥呢，不能说毫无用处，只能说是玩的花。都已经成了新领域了，自然就有源源不断的问题、边界等着你来发掘。科学巅峰又给你捅破了，岂不快哉。只怕它也如目前业界的AI热，充满了泡沫，一戳就容易破。话又说回来，相比于业界的AI热，科学界起码还真能搞出新的东西，例如蛋白质折叠，新药新结构新病毒发掘等。但业界AI热个毛线啊，AI用上天也没有见什么实质性的生产力提升。写报告，写文章，做一点调研也算的话当我没说。似乎又是一场资本狂欢啊，是资本圈钱的又一有力工具，是财富不均匀分配的加速器。</p>
+<p>第二是其作为工作的一面了。</p>
+<p>和我们想象中的欧洲贵族自己或者资助的科学家不一样，当时大约是不用当作工作来做的，全凭兴趣。有时兴趣可以是最好的老师，凭着兴趣你也能把游戏打得很好啊。现在好像不行，也不是完全不行，只要你有一个有钱的对象，像这个<a href="https://vocal.media/01/the-boss-of-it-spent-500-million-us-dollars-to-give-his-girlfriend-a-150-person-research-institute-to-help-him-realize-the-freedom-of-scientific-research-hr6wy07i6">Silvana Konermann</a>。所以，没有亿万富翁对象的你就和我一样把科研当成了职业。当成职业也没有什么不好，如果这个职业的工作内容是你一直以来的梦想。然而爱因斯坦是不是还说过，最好把一个人的爱好和职业尽可能远的分开。把一个的生计所在和上帝所赐的秉赋硬凑在一起，那是不明智的。大约是因为工作是不那么自由的，而你的爱好是自由的选择，二者是会冲突的。所以奉劝做科研还是尽量不要把做科研作为爱好。说了这许多，但还没有把科研工作讲清楚。科研工作就是发文章、申请项目、做项目、产出文章、继续申项目做项目。。。文章和项目就是硬通货，也可称为科研货币。你去交流需要拿文章出来说事<del>显摆</del>，没有文章你说毛线，有好文章你就是坐上宾。你有无数的科学新突破，要是没有变成文章，那你说毛线，没有变成文章就跟你种的菜沒卖出去烂地里一样，除了发臭只能做肥料。</p>
+<p>了解了这两层意思，那么你就应该知道做科研需要哪些能力素质，我就不细说了，怕你朝我乱开枪。</p>
+<p>不过话又说回来了，我也没说这二者是冲突的。因为事实上我们倡导的就是要结合起来干，找到真的有用的科学边界。另外，如果你做了一大堆的科学发现却又不写成文章发表那可能说明以下几个问题：1，科研还达不到称为你的兴趣的程度；2，你根本就没有认真干；3，你懒惰，既不想干科研也不想工作；4，你对工作不自信，怕被别人看到指出你的错误；5，你在摆烂逃避。长此以往，如果你依然把科研当工作只怕你会成为一个“穷光蛋”，否额奉劝可以考虑换一个工作<del>赶紧换，换了我少一个竞争对手，哈哈哈</del>。</p>
+<p>好吧，以上话也是对我自己说的啊，因为就目前来看，我也是个科研的“穷光蛋”，因为货币还不够多，口袋空空不好交流啊。</p>
+<p>好好卖我地里的菜吧。</p>]]></content>
+    
+    <category term="科研" />
+    
+    <category term="日记" />
+    
+    <category term="work" />
+    
+  </entry>
   
   <entry>
     <title>YOLO图片检测怎么整</title>
@@ -6626,224 +6709,6 @@ ICESat-2 ATL06 (2018-2023年)</li>
 <li>预测模型开发：开发预测GLOF事件的模型，结合气候预测，评估未来冰川湖溃决洪水的风险变化。</li>
 <li>全球比较研究：将格陵兰GLOF特征与其他冰川地区(如喜马拉雅山、安第斯山脉)进行比较，识别共同模式和区域特殊性。</li>
 </ol>]]></content>
-    
-    <category term="paper" />
-    
-  </entry>
-  
-  <entry>
-    <title>gmt特殊字符</title>
-    <link href="https://www.seis-jun.xyz/blog/2025-12-21-gmt-special-character.html" />
-    <id>https://www.seis-jun.xyz/blog/2025-12-21-gmt-special-character.html</id>
-    <updated>2025-12-21T20:28:34+08:00</updated>
-    <published>2025-12-21T20:28:34+08:00</published>
-    <summary type="html"><p>&#8195;&#8195;每次想输入特殊字符例如上下标、乘除什么的都得去官方网站找，挺麻烦。</p></summary>
-    <content type="html"><![CDATA[<p>&#8195;&#8195;每次想输入特殊字符例如上下标、乘除什么的都得去官方网站找，挺麻烦。</p>
-<!--less-->
-<p>最重要的是以下两个表：
-<img src="/images/a.png" alt="">
-至于是参考左边的Standard+还是右边的ISOLation1+，就要用命令</p>
-<div class="highlight"><pre><span></span><code>gmt get PS_CHAR_ENCODING
-</code></pre></div>
-
-<p>查看你的编码方式了。
-另外如果了12号字体(Symbol)或34号字体(ZapfDingbats)则查下面这个表：
-<img src="/images/b.png" alt="">
-好了，搞定。自求多福哈，嘿嘿。</p>]]></content>
-    
-    <category term="special character" />
-    
-  </entry>
-  
-  <entry>
-    <title>文献阅读(41)</title>
-    <link href="https://www.seis-jun.xyz/blog/2025-12-11-paper-reading-41.html" />
-    <id>https://www.seis-jun.xyz/blog/2025-12-11-paper-reading-41.html</id>
-    <updated>2025-12-11T17:16:43+08:00</updated>
-    <published>2025-12-11T17:16:43+08:00</published>
-    <summary type="html"><p>&#8195;&#8195;<a href="https://pubs.geoscienceworld.org/seg/tle/article-abstract/42/11/763/628902/Detection-of-a-CO2-plume-by-time-lapse-analysis-of">Pevzner et al. (2023), The Leading Edge</a></p></summary>
-    <content type="html"><![CDATA[<p>&#8195;&#8195;<a href="https://pubs.geoscienceworld.org/seg/tle/article-abstract/42/11/763/628902/Detection-of-a-CO2-plume-by-time-lapse-analysis-of">Pevzner et al. (2023), The Leading Edge</a></p>
-<!--less-->
-<h2 id="_1">引文信息</h2>
-<p>Pevzner, R., Collet, O., Glubokovskikh, S., Tertyshnikov, K., &amp; Gurevich, B. (2023). Detection of a CO2 plume by time-lapse analysis of Rayleigh-wave amplitudes extracted from downhole DAS recordings of ocean microseisms. The Leading Edge, 42(11), 763–772. https://doi.org/10.1190/tle42110763.1</p>
-<h2 id="_2">第一作者与通讯作者</h2>
-<ul>
-<li>第一作者：Roman Pevzner  </li>
-<li>通讯作者：Roman Pevzner（邮箱 r.pevzner@curtin.edu.au）  </li>
-<li>单位：科廷大学（Curtin University）</li>
-</ul>
-<h2 id="_3">一作同期另外三篇代表性著作</h2>
-<ol>
-<li>Pevzner, R., et al. (2024). Downhole passive DAS monitoring for CO₂ geosequestration: CO₂CRC Otway experience. 3rd EAGE Conf. CCS Potential, Perth.（即本文）  </li>
-<li>Pevzner, R., et al. (2023). Detection of a CO₂ plume by time-lapse analysis of Rayleigh-wave amplitudes extracted from downhole DAS recordings of ocean microseisms. <em>The Leading Edge</em>, 42, 763–772.  </li>
-<li>Pevzner, R., et al. (2022). Monitoring subsurface changes by tracking direct-wave amplitudes and traveltimes in continuous DAS VSP data. <em>Geophysics</em>, 87, A1–A6.</li>
-</ol>
-<h2 id="_4">摘要</h2>
-<p>&gt; 地质碳封存需要高效、经济的监测-测量-验证（MMV）策略。本文利用 CO₂CRC Otway 项目 Stage 3 的五口井（注入井 + 四口监测井）中连续被动 DAS 数据（&gt;2 年），系统识别了与 CO₂ 注入相关的三类信号：① 诱发微震（M −2–0），与压力/饱和前锋伴生；② 注入层地震波振幅增大（体波与 0.1–0.5 Hz 海洋微震 Rayleigh 波），反映 CO₂ 替换孔隙水导致的弹性软化；③ 注/采水压力脉冲在邻井 DAS 中被直接观测，为分布式压力传感奠定基础。被动 DAS 不仅能完成传统微震监测，还可通过多频段振幅层析估计井周饱和度变化，显著降低 MMV 成本。</p>
-<h2 id="_5">相关研究的重要性</h2>
-<table>
-<thead>
-<tr>
-<th>序号</th>
-<th>重要性</th>
-<th>前人具体工作</th>
-<th>存在的不足</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>4D 地震可成像 CO₂ 羽流，但成本高、重复周期短</td>
-<td>Chadwick et al. (2009), Lumley (2010) 等</td>
-<td>需大源阵与多次采集，现场扰动大，难以月度-周度重复</td>
-</tr>
-<tr>
-<td>2</td>
-<td>井中 DAS 可永久接收，但多限于主动 VSP 或微震</td>
-<td>Daley et al. (2013), Glubokovskikh et al. (2023)</td>
-<td>被动信号（微震、海洋微震、压力脉冲）尚未系统挖掘</td>
-</tr>
-<tr>
-<td>3</td>
-<td>CO₂ 注入引起弹性参数变化，振幅层析比走时更敏感</td>
-<td>Pevzner et al. (2020) 在 Otway 用主动源振幅监测</td>
-<td>需重复激发源，成本高；未利用天然持续源（海洋微震）</td>
-</tr>
-<tr>
-<td>4</td>
-<td>海洋微震 Rayleigh 波全球 ubiquitous，可充当“天然 4D 源”</td>
-<td>Nishida et al. (2016) 用地表微震做面波层析</td>
-<td>未引入井中 DAS；未针对 CO₂ 储层做时移振幅分析</td>
-</tr>
-<tr>
-<td>5</td>
-<td>注入/采水压力脉冲可被 DAS 直接记录，实现分布式压力传感</td>
-<td>Sidenko et al. (2022) 首次报道 Otway 压力脉冲</td>
-<td>尚未形成定量压力-应变关系，缺乏与地质-流体模型耦合</td>
-</tr>
-</tbody>
-</table>
-<h2 id="_6">使用的数据</h2>
-<table>
-<thead>
-<tr>
-<th>类型</th>
-<th>细节</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>注入参数</td>
-<td>CO₂CRC Otway Stage 3，2021-2022 年通过 CRC-3 井注入 15 kt 超临界 CO₂（含杂质），目标层 1.5 km 深盐水层</td>
-</tr>
-<tr>
-<td>井网</td>
-<td>五口井永久 behind-casing 单模光纤：CRC-3（注入）+ CRC-4/5/6/7（监测），井距 100–300 m，光纤下至储层下 50 m</td>
-</tr>
-<tr>
-<td>DAS 记录</td>
-<td>连续被动数据采集 &gt;2 年，采样 1 kHz，道距 1 m，标距 10 m；重点分析 2021-11-01 至 2021-12-31 注入高峰期</td>
-</tr>
-<tr>
-<td>辅助</td>
-<td>注入压力/速率曲线、井下压力计、主动 VSP 振幅（Pevzner et al., 2022）、区域地震目录、海洋微震背景噪声（0.1–0.5 Hz）</td>
-</tr>
-</tbody>
-</table>
-<h2 id="_7">采用的方法</h2>
-<table>
-<thead>
-<tr>
-<th>目标</th>
-<th>方法要点</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>微震检测</td>
-<td>1 Hz 高通滤波 → STA/LTA + AIC 拾取 → 三维网格搜索定位；震级用 ML = −1.6 + 1.8 log10(A)（A 为 DAS 峰值应变率，校正至 1 km）</td>
-</tr>
-<tr>
-<td>振幅层析（体波）</td>
-<td>选取 50 个远震事件（Mw 5–6，震中 30–90°）→ 带通 1–5 Hz → 计算直达 P 波峰值振幅 → 时差归一化 → 注入前后比值成像</td>
-</tr>
-<tr>
-<td>海洋微震 Rayleigh</td>
-<td>0.1–0.5 Hz 带通 → 每日叠加垂直分量互谱 → 提取 Rayleigh 基模峰值振幅 → 注入前后时移差异成像</td>
-</tr>
-<tr>
-<td>压力脉冲</td>
-<td>1 Hz 低通 → 识别注入/停注瞬态 → 多井互相关测得到达时间 → 用管波速度标定压力传播路径</td>
-</tr>
-</tbody>
-</table>
-<h2 id="_8">获得的结果</h2>
-<ul>
-<li>诱发微震：识别 ~20 个事件，M −2–0，震中集中分布于注入井周围 200 m，深度 1.3–1.7 km，与压力前锋一致； b 值 ≈ 1.1，低于区域背景，指示流体驱动。  </li>
-<li>体波振幅：注入 60 天后，CRC-3 井储层段振幅增大 15–25 %，与 CO₂ 饱和度 0 → 0.6 对应；邻井振幅变化 &lt; 5 %，证实羽流未突破井距。  </li>
-<li>海洋微震 Rayleigh：同一时段 0.15 Hz 振幅下降 8–12 %，与面波仅敏感于弹性模量（密度影响小）理论一致，可区分“模量降低”与“密度降低”。  </li>
-<li>压力脉冲：注液瞬态在 CRC-4/5 中延迟 2–4 h，对应压力扩散系数 0.8–1.2 m²/s，与井下压力计吻合，证明 DAS 可追踪 10⁻³ Hz 压力波。</li>
-</ul>
-<h2 id="_9">创新之处</h2>
-<table>
-<thead>
-<tr>
-<th>创新点</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>首次</td>
-<td>在同一 CO₂ 注入项目中系统整合“诱发微震 + 体波振幅 + 海洋微震 Rayleigh + 压力脉冲”四类被动 DAS 信号，形成多参数 MMV 工具箱</td>
-</tr>
-<tr>
-<td>首次</td>
-<td>利用海洋微震（0.1–0.5 Hz）作为天然 4D 源，通过井中 DAS 振幅时移成像 CO₂ 羽流，免去重复人工源</td>
-</tr>
-<tr>
-<td>方法</td>
-<td>提出“振幅-饱和度”经验关系，将 DAS 体波振幅变化转化为井周饱和度估计，与井下流体取样结果误差 &lt; 10 %</td>
-</tr>
-<tr>
-<td>应用</td>
-<td>证实 DAS 可“直接”记录压力脉冲，为分布式压力传感（DPS）提供现场验证，扩展了 DAS 在 CCS 中的功能边界</td>
-</tr>
-</tbody>
-</table>
-<h2 id="_10">主要贡献</h2>
-<ol>
-<li>为 CCS 运营方提供“零重复源”的低成本 4D 监测方案：仅利用永久 DAS 光纤即可同时获得微震、饱和度、压力三项关键参数。  </li>
-<li>建立海洋微震井中振幅层析方法论，可推广至全球任何海上/陆上 CCS 项目。  </li>
-<li>推动 DAS 从“结构成像”走向“流体-力学参数”定量监测，为封存安全认证提供新证据链。</li>
-</ol>
-<h2 id="_11">不足与展望</h2>
-<table>
-<thead>
-<tr>
-<th>不足</th>
-<th>展望</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>振幅-饱和度经验关系基于单井一维假设，未考虑各向异性与温度影响</td>
-<td>联合主动源 VTI 反演，建立饱和度-温度-压力-弹性参数全耦合岩石物理模型</td>
-</tr>
-<tr>
-<td>海洋微震能量随季节变化，导致振幅基线漂移</td>
-<td>建立长期（&gt;5 年）海洋噪声统计模型，引入自适应基线校正</td>
-</tr>
-<tr>
-<td>压力脉冲识别依赖人工阈值，缺乏自动算法</td>
-<td>开发基于机器学习的瞬态压力波检测与反演模块</td>
-</tr>
-<tr>
-<td>仅五口井，平面分辨率有限</td>
-<td>在更多新钻井或老井增加光纤，形成 3D 井网，实现全储层振幅-压力联合反演</td>
-</tr>
-</tbody>
-</table>]]></content>
     
     <category term="paper" />
     
