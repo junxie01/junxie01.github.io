@@ -262,10 +262,8 @@
 <h2 id="labelimg">标注先用 LabelImg</h2>
 <p>最不能省的是标注复查和小样例训练。一个类别编号错了，或者相邻时间窗被随机分到训练集和验证集里，训练曲线可能看起来很好，但科学上不太站得住。</p>
 <p>我用LabelImg来进行标注，虽然它已经停止开发，但简单矩形框标注还是够用。它适合本地有图形界面的电脑，不适合装到无桌面的服务器上。</p>
-<p>本地得单独建一个环境：</p>
-<div class="highlight"><pre><span></span><code>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>labelimg<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.9<span class="w"> </span>-y
-conda<span class="w"> </span>activate<span class="w"> </span>labelimg
-python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>labelImg
+<p>本地安装LabelImg</p>
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>labelImg
 labelImg
 </code></pre></div>
 
