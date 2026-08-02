@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paper Reading (64) | Jun Xie</title>
+  <meta name="description" content="Paper Reading (64)">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/atom.xml">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+  <!-- MathJax for LaTeX rendering -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        ignoreHtmlClass: 'mermaid'
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <!-- Umami Analytics -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="21a99622-5a23-45f4-be80-edef627a68e3"></script>
+  <!-- Busuanzi for public visitor counter -->
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container masthead">
+      <a class="masthead-identity" href="/" aria-label="SEISAMUSE home">
+        <img src="/images/seisamuse.png" alt="" class="masthead-avatar">
+        <span class="masthead-title">SEISAMUSE</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="/blog/" class="active">Blog</a>
+        <a href="/thoughts/">Thoughts</a>
+        <a href="/archives/">Archives</a>
+        <a href="/about/">About</a>
+        <a href="/links/">Links</a>
+      </nav>
+
+      <div class="masthead-actions" aria-label="Site shortcuts">
+        <form class="masthead-search" action="/search/" method="get">
+          <input type="search" name="q" placeholder="Search notes" aria-label="Search notes">
+        </form>
+        <a href="https://www.travellings.cn/go" target="_blank" rel="noopener" title="Travellings" aria-label="Travellings"><i class="fa-solid fa-train"></i></a>
+        <a href="mailto:junxie01@gmail.com" title="Email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="/atom.xml" title="Atom feed" aria-label="Atom feed"><i class="fa-solid fa-rss"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container page-wide">
+      
+      
+<div class="main-content">
+  <article>
+    <div class="post-header">
+      <h1>Paper Reading (64)</h1>
+      <div class="post-meta">
+        <time>2026-08-02</time>
+         &middot; 5 min read
+        
+         &middot;
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">paper</span>
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">seismology</span>
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">cryosphere</span>
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">Antarctica</span>
+        
+        
+      </div>
+    </div>
+
+    <div class="post-content">
+      <h2 id="paper-information">Paper Information</h2>
+<ul>
+<li><strong>Title</strong>: Teleseismic S-Wave Coda Autocorrelation and Vp/Vs Distribution Over the Antarctic Ice Sheet</li>
+<li><strong>First Author</strong>: Ammu Sanjayan</li>
+<li><strong>Corresponding Author</strong>: Ammu Sanjayan; Thanh-Son Pham</li>
+<li><strong>Affiliation</strong>: Research School of Earth Sciences, The Australian National University, Canberra, Australia</li>
+<li><strong>Journal</strong>: Journal of Geophysical Research: Solid Earth</li>
+<li><strong>DOI</strong>: 10.1029/2025JB033259</li>
+</ul>
+<h2 id="abstract-translated">Abstract (Translated)</h2>
+<p>这篇文章研究的是一个很具体但很有用的问题：能不能用远震的 S-wave coda autocorrelation 来补充 P-wave coda autocorrelation，从而更好地估计南极冰盖中的 <code>Vp/Vs</code> 分布？</p>
+<p>之前 P-wave coda autocorrelation 已经能比较好地提取冰盖底部的 P-wave 反射，从而估算冰厚；但 S-wave 反射常常依赖 P-to-S 转换，水平分量有时很吵，导致很多台站没法可靠给出 S-wave travel time。作者这里直接使用远震 S 波及其尾波，对水平分量做 autocorrelation，以更直接地提取 S-wave reflectivity。</p>
+<p>结果是，新的 S-wave coda autocorrelation 给 28 个此前没有可靠 <code>Vp/Vs</code> 的站点补上了估计，使总数达到 61 个站点。更新后的空间分布显示，East Antarctica 的 <code>Vp/Vs</code> 大多接近冰的标准值约 2.0，而 West Antarctica 更不均一，中部一些区域可达到 2.1 到 2.2。作者通过合成模型和已有冰物理研究解释说，这些较高 <code>Vp/Vs</code> 很可能不是温度单独造成的，而是 lower ice layer 中 S-wave velocity 降低导致的，可能与 anisotropy、basal/interstitial water 和 warmer softer ice 有关。</p>
+<h2 id="research-context">Research Context</h2>
+<h3 id="importance">Importance</h3>
+<p>南极冰盖不是一大块安静的冰砖。它内部有晶体取向、温度差异、底部融水、沉积物、基底起伏，还有各种会影响冰流和稳定性的东西。问题是，这些东西大多藏在几千米厚的冰下面，想用主动源或钻孔系统地看一遍，成本高得吓人。</p>
+<p>所以单台站被动地震方法就很香。远震天然送来 P 波和 S 波，冰盖底部的 ice-bedrock interface 又是很强的 impedance contrast。只要能把反射信号从 coda 里抠出来，就能用一个台站估计冰厚和波速比。这个思路有点像：别人地震了，我在南极顺手照一下冰盖底部。当然，顺手只是说起来顺手，处理起来一点也不顺。</p>
+<p><code>Vp/Vs</code> 对冰盖研究很有意义，因为它对 ice fabric、shear stiffness、basal water 和 thermal state 都比较敏感。尤其在 West Antarctica，basal melting、geothermal heat flux 和 ice dynamics 都是关键问题。若某些区域 <code>Vp/Vs</code> 明显偏高，就可能提示 lower ice 更软、更暖，甚至有水参与。</p>
+<h3 id="previous-studies">Previous Studies</h3>
+<ul>
+<li><strong>Phạm and Tkalcic (2017, 2018)</strong>: 将 teleseismic P-wave coda autocorrelation 用于浅部反射结构和南极冰盖性质研究，是本文直接继承的方法基础。</li>
+<li><strong>Yan et al. (2020)</strong>: 进一步比较 P-wave coda autocorrelation 与其他单台被动地震方法，也指出水平分量 S-wave reflectivity 的成功率有限。</li>
+<li><strong>Wittlinger and Farra (2012, 2015)</strong>: 讨论极地冰盖底部 low shear-wave velocity、anisotropy 和 unfrozen liquids 对 <code>Vp/Vs</code> 的影响。</li>
+<li><strong>Gusmeroli et al. (2012), Kohnen (1974)</strong>: 提供冰中波速、温度依赖和 crystal fabric 的重要物理约束。</li>
+<li><strong>Bedmap3 / Pritchard et al. (2025)</strong>: 给出南极冰厚背景模型，用于对比地震学估计。</li>
+</ul>
+<h3 id="limitations-of-previous-research">Limitations of Previous Research</h3>
+<p>P-wave coda autocorrelation 的强项是 vertical component 上的 P-wave reflection。问题在于，估算 <code>Vp/Vs</code> 还需要 S-wave reflection time。之前常从 P-wave coda 的水平分量里找 P-to-S converted energy，但是这个转换是否有效与 station condition、ice fabric、surface roughness、incident angle 和复杂 layering 都有关。</p>
+<p>文中提到，Phạm and Tkalcic (2018) 得到了 66 个清楚的 vertical autocorrelograms，但只有 33 个 horizontal autocorrelograms 能可靠提供 S-wave reflection。这就让 <code>Vp/Vs</code> 的空间覆盖不够，尤其是南极内部偏远区域。</p>
+<p>本文的切入点很直接：既然从 P 波转换来的 S 能量不总是清楚，那能不能直接用 teleseismic S-wave coda 自己来做 autocorrelation？</p>
+<p><img alt="Figure 10 Antarctic Vp/Vs distribution" src="/images/paper-teleseismic-swavecodaautocorrelation-vpevs/figure10.jpeg" /></p>
+<center><em>Figure 10 这张图是本文最核心结果之一：61 个南极冰盖台站的 Vp/Vs 分布，背景为 geothermal heat flux。East Antarctica 整体更接近 2.0，West Antarctica 更不均一，局部可达 2.1-2.2。</em></center>
+
+<h2 id="methodology">Methodology</h2>
+<h3 id="data">Data</h3>
+<p>作者选择了南极 grounded ice 上冰厚大于 1,000 m 的台站。根据 Bedmap3 初筛得到 105 个站点记录，但有些站点位置被多个网络重复使用，最终对应 94 个 unique stations。</p>
+<p>数据来自多个南极地震网络和永久台站，包括：</p>
+<ul>
+<li>TAMSEIS，2000-2003；</li>
+<li>GAMSEIS，2007 起；</li>
+<li>POLENET / ANET，2007-2011 及以后；</li>
+<li>TAMNNET，2012-2015；</li>
+<li>IU Global Seismographic Network；</li>
+<li>GEOSCOPE。</li>
+</ul>
+<p>事件选择方面，P-wave coda autocorrelation 和 receiver function 使用 <code>Mw &gt;= 5.5</code>、震中距 30 到 95 度的远震。S-wave coda autocorrelation 使用类似震级范围，但震中距限制为 50 到 95 度，以避免 S 波附近其他远震相的干扰。95 到 120 度被排除，是为了减少 core-mantle boundary diffraction 的复杂影响；120 度以外 S 波不能穿过液态外核，也不适合。</p>
+<h3 id="methods">Methods</h3>
+<p>方法上，文章用了三条线互相支持。</p>
+<p>第一条线是 P-wave coda autocorrelation。teleseismic P-wave 近似陡直入射，vertical component 中能提取冰盖底部 P-wave reflection。第一个显著负峰对应两程 P-wave reflection time，记作 <code>2p</code>。在假定平均 P-wave velocity 后，可以由 <code>2p</code> 估算冰厚。</p>
+<p>第二条线是本文重点的 S-wave coda autocorrelation。S 波在水平分量上更强，所以作者对 radial 和 tangential components 的 S-wave coda 做 autocorrelation，直接寻找冰底 S-wave reflection，记作 <code>2s</code>。这样就不必完全依赖 P-to-S converted phases。</p>
+<p>第三条线是 receiver function 和 H-k stacking，用来独立验证部分 <code>Vp/Vs</code> 估计。作者把原始三分量旋转到 LQT 坐标，取 P arrival 前 5 s 到后 25 s 的时间窗，做 time-domain deconvolution。Gaussian width 测试了 1.5、2.5、3.5 和 4.5，最后采用 4.5，并配合 0.5-2 Hz bandpass。</p>
+<p>数据处理流程包括：</p>
+<ul>
+<li>去均值和线性趋势；</li>
+<li>必要时重采样到 40 sps；</li>
+<li>水平分量旋转到 radial/transverse；</li>
+<li>spectral whitening；</li>
+<li>frequency-domain autocorrelation；</li>
+<li>对 zero-time peak 做 taper；</li>
+<li>P coda 使用 1-5 Hz；</li>
+<li>S coda 使用更保守的 0.5-2 Hz；</li>
+<li>对不同震中距造成的 incidence angle 差异做 move-out correction；</li>
+<li>用 phase-weighted stacking 增强相干信号；</li>
+<li>用 bootstrap 估计 reflection time pick 的不确定性。</li>
+</ul>
+<p>这里我觉得最重要的是频带选择和 move-out correction。因为冰盖厚度通常是公里量级，对应反射时间不长；如果频带和 move-out 处理不稳，就很容易把“看起来像峰”的东西当成冰底反射。好吧，自动相关的坑就是这样，噪声也很会假装自己有结构。</p>
+<h2 id="results">Results</h2>
+<p>第一，S-wave coda autocorrelation 确实补上了之前 P-wave 方法的短板。作者用 APRL 作为验证例子：这个站的 P-wave radial autocorrelation 和 S-wave radial/tangential autocorrelation 都能看到对应的 <code>2s</code>，二者时间一致，说明新方法在物理上说得通。</p>
+<p>第二，P061 这个例子更能说明新方法的价值。它的 vertical P-wave autocorrelogram 很清楚，但 P-wave coda 的 radial component 很吵；换成 S-wave coda autocorrelation 后，S-wave reflection 就清楚了。也就是说，新方法不只是重复旧方法，而是在旧方法失败的站点上给出了新的可用观测。</p>
+<p>第三，本文最终给出 61 个站点的 <code>Vp/Vs</code> 估计和 77 个站点的冰厚估计。与之前只有 33 个 <code>Vp/Vs</code> 站点相比，覆盖范围明显扩大，尤其改善了南极偏远内部区域的空间覆盖。</p>
+<p>第四，大多数站点的 <code>Vp/Vs</code> 在 1.95 到 2.15 之间，其中 41 个站点在 1.95 到 2.1 之间。这与实验室中冰的经验值约 2.0 基本一致。East Antarctica 的结果整体稳定，更接近标准冰值；West Antarctica 则变化更大，中部一些站点高达 2.1 到 2.2，沿海区域则有偏低值。</p>
+<p>第五，冰厚估计大体可与 Bedmap3 对比。作者重新处理了一些 Phạm and Tkalcic (2018) 的站点，并指出若干站点存在明显差异。例如 N020 在本文中的冰厚估计约 1,833 m，而 Bedmap3 为 1,713 m；之前文章表中给出的 3,139 m 明显偏离。作者认为，这类差异可能来自前文测量值与表格记录之间的不一致。</p>
+<p>第六，receiver function 的 H-k 结果与 autocorrelation 的 <code>Vp/Vs</code> 总体一致，差异不超过 0.05。不过 H-k 方法需要假定平均 <code>Vp</code>，这个假定会影响结果。例如 APRL 站若假定 <code>Vp</code> 为 3.90 或 4.02 km/s，得到的 <code>Vp/Vs</code> 可以从 1.90 变到 1.98。这个提醒挺重要：方法验证不是没有假设，而是换了一组假设。</p>
+<p><img alt="Extracted panel showing Vp/Vs response to reduced Vs" src="/images/paper-teleseismic-swavecodaautocorrelation-vpevs/figure12.jpeg" /></p>
+<center><em>提取出的 Figure 11 局部。它展示了 lower ice layer 中 S-wave velocity 降低时，整体 Vp/Vs 会升高。注意这不是完整 Figure 11，而是提取出来的一个面板。</em></center>
+
+<h2 id="discussion">Discussion</h2>
+<h3 id="innovations">Innovations</h3>
+<p>这篇文章的新意很清楚：把 S-wave coda autocorrelation 引入南极冰盖 <code>Vp/Vs</code> 估计，让 horizontal component 上的 S-wave reflectivity 不再完全依赖 P-to-S conversion。简单讲，以前是“从 P 波里找 S 的影子”，现在是“直接用 S 波自己的尾巴照冰底”。</p>
+<p>这个想法并不花哨，但很实用。因为单台站方法在南极这种地方非常关键。你很难指望到处布主动源、做密集剖面或长期维护一堆昂贵观测系统。能从已有宽频带台站和远震记录里多榨出一点信息，就是实实在在的进步。</p>
+<h3 id="contributions">Contributions</h3>
+<p>本文至少有三个贡献。</p>
+<p>第一，它把可靠 <code>Vp/Vs</code> 估计从 33 个站点扩展到 61 个站点。这不是一个小补丁，而是让南极内部区域的空间图像更完整。</p>
+<p>第二，它用 P-wave coda、S-wave coda 和 receiver functions 之间的比较说明，新方法提取的 S-wave reflection time 是可信的。尤其是 P061 这种 P-wave radial component 很差的站点，新方法显示出明显优势。</p>
+<p>第三，它把 <code>Vp/Vs</code> 的空间差异放回到冰物理和 basal conditions 中解释。East Antarctica 更接近标准值，West Antarctica 更高更乱，这与 geothermal heat flux、basal meltwater、ice fabric anisotropy 和 warmer softer lower ice 的可能组合有关。</p>
+<h3 id="limitations">Limitations</h3>
+<p>第一，<code>Vp/Vs</code> 升高不能被简单翻译成“下面一定有水”。作者也很谨慎：温度、anisotropy、interstitial water、basal water、CPO、porosity、subglacial sediments 都可能影响 S-wave velocity。本文倾向于认为 water 和 fabric modification 很重要，但并没有直接探测液态水。</p>
+<p>第二，autocorrelation 对 impedance contrast 很敏感。在结构简单的 ice-bedrock 模型里，解释相对直接；但如果底部有 dilatant material、sediment layer 或 subglacial lake 附近的复杂结构，反射极性和峰值位置都可能变得暧昧。文中的 SWEI 站就是一个例子：它有很低的 <code>Vp/Vs</code>，但冰厚和 Bedmap3 差异很大，需要额外 forward modeling 才能解释。</p>
+<p>第三，冰厚估计使用了均一 P-wave velocity，例如 3,900 m/s，并给了 100 m/s 的不确定性。这是合理的简化，但冰的温度、压力、晶体取向和 firn/ice transition 都可能造成局部偏差。</p>
+<p>第四，H-k validation 本身也依赖假定 <code>Vp</code>。所以它是独立检查，但不是没有模型假设的“绝对真理”。这点我还蛮喜欢作者写出来的，因为很多时候验证方法也会藏假设，藏着藏着就变成信仰了。</p>
+<h2 id="personal-thoughts">Personal Thoughts</h2>
+<p>我比较喜欢这篇文章的原因，是它不是为了发明一个听起来很炫的新名词，而是在一个真实的观测瓶颈上补了一块。P-wave coda autocorrelation 已经能做冰厚和部分 <code>Vp/Vs</code>，但 S-wave reflection 覆盖不够。那就看看 S-wave coda 自己能不能干活。问题很朴素，解决也很朴素，但结果有用。</p>
+<p>这篇文章也让我想到单台站方法的一个优点：它很适合极端环境。南极、冰盖、未来 icy planets，很多地方都不可能有豪华阵列。若一个三分量地震仪就能给出局部层状结构和弹性性质，那它的价值就不只是地球上的南极冰盖，也可能是以后行星探测里的工具箱。</p>
+<p>不过读这种文章也得保持一点警惕。<code>Vp/Vs</code> 是一个很好用的指标，但它不是单一物理量的遥控器。高 <code>Vp/Vs</code> 可以来自 lower ice 的 S-wave velocity 降低，而 S-wave velocity 降低又可能来自 anisotropy、water、porosity、temperature、fabric，甚至复杂基底层。它更像一个提示牌：这里值得继续看，而不是一个直接答案。</p>
+<p>对我自己有启发的地方，是这里的 workflow 很适合迁移到其他 near-surface strong impedance contrast 的问题里。只要有清楚界面、有足够远震、有可靠的三分量记录，P/S coda autocorrelation 就可能成为一个低成本的结构探测办法。当然，前提还是那句老话：先别急着解释，先确认峰到底是不是你以为的那个峰。</p>
+    </div>
+
+  <div class="comments-section">
+  <h3>Comments</h3>
+  <script src="https://giscus.app/client.js"
+          data-repo="junxie01/junxie01.github.io"
+          data-repo-id="R_kgDOSGl1Dg"
+          data-category="General"
+          data-category-id="DIC_kwDOSGl1Ds4DAuif"
+          data-mapping="specific"
+          data-term="blog/2026-08-02-paper-reading-64"
+          data-strict="0"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="bottom"
+          data-theme="preferred_color_scheme"
+          data-lang="en"
+          crossorigin="anonymous"
+          async>
+  </script>
+</div>
+
+  <div class="post-nav">
+    
+      <a class="post-nav-prev" href="/blog/2026-08-01-about-writing.html">&larr; 关于博客写作</a>
+    
+
+    <a class="post-nav-blog" href="/blog/">Blog</a>
+
+    
+      <span class="post-nav-next"></span>
+    
+  </div>
+</article>
+</div>
+
+      
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Jun Xie &middot; Built with Python &amp; Markdown &middot;
+        <a href="https://github.com/junxie01" target="_blank">GitHub</a> &middot;
+        <a href="/atom.xml" target="_blank">Atom</a>
+      </p>
+      <p class="site-stats">
+        <span id="busuanzi_container_site_pv">
+          👁 Total visits: <span id="busuanzi_value_site_pv"></span>
+        </span>
+        &middot;
+        <span id="busuanzi_container_site_uv">
+          Visitors: <span id="busuanzi_value_site_uv"></span>
+        </span>
+      </p>
+    </div>
+  </footer>
+
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+      startOnLoad: true,
+      securityLevel: 'strict',
+      theme: window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'neutral'
+    });
+  </script>
+
+</body>
+</html>
