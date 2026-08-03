@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paper Reading (65) | Jun Xie</title>
+  <meta name="description" content="Paper Reading (65)">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/atom.xml">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+  <!-- MathJax for LaTeX rendering -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        ignoreHtmlClass: 'mermaid'
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <!-- Umami Analytics -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="21a99622-5a23-45f4-be80-edef627a68e3"></script>
+  <!-- Busuanzi for public visitor counter -->
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container masthead">
+      <a class="masthead-identity" href="/" aria-label="SEISAMUSE home">
+        <img src="/images/seisamuse.png" alt="" class="masthead-avatar">
+        <span class="masthead-title">SEISAMUSE</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="/blog/" class="active">Blog</a>
+        <a href="/thoughts/">Thoughts</a>
+        <a href="/archives/">Archives</a>
+        <a href="/about/">About</a>
+        <a href="/links/">Links</a>
+      </nav>
+
+      <div class="masthead-actions" aria-label="Site shortcuts">
+        <form class="masthead-search" action="/search/" method="get">
+          <input type="search" name="q" placeholder="Search notes" aria-label="Search notes">
+        </form>
+        <a href="https://www.travellings.cn/go" target="_blank" rel="noopener" title="Travellings" aria-label="Travellings"><i class="fa-solid fa-train"></i></a>
+        <a href="mailto:junxie01@gmail.com" title="Email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="/atom.xml" title="Atom feed" aria-label="Atom feed"><i class="fa-solid fa-rss"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container page-wide">
+      
+      
+<div class="main-content">
+  <article>
+    <div class="post-header">
+      <h1>Paper Reading (65)</h1>
+      <div class="post-meta">
+        <time>2026-08-03</time>
+         &middot; 3 min read
+        
+         &middot;
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">paper</span>
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">seismology</span>
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">cryosphere</span>
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">DAS</span>
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">glacier</span>
+        
+        
+      </div>
+    </div>
+
+    <div class="post-content">
+      <h2 id="paper-information">Paper Information</h2>
+<ul>
+<li><strong>Title</strong>: Quantifying subsurface fracture damage in glaciers using fiber-optic seismology</li>
+<li><strong>First Author</strong>: Thomas S. Hudson</li>
+<li><strong>Corresponding Author</strong>: Thomas S. Hudson</li>
+<li><strong>Affiliation</strong>: Department of Earth and Planetary Sciences, ETH Zurich, Zurich, Switzerland</li>
+<li><strong>Journal</strong>: Science Advances</li>
+<li><strong>DOI</strong>: 10.1126/sciadv.aef1107</li>
+</ul>
+<h2 id="abstract-translated">Abstract (Translated)</h2>
+<p>这篇文章研究的是一个冰川稳定性里很关键、但一直不太好定量的问题：冰川内部和近地表的裂隙损伤到底有多严重，能不能用地震学方法直接量化？</p>
+<p>裂隙会控制冰川和冰架的稳定性。它们可能向深部贯通，促进崩解、冰崩，甚至触发冰架快速坍塌。过去我们很容易从卫星或无人机图像中看到地表裂缝，但地下裂隙延伸、裂隙体积分数以及裂隙破裂机制并不好量化。作者在瑞士 Gornergletscher 的一个冰裂隙场布设了 1 km 光纤和 29 个地震节点，用 distributed acoustic sensing (DAS) 记录高密度波场。</p>
+<p>文章首先用冰震产生的 Rayleigh 波做表面波速度各向异性分析，证明裂隙会显著降低垂直于裂隙方向的波速，从而可以估计裂隙体积分数。然后作者对冰震做 full-waveform moment tensor inversion，发现冰震主要表现为张性开裂。由冰震估计的裂隙张开体积，与表面波各向异性给出的裂隙损伤估计在同一量级，约为总冰体积的 8%。作者据此认为，在这个温带高山冰川裂隙场中，地下体积变化可能主要由 fracture opening 控制，而不是由融水造成的空洞控制。</p>
+<h2 id="research-context">Research Context</h2>
+<h3 id="importance">Importance</h3>
+<p>冰川裂隙不是表面上几条好看的线。它们是冰川内部损伤的一种表达，会影响冰川如何变形、如何输水、如何崩解，也会影响冰架是否容易发生 hydrofracture-driven disintegration。</p>
+<p>问题在于，地表裂缝好看见，地下裂缝不好看见。卫星和无人机可以告诉我们“表面裂了多少”，但很难告诉我们裂缝往下扎了多深、裂隙里是空气还是水、裂缝之间是否连通，以及这些裂缝在力学上到底怎么张开。这个缺口很要命，因为真正影响稳定性的往往不是表面照片本身，而是地下损伤结构。</p>
+<p>地震学在这里有优势。裂隙破裂会产生 icequake；icequake 的震源机制可以告诉我们它是张开、闭合，还是剪切；icequake 产生的表面波又可以对裂隙场进行成像。只是传统地震仪太稀疏，想在危险裂隙区布很多台站也不现实。所以 DAS 很自然地进入这个问题：一根光纤可以提供几百个到上千个通道，而且部署速度快，风险也比密集布设节点低。</p>
+<p><img alt="Experimental setup and detected icequakes" src="/images/paper-hudson-sci-adv-eaef1107-2026/figure1.jpeg" /></p>
+<center><em>Fig. 1. Gornergletscher 裂隙场上的 DAS 光纤、地震节点和冰震检测结果。红色星号是冰震，黑线是二维网格状光纤布设。</em></center>
+
+<h3 id="previous-studies">Previous Studies</h3>
+<ul>
+<li><strong>Neave and Savage (1970)</strong>: 早期讨论 Athabasca Glacier 上的 icequakes，是冰震观测的经典基础之一。</li>
+<li><strong>Walter et al. (2009)</strong>: 在 Gornergletscher 做过 icequake moment tensor inversion，显示冰裂隙破裂可以用矩张量方法研究。</li>
+<li><strong>Roux et al. (2010)</strong> 和 <strong>Mikesell et al. (2012)</strong>: 利用冰震和 Rayleigh 波研究冰川表面地震活动，构成本文表面波路径的前期背景。</li>
+<li><strong>Lindner et al. (2019)</strong>: 讨论裂隙导致的 Rayleigh-wave azimuthal anisotropy，是本文将各向异性和裂隙损伤联系起来的重要前人工作。</li>
+<li><strong>Gajek et al. (2021)</strong>: 用 shear-wave splitting 揭示 englacial fracture networks 的日变化，说明地震各向异性可以反映冰川内部裂隙变化。</li>
+</ul>
+<h3 id="limitations-of-previous-research">Limitations of Previous Research</h3>
+<p>之前的主要限制不是“没有想法”，而是“观测太稀”。裂隙间距可以是几米量级，裂隙场尺度可以是几百米，而传统地震仪通常只能布几十个通道。对于这种空间尺度不匹配的问题，你想反演裂隙损伤和震源机制，就像拿粗网眼的筛子捞很细的东西，当然会漏。</p>
+<p>另外，hydrofracture 的判断常常依赖辅助观测，比如冰震活动与降水、融水排泄或湖泊排水同步出现。这样的证据有用，但仍然偏间接。本文想往前走一步：能不能把裂隙损伤程度和裂隙张开量都用地震观测量化出来？</p>
+<h2 id="methodology">Methodology</h2>
+<h3 id="data">Data</h3>
+<p>实验地点是瑞士 Gornergletscher 的一个冰裂隙场，观测时间为 2023 年 10 月 17 到 23 日。这个时间窗口很讲究：裂隙没有被雪盖住，系统中又可能还有融水，同时夜间温度足够低，可以让光纤冻结进冰面，提高耦合质量。</p>
+<p>观测系统包括：</p>
+<ul>
+<li>1 km 光纤，连接 Sintela Onyx interrogator；</li>
+<li>光纤通道间距 1.6 m；</li>
+<li>gauge length 为 6.4 m；</li>
+<li>DAS 采样率 1000 Hz，观测量为 strain；</li>
+<li>29 个 Sercel WiNG 节点，记录 vertical acceleration，采样率同样为 1000 Hz。</li>
+</ul>
+<p>作者在阵列附近共检测到 1355 个 icequakes。可用于矩张量反演的是信噪比较高的一部分：需要超过 50% 的接收器上有清楚的 P 波和表面波到时，最终有 50 个冰震进入 full-waveform moment tensor inversion。</p>
+<h3 id="methods">Methods</h3>
+<p>这篇文章的方法可以看成三步。</p>
+<p>第一步是 icequake detection and location。作者使用 QuakeMigrate 做 back-migration 检测定位，并结合 P-wave 和 surface-wave phase 信息。初始速度模型比较简单：均一 <code>Vp = 3.6 km/s</code>，Rayleigh-wave velocity 为 <code>1.66 km/s</code>。之后再用各向异性表面波层析细化震源位置。</p>
+<p>第二步是 surface-wave velocity anisotropy tomography。因为冰震能量主要表现为 Rayleigh 波，作者用接收器对之间的 surface-wave group-velocity differential arrival time 做反演。差分到时通过波形互相关获得，只保留 normalized cross-correlation 大于 0.7 的接收器对。作者没有上来就做很复杂的二维各向异性结构，而是反演三个参数：快方向 Rayleigh 波速度、慢方向 Rayleigh 波速度，以及快方向相对北向的方位角。这个处理有点克制，但适合这篇文章的目标：先证明裂隙场整体存在强各向异性，并把它和裂隙方向联系起来。</p>
+<p>第三步是从地震速度到裂隙体积分数。作者把快方向视为相对接近完整冰体的速度，把慢方向视为受到裂隙影响后的速度，然后用 Reuss 和 Voigt 两类有效介质模型给出裂隙体积分数的上下限。这里的假设很多，例如裂隙尺度要小于波长的三分之一、裂隙里可能是空气或水、裂隙连通性无法直接约束等。作者没有把它写成一个精确答案，而是给出一个物理上可解释的范围。</p>
+<p><img alt="Surface-wave anisotropy tomography results" src="/images/paper-hudson-sci-adv-eaef1107-2026/figure2-full.png" /></p>
+<center><em>Fig. 2. Rayleigh 波各向异性结果。快方向大致平行裂隙走向，慢方向垂直裂隙，因此慢速可以被解释为裂隙损伤对波速的影响。</em></center>
+
+<p>最后是 full-waveform source mechanism inversion。作者用 Salvus 做谱元法正演，并在 DAS 和节点各自原始单位中比较观测与模拟，也就是 DAS 用 strain，节点用 acceleration。矩张量反演采用 Bayesian probabilistic full-waveform inversion，并允许小的 time shift 来吸收局部三维非均匀性。为了估计地震矩和裂隙张开体积，作者还要处理 DAS 振幅耦合问题，并用 ambient noise coherency coupling quantification 对不同光纤通道的耦合差异做校正。</p>
+<h2 id="results">Results</h2>
+<p>第一，裂隙场非常活跃。作者在 7 天内检测到 1355 个冰震，其中冰震活动在气温高于冰点时更强。2023 年 10 月 20 日极端风暴之后，还出现了一个异常活跃的 6 小时时段。作者认为，温度或降水峰值与冰震活动峰值之间可能有大约 12 小时滞后，这可能与裂隙场中水的积累、hydrofracture 或 glacier speed-up 有关。这里要注意，作者的表述是 likely，不是直接证明了某一个单一机制。</p>
+<p>第二，冰震波场说明这些事件大多接近冰川表面。它们有较小振幅的 P-wave arrivals、强 surface-wave arrivals，但没有清楚的 S-wave arrivals。作者认为，这支持事件主要是 volumetric failure，而不是简单的 shear failure。此外，冰震后面有很强的 coda；通过 back-migration，作者认为 coda 更可能来自裂隙场内的散射，而不是某一个正在破裂裂隙的 fluid resonance。</p>
+<p>第三，Rayleigh 波各向异性非常强。反演得到快方向 Rayleigh 波速度约 <code>1.8 km/s</code>，快方向大致平行地表裂隙走向；慢方向则垂直裂隙。作者估计速度各向异性约为 20%。这个量级很大，作者还特别拿它和地幔各向异性、火山喷发中强裂隙环境的各向异性作了对比。我的理解是，这里最重要的不是“20% 这个数字多夸张”，而是它说明裂隙损伤对近地表波速有非常强的控制。</p>
+<p>第四，用有效介质模型估计裂隙体积分数时，如果裂隙充水，范围约为 0.10 到 0.41；如果裂隙充气，范围约为 <code>9.8e-6</code> 到 0.35。这个范围看起来很宽，但宽本身就是结果的一部分：它告诉我们，仅凭表面波速度还很难唯一确定裂隙填充物、连通性和几何结构。作者根据野外观察认为，至少可见的 2 到 3 m 深度内裂隙更可能是充气的，并倾向于把裂隙体积分数放在上限一侧理解。</p>
+<p>第五，矩张量结果显示冰震主要是张性开裂。50 个高质量冰震的 source mechanism 大多靠近 opening tensile crack 区域，张开方向也与裂隙场和冰流应力环境一致。多数事件仍然包含一定剪切分量，作者认为这可能与冰川流动并非完全垂直于裂隙有关。少数事件显示 closing tensile crack，但作者非常谨慎，因为这些结果更受 surface-wave misfit 控制，缺少清楚的 dilatational P-wave first arrival polarity 支撑。</p>
+<p><img alt="Moment tensor results for icequakes" src="/images/paper-hudson-sci-adv-eaef1107-2026/figure4-full.png" /></p>
+<center><em>Fig. 4. 50 个冰震的矩张量结果。大部分事件靠近张性开裂机制，同时作者还估计了 crack 和 double-couple 分量的累计地震矩释放，以及累计裂隙张开体积。</em></center>
+
+<p>第六，裂隙张开量和各向异性估计在同一量级。作者对 48 个事件估计的总裂隙张开体积为 84 <code>m^3</code>，若把剩余 1307 个更小事件也按上限估计，总量约为 87 <code>m^3</code>。这只占整个裂隙场体积约 0.1%，但这是 5 天内的张开量。如果假设类似速率持续一年，大约对应总冰体积的 8.4%，与表面波各向异性在 Voigt 模型下的估计是同一量级。这里的关键不是“精确等于 8.4%”，而是两个独立路径给出了相互支持的量级判断。</p>
+<h2 id="discussion">Discussion</h2>
+<h3 id="innovations">Innovations</h3>
+<p>这篇文章最有意思的地方，是把两个本来可以分开做的东西放在了一起：表面波各向异性告诉你“裂隙损伤整体有多强”，冰震矩张量告诉你“裂隙是怎么破的”。一个偏结构，一个偏震源；一个看背景损伤，一个看正在发生的破裂。两者互相印证，就比单独拿一个结果出来更有说服力。</p>
+<p>另一个亮点是 DAS 的使用方式。它不是单纯说“我们通道多，所以厉害”，而是把通道多这件事落到具体收益上：更密的空间采样、更好的方位角覆盖、更好的 back-azimuth coverage、更适合危险裂隙区部署。这些都直接关系到矩张量不确定性和表面波各向异性反演的稳定性。</p>
+<h3 id="contributions">Contributions</h3>
+<p>本文的贡献可以概括为三点。</p>
+<p>第一，它展示了 DAS 可以在冰川裂隙场上提供足够密的地震观测，用来同时研究 fracture extent 和 fracture mechanism。这对 alpine glacier monitoring 很实用。</p>
+<p>第二，它提出了一个可扩展的裂隙损伤监测框架：用 surface-wave anisotropy 估计已有裂隙损伤，用 icequake source inversion 估计实时裂隙张开。这个框架将来可以用于 hanging glacier collapse 风险评估，也可以和卫星遥感的 surface fracturing 结合，推断 ice sheet 或 ice shelf 的 subsurface damage。</p>
+<p>第三，它对“地下体积变化到底由 fracture 还是 melt 主导”给了一个有约束的判断。在这个高融水环境的温带高山冰川里，作者发现 fracture opening 估计和各向异性估计一致，因此倾向于认为 fracture rather than subsurface melt 可能主导了地下体积变化。这一点对理解冰川损伤演化很有价值。</p>
+<h3 id="limitations">Limitations</h3>
+<p>第一，有效介质模型仍然很简化。Reuss 和 Voigt 给的是上下限，不是唯一解。裂隙连通性、几何形态、尺度分布、空气或水的填充比例都会影响速度各向异性。也就是说，速度变慢了不等于我们已经知道裂隙里面具体长什么样。</p>
+<p>第二，表面波频带相对窄，主要敏感于近地表几米尺度。作者估计 80 到 100 Hz 的 Rayleigh 波最大敏感深度约为 5 m，因此这篇文章不是在完整成像几十米甚至上百米深的裂隙系统。它更像是对近地表裂隙损伤的高分辨率观测。</p>
+<p>第三，full-waveform source inversion 受强 coda 和 surface wave 影响。一些通道上 coda 很强，导致模型可能去拟合 coda 中某个任意位置，而不是清楚的目标相位。作者也承认，closing crack 结果需要谨慎看待，因为它们缺少足够明确的 P 波初动极性支持。</p>
+<p>第四，DAS 不是全方位替代节点。DAS 通道多、部署快、适合实时监测，但 interrogator 成本更高，需要连续供电，且光纤耦合条件很关键。节点单通道信噪比更高，在估计 seismic moment 时可能仍然提供了重要约束。所以这篇文章更像是在说明 DAS 和节点如何互补，而不是说以后节点都可以不要了。</p>
+<h2 id="personal-thoughts">Personal Thoughts</h2>
+<p>我喜欢这篇文章，是因为它把“看见裂缝”推进到了“估计损伤”。很多时候我们看到冰川表面裂得很厉害，会自然觉得它危险，但科研上不能停在“感觉很危险”。你需要一个可以量化、可以比较、可以监测的指标。本文用表面波各向异性和冰震矩张量把这个问题往前推了一步。</p>
+<p>这篇文章也提醒我，DAS 最有价值的地方不是“数据量大”这个口号，而是它能不能解决传统观测难以解决的采样问题。裂隙场就是非常合适的例子：尺度小、危险、空间变化强、需要实时性。用几百个光纤通道去看一个百米级裂隙场，才算把 DAS 的长处放在了正确位置。</p>
+<p>当然，这类研究最容易让人兴奋过头。比如看到 20% 的各向异性，看到 8% 左右的裂隙体积分数估计，很容易想直接拿来做危险等级判断。但我觉得现在还不该这么快。有效介质模型、裂隙填充物、连通性、深度敏感性、coda 散射，这些不确定性都还在。它更像一个很好的 monitoring prototype，而不是已经成熟的 operational warning system。</p>
+<p>对我自己有启发的地方，是这里的“结构反演 + 震源反演”组合非常值得借鉴。单独做结构，容易缺少正在发生的动力学信息；单独做震源，又容易不知道背景介质损伤到什么程度。把两者放在一个观测系统里，才更接近真正理解一个破裂系统。冰川裂隙是这样，火山裂隙、浅层断裂带，甚至工程尺度损伤监测，可能也都是这样。</p>
+    </div>
+
+  <div class="comments-section">
+  <h3>Comments</h3>
+  <script src="https://giscus.app/client.js"
+          data-repo="junxie01/junxie01.github.io"
+          data-repo-id="R_kgDOSGl1Dg"
+          data-category="General"
+          data-category-id="DIC_kwDOSGl1Ds4DAuif"
+          data-mapping="specific"
+          data-term="blog/2026-08-03-paper-reading-65"
+          data-strict="0"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="bottom"
+          data-theme="preferred_color_scheme"
+          data-lang="en"
+          crossorigin="anonymous"
+          async>
+  </script>
+</div>
+
+  <div class="post-nav">
+    
+      <a class="post-nav-prev" href="/blog/2026-08-02-paper-reading-64.html">&larr; Paper Reading (64)</a>
+    
+
+    <a class="post-nav-blog" href="/blog/">Blog</a>
+
+    
+      <span class="post-nav-next"></span>
+    
+  </div>
+</article>
+</div>
+
+      
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Jun Xie &middot; Built with Python &amp; Markdown &middot;
+        <a href="https://github.com/junxie01" target="_blank">GitHub</a> &middot;
+        <a href="/atom.xml" target="_blank">Atom</a>
+      </p>
+      <p class="site-stats">
+        <span id="busuanzi_container_site_pv">
+          👁 Total visits: <span id="busuanzi_value_site_pv"></span>
+        </span>
+        &middot;
+        <span id="busuanzi_container_site_uv">
+          Visitors: <span id="busuanzi_value_site_uv"></span>
+        </span>
+      </p>
+    </div>
+  </footer>
+
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+      startOnLoad: true,
+      securityLevel: 'strict',
+      theme: window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'neutral'
+    });
+  </script>
+
+</body>
+</html>
