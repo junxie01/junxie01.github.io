@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paper Reading (66) | Jun Xie</title>
+  <meta name="description" content="Paper Reading (66)">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/atom.xml">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+  <!-- MathJax for LaTeX rendering -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        ignoreHtmlClass: 'mermaid'
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <!-- Umami Analytics -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="21a99622-5a23-45f4-be80-edef627a68e3"></script>
+  <!-- Busuanzi for public visitor counter -->
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container masthead">
+      <a class="masthead-identity" href="/" aria-label="SEISAMUSE home">
+        <img src="/images/seisamuse.png" alt="" class="masthead-avatar">
+        <span class="masthead-title">SEISAMUSE</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="/">主页</a>
+        <a href="/blog/" class="active">博客</a>
+        <a href="/thoughts/">想法</a>
+        <a href="/archives/">归档</a>
+        <a href="/about/">自述</a>
+        <a href="/links/">链接</a>
+      </nav>
+
+      <div class="masthead-actions" aria-label="Site shortcuts">
+        <form class="masthead-search" action="/search/" method="get">
+          <input type="search" name="q" placeholder="Search notes" aria-label="Search notes">
+        </form>
+        <a href="https://www.travellings.cn/go" target="_blank" rel="noopener" title="Travellings" aria-label="Travellings"><i class="fa-solid fa-train"></i></a>
+        <a href="mailto:junxie01@gmail.com" title="Email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="/atom.xml" title="Atom feed" aria-label="Atom feed"><i class="fa-solid fa-rss"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container page-wide">
+      
+      
+<div class="main-content">
+  <article>
+    <div class="post-header">
+      <h1>Paper Reading (66)</h1>
+      <div class="post-meta">
+        <time>2026-08-17</time>
+         &middot; 3 min read
+        
+         &middot;
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">paper</span>
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">seismology</span>
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">landslide</span>
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">machine-learning</span>
+        
+        
+      </div>
+    </div>
+
+    <div class="post-content">
+      <h2 id="paper-information">Paper Information</h2>
+<ul>
+<li><strong>Title</strong>: Decoupling Seasonal Seismic Velocity Changes on Slow-Moving Slopes in Southwest China Using Tree Ensemble Machine Learning</li>
+<li><strong>First Author</strong>: Dekang Li</li>
+<li><strong>Corresponding Author</strong>: Fan Xie (xiefan@cea-igp.ac.cn)</li>
+<li><strong>Affiliation</strong>: Computer Network Information Center, Chinese Academy of Sciences; Institute of Geophysics, China Earthquake Administration; Institut Terre et Environnement de Strasbourg, CNRS/Université de Strasbourg; Department of Geoscience, University of Padova; State Key Laboratory of Hydroscience and Engineering, Tsinghua University</li>
+<li><strong>Journal</strong>: Geophysical Research Letters</li>
+<li><strong>DOI</strong>: <a href="https://doi.org/10.1029/2025GL121238">10.1029/2025GL121238</a></li>
+</ul>
+<h2 id="abstract-translated">Abstract (Translated)</h2>
+<p>地震波速变化（δv/v）能用来评估滑坡损伤演化，但它受气温、湿度、降雨、气压和地震活动等多种外部因素共同影响。本文在四川西南部的普布沟（PBG）岩质滑坡和金坪子（JPZ）碎屑土滑坡开展了约两年的原地连续观测，用环境噪声互相关提取日尺度 δv/v，然后用 XGBoost 回归和 SHAP（SHapley Additive exPlanation）可解释性方法，定量分析每个因素对 δv/v 的边际贡献。</p>
+<p>结果是：XGBoost 在 PBG 和 JPZ 的测试集上分别达到 R²=0.850 和 0.677，优于 RF 和 LightGBM。SHAP 分析显示气温是两个斜坡的主导因素，但关系形态不同：PBG 上接近线性，JPZ 上则呈非线性，存在明显的拐点。作者认为这种差异主要归因于两类斜坡的本构物质性质不同，而不是水文过程主导。</p>
+<h2 id="research-context">Research Context</h2>
+<h3 id="importance">Importance</h3>
+<p>慢速滑坡对水电站、道路和居民区构成长期风险，但它们的破坏演化往往不是突然的，而是被温度循环、降雨、湿度变化和微震反复揉搓出来的。δv/v 是环境噪声地震学里一个对介质弹性变化非常敏感的指标，已经被广泛用于冰川、火山和滑坡监测。</p>
+<p>问题是：δv/v 变了，到底是谁变的？传统做法用多元线性回归（MLR）估计每个因素的响应系数，但这个方法有两个明显短板：第一，它给不出每个因素的<strong>边际贡献</strong>；第二，它很难描述主导因素到底怎么调制 δv/v，尤其是在非线性关系里。这篇文章想用 XGBoost + SHAP 把这几个因素拆开看。</p>
+<p><img alt="Tectonic setting and terrain of PBG and JPZ slopes" src="/images/paper-decoupling-seasonal-seismic-velocity-changes/figure1.jpeg" /></p>
+<center><em>图 1. 普布沟（PBG）岩质滑坡与金坪子（JPZ）碎屑土滑坡的区域构造背景与三维地形，蓝点为地震台站位置。</em></center>
+
+<h3 id="previous-studies">Previous Studies</h3>
+<ul>
+<li><strong>Sens-Schönfedler &amp; Wegler (2006)</strong>、<strong>Snieder (2006)</strong>：环境噪声互相关与尾波干涉是测量 δv/v 的基础方法。</li>
+<li><strong>Larose et al. (2015)</strong>、<strong>Bièvre et al. (2018)</strong>、<strong>Mainsant et al. (2012)</strong>：δv/v 变化与介质损伤或刚度下降相关，已在滑坡中应用。</li>
+<li><strong>Wang et al. (2017)</strong>、<strong>Xie et al. (2023)</strong>：在中国西南滑坡用环境噪声干涉和 MLR 研究季节性波速变化，是本文直接的前期基础。</li>
+<li><strong>Lundberg &amp; Lee (2017)</strong>：SHAP 方法为树模型提供后验可解释性。</li>
+</ul>
+<h3 id="limitations-of-previous-research">Limitations of Previous Research</h3>
+<p>前人把 δv/v 和环境因素联系起来，但多半是线性回归。线性回归告诉我们“气温每升一度 δv/v 怎么变”，却没告诉我们“在所有因素里，气温到底占多少”。另外，岩质滑坡和土质滑坡对同一外力的响应可能完全不同，但系统对比两类斜坡的研究很少。</p>
+<h2 id="methodology">Methodology</h2>
+<h3 id="data">Data</h3>
+<p>作者在四川西南部选了两个典型斜坡：</p>
+<ul>
+<li><strong>PBG（普布沟）</strong>：岩质斜坡，海拔 780–1180 m，平均坡度 45°，由凝灰岩和辉绿岩组成，上部以 21 mm/yr 的速率发生倾倒变形，被归类为慢速岩质滑坡。</li>
+<li><strong>JPZ（金坪子）</strong>：碎屑土斜坡，海拔 790–1550 m，平均坡度 23°，上部为松散白云岩块石，下部为含千枚岩碎屑的粉质粘土，日位移速率 69–318 mm/yr，属于平移式碎屑土滑坡。</li>
+</ul>
+<p>每个斜坡布设两台短周期地震仪，采样率 100 Hz，记录连续环境噪声：</p>
+<ul>
+<li>PBG：2020-10-01 至 2023-02-26，共 879 天；</li>
+<li>JPZ：2022-07-13 至 2024-06-22，共 711 天。</li>
+</ul>
+<p>同时布设气象站记录气温、相对湿度、降雨和气压，并基于四川/云南地震目录计算每日地震事件数和峰值地面速度（PGV）。</p>
+<h3 id="methods">Methods</h3>
+<p>处理流程大致分三块：</p>
+<ol>
+<li>
+<p><strong>环境噪声 δv/v</strong>：2–20 Hz 带通滤波、谱白化、one-bit 归一化、去除三倍标准差以上的瞬态干扰；计算垂直分量互相关函数，因果/非因果平均后日叠加得到 daily CCF；以参考 CCF 为基准，用 stretching 方法测量尾波窗口（1–10 s）内的 dt/t，即 δv/v。</p>
+</li>
+<li>
+<p><strong>XGBoost 预测</strong>：输入特征为气温、相对湿度、气压、降雨、PGV 和地震频次；输出为日尺度 δv/v。用随机搜索 + 五折交叉验证调参 1000 组组合，训练/测试按 75/25 划分，并与 RF、LightGBM 比较 R²、RMSE、MAE。</p>
+</li>
+<li>
+<p><strong>SHAP 可解释性</strong>：基于 TreeSHAP 计算每个特征对每个样本的 SHAP 值，取平均绝对值作为全局重要性；通过散点图揭示局部依赖关系，重点看气温与 δv/v 的关系形态。</p>
+</li>
+</ol>
+<h2 id="results">Results</h2>
+<h3 id="_1">模型表现</h3>
+<p>XGBoost 在两个斜坡都优于 RF 和 LightGBM。测试集上 PBG 的 R²=0.850，JPZ 的 R²=0.677。PBG 预测明显更稳，可能是因为岩质斜坡的物理过程更一致；JPZ 作为土质斜坡，非线性和噪声更强。</p>
+<h3 id="_2">主导因素：气温</h3>
+<p><img alt="SHAP feature importance for PBG and JPZ slopes" src="/images/paper-decoupling-seasonal-seismic-velocity-changes/figure3.jpeg" /></p>
+<center><em>图 3. PBG 与 JPZ 斜坡六个输入特征的平均 |SHAP| 排名（左）与 SHAP 值分布（右）。气温在两处都占主导地位。</em></center>
+
+<p>SHAP 全局重要性显示：</p>
+<ul>
+<li><strong>PBG</strong>：气温贡献 62.1%，湿度 15.8%，气压 9.6%，PGV 6.7%，地震频次 3.5%，降雨 2.3%；</li>
+<li><strong>JPZ</strong>：气温贡献 44.9%，湿度 18.1%，气压 11.9%，降雨 9.8%，PGV 9.2%，地震频次 6.2%。</li>
+</ul>
+<p>气温在两处都是绝对主导。相对湿度和气压位居二三，但降雨在 JPZ 比在 PBG 重要得多，符合土质斜坡对水更敏感的直觉。</p>
+<h3 id="-vv-vs">气温-δv/v 关系：线性 vs 非线性</h3>
+<p><img alt="SHAP dependence of air temperature" src="/images/paper-decoupling-seasonal-seismic-velocity-changes/figure4.jpeg" /></p>
+<center><em>图 4. 气温对 δv/v 贡献的 SHAP 依赖图。PBG 接近线性，JPZ 在约 7.4–17.5°C 区间呈现明显的非线性平台。</em></center>
+
+<p>这是文章最抓人的结果：</p>
+<ul>
+<li><strong>PBG</strong>：气温 SHAP 值随温度升高近似线性增长，拐点约 <strong>15.3°C</strong>；</li>
+<li><strong>JPZ</strong>：整体也呈正相关，但在 <strong>7.4–17.5°C</strong> 区间出现一段“平台”，拐点约 <strong>23.6°C</strong>。</li>
+</ul>
+<p>作者解释，PBG 岩体热导率和热膨胀系数较高，温度变化引起的热弹性应变更显著、响应更直接；JPZ 由砾石土、粉质粘土和千枚岩碎屑组成，孔隙结构非均质，热物理性质差异大，导致同一温度区间内响应被“稀释”或延迟。</p>
+<h3 id="_3">与多元线性回归的对比</h3>
+<p>文章也用仅含气温、湿度和气压的 MLR 做了拟合。MLR 同样显示气温正相关，且 PBG 的气温系数更大，与 SHAP 一致。但 MLR 无法捕捉 JPZ 上湿度的非线性贡献，导致其低估湿度的重要性。SHAP 的价值就在这里：既能给全局排名，也能暴露局部分段行为。</p>
+<h2 id="discussion">Discussion</h2>
+<h3 id="innovations">Innovations</h3>
+<ol>
+<li><strong>预测 + 解释一体化</strong>：不是简单用 XGBoost 拟合 δv/v，而是用 SHAP 把黑箱打开，回答“谁重要、怎么重要”。</li>
+<li><strong>跨斜坡对比</strong>：把岩质和土质两个慢速滑坡放在一起比较，发现同一主导因素可以表现出完全不同的关系形态。</li>
+<li><strong>定量化边际贡献</strong>：用 SHAP 百分比把各因素的相对重要性算出来，比单纯看响应系数更直观。</li>
+</ol>
+<h3 id="contributions">Contributions</h3>
+<ul>
+<li>提供了一个可推广的框架：用可解释机器学习把滑坡 δv/v 的季节性驱动因素拆开。</li>
+<li>指出在两类不同物质组成的斜坡上，温度控制机制可能不同：岩质斜坡更直接地热弹性响应，土质斜坡受非均质孔隙结构和热物性调制。</li>
+<li>说明传统 MLR 在非线性关系上会低估某些因素的作用， interpretable ML 在滑坡监测里有实际价值。</li>
+</ul>
+<h3 id="limitations">Limitations</h3>
+<ul>
+<li>只有两个斜坡，代表性有限。中国西南滑坡类型很多，不能简单外推到所有岩质或土质斜坡。</li>
+<li>2–20 Hz 尾波主要敏感于地表下数米到约 200 米，深部结构信息不足。</li>
+<li>SHAP 解释需要领域知识 caution；它给出的是模型内的贡献，不是物理因果。</li>
+<li>PGV 和地震频次来自区域目录，震源距离和路径影响没有单独校正。</li>
+<li>XGBoost 刻画的是“关系”，不是严格的时间序列预测；训练和测试是随机划分，没有按时间外推验证。</li>
+</ul>
+<h2 id="personal-thoughts">Personal Thoughts</h2>
+<p>这篇工作和我最近在复现的方向很接近：都是看 δv/v 的季节性变化，但作者用 XGBoost + SHAP 把驱动因素拆开，比我之前想的多元线性回归前进了一步。SHAP 的妙处不是让模型更准，而是让模型的“理由”变得可读。</p>
+<p>我觉得最有价值的是图 4 里那个非线性平台。如果只是跑 MLR，这条曲线就会被压成一条直线，湿度和温度的交互也可能被掩盖。SHAP 依赖图把 JPZ 土坡的复杂热-水-力学响应暴露出来了。这对工程监测有实际意义：同样的温度阈值预警，在岩坡和土坡上可能完全不通用。</p>
+<p>不过我也同意作者的谨慎：SHAP 只是“模型里的解释”，不是物理定律。它告诉我们气温重要，但为什么在非线性区间出现平台，还需要更多独立观测（比如含水量、孔隙压力、位移）来验证。否则解释就变成了另一种黑箱叙事。</p>
+<p>另外，文中 PBG 和 JPZ 的数据都来自自己布设的台站，这种长期、同址、配气象站的数据集本身就是竞争力。做滑坡 δv/v 的人很多，但能同时提供高质量噪声、气象和可解释性分析的， still 不多。这个数据要是公开，后续研究会受益不少。</p>
+    </div>
+
+  <div class="comments-section">
+  <h3>Comments</h3>
+  <script src="https://giscus.app/client.js"
+          data-repo="junxie01/junxie01.github.io"
+          data-repo-id="R_kgDOSGl1Dg"
+          data-category="General"
+          data-category-id="DIC_kwDOSGl1Ds4DAuif"
+          data-mapping="specific"
+          data-term="blog/2026-08-17-paper-reading-66"
+          data-strict="0"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="bottom"
+          data-theme="preferred_color_scheme"
+          data-lang="en"
+          crossorigin="anonymous"
+          async>
+  </script>
+</div>
+
+  <div class="post-nav">
+    
+      <a class="post-nav-prev" href="/blog/2026-08-15-about-playing-game.html">&larr; 关于游戏</a>
+    
+
+    <a class="post-nav-blog" href="/blog/">Blog</a>
+
+    
+      <span class="post-nav-next"></span>
+    
+  </div>
+</article>
+</div>
+
+      
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Jun Xie &middot; Built with Python &amp; Markdown &middot;
+        <a href="https://github.com/junxie01" target="_blank">GitHub</a> &middot;
+        <a href="/atom.xml" target="_blank">Atom</a>
+      </p>
+      <p class="site-stats">
+        <span id="busuanzi_container_site_pv">
+          👁 Total visits: <span id="busuanzi_value_site_pv"></span>
+        </span>
+        &middot;
+        <span id="busuanzi_container_site_uv">
+          Visitors: <span id="busuanzi_value_site_uv"></span>
+        </span>
+      </p>
+    </div>
+  </footer>
+
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+      startOnLoad: true,
+      securityLevel: 'strict',
+      theme: window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'neutral'
+    });
+  </script>
+
+</body>
+</html>
