@@ -3,11 +3,34 @@
   <title>SEISAMUSE</title>
   <link href="https://www.seis-jun.xyz/atom.xml" rel="self" />
   <link href="https://www.seis-jun.xyz" />
-  <updated>2026-08-17T13:36:04+08:00</updated>
+  <updated>2026-08-17T15:54:53+08:00</updated>
   <id>https://www.seis-jun.xyz/</id>
   <author>
     <name>Jun Xie</name>
   </author>
+  
+  <entry>
+    <title>创造点有意思的东西</title>
+    <link href="https://www.seis-jun.xyz/blog/2026-08-17-create-something-interesting.html" />
+    <id>https://www.seis-jun.xyz/blog/2026-08-17-create-something-interesting.html</id>
+    <updated>2026-08-17T15:54:53+08:00</updated>
+    <published>2026-08-17T15:54:53+08:00</published>
+    <summary type="html"><p>你上一次纯粹为了好玩、做一件没有任何用处的东西，是什么时候？ 想不起来？其实你随时随地都在创造，你的身体在呼吸，在进行大量的化学反应，所以你创造了大量的废气，废物。当然，这些被动的东西就算了吧，创造这个过程肯定要是主动并且自由的才可以。 你在上班、拧螺丝、码字、砌砖、敲代码、做PPT、写总结的时候，虽然你发挥了主动性，...</p></summary>
+    <content type="html"><![CDATA[<p>你上一次纯粹为了好玩、做一件没有任何用处的东西，是什么时候？</p>
+<p>想不起来？其实你随时随地都在创造，你的身体在呼吸，在进行大量的化学反应，所以你创造了大量的废气，废物。当然，这些被动的东西就算了吧，创造这个过程肯定要是主动并且自由的才可以。</p>
+<p>你在上班、拧螺丝、码字、砌砖、敲代码、做PPT、写总结的时候，虽然你发挥了主动性，造了一些东西，但可能你在造这些东西的时候不自由，所以也不算创造。</p>
+<p>但是这还不够。年少时捏一个泥巴玩具，好玩，但玩完就忘了。因为那只是&#8221;好玩&#8221;，不是&#8221;有意思&#8221;。有意思的东西会留在你身上，好玩的东西只会留在当时。</p>
+<p>那么什么才是创造，关键就是题目中的“有意思”这个形容词了。“有意思”的定义每个人都可能有不同的看法，我们很难讲清楚它的定义。但只要你看到了“有意思”的东西，你一定知道。你会说，“诶，蛮有意思”，或者，“哈哈，还能这样”；当然还有，“哇，太有才了”，但这些离一般人稍稍有点远。然而他们有一个共同点：可能短期内你看不到这些东西的直接的价值，或者简单来讲就是无用，但他们总会制造意外。你猜不到手工耿下次会焊出什么鬼东西，所以你点进去，并且笑出猪叫。</p>
+<p>然而意外不是天上掉下来的，它是自由意志的排泄物。上班不自由，所以你造出来的都是&#8221;有用&#8221;的东西；只有当你自由的时候，你才会造出那些&#8221;没用但有意思&#8221;的东西。</p>
+<p>如今人们造出来AI很有用，可以做PPT，可以写总结，相对的，人就变得&#8221;无用&#8221;了。但无用才是剩余价值。AI把一切有用的活都吃干抹净，人剩下的全是无用：你造的bug、你画的画、你写的没人看的文章。而这些恰恰是机器榨不走的存量，因为有意思来自怪癖、错误、品味和个人经历。</p>
+<p>AI学会的是标准和平均答案，学不会你的怪和变态。</p>
+<p>当AI把所有有用的都做完，有意思就成了人的护城河。</p>
+<p>做科研更是如此，AI能做科研里一切&#8221;有用&#8221;的活，例如优化、验证、填坑。但它不会凭好奇心去问一个没人问过的&#8221;无用&#8221;但“有意思”的问题。而科学史上最值钱的发现，恰恰都长在&#8221;无用&#8221;的问题上。<del>哪些有想法的，用起AI来岂不如虎添翼</del></p>
+<p>好了，我也不知道我在说什么，我去造无用的东西去了。</p>]]></content>
+    
+    <category term="日记" />
+    
+  </entry>
   
   <entry>
     <title>凡事发生皆有利于我</title>
@@ -5769,107 +5792,6 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class=
 <p>有兴趣可以下载<a href="/scripts/auto_seismo_monitor.py">Python脚本</a>试试，修改一下目录就可以了。</p>]]></content>
     
     <category term="python" />
-    
-  </entry>
-  
-  <entry>
-    <title>用AI做网页</title>
-    <link href="https://www.seis-jun.xyz/blog/2026-03-21-web-build-with-ai.html" />
-    <id>https://www.seis-jun.xyz/blog/2026-03-21-web-build-with-ai.html</id>
-    <updated>2026-03-21T10:36:31+08:00</updated>
-    <published>2026-03-21T10:36:31+08:00</published>
-    <summary type="html"><p>我又试着做了两个网页，一个是<a href="https://www.seis-jun.xyz/paper_weekly/frontend/">论文周报</a>，另一个是<a href="https://www.seis-jun.xyz/earthquake_weekly/">每周地震</a>。</p></summary>
-    <content type="html"><![CDATA[<p>我又试着做了两个网页，一个是<a href="https://www.seis-jun.xyz/paper_weekly/frontend/">论文周报</a>，另一个是<a href="https://www.seis-jun.xyz/earthquake_weekly/">每周地震</a>。</p>
-<!--less-->
-<p>&#8195;&#8195;这次用的是<a href="https://developer.android.com/studio">Andriod Studio</a>。套路明白了，大概现在的一些IDE平台都嵌入了大预言模型，可以对话然后让AI帮你做事。这应该跟openclaw差不太多，只是相比起来openclaw给的权限太高，可以操纵你的电脑所有内容，而这些IDE只能操作当前目录。
-&#8195;&#8195;好了分别介绍一下我的两个网页。首先是论文周报：</p>
-<h1 id="paper_weekly">📚 地震学多专题论文周报 (paper_weekly)</h1>
-<p>一个自动追踪 arXiv和主要滴血期刊地震学相关研究（DAS、面波、成像、冰川地震等）并自动翻译、生成 PDF 报告并集成至 Hexo 博客的自动化系统。</p>
-<h2 id="_1">🌐 站点集成说明</h2>
-<h3 id="_2">部署为子站点</h3>
-<ol>
-<li>在本仓库的 <strong>Settings &gt; Pages</strong> 中开启部署，选择 <code>main</code> 分支。</li>
-<li>您的论文页面将自动出现在：<code>https://www.seis-jun.xyz/paper_weekly/</code></li>
-<li>在Hexo中的next主题下的 <code>_config.yml</code> 菜单中添加该链接即可。</li>
-</ol>
-<h3 id="_3">自动化流程</h3>
-<ul>
-<li><strong>定时触发</strong>：每周日北京时间上午 8:00 自动运行。</li>
-<li><strong>手动触发</strong>：在 GitHub Actions 页面点击 &#8220;Run workflow&#8221;。</li>
-<li><strong>包含专题</strong>：冰川地震、分布式光纤传感、面波研究、地震成像、地震研究。</li>
-</ul>
-<h2 id="secrets">🛠️ 必须完成的配置 (Secrets)</h2>
-<p>在 GitHub 仓库 <strong>Settings &gt; Secrets and variables &gt; Actions</strong> 中添加：
-- <code>MAIL_USERNAME</code>: Gmail 地址 (如 <code>xxx@gmail.com</code>)。
-- <code>MAIL_PASSWORD</code>: Google 账号生成的 <strong>16 位应用专用密码</strong> (删除空格)。
-- <code>MAIL_TO</code>: 接收邮箱。</p>
-<h2 id="_4">🔍 故障排查 (邮件发送失败)</h2>
-<p>如果 GitHub Actions 报 <code>535 Login fail</code>：
-1. <strong>两步验证</strong>：确保 Google 账号已开启 2-Step Verification。
-2. <strong>应用密码</strong>：必须使用 16 位 App Password，填入 Secret 时删除所有空格。
-3. <strong>YAML 配置</strong>：确保 <code>.github/workflows/update.yml</code> 中 <code>server_port: 465</code> 且 <code>secure: true</code>。</p>
-<h2 id="_5">📂 仓库结构</h2>
-<ul>
-<li><code>update_papers.py</code>: 核心脚本（多专题抓取、翻译、PDF 生成）。</li>
-<li><code>frontend/</code>: 网页展示端（支持多专题切换）。</li>
-<li><code>.github/workflows/update.yml</code>: GitHub Actions 配置文件。</li>
-</ul>
-<p>可以到我的侧边栏点击<a href="https://www.seis-jun.xyz/paper_weekly/frontend/">论文周报</a>查看。每周日它会自动检索文章然后生成pdf发邮件给我，另外也会更新网页。目前版本并没有集成AI，不能总结论文内容，只有翻译。有机会再集成AI吧。</p>
-<p>&#8195;&#8195;另一个网页是每周地震。以前参加组会每周都会有的内容。</p>
-<h1 id="weekly-earthquake-report-usgs-insights">Weekly Earthquake Report (USGS Insights)</h1>
-<p>这是一个基于 USGS 数据实时生成的地震周报系统。它会自动抓取过去一周全球发生的地震，挑选震级最大的三个事件进行深度分析，包括局部历史地震对比、地质构造总结以及来自 USGS 和 Google News 的多源报道。</p>
-<h2 id="_6">🌟 功能特点</h2>
-<ul>
-<li><strong>全球地震图</strong>：实时展示过去 7 天全球地震分布，震级越大圆圈越大。</li>
-<li><strong>板块边界展示</strong>：在地图上叠加全球地质板块边界（Tectonic Plates）。</li>
-<li><strong>重大地震深度分析</strong>：<ul>
-<li><strong>局部地图</strong>：自动定位震中，展示 10 度范围内的地理细节。</li>
-<li><strong>历史对比</strong>：自动调取 1970 年以来该区域所有 M5.0+ 的历史地震（蓝色圆圈）。</li>
-<li><strong>视觉化报告</strong>：直接嵌入 USGS 官方生成的 <strong>Shakemap (烈度图)</strong>、<strong>Moment Tensor (震源球)</strong>、<strong>PAGER (损失预估)</strong> 等专业图表。</li>
-<li><strong>多源新闻</strong>：集成 USGS 内部报告链接和 <strong>Google News</strong> 实时搜索结果。</li>
-</ul>
-</li>
-<li><strong>全自动更新</strong>：利用 GitHub Actions 每周日凌晨（UTC）自动运行抓取脚本并更新网页。</li>
-</ul>
-<h2 id="_7">🛠️ 技术栈</h2>
-<ul>
-<li><strong>前端</strong>: HTML5, CSS3, JavaScript (Leaflet.js)</li>
-<li><strong>后端</strong>: Python 3 (Requests, Regex)</li>
-<li><strong>数据源</strong>: <a href="https://earthquake.usgs.gov/">USGS Earthquake Hazards Program</a></li>
-<li><strong>自动化</strong>: GitHub Actions</li>
-</ul>
-<h2 id="_8">🚀 本地运行</h2>
-<ol>
-<li>
-<p><strong>安装依赖</strong>:
-   <code>bash
-   pip3 install requests</code></p>
-</li>
-<li>
-<p><strong>抓取最新数据</strong>:
-   <code>bash
-   python3 fetch_data.py</code></p>
-</li>
-<li>
-<p><strong>启动预览服务器</strong>:
-   <code>bash
-   python3 -m http.server 8000</code>
-   访问 <code>http://localhost:8000</code> 即可查看。</p>
-</li>
-</ol>
-<h2 id="github-actions">🤖 自动化部署 (GitHub Actions)</h2>
-<p>项目已配置 <code>.github/workflows/update_earthquakes.yml</code>。
-- <strong>定时运行</strong>: 每周日 00:00 UTC。
-- <strong>手动触发</strong>: 在 GitHub 仓库的 <code>Actions</code> 页面选择 &#8220;Update Earthquake Data&#8221; 并运行。</p>
-<h2 id="_9">🔗 部署为子站点</h2>
-<ol>
-<li>在本仓库的 <strong>Settings &gt; Pages</strong> 中开启部署，选择 <code>main</code> 分支。</li>
-<li>您的论文页面将自动出现在：<code>https://www.seis-jun.xyz/earthquake_weekly</code></li>
-<li>在 Hexo 的 <code>_config.yml</code> 菜单中添加该链接即可。</li>
-</ol>
-<p>也可以到我的侧边栏点击<a href="https://www.seis-jun.xyz/earthquake_weekly/">每周地震</a>查看。每周日会重新抓取数据，更新网页。目前版本比较简单，欢迎提意见。</p>]]></content>
-    
-    <category term="web" />
     
   </entry>
   
