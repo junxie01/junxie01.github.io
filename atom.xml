@@ -3,11 +3,46 @@
   <title>SEISAMUSE</title>
   <link href="https://www.seis-jun.xyz/atom.xml" rel="self" />
   <link href="https://www.seis-jun.xyz" />
-  <updated>2026-08-18T19:00:35+08:00</updated>
+  <updated>2026-08-18T21:32:03+08:00</updated>
   <id>https://www.seis-jun.xyz/</id>
   <author>
     <name>Jun Xie</name>
   </author>
+  
+  <entry>
+    <title>不用AI生成图片了，unsplash真香</title>
+    <link href="https://www.seis-jun.xyz/blog/2026-08-18-replace-ai-image-with-unsplash.html" />
+    <id>https://www.seis-jun.xyz/blog/2026-08-18-replace-ai-image-with-unsplash.html</id>
+    <updated>2026-08-18T21:32:03+08:00</updated>
+    <published>2026-08-18T21:32:03+08:00</published>
+    <summary type="html"><p>给博客配一幅图马上就让干瘪的文字变得“湿透”了，哦不，我的意思是会看起来整个博客都会舒服好多。 在主页显示图片也会让主页显得漂亮。 写博客的时候在title区域加上： 然后运行build.py的时候python脚本会直接把frontmatter的值吐进src。 在主页显示的图片是被切出的中间部分，不能看到图片全貌。要看...</p></summary>
+    <content type="html"><![CDATA[<p><img alt="" src="https://images.unsplash.com/photo-1625467769506-8742f12fb865?q=80&amp;w=1770&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" /></p>
+<p>给博客配一幅图马上就让干瘪的文字变得“湿透”了，哦不，我的意思是会看起来整个博客都会舒服好多。</p>
+<p>在主页显示图片也会让主页显得漂亮。</p>
+<p>写博客的时候在title区域加上：</p>
+<div class="highlight"><pre><span></span><code><span class="n">card_image</span><span class="o">:</span><span class="w"> </span><span class="n">https</span><span class="o">://</span><span class="n">images</span><span class="o">.</span><span class="na">unsplash</span><span class="o">.</span><span class="na">com</span><span class="o">/</span><span class="n">photo</span><span class="o">-</span><span class="mi">1625467769506</span><span class="o">-</span><span class="mi">8742</span><span class="n">f12fb865</span><span class="o">?</span><span class="n">q</span><span class="o">=</span><span class="mi">80</span><span class="o">&amp;</span><span class="n">w</span><span class="o">=</span><span class="mi">1770</span><span class="o">&amp;</span><span class="n">auto</span><span class="o">=</span><span class="n">format</span><span class="o">&amp;</span><span class="n">fit</span><span class="o">=</span><span class="n">crop</span><span class="o">&amp;</span><span class="n">ixlib</span><span class="o">=</span><span class="n">rb</span><span class="o">-</span><span class="mf">4.1</span><span class="o">.</span><span class="mi">0</span><span class="o">&amp;</span><span class="n">ixid</span><span class="o">=</span><span class="n">M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA</span><span class="o">%</span><span class="mi">3</span><span class="n">D</span><span class="o">%</span><span class="mi">3</span><span class="n">D</span>
+</code></pre></div>
+
+<p>然后运行build.py的时候python脚本会直接把frontmatter的值吐进src。</p>
+<p>在主页显示的图片是被切出的中间部分，不能看到图片全貌。要看到全貌还需要在博客里面加</p>
+<div class="highlight"><pre><span></span><code>![](https://images.unsplash.com/photo-1625467769506-8742f12fb865?q=80&amp;w=1770&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
+</code></pre></div>
+
+<p>放到哪里都可以，我一般放到前面。</p>
+<p>之前我是用的codex来生成图片。把整篇博客丢给他，然后他就生成了一个独一无二和你的博文适配的图片，美妙无比。然后把图片拷贝到images文件夹下面，然后引用的时候用</p>
+<div class="highlight"><pre><span></span><code>card_image: /images/xxxx.png
+</code></pre></div>
+
+<p>但每次都生成图片一方面是太消耗我的token了，都是money啊。另一方面生成的图片需要推送到github仓库里才能显示。久而久之仓库会爆掉的啊。</p>
+<p>现在好了我换成了<a href="https://unsplash.com/">unsplash</a>，简直不要太棒。unsplash中图片是免费使用的，包括商业用途，当然包括博客插图。甚至以后接广告变现，都在这范围内。而且不强制署名，但官方还是鼓励署名感谢。对了似乎还可以改图，包括裁剪、调色、加字都行。</p>
+<p>我这里先对使用了以及以后将要使用的图片一并表示感谢。目前是绝不会对这些图片进行商用的，而且以后估计也不会。</p>
+<p>好了，博客看起来舒服多了。</p>
+<p>又水了一篇博客。</p>
+<p>博客那么好写吗？</p>]]></content>
+    
+    <category term="web" />
+    
+  </entry>
   
   <entry>
     <title>关于情绪</title>
@@ -5431,42 +5466,6 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class=
     <category term="geophysics" />
     
     <category term="ocean" />
-    
-  </entry>
-  
-  <entry>
-    <title>Welcome to SEISAMUSE</title>
-    <link href="https://www.seis-jun.xyz/blog/2026-04-16-welcome.html" />
-    <id>https://www.seis-jun.xyz/blog/2026-04-16-welcome.html</id>
-    <updated>2026-04-16T12:01:01+08:00</updated>
-    <published>2026-04-16T12:01:01+08:00</published>
-    <summary type="html"><p>Hello! welcome to my website. Here I share my journey in seismology research and beyond.</p></summary>
-    <content type="html"><![CDATA[<h2 id="hello">Hello!</h2>
-<p>Welcome to <strong>SEISAMUSE</strong> — my personal corner of the internet where I write about seismology, geophysics, and the occasional tangent into environmental and glacial seismology.</p>
-<h3 id="why-this-site">Why This Site?</h3>
-<p>As a researcher, I believe in open knowledge sharing. This site serves as:</p>
-<ul>
-<li>A <strong>blog</strong> for my thoughts on recent papers, field experiences, and research insights.</li>
-<li>A <strong>portfolio</strong> showcasing my projects and resources.</li>
-<li>A way to connect with fellow researchers and the broader geoscience community.</li>
-</ul>
-<h3 id="what-to-expect">What to Expect</h3>
-<p>I&#8217;ll be posting about:</p>
-<ol>
-<li><strong>Paper reviews</strong> — My take on interesting new publications.</li>
-<li><strong>Research notes</strong> — Methods, tools, and tips from the trenches.</li>
-<li><strong>Field stories</strong> — Adventures (and misadventures) in data collection.</li>
-<li><strong>Tutorials</strong> — Practical guides for seismology and data analysis.</li>
-</ol>
-<h3 id="stay-connected">Stay Connected</h3>
-<p>Feel free to explore the <a href="/blog/">Blog</a>, check out my <a href="/links/">Projects &amp; Resources</a>, or learn more <a href="/about/">About Me</a>.</p>
-<p>If you find this site useful, consider supporting my work — every bit of encouragement helps!</p>
-<hr />
-<p><em>— Jun Xie, April 2026</em></p>]]></content>
-    
-    <category term="announcement" />
-    
-    <category term="seismology" />
     
   </entry>
   
