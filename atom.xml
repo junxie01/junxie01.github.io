@@ -3,11 +3,43 @@
   <title>SEISAMUSE</title>
   <link href="https://www.seis-jun.xyz/atom.xml" rel="self" />
   <link href="https://www.seis-jun.xyz" />
-  <updated>2026-08-22T09:33:44+08:00</updated>
+  <updated>2026-08-22T19:32:57+08:00</updated>
   <id>https://www.seis-jun.xyz/</id>
   <author>
     <name>Jun Xie</name>
   </author>
+  
+  <entry>
+    <title>关于信念</title>
+    <link href="https://www.seis-jun.xyz/blog/2026-08-22-about-believe.html" />
+    <id>https://www.seis-jun.xyz/blog/2026-08-22-about-believe.html</id>
+    <updated>2026-08-22T19:32:57+08:00</updated>
+    <published>2026-08-22T19:32:57+08:00</published>
+    <summary type="html"><p>选择相信</p></summary>
+    <content type="html"><![CDATA[<p><img alt="" src="https://images.unsplash.com/photo-1590224007864-22c723b9edde?q=80&amp;w=1064&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" /></p>
+<p>或许很多人都会好奇一个问题，在我国几乎没有人信宗教，是什么力量支撑着我们向前而没有混乱、崩溃、爆炸？</p>
+<p>调子起高了。不要意思，重来。</p>
+<p>和尼日利亚学生讨论的时候，提到了信念这个东西。也是我一直比较好奇的东西。我想我可能需要继续修正我的认识。当然，也许不叫修正，而是伴随在写这篇东西的时候的思维的整理。</p>
+<p>有句老话叫难得糊涂。可能很多人认为糊涂是比较好的一种中庸的生活状态。通过我几篇“关于”的思考，我发现他们隐约是对的。我不是说我赞成活得糊涂，而是说人不可能清楚。就连最知名的哲学家都难以提出唯一的人生解答，对于同一个问题，常常有多个流派打架。每个门派都掌握对方的死穴。我说的这些是指用科学解释不了的东西，例如你应该怎么活；命运有没有定；道德是什么；善恶是什么？</p>
+<p>我以为我有明确的定义，但仔细分析以后发现我只有偏见。这些真的是没有唯一答案的东西。所以古人叫我们要糊涂，不是让我们选择糊涂，而可能是我们不可能明了。</p>
+<p>但我觉得，如果你没有经过思考，且想要弄明白这个过程而直接选择糊涂的话大概是真糊涂。</p>
+<p>我又为糊涂找到了另外的解释，大约是过去人们没有吃饱，因为吃饱了才能思考哲学。没有“吃饱”，那他的基础需求就没有得到满足，没有满足他就只去寻求这些基础需求了；他没有多余的经历和能量动用更多的脑神经来进行深入的思考，毕竟这些思考不能让他们吃得更饱。</p>
+<p>所以更多的人来参与到哲学思考中，另一方面就表明人们的生活水平提高了啊。</p>
+<p><del>如果你读到我的文字觉得乱，说明我还没有想清楚，也说明我在思考，并没有为写而写，而是为思考而写。</del></p>
+<p>好了，接着讲信仰吧。</p>
+<p>学生说，没有上帝的存在，如何来定义善恶，而你为了什么而活？我讲的<a href="/blog/2026-08-19-about-the-world-2.html">世界是屎山代码</a>里面，我对这世界和神佛进行了“破”，但我没有“立”。所以这个问题打到了我。如果世界没有造物，没有目的，没有意义。那我们怎么办？我们不应当就死了算了？</p>
+<p>Playing God game或者相信宗教<del>邪教也可以</del>其实是很容易解决这个问题。</p>
+<p>我不相信宗教。</p>
+<p>但我和他们其实没有什么不同。我们都有“相信”，或者称为“信念”。只是他们相信有造物主，他们是个产物，是为了服务，且任人摆布。</p>
+<p>而我相信可能性，我相信自由，我相信能动性。<del>似乎有点像老祖宗的人定胜天了啊。</del></p>
+<p>信仰不是“我知道答案”，而是“面对无法彻底知道的东西，我决定如何活”。</p>
+<p>我相信人与人要平等，要善待自己，要善待他人，<a href="/blog/2026-08-17-create-something-interesting.html">要创造有意思的东西</a>，要<a href="/blog/2021-03-08-sky-and-universe.html">做一些没有意义的事情</a>。</p>
+<p>有所相信，但知道自己可能错；有所坚持，但仍然允许根据现实修正自己。</p>
+<p>有信仰，但也允许自己怀疑；有不确定，但仍然选择思考和行动。</p>]]></content>
+    
+    <category term="日记" />
+    
+  </entry>
   
   <entry>
     <title>关于道德</title>
@@ -5307,82 +5339,6 @@ ssh<span class="w"> </span>-N<span class="w"> </span>-R<span class="w"> </span><
 </code></pre></div>]]></content>
     
     <category term="work" />
-    
-  </entry>
-  
-  <entry>
-    <title>Paper Reading (54)</title>
-    <link href="https://www.seis-jun.xyz/blog/2026-05-25-paper-reading-54.html" />
-    <id>https://www.seis-jun.xyz/blog/2026-05-25-paper-reading-54.html</id>
-    <updated>2026-05-25T00:00:00+08:00</updated>
-    <published>2026-05-25T00:00:00+08:00</published>
-    <summary type="html"><p>Systematic Detection of Glacial Earthquakes in Thwaites Glacier, West Antarctica, by Regional Surface Waves</p></summary>
-    <content type="html"><![CDATA[<h2 id="paper-information">Paper Information</h2>
-<ul>
-<li><strong>Title</strong>: Systematic Detection of Glacial Earthquakes in Thwaites Glacier, West Antarctica, by Regional Surface Waves</li>
-<li><strong>First Author</strong>: Thanh‐Son Phạm</li>
-<li><strong>Corresponding Author</strong>: Thanh‐Son Phạm</li>
-<li><strong>Affiliation</strong>: Research School of Earth Sciences, The Australian National University, Canberra, ACT, Australia</li>
-<li><strong>Journal</strong>: Geophysical Research Letters, 2025, 52, e2025GL118885</li>
-<li><strong>DOI</strong>: 10.1029/2025GL118885</li>
-</ul>
-<h2 id="author-background">Author Background</h2>
-<h3 id="first-authors-representative-works">First Author&#8217;s Representative Works</h3>
-<ol>
-<li>Phạm, T.‐S. (2025). Systematic detection of glacial earthquakes in Thwaites Glacier, West Antarctica, by regional surface waves. Geophysical Research Letters, 52, e2025GL118885.</li>
-<li>Ekström, G., Nettles, M., &amp; Tsai, V. C. (2006). Seasonality and increasing frequency of Greenland glacial earthquakes. Journal of Geophysical Research: Earth Surface, 111(F3), F03023.</li>
-<li>Winberry, J. P., Anandakrishnan, S., &amp; Alley, R. B. (2020). Seismic observations of glacial earthquakes at Thwaites Glacier, Antarctica. Journal of Geophysical Research: Earth Surface, 125(10), e2020JF005714.
-经常都是错的，它没有编造就已经不错了。</li>
-</ol>
-<h2 id="abstract">Abstract</h2>
-<p>本研究开发了一种基于区域表面波相干性的自动检测算法，用于识别南极洲特维特斯冰川和松岛冰川的冰川地震。该算法应用于2010-2023年的数据集，结果发现了362个以前未被记录的、Ms 2-3级的地震事件，这些事件与特维特斯冰川和松岛冰川有关。研究结果表明，特维特斯冰川的冰川地震可能是由于冰山崩解引起的，而松岛冰川的地震事件仍需要进一步研究。</p>
-<h2 id="research-context">Research Context</h2>
-<h3 id="importance">Importance</h3>
-<p>冰川地震是冰川学和地球物理学领域的一个重要研究方向。冰川地震是由冰川崩解引起的，能够提供有关冰川动力学和冰川-海洋相互作用的重要信息。南极洲是全球最大的冰川系统，了解其冰川地震活动对于研究气候变化和海平面上升具有重要意义。</p>
-<p>冰川地震的研究可以帮助我们了解冰川的动力学和冰川-海洋相互作用的机制。冰川地震可以提供有关冰川崩解的信息，这是冰川 масс损失的一个重要机制。同时，冰川地震也可以帮助我们了解冰川的稳定性和冰川-海洋系统的响应气候变化的能力。</p>
-<h3 id="previous-studies">Previous Studies</h3>
-<ul>
-<li><strong>Ekström et al. (2003)</strong>: 发现了格陵兰岛冰川地震的存在，并提出了冰川地震的机制。<em>Journal of Geophysical Research: Earth Surface, 108(B6), 2295.</em></li>
-<li><strong>Nettles &amp; Ekström (2010)</strong>: 使用全球地震网络检测了东南极洲冰川地震的存在。<em>Journal of Geophysical Research: Earth Surface, 115(F3), F03023.</em></li>
-<li><strong>Chen et al. (2011)</strong>: 开发了一种基于地震波相干性的自动检测算法，用于识别冰川地震。<em>Journal of Geophysical Research: Earth Surface, 116(F3), F03024.</em></li>
-<li><strong>Winberry et al. (2020)</strong>: 使用局部地震站和卫星图像检测了特维特斯冰川的冰川地震。<em>Journal of Geophysical Research: Earth Surface, 125(10), e2020JF005714.</em></li>
-<li><strong>Poli (2024)</strong>: 提出了使用极地地震站检测南极洲冰川地震的方法。<em>Journal of Geophysical Research: Earth Surface, 129(2), e2023JF006734.</em></li>
-</ul>
-<h3 id="limitations-of-previous-research">Limitations of Previous Research</h3>
-<p>之前的研究主要集中在格陵兰岛冰川地震的研究，南极洲冰川地震的研究相对较少。同时，之前的研究主要使用全球地震网络，分辨率较低，难以检测到小规模的冰川地震。</p>
-<p><img alt="图1 (a)南极洲2010年至2023年间陆地地震站点分布图和本研究中检测到的事件。蓝色" src="/images/paper-systematic-detection-glacial-earthquakes/figure1.jpeg" /></p>
-<center><em>图1 (a)南极洲2010年至2023年间陆地地震站点分布图和本研究中检测到的事件。蓝色</em></center>
-
-<p></p>
-<h3 id="data">Data</h3>
-<p>本研究使用了2010-2023年的南极洲地震数据，包括永久地震站和临时地震网络的数据。</p>
-<h3 id="methods">Methods</h3>
-<p>本研究开发了一种基于区域表面波相干性的自动检测算法，用于识别冰川地震。算法使用了延迟和叠加的方法，来识别地震波的相干性。</p>
-<p><img alt="图2 2016年11月5日03:57冰川地震的观测结果。 (a)斯威兹冰川海上出口的平面图。背景是Sentinel‐1" src="/images/paper-systematic-detection-glacial-earthquakes/figure2.jpeg" /></p>
-<center><em>图2 2016年11月5日03:57冰川地震的观测结果。 (a)斯威兹冰川海上出口的平面图。背景是Sentinel‐1</em></center>
-
-<p>
-本研究发现了362个以前未被记录的、Ms 2-3级的地震事件，这些事件与特维特斯冰川和松岛冰川有关。研究结果表明，特维特斯冰川的冰川地震可能是由于冰山崩解引起的，而松岛冰川的地震事件仍需要进一步研究。</p>
-<p><img alt="图4 描绘海冰状态对新形成的浮冰架上冰山稳定性的影响的简图" src="/images/paper-systematic-detection-glacial-earthquakes/figure4.jpeg" /></p>
-<center><em>图4 描绘海冰状态对新形成的浮冰架上冰山稳定性的影响的简图</em></center>
-
-<p></p>
-<h3 id="innovations">Innovations</h3>
-<p>本研究开发了一种新的自动检测算法，用于识别冰川地震。算法使用了区域表面波相干性的方法，能够检测到小规模的冰川地震。</p>
-<h3 id="contributions">Contributions</h3>
-<p>本研究为南极洲冰川地震的研究做出了贡献，提供了有关冰川动力学和冰川-海洋相互作用的重要信息。</p>
-<h3 id="limitations">Limitations</h3>
-<p>本研究的分辨率较高，但仍然存在一些限制，例如地震数据的质量和覆盖范围。</p>
-<h2 id="personal-thoughts">Personal Thoughts</h2>
-<p>本研究为南极洲冰川地震的研究做出了贡献，提供了有关冰川动力学和冰川-海洋相互作用的重要信息。未来研究可以进一步提高算法的精度和分辨率，检测到更多的小规模冰川地震。同时，研究可以扩展到其他冰川系统，提供更全面的冰川地震活动图景。唯一的问题就是把我想做的给做了。</p>]]></content>
-    
-    <category term="paper" />
-    
-    <category term="seismology" />
-    
-    <category term="geophysics" />
-    
-    <category term="glaciology" />
     
   </entry>
   
