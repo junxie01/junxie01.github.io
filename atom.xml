@@ -3,11 +3,44 @@
   <title>SEISAMUSE</title>
   <link href="https://www.seis-jun.xyz/atom.xml" rel="self" />
   <link href="https://www.seis-jun.xyz" />
-  <updated>2026-08-23T08:25:02+08:00</updated>
+  <updated>2026-08-23T18:33:20+08:00</updated>
   <id>https://www.seis-jun.xyz/</id>
   <author>
     <name>Jun Xie</name>
   </author>
+  
+  <entry>
+    <title>你的文档会不会有大量别字</title>
+    <link href="https://www.seis-jun.xyz/blog/2026-08-23-about-typo.html" />
+    <id>https://www.seis-jun.xyz/blog/2026-08-23-about-typo.html</id>
+    <updated>2026-08-23T18:33:20+08:00</updated>
+    <published>2026-08-23T18:33:20+08:00</published>
+    <summary type="html"><p>要不要我来帮你打字？</p></summary>
+    <content type="html"><![CDATA[<p><img alt="" src="https://images.unsplash.com/photo-1674446444222-bcf7d2912b87?q=80&amp;w=1770&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" /></p>
+<p>我不知道你有没有当作码字的牛马，我当过，且正在当。</p>
+<p>不仅码到word里，更码到ppt里。然后就悲催了，我不会五笔输入法，全用的普通拼音法。</p>
+<p>然后你知道的中文同音字很多，最关键的是我比较马虎，然后我的文字除了同音字还有一大堆奇怪的读不通的东西。一急就更多错误。然后通常就会被老板抓到遛出来作为错误的典型。</p>
+<p>大约已经被打成了典型，贴上了标签，当然不怪别人贴，估计自己也贴，只是不愿认领。</p>
+<p>当然标签贴得稳了贴得久了，就随之而带来四个好处。</p>
+<p>其一、证明你的脑子还没有被AI接管。你不是纯纯的在摸鱼，你有在码字，不是让AI代劳。让老板充分体会到你的认真。给你发工资是真tmd值。</p>
+<p>其二、当读到错字的时候老板就想起你。被人惦记是多么荣幸。要是能往好的方面惦记就更好了。但我不管，惦记就已经足够。</p>
+<p>其三、贴上了这个标签，不就掩盖了其他的标签了吗？只要这个标签够鲜明，其他什么逻辑不通、偷懒摸鱼都不重要。因为老板脑回路已经根生蒂固，一看到你想到你的问题就是老爱写别字，并附上一句，这孩子什么都好，就是爱写错字。</p>
+<p>其四、有了这个标签，你的麻烦可少了不少，因为谁敢让你来帮他码字啊？除了错算谁的？</p>
+<p>嘿嘿，我不禁笑出了主角。</p>
+<p>但是，我为什么那么马虎啊？</p>
+<p>算了，我不能一味地去往内挖掘，我一般拒绝内耗。</p>
+<p>你看，低标准就是让人舒服。</p>
+<p>我的意思是，一定是输入法有问题。</p>
+<p>那要不换一个输入法试试？</p>
+<p>算了，还是保持这个输入法吧。加深他们对你的印象，加固他们的脑回路。</p>
+<p>当然还有好处。</p>
+<p>哪天你仔细审查，交出去的文字多看几遍，少留几个别字。不巧别有用心<del>哦不，是被你训练了的</del>老板看到，准会夸你说，哟，长进了啊。不错，不错。</p>
+<p>要不去帮小王改一下他的材料吧。</p>
+<p>我的天，那还是算了。我继续多埋点别字，隐藏我的实力吧。哈哈。</p>]]></content>
+    
+    <category term="日记" />
+    
+  </entry>
   
   <entry>
     <title>捡鸡肉菌</title>
@@ -5096,61 +5129,6 @@ bash<span class="w"> </span>do_deploy.bash
 <p>那么现在的你是先天的你还是后天的你。</p>]]></content>
     
     <category term="日记" />
-    
-  </entry>
-  
-  <entry>
-    <title>Fish Guard</title>
-    <link href="https://www.seis-jun.xyz/blog/2026-05-26-fish-guard.html" />
-    <id>https://www.seis-jun.xyz/blog/2026-05-26-fish-guard.html</id>
-    <updated>2026-05-26T00:00:00+08:00</updated>
-    <published>2026-05-26T00:00:00+08:00</published>
-    <summary type="html"><p>作为打工人，是绝对不会在办公室摸鱼的，要是你看到，一定要 全当没看到 对我教育一番。 当然和我不一样，可能你会忍不住摸鱼，为此我帮你写了一个摸鱼小卫士。它帮你监控门口有没有动静，有没有敲门声。如果有，那它自动就会帮你把桌面切出来。 神不知鬼不觉 老板肯定看不到。 下面详细介绍一下： Fish Guard：一个用摄像头和...</p></summary>
-    <content type="html"><![CDATA[<p><img alt="" src="/images/fishguard.png" /></p>
-<p>作为打工人，是绝对不会在办公室摸鱼的，要是你看到，一定要<del>全当没看到</del>对我教育一番。
-当然和我不一样，可能你会忍不住摸鱼，为此我帮你写了一个摸鱼小卫士。它帮你监控门口有没有动静，有没有敲门声。如果有，那它自动就会帮你把桌面切出来。<del>神不知鬼不觉</del>老板肯定看不到。</p>
-<p>下面详细介绍一下：</p>
-<h1 id="fish-guard">Fish Guard：一个用摄像头和麦克风帮你守门的小工具</h1>
-<p>Fish Guard 是一个跨平台桌面小工具。它的用途很直接：用摄像头盯住门口或走廊区域，用麦克风监听敲门声；一旦检测到门口变化或疑似敲门，就自动静音、隐藏当前窗口并显示桌面。</p>
-<p>这个项目不是复杂的 AI 系统，而是一个实用型的小自动化工具。它把几个简单但有效的信号组合起来：视频侧使用 ROI 区域的帧间差分，音频侧使用 RMS 能量、频谱质心、低频能量占比和短促脉冲间隔来判断敲门。这样做的好处是依赖轻、运行快，也比较容易根据自己的办公室环境调参数。</p>
-<h2 id="_1">主要功能</h2>
-<ul>
-<li>摄像头实时预览，并支持鼠标框选检测区域。</li>
-<li>检测门口区域的明显运动变化。</li>
-<li>麦克风监听短促、低频占比较高的敲门声。</li>
-<li>触发后自动执行保护动作：静音、隐藏当前窗口、显示桌面。</li>
-<li>支持 macOS、Windows 和 Linux。</li>
-<li>提供音频样本分析脚本，方便以后继续调敲门检测参数。</li>
-</ul>
-<h2 id="_2">使用方式</h2>
-<p>安装依赖：</p>
-<div class="highlight"><pre><span></span><code>pip3<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
-</code></pre></div>
-
-<p>macOS 或 Linux 上如果需要音频检测，还要先安装 PortAudio。macOS 可以用：</p>
-<div class="highlight"><pre><span></span><code>brew<span class="w"> </span>install<span class="w"> </span>portaudio
-</code></pre></div>
-
-<p>启动：</p>
-<div class="highlight"><pre><span></span><code>python3<span class="w"> </span>fish_guard.py
-</code></pre></div>
-
-<p>或者在 macOS/Linux 上运行：</p>
-<div class="highlight"><pre><span></span><code>./start.sh
-</code></pre></div>
-
-<p>启动后先在摄像头画面里框选门的位置，再点击“开始监控”。如果没有框选区域，也可以选择使用全画面检测，但实际使用时推荐框选门口区域，这样误报会少很多。</p>
-<h2 id="_3">实现思路</h2>
-<p>视频检测部分没有用复杂模型，而是对选中的 ROI 区域做帧间差分。程序会把画面转成灰度、做高斯模糊，然后计算当前帧和上一帧的差异。如果差异区域面积超过阈值，就认为门口发生了明显变化。</p>
-<p>音频检测部分也尽量保持可解释。敲门声通常是短促脉冲，而且能量集中在比较低的频段。程序会先做环境噪声校准，然后在实时音频流里检测高于动态阈值的片段，再用频谱质心、低频能量占比、脉冲数量和脉冲间隔过滤掉说话声、音乐声和持续噪声。</p>
-<p>跨平台动作封装在单独的系统层里。macOS 使用 AppleScript，Windows 使用系统 API，Linux 优先调用常见桌面工具和音频后端命令。</p>
-<h2 id="_4">适用场景和限制</h2>
-<p>Fish Guard 更适合固定机位、固定办公环境下使用。如果摄像头经常移动，或者门口光线变化很强，就需要重新框选检测区域并降低视频灵敏度。音频检测也会受环境影响，如果办公室里一直有音乐、电视或密集键盘声，可以直接关闭音频检测，只保留视频检测。</p>
-<p>这个项目的定位是轻量实用，不追求“识别所有情况”。它更像是一个可以自己调、可以理解、可以快速运行的小工具。</p>
-<h2 id="_5">项目地址</h2>
-<p>GitHub：<code>git@github.com:junxie01/fish_guard.git</code></p>]]></content>
-    
-    <category term="fun" />
     
   </entry>
   
