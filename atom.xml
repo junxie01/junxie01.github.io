@@ -174,7 +174,7 @@
 他是否尊重我的主体性？
 我是否仍然拥有选择和离开的自由？</p>
 <p>其实骂一句滚很爽很简单，但真正脱离一段长期纠缠的关系，往往需要接受大量互相矛盾的事实。</p>
-<p>我每次都说，如果我有一个女儿，我一定会教她，人心隔肚皮。臭男人都有死缠烂打，或润物无声的本事。要是你开始的时候或者稍稍接触，潜意识或者主观上就发现这个人让你难以有接近靠近的欲望，或者他身上有让你很不舒服的特质。那就让他TMD去一边玩蛋去。</p>
+<p>我每次都说，如果我有一个女儿，我一定会教她，人心隔肚皮。很多臭男人都有死缠烂打，或润物无声的本事。要是你开始的时候或者稍稍接触，潜意识或者主观上就发现这个人让你难以有接近靠近的欲望，或者他身上有让你很不舒服的特质。那就让他TMD去一边玩蛋去。</p>
 <p>然而，我是男人我还学了一点心理知识，知道有登门坎效应等等，总总，人真的很容易放松警惕，被骗，被迫害。</p>
 <p>几千年封建压迫，残留还未消的现代，女性地位还未真正和男性平等，真的容易受到这些坏蛋伤害。</p>
 <p>唯一能做的是好好的爱护爱戴，让女孩儿的人格完整，性格独立，学会保护自己免于被骗，就算被骗也能振作，重建认知。</p>
@@ -1298,7 +1298,7 @@
 <p>科学研究手段通常被称为称为范式，早期有公式推导、模拟对观测、还有实验验证。现在AI出来了，有人就鼓吹说有新的范式了。无非是用黑箱子程序，跑出一茬不知道啥的规律，然后用蹩脚的相关性论证因果。</p>
 <p>我不知道我是不是飘了，但只觉得这很可笑。然而近年来，它很火，火得一踏糊涂。要是谁不跟上，不用它来做点什么总觉得会被时代抛弃。</p>
 <p>因此不管有没有AI经验或基础的，只要拿来用一下，沾一下光也显得自己跟上了趟，要是做得早就成了这个领域开拓者了。但很多时候，就你那二亩三分地用AI来做个啥呢，不能说毫无用处，只能说是玩的花。都已经成了新领域了，自然就有源源不断的问题、边界等着你来发掘。科学巅峰又给你捅破了，岂不快哉。</p>
-<p>只怕它也如目前业界的AI热，充满了泡沫，一戳就容易破。话又说回来，相比于业界的AI热，科学界起码还真能搞出新的东西，例如蛋白质折叠，新药新结构新病毒发掘等。但业界AI热个毛线啊，AI用上天也没有见什么实质性的生产力提升。写报告，写文章，做一点调研也算的话当我没说。似乎又是一场资本狂欢啊，是资本圈钱的又一有力工具，是财富不均匀分配的加速器。</p>
+<p>只怕它也如目前业界的AI热，充满了泡沫，一戳就容易破。话又说回来，相比于业界的AI热，科学界起码还真能搞出新的东西，例如蛋白质折叠，新药新结构新病毒发掘等。但业界AI热个毛线啊，AI用上天也没有见什么明显的实质性的生产力提升。写报告，写文章，做一点调研也算的话当我没说。似乎又是一场资本狂欢啊，是资本圈钱的又一有力工具，是财富不均匀分配的加速器。</p>
 <p>第二是其作为工作的一面了。</p>
 <p>和我们想象中的欧洲贵族自己或者资助的科学家不一样，当时大约是不用当作工作来做的，全凭兴趣。有时兴趣可以是最好的老师，凭着兴趣你也能把游戏打得很好啊。</p>
 <p>现在好像不行，也不是完全不行，只要你有一个有钱的对象，像<a href="https://vocal.media/01/the-boss-of-it-spent-500-million-us-dollars-to-give-his-girlfriend-a-150-person-research-institute-to-help-him-realize-the-freedom-of-scientific-research-hr6wy07i6">Silvana Konermann</a>一样。所以，没有亿万富翁对象的你就和我一样，科研是自己的职业。</p>
@@ -3486,244 +3486,6 @@ python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;i
   </entry>
   
   <entry>
-    <title>用 Cloudflare Tunnel 在家连回办公室 Fedora</title>
-    <link href="https://www.seis-jun.xyz/blog/2026-06-24-cloudflare-tunnel.html" />
-    <id>https://www.seis-jun.xyz/blog/2026-06-24-cloudflare-tunnel.html</id>
-    <updated>2026-06-24T09:02:17+08:00</updated>
-    <published>2026-06-24T09:02:17+08:00</published>
-    <summary type="html"><p>前两篇已经把 FreshRSS 和 PaperHot 放到了 Cloudflare Tunnel 后面。 FreshRSS 解决的是“我在外面也能看自己的信息流”。PaperHot 解决的是“我在外面也能看自己跑起来的论文热榜”。这篇再往前走一步：不只是访问一个网页服务，而是直接从家里的 Mac 连回办公室 Fedor...</p></summary>
-    <content type="html"><![CDATA[<p><img alt="" src="/images/cft-o.png" /></p>
-<p>前两篇已经把 FreshRSS 和 PaperHot 放到了 Cloudflare Tunnel 后面。</p>
-<p>FreshRSS 解决的是“我在外面也能看自己的信息流”。PaperHot 解决的是“我在外面也能看自己跑起来的论文热榜”。这篇再往前走一步：不只是访问一个网页服务，而是直接从家里的 Mac 连回办公室 Fedora。</p>
-<p>最后我想要的效果很简单：</p>
-<div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>office-fedora
-</code></pre></div>
-
-<p>不用公网 IP，不用路由器端口转发，也不把 22 端口暴露到公网。</p>
-<p>链路大概是这样：</p>
-<div class="highlight"><pre><span></span><code>家里 Mac
-    ↓
-cloudflared access ssh
-    ↓
-ssh-office.seis-jun.xyz
-    ↓
-Cloudflare Tunnel
-    ↓
-办公室 Fedora: 127.0.0.1:22
-</code></pre></div>
-
-<h2 id="_1">现有基础</h2>
-<p>我已经有一个 Cloudflare Tunnel 在办公室 Fedora 上运行，名字是：</p>
-<div class="highlight"><pre><span></span><code>freshrss-office
-</code></pre></div>
-
-<p>这个 Tunnel 之前已经承载了两个服务：</p>
-<div class="highlight"><pre><span></span><code>rss.seis-jun.xyz
-paper-hot.seis-jun.xyz
-</code></pre></div>
-
-<p>所以这次不需要新建 Tunnel，只是在已有 Tunnel 里增加一个 SSH 入口：</p>
-<div class="highlight"><pre><span></span><code>ssh-office.seis-jun.xyz
-</code></pre></div>
-
-<p>这点很重要。FreshRSS、PaperHot、SSH 其实都可以走同一条 Tunnel，只是 ingress 规则不同。</p>
-<h2 id="fedora-ssh">先确认办公室 Fedora 的 SSH 服务</h2>
-<p>在办公室 Fedora 上先确认 OpenSSH server 已经安装并启动：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>openssh-server
-sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>--now<span class="w"> </span>sshd
-sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>sshd<span class="w"> </span>--no-pager
-</code></pre></div>
-
-<p>正常应该能看到：</p>
-<div class="highlight"><pre><span></span><code>Active: active (running)
-</code></pre></div>
-
-<p>然后在 Fedora 本机测试一下：</p>
-<div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>junxie@127.0.0.1
-</code></pre></div>
-
-<p>如果本机都连不上，就先修 SSH 服务。不要一上来就怀疑 Cloudflare。</p>
-<h2 id="tunnel-ssh">给 Tunnel 增加 SSH 入口</h2>
-<p>Cloudflare Tunnel 的配置在办公室 Fedora 上：</p>
-<div class="highlight"><pre><span></span><code>/root/.cloudflared/config.yml
-</code></pre></div>
-
-<p>修改前先备份：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>cp<span class="w"> </span>/root/.cloudflared/config.yml<span class="w"> </span>/root/.cloudflared/config.yml.bak.<span class="k">$(</span>date<span class="w"> </span>+%Y%m%d_%H%M%S<span class="k">)</span>
-</code></pre></div>
-
-<p>然后在 <code>ingress</code> 里增加：</p>
-<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ssh-office.seis-jun.xyz</span>
-<span class="w">    </span><span class="nt">service</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ssh://127.0.0.1:22</span>
-</code></pre></div>
-
-<p>最终结构类似这样：</p>
-<div class="highlight"><pre><span></span><code><span class="nt">tunnel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5c3de280-c626-4bc4-83db-5eef8d13ce76</span>
-<span class="nt">credentials-file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/root/.cloudflared/5c3de280-c626-4bc4-83db-5eef8d13ce76.json</span>
-
-<span class="nt">ingress</span><span class="p">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rss.seis-jun.xyz</span>
-<span class="w">    </span><span class="nt">service</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://127.0.0.1:8080</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">paper-hot.seis-jun.xyz</span>
-<span class="w">    </span><span class="nt">service</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://127.0.0.1:8000</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ssh-office.seis-jun.xyz</span>
-<span class="w">    </span><span class="nt">service</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ssh://127.0.0.1:22</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">service</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http_status:404</span>
-</code></pre></div>
-
-<p>注意最后一行：</p>
-<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">service</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http_status:404</span>
-</code></pre></div>
-
-<p>它必须放在最后。前面的规则都没匹配到时，才走 404。</p>
-<h2 id="dns-tunnel">添加 DNS 路由并重启 Tunnel</h2>
-<p>在办公室 Fedora 上执行：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>cloudflared<span class="w"> </span>tunnel<span class="w"> </span>route<span class="w"> </span>dns<span class="w"> </span>freshrss-office<span class="w"> </span>ssh-office.seis-jun.xyz
-sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>cloudflared-freshrss.service
-sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>cloudflared-freshrss.service<span class="w"> </span>--no-pager<span class="w"> </span>-l
-</code></pre></div>
-
-<p>再检查 DNS：</p>
-<div class="highlight"><pre><span></span><code>dig<span class="w"> </span>@1.1.1.1<span class="w"> </span>ssh-office.seis-jun.xyz<span class="w"> </span>+short
-</code></pre></div>
-
-<p>如果能解析，说明 Cloudflare 这一侧已经有记录了。</p>
-<h2 id="mac-cloudflared">家里 Mac 安装 cloudflared</h2>
-<p>在家里的 Mac 上安装：</p>
-<div class="highlight"><pre><span></span><code>brew<span class="w"> </span>install<span class="w"> </span>cloudflare/cloudflare/cloudflared
-</code></pre></div>
-
-<p>确认路径：</p>
-<div class="highlight"><pre><span></span><code>which<span class="w"> </span>cloudflared
-cloudflared<span class="w"> </span>--version
-</code></pre></div>
-
-<p>我这里的路径是：</p>
-<div class="highlight"><pre><span></span><code>/opt/homebrew/bin/cloudflared
-</code></pre></div>
-
-<p>这个路径后面要写进 SSH 配置里。如果你的机器上不是这个路径，就用实际路径。</p>
-<h2 id="mac-ssh">配置家里 Mac 的 SSH</h2>
-<p>编辑 SSH 配置：</p>
-<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>~/.ssh
-nano<span class="w"> </span>~/.ssh/config
-</code></pre></div>
-
-<p>加入：</p>
-<div class="highlight"><pre><span></span><code>Host office-fedora
-    HostName ssh-office.seis-jun.xyz
-    User junxie
-    ProxyCommand /opt/homebrew/bin/cloudflared access ssh --hostname %h
-    ServerAliveInterval 60
-    ServerAliveCountMax 3
-</code></pre></div>
-
-<p>然后设置权限：</p>
-<div class="highlight"><pre><span></span><code>chmod<span class="w"> </span><span class="m">700</span><span class="w"> </span>~/.ssh
-chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span>~/.ssh/config
-</code></pre></div>
-
-<p>这里的关键是 <code>ProxyCommand</code>。</p>
-<p>平时 SSH 是直接连目标机器。现在不是。现在是 SSH 先调用 <code>cloudflared</code>，让它通过 Cloudflare Tunnel 把连接转到办公室 Fedora 的本地 22 端口。</p>
-<h2 id="_2">正式连接</h2>
-<p>以后在家里只需要：</p>
-<div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>office-fedora
-</code></pre></div>
-
-<p>第一次连接可能会提示确认 host key：</p>
-<div class="highlight"><pre><span></span><code>Are you sure you want to continue connecting?
-</code></pre></div>
-
-<p>输入：</p>
-<div class="highlight"><pre><span></span><code>yes
-</code></pre></div>
-
-<p>然后输入 Fedora 用户密码，或者用 SSH key 登录。</p>
-<p>成功后就会进入办公室 Fedora：</p>
-<div class="highlight"><pre><span></span><code>junxie@fedora:~$
-</code></pre></div>
-
-<p>这一步打通之后，感觉就和机器在身边差不多了。</p>
-<h2 id="_3">常用排查</h2>
-<p>如果连接失败，先按这个顺序查。</p>
-<p>办公室 Fedora 上：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>sshd<span class="w"> </span>--no-pager
-sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>cloudflared-freshrss.service<span class="w"> </span>--no-pager<span class="w"> </span>-l
-sudo<span class="w"> </span>cat<span class="w"> </span>/root/.cloudflared/config.yml
-</code></pre></div>
-
-<p>家里 Mac 上：</p>
-<div class="highlight"><pre><span></span><code>which<span class="w"> </span>cloudflared
-cloudflared<span class="w"> </span>--version
-dig<span class="w"> </span>@1.1.1.1<span class="w"> </span>ssh-office.seis-jun.xyz<span class="w"> </span>+short
-ssh<span class="w"> </span>-v<span class="w"> </span>office-fedora
-</code></pre></div>
-
-<p>如果 Fedora 本机 <code>ssh junxie@127.0.0.1</code> 都不通，那问题在 SSH 服务。</p>
-<p>如果 DNS 解析不了，那问题在 Cloudflare DNS 或 Tunnel route。</p>
-<p>如果 Tunnel 通了但登录失败，那多半是用户名、密码或 SSH key 的问题。</p>
-<h2 id="_4">安全上要克制一点</h2>
-<p>这个方案的好处是没有直接暴露办公室 Fedora 的 22 端口。</p>
-<p>但也不要因此觉得可以随便加入口。</p>
-<p>我现在的原则是：</p>
-<div class="highlight"><pre><span></span><code>公开域名入口尽量少
-先接办公室 Fedora
-再从 Fedora 跳到内网机器
-</code></pre></div>
-
-<p>如果以后要从家里继续连单位内网服务器，可以用 <code>ProxyJump</code>：</p>
-<div class="highlight"><pre><span></span><code>Host unit-server
-    HostName 10.xx.xx.xx
-    User unit_user
-    ProxyJump office-fedora
-</code></pre></div>
-
-<p>这样家里仍然只需要：</p>
-<div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>unit-server
-</code></pre></div>
-
-<p>实际路径是：</p>
-<div class="highlight"><pre><span></span><code>家里 Mac
-    ↓
-Cloudflare Tunnel
-    ↓
-办公室 Fedora
-    ↓
-单位内网服务器
-</code></pre></div>
-
-<p>不建议一开始就把单位服务器直接做成一个新的公网 hostname。边界会更复杂，也更容易踩单位网络安全规定。</p>
-<h2 id="_5">当前状态</h2>
-<p>这次最后完成的是：</p>
-<div class="highlight"><pre><span></span><code>1. 办公室 Fedora 的 sshd 已启动。
-2. Fedora 本机 ssh junxie@127.0.0.1 测试成功。
-3. Cloudflare Tunnel 增加了 ssh-office.seis-jun.xyz。
-4. ssh-office.seis-jun.xyz 已指向 freshrss-office Tunnel。
-5. 家里 Mac 已安装 cloudflared。
-6. 家里 Mac 已配置 ~/.ssh/config。
-7. 家里 Mac 可以通过 ssh office-fedora 连回办公室 Fedora。
-</code></pre></div>
-
-<p>最终日常使用命令就是：</p>
-<div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>office-fedora
-</code></pre></div>
-
-<p>FreshRSS 和 PaperHot 让我在外面能访问自己的服务。这个 SSH 入口则更进一步：让我在外面能回到那台真正干活的办公室 Fedora。</p>
-<p>这比单独部署一个网页服务更像是把工作环境接回来了。</p>]]></content>
-    
-    <category term="Cloudflare Tunnel" />
-    
-    <category term="Fedora" />
-    
-    <category term="SSH" />
-    
-    <category term="HomeLab" />
-    
-    <category term="科研工作流" />
-    
-  </entry>
-  
-  <entry>
     <title>Paper Reading (60)</title>
     <link href="https://www.seis-jun.xyz/blog/2026-06-23-paper-reading-60.html" />
     <id>https://www.seis-jun.xyz/blog/2026-06-23-paper-reading-60.html</id>
@@ -5175,6 +4937,35 @@ bash<span class="w"> </span>do_deploy.bash
 <p>而你确实不能少，少了又怎么会体会得做人的感觉。</p>
 <p>你的体会会越来越多，会感觉负担越来越重，这些东西压着你喘不过气，但当你到了那个年纪，这些东西会越来越少，然而你也无法释怀。</p>
 <p>你的身体来自这个宇宙，你的感受也来自这个宇宙，你就是宇宙，宇宙就是你，拥抱这个宇宙吧。</p>]]></content>
+    
+    <category term="日记" />
+    
+  </entry>
+  
+  <entry>
+    <title>关于人性（2）</title>
+    <link href="https://www.seis-jun.xyz/blog/2026-05-31-humanity2.html" />
+    <id>https://www.seis-jun.xyz/blog/2026-05-31-humanity2.html</id>
+    <updated>2026-05-31T12:01:01+08:00</updated>
+    <published>2026-05-31T12:01:01+08:00</published>
+    <summary type="html"><p>上一篇讲人性，读起来会不会太悲观，因为我们生下来是怎么样我们没得选，爸妈是怎么样的也没得选。 先别急着说人各有命。在你没意识到自己的能动性之前不要轻易讲人各有命。能动不是说你屁股能动。是说我们需要学习，整合你的思维，校正你的思维，要继续和宇宙对着干。因为宇宙大部分时候要的是混沌，吃的是墒，需要拿你来打牙祭。所以你要的是...</p></summary>
+    <content type="html"><![CDATA[<p><img alt="" src="/images/humanity2.png" />
+上一篇讲人性，读起来会不会太悲观，因为我们生下来是怎么样我们没得选，爸妈是怎么样的也没得选。</p>
+<p>先别急着说人各有命。在你没意识到自己的能动性之前不要轻易讲人各有命。能动不是说你屁股能动。是说我们需要学习，整合你的思维，校正你的思维，要继续和宇宙对着干。因为宇宙大部分时候要的是混沌，吃的是墒，需要拿你来打牙祭。所以你要的是有序，身体有序，脑子有序。 </p>
+<p>身体有序就是要好好睡觉，好好吃东西，偶尔锻炼一下。</p>
+<p>脑子有序就有得说了。我们有800多亿的脑神经元嗷嗷待哺。喂饱他们的是思维，是脑回路的建立。你需要读书，需要交流，需要见识，需要做事，需要整和。</p>
+<p>读书可以让你见识到更多脑回路，更多的世界观，人生观，价值观，然后去观人生，观社会，观价值，然后用你学到的一些术，一些技来干事并与更多人合作交流，巩固并完善你的回路和三观。</p>
+<p>切忌多思，如果不是广思深思的话很容易陷入错误的回路，加深你的错误认识或偏见。</p>
+<p>孔子说要三思而行，不是让你多思，而是让你想了然后干，然后又思。毛主席让你要实事求是，要调查才有发言权，就是让你不要陷入局部极小值，一定要打破僵局，往最优的方向使劲。</p>
+<p>好了，你也许会问，我们为什么要这么干，摆烂不行吗？其实如果你是草芥，是虫豸，是鸟兽都没有问题，他们也不懂摆烂的意思是什么，是吧。他们只会受基因的控制，受激素的控制，干嘛呢？干饭和涩涩。</p>
+<p>但我们不一样，因为我们的神经元太多了，已经涌现了意识。有了意识你就是你了，你会思考了。你想到了存在的意义。</p>
+<p>但意义是不存在的，只有你有欲望你才会去给某些事物，某些过程赋予意义。</p>
+<p>这又回到了人性，人性就是欲望啊。</p>
+<p>生的欲望，获得安全的欲望，获得认可的欲望，获得掌控的欲望，获得价值感的欲望，探索的欲望，求知的欲望。。。</p>
+<p>这些欲望每个人都是有的，就像调配美味高汤一样，每一味料都加点，恰到好处，汤就鲜美了。人也是的，每一种欲望都加点，人生也就圆满了。</p>
+<p>偏生的，有些人的料加的不均匀，那是会生出很多问题的。或咸或淡，大部分人是不自知的，因为你自己不会喝这口汤。</p>
+<p>看起来这些欲望似乎有高低贵贱之分，以前我会觉得生的欲望多么低级，获得认可获得地位也高不了哪去，高尚的是给人们带来生的希望，科技提升，认知飞跃的欲望。但其实哪有什么分别。</p>
+<p>希望你不要被我说糊涂了，糊涂是宇宙干的事。我们要的是清醒，是要明白自己的那锅汤有没有调好料，够不够鲜美，不过那又有什么关系。喝汤的又不是你，你只是宇宙的供桌上的一粒沙子。</p>]]></content>
     
     <category term="日记" />
     
