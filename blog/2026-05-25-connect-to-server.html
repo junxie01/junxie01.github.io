@@ -69,7 +69,7 @@
       <h1>在家怎么连服务器</h1>
       <div class="post-meta">
         <time>2026-05-25</time>
-         &middot; 1,046 words
+         &middot; 1,048 words
         
          &middot;
         
@@ -112,7 +112,7 @@ ssh<span class="w"> </span>-i<span class="w"> </span>~/Downloads/mac.pem<span cl
 
 <p>能进入 VPS 后，说明 Mac 到 VPS 的网络没问题。</p>
 <h2 id="linux-vps">在办公室Linux上确认可以登录 VPS</h2>
-<p>你可以人在办公室本机操作，也可以SSH到办公室Fedora，再在那个远程会话里操作。</p>
+<p>你可以人在办公室本机操作，也可以SSH到办公室电脑，再在那个远程会话里操作。</p>
 <p>在办公室Linux上执行：</p>
 <div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>root@VPS_IP
 </code></pre></div>
@@ -124,7 +124,7 @@ ssh<span class="w"> </span>-i<span class="w"> </span>~/.ssh/vps_ed25519<span cla
 
 <h2 id="linux-ssh">在办公室Linux上启动反向 SSH 通道</h2>
 <p>推荐先用 <code>tmux</code>，避免通道占住当前 SSH 窗口。</p>
-<p>在办公室 Fedora 上执行：</p>
+<p>在办公室电脑上执行：</p>
 <div class="highlight"><pre><span></span><code>tmux<span class="w"> </span>new<span class="w"> </span>-s<span class="w"> </span>vps-tunnel
 </code></pre></div>
 
