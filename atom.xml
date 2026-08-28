@@ -3,11 +3,46 @@
   <title>SEISAMUSE</title>
   <link href="https://www.seis-jun.xyz/atom.xml" rel="self" />
   <link href="https://www.seis-jun.xyz" />
-  <updated>2026-08-28T07:51:23+08:00</updated>
+  <updated>2026-08-28T14:29:18+08:00</updated>
   <id>https://www.seis-jun.xyz/</id>
   <author>
     <name>Jun Xie</name>
   </author>
+  
+  <entry>
+    <title>关于博客写作IV</title>
+    <link href="https://www.seis-jun.xyz/blog/2026-08-28-about-blog-writingiv.html" />
+    <id>https://www.seis-jun.xyz/blog/2026-08-28-about-blog-writingiv.html</id>
+    <updated>2026-08-28T14:29:18+08:00</updated>
+    <published>2026-08-28T14:29:18+08:00</published>
+    <summary type="html"><p>接着写，接着改</p></summary>
+    <content type="html"><![CDATA[<p><img alt="" src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&amp;w=1770&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" /></p>
+<p>我又来打补丁了。</p>
+<p>要是有人问，你一会儿写一会儿又不写，到底写是写还是不写啊？</p>
+<p>其实上一篇已经讲了还是要写的。</p>
+<p>然后我发现，前三篇都在写自己为什么写，自己为什么又不写。</p>
+<p>但我觉得似乎还是没有把自己写博客的目的讲完整。</p>
+<p>我的生活观念之一是想要<a href="/blog/2026-08-17-create-something-interesting.html">创造点有意思的东西</a>，写东西就是我觉得有意思的事情之一。如果本职工作是码字，何不接着多码一些；如果工作不码字，何不码点字吹吹水，发发LS。</p>
+<p>但也不能一味地只为自己而写。似乎不能说想到哪里就写到哪里，因为这样只是自己思维的流动。</p>
+<p>仅记录自己思维流动，虽然部分实现了整理自己思维的效果，但难以达到和别人交流的目的。因为你的思维真的可能很乱。好吧，我的意思是我的思维比较乱。别人看起来多累。</p>
+<p>如果别人看起来累，那别人就不想看了。别人不看了，你写的东西就真的变成日记了。</p>
+<p>因此，为了达到交流的目的也需要整理一下语言顺序和思维逻辑并且减少别字。</p>
+<p>此外，也尽量不要一味地把糟粕、没营养的东西摆出来。要是看到你端出来的饭菜没啥意思，或者干脆污别人眼睛，那也只算是自说自话了。不仅浪费了别人的时间不说，而且还达到了伤人的目的。</p>
+<p>所以怎么办呢？</p>
+<ol>
+<li>
+<p>其实没有必要硬是要凹自己思想有深度、文笔高级或者思维缜密的造型，不用因为多次编辑多次检查你的文字而懊恼。多次整理也许才能真正让你的博文更加有条理，想法更顺。如果你的想法和这篇难以放到一起，那就重新写一篇。就像现在我在干的。</p>
+</li>
+<li>
+<p>尽量收起傲慢。觉得我想写什么写什么，自会有人来看。适当地替读者考虑考虑吧。虽然我不是完美笔者，但是别字还是要改改。讲出来的东西也希望可以尽量帮助别人长见识。当然不一定长见识，因为营养可能不够多。但至少可以尽量无缝地让别人看到另一种思维方式、生活方式以及人生看法。</p>
+</li>
+</ol>
+<p>所以，我准备继续写。而且会对以前的文字进行修正。</p>
+<p>逻辑顺序，文字表达，错字别字都要改，但主要想法还是封在那里。</p>]]></content>
+    
+    <category term="日记" />
+    
+  </entry>
   
   <entry>
     <title>关于不确定性</title>
@@ -4942,28 +4977,6 @@ bash<span class="w"> </span>do_deploy.bash
     <category term="paper" />
     
     <category term="geophysics" />
-    
-  </entry>
-  
-  <entry>
-    <title>关于Codex (2)</title>
-    <link href="https://www.seis-jun.xyz/blog/2026-06-08-codex2.html" />
-    <id>https://www.seis-jun.xyz/blog/2026-06-08-codex2.html</id>
-    <updated>2026-06-08T00:00:00+08:00</updated>
-    <published>2026-06-08T00:00:00+08:00</published>
-    <summary type="html"><p>今天又提前把100dollar的codex Pro x5一周的量给用干了。 上次只提前了一晚上，这次提前了三天，而且中途其实人家openai刷新过一次7天用量。 上次明明感觉自己已经知道一些窍门/技巧/经验了，结果这周一样的。 这不跟大猪蹄子男人从来不改自己毛病一样。 之前听到说不珍惜token使用是因为不是用的自己的...</p></summary>
-    <content type="html"><![CDATA[<p><img alt="" src="/images/codex2.png" />
-今天又提前把100dollar的codex Pro x5一周的量给用干了。</p>
-<p>上次只提前了一晚上，这次提前了三天，而且中途其实人家openai刷新过一次7天用量。</p>
-<p>上次明明感觉自己已经知道一些窍门/技巧/经验了，结果这周一样的。<del>这不跟大猪蹄子男人从来不改自己毛病一样。</del>之前听到说不珍惜token使用是因为不是用的自己的钱买的，不心疼。这次是自己买的了。确实心疼，但好像又不全是心疼的感觉，还有点失落和遗憾以及愤怒。失落和遗憾主要是指，用了codex，以为效率提高了，结构其实没有干成什么事情。而且一个比较大的项目，怎么做都没有什么进展。感觉稍微大点的项目推进速度其实和人自己做差别并不大，估计还是因为用来做的是和科研相关的东西，AI也没做过啊。另外还有一个坏处就是，不仅慢，而且中间具体是怎么做的也不明白。大项目简直是白做。</p>
-<p>气愤的是这帮资本家，果然啊。让你上套，然后让你难以割舍，然后就割你的肉。</p>
-<p>Vibe coding确实提高了效率，做网页，文本，抓取等真的有如神助，但是遇到自己专业的事，份内的事，自己还是需要花很多心思，codex很多时候都是帮倒忙。让它干这个，它干，然后有问题，说不如那样干；然后纠正回来说还要按我的干，它说干了，效果不行，不如这样干。真的是，买了个会和你对着干的牛马啊。</p>
-<p>总之用codex做事情的时候，真的自己得完全清楚自己要的是什么，每一步细节都需要想清楚，也要清楚你要它干的是哪一部分，并且还要清楚的传达给他。</p>
-<p>果然，这就体会到当老板的难处了啊。哈哈<del>苦笑</del>，没有老板的命，得了老板的病啊。</p>]]></content>
-    
-    <category term="日记" />
-    
-    <category term="codex" />
     
   </entry>
   
