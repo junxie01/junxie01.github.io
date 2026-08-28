@@ -3,11 +3,44 @@
   <title>SEISAMUSE</title>
   <link href="https://www.seis-jun.xyz/atom.xml" rel="self" />
   <link href="https://www.seis-jun.xyz" />
-  <updated>2026-08-28T14:29:18+08:00</updated>
+  <updated>2026-08-28T18:18:30+08:00</updated>
   <id>https://www.seis-jun.xyz/</id>
   <author>
     <name>Jun Xie</name>
   </author>
+  
+  <entry>
+    <title>关于不确定性II</title>
+    <link href="https://www.seis-jun.xyz/blog/2026-08-28-about-uncertainty-2.html" />
+    <id>https://www.seis-jun.xyz/blog/2026-08-28-about-uncertainty-2.html</id>
+    <updated>2026-08-28T18:18:30+08:00</updated>
+    <published>2026-08-28T18:18:30+08:00</published>
+    <summary type="html"><p>上一篇讲到：明明已经知道电影剧情，为什么有些电影还是愿意看很多遍？ 看眼样子没有人来回答我这个问题。 那我就只好自己回答了。 答案其实一直藏在我的人生观里面，但没有独立成点。如果没有点明那说明还没有理清，没有形成我的回路。 继续打补丁。 我在关于认知里面说，要想要做，不要太关注结果。我想就是要说，我们更多关注的应该是过...</p></summary>
+    <content type="html"><![CDATA[<p>上一篇讲到：明明已经知道电影剧情，为什么有些电影还是愿意看很多遍？</p>
+<p>看眼样子没有人来回答我这个问题。</p>
+<p>那我就只好自己回答了。</p>
+<p>答案其实一直藏在我的<a href="/blog/2026-08-18-my-view-of-life.html">人生观</a>里面，但没有独立成点。如果没有点明那说明还没有理清，没有形成我的回路。</p>
+<p>继续打补丁。</p>
+<p>我在<a href="/blog/2026-07-21-about-cognition.html">关于认知</a>里面说，要想要做，不要太关注结果。我想就是要说，我们更多关注的应该是过程。</p>
+<p>我们喜欢人生，可能并不只是因为不知道结果。其实没有人会期待不好的结果，我的意思是如果遇到结果不好的时候我们一般也会心理不舒服。能够做到看淡结果可能需要很深的修行。</p>
+<p>其实也不需要太去执着结果，有时候打通了想法就会发现，价值不仅存在于结果的信息量，也存在于经历本身。</p>
+<p>知道两个人会分开，不代表两个人的相爱没有意义，也不代表这段相爱的经历不值得珍藏。</p>
+<p>知道一个人最终会死，也不意味着他今天吃的一顿饭、写的一篇博客、爱一个人、做一次研究因此失去意义。</p>
+<p>我们的每一点一滴的经历可能都会长在我们的身上，长在我们的脑子里。</p>
+<p>我会记住年少抓的<a href="/blog/2008-04-03-crab.html">螃蟹</a>，每次坟包的<a href="/blog/2026-08-23-pick-chicken-mushroom.html">巡菌之旅</a>，那只踏过的<a href="/blog/2026-08-26-mouse-memory.html">老鼠</a>；会记住爸妈的唠叨，讲台老师的谈笑还有发奋偷读小说的那个夜晚。</p>
+<p>好了我不要再回忆，回忆是老了以后的调味菜。</p>
+<p>我不是强调回忆，而是说你在做某一件事情的时候就专注到这件事情里来，你会收获很多。</p>
+<p>那种状态，脑袋是纯粹的，没有其他奇怪的回路和情绪干扰，单单做事的脑回路会让你十分的舒畅。你可能会瞬间感到时间过得好快。那好像叫心流。我不会去想做不好怎么办，以后怎么办？</p>
+<p>有心流是好，当然也不能强求做事情都会是心流。</p>
+<p>总之有事情做你就做事情，没事情的时候就允许大脑放空一会儿。</p>
+<p>有目标就不要总想着目标，把目标细化到很小的一步，像<a href="/blog/2026-05-08-sunflower-seeds-eating.html">吃瓜子</a>。</p>
+<p>正因为目的地都一样，指南针才不是用来决定终点的。</p>
+<p>它决定的是你怎么走过去。</p>
+<p>好了，我去吃瓜子了。</p>]]></content>
+    
+    <category term="日记" />
+    
+  </entry>
   
   <entry>
     <title>关于博客写作IV</title>
@@ -4910,73 +4943,6 @@ bash<span class="w"> </span>do_deploy.bash
     <category term="geophysics" />
     
     <category term="glaciology" />
-    
-  </entry>
-  
-  <entry>
-    <title>Paper Reading (55)</title>
-    <link href="https://www.seis-jun.xyz/blog/2026-06-14-paper-reading-55.html" />
-    <id>https://www.seis-jun.xyz/blog/2026-06-14-paper-reading-55.html</id>
-    <updated>2026-06-14T13:01:01+08:00</updated>
-    <published>2026-06-14T13:01:01+08:00</published>
-    <summary type="html"><p>统一的灾害失稳模型：应用于山体滑坡、岩爆、冰川和火山</p></summary>
-    <content type="html"><![CDATA[<h2 id="paper-information">Paper Information</h2>
-<ul>
-<li><strong>Title</strong>: 统一的灾害失稳模型：应用于山体滑坡、岩爆、冰川和火山</li>
-<li><strong>First Author</strong>: Qinghua Lei</li>
-<li><strong>Corresponding Author</strong>: Qinghua Lei</li>
-<li><strong>Affiliation</strong>: 乌普萨拉大学地球科学系和南方科技大学风险分析、预测和管理研究所</li>
-<li><strong>Journal</strong>: Communications Earth &amp; Environment, 2025, Volume 6, Pages 390</li>
-<li><strong>DOI</strong>: 10.1038/s43247-025-02369-z</li>
-</ul>
-<h2 id="author-background">Author Background</h2>
-<h3 id="first-authors-representative-works">First Author&#8217;s Representative Works</h3>
-<ol>
-<li>Lei, Q., &amp; Sornette, D. (2020). Predicting the time of failure of geomaterials. Proceedings of the National Academy of Sciences, 117(10), 5334-5343.</li>
-<li>Sornette, D., &amp; Lei, Q. (2019). Log-periodic power law singularity: A unified failure model for geomaterials. Journal of Geophysical Research: Solid Earth, 124(12), 12345-12363.</li>
-<li>Lei, Q., &amp; Sornette, D. (2018). A review of failure models for geomaterials. Journal of Rock Mechanics and Geotechnical Engineering, 10(4), 631-644.</li>
-</ol>
-<h2 id="abstract-translated">Abstract (Translated)</h2>
-<p>本文提出了一种统一的灾害失稳模型，基于对数周期幂律奇点（LPPLS）公式，能够同时捕捉加速和减速阶段，适用于多种地质灾害事件，包括山体滑坡、岩爆、冰川和火山。该模型通过一个全面的全球数据集进行验证，包括109个历史地质灾害事件，跨越七个大陆，时间跨度超过一个世纪。结果表明，LPPLS模型在描述复杂的破裂行为方面优于传统的幂律奇点（PLS）模型，并且具有更好的预测能力。</p>
-<h2 id="research-context">Research Context</h2>
-<h3 id="importance">Importance</h3>
-<p>地质灾害事件，如山体滑坡、岩爆、冰川和火山，可能对人类生命和财产造成重大威胁。因此，开发能够准确预测这些事件的模型至关重要。本文提出的统一失稳模型为此提供了一个新的途径。</p>
-<p>地质灾害事件的预测是一个复杂的问题，涉及多种因素，包括地质结构、岩石性质、水文条件等。传统的预测模型通常基于简单的幂律关系，但这些模型不能很好地描述复杂的破裂行为。</p>
-<p>本文提出的LPPLS模型通过对数周期幂律奇点公式，能够同时捕捉加速和减速阶段，适用于多种地质灾害事件。这种模型的提出对于提高地质灾害事件的预测能力具有重要意义。</p>
-<h3 id="previous-studies">Previous Studies</h3>
-<ul>
-<li><strong>Sornette, D., &amp; Sammis, C. G. (1995)</strong>: 提出了一种基于幂律奇点的失败模型，用于预测地质灾害事件。 <em>Journal of Geophysical Research: Solid Earth, 100(B12), 24729-24743.</em></li>
-<li><strong>Lei, Q., &amp; Sornette, D. (2018)</strong>: 提出了一种基于对数周期幂律奇点的失败模型，用于预测地质灾害事件。 <em>Journal of Rock Mechanics and Geotechnical Engineering, 10(4), 631-644.</em></li>
-<li><strong>Bouchon, M., &amp; Sornette, D. (2010)</strong>: 提出了一种基于分形理论的失败模型，用于预测地质灾害事件。 <em>Journal of Geophysical Research: Solid Earth, 115(B12), B12321.</em></li>
-<li><strong>Kilburn, C. R., &amp; Petley, D. N. (2003)</strong>: 提出了一种基于岩石力学的失败模型，用于预测地质灾害事件。 <em>Journal of Geophysical Research: Solid Earth, 108(B12), 2543.</em></li>
-<li><strong>Sornette, D., &amp; Helmstetter, A. (2002)</strong>: 提出了一种基于统计物理的失败模型，用于预测地质灾害事件。 <em>Journal of Geophysical Research: Solid Earth, 107(B12), 2337.</em></li>
-</ul>
-<h3 id="limitations-of-previous-research">Limitations of Previous Research</h3>
-<p>传统的失稳模型通常基于简单的幂律关系，但这些模型不能很好地描述复杂的破裂行为。另外，之前的研究通常只关注特定的地质灾害事件，缺乏一个统一的模型来描述多种事件。</p>
-<p><img alt="图1 全球109个历史地质现象的分布" src="/images/paper-paper-reading/figure1.jpeg" /></p>
-<center><em>图1 全球109个历史地质现象的分布</em></center>
-
-<p></p>
-<h3 id="data">Data</h3>
-<p>本文使用了一个全面的全球数据集，包括109个历史地质灾害事件，跨越七个大陆，时间跨度超过一个世纪。数据集包括山体滑坡、岩爆、冰川和火山等多种地质灾害事件。</p>
-<h3 id="methods">Methods</h3>
-<p>本文提出的LPPLS模型基于对数周期幂律奇点公式，能够同时捕捉加速和减速阶段。模型的参数通过一个稳定的和鲁棒的方案进行校准，使用了多种评估指标，包括归一化均方根误差（NRMSE）、归一化赤池信息量（NAIC）和归一化贝叶斯信息量（NBIC）。</p>
-<h2 id="results">Results</h2>
-<p>结果表明，LPPLS模型在描述复杂的破裂行为方面优于传统的PLS模型，并且具有更好的预测能力。LPPLS模型能够同时捕捉加速和减速阶段，适用于多种地质灾害事件。</p>
-<h2 id="discussion">Discussion</h2>
-<h3 id="innovations">Innovations</h3>
-<p>本文提出的LPPLS模型是一种创新性的失稳模型，能够同时捕捉加速和减速阶段，适用于多种地质灾害事件。</p>
-<h3 id="contributions">Contributions</h3>
-<p>本文的贡献在于提出了一个统一的失稳模型，能够描述多种地质灾害事件，并且具有更好的预测能力。</p>
-<h3 id="limitations">Limitations</h3>
-<p>本文的局限性在于，LPPLS模型的参数需要通过一个稳定的和鲁棒的方案进行校准，使用了多种评估指标。</p>
-<h2 id="personal-thoughts">Personal Thoughts</h2>
-<p>本文提出的LPPLS模型是一个很有前景的失稳模型，能够同时捕捉加速和减速阶段，适用于多种地质灾害事件。然而，需要进一步的研究来验证模型的有效性和鲁棒性。另外，为什么要统一使用一种模型来预测这么多的灾害呢？难道这些灾害有共同的规律？很神奇的一件事情&#8211;不同灾害背后损伤破裂的物理规律相同。另外还有很强大的一点，就是这个方法啥数据都能往里装：位移、滑坡影像、裂隙长度、地震计数、二氧化碳通量、地面抬升、面积损失。。。啥都可以？？？
-对于事件的时、空、强和类型预测的话似乎只有一个临界时间，其他都不太行，而且是一个回溯性的预测，不能预测未发生的事件。它的应用是针对已知滑坡、矿山、火山的预测，可以预测什么该撤离、停工什么的。号称时间分辨率可以达到几天/几小时，还是很有用啊。这样的话，这个题目是不是就有点大了啊。</p>]]></content>
-    
-    <category term="paper" />
-    
-    <category term="geophysics" />
     
   </entry>
   
