@@ -3,11 +3,48 @@
   <title>SEISAMUSE</title>
   <link href="https://www.seis-jun.xyz/atom.xml" rel="self" />
   <link href="https://www.seis-jun.xyz" />
-  <updated>2026-08-27T16:01:45+08:00</updated>
+  <updated>2026-08-28T07:51:23+08:00</updated>
   <id>https://www.seis-jun.xyz/</id>
   <author>
     <name>Jun Xie</name>
   </author>
+  
+  <entry>
+    <title>关于不确定性</title>
+    <link href="https://www.seis-jun.xyz/blog/2026-08-28-about-uncertainty.html" />
+    <id>https://www.seis-jun.xyz/blog/2026-08-28-about-uncertainty.html</id>
+    <updated>2026-08-28T07:51:23+08:00</updated>
+    <published>2026-08-28T07:51:23+08:00</published>
+    <summary type="html"><p>请拥抱她</p></summary>
+    <content type="html"><![CDATA[<p><img alt="" src="https://images.unsplash.com/photo-1678084774060-8a6243a0e0d9?q=80&amp;w=1770&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" /></p>
+<p>妻子爱算命。</p>
+<p>不是请人算，而是自己算。</p>
+<p>她已经学了十几年的算命。让我来说，她己经可以拿到算命学的硕士学位。不能算博士是因为她还没有什么创新的东西。</p>
+<p>估计她快要突破了，已经摸到博士的门槛，她已经找到了GAP，但自己也在迷糊。发现几个学派在打架，还没有统一。</p>
+<p>你知道的，我是学科学的。所以，前期比较执着的我总是爱跟妻子争论。</p>
+<p>我总是认为我们的人生是算不了的。但又不愿用我强烈的信念去侵犯娘子的想法，因此我总是说，算到好的你就信，算到不好的就不要信。</p>
+<p>她开始说可以算，因为她算了好多好多人的命，发现，很多真的能算得来，得了半仙/大师的名号。但她从来不给陌生人算，更不用算命挣钱。</p>
+<p>现在我开始觉得也许能算一些，大部分可能还是像是星座、塔罗牌和MBTI。</p>
+<p>妻子现在说可以算50%-60%。</p>
+<p>我说你知道吗？科学里面很多理论可以精确到99%甚至更高。50%-60%几乎和抛硬币差不多，可能就是靠第六感猜的准确性。这么低的准确性对于我们的生活有什么帮助吗？</p>
+<p>她陷入了思考。然后发现，命理学里面有很多道理其实可以指导我们生活，然后我说，那这些道理其实很多地方都可以学到，甚至生活中都能自己看到，悟到。总之她那时还没有理清学算命的好处和原因。</p>
+<p>而我大约想清楚了。大约是因为我们总是活在屎山代码的世界中啊。这个世界充满了不确定性。</p>
+<p>但之前讲过，我们难以接受<a href="/blog/2026-08-05-about-the-world.html">世界无目的</a>。</p>
+<p>我需要补充一下，世界上很多东西可能也是不确定的。</p>
+<p>如果世界有实体，我认为大约就是个死神，她最喜欢的大约是看着我们如何失败、如何发生意外以及如何死掉。</p>
+<p>活在生活的不确定中我们就像在生命大海里航行失去了锚，或者失去了指南针。</p>
+<p>你说目的地不清楚也罢了，现在连指南针也没有，我怎么办？</p>
+<p>其实闭环的地方来了，正因为没有目的，因此也不必要指南针。我们的最终目的地都是死，要什么指南针。</p>
+<p>好了，不要比喻了，就说我们平时生活。</p>
+<p>如果事事都知道怎么做，事事都是定的，估计咱们也不会有啥动力了。就像看电影，你提前看了剧透，那你就不想再看了，例如知道哪个配角会死，你就不会伤心；知道俩主角会分开，也会和好，也就不会感动；知道主角一定会因为谁谁谁而走出低谷，你更不会感受到振奋。这样，这部电影在我看来也就十分平淡毫无感情了。</p>
+<p>但你又会说，虽然我知道剧情，但是很多电影我也愿意、喜欢看很多遍。</p>
+<p>那我暂时解释不了，如果可以也希望你给我讲讲。</p>
+<p>总之我选择的是不要去提前剧透。</p>
+<p>虽然不确定性给我带来了焦虑，但同时也带来了开盲盒的快乐。</p>]]></content>
+    
+    <category term="日记" />
+    
+  </entry>
   
   <entry>
     <title>关于博客写作III</title>
@@ -4923,77 +4960,6 @@ bash<span class="w"> </span>do_deploy.bash
 <p>Vibe coding确实提高了效率，做网页，文本，抓取等真的有如神助，但是遇到自己专业的事，份内的事，自己还是需要花很多心思，codex很多时候都是帮倒忙。让它干这个，它干，然后有问题，说不如那样干；然后纠正回来说还要按我的干，它说干了，效果不行，不如这样干。真的是，买了个会和你对着干的牛马啊。</p>
 <p>总之用codex做事情的时候，真的自己得完全清楚自己要的是什么，每一步细节都需要想清楚，也要清楚你要它干的是哪一部分，并且还要清楚的传达给他。</p>
 <p>果然，这就体会到当老板的难处了啊。哈哈<del>苦笑</del>，没有老板的命，得了老板的病啊。</p>]]></content>
-    
-    <category term="日记" />
-    
-    <category term="codex" />
-    
-  </entry>
-  
-  <entry>
-    <title>关于Codex Skills</title>
-    <link href="https://www.seis-jun.xyz/blog/2026-06-05-codex-skills.html" />
-    <id>https://www.seis-jun.xyz/blog/2026-06-05-codex-skills.html</id>
-    <updated>2026-06-05T00:00:00+08:00</updated>
-    <published>2026-06-05T00:00:00+08:00</published>
-    <summary type="html"><p>前几天折腾了一堆 Codex Skills。 这东西怎么理解呢？大概就是给 Codex 塞一堆小抄。你不可能每次都从头教它“帮我检查 NSFC 标书时要先看科学问题”“读论文不要只看摘要”“改代码前先找根因”“写我的博客不要写成公众号腔”。于是就把这些稳定的工作习惯写成 skill，下次直接点名调用。 当然，装多了也挺...</p></summary>
-    <content type="html"><![CDATA[<p><img alt="" src="/images/skill.png" />
-前几天折腾了一堆 Codex Skills。</p>
-<p>这东西怎么理解呢？大概就是给 Codex 塞一堆小抄。你不可能每次都从头教它“帮我检查 NSFC 标书时要先看科学问题”“读论文不要只看摘要”“改代码前先找根因”“写我的博客不要写成公众号腔”。于是就把这些稳定的工作习惯写成 skill，下次直接点名调用。</p>
-<p>当然，装多了也挺吓人。现在一看，已经不是三五个小工具了，而是一整个工具箱。工具箱这种东西有个问题：工具越多，不代表干活越快。有时候你只是站在工具箱前面发呆，想半天到底该拿螺丝刀还是扳手。</p>
-<p>所以我给已经安装的 skills 写了一个使用手册，把它们分了几类。</p>
-<p>第一类是科研和 NSFC。这类对我最有用。</p>
-<p>比如 <code>bibliography-deep-research</code>，适合读一个主题文件夹里的所有 PDF，写综述，整理研究方向。这个对我很关键，因为我经常不是缺论文，而是缺一个人帮我把一堆论文串起来。</p>
-<p>NSFC 这一组就更像标书流水线了。<code>nsfc-qc</code> 做质量检查，<code>nsfc-ref-alignment</code> 查正文引用和参考文献是否对得上，<code>nsfc-justification-writer</code> 改立项依据，<code>nsfc-reviewers</code> 模拟专家评审。以前这些事情都要靠自己憋，憋到后来脑子都糊了。现在至少可以让 Codex 先当一个不太客气的同事，把问题指出来。</p>
-<p>不过这类 skill 也不能当神仙。它可以提醒我逻辑不顺、引用不稳、篇幅不对，但真正的科学问题还是得自己想。AI 能帮你打磨刀，但不能替你决定砍哪棵树。</p>
-<p>第二类是 Obsidian 和知识库。</p>
-<p>这里有 <code>obsidian-markdown</code>、<code>obsidian-cli</code>、<code>obsidian-bases</code>、<code>json-canvas</code>、<code>defuddle</code>、<code>canghe-url-to-markdown</code> 这些。它们的目标很明确：把资料变成能放进 vault 的东西。</p>
-<p>以前我收藏网页，经常是收藏完就等于没有收藏。因为网页在浏览器里，笔记在 Obsidian 里，想法在脑子里，三者互相看不见。现在比较理想的流程是，看到网页先用 <code>defuddle</code> 或 <code>canghe-url-to-markdown</code> 抓成 Markdown，再用 <code>obsidian-markdown</code> 整理成笔记，需要关系图就丢给 <code>json-canvas</code>。</p>
-<p>这样至少不会出现“我记得我看过，但是我完全不知道放哪了”的经典惨案。</p>
-<p>第三类是调研、学习和思考。</p>
-<p>这里有 <code>huashu-research</code>、<code>hv-analysis</code>、<code>ljg-read</code>、<code>ljg-learn</code>、<code>ljg-think</code>、<code>ljg-plain</code>。名字看起来有点玄，但用途其实很清楚。</p>
-<p><code>huashu-research</code> 是联网调研，适合查最新东西。<code>hv-analysis</code> 是横纵分析，适合看一个产品、公司、技术到底怎么来的，现在和别人比又处在什么位置。<code>ljg-read</code> 是陪读，<code>ljg-plain</code> 是说人话，<code>ljg-think</code> 是往下追问。</p>
-<p>这几个我觉得适合在“我大概知道问题，但还没有想清楚”的时候用。比如看到一个新工具，先别急着安装，先让它横向纵向分析一下。否则很容易见一个爱一个，最后电脑里全是工具，人还是那个手忙脚乱的人。</p>
-<p>第四类是写作、内容生产和可视化。</p>
-<p>这类包括 <code>qiaomu-info-card-designer</code>、<code>guizang-ppt-skill</code>、<code>canghe-infographic</code>、<code>canghe-format-markdown</code>、<code>ljg-present</code>，还有我刚做的 <code>seisamuse-blog-writer</code>。</p>
-<p><code>seisamuse-blog-writer</code> 是给我自己写博客用的。它读了我 200 多篇博客，总结出我的写法：别写得像公众号，别太端着，问题先摆出来，技术就给步骤，想法就慢慢绕，最后不用强行升华。听起来有点羞耻，但确实有用。因为 AI 默认会把文章写得太圆滑，太像“在当今快速发展的时代”。这种句子一出来，我就想把网页关了。</p>
-<p>所以以后如果要写博客，我大概就直接说：</p>
-<div class="highlight"><pre><span></span><code>用 seisamuse-blog-writer 帮我写一篇关于 XXX 的博客。
-</code></pre></div>
-
-<p>它至少会记得，不要把我写成一个培训机构讲师。</p>
-<p>第五类是代码开发。</p>
-<p>这里就多了。<code>diagnose</code>、<code>debugging-and-error-recovery</code>、<code>source-driven-development</code>、<code>code-review-and-quality</code>、<code>tdd</code>、<code>prototype</code>、<code>playwright</code>、<code>performance-optimization</code>、<code>security-and-hardening</code>，还有一堆 git 和项目管理相关的。</p>
-<p>这类 skill 的意义不是让 Codex 更会写代码，而是让它少犯“上来就改”的毛病。比如出了 bug，先用 <code>diagnose</code> 查根因；涉及新库，先用 <code>source-driven-development</code> 查官方文档；改完了再用 <code>code-review-and-quality</code> 过一遍；前端页面就用 <code>playwright</code> 真的打开看看。</p>
-<p>说到底，代码这种东西不是写出来就完了。能跑、能测、能维护、下次还能看懂，这才算完。否则现在爽了，未来的自己就要还债。</p>
-<p>还有一类是多代理和 skill 维护，比如 <code>awesome-code</code>、<code>parallel-vibe</code>、<code>auto-test-project</code>、<code>better-prompt</code>、<code>compact-bensz-skills</code>。这些不太适合天天用。小任务用它们就像切一颗葱还要召集一个项目组开会，阵仗太大。</p>
-<p>我现在觉得最常用的大概就十来个：</p>
-<ul>
-<li><code>bibliography-deep-research</code></li>
-<li><code>nsfc-qc</code></li>
-<li><code>nsfc-ref-alignment</code></li>
-<li><code>nsfc-justification-writer</code></li>
-<li><code>obsidian-markdown</code></li>
-<li><code>huashu-research</code></li>
-<li><code>hv-analysis</code></li>
-<li><code>diagnose</code></li>
-<li><code>source-driven-development</code></li>
-<li><code>code-review-and-quality</code></li>
-<li><code>qiaomu-info-card-designer</code></li>
-<li><code>guizang-ppt-skill</code></li>
-</ul>
-<p>以后调用也不要说得太虚。最稳的格式应该是这样：</p>
-<div class="highlight"><pre><span></span><code>帮我用 &lt;skill-name&gt; 做 &lt;任务&gt;。
-输入是：&lt;文件/目录/网页/目标&gt;。
-重点关注：&lt;最多三个重点&gt;。
-输出到：&lt;路径或格式&gt;。
-限制：&lt;不要改文件/不要联网/不要 push/先给报告&gt;。
-</code></pre></div>
-
-<p>这其实也不是给 AI 看的，是给自己看的。你把需求说清楚了，AI 才不会到处乱跑。你自己都没想清楚，skill 再多也没用。</p>
-<p>总之，Codex Skills 这事很像给实验室整理工具柜。以前锤子、胶带、螺丝、万用表全堆在抽屉里，找得到算运气好。现在终于贴上了标签：这个用来读论文，这个用来查标书，这个用来写笔记，这个用来查 bug。</p>
-<p>但是工具柜再整齐，也不会自己做实验。</p>
-<p>该想的问题，还是得自己想。该做的判断，还是得自己做。Skills 最好的用法，大概不是让 AI 替我干所有事，而是让我少在重复的小事里打转，把脑子留给真正麻烦的地方。</p>]]></content>
     
     <category term="日记" />
     
