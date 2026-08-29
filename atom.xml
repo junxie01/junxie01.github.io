@@ -3,11 +3,35 @@
   <title>SEISAMUSE</title>
   <link href="https://www.seis-jun.xyz/atom.xml" rel="self" />
   <link href="https://www.seis-jun.xyz" />
-  <updated>2026-08-29T15:53:49+08:00</updated>
+  <updated>2026-08-29T18:04:49+08:00</updated>
   <id>https://www.seis-jun.xyz/</id>
   <author>
     <name>Jun Xie</name>
   </author>
+  
+  <entry>
+    <title>到了我这个年纪是不是都会自动变油腻？</title>
+    <link href="https://www.seis-jun.xyz/blog/2026-08-29-oily-or-not.html" />
+    <id>https://www.seis-jun.xyz/blog/2026-08-29-oily-or-not.html</id>
+    <updated>2026-08-29T18:04:49+08:00</updated>
+    <published>2026-08-29T18:04:49+08:00</published>
+    <summary type="html"><p>油腻是装吗？</p></summary>
+    <content type="html"><![CDATA[<p><img alt="" src="https://images.unsplash.com/photo-1601723897234-327147304013?q=80&amp;w=1746&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" /></p>
+<p>什么是油腻？</p>
+<p>是头发放出油光还是大腹便便？的确是一种油。我想我不是。我会努力控制食量适量运动<del>但肚子还是略微凸起</del>，夏天来了每天至少洗一次头<del>但头发还是油得快</del>。绝不穿人字拖上街，不把衣服卷起炫耀自己的唯一一块腹肌。</p>
+<p>是爱说教，爱总结人生？这不就是说我吗。突然开始喜欢写自己的人生观，哲学思考。和学生讨论会一个劲儿巴拉巴拉，指导人生。大约看到我文字，听我唠叨的准会觉得油啊。</p>
+<p>是开始悠闲钓鱼、喝茶养生？还是开始讲，“这个我做不了。。。”或者，“我年轻的时候。。。”？</p>
+<p>我年轻的时候特不喜欢中年人。不喜欢他们条条框框太多，不喜欢他们总是教我怎么做才是对，不喜欢他们有种对世界看透了但无力的感觉。现在的我，难道已经慢慢成为我讨厌的类型？</p>
+<p>油腻到底是年龄到了导致，是岁月给我们增添了太多经历，还是因为人生丧失了不确定性？</p>
+<p>然后我又在想，人一旦认为自己“懂了”，是不是就开始变得油腻。认为自己懂了就是自以为是，就会有一种笃定。它与自信稍稍不同，自信是相信自己可以，但接受很多事情不如愿；“懂了”是认为世界是这样，且自己无能为力。</p>
+<p>真正让人油腻的可能不是年龄，也不是风霜，而是不再对世界感到惊讶和好奇。如果继续拥抱不确定，追问因果，探寻有趣的东西，油腻也许会和我们分道。</p>
+<p>于此同时，我又想到了装。一个四十岁的人硬装十八岁，是不是油？四十岁的人硬装六十岁，是不是油？不接受自己，硬凹造型、硬装，原来也是一种油腻。</p>
+<p>但是，什么又不是装？我们可能一直都在装我们自己。装得不像的就会被认为是油腻，或者装得不像孔子所说的，“十有五而志于学，三十而立，四十而不惑，五十而知天命，六十而耳顺，七十而从心所欲，不逾矩”，那就是油腻。</p>
+<p>到底谁来定义油腻？</p>]]></content>
+    
+    <category term="日记" />
+    
+  </entry>
   
   <entry>
     <title>开车</title>
@@ -4843,65 +4867,6 @@ curl<span class="w"> </span>-I<span class="w"> </span>https://rss.seis-jun.xyz/
     <category term="geophysics" />
     
     <category term="ocean" />
-    
-  </entry>
-  
-  <entry>
-    <title>近期我对博客做了什么</title>
-    <link href="https://www.seis-jun.xyz/blog/2026-06-14-recent-blog-updates.html" />
-    <id>https://www.seis-jun.xyz/blog/2026-06-14-recent-blog-updates.html</id>
-    <updated>2026-06-14T22:27:48+08:00</updated>
-    <published>2026-06-14T22:27:48+08:00</published>
-    <summary type="html"><p>最近又折腾了一轮博客。 一开始只是觉得 Blog 页面不好用。文章越来越多，每次想找以前写过的东西，都像在旧抽屉里翻发票。明明自己写过，明明大概知道关键词，但就是找不到。好记性不如烂笔头，结果烂笔头太多了，也会变成一团毛线。 所以第一件事就是加搜索。 搜索这东西听起来很简单，真做起来才发现，问题不是只有一个输入框。搜索...</p></summary>
-    <content type="html"><![CDATA[<p><img alt="" src="/images/blog2.png" />
-最近又折腾了一轮博客。</p>
-<p>一开始只是觉得 Blog 页面不好用。文章越来越多，每次想找以前写过的东西，都像在旧抽屉里翻发票。明明自己写过，明明大概知道关键词，但就是找不到。好记性不如烂笔头，结果烂笔头太多了，也会变成一团毛线。</p>
-<p>所以第一件事就是加搜索。</p>
-<p>搜索这东西听起来很简单，真做起来才发现，问题不是只有一个输入框。搜索框放哪里？Blog 页面要不要一打开就看到？列表里面的 markdown 链接、删除线、代码块要不要正确渲染？如果只是把原文粗暴截断，<code>[Luo et al. (2021)](...)</code> 这种链接就会在列表里露馅，像衣服穿反了一样。</p>
-<p>于是又修了 Blog 列表的摘要渲染。现在列表里的链接、删除线、代码块这些东西，至少不会再以奇怪的原始文本形式跳出来。博客点开之后能正常渲染是一回事，列表里也能像个人样是另一回事。</p>
-<p>然后我又加了 <code>Thoughts</code>。</p>
-<p>本来想叫“说说”，后来觉得这个名字太有既视感<del>其实是别人用过，怕有版权问题啊</del>，就改成了 <code>Thoughts</code>。它不是正式 blog，也不是 RSS 里的文章，只是短想法。今天想到什么，记一下。以后点进去还能看到历史。这个东西对我还挺有用，因为很多想法还没有长到能写成文章，但如果不记下来，基本就是当天蒸发。</p>
-<p><code>Thoughts</code> 里还有一个小细节：同一天多条想法会自然排在一起。不是非要我每天只写一条，也不是要搞成日记模板。想说几句就几句，系统帮我按时间放好。这对我这种经常突然想一句废话的人很重要。</p>
-<p>再后来就是页面设计。</p>
-<p>Blog 页面之前有点丑。严格说不是一点丑，是那种“功能都有了，但每个功能都在抢镜头”的丑。搜索框、标签、归档、文章列表，全在喊“看我看我”。于是我把 Blog 页面改成了比较安静的索引形式：左边是文章列表，右边只放 <code>Topics</code>。每篇文章显示日期、标题、两行摘要、轻量标签。少一点边框，少一点胶囊按钮，少一点“我正在努力设计”的痕迹。</p>
-<p><code>Archives</code> 也单独拿出来放到了顶部导航里，位置在 <code>Blog</code> 和 <code>About</code> 中间。这个决定我还挺喜欢的。归档本来就是一级入口，不应该塞在 Blog 页右侧底下。现在想按年份翻旧文章，直接点 <code>Archives</code> 就行。</p>
-<p>不过 <code>Archives</code> 页一开始也不好看。好多横线，像考研政治重点一样。后来把大标题和年份标题下面的线都去掉了，页面安静不少。</p>
-<p>主页也改了一点。</p>
-<p>左侧边栏原来头像下面空得有点尴尬。于是加了一个 <code>Daily Line</code>，每天一句俏皮话。比如：</p>
-<blockquote>
-<p>先别优化，先保存。</p>
-</blockquote>
-<p>这句话是写给我自己的。因为很多时候不是不会优化，是优化之前忘了保存。科研如此，写代码如此，人生可能也差不多。</p>
-<p>下面又加了一个 <code>Status</code>：</p>
-<ul>
-<li>Posts</li>
-<li>Words</li>
-<li>Running</li>
-<li>Visitors</li>
-</ul>
-<p>前三个是构建时自动算的。<code>Posts</code> 是文章总数，<code>Words</code> 是中文字符加英文词的粗略统计，<code>Running</code> 从我这个站开始的时间算。<code>Visitors</code> 用的是现有的访问统计脚本，不重新造轮子。统计数字本身没什么了不起，但放在那里有一种“这个站确实在慢慢长大”的感觉。</p>
-<p><code>About</code> 页面也改了。</p>
-<p>这个页面一开始我有点纠结。写太少，像没睡醒；写太多，又像把简历和户口本都贴到了墙上<del>万一被人扒拉可不太好</del>。后来想了想，<code>About</code> 不应该是完整 CV，它只是告诉陌生读者：我是谁，大概做什么，这个站是干什么的。</p>
-<p>所以我把它改轻了。单位不写得太细，完整教育经历和 publication list 先撤掉，只保留研究方向、<code>What is this place</code> 和联系方式。<code>What is this place</code> 这一节我还挺喜欢，它说这个站主要放 notes, fragments, and records。也就是我的研究笔记、paper reading、小技巧、Linux/Python/GMT/LaTeX 这些工具记录，以及一些学习、工作、生活里的想法。</p>
-<p>完整信息当然不是不要了。辛辛苦苦整理出来的东西，删掉也挺可惜。但公开网页和私人档案不是一回事。公开页面应该是一个入口，不是一个数据库。数据库可以放在自己笔记里，网页上就别太实诚了。做人已经很实诚了，网页就稍微聪明一点。</p>
-<p>这里还顺便学到一个重要教训：<code>do_deploy.bash</code> 只是部署网站，不等于提交源码。</p>
-<p>它会运行 <code>build.py</code>，然后把 <code>site/</code> 推到 <code>gh-pages</code> 分支。也就是说，网页可以更新，但 <code>build.py</code>、<code>templates/</code>、<code>docs/css/style.css</code> 这些源码如果没有自己 <code>git add</code>、<code>git commit</code>、<code>git push</code>，其实并没有进入源码分支。</p>
-<p>这个坑有点隐蔽。因为你刷新网站，一切都对，看起来像是“已经推送成功了”。但从长期维护看，这些源码才是真正的房梁。只推生成出来的页面，就像只把饭端出去，厨房没收拾。当天能吃，明天就不好说了。</p>
-<p>所以以后流程应该是：</p>
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>status
-git<span class="w"> </span>add<span class="w"> </span>build.py<span class="w"> </span>templates/index.html<span class="w"> </span>templates/blog.html<span class="w"> </span>templates/base.html<span class="w"> </span>templates/archives.html<span class="w"> </span>docs/css/style.css
-git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Update blog layout and homepage sidebar&quot;</span>
-git<span class="w"> </span>push
-bash<span class="w"> </span>do_deploy.bash
-</code></pre></div>
-
-<p>当然具体 add 哪些文件要看 <code>git status</code>，不要闭着眼复制。闭着眼复制命令这件事，通常会以另一个博客结尾。</p>
-<p>这一轮改完之后，我感觉这个站终于更像一个我自己真的会用的笔记站了。</p>
-<p>不是那种很漂亮的作品集，也不是标准学术主页。它更像一个研究者的工作台：有纸，有笔，有旧便签，有一些工具，有些地方还乱，但至少现在东西开始有地方放了。</p>]]></content>
-    
-    <category term="日记" />
-    
-    <category term="blog" />
     
   </entry>
   
