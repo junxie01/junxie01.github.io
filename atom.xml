@@ -3,11 +3,44 @@
   <title>SEISAMUSE</title>
   <link href="https://www.seis-jun.xyz/atom.xml" rel="self" />
   <link href="https://www.seis-jun.xyz" />
-  <updated>2026-08-28T18:18:30+08:00</updated>
+  <updated>2026-08-29T15:53:49+08:00</updated>
   <id>https://www.seis-jun.xyz/</id>
   <author>
     <name>Jun Xie</name>
   </author>
+  
+  <entry>
+    <title>开车</title>
+    <link href="https://www.seis-jun.xyz/blog/2026-08-29-driving.html" />
+    <id>https://www.seis-jun.xyz/blog/2026-08-29-driving.html</id>
+    <updated>2026-08-29T15:53:49+08:00</updated>
+    <published>2026-08-29T15:53:49+08:00</published>
+    <summary type="html"><p>安心在自己的道上走</p></summary>
+    <content type="html"><![CDATA[<p><img alt="" src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&amp;w=1770&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" /></p>
+<p>妻子说开车时会很开心，有自由飞翔的感觉。</p>
+<p>而我一直没有这种感觉。</p>
+<p>记得第一次开车，开了约30公里，到达目的后，我的样子像喝了酒。脸烫脖子红，心脏砰砰砰。</p>
+<p>从来没有觉得开车是多么开心的事情。在学驾照之前我甚至怀疑像我这种犹犹豫豫的人，怎么能开好车。例如左右两条道我该走哪条？</p>
+<p>另一种让我觉得开车很恐怖的是，我学过物理。我知道能量守恒，知道一辆几十公里时速的车撞到行人或者其他东西上的后果。</p>
+<p>看过的好多车祸视频把我的能量守恒形象地展示出来。</p>
+<p>因此我基本是把开车这个选项排除在外的。</p>
+<p>但我更不愿被妻子载一辈子。</p>
+<p>有时妻子其实挺矛盾，一方面说开车很开心，但同时又感觉很累，因为一直不敢分心，不能分心。你不能预测到道路上的所有情形，只能让自己随时保持清醒。</p>
+<p>等到妻子坐到我的副驾，她也就爱上副驾的感觉。一方面有她的飞的感觉，另一方面抛却了担心。</p>
+<p>然而，头几次，甚至头一年，坐在副驾的妻子其实比我自己都还紧张。</p>
+<p>要是路上有车突然别我，她的脚趾几乎会抠穿鞋底。</p>
+<p>渐渐的，其实我开一趟车一点波澜都没有，而换作妻子像喝了酒。</p>
+<p>开始我说，我们单位同事开车一个月就成了老手，我想我应该也没问题。妻子揶揄说，一个月，门儿都没有，我都开了一两年才觉得勉强比较能安心上路。</p>
+<p>大约我胆子还是比较大，一个月果然也就安心上路了。这一点其实也没有让妻子很惊讶，因为以前带妻子坐碰碰车的时候她就见识到了我的掌控感。</p>
+<p>掌着方向盘，脚踩刹车和油门片的时候我就已经感觉到了那是独属于男生的玩具。</p>
+<p>我想控制车子，让它按照你想的路线跑几乎没有难度。难的还是如何让自己不要着急，急着去别车，变道，抢灯。</p>
+<p>到现在其实我还是不会去别车，特别是刀片超车。</p>
+<p>不用吹嘘或一味享受高速和大的加速度带给你的刺激和爽感，只需把车当作一间小房子，能把你从A地平安送到B地就好了。</p>
+<p>路上只管走好你自己的道。</p>]]></content>
+    
+    <category term="日记" />
+    
+  </entry>
   
   <entry>
     <title>关于不确定性II</title>
@@ -4869,81 +4902,6 @@ bash<span class="w"> </span>do_deploy.bash
     <category term="日记" />
     
     <category term="blog" />
-    
-  </entry>
-  
-  <entry>
-    <title>Paper Reading (56)</title>
-    <link href="https://www.seis-jun.xyz/blog/2026-06-14-paper-reading-56.html" />
-    <id>https://www.seis-jun.xyz/blog/2026-06-14-paper-reading-56.html</id>
-    <updated>2026-06-14T21:01:02+08:00</updated>
-    <published>2026-06-14T21:01:02+08:00</published>
-    <summary type="html"><p>Surface Crevasse Evolution Observed Using Matched Field Processing and Source Relocation at Hansbreen, Svalbard</p></summary>
-    <content type="html"><![CDATA[<h2 id="paper-information">Paper Information</h2>
-<ul>
-<li><strong>Title</strong>: Surface Crevasse Evolution Observed Using Matched Field Processing and Source Relocation at Hansbreen, Svalbard</li>
-<li><strong>First Author</strong>: Wojciech Gajek</li>
-<li><strong>Corresponding Author</strong>: Wojciech Gajek</li>
-<li><strong>Affiliation</strong>: Institute of Geophysics, Polish Academy of Sciences, Warsaw, Poland</li>
-<li><strong>Journal</strong>: Journal of Geophysical Research: Earth Surface, 2026, (awaiting publication), </li>
-<li><strong>DOI</strong>: (awaiting publication)</li>
-</ul>
-<h2 id="author-background">Author Background</h2>
-<h3 id="first-authors-representative-works">First Author&#8217;s Representative Works</h3>
-<ol>
-<li>Gajek, W., et al. (2020). Seismic activity of Hansbreen glacier, Svalbard. <em>Journal of Glaciology</em>, 66(256), 247-258.</li>
-<li>Nanni, U., et al. (2022). Cryoseismology of glaciers: A review. <em>Reviews of Geophysics</em>, 60(2), e2021RG000743.</li>
-<li>Gholami, A., et al. (2020). Seismic monitoring of glacier dynamics. <em>Journal of Geophysical Research: Earth Surface</em>, 125(10), e2020JF005651.</li>
-</ol>
-<h2 id="abstract-translated">Abstract (Translated)</h2>
-<p>本研究使用匹配场处理（Matched Field Processing, MFP）和源重定位技术来研究斯瓦尔巴群岛汉斯布伦冰川（Hansbreen, Svalbard）的冰川裂缝演化。我们使用MFP检测到了冰川表面的冰震活动，并将其与冰川裂缝的扩张率和粘弹性扩散系数联系起来。结果表明，冰川裂缝的扩张率为0.005-0.007 m/s，粘弹性扩散系数为0.47-0.55 m2/s。这些结果支持了冰川裂缝扩张的亚临界裂缝扩张机制，表明冰川裂缝的扩张是由粘弹性应力松弛控制的。</p>
-<h2 id="research-context">Research Context</h2>
-<h3 id="importance">Importance</h3>
-<p>冰川裂缝是冰川动力学的重要组成部分，它们控制着冰川的机械和水文响应。冰川裂缝的扩张率和粘弹性扩散系数是理解冰川动力学的重要参数。然而，现有的研究中，冰川裂缝的扩张率和粘弹性扩散系数的观测数据仍然很少，且不确定性较大。因此，开发新的方法来观测和研究冰川裂缝的扩张率和粘弹性扩散系数是非常必要的。</p>
-<p>冰川裂缝的扩张率和粘弹性扩散系数的研究对于理解冰川动力学和预测冰川的未来行为具有重要意义。冰川裂缝的扩张率和粘弹性扩散系数可以反映冰川的机械和水文响应，进而影响冰川的运动和变化。因此，研究冰川裂缝的扩张率和粘弹性扩散系数可以为冰川的监测和预测提供重要的参考信息。</p>
-<h3 id="previous-studies">Previous Studies</h3>
-<ul>
-<li><strong>Neave &amp; Savage (1970)</strong>: 研究了冰川裂缝的扩张率和粘弹性扩散系数，发现冰川裂缝的扩张率和粘弹性扩散系数与冰川的机械和水文响应有关。<em>Journal of Glaciology</em>, 9(55), 131-141.</li>
-<li><strong>Mikesell et al. (2012)</strong>: 使用地震数据研究了冰川裂缝的扩张率和粘弹性扩散系数，发现冰川裂缝的扩张率和粘弹性扩散系数可以反映冰川的机械和水文响应。<em>Journal of Geophysical Research: Earth Surface</em>, 117(F2), F02005.</li>
-<li><strong>Taylor-Offord et al. (2019)</strong>: 研究了冰川裂缝的扩张率和粘弹性扩散系数的空间变异性，发现冰川裂缝的扩张率和粘弹性扩散系数在空间上具有显著的变异性。<em>Journal of Glaciology</em>, 65(251), 347-358.</li>
-<li><strong>Nanni et al. (2022)</strong>: 使用MFP和源重定位技术研究了冰川裂缝的扩张率和粘弹性扩散系数，发现冰川裂缝的扩张率和粘弹性扩散系数可以通过MFP和源重定位技术来观测和研究。<em>Journal of Geophysical Research: Earth Surface</em>, 127(10), e2022JF006651.</li>
-<li><strong>Fichtner et al. (2025)</strong>: 研究了冰川裂缝的扩张率和粘弹性扩散系数的时间变异性，发现冰川裂缝的扩张率和粘弹性扩散系数在时间上具有显著的变异性。<em>Journal of Glaciology</em>, 71(265), 131-141.</li>
-</ul>
-<h3 id="limitations-of-previous-research">Limitations of Previous Research</h3>
-<p>现有的研究中，冰川裂缝的扩张率和粘弹性扩散系数的观测数据仍然很少，且不确定性较大。同时，现有的研究方法也存在一些局限性，例如地震数据的采集和处理困难，MFP和源重定位技术的应用限制等。因此，开发新的方法来观测和研究冰川裂缝的扩张率和粘弹性扩散系数是非常必要的。</p>
-<p><img alt="图1 研究区域的位置和特征。" src="/images/paper-surface-crevasse-evolution-observed/figure1.png" /></p>
-<center><em>图1 研究区域的位置和特征。</em></center>
-
-<p></p>
-<h3 id="data">Data</h3>
-<p>本研究使用了汉斯布伦冰川（Hansbreen, Svalbard）的地震数据，包括10个地震站的数据，采样率为250 Hz，记录时间为8天。</p>
-<h3 id="methods">Methods</h3>
-<p>本研究使用了MFP和源重定位技术来研究冰川裂缝的扩张率和粘弹性扩散系数。MFP是一种地震数据处理方法，可以用来检测和定位地震源。源重定位技术是一种地震数据处理方法，可以用来提高地震源的定位精度。</p>
-<p><img alt="图3 选定频率带的MFP结果参数统计，中心频率为" src="/images/paper-surface-crevasse-evolution-observed/figure3.png" /></p>
-<center><em>图3 选定频率带的MFP结果参数统计，中心频率为</em></center>
-
-<p>
-本研究的结果表明，冰川裂缝的扩张率为0.005-0.007 m/s，粘弹性扩散系数为0.47-0.55 m2/s。这些结果支持了冰川裂缝扩张的亚临界裂缝扩张机制，表明冰川裂缝的扩张是由粘弹性应力松弛控制的。</p>
-<p><img alt="图10 假设扩散传播（时间上的平方距离）估计冰裂缝传播率" src="/images/paper-surface-crevasse-evolution-observed/figure10.png" /></p>
-<center><em>图10 假设扩散传播（时间上的平方距离）估计冰裂缝传播率</em></center>
-
-<p></p>
-<h3 id="innovations">Innovations</h3>
-<p>本研究的创新之处在于使用MFP和源重定位技术来研究冰川裂缝的扩张率和粘弹性扩散系数。这些方法可以用来提高地震源的定位精度和检测地震源的能力。</p>
-<h3 id="contributions">Contributions</h3>
-<p>本研究的贡献在于提供了冰川裂缝扩张的亚临界裂缝扩张机制的证据，支持了冰川裂缝的扩张是由粘弹性应力松弛控制的。同时，本研究也为冰川的监测和预测提供了重要的参考信息。</p>
-<h3 id="limitations">Limitations</h3>
-<p>本研究的局限性在于地震数据的采集和处理困难，MFP和源重定位技术的应用限制等。同时，本研究的结果也需要进一步的验证和确认。</p>
-<h2 id="personal-thoughts">Personal Thoughts</h2>
-<p>用MFP来定位冰裂隙扩展，牛。用的很高频的瑞利波信号，将源定位到了冰裂缝上。这不和我们的工作有点类似吗。定位时用的是两步法：1，MFP频率是4-16Hz，用的是相位相干，同时反演速度和位置，定位精度10m；2，重定位，用的是5-40Hz，用的是自适应阻尼 Levenberg-Marquardt定位法，没有测绝对到时用的是差分到时法，相对到时用的是互相关来测。定位时速度用的是固定的。</p>]]></content>
-    
-    <category term="paper" />
-    
-    <category term="seismology" />
-    
-    <category term="geophysics" />
-    
-    <category term="glaciology" />
     
   </entry>
   
