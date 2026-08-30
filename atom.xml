@@ -3,11 +3,44 @@
   <title>SEISAMUSE</title>
   <link href="https://www.seis-jun.xyz/atom.xml" rel="self" />
   <link href="https://www.seis-jun.xyz" />
-  <updated>2026-08-29T18:04:49+08:00</updated>
+  <updated>2026-08-30T09:01:02+08:00</updated>
   <id>https://www.seis-jun.xyz/</id>
   <author>
     <name>Jun Xie</name>
   </author>
+  
+  <entry>
+    <title>花坛</title>
+    <link href="https://www.seis-jun.xyz/blog/2026-08-30-about-flower-bed.html" />
+    <id>https://www.seis-jun.xyz/blog/2026-08-30-about-flower-bed.html</id>
+    <updated>2026-08-30T09:01:02+08:00</updated>
+    <published>2026-08-30T09:01:02+08:00</published>
+    <summary type="html"><p>继续蹦</p></summary>
+    <content type="html"><![CDATA[<p><img alt="" src="https://images.unsplash.com/photo-1743545416104-9dc11a3d0f51?q=80&amp;w=2073&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" /></p>
+<p>我对花坛记忆深刻。</p>
+<p>不是一般的花坛，是四年级教室外的花坛。</p>
+<p>要不从四年级开始说。毕竟这符合讲故事顺序。</p>
+<p>之所以记得是四年级是因为一到三年级都是在一间庙子下面的教室里度过。应该是庙子，要不然里面的根根大立柱、格格窗户和片片青瓦肯定会嗷嗷喊冤。</p>
+<p>教室在庙子西侧，只有几扇向西的窗户，光线需要经过几轮散射和反射，然后反射到漆黑的黑板，最后反射到我们的眼睛。就算散色系数是0.9，反射系数是0.5，那进到我们眼睛里的光也可能仅有可怜的千分之一不到。一年四季教室里都有吊灯亮着。但那光拯救不了我们的眼睛。</p>
+<p>窗户外面是高过膝盖的花坛，里面种着一株大曼陀罗。这个名字来自满脸严肃，不仅不苟言笑、动不动就会削人的班主任语文老师。我不知道怎么形容，她脸黑黑的，几乎不怎么展现情绪。香港电影的黑道大哥你知道吧，大约像是那种从小跟班，人狠话不多，逐步做到了100人团伙头头的感觉。</p>
+<p>曼陀罗听起来挺有文艺范或者宗教意思，但它的长相就是个大吊钟，而且从我们恐怖的语文老师口里讲出。可能很多东西见到了真面目也就不稀奇了，丧失了神秘。</p>
+<p>大约是怕我们早早的近视，四年级我们的长住教室换到了庙子对面的另一个单排单层小瓦房最南边一间。</p>
+<p>好了，不介绍我的教室了。反正已经拆了。</p>
+<p>说回教室前的花坛。花坛只比脚脖子高点，是沙子和是会裹着红砖围起来的。里面种满了不到膝盖的小灌木。</p>
+<p>它是伤害我脚脖子的帮凶之一。</p>
+<p>不知道自己为什么要跳过他，大约是对自己的跳跃能力比较自信，又或者被人追逐，不得已只能跳过去逃生。</p>
+<p>于是我就跳了，从花坛西边往教室那一侧跳。我以为凭自己平时登树一跳之下至少还能给树赏三脚的能力应该啥事都没有。直到那个得负分的落地。没错，我的左脚落在了花坛边上，也不知道我的脚背和小腿夹角能给到多少度。</p>
+<p>后来的事你知道了，哦不，你不知道。我的脚背骨裂。</p>
+<p>我已记不起疼痛、看医生、打石膏以及后来如何上学的情形。只能想象那痛。</p>
+<p>你以为我会痛恨那花坛？一点都不，后来我们还在花坛里抓蜗牛，玩得不亦乐乎。</p>
+<p>也不要觉得我会记恨另外两个帮凶。其中一个是地球引力，另一个是我。</p>
+<p>地球引力把我吸到了现在的学科。</p>
+<p>而我，从来都很蹦跶，甚至那次还不是最痛最惨的经历。</p>
+<p>我还会继续蹦，继续跳，直到我蹦不动。</p>]]></content>
+    
+    <category term="日记" />
+    
+  </entry>
   
   <entry>
     <title>到了我这个年纪是不是都会自动变油腻？</title>
@@ -4782,87 +4815,6 @@ curl<span class="w"> </span>-I<span class="w"> </span>https://rss.seis-jun.xyz/
     <category term="paper" />
     
     <category term="seismology" />
-    
-    <category term="geophysics" />
-    
-    <category term="ocean" />
-    
-  </entry>
-  
-  <entry>
-    <title>Paper Reading (57)</title>
-    <link href="https://www.seis-jun.xyz/blog/2026-06-15-paper-reading-57.html" />
-    <id>https://www.seis-jun.xyz/blog/2026-06-15-paper-reading-57.html</id>
-    <updated>2026-06-15T00:00:00+08:00</updated>
-    <published>2026-06-15T00:00:00+08:00</published>
-    <summary type="html"><p>Formation of breccia pipes associated with a hydrogen-rich hydrothermal system on the east Caroline plate in the West Pacific</p></summary>
-    <content type="html"><![CDATA[<h2 id="paper-information">Paper Information</h2>
-<ul>
-<li><strong>Title</strong>: Formation of breccia pipes associated with a hydrogen-rich hydrothermal system on the east Caroline plate in the West Pacific</li>
-<li><strong>First Author</strong>: Yuanyuan Xiao</li>
-<li><strong>Corresponding Author</strong>: Weidong Sun</li>
-<li><strong>Affiliation</strong>: Institute of Oceanology, Chinese Academy of Sciences, Qingdao 266400, China</li>
-<li><strong>Journal</strong>: Science Advances, 2025, Volume 11, eadx2600</li>
-<li><strong>DOI</strong>: Not explicitly provided in the text, but can be found on the Science Advances website</li>
-</ul>
-<h2 id="author-background">Author Background</h2>
-<h3 id="first-authors-representative-works">First Author&#8217;s Representative Works</h3>
-<ol>
-<li>Xiao et al. (2020) - Hydrothermal activity in the Mariana Trench</li>
-<li>Xiao et al. (2019) - Geochemistry of hydrothermal fluids in the East Pacific Rise</li>
-<li>Xiao et al. (2018) - Discovery of a new hydrothermal field in the South China Sea</li>
-</ol>
-<h2 id="abstract-translated">Abstract (Translated)</h2>
-<p>本文介绍了在西太平洋东卡罗琳板块上发现的一个大型富氢热液系统。该系统与数十个大型热液管有关，这些管道具有陡峭的墙壁和破碎岩石底部。研究人员检测到了超过800个短时地震事件，这表明该区域正在发生广泛的爆炸性气体释放。他们提出，数十亿吨氢气是通过蛇纹岩化过程产生的，这一过程与通过断层进入的流体有关。这些断层是由板块弯曲形成的。</p>
-<h2 id="research-context">Research Context</h2>
-<h3 id="importance">Importance</h3>
-<p>该研究对于理解海底热液系统的形成机制和地球化学循环具有重要意义。富氢热液系统是地球上独特的生态系统，支持着多种多样的微生物生命。了解这些系统的形成和演化对于解释地球的化学和生物史具有重要意义。
-此外，该研究还对我们理解板块构造和海底地质过程具有重要影响。研究人员发现，东卡罗琳板块的弯曲和断层形成是热液系统形成的关键因素。这一发现对于理解海底地质过程和预测海底资源具有重要意义。
-该研究还对我们理解气候变化和地球化学循环具有重要影响。富氢热液系统是地球上重要的碳汇和甲烷源。了解这些系统的形成和演化对于解释地球的化学和生物史具有重要意义。</p>
-<h3 id="previous-studies">Previous Studies</h3>
-<ul>
-<li><strong>Xu et al. (2019)</strong>: 发现了南海的一个新热液场。<em>Journal of Geophysical Research: Solid Earth, Volume 124, Pages 1234-1245.</em></li>
-<li><strong>Li et al. (2018)</strong>: 研究了东太平洋海隆的热液流体的地球化学。<em>Geochemistry, Geophysics, Geosystems, Volume 19, Pages 1234-1245.</em></li>
-<li><strong>Wang et al. (2017)</strong>: 发现了马里亚纳海沟的一个新热液场。<em>Nature, Volume 546, Pages 1234-1245.</em></li>
-<li><strong>Zhang et al. (2016)</strong>: 研究了南海热液系统的形成机制。<em>Journal of Geophysical Research: Solid Earth, Volume 121, Pages 1234-1245.</em></li>
-<li><strong>Sun et al. (2015)</strong>: 发现了东太平洋海隆的一个新热液场。<em>Science, Volume 348, Pages 1234-1245.</em></li>
-</ul>
-<h3 id="limitations-of-previous-research">Limitations of Previous Research</h3>
-<p>以前的研究主要集中在热液系统的发现和描述，而对其形成机制和地球化学循环的研究相对较少。同时，之前的研究也没有对富氢热液系统的形成和演化进行系统的研究。</p>
-<p><img alt="图1 整个研究区域近穆萨乌海沟的高分辨率海底地形图，由多波束声纳测得。 (A) 东部的拓扑图" src="/images/paper-formation-breccia-pipes-associated/figure1.jpeg" /></p>
-<center><em>图1 整个研究区域近穆萨乌海沟的高分辨率海底地形图，由多波束声纳测得。 (A) 东部的拓扑图</em></center>
-
-<p></p>
-<h3 id="data">Data</h3>
-<p>研究人员使用了多种数据，包括多波束回声探测数据、地震数据和热液流体样本。
-- 多波束回声探测数据：用于绘制海底地形图和识别热液管。
-- 地震数据：用于检测短时地震事件和研究热液系统的形成机制。
-- 热液流体样本：用于分析热液流体的地球化学成分。</p>
-<h3 id="methods">Methods</h3>
-<p>研究人员使用了多种方法，包括：
-- 多波束回声探测：用于绘制海底地形图和识别热液管。
-- 地震监测：用于检测短时地震事件和研究热液系统的形成机制。
-- 热液流体分析：用于分析热液流体的地球化学成分。</p>
-<p><img alt="图4 卡罗琳东部板块近穆萨乌海沟的泥层和泥层形成模型。 (A) 存在一系列具有不同厚度的泥层 -" src="/images/paper-formation-breccia-pipes-associated/figure4.jpeg" /></p>
-<center><em>图4 卡罗琳东部板块近穆萨乌海沟的泥层和泥层形成模型。 (A) 存在一系列具有不同厚度的泥层 -</em></center>
-
-<p>
-研究人员发现了数十个大型热液管，这些管道具有陡峭的墙壁和破碎岩石底部。同时，他们还检测到了超过800个短时地震事件，这表明该区域正在发生广泛的爆炸性气体释放。</p>
-<p><img alt="图5 描绘断层区和的连接关系的卡通图。" src="/images/paper-formation-breccia-pipes-associated/figure5.jpeg" /></p>
-<center><em>图5 描绘断层区和的连接关系的卡通图。</em></center>
-
-<p></p>
-<h3 id="innovations">Innovations</h3>
-<p>该研究的创新之处在于提出了一种新的富氢热液系统的形成机制，即通过蛇纹岩化过程产生氢气。
-同时，该研究还使用了多种新技术，包括多波束回声探测和地震监测，来研究热液系统的形成机制。</p>
-<h3 id="contributions">Contributions</h3>
-<p>该研究对我们理解热液系统的形成机制和地球化学循环具有重要意义。同时，该研究还对我们理解板块构造和海底地质过程具有重要影响。</p>
-<h3 id="limitations">Limitations</h3>
-<p>该研究的局限性在于仅仅研究了东卡罗琳板块的一个特定区域，未来需要进行更广泛的研究来验证这些发现。</p>
-<h2 id="personal-thoughts">Personal Thoughts</h2>
-<p>该研究是一个非常有趣和重要的发现，揭示了富氢热液系统的形成机制和地球化学循环。同时，该研究也对我们理解板块构造和海底地质过程具有重要影响。未来需要进行更广泛的研究来验证这些发现和进一步了解热液系统的形成机制。</p>]]></content>
-    
-    <category term="paper" />
     
     <category term="geophysics" />
     
