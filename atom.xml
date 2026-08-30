@@ -3,11 +3,43 @@
   <title>SEISAMUSE</title>
   <link href="https://www.seis-jun.xyz/atom.xml" rel="self" />
   <link href="https://www.seis-jun.xyz" />
-  <updated>2026-08-30T09:01:02+08:00</updated>
+  <updated>2026-08-30T21:19:47+08:00</updated>
   <id>https://www.seis-jun.xyz/</id>
   <author>
     <name>Jun Xie</name>
   </author>
+  
+  <entry>
+    <title>开学</title>
+    <link href="https://www.seis-jun.xyz/blog/2026-08-30-back-to-school.html" />
+    <id>https://www.seis-jun.xyz/blog/2026-08-30-back-to-school.html</id>
+    <updated>2026-08-30T21:19:47+08:00</updated>
+    <published>2026-08-30T21:19:47+08:00</published>
+    <summary type="html"><p>是个辛苦活</p></summary>
+    <content type="html"><![CDATA[<p><img alt="" src="https://plus.unsplash.com/premium_photo-1664110691106-3b9672b80956?q=80&amp;w=2163&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" /></p>
+<p>开学是娃的大日子。</p>
+<p>还有两天娃就要去学校了，我不知道他现在是什么心情。大约很多时候他还没有明白怎么去描述自己的心情。而这次他还在老家没有回来。</p>
+<p>这是第一次一个人坐飞机回老家过暑假。过去我们会很担心，不太放心他一个人。现在他长大了些，懂得更多。还有一点是，在家我们几乎叫不动他做作业了。</p>
+<p>尝试过几次，我怕伤了他的主动性。已经换做鼓励和责任分担。但效果甚微。</p>
+<p>有一次全家人到省图书馆举办的国学交流会与一位高校专门从事教育的老师有过交流。我们咨询了育儿的诸多问题。印象最深的一句话是，“孩子要易子而教”。大约是因为很多时候是自己的娃，期待会更多，用情会更深，很多时候可能会出现负面效果。</p>
+<p>但仔细一想。大约是这位老师通过和我们的交流，已经看出我们的执念才这么说的吧。</p>
+<p>之前说过，如果一个道理没有可在自己的大脑表层逻辑或者潜意识里面，都不能算作懂了。因此，看了很多育儿的知识的我，仍然还是不知道如何好好地教育娃，或者说还是不如愿。</p>
+<p>其实在和娃相处过程中也是对自己的更全方位的认识。大约在教娃的过程中，自己的底层欲望和情绪都会被唤醒。一些情绪都是自己的不安的外化。</p>
+<p>例如很多时候看到娃不打扫自己的房间，我会一个劲儿的说他，倒没有批评。只讲了自己想要，大约自己平时也会很懒不想打扫整理，于是在他身上看到了自己的缺点。</p>
+<p>有些时候给他讲数学题，他会分心，心思在别处，其实是讨厌自己很多时候做事不专心。</p>
+<p>一直和他讲英文，期望他能以一口流利的英文答我。但他总不爱说。大约也是看到自己的不坚持。</p>
+<p>自己做不到的事情强求别人做其实是压迫，逐渐认识到这一点的我已经慢慢减少了唠叨并在与自己和解。</p>
+<p>开学是娃的审判日，因为老师布置了好多好多作业，就像我们难以完成的大把工作。</p>
+<p>这次送到了婆婆爷爷家，已经交代请他自己安排自己的作业。</p>
+<p>吝啬的我已经送给他好几个大拇指。</p>
+<p>我觉得育儿其实是育自己。</p>
+<p>小时候期望爸妈这么这么对自己，长大了可能会期望娃这么这么长。</p>
+<p>但其实只要放过自己，接受自己，也就成长了。</p>
+<p>在这个前提下，育儿，会是一场很好玩的队友成长类升级游戏。</p>]]></content>
+    
+    <category term="日记" />
+    
+  </entry>
   
   <entry>
     <title>花坛</title>
@@ -4745,80 +4777,6 @@ curl<span class="w"> </span>-I<span class="w"> </span>https://rss.seis-jun.xyz/
     <category term="paper" />
     
     <category term="seismology" />
-    
-  </entry>
-  
-  <entry>
-    <title>Paper Reading (58)</title>
-    <link href="https://www.seis-jun.xyz/blog/2026-06-17-paper-reading-58.html" />
-    <id>https://www.seis-jun.xyz/blog/2026-06-17-paper-reading-58.html</id>
-    <updated>2026-06-17T00:00:00+08:00</updated>
-    <published>2026-06-17T00:00:00+08:00</published>
-    <summary type="html"><p>Origin and Periodic Behavior of Short Duration Signals Recorded by Seismometers at Vestnesa Ridge, an Active Seepage Site on the West-Svalbard Continental Margin</p></summary>
-    <content type="html"><![CDATA[<h2 id="paper-information">Paper Information</h2>
-<ul>
-<li><strong>Title</strong>: Origin and Periodic Behavior of Short Duration Signals Recorded by Seismometers at Vestnesa Ridge, an Active Seepage Site on the West-Svalbard Continental Margin</li>
-<li><strong>First Author</strong>: P. Domel</li>
-<li><strong>Corresponding Author</strong>: P. Domel</li>
-<li><strong>Affiliation</strong>: CAGE—Centre for Arctic Gas Hydrate, Environment and Climate, Department of Geosciences, UiT The Arctic University of Norway, Tromsø, Norway</li>
-<li><strong>Journal</strong>: Frontiers in Earth Science, 2022, Volume 10, Article 831526</li>
-<li><strong>DOI</strong>: 10.3389/feart.2022.831526</li>
-</ul>
-<h2 id="author-background">Author Background</h2>
-<h3 id="first-authors-representative-works">First Author&#8217;s Representative Works</h3>
-<ol>
-<li>Domel P, Singhroha S, Plaza-Faverola A, et al. (2022) Origin and Periodic Behavior of Short Duration Signals Recorded by Seismometers at Vestnesa Ridge, an Active Seepage Site on the West-Svalbard Continental Margin. Frontiers in Earth Science, 10:831526.</li>
-<li>Plaza-Faverola A, Pohlman J, et al. (2017) Methane hydrate formation and seepage in the Vestnesa Ridge, West Svalbard continental margin. Journal of Geophysical Research: Solid Earth, 122(10), 7611-7626.</li>
-<li>Singhroha S, Plaza-Faverola A, et al. (2019) Seismic characterization of gas hydrate systems in the Vestnesa Ridge, West Svalbard continental margin. Marine Geology, 407, 53-64.</li>
-</ol>
-<h2 id="abstract">Abstract</h2>
-<p>本研究报告了在西斯瓦尔巴德大陆边缘的Vestnesa Ridge上一个活跃的渗漏点记录到的短时信号（SDEs）的特征和周期性行为。我们使用海底地震仪（OBSs）记录了10个月的数据，发现SDEs具有周期性的模式，与太阳和月亮的周期有关。我们还发现SDEs的发生与潮汐有关，特别是在潮汐最小和最大值附近。我们的结果表明，SDEs可能与 Vestnesa Ridge 上的甲烷渗漏系统的动力学有关。</p>
-<h2 id="research-context">Research Context</h2>
-<h3 id="importance">Importance</h3>
-<p>本研究对于了解海底地震信号的特征和成因具有重要意义。SDEs 是一种常见的海底地震信号，但其成因尚不清楚。本研究通过对 Vestnesa Ridge 上的 SDEs 进行详细分析，发现其具有周期性的模式，与太阳和月亮的周期有关。这种发现对于理解海底地震信号的成因和机制具有重要意义。</p>
-<h3 id="previous-studies">Previous Studies</h3>
-<ul>
-<li><strong>Díaz et al. (2007)</strong>: 研究了海底地震信号的特征和成因，发现 SDEs 是一种常见的海底地震信号，但其成因尚不清楚。<em>Journal of Geophysical Research: Solid Earth, 112(B10)</em>.</li>
-<li><strong>Tary et al. (2012)</strong>: 研究了海底地震信号的周期性行为，发现 SDEs 具有周期性的模式，与太阳和月亮的周期有关。<em>Geophysical Research Letters, 39(10)</em>.</li>
-<li><strong>Franek et al. (2017)</strong>: 研究了海底地震信号的特征和成因，发现 SDEs 可能与海底流体迁移有关。<em>Journal of Geophysical Research: Solid Earth, 122(10)</em>.</li>
-<li><strong>Batsi et al. (2019)</strong>: 研究了海底地震信号的周期性行为，发现 SDEs 具有周期性的模式，与太阳和月亮的周期有关。<em>Geophysical Research Letters, 46(10)</em>.</li>
-<li><strong>Ugalde et al. (2019)</strong>: 研究了海底地震信号的特征和成因，发现 SDEs 可能与海底流体迁移有关。<em>Journal of Geophysical Research: Solid Earth, 124(10)</em>.</li>
-</ul>
-<h3 id="limitations-of-previous-research">Limitations of Previous Research</h3>
-<p>之前的研究虽然发现了 SDEs 的周期性行为，但其成因和机制尚不清楚。本研究通过对 Vestnesa Ridge 上的 SDEs 进行详细分析，发现其具有周期性的模式，与太阳和月亮的周期有关。这种发现对于理解海底地震信号的成因和机制具有重要意义。</p>
-<p><img alt="图1 实验持续了整个过程" src="/images/paper-origin-periodic-behavior-short/figure1.jpeg" /></p>
-<center><em>图1 实验持续了整个过程</em></center>
-
-<p></p>
-<h3 id="data">Data</h3>
-<p>本研究使用了 5 个海底地震仪（OBSs）记录的数据，记录时间为 10 个月。数据包括海底地震信号的时间序列和频谱。</p>
-<h3 id="methods">Methods</h3>
-<p>本研究使用了时间序列分析和频谱分析方法来分析海底地震信号的特征和周期性行为。我们使用了短时平均值与长时平均值的方法来分析海底地震信号的周期性行为。</p>
-<p><img alt="图2 个体事件的类型示例出现在垂直通道的地震计上，频谱图显示每种观察到的事件类型" src="/images/paper-origin-periodic-behavior-short/figure2.jpeg" /></p>
-<center><em>图2 个体事件的类型示例出现在垂直通道的地震计上，频谱图显示每种观察到的事件类型</em></center>
-
-<p>
-本研究发现 SDEs 具有周期性的模式，与太阳和月亮的周期有关。我们还发现 SDEs 的发生与潮汐有关，特别是在潮汐最小和最大值附近。</p>
-<p><img alt="图10 这种释放的变化" src="/images/paper-origin-periodic-behavior-short/figure10.jpeg" /></p>
-<center><em>图10 这种释放的变化</em></center>
-
-<p></p>
-<h3 id="innovations">Innovations</h3>
-<p>本研究发现 SDEs 具有周期性的模式，与太阳和月亮的周期有关。这种发现对于理解海底地震信号的成因和机制具有重要意义。</p>
-<h3 id="contributions">Contributions</h3>
-<p>本研究对海底地震信号的成因和机制进行了详细分析，发现 SDEs 可能与海底流体迁移有关。这种发现对于理解海底地震信号的成因和机制具有重要意义。</p>
-<h3 id="limitations">Limitations</h3>
-<p>本研究虽然发现了 SDEs 的周期性行为，但其成因和机制尚不清楚。进一步的研究需要对海底地震信号的成因和机制进行更详细的分析。</p>
-<h2 id="personal-thoughts">Personal Thoughts</h2>
-<p>本研究对于理解海底地震信号的成因和机制具有重要意义。进一步的研究需要对海底地震信号的成因和机制进行更详细的分析，以更好地理解海底地震信号的特征和行为。</p>]]></content>
-    
-    <category term="paper" />
-    
-    <category term="seismology" />
-    
-    <category term="geophysics" />
-    
-    <category term="ocean" />
     
   </entry>
   
