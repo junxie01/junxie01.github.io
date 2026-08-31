@@ -3,11 +3,44 @@
   <title>SEISAMUSE</title>
   <link href="https://www.seis-jun.xyz/atom.xml" rel="self" />
   <link href="https://www.seis-jun.xyz" />
-  <updated>2026-08-31T07:38:00+08:00</updated>
+  <updated>2026-08-31T18:49:08+08:00</updated>
   <id>https://www.seis-jun.xyz/</id>
   <author>
     <name>Jun Xie</name>
   </author>
+  
+  <entry>
+    <title>咖啡</title>
+    <link href="https://www.seis-jun.xyz/blog/2026-08-31-about-coffee.html" />
+    <id>https://www.seis-jun.xyz/blog/2026-08-31-about-coffee.html</id>
+    <updated>2026-08-31T18:49:08+08:00</updated>
+    <published>2026-08-31T18:49:08+08:00</published>
+    <summary type="html"><p>牛马必备饮品</p></summary>
+    <content type="html"><![CDATA[<p><img alt="" src="https://plus.unsplash.com/premium_photo-1674327105074-46dd8319164b?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" /></p>
+<p>我很想写一篇关于咖啡的故事。但目前还没有好的故事在脑中，也许咖啡从来就没有做过我哪怕一天的主角。</p>
+<p>已经记不起第一次喝咖啡是在什么时候。</p>
+<p>小时候是不喝咖啡的，只在电视里见过，只觉得有点装。</p>
+<p>后来喝上了。</p>
+<p>咖啡的味道说不上好，但也不糟。喝上它大约和抽烟一样，你不知道有什么好处，但就是放不下。</p>
+<p>其实也不是放不下，如果我喝完了我的咖啡，我一般不会如烟民失去了自己的主心，一个劲个儿要去寻找，找不着就会像是有虫子在身上爬。</p>
+<p>我只会觉得，似乎少了什么。</p>
+<p>而近些年，喝完咖啡也会让我觉得少了什么。兴许是年龄到了，上午十点喝了咖啡之后也许真如吃了可可豆的牛，真的多了些拉磨力气。</p>
+<p>结果中午就一阵心慌，那中心慌不好讲，很像少了些什么，直到我把大碗米饭塞到肚子里。大约是咖啡因的劲燃效掉了我的能量，一股低血糖的缺失感啊。</p>
+<p>在土澳的时候，每天上午十点有个coffee break，也许叫这个名字或者是morning tea。总之很奇怪，要么是咖啡，要么是茶。大家不喝点什么都不知道该怎么工作。</p>
+<p>coffee break自然有免费的咖啡喝，当然还有免费的八卦。</p>
+<p>和小姐姐聊了还可以和阿姨聊。倒不是我喜欢阿姨，但可能阿姨会喜欢我。</p>
+<p>不要误会，那时在读博，系里好几个都是6～70岁的老阿姨和爷爷，退休了没事想完成自己年少的科学家的愿望，跑去念博士。</p>
+<p>可能喝咖啡就是那个时候喜欢上的。</p>
+<p>回来以后也想着能不能和同事整一个咖啡间，喝喝咖啡并巴巴八卦。</p>
+<p>但一想到要自己出钱出力，大伙儿都不干，包括我。大约氛围是不一样。</p>
+<p>朋友公司倒是把咖啡间搞起来了，我也参与过一次。</p>
+<p>几个大佬爷们儿拿着灰渍满满的咖啡杯弓坐着，泯着自己的杯沿，吧啦几句不痛不痒的话，想是卖菜大爷唠嗑。</p>
+<p>感觉就失了那味道。</p>
+<p>可能是因为少了几位老阿姨吧。</p>]]></content>
+    
+    <category term="日记" />
+    
+  </entry>
   
   <entry>
     <title>小花</title>
@@ -4423,334 +4456,6 @@ Linger=yes：允许用户服务开机后自动运行
     <category term="Linux" />
     
     <category term="python" />
-    
-  </entry>
-  
-  <entry>
-    <title>用Cloudflare Tunnel把FreshRSS搬回办公室电脑</title>
-    <link href="https://www.seis-jun.xyz/blog/2026-06-22-cloudflare-freshrss.html" />
-    <id>https://www.seis-jun.xyz/blog/2026-06-22-cloudflare-freshrss.html</id>
-    <updated>2026-06-22T21:40:57+08:00</updated>
-    <published>2026-06-22T21:40:57+08:00</published>
-    <summary type="html"><p>阿里云服务器快到期了。上面跑着一个 FreshRSS，地址是： 怎么办？继续续费当然可以，但我又觉得有点亏。RSS 阅读器这种东西，本质上就是给自己用的，不需要一台公网 VPS 常年挂着。 于是这次试了一下：把 FreshRSS 搬到办公室 Fedora 电脑上，用 Podman 跑容器，再用 Cloudflare T...</p></summary>
-    <content type="html"><![CDATA[<p><img alt="" src="/images/rss.png" /></p>
-<p>阿里云服务器快到期了。上面跑着一个 FreshRSS，地址是：</p>
-<div class="highlight"><pre><span></span><code>https://rss.seis-jun.xyz/
-</code></pre></div>
-
-<p>怎么办？继续续费当然可以，但我又觉得有点亏。RSS 阅读器这种东西，本质上就是给自己用的，不需要一台公网 VPS 常年挂着。</p>
-<p>于是这次试了一下：把 FreshRSS 搬到办公室 Fedora 电脑上，用 Podman 跑容器，再用 Cloudflare Tunnel 暴露到公网。</p>
-<p>最后访问地址不变：</p>
-<div class="highlight"><pre><span></span><code>https://rss.seis-jun.xyz/
-</code></pre></div>
-
-<p>大概结构是这样：</p>
-<div class="highlight"><pre><span></span><code>浏览器 / RSS 客户端
-    ↓
-Cloudflare DNS / Tunnel
-    ↓
-办公室 Fedora 上的 cloudflared
-    ↓
-http://127.0.0.1:8080
-    ↓
-FreshRSS Podman 容器
-</code></pre></div>
-
-<p>这样有几个好处：</p>
-<ul>
-<li>不需要阿里云 VPS。</li>
-<li>办公室电脑不需要公网 IP。</li>
-<li>不用在办公室路由器上开 80/443/8080。</li>
-<li>FreshRSS 还是完整自托管，不是静态 OPML 页面。</li>
-</ul>
-<h2 id="cloudflare">先把域名接到 Cloudflare</h2>
-<p>域名是：</p>
-<div class="highlight"><pre><span></span><code>seis-jun.xyz
-</code></pre></div>
-
-<p>在 Cloudflare 里添加站点，选择 Free plan。</p>
-<p>原来博客是 GitHub Pages，所以 Cloudflare 扫出来的这两条记录先保留：</p>
-<div class="highlight"><pre><span></span><code>CNAME  seis-jun.xyz  junxie01.github.io
-CNAME  www           junxie01.github.io
-</code></pre></div>
-
-<p>这里我把它们设成 <code>DNS only</code>。先不要让 Cloudflare 代理博客，不然 HTTPS、缓存、GitHub Pages 这些东西混在一起，容易把自己绕进去。</p>
-<p>Cloudflare 给了两个 nameserver，然后去阿里云域名控制台把 DNS 服务器改过去。</p>
-<p>检查一下：</p>
-<div class="highlight"><pre><span></span><code>dig<span class="w"> </span>NS<span class="w"> </span>seis-jun.xyz<span class="w"> </span>+short
-dig<span class="w"> </span>@1.1.1.1<span class="w"> </span>NS<span class="w"> </span>seis-jun.xyz<span class="w"> </span>+short
-</code></pre></div>
-
-<p>能看到 Cloudflare 的 nameserver，就说明 DNS 接管差不多好了。</p>
-<h2 id="fedora-freshrss">Fedora 上跑 FreshRSS</h2>
-<p>办公室机器是 Fedora，用 Podman。</p>
-<p>先装：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>podman
-podman<span class="w"> </span>--version
-</code></pre></div>
-
-<p>然后建两个 volume：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>podman<span class="w"> </span>volume<span class="w"> </span>create<span class="w"> </span>freshrss_data
-sudo<span class="w"> </span>podman<span class="w"> </span>volume<span class="w"> </span>create<span class="w"> </span>freshrss_extensions
-</code></pre></div>
-
-<p>一开始我想拉 Docker Hub 的镜像：</p>
-<div class="highlight"><pre><span></span><code>docker.io/freshrss/freshrss:latest
-</code></pre></div>
-
-<p>结果办公室网络访问 Docker Hub 超时。好吧，熟悉的味道。</p>
-<p>于是换成 GHCR：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>podman<span class="w"> </span>pull<span class="w"> </span>ghcr.io/freshrss/freshrss:latest
-</code></pre></div>
-
-<p>启动容器：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>podman<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--replace<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--name<span class="w"> </span>freshrss<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-p<span class="w"> </span><span class="m">127</span>.0.0.1:8080:80<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-e<span class="w"> </span><span class="nv">TZ</span><span class="o">=</span>Asia/Tokyo<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-e<span class="w"> </span><span class="nv">CRON_MIN</span><span class="o">=</span><span class="s1">&#39;1,31&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-v<span class="w"> </span>freshrss_data:/var/www/FreshRSS/data<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-v<span class="w"> </span>freshrss_extensions:/var/www/FreshRSS/extensions<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>ghcr.io/freshrss/freshrss:latest
-</code></pre></div>
-
-<p>这里比较关键的是：</p>
-<div class="highlight"><pre><span></span><code>-p 127.0.0.1:8080:80
-</code></pre></div>
-
-<p>也就是说 FreshRSS 只监听本机 <code>127.0.0.1:8080</code>，不会直接暴露给局域网或公网。外面访问全部交给 Cloudflare Tunnel。</p>
-<p>检查：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>podman<span class="w"> </span>ps<span class="w"> </span>--filter<span class="w"> </span><span class="nv">name</span><span class="o">=</span>freshrss
-curl<span class="w"> </span>-I<span class="w"> </span>http://127.0.0.1:8080/
-</code></pre></div>
-
-<p>如果返回类似：</p>
-<div class="highlight"><pre><span></span><code>HTTP/1.1 302 Found
-Location: /i/?rid=...
-</code></pre></div>
-
-<p>就说明 FreshRSS 活着。<code>302</code> 不是坏事，是它在跳转到初始化或入口页面。</p>
-<h2 id="cloudflare-tunnel">创建 Cloudflare Tunnel</h2>
-<p>安装 cloudflared：</p>
-<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://pkg.cloudflare.com/cloudflared.repo<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/yum.repos.d/cloudflared.repo
-sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>cloudflared
-cloudflared<span class="w"> </span>--version
-</code></pre></div>
-
-<p>我本来想在 Cloudflare Zero Trust 网页后台创建 Tunnel，但 Free 激活时要绑定付款方式，中国卡不太顺利。</p>
-<p>于是改走命令行 locally-managed tunnel。</p>
-<p>登录：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>cloudflared<span class="w"> </span>tunnel<span class="w"> </span>login
-</code></pre></div>
-
-<p>它会给一个 URL，浏览器打开后选择 <code>seis-jun.xyz</code>。授权完成后会在 root 的 cloudflared 目录下生成证书。</p>
-<p>注意：这个证书不要公开。</p>
-<p>创建 Tunnel：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>cloudflared<span class="w"> </span>tunnel<span class="w"> </span>create<span class="w"> </span>freshrss-office
-</code></pre></div>
-
-<p>然后写配置：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>tee<span class="w"> </span>/root/.cloudflared/config.yml<span class="w"> </span>&gt;/dev/null<span class="w"> </span><span class="s">&lt;&lt;&#39;EOF&#39;</span>
-<span class="s">tunnel: &lt;TUNNEL_ID&gt;</span>
-<span class="s">credentials-file: /root/.cloudflared/&lt;TUNNEL_ID&gt;.json</span>
-
-<span class="s">ingress:</span>
-<span class="s">  - hostname: rss.seis-jun.xyz</span>
-<span class="s">    service: http://127.0.0.1:8080</span>
-<span class="s">  - service: http_status:404</span>
-<span class="s">EOF</span>
-</code></pre></div>
-
-<p>再把域名路由到 Tunnel：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>cloudflared<span class="w"> </span>tunnel<span class="w"> </span>route<span class="w"> </span>dns<span class="w"> </span>freshrss-office<span class="w"> </span>rss.seis-jun.xyz
-</code></pre></div>
-
-<p>如果看到类似：</p>
-<div class="highlight"><pre><span></span><code>Added CNAME rss.seis-jun.xyz which will route to this tunnel
-</code></pre></div>
-
-<p>就差不多了。</p>
-<h2 id="_1">前台测试一下</h2>
-<p>先前台跑：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>cloudflared<span class="w"> </span>tunnel<span class="w"> </span>--config<span class="w"> </span>/root/.cloudflared/config.yml<span class="w"> </span>run<span class="w"> </span>freshrss-office
-</code></pre></div>
-
-<p>看到：</p>
-<div class="highlight"><pre><span></span><code>Registered tunnel connection
-protocol=quic
-</code></pre></div>
-
-<p>说明连上了。</p>
-<p>另开一个终端：</p>
-<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-I<span class="w"> </span>https://rss.seis-jun.xyz/
-</code></pre></div>
-
-<p>成功的话应该是：</p>
-<div class="highlight"><pre><span></span><code>HTTP/2 302
-server: cloudflare
-location: /i/?rid=...
-</code></pre></div>
-
-<p>如果本地 DNS 抽风，可以查公共 DNS：</p>
-<div class="highlight"><pre><span></span><code>dig<span class="w"> </span>@1.1.1.1<span class="w"> </span>rss.seis-jun.xyz<span class="w"> </span>+short
-dig<span class="w"> </span>@8.8.8.8<span class="w"> </span>rss.seis-jun.xyz<span class="w"> </span>+short
-</code></pre></div>
-
-<p>Fedora 本地缓存没刷新时，也可以：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>resolvectl<span class="w"> </span>flush-caches
-resolvectl<span class="w"> </span>query<span class="w"> </span>rss.seis-jun.xyz
-</code></pre></div>
-
-<h2 id="freshrss">初始化 FreshRSS</h2>
-<p>等 <code>https://rss.seis-jun.xyz/</code> 能打开后，就用正式域名初始化 FreshRSS。</p>
-<p>我这里选：</p>
-<div class="highlight"><pre><span></span><code>数据库：SQLite
-Base URL：https://rss.seis-jun.xyz/
-</code></pre></div>
-
-<p>然后导入旧 FreshRSS 导出的 OPML。</p>
-<p>OPML 一般能恢复：</p>
-<div class="highlight"><pre><span></span><code>订阅源
-分类
-Feed 地址
-</code></pre></div>
-
-<p>但不要指望它完整恢复历史文章、已读状态、收藏、插件配置和用户偏好。RSS 搬家嘛，能把订阅源搬回来就已经很不错了。</p>
-<h2 id="_2">让它开机自动跑</h2>
-<p>Tunnel 做一个 systemd 服务：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/systemd/system/cloudflared-freshrss.service<span class="w"> </span>&gt;/dev/null<span class="w"> </span><span class="s">&lt;&lt;&#39;EOF&#39;</span>
-<span class="s">[Unit]</span>
-<span class="s">Description=Cloudflare Tunnel for FreshRSS</span>
-<span class="s">After=network-online.target</span>
-<span class="s">Wants=network-online.target</span>
-
-<span class="s">[Service]</span>
-<span class="s">Type=simple</span>
-<span class="s">ExecStart=/usr/bin/cloudflared tunnel --config /root/.cloudflared/config.yml run freshrss-office</span>
-<span class="s">Restart=always</span>
-<span class="s">RestartSec=5</span>
-
-<span class="s">[Install]</span>
-<span class="s">WantedBy=multi-user.target</span>
-<span class="s">EOF</span>
-
-sudo<span class="w"> </span>systemctl<span class="w"> </span>daemon-reload
-sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>--now<span class="w"> </span>cloudflared-freshrss.service
-</code></pre></div>
-
-<p>FreshRSS 容器也交给 systemd：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/systemd/system/freshrss-container.service<span class="w"> </span>&gt;/dev/null<span class="w"> </span><span class="s">&lt;&lt;&#39;EOF&#39;</span>
-<span class="s">[Unit]</span>
-<span class="s">Description=FreshRSS Podman Container</span>
-<span class="s">After=network-online.target</span>
-<span class="s">Wants=network-online.target</span>
-
-<span class="s">[Service]</span>
-<span class="s">Type=simple</span>
-<span class="s">Restart=always</span>
-<span class="s">RestartSec=10</span>
-<span class="s">ExecStart=/usr/bin/podman start -a freshrss</span>
-<span class="s">ExecStop=/usr/bin/podman stop -t 10 freshrss</span>
-
-<span class="s">[Install]</span>
-<span class="s">WantedBy=multi-user.target</span>
-<span class="s">EOF</span>
-
-sudo<span class="w"> </span>systemctl<span class="w"> </span>daemon-reload
-sudo<span class="w"> </span>podman<span class="w"> </span>stop<span class="w"> </span>freshrss
-sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>--now<span class="w"> </span>freshrss-container.service
-</code></pre></div>
-
-<p>检查：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>freshrss-container.service<span class="w"> </span>--no-pager
-sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>cloudflared-freshrss.service<span class="w"> </span>--no-pager
-
-curl<span class="w"> </span>-I<span class="w"> </span>http://127.0.0.1:8080/
-curl<span class="w"> </span>-I<span class="w"> </span>https://rss.seis-jun.xyz/
-</code></pre></div>
-
-<p>期望是：</p>
-<div class="highlight"><pre><span></span><code>FreshRSS: active
-cloudflared: active
-本地访问: HTTP/1.1 302
-公网访问: HTTP/2 302
-</code></pre></div>
-
-<p>这就可以了。</p>
-<h2 id="_3">日常维护</h2>
-<p>以后主要就这几个命令：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>freshrss-container.service<span class="w"> </span>--no-pager
-sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>cloudflared-freshrss.service<span class="w"> </span>--no-pager
-
-sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>freshrss-container.service
-sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>cloudflared-freshrss.service
-
-sudo<span class="w"> </span>journalctl<span class="w"> </span>-u<span class="w"> </span>freshrss-container.service<span class="w"> </span>-n<span class="w"> </span><span class="m">100</span><span class="w"> </span>--no-pager
-sudo<span class="w"> </span>journalctl<span class="w"> </span>-u<span class="w"> </span>cloudflared-freshrss.service<span class="w"> </span>-n<span class="w"> </span><span class="m">100</span><span class="w"> </span>--no-pager
-</code></pre></div>
-
-<p>更新 FreshRSS 镜像时，因为 Docker Hub 访问不稳，继续用 GHCR：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>stop<span class="w"> </span>freshrss-container.service
-sudo<span class="w"> </span>podman<span class="w"> </span>pull<span class="w"> </span>ghcr.io/freshrss/freshrss:latest
-sudo<span class="w"> </span>podman<span class="w"> </span>rm<span class="w"> </span>freshrss
-
-sudo<span class="w"> </span>podman<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--replace<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--name<span class="w"> </span>freshrss<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-p<span class="w"> </span><span class="m">127</span>.0.0.1:8080:80<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-e<span class="w"> </span><span class="nv">TZ</span><span class="o">=</span>Asia/Tokyo<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-e<span class="w"> </span><span class="nv">CRON_MIN</span><span class="o">=</span><span class="s1">&#39;1,31&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-v<span class="w"> </span>freshrss_data:/var/www/FreshRSS/data<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-v<span class="w"> </span>freshrss_extensions:/var/www/FreshRSS/extensions<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>ghcr.io/freshrss/freshrss:latest
-
-sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>freshrss-container.service
-</code></pre></div>
-
-<p>再检查：</p>
-<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-I<span class="w"> </span>http://127.0.0.1:8080/
-curl<span class="w"> </span>-I<span class="w"> </span>https://rss.seis-jun.xyz/
-</code></pre></div>
-
-<h2 id="_4">安全上别偷懒</h2>
-<p>下面这些东西不要公开：</p>
-<div class="highlight"><pre><span></span><code>/root/.cloudflared/cert.pem
-/root/.cloudflared/&lt;TUNNEL_ID&gt;.json
-/root/.cloudflared/config.yml
-</code></pre></div>
-
-<p>特别是 <code>.json</code> 凭据文件，泄露后别人可能冒用这个 Tunnel。</p>
-<p>FreshRSS 管理员密码也要设置强一点。毕竟现在 <code>rss.seis-jun.xyz</code> 是公网可访问的，不是自己电脑上随便玩的小服务。</p>
-<p>如果以后 Cloudflare Zero Trust 的付款方式问题解决，也可以再加一层 Cloudflare Access。不过目前先跑起来，比什么都强。</p>
-<h2 id="_5">最后</h2>
-<p>现在的状态是：</p>
-<div class="highlight"><pre><span></span><code>seis-jun.xyz 已接入 Cloudflare
-GitHub Pages 博客记录保留为 DNS only
-rss.seis-jun.xyz 通过 Tunnel 指向办公室 Fedora
-FreshRSS 用 Podman 跑在 127.0.0.1:8080
-OPML 已导入
-公网访问返回 HTTP/2 302
-</code></pre></div>
-
-<p>等回办公室后，再做一次完整自检：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>is-enabled<span class="w"> </span>freshrss-container.service
-sudo<span class="w"> </span>systemctl<span class="w"> </span>is-active<span class="w"> </span>freshrss-container.service
-
-sudo<span class="w"> </span>systemctl<span class="w"> </span>is-enabled<span class="w"> </span>cloudflared-freshrss.service
-sudo<span class="w"> </span>systemctl<span class="w"> </span>is-active<span class="w"> </span>cloudflared-freshrss.service
-
-curl<span class="w"> </span>-I<span class="w"> </span>http://127.0.0.1:8080/
-curl<span class="w"> </span>-I<span class="w"> </span>https://rss.seis-jun.xyz/
-</code></pre></div>
-
-<p>如果都正常，阿里云上的旧 FreshRSS 就可以不用续费了。</p>
-<p>省下一台 VPS，RSS 继续活着。挺好。</p>
-<p>对了，要是你想用的话给我说一下，我来给你建一个账户。</p>]]></content>
-    
-    <category term="web" />
-    
-    <category term="Linux" />
-    
-    <category term="RSS" />
     
   </entry>
   
