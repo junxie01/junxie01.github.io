@@ -321,13 +321,13 @@ main > .container.page-wide {
 }
 
 .blog-grid {
-  max-width: var(--max-w);
+  max-width: var(--content-w);
 }
 
 .blog-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 190px;
-  gap: 1.6rem;
+  grid-template-columns: minmax(0, 1fr) 155px;
+  gap: 1rem;
   align-items: start;
 }
 
@@ -1119,6 +1119,10 @@ footer a:hover {
   background: var(--nav-bg);
   border-bottom: 1px solid var(--border);
   backdrop-filter: blur(10px);
+}
+
+.site-header .container {
+  max-width: var(--content-w);
 }
 
 .masthead {
