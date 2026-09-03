@@ -60,7 +60,7 @@
   </header>
 
   <main>
-    <div class="container home-shell">
+    <div class="container ">
       
       
 <div class="home-main">
@@ -165,96 +165,6 @@
 </div>
 
       
-<aside class="home-sidebar">
-  <section class="sidebar-card thoughts-preview">
-    <div class="sidebar-card-header">
-      <h2>想法</h2>
-      <a href="/thoughts/">All &rarr;</a>
-    </div>
-    
-    <div class="thoughts-preview-label">Latest 3</div>
-    <ul class="thought-list thought-list-preview">
-      
-      <li class="thought-item" id="thought-2026-09-02-1958">
-        <span class="thought-meta">
-          <time datetime="2026-09-02 19:58">2026-09-02 19:58</time>
-        </span>
-        
-        <span class="thought-content">有点累啊</span>
-        
-      </li>
-      
-      <li class="thought-item" id="thought-2026-09-01-2343-52">
-        <span class="thought-meta">
-          <time datetime="2026-09-01 23:43">2026-09-01 23:43</time>
-        </span>
-        
-        <span class="thought-content">六天，可以啊</span>
-        
-      </li>
-      
-      <li class="thought-item" id="thought-2026-09-01-2343">
-        <span class="thought-meta">
-          <time datetime="2026-09-01 23:43">2026-09-01 23:43</time>
-        </span>
-        
-        <span class="thought-content">阳台</span>
-        
-      </li>
-      
-    </ul>
-    
-  </section>
-
-  <section class="sidebar-card status-block">
-    <h2>Status</h2>
-    <dl class="sidebar-stats">
-      
-      <div>
-        <dt>📝 Posts</dt>
-        <dd>281</dd>
-      </div>
-      
-      <div>
-        <dt>🔤 Words</dt>
-        <dd>287.8k</dd>
-      </div>
-      
-      <div>
-        <dt>⏳ Running</dt>
-        <dd>2,291 days</dd>
-      </div>
-      
-      <div>
-        <dt>👀 Visitors</dt>
-        <dd id="sidebar-site-visitors" aria-live="polite">...</dd>
-      </div>
-    </dl>
-  </section>
-
-</aside>
-
-<script>
-  (function () {
-    function syncVisitors(tries) {
-      const source = document.getElementById("busuanzi_value_site_uv");
-      const target = document.getElementById("sidebar-site-visitors");
-      const value = source ? source.textContent.trim() : "";
-      if (target && value) {
-        target.textContent = value;
-        return;
-      }
-      if (tries > 0) window.setTimeout(function () { syncVisitors(tries - 1); }, 500);
-    }
-
-    if (document.readyState === "loading") {
-      document.addEventListener("DOMContentLoaded", function () { syncVisitors(40); });
-    } else {
-      syncVisitors(40);
-    }
-  }());
-</script>
-
     </div>
   </main>
 
