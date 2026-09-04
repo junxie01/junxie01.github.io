@@ -3,11 +3,36 @@
   <title>SEISAMUSE</title>
   <link href="https://www.seis-jun.xyz/atom.xml" rel="self" />
   <link href="https://www.seis-jun.xyz" />
-  <updated>2026-09-03T12:31:55+08:00</updated>
+  <updated>2026-09-04T07:26:25+08:00</updated>
   <id>https://www.seis-jun.xyz/</id>
   <author>
     <name>Jun Xie</name>
   </author>
+  
+  <entry>
+    <title>向前一小步</title>
+    <link href="https://www.seis-jun.xyz/blog/2026-09-04-slogan.html" />
+    <id>https://www.seis-jun.xyz/blog/2026-09-04-slogan.html</id>
+    <updated>2026-09-04T07:26:25+08:00</updated>
+    <published>2026-09-04T07:26:25+08:00</published>
+    <summary type="html"><p>文明一大步</p></summary>
+    <content type="html"><![CDATA[<p>今日议题还是有味道，且可能女生没怎么见过。</p>
+<p>我已上了年纪，每天除了事多就是尿多。</p>
+<p>每次到厕所都会被同一句话反复提醒，被动接受文明教育。它已经成了我的视觉噪音。</p>
+<p>两行字，字体难看。上下排布。“向前”和“文明”不对仗；“一小”，“一大”比打油诗都还欠点油。前面四个字还让我常常想着是否上下两个字能够合成一个新字。结果结尾都是步，上下两步是要跳吗？</p>
+<p>毫无美感。</p>
+<p>本来是安静尿尿，非要大吵大闹，像是有人拿着大喇叭吼叫。</p>
+<p>只是让人靠近一步，非要上升到文明高度，尿准了难道能够让人类进步？</p>
+<p>文明如果只需要尿准了就行，那文明也太便宜和骚气。</p>
+<p>不靠近的话，多半会沾湿衣鞋裤。</p>
+<p>不靠近的话，你兄弟会被人赏析。</p>
+<p>哪还需要你来提醒。</p>
+<p>不怕沾衣且对自己兄弟自信的人你提醒了怕是也没用。</p>
+<p>挂个标语算哪门子的教育。</p>]]></content>
+    
+    <category term="日记" />
+    
+  </entry>
   
   <entry>
     <title>对话</title>
@@ -24,7 +49,7 @@
 <p>&#8220;伯伯好。&#8221;</p>
 <p>&#8220;还挺懂礼貌，该上幼儿园大班了吧？&#8221;</p>
 <p>&#8220;是的老板。您这是去哪里啊？&#8221;</p>
-<p>&#8220;哦，我这不年龄大了吗，身体不好，去健健身。&#8221;</p>
+<p>&#8220;哦&#8230;我这不年龄大了吗，身体不好，去健健身。&#8221;</p>
 <p>&#8220;我看您身体一直不错啊。&#8221;</p>
 <p>&#8220;不行了，最近腰老痛。还有你看我这肚子。哦，对了你也得注意身体啊。&#8221;</p>
 <p>&#8220;好的老板。&#8221;</p>
@@ -34,6 +59,8 @@
 <p>&#8230;</p>
 <p>&#8220;爸爸，这个伯伯我去年见过啊。&#8221;</p>
 <p>&#8220;是的。&#8221;</p>
+<p>&#8220;那个方向不是没有健身房吗？&#8221;</p>
+<p>&#8220;也许有吧。&#8221;</p>
 <p>&#8220;你为什么不告诉他我读三年级了？&#8221;</p>
 <p>&#8220;说了他也记不住。&#8221;</p>
 <p>&#8220;哦～他记性真不好。&#8221;</p>
@@ -2631,105 +2658,6 @@ python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;i
     <category term="Greenland" />
     
     <category term="hazard" />
-    
-  </entry>
-  
-  <entry>
-    <title>Paper Reading (62)</title>
-    <link href="https://www.seis-jun.xyz/blog/2026-07-04-paper-reading-62.html" />
-    <id>https://www.seis-jun.xyz/blog/2026-07-04-paper-reading-62.html</id>
-    <updated>2026-07-04T22:01:48+08:00</updated>
-    <published>2026-07-04T22:01:48+08:00</published>
-    <summary type="html"><p>Drainage of a deep magma reservoir near Mayotte inferred from seismicity and deformation</p></summary>
-    <content type="html"><![CDATA[<h2 id="paper-information">Paper Information</h2>
-<ul>
-<li><strong>Title</strong>: Drainage of a deep magma reservoir near Mayotte inferred from seismicity and deformation</li>
-<li><strong>First Author</strong>: Simone Cesca</li>
-<li><strong>Corresponding Author</strong>: Simone Cesca</li>
-<li><strong>Affiliation</strong>: GFZ German Research Centre for Geosciences, Potsdam, Germany; with collaborators from IRAP - Observatoire Midi Pyrénées, University of Kiel, KAUST, and University of Potsdam</li>
-<li><strong>Journal</strong>: Nature Geoscience, 13, 87-93, 2020</li>
-<li><strong>DOI</strong>: 10.1038/s41561-019-0505-5</li>
-</ul>
-<h2 id="abstract-translated">Abstract (Translated)</h2>
-<p>这篇文章研究的是 2018 年 Mayotte 附近一次很特殊的海底火山-地震危机。Mayotte 位于 Comoros archipelago，过去这一带地震活动并不强，但从 2018 年 5 月开始，Mayotte 以东约 35 km 的海域发生了复杂的地震序列。除了大量 volcano-tectonic earthquakes (VTs)，全球台网还记录到了持续时间接近 20 分钟、周期约 16 s 的 very long period signals (VLPs)。与此同时，Mayotte 岛上的 GNSS 台站记录到了明显的地表沉降和向东位移。</p>
-<p>作者系统分析了区域和远震地震数据、YTMZ 单台记录、ABKAR 阵列深度相、VLP 矩张量，以及 Mayotte 岛上 GNSS 形变。论文识别出约 7000 个 VT 事件和 407 个 VLP 信号。早期 VT 事件显示岩浆岩墙从 Moho 附近向上、再向南传播，晚期 VT 和 VLP 则更像是深部岩浆储库排空后，储库上方顶板逐渐失稳并触发共振。</p>
-<p>作者认为，Mayotte 附近存在一个约 25-35 km 深、直径约 10-15 km 的深部岩浆储库。GNSS 形变和 VLP 周期变化共同表明，这个储库至少损失了约 1.3 km3 岩浆；另一类轴对称点源模型给出的体积变化为 -1.7 ± 0.4 km3。论文的关键意义在于：即使没有海上近场台站，一个深部、离岸、罕见的岩浆排空过程仍然可以通过全球和区域地震记录加岛上 GNSS 形变被捕捉到。</p>
-<h2 id="research-context">Research Context</h2>
-<h3 id="importance">Importance</h3>
-<p>我觉得这篇文章最吸引人的地方，是它把一个“看不见的深部岩浆系统”通过多种地球物理证据拼了出来。Mayotte 这次事件发生在海上，而且事件开始时几乎没有近场海底监测。对于一般火山研究来说，这种情况很尴尬：信号很强，但源区在海下；地表有形变，但观测点只在岛上；地震很多，但速度结构和 Moho 深度又有很大不确定性。</p>
-<p>作者的策略是把多个不完美的数据源组合起来：强 VT 的区域波形矩张量、ABKAR 远震阵列深度相、YTMZ 单台大数量 VT 分类、区域宽频带台站上的 VLP 检测和反演，以及四个 GNSS 台站的形变。单独看每一种数据都有局限，但它们合在一起，就能给出一个比较一致的演化图像：先是岩墙从深部储库向上和向南打开通道，随后深部储库持续排空，储库顶板失稳，VT 和 VLP 与形变一起出现。</p>
-<h3 id="previous-studies">Previous Studies</h3>
-<ul>
-<li><strong>Lemoine et al. (2019)</strong>: 论文把这项工作作为 Mayotte 2018 volcano-tectonic crisis 的重要背景，说明前人已经注意到这次异常地震活动。</li>
-<li><strong>Kumagai and Chouet (2000); Ferrazzini and Aki (1987); Chouet (1996)</strong>: 这些研究为 fluid-filled crack 或 conduit 中慢波共振解释 VLP 信号提供了理论背景。</li>
-<li><strong>Sigmundsson et al. (2015)</strong>: 论文把 Bárðarbunga 的 lateral dyke growth 作为岩墙长距离传播的参照。</li>
-<li><strong>White and McCausland (2016)</strong>: 论文用 volcano-tectonic earthquakes 的累计矩来估计侵入体体积时引用了这类经验关系。</li>
-<li><strong>Acocella (2007); Geshi et al. (2014)</strong>: 论文讨论 caldera collapse 和 reservoir roof failure 时使用了这些关于火山口塌陷和岩浆房排空阈值的研究。</li>
-</ul>
-<h3 id="limitations-of-previous-research">Limitations of Previous Research</h3>
-<p>这篇文章面对的主要限制不是“前人没有想到这个机制”，而是 Mayotte 这种海上火山危机观测条件太差。源区离岸，早期缺少本地海底台网；Mayotte 岛上的 GNSS 台站都在源区一侧，对某些方向的源收缩不敏感；区域速度结构和 Moho 深度也有争议。对于深部岩浆活动来说，这些不确定性会直接影响震源深度、矩张量和形变源解释。</p>
-<p>本文的贡献就在于：作者没有依赖单一数据，而是反复用不同速度模型、不同深度约束、不同形变源模型去检验同一个解释是否还能成立。</p>
-<p><img alt="图1 Mayotte 附近 VT、VLP 和 GNSS 形变源的空间分布" src="/images/paper-drainage-deep-magma-reservoir-mayotte/figure1.png" /></p>
-<center><em>图1 Mayotte 附近的 VT 位置、强震矩张量、VLP 源位置和 GNSS 形变约束。图中可以看到早期地震向东南和向上迁移，并接近后续发现的新海山位置。</em></center>
-
-<h2 id="methodology">Methodology</h2>
-<h3 id="data">Data</h3>
-<p>这篇文章的数据主要包括五类。</p>
-<p>第一，区域和远震地震数据。作者使用区域宽频带台站和 ABKAR seismic array 来分析强 VT、VLP 和深度相。ABKAR 阵列位于 Kazakhstan，主要用来识别 direct P phase 与 seafloor converted pP / sP phases 的时间差，从而约束 VT 深度变化。</p>
-<p>第二，Mayotte 上的 YTMZ 台站。YTMZ 是距离源区小于 100 km 且覆盖整个研究时段的强震台站。作者用它人工识别了 6990 个 VT 事件，并选出 1904 个信号质量较好的事件进行单台属性分析。这个单台数据集不是为了精确定位每一个弱震，而是为了看不同 VT 家族和时间演化。</p>
-<p>第三，区域宽频带台站的 VLP 数据。作者在 FURI、MSEY、ABPO 和 LSZ 四个区域台站上寻找 10-20 s 周期范围内的 monochromatic signals。搜索时段是 2013 年 1 月 1 日到 2019 年 3 月 5 日。</p>
-<p>第四，Mayotte 岛上的 GNSS 数据。使用了 GAMO、KAWE、MAYG 和 BDRL 四个台站，时间上主要关注 2018 年 7 月 1 日到 2019 年 4 月 1 日的累计位移。</p>
-<p>第五，已有的区域地质、速度模型和后续发现的新海山位置。论文明确测试了不同 crustal models，因为 Mayotte 下方是 oceanic crust 还是 continental crust 过渡区，本身就是一个不确定问题。</p>
-<h3 id="methods">Methods</h3>
-<p>强 VT 的分析使用了 full waveform moment tensor inversion。作者用 Grond 的 Bayesian bootstrap 方法反演最大的一批 VT，在 0.01-0.03 Hz 频带拟合区域波形，并测试 P2017、P2017B、CRUST1 和 CRUST2 等不同速度模型。为了进一步约束深度，作者还使用 ABKAR 阵列的 teleseismic depth phases，在 0.8-2.5 Hz 频带做 beamforming，并比较 P、pP / sP 等相对到时。</p>
-<p>弱 VT 的分析更像是单台“行为学”。作者在 YTMZ 上手动拾取 P 和 S，到时差 S-P 被用作与 Mayotte 距离的 proxy；PGA 被用作震级 proxy；P 波粒子运动给出 backazimuth；P 波垂直/水平振幅比和 S/P 振幅比用来判断入射角和机制变化。随后，作者用三分量 waveform cross-correlation 和 S-P 差异做 clustering，把 VT 大体分成与 dyke propagation 相关的一组，以及与 sagging above the depleting reservoir 相关的一组。</p>
-<p>VLP 检测则利用 30 分钟窗口、每 2 分钟滑动一次，在 10-20 s 频带中寻找窄带峰值。后续又用 2018 年 11 月 11 日最大 VLP 的 envelope 做 template matching，最后得到 407 个 VLP。对于其中 22 个高质量 VLP，作者在 0.06-0.07 Hz 频带做 centroid MT inversion，并把 source time function 写成 damped harmonic oscillator，同时反演 dominant frequency 和 damping time。</p>
-<p>GNSS 形变方面，作者先对 MAYG 站做 change point analysis，判断形变信号何时显著偏离 2014-2018 年背景趋势。然后用 2018 年 7 月 1 日到 2019 年 4 月 1 日的累计位移反演形变源，包括 isotropic source、axisymmetric point source、compound dislocation model 等不同模型。文中强调，简单 isotropic source 不能同时拟合水平/垂直位移比和位移方向。</p>
-<h2 id="results">Results</h2>
-<p>第一，Mayotte 危机可以分成四个阶段。Phase I 是 2018 年 5 月 10 日到 6 月 7 日，出现最强 VT burst，5 月 15 日发生 Mw 5.9 事件。这个阶段地震从约 25-30 km 深处向浅部迁移，ABKAR 深度相也支持这个 upward migration。Phase II 是 6 月 7 日到 6 月 18 日，震中向南迁移 10-20 km，接近后来发现的新海山位置。Phase III 从 6 月 28 日到 9 月 17 日，Mw &gt; 4.5 的 VT 变少，VLP 开始占主导。Phase IV 从 2018 年 9 月 17 日到 2019 年 3 月，VLP rate 增加，同时出现更靠近 Mayotte 的新类型 VT。</p>
-<p>第二，VLP 的源机制很特殊。22 个 VLP 的矩张量相似，以交替正负的 vertical CLVD 为主，作者解释为一个略向西倾的 subhorizontal crack。VLP centroid depth 为 37 ± 11 km。最大 VLP 发生在 2018 年 11 月 11 日，估计 surface wave magnitude 为 Ms 5.1。VLP 的 quality factor 为 72 ± 6，说明衰减较慢。VLP dominant period 从 2018 年 6 月约 15.2 s 增加到 10 月约 15.6 s，然后到 2019 年 2 月又降到约 15.3 s。</p>
-<p><img alt="图2 2018-2019 年 Mayotte 地震序列、VLP 和 GNSS 形变的时间演化" src="/images/paper-drainage-deep-magma-reservoir-mayotte/figure2.png" /></p>
-<center><em>图2 时间轴显示 VT 深度、S-P 差、VLP 幅度和周期，以及 GNSS 位移一起变化。蓝色、红色、紫色和绿色曲线共同构成了作者解释深部储库排空的证据链。</em></center>
-
-<p>第三，GNSS 形变给出独立约束。四个 GNSS 台站记录到持续沉降和向东位移，2018 年 7 月到 2019 年 4 月的位移矢量长度约 18 cm。轴对称点源模型给出的最佳源位于 Petit Terre 以东 12 ± 4 km、深度 32 ± 3 km，体积变化为 -1.7 ± 0.4 km3。另一类 generalized point source / vertical dislocation 模型给出约 -1.3 km3 的 potency，作者把它视为下限，因为所有 GNSS 台站都位于源的一侧，对 NS 方向源收缩敏感性不足。</p>
-<p>第四，作者把早期和晚期 VT 解释为不同过程。早期 Phases I-II 的 VT 更像 dyke propagation：强事件多、深度向上迁移、震中向南靠近新海山，机制以 left-lateral strike-slip 为主。晚期 Phases III-IV 的 VT 则更靠近 Mayotte，并具有 steep NE-SW striking thrust mechanisms，与区域 transtension 背景不一致。作者认为这说明储库排空造成了强烈应力扰动，触发了储库上方岩体的 downsag 和顶板失稳。</p>
-<p>第五，VLP 可能来自深部储库的一部分，而不是浅部岩墙本身。作者用 fluid-filled crack resonance 的解析公式解释 15.2-15.6 s 的周期变化。一个长度约 12 km 的裂缝模型可以通过先变薄、再缩短来解释周期先增加后减小，同时对应约 1.6 km3 的体积损失。这和 GNSS 反演的体积损失量级一致。</p>
-<p>第六，结论上，作者提出 Mayotte 和新海山之间有一个深约 30 ± 5 km、长度可达 15 km 的 subhorizontal magma reservoir。论文认为这是当时在地表位移数据中观测到的最深岩浆储库排空事件。根据文中引用的初步估计，新海山喷出体积超过 3.4 km3，使这次事件成为当时最大规模的地球物理监测到的海底喷发之一。</p>
-<h2 id="discussion">Discussion</h2>
-<h3 id="innovations">Innovations</h3>
-<p>这篇文章最重要的新意，是在缺乏近场海底监测的条件下，把离岸深部岩浆活动的完整演化过程拼出来。它没有只依赖“地震多了”这个事实，而是把 VT migration、VLP resonance、GNSS deflation 和海底新海山联系在一起。</p>
-<p>我觉得它在方法上的关键，是承认每个数据源都有缺陷，然后让不同数据源互相制约。比如 VT 的绝对深度受速度模型影响很大，但不同模型下相对上迁趋势仍然稳定；GNSS 台站都在源的一侧，但形变方向和沉降模式仍然要求一个非简单 Mogi 源；VLP 的起始时间很 emergent，难以判断 VT 是先于还是后于 VLP，但 VLP 的周期变化和体积损失量级能够和形变模型相互呼应。</p>
-<h3 id="contributions">Contributions</h3>
-<p>这篇文章的贡献可以概括为三点。</p>
-<p>第一，它把 Mayotte 2018-2019 年危机解释为一个两阶段过程：早期 dyke 从 Moho 附近向上并向南传播，晚期深部储库排空并触发顶板失稳和 VLP 共振。</p>
-<p>第二，它展示了 VLP 不只是一个“奇怪的长周期信号”，而可以作为深部岩浆储库几何和体积变化的约束。15.2-15.6 s 的周期变化不是孤立现象，而是和 GNSS 推断的 1 km3 量级岩浆排空联系起来。</p>
-<p>第三，它提醒我们，海底火山活动不一定要等到海底台网完整后才可以研究。区域和全球台网、单岛 GNSS、单台强震记录、远震阵列深度相，都可以在缺少理想观测的情况下形成有效证据链。</p>
-<p><img alt="图3 Mayotte 危机的机制示意图" src="/images/paper-drainage-deep-magma-reservoir-mayotte/figure3.png" /></p>
-<center><em>图3 作者提出的机制：深部近水平储库先向上供给岩墙，随后岩墙向南传播；储库西侧排空导致上覆岩体失稳，压力脉冲触发储库共振。</em></center>
-
-<h3 id="limitations">Limitations</h3>
-<p>这篇文章的局限也很清楚。</p>
-<p>第一，速度结构不确定。Mayotte 下方 crustal structure 和 Moho depth 有争议，不同模型会移动绝对深度估计。作者通过多模型测试尽量控制这个问题，但绝对深度仍然不能看成单一精确值。</p>
-<p>第二，早期缺少近场海底观测。YTMZ 单台分析很有用，但它无法替代真正的局部台网。弱 VT 的位置、入射角和机制解释都带有单台方法的限制。</p>
-<p>第三，GNSS 几何不理想。四个 GNSS 台站都在 Mayotte 岛上，也就是源区一侧，因此对某些方向的源收缩不敏感。作者明确说 -1.3 km3 是下限。</p>
-<p>第四，VT 和 VLP 的因果顺序仍然有不确定性。VLP 起始很 emergent，作者不能总是判断 VT 是触发 VLP，还是伴随 VLP 出现。论文提出 VT pressure pulses 触发 reservoir resonance，是一个和多种观测相容的解释，但不是直接“看见”的过程。</p>
-<p>第五，火山灾害情景推演很简化。论文估算触发类似整体 collapse 的阈值约 230 km3，远高于当时新海山体积，但这个估算依赖 caldera analog、摩擦系数、储库半径、深度和岩浆体积模量等简化参数。</p>
-<h2 id="personal-thoughts">Personal Thoughts</h2>
-<p>这篇文章对我很有启发，因为它不是靠一个漂亮算法赢，而是靠证据组织赢。每一种数据都不完美，但组合起来就很有力量：VT 说明通道怎么打开，VLP 说明深部储库在共振，GNSS 说明体积在减少，后来的海山发现说明岩浆确实到达了海底。</p>
-<p>我特别喜欢作者对不确定性的处理方式。他们没有把 Mayotte 的速度结构当成已知，也没有假装单台 YTMZ 可以精准定位所有弱震，而是把这些限制放进解释框架里。对我来说，这类文章最值得学的是“如何在观测条件不理想时仍然构建一个可信的物理叙事”。</p>
-<p>如果以后要做类似的火山、冰川或海底地震过程研究，我觉得这篇文章的结构很值得借鉴：先把事件序列分阶段，再把每一类观测放到同一条时间线上，最后问这些证据是否共同指向一个几何上和物理上都说得通的源模型。</p>]]></content>
-    
-    <category term="paper" />
-    
-    <category term="seismology" />
-    
-    <category term="volcanology" />
-    
-    <category term="VLP" />
-    
-    <category term="GNSS" />
-    
-    <category term="Mayotte" />
     
   </entry>
   
