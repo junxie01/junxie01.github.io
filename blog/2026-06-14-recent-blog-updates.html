@@ -117,12 +117,12 @@
 <p>它会运行 <code>build.py</code>，然后把 <code>site/</code> 推到 <code>gh-pages</code> 分支。也就是说，网页可以更新，但 <code>build.py</code>、<code>templates/</code>、<code>docs/css/style.css</code> 这些源码如果没有自己 <code>git add</code>、<code>git commit</code>、<code>git push</code>，其实并没有进入源码分支。</p>
 <p>这个坑有点隐蔽。因为你刷新网站，一切都对，看起来像是“已经推送成功了”。但从长期维护看，这些源码才是真正的房梁。只推生成出来的页面，就像只把饭端出去，厨房没收拾。当天能吃，明天就不好说了。</p>
 <p>所以以后流程应该是：</p>
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>status
-git<span class="w"> </span>add<span class="w"> </span>build.py<span class="w"> </span>templates/index.html<span class="w"> </span>templates/blog.html<span class="w"> </span>templates/base.html<span class="w"> </span>templates/archives.html<span class="w"> </span>docs/css/style.css
-git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Update blog layout and homepage sidebar&quot;</span>
-git<span class="w"> </span>push
-bash<span class="w"> </span>do_deploy.bash
-</code></pre></div>
+<pre class="highlight"><code class="language-bash">git status
+git add build.py templates/index.html templates/blog.html templates/base.html templates/archives.html docs/css/style.css
+git commit -m &quot;Update blog layout and homepage sidebar&quot;
+git push
+bash do_deploy.bash
+</code></pre>
 
 <p>当然具体 add 哪些文件要看 <code>git status</code>，不要闭着眼复制。闭着眼复制命令这件事，通常会以另一个博客结尾。</p>
 <p>这一轮改完之后，我感觉这个站终于更像一个我自己真的会用的笔记站了。</p>
