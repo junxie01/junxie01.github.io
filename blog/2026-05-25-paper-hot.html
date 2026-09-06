@@ -84,88 +84,88 @@
 <p>我把我的paper hot部署到了阿里云轻量服务器，网址是http://paper-hot.seis-jun.xyz，欢迎测试。</p>
 <p>我的服务器系统是ubuntu，以下是部署步骤，项目目录是 <code>/opt/paper-hot</code>。</p>
 <h2 id="_1">准备项目</h2>
-<pre class="highlight"><code class="language-bash">sudo apt update
-sudo apt install -y python3 python3-pip python3-venv git nginx
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>python3<span class="w"> </span>python3-pip<span class="w"> </span>python3-venv<span class="w"> </span>git<span class="w"> </span>nginx
 
-cd /opt
-sudo git clone https://github.com/&lt;your-account&gt;/paper-hot.git
-cd /opt/paper-hot
+<span class="nb">cd</span><span class="w"> </span>/opt
+sudo<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/&lt;your-account&gt;/paper-hot.git
+<span class="nb">cd</span><span class="w"> </span>/opt/paper-hot
 
-python3 -m venv venv
-./venv/bin/pip install --upgrade pip setuptools wheel
-./venv/bin/pip install -r requirements.txt
-</code></pre>
+python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv
+./venv/bin/pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pip<span class="w"> </span>setuptools<span class="w"> </span>wheel
+./venv/bin/pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</code></pre></div>
 
 <p>如果项目已经存在，只需要更新：</p>
-<pre class="highlight"><code class="language-bash">cd /opt/paper-hot
-sudo git pull
-./venv/bin/pip install -r requirements.txt
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/opt/paper-hot
+sudo<span class="w"> </span>git<span class="w"> </span>pull
+./venv/bin/pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</code></pre></div>
 
 <h2 id="_2">创建运行用户</h2>
-<pre class="highlight"><code class="language-bash">sudo useradd --system --home-dir /opt/paper-hot --shell /usr/sbin/nologin paperhot || true
-sudo chown -R paperhot:paperhot /opt/paper-hot
-</code></pre>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>useradd<span class="w"> </span>--system<span class="w"> </span>--home-dir<span class="w"> </span>/opt/paper-hot<span class="w"> </span>--shell<span class="w"> </span>/usr/sbin/nologin<span class="w"> </span>paperhot<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">true</span>
+sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span>paperhot:paperhot<span class="w"> </span>/opt/paper-hot
+</code></pre></div>
 
 <h2 id="systemd">安装 systemd 服务</h2>
-<pre class="highlight"><code class="language-bash">sudo cp /opt/paper-hot/deploy/paper-hot.service /etc/systemd/system/paper-hot.service
-sudo systemctl daemon-reload
-sudo systemctl enable paper-hot
-sudo systemctl start paper-hot
-</code></pre>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>cp<span class="w"> </span>/opt/paper-hot/deploy/paper-hot.service<span class="w"> </span>/etc/systemd/system/paper-hot.service
+sudo<span class="w"> </span>systemctl<span class="w"> </span>daemon-reload
+sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>paper-hot
+sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>paper-hot
+</code></pre></div>
 
 <p>检查服务状态：</p>
-<pre class="highlight"><code class="language-bash">sudo systemctl status paper-hot
-</code></pre>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>paper-hot
+</code></pre></div>
 
 <p>看运行日志：</p>
-<pre class="highlight"><code class="language-bash">sudo journalctl -u paper-hot -f
-</code></pre>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>journalctl<span class="w"> </span>-u<span class="w"> </span>paper-hot<span class="w"> </span>-f
+</code></pre></div>
 
 <h2 id="nginx">安装 Nginx 配置</h2>
-<pre class="highlight"><code class="language-bash">sudo cp /opt/paper-hot/deploy/nginx-paper-hot.conf /etc/nginx/sites-available/paper-hot
-sudo ln -sf /etc/nginx/sites-available/paper-hot /etc/nginx/sites-enabled/paper-hot
-sudo nginx -t
-sudo systemctl reload nginx
-</code></pre>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>cp<span class="w"> </span>/opt/paper-hot/deploy/nginx-paper-hot.conf<span class="w"> </span>/etc/nginx/sites-available/paper-hot
+sudo<span class="w"> </span>ln<span class="w"> </span>-sf<span class="w"> </span>/etc/nginx/sites-available/paper-hot<span class="w"> </span>/etc/nginx/sites-enabled/paper-hot
+sudo<span class="w"> </span>nginx<span class="w"> </span>-t
+sudo<span class="w"> </span>systemctl<span class="w"> </span>reload<span class="w"> </span>nginx
+</code></pre></div>
 
 <h2 id="_3">阿里云控制台设置</h2>
 <p>在域名解析里添加：</p>
-<pre class="highlight"><code class="language-text">记录类型：A
+<div class="highlight"><pre><span></span><code>记录类型：A
 主机记录：paper-hot
 记录值：轻量服务器公网 IP
-</code></pre>
+</code></pre></div>
 
 <p>在轻量服务器防火墙里放行：</p>
-<pre class="highlight"><code class="language-text">TCP 80
+<div class="highlight"><pre><span></span><code>TCP 80
 TCP 443
-</code></pre>
+</code></pre></div>
 
 <p>如果只先测试 HTTP，放行 <code>80</code> 即可。</p>
 <h2 id="_4">验证</h2>
-<pre class="highlight"><code class="language-bash">curl -I http://127.0.0.1:8000/paper-hot
-curl -I http://paper-hot.seis-jun.xyz
-</code></pre>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-I<span class="w"> </span>http://127.0.0.1:8000/paper-hot
+curl<span class="w"> </span>-I<span class="w"> </span>http://paper-hot.seis-jun.xyz
+</code></pre></div>
 
 <p>浏览器访问：</p>
-<pre class="highlight"><code class="language-text">http://paper-hot.seis-jun.xyz
-</code></pre>
+<div class="highlight"><pre><span></span><code>http://paper-hot.seis-jun.xyz
+</code></pre></div>
 
 <h2 id="_5">常用操作</h2>
 <p>重启：</p>
-<pre class="highlight"><code class="language-bash">sudo systemctl restart paper-hot
-</code></pre>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>paper-hot
+</code></pre></div>
 
 <p>停止：</p>
-<pre class="highlight"><code class="language-bash">sudo systemctl stop paper-hot
-</code></pre>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>stop<span class="w"> </span>paper-hot
+</code></pre></div>
 
 <p>更新代码后重启：</p>
-<pre class="highlight"><code class="language-bash">cd /opt/paper-hot
-sudo git pull
-sudo chown -R paperhot:paperhot /opt/paper-hot
-sudo systemctl restart paper-hot
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/opt/paper-hot
+sudo<span class="w"> </span>git<span class="w"> </span>pull
+sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span>paperhot:paperhot<span class="w"> </span>/opt/paper-hot
+sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>paper-hot
+</code></pre></div>
     </div>
 
   <div class="comments-section">

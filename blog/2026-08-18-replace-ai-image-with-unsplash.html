@@ -84,18 +84,18 @@
 <p>给博客配一幅图马上就让干瘪的文字变得“湿透”了，哦不，我的意思是会看起来整个博客都会舒服好多。</p>
 <p>在主页显示图片也会让主页显得漂亮。</p>
 <p>写博客的时候在title区域加上：</p>
-<pre class="highlight"><code>card_image: https://images.unsplash.com/photo-1625467769506-8742f12fb865?q=80&amp;w=1770&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="n">card_image</span><span class="o">:</span><span class="w"> </span><span class="n">https</span><span class="o">://</span><span class="n">images</span><span class="o">.</span><span class="na">unsplash</span><span class="o">.</span><span class="na">com</span><span class="o">/</span><span class="n">photo</span><span class="o">-</span><span class="mi">1625467769506</span><span class="o">-</span><span class="mi">8742</span><span class="n">f12fb865</span><span class="o">?</span><span class="n">q</span><span class="o">=</span><span class="mi">80</span><span class="o">&amp;</span><span class="n">w</span><span class="o">=</span><span class="mi">1770</span><span class="o">&amp;</span><span class="n">auto</span><span class="o">=</span><span class="n">format</span><span class="o">&amp;</span><span class="n">fit</span><span class="o">=</span><span class="n">crop</span><span class="o">&amp;</span><span class="n">ixlib</span><span class="o">=</span><span class="n">rb</span><span class="o">-</span><span class="mf">4.1</span><span class="o">.</span><span class="mi">0</span><span class="o">&amp;</span><span class="n">ixid</span><span class="o">=</span><span class="n">M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA</span><span class="o">%</span><span class="mi">3</span><span class="n">D</span><span class="o">%</span><span class="mi">3</span><span class="n">D</span>
+</code></pre></div>
 
 <p>然后运行build.py的时候python脚本会直接把frontmatter的值吐进src。</p>
 <p>在主页显示的图片是被切出的中间部分，不能看到图片全貌。要看到全貌还需要在博客里面加</p>
-<pre class="highlight"><code>![](https://images.unsplash.com/photo-1625467769506-8742f12fb865?q=80&amp;w=1770&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
-</code></pre>
+<div class="highlight"><pre><span></span><code>![](https://images.unsplash.com/photo-1625467769506-8742f12fb865?q=80&amp;w=1770&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
+</code></pre></div>
 
 <p>放到哪里都可以，我一般放到前面。</p>
 <p>之前我是用的codex来生成图片。把整篇博客丢给他，然后他就生成了一个独一无二和你的博文适配的图片，美妙无比。然后把图片拷贝到images文件夹下面，然后引用的时候用</p>
-<pre class="highlight"><code>card_image: /images/xxxx.png
-</code></pre>
+<div class="highlight"><pre><span></span><code>card_image: /images/xxxx.png
+</code></pre></div>
 
 <p>但每次都生成图片一方面是太消耗我的token了，都是money啊。另一方面生成的图片需要推送到github仓库里才能显示。久而久之仓库会爆掉的啊。</p>
 <p>现在好了我换成了<a href="https://unsplash.com/">unsplash</a>，简直不要太棒。unsplash中图片是免费使用的，包括商业用途，当然包括博客插图。甚至以后接广告变现，都在这范围内。而且不强制署名，但官方还是鼓励署名感谢。对了似乎还可以改图，包括裁剪、调色、加字都行。</p>
