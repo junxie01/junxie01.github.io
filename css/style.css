@@ -416,81 +416,69 @@ main > .container.page-wide {
 
 .blog-index-item {
   display: grid;
-  grid-template-columns: 6.8rem minmax(0, 1fr);
-  gap: 1.1rem;
-  padding: 1.05rem 0;
-  border-bottom: 1px solid var(--border);
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 0.8rem;
+  padding: 0.42rem 0;
 }
 
 .blog-index-item:first-child {
   padding-top: 0;
 }
 
-.blog-index-item:last-child {
-  border-bottom: none;
-}
-
-.blog-index-date {
-  padding-top: 0.16rem;
-  color: var(--muted);
-  font-family: system-ui, -apple-system, sans-serif;
-  font-size: 0.78rem;
-  line-height: 1.5;
-  white-space: nowrap;
-}
-
-.blog-index-entry {
+.blog-index-title {
   min-width: 0;
 }
 
-.blog-index-entry h2 {
-  margin: 0 0 0.3rem;
-  font-size: 1.05rem;
-  line-height: 1.35;
+.blog-index-title h2 {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.4;
+  font-weight: 600;
 }
 
-.blog-index-entry h2 a {
+.blog-index-title h2 a {
   color: var(--text);
   text-decoration: none;
 }
 
-.blog-index-entry h2 a:hover {
+.blog-index-title h2 a:hover {
   color: var(--accent);
   text-decoration: none;
 }
 
-.blog-index-excerpt {
-  display: -webkit-box;
-  overflow: hidden;
-  color: var(--muted);
-  font-size: 0.9rem;
-  line-height: 1.6;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-}
-
-.blog-index-excerpt p {
-  margin: 0;
-}
-
-.blog-index-tags {
+.blog-index-meta {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.25rem;
-  margin-top: 0.45rem;
+  align-items: baseline;
+  justify-content: flex-end;
+  gap: 0.7rem;
   color: var(--muted);
+  font-family: system-ui, -apple-system, sans-serif;
   font-size: 0.78rem;
   line-height: 1.4;
+  text-align: right;
+  white-space: nowrap;
 }
 
-.blog-index-tags a {
+.blog-index-topics a {
   color: var(--muted);
   text-decoration: none;
 }
 
-.blog-index-tags a:hover {
+.blog-index-topics a + a::before {
+  content: "·";
+  margin: 0 0.32rem;
+  color: var(--muted);
+}
+
+.blog-index-topics a:hover {
   color: var(--accent);
   text-decoration: none;
+}
+
+.blog-index-date {
+  color: var(--muted);
+  white-space: nowrap;
 }
 
 /* --- Blog Post Cards --- */
@@ -1769,13 +1757,17 @@ footer a:hover {
   }
 
   .blog-index-item {
-    grid-template-columns: 1fr;
-    gap: 0.2rem;
-    padding: 1rem 0;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.5rem;
+    padding: 0.42rem 0;
   }
 
-  .blog-index-date {
-    padding-top: 0;
+  .blog-index-meta {
+    gap: 0.5rem;
+  }
+
+  .blog-index-topics a:nth-child(n + 2) {
+    display: none;
   }
 
   .archive-post-list li {
