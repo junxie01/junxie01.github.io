@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>用Cloudflare Tunnel给博客放图片 | hashes</title>
+  <meta name="description" content="用Cloudflare Tunnel给博客放图片">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/atom.xml">
+  <link rel="prefetch" as="image" href="https://www.blogsclub.org/badge/www.seis-jun.xyz">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+  <!-- MathJax for LaTeX rendering -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        ignoreHtmlClass: 'mermaid'
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <!-- Umami Analytics -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="21a99622-5a23-45f4-be80-edef627a68e3"></script>
+  <!-- Busuanzi for public visitor counter -->
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container masthead">
+      <a class="masthead-identity" href="/" aria-label="SEISAMUSE home">
+        <img src="/images/seisamuse.png" alt="" class="masthead-avatar">
+        <span class="masthead-title">SEISAMUSE</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="/">主页</a>
+        <a href="/blog/" class="active">博客</a>
+        <a href="/thoughts/">想法</a>
+        <a href="/archives/">归档</a>
+        <a href="/about/">自述</a>
+        <a href="/links/">链接</a>
+      </nav>
+
+      <div class="masthead-actions" aria-label="Site shortcuts">
+        <form class="masthead-search" action="/search/" method="get">
+          <input type="search" name="q" placeholder="Search notes" aria-label="Search notes">
+        </form>
+        <a href="https://www.travellings.cn/go" target="_blank" rel="noopener" title="Travellings" aria-label="Travellings"><i class="fa-solid fa-train"></i></a>
+        <a href="mailto:hashes@yeah.net" title="Email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="/atom.xml" title="Atom feed" aria-label="Atom feed"><i class="fa-solid fa-rss"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container page-wide">
+      
+      
+<div class="main-content">
+  <article>
+    <div class="post-header">
+      <h1>用Cloudflare Tunnel给博客放图片</h1>
+      <div class="post-meta">
+        <time>2026-09-09</time>
+         &middot; 790 words
+        
+         &middot;
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">web</span>
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">Linux</span>
+        
+        
+      </div>
+    </div>
+
+    <div class="post-content">
+      <p><img alt="" src="https://img.seis-jun.xyz/images/gmail-smtp3.png" /></p>
+<p>虽然好多图片我已经不推送到GitHub Pages上，但没办法有些还是得上传自己的图。</p>
+<p>怎么办？</p>
+<p>之前我已经在办公室Fedora上配置好了Cloudflare Tunnel，FreshRSS和PaperHot都从这里出去。既然隧道已经挖通，再给博客图片留一条路似乎也不费多少事。<del>没有用R2是因为找不到visa卡</del></p>
+<p>最后的结构是：</p>
+<div class="highlight"><pre><span></span><code>GitHub Pages上的博客
+    ↓ 请求图片
+https://xxx.seis-jun.xyz/
+    ↓
+Cloudflare Tunnel
+    ↓
+Fedora上的Nginx：127.0.0.1:8081
+    ↓
+/var/www/seisamuse-media/
+</code></pre></div>
+
+<h2 id="_1">图片放在哪里</h2>
+<p>图片不再放进GitHub仓库，而是单独放在Fedora的这个目录：</p>
+<div class="highlight"><pre><span></span><code>/var/www/seisamuse-media/
+</code></pre></div>
+
+<p>目前分成两类：</p>
+<div class="highlight"><pre><span></span><code>/var/www/seisamuse-media/
+├── images/
+│   ├── 3.png
+│   └── 其他普通博客图片
+└── blog/
+    └── assets/
+        └── 文章slug/
+            └── figure1.png
+</code></pre></div>
+
+<p>普通图片放在：</p>
+<div class="highlight"><pre><span></span><code>/var/www/seisamuse-media/images/
+</code></pre></div>
+
+<p>某篇文章独有的论文插图，则可以放在：</p>
+<div class="highlight"><pre><span></span><code>/var/www/seisamuse-media/blog/assets/文章slug/
+</code></pre></div>
+
+<p>建目录：</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/var/www/seisamuse-media/images
+sudo<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/var/www/seisamuse-media/blog/assets
+sudo<span class="w"> </span>chmod<span class="w"> </span>-R<span class="w"> </span>a+rX<span class="w"> </span>/var/www/seisamuse-media
+sudo<span class="w"> </span>restorecon<span class="w"> </span>-Rv<span class="w"> </span>/var/www/seisamuse-media
+</code></pre></div>
+
+<p>这里只放准备公开的博客图片。一些不想让别人看到的东西当然不能顺手扔进去。</p>
+<h2 id="nginx">用Nginx提供图片</h2>
+<p>Fedora上原本已经装了Nginx，所以不用再装一次，只需要增加一个配置：</p>
+<div class="highlight"><pre><span></span><code>/etc/nginx/conf.d/seisamuse-media.conf
+</code></pre></div>
+
+<p>内容如下：</p>
+<div class="highlight"><pre><span></span><code><span class="k">server</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kn">listen</span><span class="w"> </span><span class="n">127.0.0.1</span><span class="p">:</span><span class="mi">8081</span><span class="p">;</span>
+<span class="w">    </span><span class="kn">server_name</span><span class="w"> </span><span class="s">xxxx</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kn">root</span><span class="w"> </span><span class="s">/var/www/seisamuse-media</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kn">location</span><span class="w"> </span><span class="s">/</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kn">try_files</span><span class="w"> </span><span class="nv">$uri</span><span class="w"> </span><span class="p">=</span><span class="mi">404</span><span class="p">;</span>
+<span class="w">        </span><span class="kn">add_header</span><span class="w"> </span><span class="s">Cache-Control</span><span class="w"> </span><span class="s">&quot;public,</span><span class="w"> </span><span class="s">max-age=31536000,</span><span class="w"> </span><span class="s">immutable&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kn">autoindex</span><span class="w"> </span><span class="no">off</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Nginx只监听<code>127.0.0.1:8081</code>。也就是说，办公室路由器不需要开放8081端口，外部访问全部交给Cloudflare Tunnel。</p>
+<p>先检查配置，再启动服务：</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>nginx<span class="w"> </span>-t
+sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>--now<span class="w"> </span>nginx
+</code></pre></div>
+
+<p>本地测试：</p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-I<span class="w"> </span>http://127.0.0.1:8081/images/3.png
+</code></pre></div>
+
+<h2 id="selinux">SELinux给我拦了一下</h2>
+<p>一开始并没有顺利返回图片，而是直接报错：</p>
+<div class="highlight"><pre><span></span><code>curl: (7) Failed to connect to 127.0.0.1 port 8081
+</code></pre></div>
+
+<p>查看Nginx状态以后才发现，真正的错误是：</p>
+<div class="highlight"><pre><span></span><code>bind() to 127.0.0.1:8081 failed (13: Permission denied)
+</code></pre></div>
+
+<p>Nginx配置语法没有问题，端口也没有被占用，是Fedora的SELinux不允许Nginx监听这个新端口。需要把8081加入允许的HTTP端口：</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>semanage<span class="w"> </span>port<span class="w"> </span>-a<span class="w"> </span>-t<span class="w"> </span>http_port_t<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span><span class="m">8081</span>
+</code></pre></div>
+
+<p>如果系统提示8081已经有定义，则改用：</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>semanage<span class="w"> </span>port<span class="w"> </span>-m<span class="w"> </span>-t<span class="w"> </span>http_port_t<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span><span class="m">8081</span>
+</code></pre></div>
+
+<p>然后重新检查并启动：</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>nginx<span class="w"> </span>-t
+sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>nginx
+</code></pre></div>
+
+<p>这次本地访问终于返回了<code>200 OK</code>。这种问题挺有Fedora特色：东西明明都摆对了，门口的保安还是要再看一眼证件。</p>
+<h2 id="cloudflare-tunnel">加进已有的Cloudflare Tunnel</h2>
+<p>我没有重新创建Tunnel，只是在已有配置中增加一个hostname。Cloudflare Tunnel的配置文件是：</p>
+<div class="highlight"><pre><span></span><code>/root/.cloudflared/config.yml
+</code></pre></div>
+
+<p>修改前先备份：</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>cp<span class="w"> </span>/root/.cloudflared/config.yml<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>/root/.cloudflared/config.yml.bak.<span class="k">$(</span>date<span class="w"> </span>+%Y%m%d_%H%M%S<span class="k">)</span>
+</code></pre></div>
+
+<p>在最后的404兜底规则前增加：</p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">img.xxxx</span>
+<span class="w">    </span><span class="nt">service</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://127.0.0.1:8081</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">service</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http_status:404</span>
+</code></pre></div>
+
+<p>检查配置：</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>cloudflared<span class="w"> </span>tunnel<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--config<span class="w"> </span>/root/.cloudflared/config.yml<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>ingress<span class="w"> </span>validate
+</code></pre></div>
+
+<p>然后给现有Tunnel增加DNS路由：</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>cloudflared<span class="w"> </span>tunnel<span class="w"> </span>route<span class="w"> </span>dns<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>&lt;现有Tunnel名称&gt;<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>img.seis-jun.xyz
+</code></pre></div>
+
+<p>最后重启Tunnel服务：</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>cloudflared-freshrss.service
+</code></pre></div>
+
+<p>公网测试：</p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-I<span class="w"> </span>https://xxxx/images/3.png
+</code></pre></div>
+
+<p>实际返回了<code>HTTP/2 200</code>，文件大小和Fedora上的原图一致。原来的FreshRSS和PaperHot也都正常，说明新规则没有把旧服务挤下去。</p>
+<h2 id="_2">博客里怎么使用</h2>
+<p>Markdown正文里直接写完整地址：</p>
+<div class="highlight"><pre><span></span><code>![<span class="nt">图片说明</span>](<span class="na">https://xxx/images/3.png</span>)
+</code></pre></div>
+
+<p>首页卡片图则写在文章头部：</p>
+<div class="highlight"><pre><span></span><code><span class="nt">card_image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://xxxx/images/3.png</span>
+</code></pre></div>
+
+<p>文章专属图片可以写成：</p>
+<div class="highlight"><pre><span></span><code>![<span class="nt">论文图</span>](<span class="na">https://xxxx.xyz/blog/assets/文章slug/figure1.png</span>)
+</code></pre></div>
+
+<p>以后写博客的流程也就变成了：图片复制到Fedora，Markdown继续放GitHub，文章通过<code>img.seis-jun.xyz</code>引用图片。GitHub仓库终于只需要负责它比较擅长的文字和代码，不必再被一堆大图压得气喘吁吁。</p>
+<p>当然，这种办法也有代价。办公室电脑关机、Nginx停止或者Tunnel断线时，博客还能打开，图片却会暂时消失。所以重要图片仍然需要另外备份，不能觉得能在浏览器里打开就算万事大吉。</p>
+<p>至少现在，第一张图片已经从自己的Fedora里钻过Cloudflare Tunnel，稳稳地出现在博客上了。这就可以了。</p>
+<p>下次找到visa卡再试试cloudflare R2吧。</p>
+    </div>
+
+  <div class="comments-section">
+  <h3>Comments</h3>
+  <script src="https://giscus.app/client.js"
+          data-repo="junxie01/junxie01.github.io"
+          data-repo-id="R_kgDOSGl1Dg"
+          data-category="General"
+          data-category-id="DIC_kwDOSGl1Ds4DAuif"
+          data-mapping="specific"
+          data-term="blog/2026-09-09-cloudflare-tunnel-image-hosting"
+          data-strict="0"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="bottom"
+          data-theme="preferred_color_scheme"
+          data-lang="en"
+          crossorigin="anonymous"
+          async>
+  </script>
+</div>
+
+  <div class="post-nav">
+    
+      <a class="post-nav-prev" href="/blog/2026-09-09-getting-old.html">&larr; 老了</a>
+    
+
+    <a class="post-nav-blog" href="/blog/">Blog</a>
+
+    
+      <a class="post-nav-next" href="/blog/2026-09-09-gmail-smtp-crack.html">gmail的smtp被crack了吗？ &rarr;</a>
+    
+  </div>
+</article>
+</div>
+
+      
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 hashes &middot; Built with Python &amp; Markdown &middot;
+        GitHub &middot;
+        <a href="/atom.xml" target="_blank">Atom</a>
+      </p>
+      <p class="site-stats">
+        <span id="busuanzi_container_site_pv">
+          👁 Total visits: <span id="busuanzi_value_site_pv"></span>
+        </span>
+        &middot;
+        <span id="busuanzi_container_site_uv">
+          Visitors: <span id="busuanzi_value_site_uv"></span>
+        </span>
+      </p>
+    </div>
+  </footer>
+
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+      startOnLoad: true,
+      securityLevel: 'strict',
+      theme: window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'neutral'
+    });
+  </script>
+
+</body>
+</html>
