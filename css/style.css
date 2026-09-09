@@ -1063,6 +1063,17 @@ footer {
   color: var(--muted);
 }
 
+footer .container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.18rem;
+}
+
+footer p {
+  margin: 0;
+  line-height: 1.55;
+}
+
 footer a {
   color: var(--muted);
 }
