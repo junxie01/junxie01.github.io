@@ -24,7 +24,7 @@
 <p>AI似乎也没有见过这种情况。已经按照它的建议改了密码了。</p>
 <p>我试了一下发送邮件，发现已经发不出来了。显示的是You have reached a limit for sending mail. Your message was not sent.</p>
 <p>难道邮箱要废？</p>
-<p><img alt="" src="https://img.seis-jun.xyz/images/gmail-smtp2.png" /></p>
+<p><img alt="" src="https://img.seis-jun.xyz/images/gmail-smtp5.png" /></p>
 <p>刚刚去看又出现了这个鬼东西。</p>
 <p>目前唯一觉得还好的是没有用我这个邮箱给我的朋友同时乱发邮件，现在也发不出了正好。</p>
 <p>谁知道怎么办啊？？</p>]]></content>
@@ -192,7 +192,7 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
 <div class="highlight"><pre><span></span><code>![<span class="nt">论文图</span>](<span class="na">https://xxxx.xyz/blog/assets/文章slug/figure1.png</span>)
 </code></pre></div>
 
-<p>以后写博客的流程也就变成了：图片复制到Fedora，Markdown继续放GitHub，文章通过<code>img.seis-jun.xyz</code>引用图片。GitHub仓库终于只需要负责它比较擅长的文字和代码，不必再被一堆大图压得气喘吁吁。</p>
+<p>以后写博客的流程也就变成了：图片复制到Fedora，Markdown继续放GitHub，文章通过<code>xxx.seis-jun.xyz</code>引用图片。GitHub仓库终于只需要负责它比较擅长的文字和代码，不必再被一堆大图压得气喘吁吁。</p>
 <p>当然，这种办法也有代价。办公室电脑关机、Nginx停止或者Tunnel断线时，博客还能打开，图片却会暂时消失。所以重要图片仍然需要另外备份，不能觉得能在浏览器里打开就算万事大吉。</p>
 <p>至少现在，第一张图片已经从自己的Fedora里钻过Cloudflare Tunnel，稳稳地出现在博客上了。这就可以了。</p>
 <p>下次找到visa卡再试试cloudflare R2吧。</p>]]></content>
