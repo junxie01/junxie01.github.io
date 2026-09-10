@@ -40,7 +40,7 @@
 <p>要是吵厉害了就拍拍空调，听到我的提醒他们也会稍稍安静些。</p>
 <p>大约听我们睡着了，再继续吧。</p>]]></content>
     
-    <category term="日记" />
+    <category term="邻居" />
     
   </entry>
   
@@ -70,7 +70,7 @@
 <p>所以，干嘛不搞点仪式感呢？</p>
 <p>只要你愿意，小到喝咖啡，打字，睡觉，折纸，闲逛都可以是人生的仪式。</p>]]></content>
     
-    <category term="日记" />
+    <category term="仪式感" />
     
   </entry>
   
@@ -94,7 +94,7 @@
 <p>目前唯一觉得还好的是没有用我这个邮箱给我的朋友同时乱发邮件，现在也发不出了正好。</p>
 <p>谁知道怎么办啊？？</p>]]></content>
     
-    <category term="日记" />
+    <category term="gmail" />
     
   </entry>
   
@@ -264,7 +264,7 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
     
     <category term="web" />
     
-    <category term="Linux" />
+    <category term="Cloudflare" />
     
   </entry>
   
@@ -288,7 +288,7 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
 <p>当你觉得世界是属于那帮年轻人的，你认命了不再挣扎反抗。</p>
 <p>大约你觉得你已经老了。</p>]]></content>
     
-    <category term="日记" />
+    <category term="老" />
     
   </entry>
   
@@ -318,7 +318,9 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
 <p>我同样吃枣子。也不知是枣子太补还是空气太干燥，半路就开始流鼻血。大约可能是我用不着那么多能量吧。</p>
 <p>现在我一般不吃枣子，一吃枣子就让我想起绿皮绅士。</p>]]></content>
     
-    <category term="回忆" />
+    <category term="枣子" />
+    
+    <category term="绅士" />
     
   </entry>
   
@@ -350,7 +352,7 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
 <p>也别太灰心。我们选的这条路其实也受到了基因的奖励。自己生自己的肯定不知道谈恋爱有多美好<del>当然失恋了也有些痛苦</del>。</p>
 <p>好了，博客到此为止，收。</p>]]></content>
     
-    <category term="日记" />
+    <category term="繁殖" />
     
   </entry>
   
@@ -391,7 +393,7 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
 <p>“取消联系。”，岑照猛地退开，看到双颊飞红的沈栖紧闭着双眼，嘴角噙着一抹笑意。</p>
 <p>那娇羞美丽的脸庞，他90多年以来从来没见到第二张。</p>]]></content>
     
-    <category term="小说" />
+    <category term="沈栖" />
     
   </entry>
   
@@ -421,7 +423,7 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
 <p>留白不是说让你一直是空的，你得装点东西，然后看看外面有什么，装进来试试，把不好的吐了，时刻准备着可以继续装。</p>
 <p>这下被我<a href="/blog/2026-08-29-oily-or-not.html">装</a>到了啊。哈哈。</p>]]></content>
     
-    <category term="日记" />
+    <category term="留白" />
     
   </entry>
   
@@ -447,7 +449,7 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
 <p>最近没有怎么看到柯基。</p>
 <p>希望柯基多注意身体。</p>]]></content>
     
-    <category term="日记" />
+    <category term="柯基" />
     
   </entry>
   
@@ -473,14 +475,14 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
 <p>对了还看了一集《Better call saul》和娃一起看了两集《Disenchantment》。</p>
 <p>一天就没剩多少时间了。</p>]]></content>
     
-    <category term="日记" />
+    <category term="玩" />
     
   </entry>
   
   <entry>
     <title>风骚律师第一集勾人吗？</title>
-    <link href="https://www.seis-jun.xyz/blog/2026-09-06-better-call-soul.html" />
-    <id>https://www.seis-jun.xyz/blog/2026-09-06-better-call-soul.html</id>
+    <link href="https://www.seis-jun.xyz/blog/2026-09-06-better-call-saul.html" />
+    <id>https://www.seis-jun.xyz/blog/2026-09-06-better-call-saul.html</id>
     <updated>2026-09-06T14:46:41+08:00</updated>
     <published>2026-09-06T14:46:41+08:00</published>
     <summary type="html"><p>勾</p></summary>
@@ -528,7 +530,7 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
 <p>看过毒师可High了，因为看到老熟脸Mike和Tuco，不要太开心。</p>
 <p>简直佩服死编剧了啊，撒那么多钩子，长得不帅的Goodman也会吸引人。</p>]]></content>
     
-    <category term="杂" />
+    <category term="风骚律师" />
     
   </entry>
   
@@ -551,7 +553,7 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
 <p>我不知道为什么两三个月就会把她们换走。</p>
 <p>也不知道下一位嬷嬷，会不会比我更早。</p>]]></content>
     
-    <category term="日记" />
+    <category term="嬷嬷" />
     
   </entry>
   
@@ -582,7 +584,9 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
 <h2 id="_5">结论</h2>
 <p>通过以上分析，我们得出了结论，饭局对于成年人的作用是非常大的，相对于其他方式，其增进关系的效率是比较高的。而且比较易于实施，成本也不会太高。本文工作为促进成年人社会关系维护提供了参考，呼吁各界人士多参与饭局，在增进关系的基础上还能获得快乐，同时能增加内需。所以，有事没事，请我吃饭吧。</p>]]></content>
     
-    <category term="杂" />
+    <category term="关系" />
+    
+    <category term="饭局" />
     
   </entry>
   
@@ -612,7 +616,7 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
 <p>第一次放弃梦想，没有人告诉你，当时以为只是歇一歇，后来却再也没有重新开始；但你知道，真正属于你的东西，不会因为一次放弃就失去意义。</p>
 <p>都是第一次做人。</p>]]></content>
     
-    <category term="日记" />
+    <category term="做人" />
     
   </entry>
   
@@ -646,7 +650,7 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
 <p>算了，电视剧嘛，看着玩就好了。</p>
 <p>想多了没意思。</p>]]></content>
     
-    <category term="杂" />
+    <category term="大明王朝" />
     
   </entry>
   
@@ -682,7 +686,7 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
 <p>居所边缘忽然响了三声低促的来访提示。</p>
 <p>入户光幕上浮出一行字：未预约来访，是否放行？</p>]]></content>
     
-    <category term="小说" />
+    <category term="苏砚" />
     
   </entry>
   
@@ -708,7 +712,7 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
 <p>不怕沾衣且对自己兄弟自信的人你提醒了怕是也没用。</p>
 <p>挂个标语算哪门子的教育。</p>]]></content>
     
-    <category term="日记" />
+    <category term="标语" />
     
   </entry>
   
@@ -748,12 +752,12 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
 <p>&#8220;等下个月发了工资就给你买。&#8221;</p>
 <p>&#8230;</p>]]></content>
     
-    <category term="杂" />
+    <category term="对话" />
     
   </entry>
   
   <entry>
-    <title>banyin公司</title>
+    <title>BanYin公司</title>
     <link href="https://www.seis-jun.xyz/blog/2026-09-03-ban-yin-gong-si.html" />
     <id>https://www.seis-jun.xyz/blog/2026-09-03-ban-yin-gong-si.html</id>
     <updated>2026-09-03T07:37:19+08:00</updated>
@@ -803,7 +807,7 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
 <p>你肯定猜到那是个什么地方。</p>
 <p>如果你读了我的<a href="/blog/2008-04-05-grandpa-tao.html">陶爷爷</a>。</p>]]></content>
     
-    <category term="日记" />
+    <category term="公司" />
     
   </entry>
   
@@ -831,7 +835,7 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
 <p>哈哈。</p>
 <p>下次还是别难为眼睛了。</p>]]></content>
     
-    <category term="日记" />
+    <category term="灯管" />
     
   </entry>
   
@@ -867,7 +871,7 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
 <p>除了以上这些，还有几个没被我提到，我也一并列一下他们的名字，要不然到时怨我：银杏、太阳花、小榛树、竹子、两种芦荟、落地生根、还有一堆多肉。</p>
 <p>因为妻子说我身上木多，而且是乙木，和他们靠近，我真的能获得能量啊。</p>]]></content>
     
-    <category term="日记" />
+    <category term="阳台" />
     
   </entry>
   
@@ -903,7 +907,7 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
 <p>随后我们失之交臂。</p>
 <p>和鸟儿一样的自由，你们有吗？</p>]]></content>
     
-    <category term="日记" />
+    <category term="中间格子" />
     
   </entry>
   
@@ -939,7 +943,7 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
 <p><a href="/blog/2026-08-19-about-the-world-2.html">世界都是一个屎山代码</a>，很多东西，我根本懒得判断它有没有用，判断它有用无用，有用吗？</p>
 <p>好了，补丁打完，继续玩吧。</p>]]></content>
     
-    <category term="日记" />
+    <category term="有用无用" />
     
   </entry>
   
@@ -977,7 +981,7 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
 <p>忽然就失了那味道。</p>
 <p>可能是因为少了几位老阿姨吧。</p>]]></content>
     
-    <category term="日记" />
+    <category term="咖啡" />
     
   </entry>
   
@@ -1022,7 +1026,7 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
 <p>我没敢细问，或者不愿意知道他故去的细节和缘由。</p>
 <p>但我想告诉他，我不怨他了。</p>]]></content>
     
-    <category term="回忆" />
+    <category term="小花" />
     
   </entry>
   
@@ -1054,7 +1058,9 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
 <p>但其实只要放过自己，接受自己，也就成长了。</p>
 <p>在这个前提下，育儿，会是一场很好玩的队友成长类升级游戏。</p>]]></content>
     
-    <category term="日记" />
+    <category term="开学" />
+    
+    <category term="儿子" />
     
   </entry>
   
@@ -1087,7 +1093,11 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
 <p>而我，从来都很蹦跶，甚至那次还不是最痛最惨的经历。</p>
 <p>我还会继续蹦，继续跳，直到我蹦不动。</p>]]></content>
     
-    <category term="日记" />
+    <category term="花坛" />
+    
+    <category term="庙" />
+    
+    <category term="跳" />
     
   </entry>
   
@@ -1111,7 +1121,9 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
 <p>但是，什么又不是装？我们可能一直都在装我们自己。装得不像的就会被认为是油腻，或者装得不像孔子所说的，“十有五而志于学，三十而立，四十而不惑，五十而知天命，六十而耳顺，七十而从心所欲，不逾矩”，那就是油腻。</p>
 <p>到底谁来定义油腻？</p>]]></content>
     
-    <category term="日记" />
+    <category term="油腻" />
+    
+    <category term="装" />
     
   </entry>
   
@@ -1144,7 +1156,7 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
 <p>不用吹嘘或一味享受高速和大的加速度带给你的刺激和爽感，只需把车当作一间小房子，能把你从A地平安送到B地就好了。</p>
 <p>路上只管走好你自己的道。</p>]]></content>
     
-    <category term="日记" />
+    <category term="开车" />
     
   </entry>
   
@@ -1178,14 +1190,14 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
 <p>它决定的是你怎么走过去。</p>
 <p>好了，我去吃瓜子了。</p>]]></content>
     
-    <category term="日记" />
+    <category term="不确定" />
     
   </entry>
   
   <entry>
     <title>关于博客写作IV</title>
-    <link href="https://www.seis-jun.xyz/blog/2026-08-28-about-blog-writingiv.html" />
-    <id>https://www.seis-jun.xyz/blog/2026-08-28-about-blog-writingiv.html</id>
+    <link href="https://www.seis-jun.xyz/blog/2026-08-28-about-writing-blog-iv.html" />
+    <id>https://www.seis-jun.xyz/blog/2026-08-28-about-writing-blog-iv.html</id>
     <updated>2026-08-28T14:29:18+08:00</updated>
     <published>2026-08-28T14:29:18+08:00</published>
     <summary type="html"><p>接着写，接着改</p></summary>
@@ -1213,7 +1225,9 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
 <p>所以，我准备继续写。而且会对以前的文字进行修正。</p>
 <p>逻辑顺序，文字表达，错字别字都要改，但主要想法还是封在那里。</p>]]></content>
     
-    <category term="日记" />
+    <category term="博客" />
+    
+    <category term="写作" />
     
   </entry>
   
@@ -1250,7 +1264,7 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
 <p>总之我选择的是不要去提前剧透。</p>
 <p>虽然不确定性给我带来了焦虑，但同时也带来了开盲盒的快乐。</p>]]></content>
     
-    <category term="日记" />
+    <category term="不确定性" />
     
   </entry>
   
@@ -1288,14 +1302,16 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
 <p>我应该还会继续写，但不是为了把自己写成一个没有毛病的人。</p>
 <p>就像论文，多半有时也会留一些瑕疵，说这个参数我们这么假设，那个我们没有讨论到，下次继续研究。</p>]]></content>
     
-    <category term="日记" />
+    <category term="博客" />
+    
+    <category term="写作" />
     
   </entry>
   
   <entry>
     <title>关于博客写作II</title>
-    <link href="https://www.seis-jun.xyz/blog/2026-08-27-about-writing-blogii.html" />
-    <id>https://www.seis-jun.xyz/blog/2026-08-27-about-writing-blogii.html</id>
+    <link href="https://www.seis-jun.xyz/blog/2026-08-27-about-writing-blog-ii.html" />
+    <id>https://www.seis-jun.xyz/blog/2026-08-27-about-writing-blog-ii.html</id>
     <updated>2026-08-27T07:43:36+08:00</updated>
     <published>2026-08-27T07:43:36+08:00</published>
     <summary type="html"><p>得悠着点</p></summary>
@@ -1332,7 +1348,9 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
 <p>用那些来lu，真tmd脏了自己身子。</p>
 <p>我仍然会写，但会把表达放在事实、边界与尊重之内。让博客留下的是可复用的知识、经得起回看的思考，以及一点不必喧哗的生活。</p>]]></content>
     
-    <category term="日记" />
+    <category term="博客" />
+    
+    <category term="安全" />
     
   </entry>
   
@@ -1373,7 +1391,7 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
 <p>希望你找到合适自己的算法。</p>
 <p>愿这个算法里没有“别人”这个参数。</p>]]></content>
     
-    <category term="日记" />
+    <category term="定位" />
     
   </entry>
   
@@ -1422,7 +1440,7 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
 <p>大约我们的情绪不通，又或者它的确没有读到我的无情和恶毒。</p>
 <p>以后可能还会见到更多老鼠，但留下记忆的多半也就这几只。</p>]]></content>
     
-    <category term="回忆" />
+    <category term="老鼠" />
     
   </entry>
   
@@ -1458,7 +1476,7 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
 <p>在误差函数曲线里面，可以看到，在极小值附近，已经变得平坦了。平坦有时是舒适的好的，但也蕴藏问题，那就是太稳了，你会变得脆弱。跳出极小值就是曲线突然往上蹦一下，就像你的心跳一样，如果不蹦一下那就该归尘土了。</p>
 <p>好了，就到这里吧。希望我的ppt不会再蹦了啊。</p>]]></content>
     
-    <category term="日记" />
+    <category term="反演" />
     
   </entry>
   
@@ -1509,7 +1527,7 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
 <p>阿门，早上码了一会儿博客，一会儿接着去码Word和PPT。</p>
 <p>又是充实，脑袋嗡嗡的一天呢。</p>]]></content>
     
-    <category term="日记" />
+    <category term="完" />
     
   </entry>
   
@@ -1542,7 +1560,7 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
 <p>要不去帮小王改一下他的材料吧。</p>
 <p>我的天，那还是算了。我继续多埋点别字，隐藏我的实力吧。哈哈。</p>]]></content>
     
-    <category term="日记" />
+    <category term="别字" />
     
   </entry>
   
@@ -1574,7 +1592,11 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
 <p>我们通常怀念过去，并且想做回小孩，大约是因为既要又要啊，即不想承担责任地做想做的事，又想拥有长大了的钞票和能力。</p>
 <p>好了，该回来了。继续拉磨耕田，做好牛马吧。</p>]]></content>
     
-    <category term="日记" />
+    <category term="鸡肉菌" />
+    
+    <category term="棺材" />
+    
+    <category term="白蚁" />
     
   </entry>
   
@@ -1608,7 +1630,7 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
 <p>有信仰，但也允许自己怀疑；有不确定，但仍然选择思考和行动。</p>
 <p>好了，不说了，我去我的屎山上种点花了。</p>]]></content>
     
-    <category term="日记" />
+    <category term="信念" />
     
   </entry>
   
@@ -1641,7 +1663,7 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
 <p><a href="https://mobius.blog/21437.html">狗屁的哲学</a>，越想越乱。</p>
 <p>好了，我去挥舞大棒锻炼身体了。<del>画面逐渐黄了起来</del></p>]]></content>
     
-    <category term="日记" />
+    <category term="道德" />
     
   </entry>
   
@@ -1687,7 +1709,7 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
 善恶可能不是没有定义，而是我想用一句话把它定义掉这件事，本身就太狂妄了。似乎真的有东西不好定义。</p>
 <p>不说了，我这个恶人。</p>]]></content>
     
-    <category term="日记" />
+    <category term="善恶" />
     
   </entry>
   
@@ -1788,7 +1810,7 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
 </ul>
 <p>好了。不说了，我去vibe coding了。</p>]]></content>
     
-    <category term="日记" />
+    <category term="codex" />
     
   </entry>
   
@@ -1819,7 +1841,9 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
 <p>虽然理着理着可能又变成新的屎山。</p>
 <p>好了，不说了，我去犁我那一小块屎山了。</p>]]></content>
     
-    <category term="日记" />
+    <category term="世界" />
+    
+    <category term="屎山" />
     
   </entry>
   
@@ -1854,7 +1878,9 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
 <p>至于如何“平等地充分的沟通情绪、想法、需求，尊重意见，求同存异。”那是另一门功课。</p>
 <p>好了，不管了，我去补课了。</p>]]></content>
     
-    <category term="日记" />
+    <category term="关系" />
+    
+    <category term="学渣" />
     
   </entry>
   
@@ -1891,7 +1917,7 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
 <p><strong>允许自己没用</strong> : 不是所有时间都得有用。吃瓜子、看星空、打理阳台的花草，这些&#8221;没用&#8221;的时刻不是浪费，是留白。一张一弛，弛也是秩序的一部分。→ <a href="/blog/2026-05-08-sunflower-seeds-eating.html">《吃瓜子》</a> · <a href="/blog/2021-03-08-sky-and-universe.html">《一起看星星》</a></p>
 <p>我准备给每个点都加上一篇博客，也许写完就知道惑还是不惑了。</p>]]></content>
     
-    <category term="日记" />
+    <category term="三观" />
     
   </entry>
   
@@ -1926,7 +1952,7 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
 <p>又水了一篇博客。</p>
 <p>博客那么好写吗？</p>]]></content>
     
-    <category term="web" />
+    <category term="unsplash" />
     
   </entry>
   
@@ -1964,7 +1990,7 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
 <p>我猜最重要的一点是do not expect too much，这是我跟我儿子常说的。翻译过来就是，请逐步削减你的欲望，量化你的需求。</p>
 <p>但我不知道对不对，请你也给我指点一二。</p>]]></content>
     
-    <category term="日记" />
+    <category term="情绪" />
     
   </entry>
   

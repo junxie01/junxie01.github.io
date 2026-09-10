@@ -66,7 +66,7 @@
 <h1 class="page-title">Search</h1>
 
 <form class="search-form search-page-form" action="/search/" method="get">
-  <input id="search-input" class="search-input" type="search" name="q" placeholder="Search title, tag, or content" autocomplete="off" autofocus>
+  <input id="search-input" class="search-input" type="search" name="q" placeholder="Search title, topic, tag, or content" autocomplete="off" autofocus>
   <button class="search-button" type="submit">Search</button>
 </form>
 
@@ -95,10 +95,11 @@
   function scorePost(post, terms) {
     var title = normalize(post.title);
     var tags = normalize((post.tags || []).join(" "));
+    var categories = normalize((post.categories || []).join(" "));
     var excerpt = normalize(post.excerpt);
     var slug = normalize(post.slug);
     var content = normalize(post.content);
-    var combined = [title, tags, excerpt, slug, content].join(" ");
+    var combined = [title, categories, tags, excerpt, slug, content].join(" ");
     var compactCombined = combined.replace(/[\s\-_\/]+/g, "");
     var score = 0;
 
@@ -109,6 +110,7 @@
         return 0;
       }
       if (title.indexOf(term) !== -1) score += 12;
+      if (categories.indexOf(term) !== -1) score += 10;
       if (tags.indexOf(term) !== -1) score += 8;
       if (excerpt.indexOf(term) !== -1) score += 4;
       if (slug.indexOf(term) !== -1 || slug.replace(/[\s\-_\/]+/g, "").indexOf(compactTerm) !== -1) score += 5;
