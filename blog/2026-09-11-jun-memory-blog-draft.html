@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>给AI补一本工作笔记：我的Hashes Memory | hashes</title>
+  <meta name="description" content="给AI补一本工作笔记：我的Hashes Memory">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/atom.xml">
+  <link rel="prefetch" as="image" href="https://www.blogsclub.org/badge/www.seis-jun.xyz">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+  <!-- MathJax for LaTeX rendering -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        ignoreHtmlClass: 'mermaid'
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <!-- Umami Analytics -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="21a99622-5a23-45f4-be80-edef627a68e3"></script>
+  <!-- Busuanzi for public visitor counter -->
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container masthead">
+      <a class="masthead-identity" href="/" aria-label="SEISAMUSE home">
+        <img src="/images/seisamuse.png" alt="" class="masthead-avatar">
+        <span class="masthead-title">SEISAMUSE</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="/">主页</a>
+        <a href="/blog/" class="active">博客</a>
+        <a href="/thoughts/">想法</a>
+        <a href="/archives/">归档</a>
+        <a href="/about/">自述</a>
+        <a href="/links/">链接</a>
+      </nav>
+
+      <div class="masthead-actions" aria-label="Site shortcuts">
+        <form class="masthead-search" action="/search/" method="get">
+          <input type="search" name="q" placeholder="Search notes" aria-label="Search notes">
+        </form>
+        <a href="mailto:hashes@yeah.net" title="Email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="/atom.xml" title="Atom feed" aria-label="Atom feed"><i class="fa-solid fa-rss"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container page-wide">
+      
+      
+<div class="main-content">
+  <article>
+    <div class="post-header">
+      <h1>给AI补一本工作笔记：我的Hashes Memory</h1>
+      <div class="post-meta">
+        <time>2026-09-11</time>
+         &middot; 2,088 words
+        
+         &middot; Topic:
+        
+          <a href="/blog/topic/fun/">fun</a>
+        
+        
+        
+         &middot; Tags:
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">python</span>
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">work</span>
+        
+        
+      </div>
+    </div>
+
+    <div class="post-content">
+      <p>请AI折腾了一个小东西，叫Hashes Memory。是给AI工作流加的一套长期记忆。主要接入Codex，也供Qoder使用。</p>
+<p>原因很简单。我和AI聊了那么多，让它看过论文、读过代码、分析过项目，也纠正过它不少次。按理说，它应该越来越了解我的工作：什么已经做完了，什么方案失败过，我习惯怎么写东西，哪些科研参数不能随便动。</p>
+<p>于是我问了一句：</p>
+<blockquote>
+<p>每次开一个新对话，你到底知不知道我们之前做过什么？</p>
+</blockquote>
+<p>如果每次都要重新讲背景、重新读材料、重新解释同一个决定，那这个“助手”的交接工作实在不够格啊。</p>
+<p>最可恨的是，这些“重新来一次”浪费的token都是真金白银啊。</p>
+<h2 id="_1">读过，不等于以后还记得</h2>
+<p>这次把系统翻出来检查，发现需要先分清几件事。</p>
+<p>同一个对话里，AI 可以利用已经进入上下文的内容。对话很长时，早期内容可能被压缩成摘要，一些细节也会丢失。</p>
+<p>新开一个对话，情况就不同了。以前的完整对话不会因为属于同一个项目，就全部自动放到新对话里。能接上的，取决于当前提供的项目文件、规则、可用的历史摘要，以及实际检索到的记忆。</p>
+<p>“我让它读过这篇论文”和“它以后还能找到当时的分析”，中间还差一个保存与检索的过程。更不能因为它读过材料，就认为这些内容已经训练进模型。</p>
+<p>这也是 Hashes Memory 要补的地方。</p>
+<p>它是我让Codex协助搭建的一套本地工具。不是某个模型自带功能的名字，也不是一种让模型永久记住一切的特殊开关。</p>
+<p>它把值得留下的东西保存成文件，再提供一个让AI查找这些文件的入口。需要工作时，先翻一下笔记。</p>
+<h2 id="_2">笔记本里放什么</h2>
+<p>目前用的是 Markdown、SQLite 和一个本地 MCP 服务。</p>
+<p>Markdown 保存真正的记忆内容，既能直接打开，也能放进 Obsidian 阅读。SQLite 负责检索，是从 Markdown 生成的索引；索引丢了可以重建。MCP 则提供给 Codex、Qoder 一个统一的调用入口，例如查询项目简报、搜索历史决定、写入候选记忆。</p>
+<p>大致的目录是这样：</p>
+<div class="highlight"><pre><span></span><code>Mem/
+├── 00-Inbox       等待审核的候选
+├── 10-Profile     个人偏好
+├── 20-Projects    项目记忆
+├── 30-Knowledge   方法、文献与参考知识
+├── 40-Workflows   可复用工作流
+└── 90-System      协议、模板与验证记录
+</code></pre></div>
+
+<p>保存的内容，我更关心下面三类。</p>
+<p>第一类是习惯。例如中文优先，先读现有文件，再做最小修改；科研解释不能把推测写成结论。这些东西不应该每个项目都重新交代。</p>
+<p>第二类是项目交接。现在做到哪一步，本轮完成了什么，验证过什么，还有什么未知，下一步先看哪个文件。这一层最直接决定了新对话能不能接上工作。</p>
+<p>第三类是科研知识。某篇材料与我的问题有什么关系，两个方法为什么选了其中一个，一次实验的结论适用于什么条件，以及某个失败为什么暂时不值得重试。</p>
+<p>这里尤其需要保留来源。一个“这个方案不行”的结论，过几个月看起来可能毫无用处。它是在什么数据、参数、环境下不行？失败发生在哪一步？如果环境变了，是否值得再试？</p>
+<p>这些限定条件，往往比那一句结论更值钱。</p>
+<p>当然，现在这三类内容的积累程度还不一样。个人习惯和项目入口已经有了一部分，很多论文理解和研究结论还没有系统整理进去。目录建好了，只能说明有地方放，不能说明里面已经装满知识。</p>
+<h2 id="_3">真正的问题，是笔记有没有继续更新</h2>
+<p>这次检查出了一个挺典型的问题。</p>
+<p>今天查看时，Hashes Memory最新的记录还停在7月15日。工具能连接，查询也能返回结果，但后面的工作没有持续进入这套记忆库。</p>
+<p>拿项目SWED来说，项目文档已经记录了路线B在8月14日冻结，进入十年月级诊断扩展的阶段；旧记忆还停留在更早的收拢工作。</p>
+<p>如果新任务只读旧记忆，它可能回答得很熟练，却是在熟练地介绍过去。</p>
+<p>于是这次先拿SWED做试点，补了一份新的交接，另外整理了方法边界、CPU 优化与GPU 失败条件、冻结规则三条知识候选。</p>
+<p>交接里也保留了不确定的地方。例如两个项目文档对十年运行范围的表述没有完全同步，服务器任务当前是否已经启动，本轮没有检查。这些都要写出来，不能替它们编一个整齐的答案。</p>
+<p>现在的做法是：实质工作结束时，让 AI 留一份短交接，记录“摘要、已完成、验证、未完成、下一步、来源”。新任务可以先读取最新交接，但它仍被标为未审核工作记录。</p>
+<p>科学结论和长期偏好则单独进入候选区，经过确认后才成为正式记忆。新的结论替代旧结论时，旧记录也保留下来，能看清前后变化。</p>
+<p>这样，交接可以及时，结论又不至于越记越玄乎。</p>
+<h2 id="token-token">会不会为了省 token，反而读更多 token？</h2>
+<p>这是我紧接着担心的另一件事。</p>
+<p>如果每次开始工作，都把所有项目、所有偏好、所有历史记录读一遍，那记忆库越大，开场越贵。整理了半天，最后给自己装了个自动复读机。</p>
+<p>所以启动时只给一份短简报：个人规则、当前项目交接，以及预算内的少量正式记忆。遇到具体问题，再搜索相关条目；摘要不够用，才打开完整内容和来源。</p>
+<p>在记忆库里执行 SQLite 查询，本身不需要模型 token。返回给模型的文字会占用上下文，后续读原文也会产生消耗。“存在本地”并不意味着交给在线 Codex 的内容没有 token 成本，也不意味着这些片段始终只留在电脑上。</p>
+<p>这次 SWED 试点给启动简报设了约 1500 个估算 token 的预算。实测一份简报返回 1806 个字符，按当前估算方法约为 1374 token。</p>
+<p>这里得强调一下：这是估算器的结果，不是模型账单上的精确 token 数。Codex 自己的系统提示、工具说明、项目规则和后续文件读取，也不包含在这个数字里。</p>
+<p>同一个对话已经读过简报后，还可以只检查版本有没有变化。内容没变，就复用上下文里那一份。这次测试中，确认未变化只返回了 182 个字符。</p>
+<p>我希望知识库可以慢慢变大，但每次开始工作的那份交接仍然很短。</p>
+<p>日常最直接的用法，就是让 Codex：</p>
+<blockquote>
+<p>先读取 SWED 的项目简报，说明已经完成什么、还有哪些未知，再继续当前任务。</p>
+</blockquote>
+<p>也可以在 Mem 目录里直接检查：</p>
+<div class="highlight"><pre><span></span><code>.venv/bin/junmem<span class="w"> </span>brief<span class="w"> </span>--project<span class="w"> </span>swed
+.venv/bin/junmem<span class="w"> </span>search<span class="w"> </span><span class="s2">&quot;冻结&quot;</span><span class="w"> </span>--project<span class="w"> </span>swed
+</code></pre></div>
+
+<p>关键是“没有找到记录”不能直接解释为“以前没有做过”。确实需要补查时，再去读项目文件或定位旧对话。</p>
+<p>目前跨独立 MCP 进程恢复交接已经测试通过，相关代码测试和历史检索回归也通过了。但这仍然不能保证每一个真实任务都会老老实实写交接：客户端没有加载新规则、工具调用失败，或者任务被强制中断，都可能漏写。</p>
+<p>这一点还得在实际使用中继续观察。</p>
+<p>我对Hashes Memory的期待倒没有多复杂。下次打开一个项目，希望AI能先说清楚上次留下了什么，而不是兴冲冲地把第一步重新做一遍。</p>
+<p>毕竟，我自己已经够容易忘事了。</p>
+    </div>
+
+  <div class="comments-section">
+  <h3>Comments</h3>
+  <script src="https://giscus.app/client.js"
+          data-repo="junxie01/junxie01.github.io"
+          data-repo-id="R_kgDOSGl1Dg"
+          data-category="General"
+          data-category-id="DIC_kwDOSGl1Ds4DAuif"
+          data-mapping="specific"
+          data-term="blog/2026-09-11-jun-memory-blog-draft"
+          data-strict="0"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="bottom"
+          data-theme="preferred_color_scheme"
+          data-lang="en"
+          crossorigin="anonymous"
+          async>
+  </script>
+</div>
+
+  <div class="post-nav">
+    
+      <a class="post-nav-prev" href="/blog/2026-09-11-about-criteriaI.html">&larr; 关于指标I</a>
+    
+
+    <a class="post-nav-blog" href="/blog/">Blog</a>
+
+    
+      <a class="post-nav-next" href="/blog/2026-09-11-about-criteriaII.html">关于指标II &rarr;</a>
+    
+  </div>
+</article>
+</div>
+
+      
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p class="site-stats">
+        <span id="busuanzi_container_site_pv">
+          👁 Total visits: <span id="busuanzi_value_site_pv"></span>
+        </span>
+        &middot;
+        <span id="busuanzi_container_site_uv">
+          Visitors: <span id="busuanzi_value_site_uv"></span>
+        </span>
+      </p>
+      <p>&copy; 2026 hashes &middot; Built with Python &amp; Markdown &middot;
+        GitHub &middot;
+        <a href="/atom.xml" target="_blank">Atom</a>
+      </p>
+      <!-- Edit this line to add or remove blog directory links. -->
+      <p class="footer-directory-links">
+        <span>感谢收录：</span>
+        <a href="https://blogscn.fun/" target="_blank" rel="noopener">笔墨迹</a>
+        <a href="https://bf.zzxworld.com/" target="_blank" rel="noopener">BlogFinder</a>
+        <a href="https://www.blogsclub.org/" target="_blank" rel="noopener">BlogsClub</a>
+        <a href="https://bokehub.com/" target="_blank" rel="noopener">博客中心</a>
+        <a href="https://www.boyouquan.com/" target="_blank" rel="noopener">博友圈</a>
+        <a href="https://storeweb.cn/" target="_blank" rel="noopener">个站商店</a>
+        <a href="https://www.travellings.cn/go.html" target="_blank" rel="noopener">开往</a>
+      </p>
+    </div>
+  </footer>
+
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+      startOnLoad: true,
+      securityLevel: 'strict',
+      theme: window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'neutral'
+    });
+  </script>
+
+</body>
+</html>
