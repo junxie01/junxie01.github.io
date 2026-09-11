@@ -51,7 +51,8 @@
     <updated>2026-09-11T12:45:00+08:00</updated>
     <published>2026-09-11T12:45:00+08:00</published>
     <summary type="html"><p>此篇由AI协助完成</p></summary>
-    <content type="html"><![CDATA[<p>请AI折腾了一个小东西，叫Hashes Memory。是给AI工作流加的一套长期记忆。主要接入Codex，也供Qoder使用。</p>
+    <content type="html"><![CDATA[<p><img alt="" src="https://images.unsplash.com/photo-1677442135136-760c813028c0?q=80&amp;w=2232&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" /></p>
+<p>请AI折腾了一个小东西，叫Hashes Memory。是给AI工作流加的一套长期记忆。主要接入Codex，也供Qoder使用。</p>
 <p>原因很简单。我和AI聊了那么多，让它看过论文、读过代码、分析过项目，也纠正过它不少次。按理说，它应该越来越了解我的工作：什么已经做完了，什么方案失败过，我习惯怎么写东西，哪些科研参数不能随便动。</p>
 <p>于是我问了一句：</p>
 <blockquote>
