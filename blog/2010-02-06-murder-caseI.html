@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    (function () {
+      var stored = null;
+      try {
+        stored = localStorage.getItem('seisamuse-theme');
+      } catch (error) {}
+
+      var setting = stored === 'light' || stored === 'dark' ? stored : 'system';
+      var systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = setting === 'system' ? (systemDark ? 'dark' : 'light') : setting;
+      document.documentElement.dataset.theme = theme;
+      document.documentElement.dataset.themeSetting = setting;
+    })();
+  </script>
+  <title>凶案I | hashes</title>
+  <meta name="description" content="凶案I">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/atom.xml">
+  <link rel="prefetch" as="image" href="https://www.blogsclub.org/badge/www.seis-jun.xyz">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+  <!-- MathJax for LaTeX rendering -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        ignoreHtmlClass: 'mermaid'
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <!-- Umami Analytics -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="21a99622-5a23-45f4-be80-edef627a68e3"></script>
+  <!-- Busuanzi for public visitor counter -->
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container masthead">
+      <a class="masthead-identity" href="/" aria-label="SEISAMUSE home">
+        <img src="/images/seisamuse.png" alt="" class="masthead-avatar">
+        <span class="masthead-title">SEISAMUSE</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="/">主页</a>
+        <a href="/blog/" class="active">博客</a>
+        <a href="/thoughts/">想法</a>
+        <a href="/archives/">归档</a>
+        <a href="/about/">自述</a>
+        <a href="/links/">链接</a>
+      </nav>
+
+      <div class="masthead-actions" aria-label="Site shortcuts">
+        <form class="masthead-search" action="/search/" method="get">
+          <input type="search" name="q" placeholder="Search notes" aria-label="Search notes">
+        </form>
+        <a href="mailto:hashes@yeah.net" title="Email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="/atom.xml" title="Atom feed" aria-label="Atom feed"><i class="fa-solid fa-rss"></i></a>
+        <button class="theme-toggle" type="button" data-theme-toggle title="Theme: system" aria-label="Theme: system">
+          <i class="fa-solid fa-display" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container page-wide">
+      
+      
+<div class="main-content">
+  <article>
+    <div class="post-header">
+      <h1>凶案I</h1>
+      <div class="post-meta">
+        <time>2010-02-06</time>
+         &middot; 4,806 words
+        
+         &middot; Topic:
+        
+          <a href="/blog/topic/小说/">小说</a>
+        
+        
+        
+         &middot; Tags:
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">凶案</span>
+        
+        
+      </div>
+    </div>
+
+    <div class="post-content">
+      <p>小六从噩梦中醒来，惊出一身冷汗，像刚从冰箱里拿出的冰棍，包装纸表面因为寒气而附着了大量的水滴。现在是大热天，小六却哆嗦着，像是在雪地玩久了的小孩儿，玩性没了，剩下的只是冷。</p>
+<div class="highlight"><pre><span></span><code>在梦里，他被一个无头的鬼追得穷途末路。他想叫救命，可是嗓子和抛锚的旧式老爷车一样不听使唤。他跑啊跑，来到了一个镇子，镇子上很多人，他以为得救了。他去拍一个陌生人的肩膀，结果那个人转过身来。吓！也是个没头的鬼。于是便惊醒了。
+
+他仔细检查，确定下身果然没有被吓出液体来。两年来小六几乎每天夜里都会噩梦缠身，不是无头鬼便是少腿，没有上半身的鬼，所以他向来不怕鬼，就像火葬场工人见惯了死人便没什么好怕了。
+
+上午十点，太阳光从屋瓦的天窗里透进来，像是大胆的小偷晚上在屋顶拿着手电筒向屋里面探照。小六用手抹了把脸当作早起的洗漱，接着便爬了起来。几只苍蝇贪婪的争抢着吮吸着不知哪顿饭遗留在桌上的菜油。小六瞧见了，并不去驱赶，他觉得自己和这只苍蝇倒有几分相似。今天又是向韩秀丽讨“工资”的日子，其实只要他喜欢，每天都可以是发薪日，就像大公司的老板，可以任意抽取流动资金。
+
+自从有了从韩秀丽那里得来的稳定工资，小六做他的街娃做的有恃无恐，像被包养的二奶，日子过得相当滋润。韩秀丽住在白河街38号楼。小六每次来这儿都会在心里默默的骂韩秀丽三八，“大名都写到门牌上了！”，他笑着对自己说。他敲了敲门，可是里面没有人应，大有闭关锁国的架势。他以为那“三八”又像以前一样要耍赖，于是拼命地拍门板。门板很厚，小六拍门的声音不是像敲鼓一样声音由鼓发出，发出声音的是他的手掌。啪啪啪的，像打耳刮子，痛的不是挨打的人，而是大人的人的手。他越发火气上浮，像吞了碳。嘴里叫骂着让人听了刺耳的词汇。脚上也使了力气，开始对门板施以黄飞鸿的独门招数。可是布满锈迹的门锁依旧岿然不动，有久经官场官员一样的老练沉着。
+
+叫骂了半天，得出的结论就是，他想和秀丽以及秀丽的妈妈还有祖母发生肉体的恋爱关系。邻里早领教了小六的火爆脾气，就像没有核武器的小国在联合国大会不敢提任何意见，没有人再敢冒不韪告诉小六，其实秀丽两天前已经带全家老小一起搬家了。叫骂的累了，干脆一屁股坐到了地上，像小孩子耍赖。“你就算有事儿出去，也不能不回家煮饭吃饭吧？”小六心想，于是坐在门边准备等秀丽，学那个农夫一样守株待兔。
+
+到中午十二点，太阳没入了云端，大概也觉着地上这出闹剧没个起兴，躲起来睡午觉去了。空气里添了几分闷气，小六聒噪的不行，有气没地方出，肚子里的火炭烧的很旺，把整个身体都烧干了，胃也快要烧穿了。于是他只得悻悻离去，末了还还了一句臭骂，想当作留言，只巴望秀丽见到以后气的吐血。
+
+小六拖着又饿又渴的身体，盘桓在街上。他睁大了眼，见谁都是怒目而视，就像所有人都欠他十万现大洋。然而，没有注意地上的一滩小狗落下的污秽，一脚踩上去，脚上一软。“妈的，哪家的狗？”他以为自己是州官办案，一个问话便有师爷迎合奉承的答应。“今天这是啥狗运气？”他猛跺着脚。心想：秀丽那婆娘的生意怕是做不成了，大不了一不做二不休，捅破了，来个两败俱伤，况且她是主谋，自己是个从犯。但是蹲牢也不是件便宜事。哪天找兄弟把她给做了，看她还嚣张。狗屎，唉，莫非今天要走狗屎运……
+
+“六哥！”忽然一个熟悉的声音从身后叫住了他，似乎这个声音正应了他的狗屎运。他转脸一看，是开杂货铺的刘大胖正冲自己堆了一脸的笑。
+</code></pre></div>
+
+<p>刘胖子迎上来，热情的像狗见到了主人。“六哥，我今天中…请你喝酒……”说着露出了一排参差的黄牙，像是小孩子用泥搓成镶上去的。刘胖子看到六哥踩上狗屎的，但他不敢去看六哥的脚，怕六哥诬赖那狗是他的。把狗的污秽都怪到自己的头上，在这个镇上，谁惹恼了六哥相当于触犯了龙颜。触犯了龙颜要砍头，可是冒犯了六哥可是求生不得求死不能。</p>
+<p>“哟，胖子你发财了所，这么高兴？”小六一向鄙夷这些谄媚的家伙，而且看到胖子一身的赘肉，让他觉得像是做月子的孕妇裹的棉被，人家只呆在家里，这家伙大热天裹了棉被跑出门来，自己不觉得热，看的人倒替他出汗。但是他又得靠像刘胖子这种家伙吃饭，于是也不在意，况且他们都是拍自己马屁，听起来心里舒坦。今天这家伙这么主动，定是有求于我，看样子我又有生意可做了。</p>
+<p>“六哥，哪儿的话啊，您没发财我哪敢自己先就发了喃？今天就是想请六哥喝喝酒，高兴高兴……”刘胖子依然是堆出笑，就像那些笑放在心里装不下了，找到脸上洞比较多的地方一起打挤了往外跑。一张柿饼一样的圆脸给挤得像大雨过后的丘陵，又是沟壑又是皱。</p>
+<p>“六哥，走，到我屋头切……”</p>
+<p>小六仿佛被他的笑蛋打得痛了，忙以笑还笑，他的笑中带着几分寒气，看的人中和了身上的热气还觉得冷。“好，走……”</p>
+<p>看到六哥爽快的答应，刘胖子上来搭了小六的肩。拐了几个弯，绕过街角就到刘胖的家。他家有个小媳妇儿，生的也是个柿饼圆脸，可是这张脸同刘胖的有不同，是往里凹的，和刘胖般配得像是一个木棒槌和它在湿面粉里头砸下的坑。要是这个媳妇儿在生的漂亮一点儿，刘胖不把媳妇儿藏在地窖里也不会把小六这只狼给领回家里来。也亏得媳妇的一张安全的脸。小六连多看一眼都觉得蹙，就别说起色心了。</p>
+<p>小媳妇儿给刘胖和客人准备了四个下酒菜，三荤一素，还有一瓶从外边路口小店打来的叫不出名字的白酒，度数据老板说是60，少不了兑些井水。这个年代三荤一素可不算相当丰富了。一般人儿可一年才吃一顿肉呢！碗筷吩咐上来，刘胖向媳妇使了个眼色。媳妇会意，退到了房里。小六料定这刘胖定是有忙叫自己帮，不然不会准备那么好的酒菜招待，到时候少不了敲一竹杠的，想到这里就心里就一阵高兴，就像天上掉做好现成的馒头，但又怕这股高兴劲儿偷跑到脸上，于是故意做出一副冷静严肃的样子，那个副表情像是在说：我是彻头彻尾的大清官，不管你用什么东西贿赂我，我也会秉公办事，不贪赃枉法。</p>
+<p>“来，我给六哥满上。”刘胖子殷切地弓着背左手拿着酒瓶右手辅助着往小六面前的碗里倒酒，担心溅出一滴来落到小六身上，活像旧时代的用人伺候主子。脸上仍是那副笑脸，看得久了只担心他的脸像拧洗衣服一样被拧干了。倒了半碗酒，刘胖子做了个收势，瓶嘴向斜上方一个弧形，像老成都茶馆里卖艺的功夫茶高手在显露自己的本领。他平摊出右手，做出高级饭馆里“先生，您请慢用……”的手势，然后给自己面前的碗里也倒了一口酒。刘胖子双手捧起碗，凑到面前，对着小六说：“来，六哥，小弟敬你一碗！”</p>
+<p>小六捞起裤管，露出毛茸茸的腿，腿下面有一双破旧的仔细看还能辨认出是皮鞋包住的没有穿袜子的脚，然后把左腿顺势放在了坐着的长凳上，左肘撑在膝盖上，右手三指扣住装酒的碗，往嘴边送，没说半句话，没正眼看过刘胖子一眼，连“哼”都没，活像个不拘无术的江湖侠客遇上了死对头，先要在气势上取胜。刘胖子像是吞了块寒冰，脸上的几分笑意都吓得躲了回去，然后又被他强抢得拽了出来，接着也把碗靠嘴边泯了一口，说道，“喝，喝，喝……”，像出了毛病的收音机，发出“嚯嚯嚯……”的声音，需要扇几巴掌才能恢复正常。</p>
+<p>约莫静默了几秒钟时间，从刘胖子嘴里挤出来一句完整的话：“不知道六哥最近在哪里发财啊？”心里想的是，“小六，你要是这几天没事做的话，能不能来帮帮我？”只是一时冷场，之前想的圆场话都连同酒吞到了肚子里。</p>
+<p>小六把碗跺在了桌上，几盘菜吓了一跳，差点都逃下桌去，一滴酒溅到了自己手上。刚才那口酒贪多了，含在嘴里像嘴馋的孩子偷吃了块刚煮熟的山芋，但自己毕竟是镇上有名气的人物，不能在下等货色的眼前丢脸，于是勉强吞了进去。结果像吃了生苦瓜和鲜红辣椒的混合物，辣味苦味从舌头一直蔓延到喉咙挺进到胃里。他以为刘胖子看到了自己的窘样，补了一句，“袍哥人家，从不拖泥带水……”，这句话倒像是身体里的另一个自己跳出来对自己说的一样，这时刘胖子刚才的问话传到了耳朵里，他才觉得有点儿牛头不对马嘴，于是又说道：“那韩婆娘欠我债，这几天去收款子，结果她个三八给我玩捉迷藏游戏，耍个高调，不接见。哪天要是碰到她，看我不好好收拾……喊我兄弟伙把她给整死。”小六的大哥气势一点也不含糊。</p>
+<p>“嘿，六哥，莫要生气，生气伤肝。欠你六哥钱，那个狗日的敢不还啊？”刘胖子奉承道，“就凭六哥的面子……在我们这个刀面镇谁敢对六哥不敬……简直是在太岁头上动土……”其实心里一个劲儿的高兴，还真的有人敢把小六不放在眼里，这太岁的土自己不敢动，闻见别人在上面撒野，看他那个气穿肺腑的样，着实有些大快人心，就像塞住的鼻子突然有了一丝畅通。</p>
+<p>“算了，这些先不讲，姑且让那婆娘先快活两日，等快活够了，我给她来个堆的……”说着用一副看起来像要吃人的眼睛看着远处，仿佛韩秀丽就在眼前。“不过，胖子……”小六收回了那恐怖的装饰，拿起筷子在一盘肉里故意挑来挑去，捡了小块瘦肉放进嘴里，细嚼起来，显得自己是长期吃荤已经吃得发腻了。他把筷子搁在酒碗上，右手撑着长凳，把上身的力量都靠这只手支撑着，左手放下来轻拍着桌子，继续说道：“你今天单怕不是只请我喝酒那么简单吧？说吧，有啥子事？放心，有我在，没有啥子是抹不平的……”</p>
+<p>“那是，那是，只要六哥出面，啥子事都搞定了。我这个事情啊放到六哥手上就不算事情了，你一根手指姆就拿下了……”</p>
+<p>“有啥事快说，有啥屁就快放，不要紧到起啰嗦……”小六对这种马屁似乎有些烦厌，于是打断了刘胖子吹气的劲头，就像一根针把正在吹气球人的气球刺了个洞。刘胖子被吓得失了魂似的，连连说“是是是……”，摸了摸额头和脖子的汗，像是在检验项上的那个足球似的头还在不在。于是在心里整饬着语言，开始讲自己的事情。</p>
+<p>小六大口吃着菜喝着酒，边听胖子结巴的说着。</p>
+<p>“半年前……也就是周老大新死不久，他留下的孤儿寡母没了支撑，日子过得相当困难……一天，周寡妇拿了一个罐罐儿来我这里说要变卖，我一看就是一个家里头装油粉的烂罐罐儿，她非要说是祖传的东西，说老周说值钱的很。我说看她可怜兮兮的，就给他20块票子应急，罐罐儿就放在我这里。过了一个多月，有一天一个从城头来的人，一个老师样子的人来我们这儿乡坝头耍，结果在我铺子里头就看到那个罐罐儿。他看起了，就说用两百块钱给我买了。我想到说20块钱换200块钱，这个生意划得着，结果就卖给他了。上个月那个周寡妇不是嫁给一个姓王的嘛。上两个星期她就跑起来说要把那个罐罐儿赎回切，还说要多给我一百块，说我人好。但是卖了得嘛，我给她说，结果她就翻脸不认人了。我有啥子办法喃，卖都卖了的嘛！她那个婆娘硬是歪得很，啥子死猫儿烂耗子都骂得出来，硬是惊咯咯的，赖到不走了。我还就给他码起，不理她，她也拿我莫办法，”胖子有些恐怖的兴奋，似乎沉浸在了自己编织的故事里头，喝了一口酒，各中细节少不了添油加醋，接着说，“结果……结果上个星期她把她姓王的老公喊到来咯，还带了几个帮手……我按到那几个街娃你都认得到……他们把我的铺子差点儿操翻。我还拿给他们肿了几锭子。脸都清了。你看嘛？”说着，指了指自己肿起来的脸，那脸油光铮亮的，本来就肿的似个球。他接着说，“走的时候他们说了……罐罐儿没了可以，但是要赔钱——两万。两大两两万哦！”胖子伸出右手两根香肠似的手指颤抖着，眼里晶莹的似乎泛着泪光，“我哪儿拿得出来嘛？他们说了……拿不出来……拿不出钱的话就等到收尸。我晓得他们那些混混啥子事都做的出来。下次他们来的话就没那么便宜了。”他看了一眼小六，想看看小六是什么反应，想从他那里至少获得一丁点儿的怜悯，似乎是台上的相声演员少了观众的喝彩而有些失落。</p>
+<p>可是，小六仍然在独自喝着酒，吃着菜，似乎身边这个将近两百斤的肉堆堆根本就不存在一样。然后，小六似乎吃得累了，要做过中场休息，他停下筷子，注视着胖子，冷冷的问道：“胖子，你啥子意思？是给我两万，喊我给他们收尸，还是……”小六口口声声杀这个剁那个，两年来他根本连鸡都不敢宰，看到血红色都会犯晕，只是这个道上的大哥还得做，势头不能没有。</p>
+<p>“六哥，严重了。这种事情……我的意思是，你喊几个兄弟伙给他们点儿颜色看一下，喊他们不准来我这儿惹事就行了。”胖子打断小六的话。</p>
+<p>小六早换成了二郎腿，抖着脚，又开始夹着菜往嘴里送，似乎脸上那个洞怎么都装不满。小六似乎想到了什么，像考场上的学生抠破头皮突然想到了一道难题的解答，说道，“对了，六哥，只要你帮我打发了他们，红包是不得少的，以后有啥子事情你就找兄弟我……至于咋个整他们，还麻烦你老人家多出点儿力，多……多喊几个兄弟……”</p>
+<p>“我们两个还说这些说……”听到“红包”两个字，随着酒意窜上来，小六有些飘飘然了，像是飘在空中，又像是踩在棉花上，“你的事情就是我的事情。”说完，一个深深地嗝带着酒味菜味，混着胃酸沿着食道从胃里直冒出来，就像火山口周围温泉出口处往外冒的水泡，同样带有让人窒息的毒气。小六已经不能掌握自己的嘴，就像刚刚学驾车的新手掌握不了方向盘，开始左突右撞，说道：“他们几个小混混，顶个屁！老子……老子放个屁都要把他们吓昏……”</p>
+<p>“是，你老人家凶些……”见到小六说答应，胖子总算比较放心了，却又担心起小六只是酒后胡话，醒了赖账。</p>
+<p>小六自己给自己倒酒，然后一口又灌进肚，仿佛那个已经不是酒，而是蜜糖汁，喝了既解渴又解馋。“你以为他们几个有好厉害所……还不就是……只是几个小毛孩儿……当年我混江湖的时候……他们几个……他们几个小崽崽不晓得在哪个娘胎吃奶奶呢……”说着，又是一个惊天动地的嗝，像春天里的惊雷，震得空气都在打哆嗦。在战争里头，言行拷打是最好的逼供手段，而和平年代，酒精取代了鞭打酷刑成了最有效的吐真剂，在酒精的魔力驱使下，小六把该说的不该说的都结结巴巴的说了出来，包括两年前那桩恐怖的凶案。</p>
+    </div>
+
+  <div class="comments-section">
+  <h3>Comments</h3>
+  <script>
+    (function () {
+      var giscus = document.createElement('script');
+      giscus.src = 'https://giscus.app/client.js';
+      giscus.dataset.repo = 'junxie01/junxie01.github.io';
+      giscus.dataset.repoId = 'R_kgDOSGl1Dg';
+      giscus.dataset.category = 'General';
+      giscus.dataset.categoryId = 'DIC_kwDOSGl1Ds4DAuif';
+      giscus.dataset.mapping = 'specific';
+      giscus.dataset.term = 'blog/2010-02-06-murder-caseI';
+      giscus.dataset.strict = '0';
+      giscus.dataset.reactionsEnabled = '1';
+      giscus.dataset.emitMetadata = '0';
+      giscus.dataset.inputPosition = 'bottom';
+      giscus.dataset.theme = document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light';
+      giscus.dataset.lang = 'en';
+      giscus.crossOrigin = 'anonymous';
+      giscus.async = true;
+      document.currentScript.parentNode.appendChild(giscus);
+
+      window.addEventListener('seisamuse-theme-change', function (event) {
+        var frame = document.querySelector('.giscus-frame');
+        if (!frame || !frame.contentWindow) return;
+        frame.contentWindow.postMessage({
+          giscus: {
+            setConfig: {
+              theme: event.detail.theme === 'dark' ? 'dark' : 'light'
+            }
+          }
+        }, 'https://giscus.app');
+      });
+    })();
+  </script>
+</div>
+
+  <div class="post-nav">
+    
+      <a class="post-nav-prev" href="/blog/2010-01-14-dexiang.html">&larr; 德香</a>
+    
+
+    <a class="post-nav-blog" href="/blog/">Blog</a>
+
+    
+      <a class="post-nav-next" href="/blog/2010-02-06-after-dinner2.html">饭后感2 &rarr;</a>
+    
+  </div>
+</article>
+</div>
+
+      
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p class="site-stats">
+        <span id="busuanzi_container_site_pv">
+          👁 Total visits: <span id="busuanzi_value_site_pv"></span>
+        </span>
+        &middot;
+        <span id="busuanzi_container_site_uv">
+          Visitors: <span id="busuanzi_value_site_uv"></span>
+        </span>
+      </p>
+      <p>&copy; 2026 hashes &middot; Built with Python &amp; Markdown &middot;
+        GitHub &middot;
+        <a href="/atom.xml" target="_blank">Atom</a>
+      </p>
+      <!-- Edit this line to add or remove blog directory links. -->
+      <p class="footer-directory-links">
+        <span>感谢收录：</span>
+        <a href="https://blogscn.fun/" target="_blank" rel="noopener">笔墨迹</a>
+        <a href="https://bf.zzxworld.com/" target="_blank" rel="noopener">BlogFinder</a>
+        <a href="https://www.blogsclub.org/" target="_blank" rel="noopener">BlogsClub</a>
+        <a href="https://bokehub.com/" target="_blank" rel="noopener">博客中心</a>
+        <a href="https://www.boyouquan.com/" target="_blank" rel="noopener">博友圈</a>
+        <a href="https://storeweb.cn/" target="_blank" rel="noopener">个站商店</a>
+        <a href="https://www.travellings.cn/go.html" target="_blank" rel="noopener">开往</a>
+      </p>
+    </div>
+  </footer>
+
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+      startOnLoad: true,
+      securityLevel: 'strict',
+      theme: document.documentElement.dataset.theme === 'dark' ? 'dark' : 'neutral'
+    });
+  </script>
+
+  <script>
+    (function () {
+      var toggle = document.querySelector('[data-theme-toggle]');
+      if (!toggle) return;
+
+      var order = ['system', 'light', 'dark'];
+      var labels = {
+        system: 'Theme: system',
+        light: 'Theme: light',
+        dark: 'Theme: dark'
+      };
+      var icons = {
+        system: 'fa-display',
+        light: 'fa-sun',
+        dark: 'fa-moon'
+      };
+      var media = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+
+      function currentSetting() {
+        var setting = document.documentElement.dataset.themeSetting;
+        return order.indexOf(setting) === -1 ? 'system' : setting;
+      }
+
+      function updateButton(setting) {
+        var label = labels[setting];
+        var icon = toggle.querySelector('i');
+        toggle.title = label;
+        toggle.setAttribute('aria-label', label);
+        icon.className = 'fa-solid ' + icons[setting];
+      }
+
+      function applyTheme(setting) {
+        var systemDark = media && media.matches;
+        var theme = setting === 'system' ? (systemDark ? 'dark' : 'light') : setting;
+        document.documentElement.dataset.themeSetting = setting;
+        document.documentElement.dataset.theme = theme;
+        try {
+          if (setting === 'system') localStorage.removeItem('seisamuse-theme');
+          else localStorage.setItem('seisamuse-theme', setting);
+        } catch (error) {}
+        updateButton(setting);
+        window.dispatchEvent(new CustomEvent('seisamuse-theme-change', {
+          detail: { theme: theme }
+        }));
+      }
+
+      toggle.addEventListener('click', function () {
+        var setting = currentSetting();
+        applyTheme(order[(order.indexOf(setting) + 1) % order.length]);
+      });
+
+      if (media) {
+        media.addEventListener('change', function () {
+          if (currentSetting() === 'system') applyTheme('system');
+        });
+      }
+
+      updateButton(currentSetting());
+    })();
+  </script>
+
+</body>
+</html>

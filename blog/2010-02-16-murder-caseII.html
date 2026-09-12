@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    (function () {
+      var stored = null;
+      try {
+        stored = localStorage.getItem('seisamuse-theme');
+      } catch (error) {}
+
+      var setting = stored === 'light' || stored === 'dark' ? stored : 'system';
+      var systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = setting === 'system' ? (systemDark ? 'dark' : 'light') : setting;
+      document.documentElement.dataset.theme = theme;
+      document.documentElement.dataset.themeSetting = setting;
+    })();
+  </script>
+  <title>凶案II | hashes</title>
+  <meta name="description" content="凶案II">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/atom.xml">
+  <link rel="prefetch" as="image" href="https://www.blogsclub.org/badge/www.seis-jun.xyz">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+  <!-- MathJax for LaTeX rendering -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        ignoreHtmlClass: 'mermaid'
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <!-- Umami Analytics -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="21a99622-5a23-45f4-be80-edef627a68e3"></script>
+  <!-- Busuanzi for public visitor counter -->
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container masthead">
+      <a class="masthead-identity" href="/" aria-label="SEISAMUSE home">
+        <img src="/images/seisamuse.png" alt="" class="masthead-avatar">
+        <span class="masthead-title">SEISAMUSE</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="/">主页</a>
+        <a href="/blog/" class="active">博客</a>
+        <a href="/thoughts/">想法</a>
+        <a href="/archives/">归档</a>
+        <a href="/about/">自述</a>
+        <a href="/links/">链接</a>
+      </nav>
+
+      <div class="masthead-actions" aria-label="Site shortcuts">
+        <form class="masthead-search" action="/search/" method="get">
+          <input type="search" name="q" placeholder="Search notes" aria-label="Search notes">
+        </form>
+        <a href="mailto:hashes@yeah.net" title="Email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="/atom.xml" title="Atom feed" aria-label="Atom feed"><i class="fa-solid fa-rss"></i></a>
+        <button class="theme-toggle" type="button" data-theme-toggle title="Theme: system" aria-label="Theme: system">
+          <i class="fa-solid fa-display" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container page-wide">
+      
+      
+<div class="main-content">
+  <article>
+    <div class="post-header">
+      <h1>凶案II</h1>
+      <div class="post-meta">
+        <time>2010-02-16</time>
+         &middot; 4,544 words
+        
+         &middot; Topic:
+        
+          <a href="/blog/topic/小说/">小说</a>
+        
+        
+        
+         &middot; Tags:
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">凶案</span>
+        
+        
+      </div>
+    </div>
+
+    <div class="post-content">
+      <p>清明刚过不久，正是春种农忙时候。韩秀丽的茶铺里面一个活人都没有，连早晨的几个喝早茶谈天的老头子都嫌韩秀丽的艳丽着装以及伤风败俗的习气有碍自己的眼睛，而总是到街角的另一家铺子盘踞。韩秀丽是村里面有名的“豆腐西施”，长了一张不错的脸蛋，平时爱打扮，总把自己整的花枝招展，任何长的入眼的小伙子从她铺子前路过的话都会担心她的媚眼勾了自己的魂，不得不扭过头去假装那边有美丽的风景。</p>
+<p>韩秀丽照常睡到太阳晒屁股才懒洋洋的爬起来，像一条春天里刚苏醒的毛毛虫。茶铺自然是想开便开，当然今天是准备全天打烊的。出门前照例是涂胭脂，摸口红，这些就像是吃饭睡觉一样是她日常的必须，好像不涂胭脂，不摸口红身体就残缺了些什么，只是今天的口红像是格外特别的摸了一道，像一朵玫瑰花苞张开了一瓣。出门时撞见屋檐上一根蛛丝末端吊着一只蜘蛛正在悠闲的荡着秋千，韩秀丽并没有吓到，只下意识地说了一句刻薄的脏话，想恐吓诅咒那只可恶的蜘蛛。在当地，屋里有蜘蛛荡秋千的话表明当天是有客人驾到的。今天不知道又有哪个讨厌的家伙来捣乱，韩秀丽心想。因为没有那个像样的亲戚会来和韩秀丽串门套亲近，来韩秀丽家的除了官哥，其他都是些二流子家伙。官哥因为工作忙，近来已经很少到韩秀丽家了，至少韩秀丽认为官哥是因为近来工作上的原因和自己接触少了一些。她不相信传闻里说的，说官哥在外面包养了好几个狐狸精，她认为这只是谣言，是他们嫉妒官哥有钱。谣言止于智者，她宁愿相信自己就是那个智者，谣言到她这里就像药丸子一样被她吞下肚子里，虽然有几分苦，但这苦是值得的，可是这苦不是一时半会儿能够消去，偶尔的一个嗝仍能泛起让人犯晕的苦味。</p>
+<p>她用手一掠，那蜘蛛连带蛛丝一同不知被掠到了何处，于是心里平静了许多，就像亲眼看到不该来的客人因为事务缠身而来不了一样。今天的目的地是村里的砖厂，也就是官哥上班的地方。明天是周末，今天亲自去接他，一定要把他领到自己的家好好聚聚，因为他们两个好久都没有好好在一起过了。</p>
+<p>官哥名叫官子明，是村里砖厂的会计监采购，砖厂的开支都要经过他的手，不用说也敛了不少钱财，他手头的空头账目据说堆起来比他本人还要高。人说恋爱是盲目的，这话说的没错，官子明为人小气贪财吝啬好色，可在韩秀丽眼里，这样一个花花公子是天底下最好的人，天底下对自己最好的人。这回终于找对人了，韩秀丽心里总对自己这么说，于是整个人都像失了魂，失掉的魂自然是时刻追随在官子明的身边，全心全意只在他身上。她想把最好的自己展现在官哥的面前，所以对于自己的以往种种在别人眼里视为污点和劣迹只字不提，讳莫如深，像穿着十年半个月没有洗的衣服，然后在外面套一件光鲜亮丽的外套，外面看起来干净整洁，里面尽是浊物。从今以后自己可以从新开始，她总这么想，就像官哥给了她人生的第二次生命，而明眼人一看就能看出来，姓官的只是逢场作戏。身在其中的往往看不清事情的真相，而身在其中的又往往宁愿自己看不到真相。韩秀丽就是这样。</p>
+<p>自己亲自去接他，他总没有借口和理由来推辞了吧！这次一定把这位大忙人接回家去好好服侍招待……这么想着已经来到了砖厂的办公室。办公室里面有一个正在拖地的老大爷背对着她，听到高跟鞋撞击地面发出呲啦呲啦停下来慢慢转过脸，用一种未卜先知的眼神看着韩秀丽，他大概想给韩秀丽两巴掌好舒展舒展身体，因为那声音像刚学二胡不久的小徒儿拉的曲调，让人听了发麻。她想自己去找，但眼睛搜索了一圈却发现办公室里除了老大爷以外没有一个办公的人。难道又都去开会了？韩秀丽心想，要是这次又用这么无聊的理由搪塞的话，老娘回去非得抽了他的筋……突然又觉得自己不应该那么火气重，心里的另一个自己对自己说，韩秀丽，要平静，要贤惠，不要冲动，冲动是魔鬼。她正想开口问那位老大爷，可老大爷却先口了，说道：“你是韩秀丽吧！……官总他们到城头开会切了……”果然不出我所料，韩秀丽心想，皮笑肉不笑的问道：“他啥子时候切的哦？他要啥子时候回来喃？要不然我在这儿等他嘛……”那老大爷像背台词似的面无表情，说道：“哦，他说了，要过两三天才回来，喊你不要等他了，他还说过一段时间没那么忙了就切找你。”</p>
+<p>韩秀丽一听，看似没有发火，心里却快要炸开了锅。“那你喊他二天不要来找我了……”从她嘴里冒出的这几个字音调从低渐高，最后近乎吵架，声音大的连四周玻璃都在震颤。震出老大爷一脸的鄙夷与不屑。不要发火，不要发火，也许官哥真的开会去了，心里的另一个她跳出来拍着她的肩安慰着自己。还好自己手脚还控制的好，没有摔东西，可是对脸上的肌肉却束手无策，愤怒与失望伤心懊悔全写在了脸上。她立刻转过脸，怕别人看到自己失控时的表情，然后用几乎只有自己才能听到的声音说道：“大爷，麻烦你给他说，我在屋头等他……”然后拖着来时的呲啦呲啦的曲子走了出来，只是这次的音调像是被师傅责骂含有发泄抗议的意思。背后老大爷鄙夷上升到了鼻孔，哼了一声，像是在说，你都不瞧一瞧自己是什么货色，在这儿叫板……</p>
+<p>她不知道五味坛子打翻了是什么味道，回来的路上倒是尽数尝了个遍。心里对官子明又是喜欢又是怨，又是思念又是害怕，还有些味道参合在一起，味道如何她也没法形容。一时想到和官哥一起的开心日子，一时又感叹男人的心思难猜。心里像有好几个人在开讨论会，一会儿因为讨论的激烈都已经争锋相对，快要打起来。她担心自己这么一时喜一时忧都成了失心疯，但自己又控制不住，越是克制越是思绪飘忽，胡思乱想。胃口倒是被这五味坛子给搅没了。本来准备接了人回来就一起去买好多好吃的东西，但现在午饭也没胃口吃。整个下午坐也不是，站也不是，只有躺了。糊里糊涂的天就黑了，晚饭也懒得吃。夜里又是惊又是醒的，一睡着就梦到官哥跟别的女人跑了，不要她了，还梦到自己生气居然用菜刀去砍官哥，砍的自己满身是血。还好韩秀丽不是林黛玉的身子，哭几滴眼泪，饿几顿饭还不至于把她的身体压垮。第二天三魂又似丢了一魂，没了念想和热情，连每天的梳妆打扮都忘了。</p>
+<p>就这么浑浑噩噩不知天地的过了三天，韩秀丽整个人瘦了一圈，倒也还能正常的生活。外人看来就是一具没有灵魂的会行走的尸骸。心里的那个爱着官子明的自己还没有死，只是被其他的自己关进了监牢。殊不知这个被关进监牢的自己控制着情绪的工厂，情绪工厂又生产着各种生活的润滑油。没了润滑油，任何机器都变得驽钝，甚至卡住不能动。像所有残疾人一样，当自己失去了一项功能，其他的功能相应的会得到一定程度的提升，韩秀丽得到提升的就是学会了买菜，烧火，做饭，自己一个人生活。自从喜欢官子明的那个自己被关起来以后，韩秀丽变得几乎不会思考，就像丈夫在战场死掉很久的村姑。</p>
+<p>五天之后的一个早晨，韩秀丽上菜市场买菜，回来的路上在街上拐角处不远，看到了西装笔挺的官子明刚从小旅馆出门。心里的那个爱着官子明的自己突然挣脱了缰绳欲冲出身体，投身官子明，想打他骂他，问他为什么躲着自己不见自己……她看见官子明在冲自己笑，那笑容像是在对自己说，我喜欢你，你原谅我吧！身上的器官像注入了兴奋剂，开始强烈的运转，失去的魂魄像被法师开坛招瞬间回了一样，她愿意原谅官子明这几天来对自己的无视，任何从官子明嘴里说出来的不管是借口还是托词还是漫骂她都愿意相信愿意接受。她刚想走过去迎接官子明的投诚，还没跨出一步，突然看到官子明的身后走出来一个娇小艳丽的女人。她立刻火冒三丈，官子明哪是对自己笑，明明是对着身后的女子在谄媚，献殷。这恶心至极的笑，看了让人想吐。心里一头猛兽突然窜了出来，她扔下手里的菜篓，三步并作两步冲了过去，嘴里叫骂着，然后揪住了那个女人的头发又是扯又是打。韩秀丽身子本来就壮实，对于那女人来说简直是一头狮子。那个女人被打的直喊救命，拼命往官子明身后躲，躲闪不及又是几个耳刮子。韩秀丽没有被她的救命声打动，手上的力道一丝都没有减，反而变本加厉，开始用上脚。“我教你勾引我男人……你个瓜婆娘……狐狸精……我……”口中污秽连篇，把这几天来的怨气全部发泄到那个女人身上。外人听来就明白，那个小女人是个动物幻化成的，是妖精，来勾引韩秀丽的男人，韩秀丽抓个正着，应该，应该。</p>
+<p>官子明眼前突然窜出一个大活人来又是骂又是打，有些发愣。认出是韩秀丽，急忙叫住手，抓住韩秀丽的手臂，用身体挡着护着那个女人。但是韩秀丽力气太大，官子明根本抓不住，韩秀丽不管三七二十一的乱打乱抓，一把就抓到了官子明的脸，顿时几条深深的血痕就出现在了官子明脸上。官子明脸上着了痛，一发狠给了韩秀丽实实的一巴掌，打的韩秀丽差点跌跤，找不着北。</p>
+<p>“哪个是你的男人，安？不要脸的疯婆娘……”官子明仍然双手护着那个女人，侧脸对着韩秀丽发狠话。</p>
+<p>韩秀丽抱着自己挨了打火烧一般疼的脸，腿一软，瘫坐到了地上，但却没有哭声，用眼白直盯着官子明，想用眼神杀死他。街上爱看热闹的看客都围过来看热闹，因为这是一场难得的言情剧表演。官子明骂的有些脑热，兴奋了起来。接着骂道：“你个瓜货，抓得老子那么痛……你疯了说……”忘了自己刚才就骂人家疯子，此时却又来疑问。他摸了摸自己被抓伤的脸，一看，果然一片鲜红，然后把手指头上沾的血展示给路人看，准备说，你们看，这个疯子好狠，抓得我满脸是血，这个人肯定是疯子。韩秀丽先开了口：“姓官的，你给老子记到起，二天有你好看的……看我不把你做的丑事全部抖出来……”她仍然用眼白挑战着官子明，然后勉强支撑着站起来，但是仍显得那么有力气，像只受了轻伤的狮子。其实他对官子明的丑事一概也不知，她只知道官子明赚的钱多，不知道这些钱是不是工资。说出这些话只为吓唬他，替自己挽回面子，这叫破罐子破摔。她觉得昔日的自己又回来了，做回昔日的自己感觉真是好。话中的‘有你好看’倒是真的，因为她是有名的大姐大，说话算数。至于官子明的丑事恐怕将会登上韩秀丽的下一项日程。心里爱着官子明的那个自己在看到官子明和另一个妖精在一起到被官子明打的这段时间内已经被她处以了极刑。另一个恨着官子明的自己现在成了山大王。好汉不吃眼前亏，自己一个女流打官子明是打不过，逞口舌输赢于事无补，留的青山在，何恐无柴烧，韩秀丽爬起来以后背对着大家，半句话都没有说，头也不回便直直的走了。身后，官子明的叫骂混着大伙儿的议论声渐渐变小，就像被火烧得无影无踪，但是背后的闲话和议论就像野草一样，春风吹又生。</p>
+<p>韩秀丽回到家里见到东西就摔，心里的恶气怎么都发泄不完，如果恶气是由某种东西发酵而成的，那么她肯定是一次吃了太多，憋得太久。眼泪，她不相信眼泪，因为爱着官子明的那个自己已经死了，眼泪是属于她的，现在的韩秀丽除了是个被惹毛了的猛兽，是个大姐大以外，什么都不是。中午饭当然没有心思做了，她的心思全在如何想方设法报复。当然不是报复那个娇小女子，那个女子和自己一样，都是受害者，罪魁祸首就是官子明，那个狼心狗肺的东西。你官子明不是很有钱得吗……我韩秀丽为你付出了那么多，你再怎么说也应该拿出点儿劳务费，精神损失费吧……你娃儿那么多钱，一点儿都舍不得说。我一定会将你……碎尸万段，韩秀丽想着，然后一脚踢在身边的一条小凳子上，小凳子像一枚炮弹一样飞出去撞在墙上，折成了两半。她心里一阵暗笑，觉得那只凳子就是官子明，官子明已经被自己踢成了两半。</p>
+<p>临近中午，韩秀丽觉得报复的事情还需要慢慢来，不能太心急，自己和官子明的闹场大家都看到了，如果现在报复，大家一定会想到是自己干的；而且要找到官子明的丑事也是需要时间需要人手的，所以这事情还是先放一放。于是韩秀丽开始慢慢收拾着自己制造的残局。这时，门外来了个客人。一走近来就在门口大叫：“姐……你屋头遭小偷了说……”韩秀丽一听，进来的不是别人，正是小六。小六关切的问着韩秀丽。韩秀丽冷笑着说：“不是遭小偷了，哪个偷哥儿敢偷你姐嘛……”“哦……那是囔个回事嘛？”小六仍然挂着关切的脸追问。小六是韩秀丽表姑的侄儿，关系远的有点儿理不大清，但是不管怎么说也算亲戚，就像猴子再怎么进化仍然是某些人的近亲。小六没有工作，成天在这个亲戚那个亲戚家里混饭吃，是个十足的烂龙。烂龙就是指二流子，正事不做，坏事也不会做，胆子不够。天下坏事大概都是因为这种烂龙长了胆子作成的。韩秀丽心中突然有了个主意，说：“没事，小事……小六，有事情给你做，你做不做？”</p>
+<p>“姐，你说嘛，啥子事……啥子事我都做……”小六有些高兴，居然还撒起了娇，他巴不得能够展露一下手脚，尽管他什么都不会。韩秀丽做出若有所思的样子，显得有些犹豫。</p>
+<p>“姐，你就不要给我卖关子了嘛……有啥子事你快说三……”小六有些心急。</p>
+<p>韩秀丽压低了声音，对小六说道：“你切把门关到……我就给你说……”</p>
+    </div>
+
+  <div class="comments-section">
+  <h3>Comments</h3>
+  <script>
+    (function () {
+      var giscus = document.createElement('script');
+      giscus.src = 'https://giscus.app/client.js';
+      giscus.dataset.repo = 'junxie01/junxie01.github.io';
+      giscus.dataset.repoId = 'R_kgDOSGl1Dg';
+      giscus.dataset.category = 'General';
+      giscus.dataset.categoryId = 'DIC_kwDOSGl1Ds4DAuif';
+      giscus.dataset.mapping = 'specific';
+      giscus.dataset.term = 'blog/2010-02-16-murder-caseII';
+      giscus.dataset.strict = '0';
+      giscus.dataset.reactionsEnabled = '1';
+      giscus.dataset.emitMetadata = '0';
+      giscus.dataset.inputPosition = 'bottom';
+      giscus.dataset.theme = document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light';
+      giscus.dataset.lang = 'en';
+      giscus.crossOrigin = 'anonymous';
+      giscus.async = true;
+      document.currentScript.parentNode.appendChild(giscus);
+
+      window.addEventListener('seisamuse-theme-change', function (event) {
+        var frame = document.querySelector('.giscus-frame');
+        if (!frame || !frame.contentWindow) return;
+        frame.contentWindow.postMessage({
+          giscus: {
+            setConfig: {
+              theme: event.detail.theme === 'dark' ? 'dark' : 'light'
+            }
+          }
+        }, 'https://giscus.app');
+      });
+    })();
+  </script>
+</div>
+
+  <div class="post-nav">
+    
+      <a class="post-nav-prev" href="/blog/2010-02-06-after-dinner2.html">&larr; 饭后感2</a>
+    
+
+    <a class="post-nav-blog" href="/blog/">Blog</a>
+
+    
+      <a class="post-nav-next" href="/blog/2010-04-30-stream3.html">流水三 &rarr;</a>
+    
+  </div>
+</article>
+</div>
+
+      
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p class="site-stats">
+        <span id="busuanzi_container_site_pv">
+          👁 Total visits: <span id="busuanzi_value_site_pv"></span>
+        </span>
+        &middot;
+        <span id="busuanzi_container_site_uv">
+          Visitors: <span id="busuanzi_value_site_uv"></span>
+        </span>
+      </p>
+      <p>&copy; 2026 hashes &middot; Built with Python &amp; Markdown &middot;
+        GitHub &middot;
+        <a href="/atom.xml" target="_blank">Atom</a>
+      </p>
+      <!-- Edit this line to add or remove blog directory links. -->
+      <p class="footer-directory-links">
+        <span>感谢收录：</span>
+        <a href="https://blogscn.fun/" target="_blank" rel="noopener">笔墨迹</a>
+        <a href="https://bf.zzxworld.com/" target="_blank" rel="noopener">BlogFinder</a>
+        <a href="https://www.blogsclub.org/" target="_blank" rel="noopener">BlogsClub</a>
+        <a href="https://bokehub.com/" target="_blank" rel="noopener">博客中心</a>
+        <a href="https://www.boyouquan.com/" target="_blank" rel="noopener">博友圈</a>
+        <a href="https://storeweb.cn/" target="_blank" rel="noopener">个站商店</a>
+        <a href="https://www.travellings.cn/go.html" target="_blank" rel="noopener">开往</a>
+      </p>
+    </div>
+  </footer>
+
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+      startOnLoad: true,
+      securityLevel: 'strict',
+      theme: document.documentElement.dataset.theme === 'dark' ? 'dark' : 'neutral'
+    });
+  </script>
+
+  <script>
+    (function () {
+      var toggle = document.querySelector('[data-theme-toggle]');
+      if (!toggle) return;
+
+      var order = ['system', 'light', 'dark'];
+      var labels = {
+        system: 'Theme: system',
+        light: 'Theme: light',
+        dark: 'Theme: dark'
+      };
+      var icons = {
+        system: 'fa-display',
+        light: 'fa-sun',
+        dark: 'fa-moon'
+      };
+      var media = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+
+      function currentSetting() {
+        var setting = document.documentElement.dataset.themeSetting;
+        return order.indexOf(setting) === -1 ? 'system' : setting;
+      }
+
+      function updateButton(setting) {
+        var label = labels[setting];
+        var icon = toggle.querySelector('i');
+        toggle.title = label;
+        toggle.setAttribute('aria-label', label);
+        icon.className = 'fa-solid ' + icons[setting];
+      }
+
+      function applyTheme(setting) {
+        var systemDark = media && media.matches;
+        var theme = setting === 'system' ? (systemDark ? 'dark' : 'light') : setting;
+        document.documentElement.dataset.themeSetting = setting;
+        document.documentElement.dataset.theme = theme;
+        try {
+          if (setting === 'system') localStorage.removeItem('seisamuse-theme');
+          else localStorage.setItem('seisamuse-theme', setting);
+        } catch (error) {}
+        updateButton(setting);
+        window.dispatchEvent(new CustomEvent('seisamuse-theme-change', {
+          detail: { theme: theme }
+        }));
+      }
+
+      toggle.addEventListener('click', function () {
+        var setting = currentSetting();
+        applyTheme(order[(order.indexOf(setting) + 1) % order.length]);
+      });
+
+      if (media) {
+        media.addEventListener('change', function () {
+          if (currentSetting() === 'system') applyTheme('system');
+        });
+      }
+
+      updateButton(currentSetting());
+    })();
+  </script>
+
+</body>
+</html>
