@@ -11,19 +11,34 @@
 }
 
 :root {
-  --text:    #1a1a2e;
-  --bg:      #f5efe4;
-  --accent:  #9a4f2f;
-  --muted:   #6b7280;
-  --border:  #d2c3ae;
-  --card-bg: #fffdf8;
-  --nav-bg:  #fffdf8e8;
-  --code-bg: #efe8dc;
+  color-scheme: light;
+  --text:    #202428;
+  --bg:      #f7f8f8;
+  --accent:  #3c5d80;
+  --muted:   #69727c;
+  --border:  #d9dee3;
+  --card-bg: #ffffff;
+  --nav-bg:  #fffffff2;
+  --code-bg: #edf0f2;
   --max-w:   820px;
   --content-w: 820px;
   --sidebar-w: 200px;
-  --soft-bg:  #faf4ea;
-  --card-shadow: 0 1px 3px rgba(82, 63, 42, 0.06);
+  --soft-bg:  #f0f2f4;
+  --card-shadow: 0 1px 3px rgba(31, 41, 51, 0.06);
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --text:    #e6e9ec;
+  --bg:      #0f1113;
+  --accent:  #7fa8d6;
+  --muted:   #9aa3ad;
+  --border:  #30363d;
+  --card-bg: #171a1d;
+  --nav-bg:  #0f1113f2;
+  --code-bg: #20252a;
+  --soft-bg: #1b1f23;
+  --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.22);
 }
 
 html {
@@ -1208,7 +1223,8 @@ footer a:hover {
   gap: 0.42rem;
 }
 
-.masthead-actions a {
+.masthead-actions a,
+.theme-toggle {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1218,11 +1234,23 @@ footer a:hover {
   border: 1px solid var(--border);
   border-radius: 6px;
   background: var(--soft-bg);
+  font-size: 0.88rem;
 }
 
-.masthead-actions a:hover {
+.theme-toggle {
+  padding: 0;
+  cursor: pointer;
+}
+
+.masthead-actions a:hover,
+.theme-toggle:hover {
   color: var(--accent);
   border-color: var(--accent);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 .masthead-search input {
@@ -1615,20 +1643,22 @@ footer a:hover {
   grid-template-columns: 4.2rem 1fr;
 }
 
-/* --- Dark Mode --- */
+/* --- Dark Mode fallback when JavaScript is unavailable --- */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --text:    #e0e0e0;
-    --bg:      #1a1a2e;
-    --accent:  #e8a87c;
-    --muted:   #9ca3af;
-    --border:  #374151;
-    --card-bg: #22223b;
-    --nav-bg:  #1a1a2ecc;
-    --code-bg: #2a2a3e;
-    --soft-bg: #202038;
+  :root:not([data-theme]) {
+    color-scheme: dark;
+    --text:    #e6e9ec;
+    --bg:      #0f1113;
+    --accent:  #7fa8d6;
+    --muted:   #9aa3ad;
+    --border:  #30363d;
+    --card-bg: #171a1d;
+    --nav-bg:  #0f1113f2;
+    --code-bg: #20252a;
+    --soft-bg: #1b1f23;
+    --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.22);
   }
-  
+
   /* GitHub comments dark theme */
   .utterances,
   .giscus,
