@@ -103,7 +103,7 @@ sudo dnf clean all
 </code></pre></div>
 
 <p>系统就升级为42了。</p>
-<p>借下来继续</p>
+<p>接下来继续</p>
 <div class="highlight"><pre><span></span><code><span class="n">sudo</span><span class="w"> </span><span class="n">dnf</span><span class="w"> </span><span class="n">system</span><span class="o">-</span><span class="n">upgrade</span><span class="w"> </span><span class="n">download</span><span class="w"> </span><span class="o">--</span><span class="n">releasever</span><span class="o">=</span><span class="mi">44</span><span class="w"> </span><span class="o">--</span><span class="n">allowerasing</span>
 </code></pre></div>
 
@@ -115,8 +115,12 @@ sudo dnf clean all
 <div class="highlight"><pre><span></span><code>sudo dnf upgrade
 </code></pre></div>
 
+<p>现在是</p>
+<div class="highlight"><pre><span></span><code>Linux fedora 7.2.4-200.fc44.x86_64 #1 SMP PREEMPT_DYNAMIC Mon Sep  7 19:10:19 UTC 2026 x86_64 GNU/Linux
+</code></pre></div>
+
 <p>还好这台电脑目前没有急活，要不然真的急。整了快一周才更新成功。
-看样子AI还不能亲信啊，可能多问几个AI比较稳。</p>]]></content>
+看样子AI还不能轻信啊，可能多问几个AI比较稳。</p>]]></content>
     
     <category term="Fedora" />
     
