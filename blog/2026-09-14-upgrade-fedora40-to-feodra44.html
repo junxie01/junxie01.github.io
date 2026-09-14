@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    (function () {
+      var stored = null;
+      try {
+        stored = localStorage.getItem('seisamuse-theme');
+      } catch (error) {}
+
+      var setting = stored === 'light' || stored === 'dark' ? stored : 'system';
+      var systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = setting === 'system' ? (systemDark ? 'dark' : 'light') : setting;
+      document.documentElement.dataset.theme = theme;
+      document.documentElement.dataset.themeSetting = setting;
+    })();
+  </script>
+  <title>从Fedora40 升级到 Feodra44 | hashes</title>
+  <meta name="description" content="从Fedora40 升级到 Feodra44">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/atom.xml">
+  <link rel="prefetch" as="image" href="https://www.blogsclub.org/badge/www.seis-jun.xyz">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+  <!-- MathJax for LaTeX rendering -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        ignoreHtmlClass: 'mermaid'
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <!-- Umami Analytics -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="21a99622-5a23-45f4-be80-edef627a68e3"></script>
+  <!-- Busuanzi for public visitor counter -->
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container masthead">
+      <a class="masthead-identity" href="/" aria-label="SEISAMUSE home">
+        <img src="/images/seisamuse.png" alt="" class="masthead-avatar">
+        <span class="masthead-title">SEISAMUSE</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="/">主页</a>
+        <a href="/blog/" class="active">博客</a>
+        <a href="/thoughts/">想法</a>
+        <a href="/archives/">归档</a>
+        <a href="/about/">自述</a>
+        <a href="/links/">链接</a>
+      </nav>
+
+      <div class="masthead-actions" aria-label="Site shortcuts">
+        <form class="masthead-search" action="/search/" method="get">
+          <input type="search" name="q" placeholder="Search notes" aria-label="Search notes">
+        </form>
+        <a href="mailto:hashes@yeah.net" title="Email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="/atom.xml" title="Atom feed" aria-label="Atom feed"><i class="fa-solid fa-rss"></i></a>
+        <button class="theme-toggle" type="button" data-theme-toggle title="Theme: system" aria-label="Theme: system">
+          <i class="fa-solid fa-display" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container page-wide">
+      
+      
+<div class="main-content">
+  <article>
+    <div class="post-header">
+      <h1>从Fedora40 升级到 Feodra44</h1>
+      <div class="post-meta">
+        <time>2026-09-14</time>
+         &middot; 337 words
+        <span id="busuanzi_container_page_pv" style="display: none;">
+          &middot; &#128065; <span id="busuanzi_value_page_pv"></span> views
+        </span>
+        
+         &middot; Topic:
+        
+          <a href="/blog/topic/linux/">Linux</a>
+        
+        
+        
+         &middot; Tags:
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">Fedora</span>
+        
+        
+      </div>
+    </div>
+
+    <div class="post-content">
+      <p><img alt="" src="https://plus.unsplash.com/premium_photo-1675989087109-f8a00bfea7d1?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" /></p>
+<p>前几天开机，通知说说系统马上不支持了。于是我想，要不干脆还是升个级吧。尽管升了级可能没有啥实质性的性能提升。但最更新以后总觉得跟上了时代啊。</p>
+<p>我的fedora系统是这样（uname -a）</p>
+<div class="highlight"><pre><span></span><code>Linux fedora 6.14.5-100.fc40.x86_64 #1 SMP PREEMPT_DYNAMIC Fri May  2 14:22:13 UTC 2025 x86_64 GNU/Linux
+</code></pre></div>
+
+<p>然后先更新</p>
+<div class="highlight"><pre><span></span><code>sudo dnf upgrade --refresh
+</code></pre></div>
+
+<p>最新版好像是44，要不就直接升级吧。AI说就这么干，</p>
+<div class="highlight"><pre><span></span><code><span class="n">sudo</span><span class="w"> </span><span class="n">dnf</span><span class="w"> </span><span class="n">system</span><span class="o">-</span><span class="n">upgrade</span><span class="w"> </span><span class="n">download</span><span class="w"> </span><span class="o">--</span><span class="n">releasever</span><span class="o">=</span><span class="mi">44</span><span class="w"> </span><span class="o">--</span><span class="n">allowerasing</span>
+</code></pre></div>
+
+<p>结果最后出问题了，运行</p>
+<div class="highlight"><pre><span></span><code>sudo dnf system-upgrade reboot
+</code></pre></div>
+
+<p>显示</p>
+<div class="highlight"><pre><span></span><code><span class="n">error</span><span class="o">:</span><span class="w"> </span><span class="n">system</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">ready</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">upgrade</span>
+</code></pre></div>
+
+<p>我问AI可能是什么原因。它说，官方说一下子升级4个版本不支持，建议两级两级的升。我xxx，此处省略x个字。之前那个命令我下载了4127个文件，运行了5个小时。你现在告诉我不能这样。你当初是拿我开涮是吗？</p>
+<p>然后删掉中间残留</p>
+<div class="highlight"><pre><span></span><code>sudo dnf system-upgrade clean
+sudo dnf clean all
+</code></pre></div>
+
+<p>重新来</p>
+<div class="highlight"><pre><span></span><code><span class="n">sudo</span><span class="w"> </span><span class="n">dnf</span><span class="w"> </span><span class="n">system</span><span class="o">-</span><span class="n">upgrade</span><span class="w"> </span><span class="n">download</span><span class="w"> </span><span class="o">--</span><span class="n">releasever</span><span class="o">=</span><span class="mi">42</span><span class="w"> </span><span class="o">--</span><span class="n">allowerasing</span>
+</code></pre></div>
+
+<p>又是5个小时的样子，然后还是</p>
+<div class="highlight"><pre><span></span><code><span class="n">error</span><span class="o">:</span><span class="w"> </span><span class="n">system</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">ready</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">upgrade</span>
+</code></pre></div>
+
+<p>一定有鬼。我重跑</p>
+<div class="highlight"><pre><span></span><code>sudo dnf upgrade --refresh
+</code></pre></div>
+
+<p>发现</p>
+<div class="highlight"><pre><span></span><code><span class="k">Last</span><span class="w"> </span><span class="n">metadata</span><span class="w"> </span><span class="n">expiration</span><span class="w"> </span><span class="k">check</span><span class="err">:</span><span class="w"> </span><span class="mi">0</span><span class="err">:</span><span class="mi">24</span><span class="err">:</span><span class="mi">15</span><span class="w"> </span><span class="n">ago</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">Thu</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="n">Sep</span><span class="w"> </span><span class="mi">2026</span><span class="w"> </span><span class="mi">10</span><span class="err">:</span><span class="mi">51</span><span class="err">:</span><span class="mi">49</span><span class="w"> </span><span class="n">AM</span><span class="w"> </span><span class="n">CST</span><span class="p">.</span>
+<span class="n">Package</span><span class="w"> </span><span class="n">dnf</span><span class="o">-</span><span class="n">plugins</span><span class="o">-</span><span class="n">core</span><span class="o">-</span><span class="mf">4.10.1</span><span class="o">-</span><span class="mf">1.</span><span class="n">fc40</span><span class="p">.</span><span class="n">noarch</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">already</span><span class="w"> </span><span class="n">installed</span><span class="p">.</span>
+<span class="n">Dependencies</span><span class="w"> </span><span class="n">resolved</span><span class="p">.</span>
+<span class="n">Nothing</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">do</span><span class="p">.</span>
+<span class="n">Complete</span><span class="err">!</span>
+<span class="n">Fedora</span><span class="w"> </span><span class="mi">40</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x86_64</span><span class="w">                                                                                                                                                               </span><span class="mi">291</span><span class="w">  </span><span class="n">B</span><span class="o">/</span><span class="n">s</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mf">4.0</span><span class="w"> </span><span class="n">kB</span><span class="w">     </span><span class="mi">00</span><span class="err">:</span><span class="mi">14</span><span class="w">    </span>
+<span class="n">Fedora</span><span class="w"> </span><span class="mi">40</span><span class="w"> </span><span class="n">openh264</span><span class="w"> </span><span class="p">(</span><span class="k">From</span><span class="w"> </span><span class="n">Cisco</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x86_64</span><span class="w">                                                                                                                                         </span><span class="mf">1.1</span><span class="w"> </span><span class="n">kB</span><span class="o">/</span><span class="n">s</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mi">989</span><span class="w">  </span><span class="n">B</span><span class="w">     </span><span class="mi">00</span><span class="err">:</span><span class="mi">00</span><span class="w">    </span>
+<span class="n">Fedora</span><span class="w"> </span><span class="mi">40</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x86_64</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Updates</span><span class="w">                                                                                                                                                     </span><span class="mf">2.5</span><span class="w"> </span><span class="n">kB</span><span class="o">/</span><span class="n">s</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mf">4.0</span><span class="w"> </span><span class="n">kB</span><span class="w">     </span><span class="mi">00</span><span class="err">:</span><span class="mi">01</span><span class="w">    </span>
+<span class="n">google</span><span class="o">-</span><span class="n">chrome</span><span class="w">                                                                                                                                                                    </span><span class="mf">6.8</span><span class="w"> </span><span class="n">kB</span><span class="o">/</span><span class="n">s</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mf">1.3</span><span class="w"> </span><span class="n">kB</span><span class="w">     </span><span class="mi">00</span><span class="err">:</span><span class="mi">00</span><span class="w">    </span>
+<span class="n">Dependencies</span><span class="w"> </span><span class="n">resolved</span><span class="p">.</span>
+<span class="o">=================================================================================================================================================================================================================</span>
+<span class="w"> </span><span class="n">Package</span><span class="w">                                                  </span><span class="n">Architecture</span><span class="w">                               </span><span class="n">Version</span><span class="w">                                             </span><span class="n">Repository</span><span class="w">                                         </span><span class="k">Size</span>
+<span class="o">=================================================================================================================================================================================================================</span>
+<span class="nl">Upgrading</span><span class="p">:</span>
+<span class="w"> </span><span class="n">google</span><span class="o">-</span><span class="n">chrome</span><span class="o">-</span><span class="n">stable</span><span class="w">                                     </span><span class="n">x86_64</span><span class="w">                                     </span><span class="mf">153.0.8010.36</span><span class="o">-</span><span class="mi">1</span><span class="w">                                     </span><span class="n">google</span><span class="o">-</span><span class="n">chrome</span><span class="w">                                     </span><span class="mi">138</span><span class="w"> </span><span class="n">M</span>
+
+<span class="k">Transaction</span><span class="w"> </span><span class="n">Summary</span>
+<span class="o">=================================================================================================================================================================================================================</span>
+<span class="n">Upgrade</span><span class="w">  </span><span class="mi">1</span><span class="w"> </span><span class="n">Package</span>
+
+<span class="n">Total</span><span class="w"> </span><span class="k">size</span><span class="err">:</span><span class="w"> </span><span class="mi">138</span><span class="w"> </span><span class="n">M</span>
+<span class="k">Is</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">ok</span><span class="w"> </span><span class="o">[</span><span class="n">y/N</span><span class="o">]</span><span class="err">:</span><span class="w"> </span><span class="n">y</span>
+<span class="n">Downloading</span><span class="w"> </span><span class="nl">Packages</span><span class="p">:</span>
+<span class="o">[</span><span class="n">SKIPPED</span><span class="o">]</span><span class="w"> </span><span class="n">google</span><span class="o">-</span><span class="n">chrome</span><span class="o">-</span><span class="n">stable</span><span class="o">-</span><span class="mf">153.0.8010.36</span><span class="o">-</span><span class="mf">1.</span><span class="n">x86_64</span><span class="p">.</span><span class="nl">rpm</span><span class="p">:</span><span class="w"> </span><span class="n">Already</span><span class="w"> </span><span class="n">downloaded</span><span class="w">                                                                                                                                   </span>
+<span class="n">google</span><span class="o">-</span><span class="n">chrome</span><span class="w">                                                                                                                                                                     </span><span class="mi">78</span><span class="w"> </span><span class="n">kB</span><span class="o">/</span><span class="n">s</span><span class="w"> </span><span class="o">|</span><span class="w">  </span><span class="mi">19</span><span class="w"> </span><span class="n">kB</span><span class="w">     </span><span class="mi">00</span><span class="err">:</span><span class="mi">00</span><span class="w">    </span>
+<span class="n">GPG</span><span class="w"> </span><span class="k">key</span><span class="w"> </span><span class="k">at</span><span class="w"> </span><span class="nl">https</span><span class="p">:</span><span class="o">//</span><span class="n">dl</span><span class="p">.</span><span class="n">google</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">linux</span><span class="o">/</span><span class="n">linux_signing_key</span><span class="p">.</span><span class="n">pub</span><span class="w"> </span><span class="p">(</span><span class="mh">0xD38B4796</span><span class="p">)</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">already</span><span class="w"> </span><span class="n">installed</span>
+<span class="n">The</span><span class="w"> </span><span class="n">GPG</span><span class="w"> </span><span class="n">keys</span><span class="w"> </span><span class="n">listed</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="ss">&quot;google-chrome&quot;</span><span class="w"> </span><span class="n">repository</span><span class="w"> </span><span class="k">are</span><span class="w"> </span><span class="n">already</span><span class="w"> </span><span class="n">installed</span><span class="w"> </span><span class="n">but</span><span class="w"> </span><span class="n">they</span><span class="w"> </span><span class="k">are</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">correct</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">package</span><span class="p">.</span>
+<span class="k">Check</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">correct</span><span class="w"> </span><span class="k">key</span><span class="w"> </span><span class="n">URLs</span><span class="w"> </span><span class="k">are</span><span class="w"> </span><span class="n">configured</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">repository</span><span class="p">..</span><span class="w"> </span><span class="n">Failing</span><span class="w"> </span><span class="n">package</span><span class="w"> </span><span class="k">is</span><span class="err">:</span><span class="w"> </span><span class="n">google</span><span class="o">-</span><span class="n">chrome</span><span class="o">-</span><span class="n">stable</span><span class="o">-</span><span class="mf">153.0.8010.36</span><span class="o">-</span><span class="mf">1.</span><span class="n">x86_64</span>
+<span class="w"> </span><span class="n">GPG</span><span class="w"> </span><span class="n">Keys</span><span class="w"> </span><span class="k">are</span><span class="w"> </span><span class="n">configured</span><span class="w"> </span><span class="k">as</span><span class="err">:</span><span class="w"> </span><span class="nl">https</span><span class="p">:</span><span class="o">//</span><span class="n">dl</span><span class="p">.</span><span class="n">google</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">linux</span><span class="o">/</span><span class="n">linux_signing_key</span><span class="p">.</span><span class="n">pub</span>
+
+<span class="k">Try</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="k">add</span><span class="w"> </span><span class="s1">&#39;--enableplugin=expired-pgp-keys&#39;</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">resolve</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">problem</span><span class="p">.</span><span class="w"> </span><span class="nl">Note</span><span class="p">:</span><span class="w"> </span><span class="n">This</span><span class="w"> </span><span class="n">plugin</span><span class="w"> </span><span class="n">might</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">installed</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="k">default</span><span class="p">,</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">part</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="s1">&#39;dnf-plugins-core&#39;</span><span class="w"> </span><span class="n">package</span><span class="p">.</span>
+
+<span class="n">The</span><span class="w"> </span><span class="n">downloaded</span><span class="w"> </span><span class="n">packages</span><span class="w"> </span><span class="n">were</span><span class="w"> </span><span class="n">saved</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">cache</span><span class="w"> </span><span class="n">until</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">next</span><span class="w"> </span><span class="n">successful</span><span class="w"> </span><span class="k">transaction</span><span class="p">.</span>
+<span class="n">You</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">remove</span><span class="w"> </span><span class="n">cached</span><span class="w"> </span><span class="n">packages</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">executing</span><span class="w"> </span><span class="s1">&#39;dnf clean packages&#39;</span><span class="p">.</span>
+<span class="nl">Error</span><span class="p">:</span><span class="w"> </span><span class="n">GPG</span><span class="w"> </span><span class="k">check</span><span class="w"> </span><span class="n">FAILED</span>
+</code></pre></div>
+
+<p>原来Google密钥已过期。然后</p>
+<div class="highlight"><pre><span></span><code><span class="n">sudo</span><span class="w"> </span><span class="n">dnf</span><span class="w"> </span><span class="n">system</span><span class="o">-</span><span class="n">upgrade</span><span class="w"> </span><span class="n">download</span><span class="w"> </span><span class="o">--</span><span class="n">releasever</span><span class="o">=</span><span class="mi">42</span><span class="w"> </span><span class="o">--</span><span class="n">allowerasing</span><span class="w"> </span><span class="o">--</span><span class="n">enableplugin</span><span class="o">=</span><span class="n">expired</span><span class="o">-</span><span class="n">pgp</span><span class="o">-</span><span class="n">keys</span>
+</code></pre></div>
+
+<p>然后接下来又是4-5个小时。然后，</p>
+<div class="highlight"><pre><span></span><code>sudo dnf system-upgrade reboot
+</code></pre></div>
+
+<p>系统就升级为42了。</p>
+<p>借下来继续</p>
+<div class="highlight"><pre><span></span><code><span class="n">sudo</span><span class="w"> </span><span class="n">dnf</span><span class="w"> </span><span class="n">system</span><span class="o">-</span><span class="n">upgrade</span><span class="w"> </span><span class="n">download</span><span class="w"> </span><span class="o">--</span><span class="n">releasever</span><span class="o">=</span><span class="mi">44</span><span class="w"> </span><span class="o">--</span><span class="n">allowerasing</span>
+</code></pre></div>
+
+<p>又是4-5个小时。最后</p>
+<div class="highlight"><pre><span></span><code>sudo dnf system-upgrade reboot
+</code></pre></div>
+
+<p>终于升级到了44。最后别忘了来一个，</p>
+<div class="highlight"><pre><span></span><code>sudo dnf upgrade
+</code></pre></div>
+
+<p>还好这台电脑目前没有急活，要不然真的急。整了快一周才更新成功。
+看样子AI还不能亲信啊，可能多问几个AI比较稳。</p>
+    </div>
+
+  <div class="comments-section">
+  <h3>Comments</h3>
+  <script>
+    (function () {
+      var giscus = document.createElement('script');
+      giscus.src = 'https://giscus.app/client.js';
+      giscus.dataset.repo = 'junxie01/junxie01.github.io';
+      giscus.dataset.repoId = 'R_kgDOSGl1Dg';
+      giscus.dataset.category = 'General';
+      giscus.dataset.categoryId = 'DIC_kwDOSGl1Ds4DAuif';
+      giscus.dataset.mapping = 'specific';
+      giscus.dataset.term = 'blog/2026-09-14-upgrade-fedora40-to-feodra44';
+      giscus.dataset.strict = '0';
+      giscus.dataset.reactionsEnabled = '1';
+      giscus.dataset.emitMetadata = '0';
+      giscus.dataset.inputPosition = 'bottom';
+      giscus.dataset.theme = document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light';
+      giscus.dataset.lang = 'en';
+      giscus.crossOrigin = 'anonymous';
+      giscus.async = true;
+      document.currentScript.parentNode.appendChild(giscus);
+
+      window.addEventListener('seisamuse-theme-change', function (event) {
+        var frame = document.querySelector('.giscus-frame');
+        if (!frame || !frame.contentWindow) return;
+        frame.contentWindow.postMessage({
+          giscus: {
+            setConfig: {
+              theme: event.detail.theme === 'dark' ? 'dark' : 'light'
+            }
+          }
+        }, 'https://giscus.app');
+      });
+    })();
+  </script>
+</div>
+
+  <div class="post-nav">
+    
+      <a class="post-nav-prev" href="/blog/2026-09-14-suibi.html">&larr; 随笔</a>
+    
+
+    <a class="post-nav-blog" href="/blog/">Blog</a>
+
+    
+      <span class="post-nav-next"></span>
+    
+  </div>
+</article>
+</div>
+
+      
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p class="site-stats">
+        <span id="busuanzi_container_site_pv">
+          👁 Total visits: <span id="busuanzi_value_site_pv"></span>
+        </span>
+        &middot;
+        <span id="busuanzi_container_site_uv">
+          Visitors: <span id="busuanzi_value_site_uv"></span>
+        </span>
+      </p>
+      <p>&copy; 2026 hashes &middot; Built with Python &amp; Markdown &middot;
+        GitHub &middot;
+        <a href="/atom.xml" target="_blank">Atom</a>
+      </p>
+      <!-- Edit this line to add or remove blog directory links. -->
+      <p class="footer-directory-links">
+        <span>感谢收录：</span>
+        <a href="https://blogscn.fun/" target="_blank" rel="noopener">笔墨迹</a>
+        <a href="https://bf.zzxworld.com/" target="_blank" rel="noopener">BlogFinder</a>
+        <a href="https://www.blogsclub.org/" target="_blank" rel="noopener">BlogsClub</a>
+        <a href="https://blogtalk.org/" target="_blank" rel="noopener">博客说</a>
+        <a href="https://bokehub.com/" target="_blank" rel="noopener">博客中心</a>
+        <a href="https://www.boyouquan.com/" target="_blank" rel="noopener">博友圈</a>
+        <a href="https://storeweb.cn/" target="_blank" rel="noopener">个站商店</a>
+        <a href="https://www.travellings.cn/go.html" target="_blank" rel="noopener">开往</a>
+      </p>
+    </div>
+  </footer>
+
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+      startOnLoad: true,
+      securityLevel: 'strict',
+      theme: document.documentElement.dataset.theme === 'dark' ? 'dark' : 'neutral'
+    });
+  </script>
+
+  <script>
+    (function () {
+      var toggle = document.querySelector('[data-theme-toggle]');
+      if (!toggle) return;
+
+      var order = ['system', 'light', 'dark'];
+      var labels = {
+        system: 'Theme: system',
+        light: 'Theme: light',
+        dark: 'Theme: dark'
+      };
+      var icons = {
+        system: 'fa-display',
+        light: 'fa-sun',
+        dark: 'fa-moon'
+      };
+      var media = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+
+      function currentSetting() {
+        var setting = document.documentElement.dataset.themeSetting;
+        return order.indexOf(setting) === -1 ? 'system' : setting;
+      }
+
+      function updateButton(setting) {
+        var label = labels[setting];
+        var icon = toggle.querySelector('i');
+        toggle.title = label;
+        toggle.setAttribute('aria-label', label);
+        icon.className = 'fa-solid ' + icons[setting];
+      }
+
+      function applyTheme(setting) {
+        var systemDark = media && media.matches;
+        var theme = setting === 'system' ? (systemDark ? 'dark' : 'light') : setting;
+        document.documentElement.dataset.themeSetting = setting;
+        document.documentElement.dataset.theme = theme;
+        try {
+          if (setting === 'system') localStorage.removeItem('seisamuse-theme');
+          else localStorage.setItem('seisamuse-theme', setting);
+        } catch (error) {}
+        updateButton(setting);
+        window.dispatchEvent(new CustomEvent('seisamuse-theme-change', {
+          detail: { theme: theme }
+        }));
+      }
+
+      toggle.addEventListener('click', function () {
+        var setting = currentSetting();
+        applyTheme(order[(order.indexOf(setting) + 1) % order.length]);
+      });
+
+      if (media) {
+        media.addEventListener('change', function () {
+          if (currentSetting() === 'system') applyTheme('system');
+        });
+      }
+
+      updateButton(currentSetting());
+    })();
+  </script>
+
+</body>
+</html>
