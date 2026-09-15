@@ -1624,6 +1624,82 @@ footer a:hover {
   font-size: 0.82rem;
 }
 
+.friend-link-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem;
+}
+
+.friend-link-button {
+  display: grid;
+  grid-template-columns: 2rem minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.7rem;
+  min-width: 0;
+  padding: 0.65rem 0.75rem;
+  color: var(--text);
+  text-decoration: none;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  box-shadow: var(--card-shadow);
+}
+
+.friend-link-button:hover {
+  color: var(--text);
+  text-decoration: none;
+  border-color: var(--accent);
+}
+
+.friend-link-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  color: var(--accent);
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  background: var(--soft-bg);
+  border-radius: 5px;
+}
+
+.friend-link-copy {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  line-height: 1.35;
+}
+
+.friend-link-copy strong {
+  overflow: hidden;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 650;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.friend-link-description {
+  overflow: hidden;
+  color: var(--muted);
+  font-size: 0.78rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.friend-link-description p {
+  display: inline;
+  margin: 0;
+}
+
+.friend-link-arrow {
+  color: var(--muted);
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 0.9rem;
+}
+
 .archives-hero {
   margin-bottom: 1.2rem;
 }
@@ -1713,7 +1789,8 @@ footer a:hover {
   }
 
   .resource-card-grid,
-  .resource-card-grid-small {
+  .resource-card-grid-small,
+  .friend-link-grid {
     grid-template-columns: 1fr;
   }
 
