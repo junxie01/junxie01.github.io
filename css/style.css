@@ -356,6 +356,17 @@ main > .container.page-wide {
   padding-top: 0.15rem;
 }
 
+@media (min-width: 860px) {
+  .blog-sidebar {
+    position: fixed;
+    top: 5.5rem;
+    left: calc(50% + 255px);
+    width: 155px;
+    max-height: calc(100vh - 6.5rem);
+    overflow-y: auto;
+  }
+}
+
 .blog-sidebar-section {
   margin-bottom: 2rem;
 }
@@ -1624,13 +1635,14 @@ footer a:hover {
   font-size: 0.82rem;
 }
 
-.friend-link-grid {
+.resource-link-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.65rem;
 }
 
-.friend-link-button {
+.resource-link-button {
+  position: relative;
   display: grid;
   grid-template-columns: 2rem minmax(0, 1fr) auto;
   align-items: center;
@@ -1645,13 +1657,13 @@ footer a:hover {
   box-shadow: var(--card-shadow);
 }
 
-.friend-link-button:hover {
+.resource-link-button:hover {
   color: var(--text);
   text-decoration: none;
   border-color: var(--accent);
 }
 
-.friend-link-mark {
+.resource-link-mark {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1665,14 +1677,14 @@ footer a:hover {
   border-radius: 5px;
 }
 
-.friend-link-copy {
+.resource-link-copy {
   display: flex;
   flex-direction: column;
   min-width: 0;
   line-height: 1.35;
 }
 
-.friend-link-copy strong {
+.resource-link-copy strong {
   overflow: hidden;
   font-family: system-ui, -apple-system, sans-serif;
   font-size: 0.9rem;
@@ -1681,7 +1693,22 @@ footer a:hover {
   white-space: nowrap;
 }
 
-.friend-link-description {
+.resource-link-primary {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.resource-link-primary::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+}
+
+.resource-link-button:hover .resource-link-primary {
+  color: var(--accent);
+}
+
+.resource-link-description {
   overflow: hidden;
   color: var(--muted);
   font-size: 0.78rem;
@@ -1689,12 +1716,17 @@ footer a:hover {
   white-space: nowrap;
 }
 
-.friend-link-description p {
+.resource-link-description p {
   display: inline;
   margin: 0;
 }
 
-.friend-link-arrow {
+.resource-link-description a {
+  position: relative;
+  z-index: 1;
+}
+
+.resource-link-arrow {
   color: var(--muted);
   font-family: system-ui, -apple-system, sans-serif;
   font-size: 0.9rem;
@@ -1790,7 +1822,7 @@ footer a:hover {
 
   .resource-card-grid,
   .resource-card-grid-small,
-  .friend-link-grid {
+  .resource-link-grid {
     grid-template-columns: 1fr;
   }
 
