@@ -3,11 +3,36 @@
   <title>SEISAMUSE</title>
   <link href="https://www.seis-jun.xyz/atom.xml" rel="self" />
   <link href="https://www.seis-jun.xyz" />
-  <updated>2026-09-17T12:26:17+08:00</updated>
+  <updated>2026-09-18T07:42:32+08:00</updated>
   <id>https://www.seis-jun.xyz/</id>
   <author>
     <name>hashes</name>
   </author>
+  
+  <entry>
+    <title>随笔</title>
+    <link href="https://www.seis-jun.xyz/blog/2026-09-18-jotting.html" />
+    <id>https://www.seis-jun.xyz/blog/2026-09-18-jotting.html</id>
+    <updated>2026-09-18T07:42:32+08:00</updated>
+    <published>2026-09-18T07:42:32+08:00</published>
+    <summary type="html"><p>随笔</p></summary>
+    <content type="html"><![CDATA[<p><img alt="" src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" /></p>
+<p>脑子里面依然有很多东西想要表达一下，但是另一个声音又觉得写那些好无聊。</p>
+<p>因此现在又随一下笔。</p>
+<p>昨天是第一次写博客写着写着把自己给写哭了。</p>
+<p>然后不知道身体分泌了啥东西，整天心情都比较低落。</p>
+<p>吃完晚饭觉得好困，就在沙发上直接躺了，秒睡。只知道娃开电视和关电视。里面的音乐，人物对话一个字都听到，不记得。还好，动画片一结束我就醒了。时间不长，要不然晚上准睡不着。</p>
+<p>之前有过明明脑子里面没有啥东西，但躺在床上怎么也睡不着的时候。但这种情况不多，一个月会有一到两天，一般会被我用period搪塞。遇到那种情况可能会打开手机一通乱翻，要么看知乎，要么看腾讯短视频，要么连敲两篇文字。看完知乎或者视频的第二天就像失忆，一点印象都没有，只觉得浪费了休息时间，但也不悔恨，睡不着嘛，只是苦了眼睛。</p>
+<p>最近两次，仍然稍稍有点睡不着，手机虽然就在床边，但想着要不过一会儿实在睡不着再看。结果就再也没有拿起来。</p>
+<p>前几天还在调侃说一般不怎么做梦。结果连续两天都做了梦。昨天做的梦是和老妈吵架，吵什么我已经记不住。我也比较好奇，因为从小到大和老妈红脸次数都才一两次，怎么会和妈吵起来。今天凌晨似乎也做了个梦，但是这会儿已经记不住。</p>
+<p>有张图我记得很清楚，在学校里面大家都是蛋，形状都一样。但后来孵出来才发现，有些是鸟，有些是乌龟，还有些是鳄鱼。</p>
+<p>我见过鳄鱼，也见过乌龟。鳄鱼让人不想靠近，乌龟也似驼了太多东西。</p>
+<p>我不是乌龟也不是鳄鱼。</p>
+<p>大约是一只鸟，爱睡觉的鸟。</p>]]></content>
+    
+    <category term="随笔" />
+    
+  </entry>
   
   <entry>
     <title>每个硬币都有两面吗？</title>
@@ -2047,43 +2072,6 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
 <p>好了，我去吃瓜子了。</p>]]></content>
     
     <category term="不确定" />
-    
-  </entry>
-  
-  <entry>
-    <title>关于博客写作IV</title>
-    <link href="https://www.seis-jun.xyz/blog/2026-08-28-about-writing-blog-iv.html" />
-    <id>https://www.seis-jun.xyz/blog/2026-08-28-about-writing-blog-iv.html</id>
-    <updated>2026-08-28T14:29:18+08:00</updated>
-    <published>2026-08-28T14:29:18+08:00</published>
-    <summary type="html"><p>接着写，接着改</p></summary>
-    <content type="html"><![CDATA[<p><img alt="" src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&amp;w=1770&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" /></p>
-<p>我又来打补丁了。</p>
-<p>要是有人问，你一会儿写一会儿又不写，到底写是写还是不写啊？</p>
-<p>其实上一篇已经讲了还是要写的。</p>
-<p>然后我发现，前三篇都在写自己为什么写，自己为什么又不写。</p>
-<p>但我觉得似乎还是没有把自己写博客的目的讲完整。</p>
-<p>我的生活观念之一是想要<a href="/blog/2026-08-17-create-something-interesting.html">创造点有意思的东西</a>，写东西就是我觉得有意思的事情之一。如果本职工作是码字，何不接着多码一些；如果工作不码字，何不码点字吹吹水，发发LS。</p>
-<p>但也不能一味地只为自己而写。似乎不能说想到哪里就写到哪里，因为这样只是自己思维的流动。</p>
-<p>仅记录自己思维流动，虽然部分实现了整理自己思维的效果，但难以达到和别人交流的目的。因为你的思维真的可能很乱。好吧，我的意思是我的思维比较乱。别人看起来多累。</p>
-<p>如果别人看起来累，那别人就不想看了。别人不看了，你写的东西就真的变成日记了。</p>
-<p>因此，为了达到交流的目的也需要整理一下语言顺序和思维逻辑并且减少别字。</p>
-<p>此外，也尽量不要一味地把糟粕、没营养的东西摆出来。要是看到你端出来的饭菜没啥意思，或者干脆污别人眼睛，那也只算是自说自话了。不仅浪费了别人的时间不说，而且还达到了伤人的目的。</p>
-<p>所以怎么办呢？</p>
-<ol>
-<li>
-<p>其实没有必要硬是要凹自己思想有深度、文笔高级或者思维缜密的造型，不用因为多次编辑多次检查你的文字而懊恼。多次整理也许才能真正让你的博文更加有条理，想法更顺。如果你的想法和这篇难以放到一起，那就重新写一篇。就像现在我在干的。</p>
-</li>
-<li>
-<p>尽量收起傲慢。觉得我想写什么写什么，自会有人来看。适当地替读者考虑考虑吧。虽然我不是完美笔者，但是别字还是要改改。讲出来的东西也希望可以尽量帮助别人长见识。当然不一定长见识，因为营养可能不够多。但至少可以尽量地让别人不那么难受地看到另一种思维方式、生活方式以及人生看法。</p>
-</li>
-</ol>
-<p>所以，我准备继续写。而且会对以前的文字进行修正。</p>
-<p>逻辑顺序，文字表达，错字别字都要改，但主要想法还是封在那里。</p>]]></content>
-    
-    <category term="博客" />
-    
-    <category term="写作" />
     
   </entry>
   
