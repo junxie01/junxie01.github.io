@@ -3,11 +3,52 @@
   <title>SEISAMUSE</title>
   <link href="https://www.seis-jun.xyz/atom.xml" rel="self" />
   <link href="https://www.seis-jun.xyz" />
-  <updated>2026-09-18T07:42:32+08:00</updated>
+  <updated>2026-09-18T12:35:49+08:00</updated>
   <id>https://www.seis-jun.xyz/</id>
   <author>
     <name>hashes</name>
   </author>
+  
+  <entry>
+    <title>什么是懂了？</title>
+    <link href="https://www.seis-jun.xyz/blog/2026-09-18-about-understanding.html" />
+    <id>https://www.seis-jun.xyz/blog/2026-09-18-about-understanding.html</id>
+    <updated>2026-09-18T12:35:49+08:00</updated>
+    <published>2026-09-18T12:35:49+08:00</published>
+    <summary type="html"><p>没懂。</p></summary>
+    <content type="html"><![CDATA[<p><img alt="" src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?q=80&amp;w=2071&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" /></p>
+<p>看到这个题目，我猜你又会说，hashes，又要开始胡说了。</p>
+<p>没错啊，说对了。</p>
+<p>那什么是懂了呢？</p>
+<p>我想这其实涉及到我们怎么看我们自己。</p>
+<p>假设我们呱呱坠地，没有父母养育，而是被狼抚养长大。那我们脑子里面还有“我”吗？</p>
+<p>我不知道，可能有，但被狼养大的孩子绝对不会懂得上学、上班、上号；面子、老子、孔子还有道理、物理、心理。</p>
+<p>所以，在我们被抚养长大的过程中，逐渐“感染”了一些东西。</p>
+<p>在某种程度上，我认为“我”就是肉体的我+特殊的脑回路+感染到的某些脑回路。</p>
+<p>但“感染”到的这些怎么办呢？</p>
+<p>我不知道。</p>
+<p>但如果不用自己的脑回路来与“感染”到的东西<a href="/blog/2026-07-31-stay-foolish.html">交互</a>，大约很容易你就会抛出一句“我懂了”。</p>
+<p>我懂了，可能是你被“感染”了。</p>
+<p>例如你读了某本哲学书。作者的确很厉害，用了你没见过的名词，把你心里不清不楚的想法命名了，用一个概念或者体系提拎起来。然后你就恍然大悟。“我懂了。”</p>
+<p>一位智者，从不同方面解读了你烦恼，消解了你的焦虑，然后你发现，原来可以这么有道理。”我懂了。“</p>
+<p>一位演讲者，声情并茂，动人心弦，把自己的情感毫无保留地传递给你，你发现，原来应该这样。“我懂了。”</p>
+<p>一位博主，巴拉巴拉给你讲一通，你发现原来可以这么想。“我懂了。”</p>
+<p>慢着，先别懂。</p>
+<p>你可能只是被“传染”或者“感染”了。</p>
+<p>你顺着他们的想法想一遍算是“传染”，你感受到他们的情绪，算是“感染”。</p>
+<p>传染或者感染，算是“懂了”吗？也许是。</p>
+<p>但是，我们又怎么能确认“我”是“我”呢？</p>
+<p>我不知道，可能还是缺少一位智者，或者哲学家帮我把这种状态用一个词语命名。</p>
+<p>可能根本不用找到一个完全没有被污染过的“纯我”。</p>
+<p>某种意义上来讲，也许没有真正的“我”，如果我们不感染些什么东西，我们大约也不能被人称为是人。</p>
+<p>所以，也许需要把那些传染或者感染的东西消化了，长在自己身上才行。</p>
+<p>就像牛虽然吃的是草，但是身上不会长草，只会长牛肉。</p>
+<p>好了，你懂了吗？</p>
+<p>反正我没懂。</p>]]></content>
+    
+    <category term="懂了" />
+    
+  </entry>
   
   <entry>
     <title>爱睡觉的鸟</title>
@@ -2038,40 +2079,6 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
 <p>路上只管走好你自己的道。</p>]]></content>
     
     <category term="开车" />
-    
-  </entry>
-  
-  <entry>
-    <title>关于不确定性II</title>
-    <link href="https://www.seis-jun.xyz/blog/2026-08-28-about-uncertainty-2.html" />
-    <id>https://www.seis-jun.xyz/blog/2026-08-28-about-uncertainty-2.html</id>
-    <updated>2026-08-28T18:18:30+08:00</updated>
-    <published>2026-08-28T18:18:30+08:00</published>
-    <summary type="html"><p>往前走</p></summary>
-    <content type="html"><![CDATA[<p><img alt="" src="https://images.unsplash.com/photo-1764250766584-c0259d99908f?q=80&amp;w=2256&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" /></p>
-<p>上一篇讲到：明明已经知道电影剧情，为什么有些电影还是愿意看很多遍？</p>
-<p>看眼样子没有人来回答我这个问题。</p>
-<p>那我就只好自己回答了。</p>
-<p>答案其实一直藏在我的<a href="/blog/2026-08-18-my-view-of-life.html">人生观</a>里面，但没有独立成点。如果没有点明那说明还没有理清，没有形成我的回路。</p>
-<p>继续打补丁。</p>
-<p>我在<a href="/blog/2026-07-21-about-cognition.html">关于认知</a>里面说，要想要做，不要太关注结果。我想就是要说，我们更多关注的应该是过程。</p>
-<p>我们喜欢人生，可能并不只是因为不知道结果。其实没有人会期待不好的结果，我的意思是如果遇到结果不好的时候我们一般也会心理不舒服。能够做到看淡结果可能需要很深的修行。</p>
-<p>其实也不需要太去执着结果，有时候打通了想法就会发现，价值不仅存在于结果的信息量，也存在于经历本身。</p>
-<p>知道两个人会分开，不代表两个人的相爱没有意义，也不代表这段相爱的经历不值得珍藏。</p>
-<p>知道一个人最终会死，也不意味着他今天吃的一顿饭、写的一篇博客、爱一个人、做一次研究因此失去意义。</p>
-<p>我们的每一点一滴的经历可能都会长在我们的身上，长在我们的脑子里。</p>
-<p>我会记住年少抓的<a href="/blog/2008-04-03-crab.html">螃蟹</a>，每次坟包的<a href="/blog/2026-08-23-pick-chicken-mushroom.html">巡菌之旅</a>，那只踏过的<a href="/blog/2026-08-26-mouse-memory.html">老鼠</a>；会记住爸妈的唠叨，讲台老师的谈笑还有发奋偷读小说的那个夜晚。</p>
-<p>好了我不要再回忆，回忆是老了以后的调味菜。</p>
-<p>我不是强调回忆，而是说你在做某一件事情的时候就专注到这件事情里来，你会收获很多。</p>
-<p>那种状态，脑袋是纯粹的，没有其他奇怪的回路和情绪干扰，单单做事的脑回路会让你十分的舒畅。你可能会瞬间感到时间过得好快。那好像叫心流。我不会去想做不好怎么办，以后怎么办？</p>
-<p>有心流是好，当然也不能强求做事情都会是心流。</p>
-<p>总之有事情做你就做事情，没事情的时候就允许大脑放空一会儿。</p>
-<p>有目标就不要总想着目标，把目标细化到很小的一步，像<a href="/blog/2026-05-08-sunflower-seeds-eating.html">吃瓜子</a>。</p>
-<p>正因为目的地都一样，指南针才不是用来决定终点的。</p>
-<p>它决定的是你怎么走过去。</p>
-<p>好了，我去吃瓜子了。</p>]]></content>
-    
-    <category term="不确定" />
     
   </entry>
   
