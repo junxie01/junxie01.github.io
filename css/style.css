@@ -876,12 +876,9 @@ main > .container.page-wide {
   margin: 3rem auto 0;
 }
 
-.post-ad-label {
-  margin: 0 0 0.75rem;
-  color: var(--muted);
-  font-family: system-ui, -apple-system, sans-serif;
-  font-size: 0.75rem;
-  text-align: center;
+/* Collapse only after Google confirms that no ad was returned. */
+.post-ad:has(> .adsbygoogle[data-ad-status="unfilled"]) {
+  display: none;
 }
 
 .post-ad .adsbygoogle {
