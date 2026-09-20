@@ -871,6 +871,23 @@ main > .container.page-wide {
 }
 
 /* Comments section */
+.post-ad {
+  width: 100%;
+  margin: 3rem auto 0;
+}
+
+.post-ad-label {
+  margin: 0 0 0.75rem;
+  color: var(--muted);
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.post-ad .adsbygoogle {
+  min-height: 100px;
+}
+
 .comments-section {
   margin-top: 3rem;
   padding-top: 2rem;
