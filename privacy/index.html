@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    (function () {
+      var stored = null;
+      try {
+        stored = localStorage.getItem('seisamuse-theme');
+      } catch (error) {}
+
+      var setting = stored === 'light' || stored === 'dark' ? stored : 'system';
+      var systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = setting === 'system' ? (systemDark ? 'dark' : 'light') : setting;
+      document.documentElement.dataset.theme = theme;
+      document.documentElement.dataset.themeSetting = setting;
+    })();
+  </script>
+  <title>隐私政策 | hashes</title>
+  <meta name="description" content="SEISAMUSE 的访问统计、评论、广告与第三方服务隐私说明。">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/atom.xml">
+  <link rel="prefetch" as="image" href="https://www.blogsclub.org/badge/www.seis-jun.xyz">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+  <!-- MathJax for LaTeX rendering -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        ignoreHtmlClass: 'mermaid'
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <!-- Umami Analytics -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="21a99622-5a23-45f4-be80-edef627a68e3"></script>
+  <!-- Busuanzi for public visitor counter -->
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container masthead">
+      <a class="masthead-identity" href="/" aria-label="SEISAMUSE home">
+        <img src="/images/seisamuse.png" alt="" class="masthead-avatar">
+        <span class="masthead-title">SEISAMUSE</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="/">主页</a>
+        <a href="/blog/">博客</a>
+        <a href="/thoughts/">想法</a>
+        <a href="/archives/">归档</a>
+        <a href="/about/">自述</a>
+        <a href="/links/">链接</a>
+      </nav>
+
+      <div class="masthead-actions" aria-label="Site shortcuts">
+        <form class="masthead-search" action="/search/" method="get">
+          <input type="search" name="q" placeholder="Search notes" aria-label="Search notes">
+        </form>
+        <a href="mailto:hashes@yeah.net" title="Email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="/atom.xml" title="Atom feed" aria-label="Atom feed"><i class="fa-solid fa-rss"></i></a>
+        <button class="theme-toggle" type="button" data-theme-toggle title="Theme: system" aria-label="Theme: system">
+          <i class="fa-solid fa-display" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container page-wide">
+      
+      
+<h1 class="page-title">隐私政策</h1>
+<div class="about-content">
+  <p>更新日期：2026-09-21</p>
+<p>SEISAMUSE（www.seis-jun.xyz）是 hashes 的个人博客。这份说明介绍访问本站、发表评论或联系作者时，可能涉及的信息处理与第三方服务。</p>
+<h2 id="_1">浏览与基础服务</h2>
+<p>阅读本站无需注册本站账户。网站通过 GitHub Pages 托管；域名、网络分发及部分图片服务使用 Cloudflare。访问网页、图片或脚本时，相应服务提供方可能处理 IP 地址、请求网址、浏览器信息、访问时间等，以传输内容、维护服务和处理安全问题。</p>
+<p>相关说明：<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub 隐私声明</a>、<a href="https://www.cloudflare.com/privacypolicy/">Cloudflare 隐私政策</a>。</p>
+<h2 id="_2">访问统计与浏览器存储</h2>
+<p>本站使用 <a href="https://umami.is/privacy">Umami</a> 了解访问量、来源和页面访问情况，使用<a href="https://busuanzi.ibruce.info/">不蒜子</a>展示访问计数。加载这些第三方统计服务会向其服务器发送请求；数据处理和保存方式受对应服务的政策与实际配置约束。本站作者不能据此承诺所有第三方都不处理 IP 地址或其他访问数据。</p>
+<p>明暗主题偏好保存在浏览器本地的 <code>seisamuse-theme</code> 项中，供下次访问时使用。你可以通过浏览器的网站数据设置清除它。</p>
+<h2 id="_3">评论与主动联系</h2>
+<p>部分页面使用 <a href="https://giscus.app/">giscus</a> 评论系统，评论托管在 GitHub Discussions。发表评论涉及 GitHub 登录及授权，用户名、头像和评论内容可能公开展示。请不要在评论中留下密码、住址、证件号码或其他不希望公开的信息。评论的管理也受 GitHub 的规则约束。</p>
+<p>通过邮件联系作者时，作者会收到你主动提供的邮箱地址和邮件内容，用于沟通、处理反馈及保留必要的往来记录。涉及具体邮件或评论的信息请求，可通过文末邮箱联系；第三方账户中的数据可能需要向相应平台申请处理。</p>
+<h2 id="google">Google 广告</h2>
+<p>本站接入 Google AdSense，并按文章设置是否加载广告。是否实际展示广告取决于网站审核、访客设置和广告供应情况。</p>
+<p>第三方供应商（包括 Google）可能利用 Cookie，依据你此前对本站或其他网站的访问投放广告。Google 的广告 Cookie 可使 Google 及其合作伙伴根据你的访问情况展示广告。广告投放还可能涉及网络信标、IP 地址或其他标识符的收集和使用。</p>
+<p>你可以阅读 <a href="https://policies.google.com/technologies/partner-sites">Google 合作伙伴网站上的数据使用说明</a>和 <a href="https://policies.google.com/technologies/ads">Google 广告技术说明</a>，并通过 <a href="https://www.google.com/settings/ads">Google 广告设置</a>管理个性化广告。也可访问 <a href="https://www.aboutads.info/choices/">AboutAds</a>了解部分第三方供应商提供的退出选项。关闭个性化不一定会停止所有广告或相关请求。</p>
+<p>适用地区的广告同意选择应通过相应的同意管理提示处理；本页是信息说明，不将继续浏览视为你已同意个性化广告，也不能替代必要的同意流程。</p>
+<h2 id="_4">外部资源与链接</h2>
+<p>部分文章使用外部图片、视频嵌入，以及字体、公式和图表脚本；页脚也包含博客目录链接。相关资源可能来自 Unsplash、哔哩哔哩、CDN 或其他文章中注明的服务。加载外部资源时，浏览器可能向其提供方发送 IP 地址、浏览器信息及来源页面信息；打开外部链接后，适用目标网站的隐私规则。</p>
+<p>你可以使用浏览器提供的 Cookie、网站数据和内容加载设置管理这些请求，但部分功能可能因此不可用。</p>
+<h2 id="_5">保存、更新与联系</h2>
+<p>公开评论通常在其被删除前保持可见；第三方服务的数据保存期限由其政策及配置决定。对于作者直接收到的信息，可以来信请求查询、更正或删除，作者会根据实际持有的信息和适用要求处理。本站无法代替第三方承诺删除其独立保存的数据。</p>
+<p>本站使用的服务变化时，会相应更新本页日期和内容。有关隐私的问题，请联系：<a href="mailto:hashes@yeah.net">hashes@yeah.net</a>。</p>
+</div>
+
+      
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p class="site-stats">
+        <span id="busuanzi_container_site_pv">
+          👁 Total visits: <span id="busuanzi_value_site_pv"></span>
+        </span>
+        &middot;
+        <span id="busuanzi_container_site_uv">
+          Visitors: <span id="busuanzi_value_site_uv"></span>
+        </span>
+      </p>
+      <p>&copy; 2026 hashes &middot; Built with Python &amp; Markdown &middot;
+        GitHub &middot;
+        <a href="/atom.xml" target="_blank">Atom</a> &middot;
+        <a href="/privacy/">隐私政策</a>
+      </p>
+      <!-- Edit this line to add or remove blog directory links. -->
+      <p class="footer-directory-links">
+        <span>感谢收录：</span>
+        <a href="https://blogscn.fun/" target="_blank" rel="noopener">笔墨迹</a>
+        <a href="https://bf.zzxworld.com/" target="_blank" rel="noopener">BlogFinder</a>
+        <a href="https://www.blogsclub.org/" target="_blank" rel="noopener">BlogsClub</a>
+        <a href="https://blogtalk.org/" target="_blank" rel="noopener">博客说</a>
+        <a href="https://bokehub.com/" target="_blank" rel="noopener">博客中心</a>
+        <a href="https://storeweb.cn/" target="_blank" rel="noopener">个站商店</a>
+        <a href="https://www.travellings.cn/go.html" target="_blank" rel="noopener">开往</a>
+      </p>
+    </div>
+  </footer>
+
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+      startOnLoad: true,
+      securityLevel: 'strict',
+      theme: document.documentElement.dataset.theme === 'dark' ? 'dark' : 'neutral'
+    });
+  </script>
+
+  <script>
+    (function () {
+      var toggle = document.querySelector('[data-theme-toggle]');
+      if (!toggle) return;
+
+      var order = ['system', 'light', 'dark'];
+      var labels = {
+        system: 'Theme: system',
+        light: 'Theme: light',
+        dark: 'Theme: dark'
+      };
+      var icons = {
+        system: 'fa-display',
+        light: 'fa-sun',
+        dark: 'fa-moon'
+      };
+      var media = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+
+      function currentSetting() {
+        var setting = document.documentElement.dataset.themeSetting;
+        return order.indexOf(setting) === -1 ? 'system' : setting;
+      }
+
+      function updateButton(setting) {
+        var label = labels[setting];
+        var icon = toggle.querySelector('i');
+        toggle.title = label;
+        toggle.setAttribute('aria-label', label);
+        icon.className = 'fa-solid ' + icons[setting];
+      }
+
+      function applyTheme(setting) {
+        var systemDark = media && media.matches;
+        var theme = setting === 'system' ? (systemDark ? 'dark' : 'light') : setting;
+        document.documentElement.dataset.themeSetting = setting;
+        document.documentElement.dataset.theme = theme;
+        try {
+          if (setting === 'system') localStorage.removeItem('seisamuse-theme');
+          else localStorage.setItem('seisamuse-theme', setting);
+        } catch (error) {}
+        updateButton(setting);
+        window.dispatchEvent(new CustomEvent('seisamuse-theme-change', {
+          detail: { theme: theme }
+        }));
+      }
+
+      toggle.addEventListener('click', function () {
+        var setting = currentSetting();
+        applyTheme(order[(order.indexOf(setting) + 1) % order.length]);
+      });
+
+      if (media) {
+        media.addEventListener('change', function () {
+          if (currentSetting() === 'system') applyTheme('system');
+        });
+      }
+
+      updateButton(currentSetting());
+    })();
+  </script>
+
+</body>
+</html>
