@@ -23,11 +23,11 @@
 <p>打开网页，工具会从有PDF、还没读过的文献里挑一篇。标题、作者、年份和摘要放在前面，下面直接预览PDF。</p>
 <p>重点是“随机”，跟你看奏章似的。</p>
 <p>不想读这篇，可以换一篇；遇到想留着细看的，可以收藏。读完以后点一下“读完了”，当天就有了记录。如果还想继续，也可以再来一篇。</p>
-<p><img alt="今日阅读完成后的页面" src="https://images.seis-jun.xyz/images/today_20260921.jpg" /></p>
+<p><img alt="今日阅读完成后的页面" src="https://img.seis-jun.xyz/images/today_20260921.jpg" /></p>
 <p><em>图 1：今日页在标记读完后的状态，也可以从这里继续“加餐”阅读。</em></p>
 <p>这个选择目前是随机的，没有按研究方向做推荐。对我来说，先解决“今天打开哪篇”这个小问题，也就够用了。</p>
 <p>文库页面则保留了主动找文章的入口，可以搜索，也可以筛选缺 PDF、已读、收藏等状态。有明确要读的文章时，直接去找，不必等随机挑中。</p>
-<p><img alt="文库中搜索 Rayleigh 的结果" src="https://images.seis-jun.xyz/images/library_20260921.jpg" /></p>
+<p><img alt="文库中搜索 Rayleigh 的结果" src="https://img.seis-jun.xyz/images/library_20260921.jpg" /></p>
 <p><em>图 2：在文库中搜索 Rayleigh，可以看到文献状态，以及打开 PDF、标注、收藏等操作入口。</em></p>
 <h2 id="_2">边读边做点标记</h2>
 <p>读文献总得划几道线，留几句批注。</p>
@@ -44,7 +44,7 @@
 
 <p>把这个地址放进书签栏，每天点开就行。这个地址只指向自己的电脑，不是一个公开网站。</p>
 <p>如果哪天页面打不开，可以到项目目录手动启动。我这台电脑上的命令是：</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/Users/junxie/Work/paper_read
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>paper_read
 ./scripts/run.sh
 </code></pre></div>
 
@@ -52,7 +52,7 @@
 <h2 id="_4">留下一点阅读记录</h2>
 <p>“记录”页面里有累计已读、连续天数和阅读热力图，可以回头看看最近有没有读文献。</p>
 <p>这些数字记录的是自己点过的“读完了”。文章是否读懂、方法能不能复现、结论有没有问题，当然还得自己判断。小工具帮忙留个记录，不能替自己读。</p>
-<p><img alt="阅读统计、热力图和最近动态" src="https://images.seis-jun.xyz/images/history_20260921.jpg" /></p>
+<p><img alt="阅读统计、热力图和最近动态" src="https://img.seis-jun.xyz/images/history_20260921.jpg" /></p>
 <p><em>图 3：当前的阅读统计和热力图。下面的“最近动态”也会记录文库整理操作，并不全是阅读事件。</em></p>
 <p>目前先用这一版：上午十点，打开一篇论文，做点批注，读完留个记录。独立笔记等真正用起来以后，再按需要补。</p>
 <p>工具已经有了，接下来轮到读论文了。</p>]]></content>
