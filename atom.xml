@@ -3,11 +3,67 @@
   <title>SEISAMUSE</title>
   <link href="https://www.seis-jun.xyz/atom.xml" rel="self" />
   <link href="https://www.seis-jun.xyz" />
-  <updated>2026-09-21T12:28:00+08:00</updated>
+  <updated>2026-09-21T16:00:00+08:00</updated>
   <id>https://www.seis-jun.xyz/</id>
   <author>
     <name>hashes</name>
   </author>
+  
+  <entry>
+    <title>文献每日一读</title>
+    <link href="https://www.seis-jun.xyz/blog/2026-09-21-paper-read.html" />
+    <id>https://www.seis-jun.xyz/blog/2026-09-21-paper-read.html</id>
+    <updated>2026-09-21T16:00:00+08:00</updated>
+    <published>2026-09-21T16:00:00+08:00</published>
+    <summary type="html"><p>Codex协助</p></summary>
+    <content type="html"><![CDATA[<p>文献收集了不少，每天打开一篇认真读，还是得给自己安排一下。</p>
+<p>于是，请Codex做了个小工具，名字就叫“每日一读”。把Zotero里的文献和电脑上存着的PDF放到一个页面里，每天挑一篇，读完打个勾。再加一个上午十点的提醒，给读文献留一个固定的位置。</p>
+<p>先跑起来，看看能不能坚持。</p>
+<h2 id="_1">今天读哪篇？</h2>
+<p>打开网页，工具会从有PDF、还没读过的文献里挑一篇。标题、作者、年份和摘要放在前面，下面直接预览PDF。</p>
+<p>重点是“随机”，跟你看奏章似的。</p>
+<p>不想读这篇，可以换一篇；遇到想留着细看的，可以收藏。读完以后点一下“读完了”，当天就有了记录。如果还想继续，也可以再来一篇。</p>
+<p><img alt="今日阅读完成后的页面" src="https://images.seis-jun.xyz/images/today_20260921.jpg" /></p>
+<p><em>图 1：今日页在标记读完后的状态，也可以从这里继续“加餐”阅读。</em></p>
+<p>这个选择目前是随机的，没有按研究方向做推荐。对我来说，先解决“今天打开哪篇”这个小问题，也就够用了。</p>
+<p>文库页面则保留了主动找文章的入口，可以搜索，也可以筛选缺 PDF、已读、收藏等状态。有明确要读的文章时，直接去找，不必等随机挑中。</p>
+<p><img alt="文库中搜索 Rayleigh 的结果" src="https://images.seis-jun.xyz/images/library_20260921.jpg" /></p>
+<p><em>图 2：在文库中搜索 Rayleigh，可以看到文献状态，以及打开 PDF、标注、收藏等操作入口。</em></p>
+<h2 id="_2">边读边做点标记</h2>
+<p>读文献总得划几道线，留几句批注。</p>
+<p>目前网页里主要负责预览。点“标注”，会用 Mac 自带的 Preview 打开对应的 PDF，然后就可以高亮、画线、加文字或便笺。保存之后，批注留在 PDF 文件里，回到网页重新加载就能查看。</p>
+<p>这套办法稍微绕了一步，不过用的是现成的阅读器，不用在小工具里重新做一套标注功能。</p>
+<p>这里也要区分一下：PDF 上的批注已经有了使用入口，独立的读书笔记还没有。比如给每篇文章写一段“解决了什么问题、方法有什么用、和自己的工作有什么关系”，目前还没有专门的编辑和保存入口。Zotero 里的笔记也没有同步进来。</p>
+<p>这个以后值得补。划了不少线，过一阵子却想不起当时为什么划，还是挺可惜的。</p>
+<h2 id="_3">上午十点，提醒自己一下</h2>
+<p>提醒时间定在每天上午十点。</p>
+<p>到时间，如果当天还没有标记读完，就尝试发一条系统通知；已经打过卡，就不再提醒。当前定时任务已经装好，不过实际通知能不能正常弹出，还要在日常使用中确认。</p>
+<p>平时使用倒是简单。电脑登录后，本地服务会自动运行，浏览器打开：</p>
+<div class="highlight"><pre><span></span><code>http://127.0.0.1:8766
+</code></pre></div>
+
+<p>把这个地址放进书签栏，每天点开就行。这个地址只指向自己的电脑，不是一个公开网站。</p>
+<p>如果哪天页面打不开，可以到项目目录手动启动。我这台电脑上的命令是：</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/Users/junxie/Work/paper_read
+./scripts/run.sh
+</code></pre></div>
+
+<p>手动启动时，终端窗口要保持开着。</p>
+<h2 id="_4">留下一点阅读记录</h2>
+<p>“记录”页面里有累计已读、连续天数和阅读热力图，可以回头看看最近有没有读文献。</p>
+<p>这些数字记录的是自己点过的“读完了”。文章是否读懂、方法能不能复现、结论有没有问题，当然还得自己判断。小工具帮忙留个记录，不能替自己读。</p>
+<p><img alt="阅读统计、热力图和最近动态" src="https://images.seis-jun.xyz/images/history_20260921.jpg" /></p>
+<p><em>图 3：当前的阅读统计和热力图。下面的“最近动态”也会记录文库整理操作，并不全是阅读事件。</em></p>
+<p>目前先用这一版：上午十点，打开一篇论文，做点批注，读完留个记录。独立笔记等真正用起来以后，再按需要补。</p>
+<p>工具已经有了，接下来轮到读论文了。</p>]]></content>
+    
+    <category term="paper" />
+    
+    <category term="python" />
+    
+    <category term="web" />
+    
+  </entry>
   
   <entry>
     <title>我们每个人都在演II</title>
@@ -2066,42 +2122,6 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
 <p>和鸟儿一样的自由，你们有吗？</p>]]></content>
     
     <category term="中间格子" />
-    
-  </entry>
-  
-  <entry>
-    <title>有用无用</title>
-    <link href="https://www.seis-jun.xyz/blog/2026-09-01-useful.html" />
-    <id>https://www.seis-jun.xyz/blog/2026-09-01-useful.html</id>
-    <updated>2026-09-01T08:07:18+08:00</updated>
-    <published>2026-09-01T08:07:18+08:00</published>
-    <summary type="html"><p>是游戏设定</p></summary>
-    <content type="html"><![CDATA[<p><img alt="" src="https://plus.unsplash.com/premium_photo-1682088353711-c6482d7f8f06?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" /></p>
-<p>老马接手twitter的时候把员工<a href="https://www.investing.com/news/economy/elon-musk-says-twitter-is-roughly-breaking-even-3053176">砍掉了约80%</a>。这个新闻应该不新鲜。别误会，不是真砍，而是他觉得这80%都是absurdly overstaffed。</p>
-<p>在它手下摸鱼真是倒了大霉了，只能回家哭泣。</p>
-<p>我觉得老马特像之前提到的极简主义。</p>
-<p>没用的东西就丢弃。</p>
-<p>但又有些不同，老马奉行的那一套极其像“功利主义”。</p>
-<p>考虑的是这个东西有没有产出、有没有收益？</p>
-<p>极简主义讲的是，这个东西对你有没有用？于是你活得家徒四壁。</p>
-<p>于是你看出差距。</p>
-<p>还不赶紧向老马靠拢，捞不着首富，下限怕也不低。</p>
-<p>哈哈，当我没说，主要是想硬凹一下押韵。</p>
-<p>然后又想起另一个吃饭时建议不要看的无用之用的说法。</p>
-<p>也就是，你用来擦屁股的时候，沾上污渍的就那么一小块。但你能够只用那一小块来擦屁股吗？</p>
-<p>好了，我只是想用这个恶心一下你。</p>
-<p>其实这还是“功利主义”。只是在讲冗余的东西也是有用的。</p>
-<p>我不否定功利主义，只是不建议把功利主义推到极致，否则人人都容易变成精致利己，他人都容易变成工具。</p>
-<p>一个东西，一个人对你有没有用？通常是相对于一个目的来讲。例如对于你是否能挣到钱，是否能竞争到一个职位等等。就像我在<a href="/blog/2026-08-30-back-to-school.html">游戏</a>里说，活得有点像有限游戏。但其实无限游戏也有很多目标，也需要工具，需要策略，需要帮助。</p>
-<p>因此我的结论是，这世界没有无用的东西。都是有用的，差别在于对于你的用处的大小，对于你用的时间差异。如果是个函数，那么它的变量是时间和目标。是时间依赖，目标依赖的。</p>
-<p>遥远的星系对你有没有用？如果是你帮着码字的时候一点用都没有；但是如果你陷入迷茫，开始仰望星空，也许你会从中领悟出另一番意境。</p>
-<p>和人闲聊有没有用？如果你在和别人商战正酣一点用都都没有；如果你心中烦闷，闲聊可能会让你解开胸中郁结。</p>
-<p>有限游戏里，规则需要自己来定，千万不要轻易把定义权交到别人手上。</p>
-<p>写到这里又觉得不对，一件东西能不能就是没用，但仍然值得存在？</p>
-<p><a href="/blog/2026-08-19-about-the-world-2.html">世界都是一个屎山代码</a>，很多东西，我根本懒得判断它有没有用，判断它有用无用，有用吗？</p>
-<p>好了，补丁打完，继续玩吧。</p>]]></content>
-    
-    <category term="有用无用" />
     
   </entry>
   
