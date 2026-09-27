@@ -3,11 +3,37 @@
   <title>SEISAMUSE</title>
   <link href="https://www.seis-jun.xyz/atom.xml" rel="self" />
   <link href="https://www.seis-jun.xyz" />
-  <updated>2026-09-26T17:16:54+08:00</updated>
+  <updated>2026-09-27T08:04:18+08:00</updated>
   <id>https://www.seis-jun.xyz/</id>
   <author>
     <name>hashes</name>
   </author>
+  
+  <entry>
+    <title>参照物</title>
+    <link href="https://www.seis-jun.xyz/blog/2026-09-27-reference.html" />
+    <id>https://www.seis-jun.xyz/blog/2026-09-27-reference.html</id>
+    <updated>2026-09-27T08:04:18+08:00</updated>
+    <published>2026-09-27T08:04:18+08:00</published>
+    <summary type="html"><p>有客观这回事吗？</p></summary>
+    <content type="html"><![CDATA[<p><img alt="" src="https://plus.unsplash.com/premium_photo-1725408090963-49dd5bfc1baf?q=80&amp;w=2071&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" /></p>
+<p>牛顿力学里面，观察、判断你的运动状态的时候，你需要一个参照物。例如你坐在十分平稳移动的车里，你只看车里的东西，你觉得自己是静止的；如果你看窗外景物，你知道你在往前跑；如果旁边有一辆车比你跑得快，你会觉得自己在后退。</p>
+<p>然后就让我想到了一个问题：人类在认识一些形容词的时候，作出判断的时候，是否需要参照物？我认为是要的。</p>
+<p>不少看似直接描述的词，其实忽略了判断标准。</p>
+<p>在描述一个东西很大的时候可能是因为一般的东西很小，或者你看到的东西比你以为的大。你的参照物就是更小的那个东西，或者是你的大小的标准。但你把两个都划在大的范畴的东西拿来对比的时候，又会出现大和小之分，这个时候两个相互成为了参照物。</p>
+<p>在讲学生优秀与否的时候可能是定了一个成绩的线，例如90分。当然，如果所有学生如果都超过90分，那也有可能将前10%这个指标当作了参照。</p>
+<p>也有些时候标准是很直接的，比判断一杯水是否满了。我们可以直观看到水位是否到达了杯沿。如果没有那就没有满。如果有几杯水，那水位高的就称为更满。</p>
+<p>在讲一个人很美的时候，可能在心里你已经构建了一个美和丑的标准，但这个标准其实十分模糊，有时你都找不到美和丑的中间状态。有时也许两个人都落在美的范围，但是如果把两个人放在一起比较，可能另一个会被判断为更丑。又或者一个普通的人在一堆长得很奇怪的人里面，可能会被你判断很美，例如唐伯虎点秋香里面的秋香。</p>
+<p>好吧，“奇怪”也是一个形容词，判断一个事物是否“奇怪”可能通常是对比“平常”你看到的了啊。</p>
+<p>这些形容词多数都是“comment”，我们讲生活中要区分“comment”和“fact”。因为comment通常都是有自己不同的标准和参照物的。也就是说，当一个人讲出了自己的那个形容词的时候，他无形之间在将他看到的东西与另一个参照物在对比，这个参照物可以是另一个东西也可以仅仅是一个模糊的标准。我们需要警惕的是，他拿的那个标准是谁定的，是合适的吗？<del>等等，怎么会到了我的《关于指标》系列</del></p>
+<p>所以很多时候一个人给出了判断，我们自动就落入了这个判断里面吗？</p>
+<p>就像写科研论文，你最好不要轻易给出评价。评价的时候其实暴露了我们的标准或者喜好。而自己的标准和喜好有太多的主观判断。</p>
+<p>因为我们知道主观这回事，一点也不客观。</p>
+<p>但你又怎么知道什么是客观呢？</p>]]></content>
+    
+    <category term="参照物" />
+    
+  </entry>
   
   <entry>
     <title>小K文章被拒了</title>
@@ -2073,29 +2099,6 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
 <p>简直佩服死编剧了啊，撒那么多钩子，长得不帅的Goodman也会吸引人。</p>]]></content>
     
     <category term="风骚律师" />
-    
-  </entry>
-  
-  <entry>
-    <title>嬷嬷</title>
-    <link href="https://www.seis-jun.xyz/blog/2026-09-06-me-me.html" />
-    <id>https://www.seis-jun.xyz/blog/2026-09-06-me-me.html</id>
-    <updated>2026-09-06T08:36:15+08:00</updated>
-    <published>2026-09-06T08:36:15+08:00</published>
-    <summary type="html"><p>再见</p></summary>
-    <content type="html"><![CDATA[<p><img alt="" src="https://images.unsplash.com/photo-1714479120969-436c216a3cd4?q=80&amp;w=2069&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" /></p>
-<p><a href="/blog/2026-09-01-middle-cabin.html">负责宫廷清洁的嬷嬷</a>通常是最先到的，然后是我。</p>
-<p>然后见到我，她会打招呼，&#8221;早上好。&#8221;</p>
-<p>我也会，&#8221;阿姨早上好。&#8221;</p>
-<p>&#8220;你好早啊。&#8221;</p>
-<p>&#8220;您更早一些啊。&#8221;</p>
-<p>嬷嬷一般两三个月就会换走。</p>
-<p>嬷嬷的性格差异蛮大。上上个甚至会和我聊聊她的娃；上一个从不和我打招呼，有时我和她打招呼她都当作没看见，一脸不悦倒不像嬷嬷而像太后了。</p>
-<p>最近这一位很热情，一直都是一副笑脸，甚至打招呼会早于我。</p>
-<p>我不知道为什么两三个月就会把她们换走。</p>
-<p>也不知道下一位嬷嬷，会不会比我更早。</p>]]></content>
-    
-    <category term="嬷嬷" />
     
   </entry>
   
