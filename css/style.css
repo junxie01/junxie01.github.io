@@ -871,20 +871,6 @@ main > .container.page-wide {
 }
 
 /* Comments section */
-.post-ad {
-  width: 100%;
-  margin: 3rem auto 0;
-}
-
-/* Collapse only after Google confirms that no ad was returned. */
-.post-ad:has(> .adsbygoogle[data-ad-status="unfilled"]) {
-  display: none;
-}
-
-.post-ad .adsbygoogle {
-  min-height: 100px;
-}
-
 .comments-section {
   margin-top: 3rem;
   padding-top: 2rem;

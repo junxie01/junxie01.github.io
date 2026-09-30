@@ -86,7 +86,7 @@
       <h1>我对这个博客做了什么</h1>
       <div class="post-meta">
         <time>2020-06-10</time>
-         &middot; 1,024 words
+         &middot; 1,007 words
         <span id="busuanzi_container_page_pv" style="display: none;">
           &middot; &#128065; <span id="busuanzi_value_page_pv"></span> views
         </span>
@@ -116,7 +116,7 @@
 <h2 id="_2">插入脚注</h2>
 <p>请参见此神仙<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>。 </p>
 <h2 id="_3">封面模式</h2>
-<p>参见<sup id="fnref:11"><a class="footnote-ref" href="#fn:11">11</a></sup>。下载这个插件：</p>
+<p>参见<sup id="fnref:11"><a class="footnote-ref" href="#fn:11">10</a></sup>。下载这个插件：</p>
 <div class="highlight"><pre><span></span><code>npm install --save hexo-less
 </code></pre></div>
 
@@ -136,7 +136,7 @@
 
 <p>那个100%前面是一个冒号，而大仙<sup id="fnref2:3"><a class="footnote-ref" href="#fn:3">3</a></sup>写做等号。我发现等号就偏右边，冒号就在正中，很奇怪。</p>
 <h2 id="_5">侧边栏圆角</h2>
-<p>搜索到这位大神<sup id="fnref:8"><a class="footnote-ref" href="#fn:8">8</a></sup>。我的Scheme选的是Pisces，所以先在next/source/css/_variables/Pisces.styl里面改一下变量</p>
+<p>搜索到这位大神<sup id="fnref:8"><a class="footnote-ref" href="#fn:8">7</a></sup>。我的Scheme选的是Pisces，所以先在next/source/css/_variables/Pisces.styl里面改一下变量</p>
 <div class="highlight"><pre><span></span><code>$border-radius                    = 5px;
 </code></pre></div>
 
@@ -187,12 +187,12 @@
 </code></pre></div>
 
 <h2 id="_10">加动态背景图片</h2>
-<p>根据这位大仙<sup id="fnref:7"><a class="footnote-ref" href="#fn:7">7</a></sup>的方法弄的。
+<p>根据这位大仙<sup id="fnref:7"><a class="footnote-ref" href="#fn:7">6</a></sup>的方法弄的。
 动态图片感觉太慢了。我在百度下了一个，有阳光森林，人，牛。感觉还不错，希望不要侵权。</p>
 <h2 id="_11">点击头像回到主页</h2>
 <p>设置请查看{% post_link avatar-to-homepage 这篇文章 %}</p>
 <h2 id="permalink">永久链接permalink</h2>
-<p>参见<sup id="fnref:10"><a class="footnote-ref" href="#fn:10">10</a></sup>。首先安装程序：</p>
+<p>参见<sup id="fnref:10"><a class="footnote-ref" href="#fn:10">9</a></sup>。首先安装程序：</p>
 <div class="highlight"><pre><span></span><code>npm install hexo-abbrlink --save
 </code></pre></div>
 
@@ -208,7 +208,7 @@
 </code></pre></div>
 
 <h2 id="footer">footer添加运行时间</h2>
-<p>参见<sup id="fnref:9"><a class="footnote-ref" href="#fn:9">9</a></sup>。找到/next/layout/_partials/footer.swig，在里面添加：</p>
+<p>参见<sup id="fnref:9"><a class="footnote-ref" href="#fn:9">8</a></sup>。找到/next/layout/_partials/footer.swig，在里面添加：</p>
 <div class="highlight"><pre><span></span><code><span class="nt">&lt;div&gt;</span>
 <span class="nt">&lt;span</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;timeDate&quot;</span><span class="nt">&gt;</span>Loading<span class="w"> </span>days...<span class="nt">&lt;/span&gt;&lt;span</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;times&quot;</span><span class="nt">&gt;</span>Loading<span class="w"> </span>sec....<span class="nt">&lt;/span&gt;</span>
 <span class="nt">&lt;script&gt;</span>
@@ -230,11 +230,9 @@ setInterval(&quot;createtime()&quot;,250);
 <span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
 
-<p>本来大神<sup id="fnref2:9"><a class="footnote-ref" href="#fn:9">9</a></sup>是写的中文，但我的出来是乱码，就改成了英文了。</p>
+<p>本来大神<sup id="fnref2:9"><a class="footnote-ref" href="#fn:9">8</a></sup>是写的中文，但我的出来是乱码，就改成了英文了。</p>
 <h2 id="_12">字数和阅读时长统计</h2>
 <p>请参见<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup>，或者请查看{% post_link word-count %}。</p>
-<h2 id="googlepost">添加google广告到post</h2>
-<p>参见<sup id="fnref:6"><a class="footnote-ref" href="#fn:6">6</a></sup>。</p>
 <h2 id="powered-by-hexo">隐藏网页底部 powered By Hexo</h2>
 <p>股沟出此大神<sup id="fnref2:2"><a class="footnote-ref" href="#fn:2">2</a></sup>的方法。
 但事实上next已经集成了这个功能，直接在next/_config.yml里将powered改为false就可以了，像这样：</p>
@@ -262,23 +260,20 @@ setInterval(&quot;createtime()&quot;,250);
 <li id="fn:5">
 <p>https://wylu.me/posts/e0424f3f/&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
 </li>
-<li id="fn:6">
-<p>https://juejin.im/post/5c95d230e51d45124e35cef6#comment&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 6 in the text">&#8617;</a></p>
-</li>
 <li id="fn:7">
-<p>https://blog.diqigan.cn/posts/add-background-picture-for-next.html&#160;<a class="footnote-backref" href="#fnref:7" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+<p>https://blog.diqigan.cn/posts/add-background-picture-for-next.html&#160;<a class="footnote-backref" href="#fnref:7" title="Jump back to footnote 6 in the text">&#8617;</a></p>
 </li>
 <li id="fn:8">
-<p>http://eternalzttz.com/hexo-next.html&#160;<a class="footnote-backref" href="#fnref:8" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+<p>http://eternalzttz.com/hexo-next.html&#160;<a class="footnote-backref" href="#fnref:8" title="Jump back to footnote 7 in the text">&#8617;</a></p>
 </li>
 <li id="fn:9">
-<p>https://www.93bok.com/Hexo网站运行时间添加/&#160;<a class="footnote-backref" href="#fnref:9" title="Jump back to footnote 9 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:9" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+<p>https://www.93bok.com/Hexo网站运行时间添加/&#160;<a class="footnote-backref" href="#fnref:9" title="Jump back to footnote 8 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:9" title="Jump back to footnote 8 in the text">&#8617;</a></p>
 </li>
 <li id="fn:10">
-<p>https://github.com/Rozbo/hexo-abbrlink&#160;<a class="footnote-backref" href="#fnref:10" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+<p>https://github.com/Rozbo/hexo-abbrlink&#160;<a class="footnote-backref" href="#fnref:10" title="Jump back to footnote 9 in the text">&#8617;</a></p>
 </li>
 <li id="fn:11">
-<p>https://github.com/fuchen/hexo-less&#160;<a class="footnote-backref" href="#fnref:11" title="Jump back to footnote 11 in the text">&#8617;</a></p>
+<p>https://github.com/fuchen/hexo-less&#160;<a class="footnote-backref" href="#fnref:11" title="Jump back to footnote 10 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
@@ -295,8 +290,6 @@ setInterval(&quot;createtime()&quot;,250);
       <a class="post-nav-next" href="/blog/2020-06-12-learn-sed.html">sed插入和删除匹配行 &rarr;</a>
     
   </div>
-  
-
   <div class="comments-section">
   <h3>Comments</h3>
   <script>
