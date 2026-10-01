@@ -3,11 +3,40 @@
   <title>SEISAMUSE</title>
   <link href="https://www.seis-jun.xyz/atom.xml" rel="self" />
   <link href="https://www.seis-jun.xyz" />
-  <updated>2026-09-30T18:16:01+08:00</updated>
+  <updated>2026-10-01T19:42:39+08:00</updated>
   <id>https://www.seis-jun.xyz/</id>
   <author>
     <name>hashes</name>
   </author>
+  
+  <entry>
+    <title>国庆节旅行第一天</title>
+    <link href="https://www.seis-jun.xyz/blog/2026-10-01-first-day-of-national-day-holiday.html" />
+    <id>https://www.seis-jun.xyz/blog/2026-10-01-first-day-of-national-day-holiday.html</id>
+    <updated>2026-10-01T19:42:39+08:00</updated>
+    <published>2026-10-01T19:42:39+08:00</published>
+    <summary type="html"><p>国庆节快乐。 国庆节准备回老家一趟，但是有点远，开车一天到的话得把我开个半死。所以干脆边旅行边回家了。 妻子安排的行程。我已经经过多次高速历练，妻子也是。之前怕自己走神，还需要请她在旁边放音乐，陪我聊天，如今她已经可以在副驾追剧或者追梦了。而娃一直都是后座睡觉大王。 早上8点40出发，晚上6点40到了奉节，准备领略白帝...</p></summary>
+    <content type="html"><![CDATA[<p><img alt="" src="https://images.unsplash.com/photo-1473938718606-f15cdc613d96?q=80&amp;w=2148&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" /></p>
+<p>国庆节快乐。</p>
+<p>国庆节准备回老家一趟，但是有点远，开车一天到的话得把我开个半死。所以干脆边旅行边回家了。</p>
+<p>妻子安排的行程。我已经经过多次高速历练，妻子也是。之前怕自己走神，还需要请她在旁边放音乐，陪我聊天，如今她已经可以在副驾追剧或者追梦了。而娃一直都是后座睡觉大王。</p>
+<p>早上8点40出发，晚上6点40到了奉节，准备领略白帝城风光啊。</p>
+<p>从家到奉节才555千米，但架不住路上的人多，硬是开了一个多小时才出城，而且开到山区限速是100，甚至很多地方是80，当然小县城还有40。</p>
+<p>我有几个发现。</p>
+<p>第一、请车载导航导了，但是行程时间一个劲儿地变，早的可以下午2点到，晚的可以8点，主要还是取决于堵不堵。最终也不是平均啊。</p>
+<p>第二、真的会遇到堵，而且堵总是在你前面。特别是你在看导航的时候，你前面的那一段总是黄色，然后眼睁睁变成橙红，你跟着挪一会儿以后就变猪肝红。我的意思是，“堵”似乎是跟着你的，因此我可以叫“堵神”。哈哈，开玩笑，其实可能是采样偏差的关系。因为如果路程通畅的话，我的眼神都关注着车道和车辆；但如果堵的时候，我总会一个劲儿地去看导航，看还要堵多久。所以你的关注都在堵上了，你的心就堵了。此外，其他人的堵，你也看不着，不关心啊。</p>
+<p>第三、有四处堵明确是车祸了。我们路过，会看到头或者屁股歪歪的车子，旁边还站了打电话的人，或者已经被载到清障车上的烂屁股车。</p>
+<p>第四、似乎真的有“一年一箱油”的选手在路上。你可以看到，限速120的路，他们跑80-90；有些遇到了旁边的大车就会刹一脚，大约是有“巨物恐惧症”；还有的在两辆大卡车之间怡然自得，怕是喜欢两个大哥哥的爱护啊；还有的你稍微跟一段，发现，诶，好像跑不了直线，有时差点往旁边护栏撞，结果一扭，惊险躲过。真替他捏把汗，然后我一脚油门就跟他说拜拜了。</p>
+<p>第五、堵车的时候已经够心烦了，结果你发现很多人从应急车道挤过去。心理盼着他们也变成歪脖子。真的希望谁用AI整一个时时抓拍走应急车道的车，然后自动上传到110，那可是能挣钱的。然后我又在想，规矩真的是用来限制守规矩的人的啊。不守规矩的可能真会取笑守规矩的，他们看我们是不是像看一群傻子。而我们如果开上去，是不是也会嘲笑规矩等车的呢。然而，可能不会啊，因为大部分人还是没有走那。行吧，赶紧写好这个程序，咱们一起挣钱吧。</p>
+<p>第六、进了山以后隧道真多。重庆的隧道有点不一样，只有一排灯，但更加连续，不会闪眼睛，而且真的像防控洞。</p>
+<p>第七、开到最后最受不了的居然是屁股。</p>
+<p>话说重庆菜的味道真不错。</p>]]></content>
+    
+    <category term="国庆节" />
+    
+    <category term="开车" />
+    
+  </entry>
   
   <entry>
     <title>我好像很喜欢植物</title>
@@ -2051,30 +2080,6 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w
     <category term="web" />
     
     <category term="Cloudflare" />
-    
-  </entry>
-  
-  <entry>
-    <title>老了</title>
-    <link href="https://www.seis-jun.xyz/blog/2026-09-09-getting-old.html" />
-    <id>https://www.seis-jun.xyz/blog/2026-09-09-getting-old.html</id>
-    <updated>2026-09-09T07:35:51+08:00</updated>
-    <published>2026-09-09T07:35:51+08:00</published>
-    <summary type="html"><p>悄悄地</p></summary>
-    <content type="html"><![CDATA[<p><img alt="" src="https://images.unsplash.com/photo-1508963493744-76fce69379c0?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" /></p>
-<p>当到了晚上一到点，你发现你身体突然像断电了。</p>
-<p>当熬完夜的第二天和第三天你如行尸走肉，头晕头痛就像踩在棉花上一样。</p>
-<p>当奋力爬楼梯只爬个一两层，气喘吁吁腿脚打颤。</p>
-<p>当你低下头看你微微隆起的小肚子以及大腿皮肉，发现失了紧致松松垮垮。</p>
-<p>当感冒以后，你发现一个月也没有完全恢复。</p>
-<p>当发令枪一响，你冲出去，发现腿脚已经不似当年那么听你的话。</p>
-<p>当你关注到牙齿，发现缝隙原来可以藏住那么多东西。</p>
-<p>当娃开始有自己的想法，可以和你据理力争，而你争不过。</p>
-<p>当你认识的明星、亲人，都相继离去。</p>
-<p>当你觉得世界是属于那帮年轻人的，你认命了不再挣扎反抗。</p>
-<p>大约你觉得你已经老了。</p>]]></content>
-    
-    <category term="老" />
     
   </entry>
   
