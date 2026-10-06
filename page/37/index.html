@@ -85,6 +85,22 @@
     <div class="feed-list">
       
       <article class="feed-card">
+        <h2><a href="/blog/2025-08-25-png-to-mp4.html">如何将图片转化成视频</a></h2>
+        
+        <div class="feed-excerpt"><p>&emsp;&emsp;如果我有一堆图片，如何利用他们生成视频呢？</p></div>
+        
+        <div class="feed-tags">
+          
+          <a href="/blog/tag/linux/">Linux</a>
+          
+        </div>
+        
+        <div class="feed-card-date">
+          <time datetime="2025-08-25">2025-08-25</time>
+        </div>
+      </article>
+      
+      <article class="feed-card">
         <h2><a href="/blog/2025-08-24-fk.html">PYTHON脚本练习III</a></h2>
         
         <div class="feed-excerpt"><p>&emsp;&emsp;python脚本练习-fk。</p></div>
@@ -150,24 +166,6 @@
         </div>
       </article>
       
-      <article class="feed-card">
-        <h2><a href="/blog/2025-06-21-jupyter-notebook-extensions.html">有趣的jupyter-notebook插件</a></h2>
-        
-        <div class="feed-excerpt"><p>&emsp;&emsp;收集了一些有趣的jupyter notebook插件。</p></div>
-        
-        <div class="feed-tags">
-          
-          <a href="/blog/tag/python/">python</a>
-          
-          <a href="/blog/tag/jupyter/">jupyter</a>
-          
-        </div>
-        
-        <div class="feed-card-date">
-          <time datetime="2025-06-21">2025-06-21</time>
-        </div>
-      </article>
-      
     </div>
     
     <nav class="home-card-pager" aria-label="Home post navigation">
@@ -202,9 +200,6 @@
         <span id="busuanzi_container_site_uv">
           Visitors: <span id="busuanzi_value_site_uv"></span>
         </span>
-        <span id="site-comment-count" hidden>
-          &middot; Comments: <span id="site-comment-count-value"></span>
-        </span>
       </p>
       <p>&copy; 2026 hashes &middot; Built with Python &amp; Markdown &middot;
         GitHub &middot;
@@ -224,20 +219,6 @@
       </p>
     </div>
   </footer>
-
-  <script>
-    fetch('/comment-count.json', { cache: 'no-cache' })
-      .then(function (response) {
-        if (!response.ok) throw new Error('Comment count unavailable');
-        return response.json();
-      })
-      .then(function (data) {
-        if (!Number.isSafeInteger(data.total) || data.total < 0) return;
-        document.getElementById('site-comment-count-value').textContent = data.total.toLocaleString('en-US');
-        document.getElementById('site-comment-count').hidden = false;
-      })
-      .catch(function () {});
-  </script>
 
   <script type="module">
     import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';

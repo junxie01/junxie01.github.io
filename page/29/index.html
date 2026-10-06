@@ -85,6 +85,30 @@
     <div class="feed-list">
       
       <article class="feed-card">
+        <h2><a href="/blog/2026-05-09-paper-reading-53.html">Paper Reading (53)</a></h2>
+        
+        <a class="feed-card-image" href="/blog/2026-05-09-paper-reading-53.html">
+          <img src="/images/paper-481-meter-high-landslide-generated-tsunami-cruise/figure1.jpeg" alt="Paper Reading (53)">
+        </a>
+        
+        <div class="feed-excerpt"><p>481-meter-high landslide-generated tsunami in a cruise ship-frequented Alaska fjord</p></div>
+        
+        <div class="feed-tags">
+          
+          <a href="/blog/tag/paper/">paper</a>
+          
+          <a href="/blog/tag/geophysics/">geophysics</a>
+          
+          <a href="/blog/tag/ocean/">ocean</a>
+          
+        </div>
+        
+        <div class="feed-card-date">
+          <time datetime="2026-05-09">2026-05-09</time>
+        </div>
+      </article>
+      
+      <article class="feed-card">
         <h2><a href="/blog/2026-05-08-sunflower-seeds-eating.html">吃瓜子</a></h2>
         
         <a class="feed-card-image" href="/blog/2026-05-08-sunflower-seeds-eating.html">
@@ -172,22 +196,6 @@
         </div>
       </article>
       
-      <article class="feed-card">
-        <h2><a href="/blog/2026-04-08-paper-reading-50.html">文献阅读(50)</a></h2>
-        
-        <div class="feed-excerpt"><p>&emsp;&emsp;<a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2009JB006661">Chouet et al., 2010, JGR</a></p></div>
-        
-        <div class="feed-tags">
-          
-          <a href="/blog/tag/paper/">paper</a>
-          
-        </div>
-        
-        <div class="feed-card-date">
-          <time datetime="2026-04-08">2026-04-08</time>
-        </div>
-      </article>
-      
     </div>
     
     <nav class="home-card-pager" aria-label="Home post navigation">
@@ -222,9 +230,6 @@
         <span id="busuanzi_container_site_uv">
           Visitors: <span id="busuanzi_value_site_uv"></span>
         </span>
-        <span id="site-comment-count" hidden>
-          &middot; Comments: <span id="site-comment-count-value"></span>
-        </span>
       </p>
       <p>&copy; 2026 hashes &middot; Built with Python &amp; Markdown &middot;
         GitHub &middot;
@@ -244,20 +249,6 @@
       </p>
     </div>
   </footer>
-
-  <script>
-    fetch('/comment-count.json', { cache: 'no-cache' })
-      .then(function (response) {
-        if (!response.ok) throw new Error('Comment count unavailable');
-        return response.json();
-      })
-      .then(function (data) {
-        if (!Number.isSafeInteger(data.total) || data.total < 0) return;
-        document.getElementById('site-comment-count-value').textContent = data.total.toLocaleString('en-US');
-        document.getElementById('site-comment-count').hidden = false;
-      })
-      .catch(function () {});
-  </script>
 
   <script type="module">
     import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';

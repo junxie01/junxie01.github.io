@@ -85,6 +85,26 @@
     <div class="feed-list">
       
       <article class="feed-card">
+        <h2><a href="/blog/2026-09-09-getting-old.html">老了</a></h2>
+        
+        <a class="feed-card-image" href="/blog/2026-09-09-getting-old.html">
+          <img src="https://images.unsplash.com/photo-1508963493744-76fce69379c0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="老了">
+        </a>
+        
+        <div class="feed-excerpt"><p>悄悄地</p></div>
+        
+        <div class="feed-tags">
+          
+          <a href="/blog/tag/老/">老</a>
+          
+        </div>
+        
+        <div class="feed-card-date">
+          <time datetime="2026-09-09">2026-09-09</time>
+        </div>
+      </article>
+      
+      <article class="feed-card">
         <h2><a href="/blog/2026-09-08-dates.html">枣子</a></h2>
         
         <a class="feed-card-image" href="/blog/2026-09-08-dates.html">
@@ -166,26 +186,6 @@
         </div>
       </article>
       
-      <article class="feed-card">
-        <h2><a href="/blog/2026-09-07-keji.html">电梯里的柯基</a></h2>
-        
-        <a class="feed-card-image" href="/blog/2026-09-07-keji.html">
-          <img src="https://images.unsplash.com/photo-1728313282716-4d60240ec4da?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="电梯里的柯基">
-        </a>
-        
-        <div class="feed-excerpt"><p>需要注意身体</p></div>
-        
-        <div class="feed-tags">
-          
-          <a href="/blog/tag/柯基/">柯基</a>
-          
-        </div>
-        
-        <div class="feed-card-date">
-          <time datetime="2026-09-07">2026-09-07</time>
-        </div>
-      </article>
-      
     </div>
     
     <nav class="home-card-pager" aria-label="Home post navigation">
@@ -220,9 +220,6 @@
         <span id="busuanzi_container_site_uv">
           Visitors: <span id="busuanzi_value_site_uv"></span>
         </span>
-        <span id="site-comment-count" hidden>
-          &middot; Comments: <span id="site-comment-count-value"></span>
-        </span>
       </p>
       <p>&copy; 2026 hashes &middot; Built with Python &amp; Markdown &middot;
         GitHub &middot;
@@ -242,20 +239,6 @@
       </p>
     </div>
   </footer>
-
-  <script>
-    fetch('/comment-count.json', { cache: 'no-cache' })
-      .then(function (response) {
-        if (!response.ok) throw new Error('Comment count unavailable');
-        return response.json();
-      })
-      .then(function (data) {
-        if (!Number.isSafeInteger(data.total) || data.total < 0) return;
-        document.getElementById('site-comment-count-value').textContent = data.total.toLocaleString('en-US');
-        document.getElementById('site-comment-count').hidden = false;
-      })
-      .catch(function () {});
-  </script>
 
   <script type="module">
     import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';

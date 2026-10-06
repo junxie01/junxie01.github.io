@@ -85,6 +85,22 @@
     <div class="feed-list">
       
       <article class="feed-card">
+        <h2><a href="/blog/2020-09-25-how-to-download-video-from-internet.html">如何下载网上的视频</a></h2>
+        
+        <div class="feed-excerpt"><p>&emsp;&emsp;很多时候在线看视频遇到喜欢的就想下载下来慢慢欣赏。那如何下载呢？</p></div>
+        
+        <div class="feed-tags">
+          
+          <a href="/blog/tag/video/">video</a>
+          
+        </div>
+        
+        <div class="feed-card-date">
+          <time datetime="2020-09-25">2020-09-25</time>
+        </div>
+      </article>
+      
+      <article class="feed-card">
         <h2><a href="/blog/2020-09-14-how-to-calculate-synthetic-NCF.html">怎么计算理论的NCF？</a></h2>
         
         <div class="feed-excerpt"><p><img alt="Distribution of ambient noise sources (100-300 s) (Ermert et al., 2017 )" src="/images/source_dis.png" /></p></div>
@@ -150,23 +166,6 @@
         </div>
       </article>
       
-      <article class="feed-card">
-        <h2><a href="/blog/2020-07-10-IQ-decrease.html">现代人的智商可能在退步</a></h2>
-        
-        <div class="feed-excerpt"><p><img alt="智商捉急" src="/images/iq.jpg" />
-图片来自一篇2018年PANS期刊的<a href="https://www.pnas.org/content/115/26/6674?fbclid=IwAR3CVcH75ppH836xV4c5s99p11421Puo6ljF9hlQtg7kcRcXDa9_mdPSfU0">文章</a>.</p></div>
-        
-        <div class="feed-tags">
-          
-          <a href="/blog/tag/乱/">乱</a>
-          
-        </div>
-        
-        <div class="feed-card-date">
-          <time datetime="2020-07-10">2020-07-10</time>
-        </div>
-      </article>
-      
     </div>
     
     <nav class="home-card-pager" aria-label="Home post navigation">
@@ -201,9 +200,6 @@
         <span id="busuanzi_container_site_uv">
           Visitors: <span id="busuanzi_value_site_uv"></span>
         </span>
-        <span id="site-comment-count" hidden>
-          &middot; Comments: <span id="site-comment-count-value"></span>
-        </span>
       </p>
       <p>&copy; 2026 hashes &middot; Built with Python &amp; Markdown &middot;
         GitHub &middot;
@@ -223,20 +219,6 @@
       </p>
     </div>
   </footer>
-
-  <script>
-    fetch('/comment-count.json', { cache: 'no-cache' })
-      .then(function (response) {
-        if (!response.ok) throw new Error('Comment count unavailable');
-        return response.json();
-      })
-      .then(function (data) {
-        if (!Number.isSafeInteger(data.total) || data.total < 0) return;
-        document.getElementById('site-comment-count-value').textContent = data.total.toLocaleString('en-US');
-        document.getElementById('site-comment-count').hidden = false;
-      })
-      .catch(function () {});
-  </script>
 
   <script type="module">
     import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';

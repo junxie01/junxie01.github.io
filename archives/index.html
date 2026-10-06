@@ -83,7 +83,7 @@
 <div class="archives-hero">
   <h1 class="archives-title">归档</h1>
   <p>
-    386 posts since 2006.
+    387 posts since 2006.
     A chronological index of notes, papers, tools, and fragments.
   </p>
 </div>
@@ -93,13 +93,18 @@
   <details class="archive-year" id="year-2026" open>
     <summary class="archive-year-summary">
       <span class="archive-year-title">2026</span>
-      <span class="archive-year-total">150 posts</span>
+      <span class="archive-year-total">151 posts</span>
     </summary>
     <div class="archive-year-content">
     
     <section class="archive-month">
-      <h3>October 2026 <span>5 posts</span></h3>
+      <h3>October 2026 <span>6 posts</span></h3>
       <ul class="archive-post-list">
+        
+        <li>
+          <time datetime="2026-10-06">10-06</time>
+          <a href="/blog/2026-10-06-home-is-like-a-tomb-after-parents-die.html">为什么觉得父母故去后的老家像坟墓</a>
+        </li>
         
         <li>
           <time datetime="2026-10-05">10-05</time>
@@ -2712,9 +2717,6 @@
         <span id="busuanzi_container_site_uv">
           Visitors: <span id="busuanzi_value_site_uv"></span>
         </span>
-        <span id="site-comment-count" hidden>
-          &middot; Comments: <span id="site-comment-count-value"></span>
-        </span>
       </p>
       <p>&copy; 2026 hashes &middot; Built with Python &amp; Markdown &middot;
         GitHub &middot;
@@ -2734,20 +2736,6 @@
       </p>
     </div>
   </footer>
-
-  <script>
-    fetch('/comment-count.json', { cache: 'no-cache' })
-      .then(function (response) {
-        if (!response.ok) throw new Error('Comment count unavailable');
-        return response.json();
-      })
-      .then(function (data) {
-        if (!Number.isSafeInteger(data.total) || data.total < 0) return;
-        document.getElementById('site-comment-count-value').textContent = data.total.toLocaleString('en-US');
-        document.getElementById('site-comment-count').hidden = false;
-      })
-      .catch(function () {});
-  </script>
 
   <script type="module">
     import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';

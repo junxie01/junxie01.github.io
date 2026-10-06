@@ -87,6 +87,12 @@
 <ul class="post-list">
   
   <li class="post-item">
+    <span class="post-date">2026-10-06</span>
+    <h3><a href="/blog/2026-10-06-home-is-like-a-tomb-after-parents-die.html">为什么觉得父母故去后的老家像坟墓</a></h3>
+    <div class="excerpt"><p>这就来回答妻子提出的问题。 为什么觉得父母故去后的老家像坟墓？我觉得主要原因就是现代城市化发展削弱了宗族势力。 为什么要讲宗族？以前古代，生产力低下，大家主要是农耕，基本是自给自足。男丁是十分重要的，因为要挑粪、耕地、施肥，一般都是男的干，女的干不动啊。 平时耕作，你不能独美其美啊。我的意思是，其实环境很残酷，很多资源...</p></div>
+  </li>
+  
+  <li class="post-item">
     <span class="post-date">2020-06-03</span>
     <h3><a href="/blog/2020-06-03-about-diary.html">关于写日记</a></h3>
     <div class="excerpt"><p>&emsp;&emsp;好久都没有写日记的习惯了。今天勉强写一些吧。</p></div>
@@ -110,9 +116,6 @@
         <span id="busuanzi_container_site_uv">
           Visitors: <span id="busuanzi_value_site_uv"></span>
         </span>
-        <span id="site-comment-count" hidden>
-          &middot; Comments: <span id="site-comment-count-value"></span>
-        </span>
       </p>
       <p>&copy; 2026 hashes &middot; Built with Python &amp; Markdown &middot;
         GitHub &middot;
@@ -132,20 +135,6 @@
       </p>
     </div>
   </footer>
-
-  <script>
-    fetch('/comment-count.json', { cache: 'no-cache' })
-      .then(function (response) {
-        if (!response.ok) throw new Error('Comment count unavailable');
-        return response.json();
-      })
-      .then(function (data) {
-        if (!Number.isSafeInteger(data.total) || data.total < 0) return;
-        document.getElementById('site-comment-count-value').textContent = data.total.toLocaleString('en-US');
-        document.getElementById('site-comment-count').hidden = false;
-      })
-      .catch(function () {});
-  </script>
 
   <script type="module">
     import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';

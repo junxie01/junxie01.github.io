@@ -90,6 +90,22 @@
       
       <li class="blog-index-item">
         <div class="blog-index-title">
+          <h2><a href="/blog/2026-10-06-home-is-like-a-tomb-after-parents-die.html">为什么觉得父母故去后的老家像坟墓</a></h2>
+        </div>
+        <div class="blog-index-meta">
+          
+          <span class="blog-index-topics">
+            
+            <a href="/blog/topic/日记/">日记</a>
+            
+          </span>
+          
+          <time class="blog-index-date" datetime="2026-10-06">2026-10-06</time>
+        </div>
+      </li>
+      
+      <li class="blog-index-item">
+        <div class="blog-index-title">
           <h2><a href="/blog/2026-10-05-day3-departure.html">入蜀记day3 departure</a></h2>
         </div>
         <div class="blog-index-meta">
@@ -552,22 +568,6 @@
         </div>
       </li>
       
-      <li class="blog-index-item">
-        <div class="blog-index-title">
-          <h2><a href="/blog/2026-09-19-Cook-Xi-Dismembers-a-Goose.html">庖细解鹅</a></h2>
-        </div>
-        <div class="blog-index-meta">
-          
-          <span class="blog-index-topics">
-            
-            <a href="/blog/topic/随笔/">随笔</a>
-            
-          </span>
-          
-          <time class="blog-index-date" datetime="2026-09-19">2026-09-19</time>
-        </div>
-      </li>
-      
     </ul>
 
     
@@ -677,6 +677,13 @@
           </a>
         </li>
         
+        <li>
+          <a href="/blog/topic/日记/">
+            <span>日记</span>
+            <span>1</span>
+          </a>
+        </li>
+        
       </ul>
     </section>
   </aside>
@@ -697,9 +704,6 @@
         <span id="busuanzi_container_site_uv">
           Visitors: <span id="busuanzi_value_site_uv"></span>
         </span>
-        <span id="site-comment-count" hidden>
-          &middot; Comments: <span id="site-comment-count-value"></span>
-        </span>
       </p>
       <p>&copy; 2026 hashes &middot; Built with Python &amp; Markdown &middot;
         GitHub &middot;
@@ -719,20 +723,6 @@
       </p>
     </div>
   </footer>
-
-  <script>
-    fetch('/comment-count.json', { cache: 'no-cache' })
-      .then(function (response) {
-        if (!response.ok) throw new Error('Comment count unavailable');
-        return response.json();
-      })
-      .then(function (data) {
-        if (!Number.isSafeInteger(data.total) || data.total < 0) return;
-        document.getElementById('site-comment-count-value').textContent = data.total.toLocaleString('en-US');
-        document.getElementById('site-comment-count').hidden = false;
-      })
-      .catch(function () {});
-  </script>
 
   <script type="module">
     import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
