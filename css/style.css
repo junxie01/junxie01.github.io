@@ -12,32 +12,38 @@
 
 :root {
   color-scheme: light;
-  --text:    #202428;
-  --bg:      #f7f8f8;
-  --accent:  #3c5d80;
-  --muted:   #69727c;
-  --border:  #d9dee3;
+  --text:    #29332f;
+  --bg:      #f5f7f4;
+  --accent:  #315f50;
+  --muted:   #69756f;
+  --border:  #d9e0da;
   --card-bg: #ffffff;
-  --nav-bg:  #fffffff2;
-  --code-bg: #edf0f2;
+  --nav-bg:  #f9faf8f2;
+  --code-bg: #edf2ee;
   --max-w:   820px;
   --content-w: 820px;
   --sidebar-w: 200px;
-  --soft-bg:  #f0f2f4;
-  --card-shadow: 0 1px 3px rgba(31, 41, 51, 0.06);
+  --soft-bg:  #eef2ed;
+  --brand-ink: #2b5045;
+  --brand-paper: #eaf2ee;
+  --brand-copper: #995b3a;
+  --card-shadow: 0 1px 3px rgba(28, 48, 40, 0.06);
 }
 
 html[data-theme="dark"] {
   color-scheme: dark;
-  --text:    #e6e9ec;
-  --bg:      #0f1113;
-  --accent:  #7fa8d6;
-  --muted:   #9aa3ad;
-  --border:  #30363d;
-  --card-bg: #171a1d;
-  --nav-bg:  #0f1113f2;
-  --code-bg: #20252a;
-  --soft-bg: #1b1f23;
+  --text:    #e5e9e3;
+  --bg:      #111613;
+  --accent:  #9dbfb0;
+  --muted:   #a1aba3;
+  --border:  #303c35;
+  --card-bg: #19211d;
+  --nav-bg:  #111613f2;
+  --code-bg: #233029;
+  --soft-bg: #1d2822;
+  --brand-ink: #b5d4c4;
+  --brand-paper: #1b2a25;
+  --brand-copper: #d9a27d;
   --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.22);
 }
 
@@ -47,7 +53,7 @@ html {
 }
 
 body {
-  font-family: 'Palatino Linotype', Palatino, Georgia, 'Times New Roman', serif;
+  font-family: 'Palatino Linotype', Palatino, Georgia, 'Songti SC', 'Noto Serif CJK SC', 'Times New Roman', serif;
   color: var(--text);
   background: var(--bg);
   line-height: 1.75;
@@ -58,7 +64,8 @@ body {
 
 /* --- Typography --- */
 h1, h2, h3, h4 {
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: Georgia, 'Songti SC', 'Noto Serif CJK SC', 'Times New Roman', serif;
+  color: var(--brand-ink);
   font-weight: 700;
   line-height: 1.3;
   margin-top: 1.6em;
@@ -310,7 +317,7 @@ main > .container.page-wide {
   align-items: center;
   gap: 1rem;
   margin-top: 0;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   padding-bottom: 0;
 }
 
@@ -1120,11 +1127,37 @@ footer a:hover {
 }
 
 /* --- Page Title (for Blog, About, Links) --- */
-.page-title {
+.page-title,
+.archives-title,
+.blog-title-row h1 {
+  position: relative;
   margin-top: 0;
-  margin-bottom: 1.5rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--text);
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.7rem;
+  color: var(--brand-ink);
+  font-size: 1.75rem;
+  line-height: 1.3;
+  border-bottom: 1px solid var(--border);
+}
+
+.page-title::after,
+.archives-title::after {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 2.4rem;
+  height: 2px;
+  content: "";
+  background: var(--brand-copper);
+}
+
+.blog-title-row .page-title {
+  flex: 1 1 auto;
+  margin-bottom: 0;
+}
+
+.post-header h1 {
+  color: var(--brand-ink);
 }
 
 /* --- Pagination --- */
@@ -1189,7 +1222,7 @@ footer a:hover {
   align-items: center;
   flex: 0 0 auto;
   gap: 0.55rem;
-  color: var(--text);
+  color: var(--brand-ink);
   border-bottom: none;
 }
 
@@ -1209,7 +1242,7 @@ footer a:hover {
 
 .masthead-title {
   display: block;
-  color: var(--text);
+  color: var(--brand-ink);
   font-family: Georgia, 'Times New Roman', serif;
   font-size: 1.25rem;
   font-weight: 700;
@@ -1239,8 +1272,8 @@ footer a:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 1.95rem;
-  height: 1.95rem;
+  width: 40px;
+  height: 40px;
   color: var(--muted);
   border: 1px solid var(--border);
   border-radius: 6px;
@@ -1259,7 +1292,8 @@ footer a:hover {
   border-color: var(--accent);
 }
 
-.theme-toggle:focus-visible {
+.theme-toggle:focus-visible,
+.masthead a:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
@@ -1274,6 +1308,7 @@ footer a:hover {
   border-radius: 6px;
   font-family: system-ui, -apple-system, sans-serif;
   font-size: 0.86rem;
+  height: 40px;
 }
 
 .primary-nav {
@@ -1292,8 +1327,12 @@ footer a:hover {
 }
 
 .primary-nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
   color: var(--muted);
-  border-bottom: none;
+  border-bottom: 2px solid transparent;
   font-family: system-ui, -apple-system, sans-serif;
   font-size: 0.86rem;
   font-weight: 650;
@@ -1303,7 +1342,20 @@ footer a:hover {
 
 .primary-nav a:hover,
 .primary-nav a.active {
-  color: var(--accent);
+  color: var(--brand-ink);
+}
+
+.primary-nav a.active {
+  border-bottom-color: var(--brand-copper);
+}
+
+.primary-nav .masthead-search-shortcut {
+  display: none;
+}
+
+.masthead-search-shortcut svg {
+  width: 19px;
+  height: 19px;
 }
 
 .home-shell {
@@ -1319,15 +1371,9 @@ footer a:hover {
 }
 
 .home-main {
-  --home-paper: #eaf2ee;
-  --home-ink: #2b5045;
-  --home-copper: #995b3a;
-}
-
-html[data-theme="dark"] .home-main {
-  --home-paper: #1b2a25;
-  --home-ink: #b5d4c4;
-  --home-copper: #d9a27d;
+  --home-paper: var(--brand-paper);
+  --home-ink: var(--brand-ink);
+  --home-copper: var(--brand-copper);
 }
 
 body:has(.home-main) {
@@ -1746,14 +1792,6 @@ body:has(.home-main) {
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme]) .home-main {
-    --home-paper: #1b2a25;
-    --home-ink: #b5d4c4;
-    --home-copper: #d9a27d;
-  }
-}
-
 .home-card-pager {
   display: flex;
   justify-content: center;
@@ -2053,15 +2091,18 @@ body:has(.home-main) {
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
     color-scheme: dark;
-    --text:    #e6e9ec;
-    --bg:      #0f1113;
-    --accent:  #7fa8d6;
-    --muted:   #9aa3ad;
-    --border:  #30363d;
-    --card-bg: #171a1d;
-    --nav-bg:  #0f1113f2;
-    --code-bg: #20252a;
-    --soft-bg: #1b1f23;
+    --text:    #e5e9e3;
+    --bg:      #111613;
+    --accent:  #9dbfb0;
+    --muted:   #a1aba3;
+    --border:  #303c35;
+    --card-bg: #19211d;
+    --nav-bg:  #111613f2;
+    --code-bg: #233029;
+    --soft-bg: #1d2822;
+    --brand-ink: #b5d4c4;
+    --brand-paper: #1b2a25;
+    --brand-copper: #d9a27d;
     --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.22);
   }
 
@@ -2153,37 +2194,56 @@ body:has(.home-main) {
 @media (max-width: 640px) {
   html { font-size: 15.5px; }
 
+  .masthead {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.2rem 0.5rem;
+    padding-top: 0.4rem;
+    padding-bottom: 0.25rem;
+  }
+
+  .masthead-identity {
+    min-width: 0;
+    gap: 6px;
+  }
+
   .masthead-title {
-    font-size: 1.08rem;
+    font-size: 1rem;
+    letter-spacing: 0.025em;
+    white-space: nowrap;
   }
 
   .masthead-avatar {
-    width: 36px;
-    height: 36px;
+    width: 30px;
+    height: 30px;
+    flex: 0 0 auto;
   }
 
   .masthead-actions {
-    width: 100%;
+    grid-column: 2;
+    grid-row: 1;
+    width: auto;
     margin-left: 0;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    gap: 4px;
   }
 
   .primary-nav {
-    order: 3;
-    flex-basis: 100%;
+    grid-column: 1 / -1;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 0;
+    order: 0;
   }
 
   .masthead-search {
-    flex: 1 1 8rem;
+    display: none;
   }
 
-  .masthead-search input {
-    width: 100%;
-  }
-
-  .primary-nav {
-    gap: 0.2rem 0.75rem;
+  .primary-nav .masthead-search-shortcut {
+    display: inline-flex;
   }
 
   .home-sidebar {
@@ -2210,13 +2270,29 @@ body:has(.home-main) {
   }
 
   .blog-index-item {
-    grid-template-columns: minmax(0, 1fr) auto;
-    gap: 0.5rem;
-    padding: 0.42rem 0;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.35rem;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .blog-index-title::after {
+    display: none;
+  }
+
+  .blog-index-title h2 a {
+    overflow: visible;
+    text-overflow: clip;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    line-height: 1.5;
   }
 
   .blog-index-meta {
-    gap: 0.5rem;
+    justify-content: flex-start;
+    gap: 0.6rem;
+    font-size: 0.76rem;
+    text-align: left;
   }
 
   .blog-index-topics a:nth-child(n + 2) {
@@ -2226,5 +2302,16 @@ body:has(.home-main) {
   .archive-post-list li {
     grid-template-columns: 1fr;
     gap: 0.05rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .masthead-title {
+    font-size: 0.9rem;
+  }
+
+  .masthead-avatar {
+    width: 28px;
+    height: 28px;
   }
 }

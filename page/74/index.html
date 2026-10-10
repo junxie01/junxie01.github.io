@@ -55,17 +55,20 @@
       </a>
 
       <nav class="primary-nav" aria-label="Primary navigation">
-        <a href="/" class="active">主页</a>
+        <a href="/" class="active" aria-current="page">主页</a>
         <a href="/blog/">博客</a>
         <a href="/thoughts/">想法</a>
         <a href="/archives/">归档</a>
         <a href="/about/">自述</a>
         <a href="/links/">链接</a>
+        <a class="masthead-search-shortcut" href="/search/" aria-label="搜索文章" title="搜索文章">
+          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false"><circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="1.5"/><path d="m13 13 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </a>
       </nav>
 
       <div class="masthead-actions" aria-label="Site shortcuts">
         <form class="masthead-search" action="/search/" method="get">
-          <input type="search" name="q" placeholder="Search notes" aria-label="Search notes">
+          <input type="search" name="q" placeholder="搜索文章" aria-label="搜索文章">
         </form>
         <a href="mailto:hashes@yeah.net" title="Email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
         <a href="/atom.xml" title="Atom feed" aria-label="Atom feed"><i class="fa-solid fa-rss"></i></a>
