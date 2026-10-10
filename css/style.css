@@ -1134,7 +1134,6 @@ footer a:hover {
   color: var(--brand-ink);
   font-size: 1.75rem;
   line-height: 1.3;
-  border-bottom: 1px solid var(--border);
 }
 
 .page-title::after,
@@ -1151,7 +1150,6 @@ footer a:hover {
 .blog-title-row .page-title {
   flex: 1 1 auto;
   margin-bottom: 0;
-  border-bottom: none;
 }
 
 .post-header h1 {
