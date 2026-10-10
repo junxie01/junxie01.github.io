@@ -1404,6 +1404,7 @@ body:has(.home-main) {
   grid-template-columns: minmax(0, 1fr) minmax(0, 15rem);
   gap: 1.4rem;
   align-items: start;
+  padding-block: 1.2rem;
 }
 
 .home-intro-main,
@@ -1411,13 +1412,20 @@ body:has(.home-main) {
   min-width: 0;
 }
 
+.home-latest-thought {
+  align-self: center;
+}
+
 .home-latest-thought-excerpt {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4;
-  overflow: hidden;
   color: var(--home-ink);
   overflow-wrap: anywhere;
+}
+
+.home-latest-thought-excerpt time {
+  margin-left: 0.35rem;
+  color: var(--muted);
+  font-size: 0.72rem;
+  white-space: nowrap;
 }
 
 .home-latest-thought-meta {
@@ -1754,6 +1762,10 @@ body:has(.home-main) {
   .home-intro-with-thought {
     grid-template-columns: 1fr;
     gap: 1.2rem;
+  }
+
+  .home-latest-thought {
+    align-self: start;
   }
 }
 
