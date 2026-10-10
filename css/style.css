@@ -1331,25 +1331,32 @@ footer a:hover {
 }
 
 .home-intro {
-  padding: 0 0 1rem;
-  margin-bottom: 1rem;
-  border-bottom: 1px solid var(--border);
+  padding: 0.1rem 0.95rem 0.8rem;
+  margin-bottom: 0.2rem;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.65;
 }
 
 .home-intro p {
-  margin: 0 0 0.4rem;
+  margin: 0 0 0.2rem;
 }
 
 .home-intro-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.25rem 1.2rem;
-  font-size: 0.9rem;
+  gap: 0.1rem 0.8rem;
+  font-size: 0.82rem;
 }
 
 .home-intro-links a {
   display: inline-block;
-  padding: 0.35rem 0;
+  padding: 0.3rem 0;
+  color: var(--muted);
+}
+
+.home-intro-links a:hover {
+  color: var(--accent);
 }
 
 .home-intro-links a:focus-visible {
