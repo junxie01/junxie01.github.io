@@ -649,6 +649,10 @@ main > .container.page-wide {
   border-top: 1px solid var(--border);
 }
 
+.thoughts-archive > .thought-month-group:first-child {
+  border-top: none;
+}
+
 .thought-month-title {
   display: flex;
   align-items: baseline;
@@ -1134,17 +1138,6 @@ footer a:hover {
   color: var(--brand-ink);
   font-size: 1.75rem;
   line-height: 1.3;
-}
-
-.page-title::after,
-.archives-title::after {
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  width: 2.4rem;
-  height: 2px;
-  content: "";
-  background: var(--brand-copper);
 }
 
 .blog-title-row .page-title {
