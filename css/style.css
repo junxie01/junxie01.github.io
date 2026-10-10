@@ -12,38 +12,35 @@
 
 :root {
   color-scheme: light;
-  --text:    #29332f;
-  --bg:      #f5f7f4;
-  --accent:  #315f50;
-  --muted:   #69756f;
-  --border:  #d9e0da;
-  --card-bg: #ffffff;
-  --nav-bg:  #f9faf8f2;
-  --code-bg: #edf2ee;
+  --text:    #1a1a2e;
+  --bg:      #f7f3ea;
+  --accent:  #9a4f2f;
+  --muted:   #6b7280;
+  --border:  #d8cfc1;
+  --card-bg: #fffaf1;
+  --nav-bg:  #fffaf1e6;
+  --code-bg: #efe8dc;
   --max-w:   820px;
   --content-w: 820px;
   --sidebar-w: 200px;
-  --soft-bg:  #eef2ed;
-  --brand-ink: #2b5045;
-  --brand-paper: #eaf2ee;
-  --brand-copper: #995b3a;
-  --card-shadow: 0 1px 3px rgba(28, 48, 40, 0.06);
+  --soft-bg:  #fbf7ef;
+  --brand-ink: var(--text);
+  --brand-paper: var(--soft-bg);
+  --brand-copper: var(--accent);
+  --card-shadow: 0 1px 3px rgba(82, 63, 42, 0.06);
 }
 
 html[data-theme="dark"] {
   color-scheme: dark;
-  --text:    #e5e9e3;
-  --bg:      #111613;
-  --accent:  #9dbfb0;
-  --muted:   #a1aba3;
-  --border:  #303c35;
-  --card-bg: #19211d;
-  --nav-bg:  #111613f2;
-  --code-bg: #233029;
-  --soft-bg: #1d2822;
-  --brand-ink: #b5d4c4;
-  --brand-paper: #1b2a25;
-  --brand-copper: #d9a27d;
+  --text:    #e0e0e0;
+  --bg:      #1a1a2e;
+  --accent:  #e8a87c;
+  --muted:   #9ca3af;
+  --border:  #374151;
+  --card-bg: #22223b;
+  --nav-bg:  #1a1a2ecc;
+  --code-bg: #2a2a3e;
+  --soft-bg: #202038;
   --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.22);
 }
 
@@ -1154,6 +1151,7 @@ footer a:hover {
 .blog-title-row .page-title {
   flex: 1 1 auto;
   margin-bottom: 0;
+  border-bottom: none;
 }
 
 .post-header h1 {
@@ -2091,18 +2089,15 @@ body:has(.home-main) {
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
     color-scheme: dark;
-    --text:    #e5e9e3;
-    --bg:      #111613;
-    --accent:  #9dbfb0;
-    --muted:   #a1aba3;
-    --border:  #303c35;
-    --card-bg: #19211d;
-    --nav-bg:  #111613f2;
-    --code-bg: #233029;
-    --soft-bg: #1d2822;
-    --brand-ink: #b5d4c4;
-    --brand-paper: #1b2a25;
-    --brand-copper: #d9a27d;
+    --text:    #e0e0e0;
+    --bg:      #1a1a2e;
+    --accent:  #e8a87c;
+    --muted:   #9ca3af;
+    --border:  #374151;
+    --card-bg: #22223b;
+    --nav-bg:  #1a1a2ecc;
+    --code-bg: #2a2a3e;
+    --soft-bg: #202038;
     --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.22);
   }
 
