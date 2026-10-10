@@ -1330,6 +1330,33 @@ footer a:hover {
   margin: 0;
 }
 
+.home-intro {
+  padding: 0 0 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.home-intro p {
+  margin: 0 0 0.4rem;
+}
+
+.home-intro-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.2rem;
+  font-size: 0.9rem;
+}
+
+.home-intro-links a {
+  display: inline-block;
+  padding: 0.35rem 0;
+}
+
+.home-intro-links a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
 .feed-list {
   display: grid;
   gap: 0.85rem;
