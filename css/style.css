@@ -1758,6 +1758,24 @@ body:has(.home-main) {
   -webkit-line-clamp: 4;
 }
 
+@media (min-width: 721px) {
+  .home-latest-thought-excerpt {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .home-latest-thought {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+  }
+
+  .home-latest-thought-meta {
+    margin-top: auto;
+    padding-top: 0.8rem;
+  }
+}
+
 @media (max-width: 720px) {
   .home-intro-with-thought {
     grid-template-columns: 1fr;
