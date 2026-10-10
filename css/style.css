@@ -1318,6 +1318,22 @@ footer a:hover {
   min-width: 0;
 }
 
+.home-main {
+  --home-paper: #eaf2ee;
+  --home-ink: #2b5045;
+  --home-copper: #995b3a;
+}
+
+html[data-theme="dark"] .home-main {
+  --home-paper: #1b2a25;
+  --home-ink: #b5d4c4;
+  --home-copper: #d9a27d;
+}
+
+body:has(.home-main) {
+  background: color-mix(in srgb, var(--accent) 4%, var(--bg));
+}
+
 .home-sidebar {
   display: grid;
   grid-template-columns: 1fr;
@@ -1331,32 +1347,103 @@ footer a:hover {
 }
 
 .home-intro {
-  padding: 0.1rem 0.95rem 0.8rem;
-  margin-bottom: 0.2rem;
+  position: relative;
+  overflow: hidden;
+  padding: 1.55rem 1.65rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid color-mix(in srgb, var(--home-ink) 12%, var(--border));
+  border-radius: 12px;
+  background: linear-gradient(115deg, var(--home-paper), color-mix(in srgb, var(--home-paper) 35%, var(--card-bg)));
   color: var(--muted);
-  font-size: 0.88rem;
+  font-size: 0.94rem;
   line-height: 1.65;
 }
 
+.home-contours {
+  position: absolute;
+  width: 280px;
+  height: 260px;
+  right: -38px;
+  top: -20px;
+  stroke: var(--home-ink);
+  stroke-width: 1;
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+.home-intro-copy,
+.home-intro-links {
+  position: relative;
+}
+
+.home-intro-copy {
+  max-width: 29rem;
+}
+
+.home-intro-label {
+  margin-bottom: 0.65rem;
+  color: var(--home-copper);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+.home-intro-label span {
+  margin: 0 0.2rem;
+}
+
+.home-intro h1 {
+  margin: 0 0 0.45rem;
+  color: var(--home-ink);
+  font-size: 2rem;
+  line-height: 1.3;
+  letter-spacing: 0.04em;
+}
+
 .home-intro p {
-  margin: 0 0 0.2rem;
+  margin: 0;
 }
 
 .home-intro-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.1rem 0.8rem;
+  gap: 0.5rem;
+  margin-top: 1rem;
   font-size: 0.82rem;
 }
 
 .home-intro-links a {
-  display: inline-block;
-  padding: 0.3rem 0;
-  color: var(--muted);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  min-height: 38px;
+  padding: 0.35rem 0.75rem;
+  color: var(--home-ink);
+  background: color-mix(in srgb, var(--card-bg) 65%, transparent);
+  border: 1px solid color-mix(in srgb, var(--home-ink) 18%, transparent);
+  border-radius: 5px;
 }
 
 .home-intro-links a:hover {
-  color: var(--accent);
+  color: var(--home-copper);
+  border-color: var(--home-copper);
+}
+
+.home-intro-links #random-post-link {
+  color: var(--card-bg);
+  background: var(--home-ink);
+  border-color: var(--home-ink);
+}
+
+.home-intro-links #random-post-link:hover {
+  background: var(--home-copper);
+  border-color: var(--home-copper);
+}
+
+.home-intro-links svg {
+  width: 16px;
+  height: 16px;
 }
 
 .home-intro-links a:focus-visible {
@@ -1488,6 +1575,183 @@ footer a:hover {
   font-size: 0.76rem;
   font-variant-numeric: tabular-nums;
   line-height: 1.2;
+}
+
+/* Homepage magazine rhythm: one lead article, then compact reading rows. */
+.home-main .feed-list {
+  gap: 0.8rem;
+}
+
+.home-main .feed-card {
+  border-color: color-mix(in srgb, var(--home-ink) 8%, var(--border));
+  border-radius: 10px;
+}
+
+.home-main .feed-card-body {
+  min-width: 0;
+}
+
+.home-main .feed-card h2 a:hover {
+  color: var(--home-copper);
+}
+
+.home-main .feed-card-date {
+  color: var(--home-copper);
+}
+
+.home-main .feed-card-featured {
+  padding: 0;
+  overflow: hidden;
+  box-shadow: 0 5px 18px color-mix(in srgb, var(--home-ink) 7%, transparent);
+}
+
+.home-main .feed-card-featured.feed-card-with-image {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+}
+
+.feed-card-featured .feed-card-body {
+  padding: 1.35rem;
+}
+
+.feed-featured-label {
+  color: var(--home-copper);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.7rem;
+}
+
+.feed-featured-label::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+  background: currentColor;
+  vertical-align: middle;
+}
+
+.home-main .feed-card-featured h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+.feed-card-featured .feed-card-image {
+  margin: 0;
+  height: 100%;
+}
+
+.feed-card-featured .feed-card-image img {
+  height: 100%;
+  min-height: 280px;
+  max-height: none;
+  aspect-ratio: auto;
+  border: 0;
+  border-radius: 0;
+}
+
+.home-main .feed-card-compact {
+  padding: 1.05rem 1.2rem;
+}
+
+.home-main .feed-card-compact.feed-card-with-image {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 130px;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.feed-card-compact .feed-card-image {
+  margin: 0;
+}
+
+.feed-card-compact .feed-card-image img {
+  height: 110px;
+  aspect-ratio: auto;
+}
+
+.home-main .feed-card-compact h2 {
+  margin: 0 0 0.35rem;
+  font-size: 1.06rem;
+  line-height: 1.5;
+}
+
+.home-main .feed-card .feed-excerpt {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.home-main .feed-card-featured .feed-excerpt {
+  -webkit-line-clamp: 4;
+}
+
+@media (max-width: 640px) {
+  .home-intro {
+    padding: 1.3rem 1.1rem;
+  }
+
+  .home-intro h1 {
+    font-size: 1.75rem;
+  }
+
+  .home-contours {
+    right: -130px;
+    opacity: 0.08;
+  }
+
+  .home-intro-links a {
+    min-height: 40px;
+    padding: 0.35rem 0.6rem;
+  }
+
+  .home-main .feed-card-featured.feed-card-with-image {
+    grid-template-columns: 1fr;
+  }
+
+  .feed-card-featured .feed-card-image {
+    order: -1;
+  }
+
+  .feed-card-featured .feed-card-image img {
+    min-height: 0;
+    height: 190px;
+  }
+
+  .feed-card-featured .feed-card-body {
+    padding: 1.05rem;
+  }
+
+  .home-main .feed-card-compact {
+    padding: 0.9rem 1rem;
+  }
+
+  .home-main .feed-card-compact.feed-card-with-image {
+    grid-template-columns: minmax(0, 1fr) 76px;
+    gap: 0.8rem;
+  }
+
+  .feed-card-compact .feed-card-image img {
+    height: 88px;
+  }
+
+  .home-main .feed-card-compact .feed-excerpt {
+    -webkit-line-clamp: 2;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) .home-main {
+    --home-paper: #1b2a25;
+    --home-ink: #b5d4c4;
+    --home-copper: #d9a27d;
+  }
 }
 
 .home-card-pager {
