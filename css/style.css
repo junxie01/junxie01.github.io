@@ -1382,68 +1382,24 @@ body:has(.home-main) {
 }
 
 .home-intro {
-  position: relative;
-  overflow: hidden;
-  padding: 1.55rem 1.65rem;
+  padding: 0.65rem 0 0.8rem;
   margin-bottom: 1.25rem;
-  border: 1px solid color-mix(in srgb, var(--home-ink) 12%, var(--border));
-  border-radius: 12px;
-  background: linear-gradient(115deg, var(--home-paper), color-mix(in srgb, var(--home-paper) 35%, var(--card-bg)));
   color: var(--muted);
   font-size: 0.94rem;
   line-height: 1.65;
 }
 
-.home-intro-copy,
-.home-intro-links {
-  position: relative;
-}
-
-.home-intro-with-thought {
+.home-intro-main {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 15rem);
-  gap: 1.4rem;
-  align-items: start;
-  padding-block: 1.2rem;
-}
-
-.home-intro-main,
-.home-latest-thought {
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 1.5rem;
   min-width: 0;
-}
-
-.home-latest-thought {
-  align-self: center;
-}
-
-.home-latest-thought-excerpt {
-  color: var(--home-ink);
-  overflow-wrap: anywhere;
-}
-
-.home-latest-thought-excerpt time {
-  margin-left: 0.35rem;
-  color: var(--muted);
-  font-size: 0.72rem;
-  white-space: nowrap;
-}
-
-.home-latest-thought-meta {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 0.75rem;
-  margin-top: 0.8rem;
-  font-size: 0.72rem;
-}
-
-.home-latest-thought-meta a:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 4px;
 }
 
 .home-intro-copy {
   max-width: 29rem;
+  min-width: 0;
 }
 
 .home-intro-label {
@@ -1461,8 +1417,8 @@ body:has(.home-main) {
 .home-intro h1 {
   margin: 0 0 0.45rem;
   color: var(--home-ink);
-  font-size: 2rem;
-  line-height: 1.3;
+  font-size: 2.4rem;
+  line-height: 1.15;
   letter-spacing: 0.04em;
 }
 
@@ -1473,8 +1429,8 @@ body:has(.home-main) {
 .home-intro-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 1rem;
+  align-items: center;
+  gap: 0.85rem;
   font-size: 0.82rem;
 }
 
@@ -1484,27 +1440,27 @@ body:has(.home-main) {
   justify-content: center;
   gap: 0.4rem;
   min-height: 38px;
-  padding: 0.35rem 0.75rem;
+  padding: 0.35rem 0;
   color: var(--home-ink);
-  background: color-mix(in srgb, var(--card-bg) 65%, transparent);
-  border: 1px solid color-mix(in srgb, var(--home-ink) 18%, transparent);
-  border-radius: 5px;
+  border: 0;
 }
 
 .home-intro-links a:hover {
   color: var(--home-copper);
-  border-color: var(--home-copper);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
 }
 
 .home-intro-links #random-post-link {
+  padding-inline: 0.75rem;
   color: var(--card-bg);
   background: var(--home-ink);
-  border-color: var(--home-ink);
+  border-radius: 5px;
 }
 
 .home-intro-links #random-post-link:hover {
   background: var(--home-copper);
-  border-color: var(--home-copper);
+  text-decoration: none;
 }
 
 .home-intro-links svg {
@@ -1758,47 +1714,24 @@ body:has(.home-main) {
   -webkit-line-clamp: 4;
 }
 
-@media (min-width: 721px) {
-  .home-latest-thought-excerpt {
-    font-size: 1.1rem;
-    line-height: 1.6;
-  }
-
-  .home-latest-thought {
-    display: flex;
-    flex-direction: column;
-    align-self: stretch;
-  }
-
-  .home-latest-thought-meta {
-    margin-top: auto;
-    padding-top: 0.8rem;
-  }
-}
-
-@media (max-width: 720px) {
-  .home-intro-with-thought {
+@media (max-width: 800px) {
+  .home-intro-main {
     grid-template-columns: 1fr;
-    gap: 1.2rem;
-  }
-
-  .home-latest-thought {
-    align-self: start;
+    gap: 0.85rem;
   }
 }
 
 @media (max-width: 640px) {
   .home-intro {
-    padding: 1.3rem 1.1rem;
+    padding: 0.3rem 0 0.65rem;
   }
 
   .home-intro h1 {
-    font-size: 1.75rem;
+    font-size: 2rem;
   }
 
   .home-intro-links a {
-    min-height: 40px;
-    padding: 0.35rem 0.6rem;
+    min-height: 44px;
   }
 
   .home-main .feed-card-featured.feed-card-with-image {
