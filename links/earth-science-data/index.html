@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    (function () {
+      var stored = null;
+      try {
+        stored = localStorage.getItem('seisamuse-theme');
+      } catch (error) {}
+
+      var setting = stored === 'light' || stored === 'dark' ? stored : 'system';
+      var systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = setting === 'system' ? (systemDark ? 'dark' : 'light') : setting;
+      document.documentElement.dataset.theme = theme;
+      document.documentElement.dataset.themeSetting = setting;
+    })();
+  </script>
+  <title>地学数据导航 — 链接 | hashes</title>
+  <meta name="description" content="SWOT、GPS/GNSS、雷达、冰川厚度与流速、地下水、气象及常用地形水文数据的官方入口">
+  <link rel="alternate" type="application/atom+xml" title="Atom 订阅" href="/atom.xml">
+  <link rel="prefetch" as="image" href="https://www.blogsclub.org/badge/www.seis-jun.xyz">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+  <!-- MathJax for LaTeX rendering -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        ignoreHtmlClass: 'mermaid'
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <!-- Umami Analytics -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="21a99622-5a23-45f4-be80-edef627a68e3"></script>
+  <!-- Busuanzi for public visitor counter -->
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container masthead">
+      <a class="masthead-identity" href="/" aria-label="SEISAMUSE 主页">
+        <img src="/images/seisamuse.png" alt="" class="masthead-avatar">
+        <span class="masthead-title">SEISAMUSE</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="主导航">
+        <a href="/">主页</a>
+        <a href="/blog/">博客</a>
+        <a href="/thoughts/">想法</a>
+        <a href="/archives/">归档</a>
+        <a href="/about/">自述</a>
+        <a href="/links/" class="active" aria-current="page">链接</a>
+        <a class="masthead-search-shortcut" href="/search/" aria-label="搜索文章" title="搜索文章">
+          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false"><circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="1.5"/><path d="m13 13 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </a>
+      </nav>
+
+      <div class="masthead-actions" aria-label="快捷入口">
+        <form class="masthead-search" action="/search/" method="get">
+          <input type="search" name="q" placeholder="搜索文章" aria-label="搜索文章">
+        </form>
+        <a href="mailto:hashes@yeah.net" title="邮件联系" aria-label="邮件联系"><i class="fa-solid fa-envelope"></i></a>
+        <a href="/atom.xml" title="Atom 订阅" aria-label="Atom 订阅"><i class="fa-solid fa-rss"></i></a>
+        <button class="theme-toggle" type="button" data-theme-toggle title="主题：跟随系统" aria-label="主题：跟随系统">
+          <i class="fa-solid fa-display" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container page-wide">
+      
+      
+<nav class="breadcrumb">
+  <a href="/links/">链接</a> <span>&rsaquo;</span> <span>地学数据导航</span>
+</nav>
+
+<h1 class="page-title">地学数据导航</h1>
+
+<div class="links-content link-subpage">
+  <p>研究里用到的数据入口越来越多，先放在这里，方便下次直接找。优先收录数据生产机构、官方数据中心及论文指定仓库，同时写清楚能拿到什么。</p>
+<p><strong>入口核验日期：2026-10-11。</strong> 本页收集网址，不托管数据。核验包括机构说明、产品元数据和入口；没有登录下载或检查特定研究区的文件。部分交互网站需要浏览器执行 JavaScript，下载条件和具体版本以官方页面为准。两处未成功打开的数据仓库已单独标注。</p>
+<h2 id="categories">按数据类型查找</h2>
+<p><a href="#swot">SWOT</a> · <a href="#gnss">GPS / GNSS</a> · <a href="#radar">SAR / InSAR 与气象雷达</a> · <a href="#ice-thickness">冰川厚度与冰穿透雷达</a> · <a href="#ice-velocity">冰川流速</a> · <a href="#groundwater">地下水</a> · <a href="#weather">气象与降水</a> · <a href="#supporting-data">地形、冰川边界与水文</a></p>
+<p>页面内查找可以用 <strong>⌘F / Ctrl+F</strong>，搜索产品名或关键词，例如 <code>RINEX</code>、<code>Sentinel-1</code>、<code>冰厚</code>、<code>ERA5</code>。</p>
+<table>
+<thead>
+<tr>
+<th>想找什么</th>
+<th>可以先看</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>河流、湖泊水位及水面面积</td>
+<td>SWOT 的 RiverSP / LakeSP</td>
+</tr>
+<tr>
+<td>台站地表位移时间序列</td>
+<td>NGL / EarthScope；自行解算则找 RINEX</td>
+</tr>
+<tr>
+<td>卫星雷达影像 / 已处理干涉图</td>
+<td>ASF / Copernicus；成品干涉图看 LiCSAR</td>
+</tr>
+<tr>
+<td>全球山地冰川厚度 / 实测冰厚</td>
+<td>Farinotti、Millan / GlaThiDa、IceBridge</td>
+</tr>
+<tr>
+<td>冰川流速时间序列</td>
+<td>ITS_LIVE；冰盖也可看 MEaSUREs</td>
+</tr>
+<tr>
+<td>中国逐月地下水位网格</td>
+<td>Wang 等（2025）的 TPDC 数据入口</td>
+</tr>
+<tr>
+<td>气象网格 / 站点观测</td>
+<td>ERA5、ERA5-Land、CMFD / NOAA、中国气象数据网</td>
+</tr>
+</tbody>
+</table>
+<h2 id="swot">SWOT：河流、湖泊与海洋</h2>
+<p><strong>SWOT 不只是一种数据。</strong> 水文侧有水体像元云（PIXC）、栅格（Raster）、河流（RiverSP）和湖泊（LakeSP）产品；海洋侧主要使用 LR SSH。先按用途选产品，再按区域、日期及处理版本检索。</p>
+<ul>
+<li><strong><a href="https://podaac.jpl.nasa.gov/SWOT/">NASA PO.DAAC SWOT 产品总入口</a></strong><br />
+  查产品列表、使用指南、质量说明和下载方式。说明页公开，数据下载使用免费 NASA Earthdata 账号；部分说明正在向 Earthdata 网站迁移。</li>
+<li><strong><a href="https://podaac.jpl.nasa.gov/dataset/SWOT_L2_HR_RiverSP_D">SWOT RiverSP：河流产品，Version D</a></strong><br />
+  河段和节点尺度的水位、宽度、坡度、面积及流量估计，Shapefile 格式。面向预定义河网，实际覆盖需按研究区和日期查询。<strong>流量是估计产品</strong>，不能当作水文站直接观测；使用前看质量标志。下载需 Earthdata 账号。</li>
+<li><strong><a href="https://podaac.jpl.nasa.gov/dataset/SWOT_L2_HR_LakeSP_D">SWOT LakeSP：湖泊产品，Version D</a></strong><br />
+  湖泊及未分类水体的水面高程、面积和质量信息，Shapefile 格式。包含观测湖泊、先验湖泊及未匹配水体；是否观测到目标湖泊需检查覆盖与质量标志。下载需 Earthdata 账号。</li>
+<li><strong><a href="https://podaac.jpl.nasa.gov/dataset/SWOT_L2_LR_SSH_D">SWOT KaRIn LR SSH：海洋产品，Version D</a></strong><br />
+  海面高度、海面高度异常、风速和有效波高，NetCDF 格式。Basic / Expert / Windwave 使用 2 km 网格，Unsmoothed 使用 250 m 原生网格；产品校正与水文侧不同。下载需 Earthdata 账号。</li>
+</ul>
+<p>上面的 Version D 是本次核验的具体产品入口，不保证始终为最新版本；后续新版本可从总入口查找。</p>
+<h2 id="gnss">GPS / GNSS：原始观测与位置时间序列</h2>
+<p>要自行解算位置或大气参数，找 <strong>RINEX 观测文件</strong>；要研究形变、速度或同震位移，可以先找已解算的位置时间序列。它们不能混为同一种数据。</p>
+<ul>
+<li><strong><a href="https://network.igs.org/">IGS 全球站网地图</a></strong><br />
+  先查研究区附近的站点、接收机、天线、站点日志、卫星系统和关联数据中心。站网页面公开，实际观测文件的下载条件由数据中心决定。</li>
+<li><strong><a href="https://cddis.nasa.gov/archive/gnss/data/">NASA CDDIS：GNSS 观测目录</a></strong><br />
+  IGS / MGEX 的 RINEX 观测入口，包含日文件、小时文件和部分站点的高采样率文件。下载需 Earthdata 账号；<a href="https://cddis.nasa.gov/Web_Unification.html">官方迁移说明</a>确认观测下载目录保持不变。</li>
+<li><strong><a href="https://www.unavco.org/data/gps-gnss/gps-gnss.html">EarthScope / NGF：GNSS 数据</a></strong><br />
+  连续站与流动观测；分别提供 RINEX、位置时间序列、速度、同震偏移及对流层参数。官方页面区分 Level 1 观测和 Level 2 派生产品。部分服务需免费 EarthScope IdM 账号，见<a href="https://www.earthscope.org/data/authentication/">认证说明</a>。</li>
+<li><strong><a href="https://geodesy.unr.edu/PlugNPlayPortal.php">Nevada Geodetic Laboratory：NGL Plug and Play</a></strong><br />
+  全球台站位置时间序列与 MIDAS 速度场，含 IGS20 及板块参考框架。页面和文本直链公开。使用前核对参考框架、单位、采样间隔、设备变化和偏移记录。</li>
+</ul>
+<h2 id="radar">雷达：SAR / InSAR 与气象雷达</h2>
+<p>SAR / InSAR 主要用于地表遥感与形变；气象雷达用于降水、风场和强天气。冰体内部与冰底结构使用的冰穿透雷达，放在下一节。</p>
+<ul>
+<li><strong><a href="https://search.asf.alaska.edu/">ASF Vertex：卫星 SAR 检索</a></strong><br />
+  按区域、日期、轨道及产品类型查 Sentinel-1 等雷达影像，也有已处理产品和按需处理入口。下载及处理使用 Earthdata 账号。<a href="https://docs.asf.alaska.edu/vertex/manual/">官方使用说明</a>可查筛选和下载方法。</li>
+<li><strong><a href="https://dataspace.copernicus.eu/browser/">Copernicus Browser：Sentinel 数据</a></strong><br />
+  检索、预览、下载欧洲 Copernicus 数据。Sentinel-1 的 SLC 保留幅度与相位，适合 InSAR；GRD 适合后向散射与地表监测。下载使用免费 Copernicus 账号。见<a href="https://documentation.v1.dataspace.copernicus.eu/Applications/Browser.html">浏览器说明</a>及<a href="https://documentation.dataspace.copernicus.eu/Data/SentinelMissions/Sentinel1.html">Sentinel-1 产品说明</a>。</li>
+<li><strong><a href="https://comet.nerc.ac.uk/COMET-LiCS-portal/">COMET–LiCSAR：已处理 InSAR</a></strong><br />
+  Sentinel-1 干涉图和相干性图，按 frame 查询和下载，重点覆盖阿尔卑斯—喜马拉雅构造带及其他构造、火山研究区。实际以已处理 frame 为准；公开入口不等于全球处处都有成品。另有 <a href="https://data.ceda.ac.uk/neodc/comet/data/licsar_products/">CEDA 批量目录</a>。</li>
+<li><strong><a href="https://www.ncei.noaa.gov/products/radar/next-generation-weather-radar">NOAA NEXRAD：美国气象雷达</a></strong><br />
+  地基多普勒气象雷达历史与近实时数据，包含 Level II 观测和 Level III 派生产品，用于降水、风场及强天气研究。数字数据免费；产品页列出检索、地图及云端访问方式。</li>
+</ul>
+<p>ASF 与 Copernicus 的交互入口本轮只读取到网页外壳，功能和访问条件依据各自官方说明核验。</p>
+<h2 id="ice-thickness">冰川厚度、冰床与冰穿透雷达</h2>
+<p>冰厚请区分 <strong>测深观测、观测汇编和模型估计</strong>。全域厚度栅格通常包含推定值；一个像元有数值，并不代表那里做过直接雷达测量。</p>
+<ul>
+<li><strong><a href="https://nsidc.org/data/idbmg4">BedMachine Greenland：格陵兰冰厚与冰床</a></strong><br />
+  冰厚、冰床、表面高程、海底地形及掩膜，常用网格 150 m。结合测深和质量守恒等方法的综合估计。下载需 Earthdata 账号；实际使用时记录版本及对应 DOI。</li>
+<li><strong><a href="https://nsidc.org/data/nsidc-0756">BedMachine Antarctica：南极冰厚与冰床</a></strong><br />
+  南极冰厚、冰床、表面高程和海底地形，常用网格 500 m。综合测量及推定方法；产品标注的输入资料时间范围不代表连续冰厚监测序列。下载需 Earthdata 账号。</li>
+<li><strong><a href="https://doi.org/10.3929/ethz-b-000315707">Farinotti 等（2019）：全球冰川厚度模型集合</a></strong><br />
+  基于 RGI 6.0 的全球冰川厚度估计，适合区域和全球冰储量研究；不能直接与 RGI 7 的 ID 和边界混用。<a href="https://www.research-collection.ethz.ch/entities/researchdata/23bc92d0-aa11-48b8-b6ca-69c5dcf0de6b">ETH 仓库记录</a>提供按区域组织的数据，许可为 CC BY-NC-SA 4.0。<a href="https://www.nature.com/articles/s41561-019-0300-3">论文</a>。<strong>官方记录已定位，仓库本轮返回 403，下载待手动核验。</strong></li>
+<li><strong><a href="https://ige-vis.univ-grenoble-alpes.fr/glaciers/index.html">Millan 等（2022）：全球冰川流速与厚度</a></strong><br />
+  山地冰川表面流速及利用流速等约束估计的厚度。可先在 IGE 官方地图查看；<a href="https://doi.org/10.6096/1007">数据 DOI</a>和<a href="https://www.nature.com/articles/s41561-021-00885-z">论文及更正入口</a>用于追溯数据。<strong>地图可打开，数据 DOI 本轮未成功打开，下载待手动核验。</strong> 使用前看覆盖缺口和误差。</li>
+<li><strong><a href="https://www.gtn-g.ch/data_catalogue_glathida/">GlaThiDa：全球冰厚观测数据库</a></strong><br />
+  汇集实地及遥感冰厚观测，CSV 格式，适合寻找实测厚度和检验模型。公开稳定版本汇编的资料范围为 1935–2018；空间采样不均匀。<a href="https://doi.org/10.5904/wgms-glathida-2020-10">稳定版 DOI</a>与<a href="https://gitlab.com/wgms/glathida">官方维护库</a>的开发版应分别记录；目录说明公开免费，使用须正确引用。</li>
+<li><strong><a href="https://nsidc.org/data/irmcr2/versions/1">IceBridge MCoRDS L2：冰穿透雷达测深</a></strong><br />
+  格陵兰和南极机载雷达沿航线冰厚、冰面及冰底信息，2009–2019，CSV 格式。属于雷达测深处理产品，不是 SAR 影像或全域连续厚度栅格。下载需 Earthdata 账号。<a href="https://doi.org/10.5067/GDQ0CUCVTE2Q">数据 DOI</a> · <a href="https://nsidc.org/data/documentation/icebridge-mcords-l2-ice-thickness-version-1-user-guide">用户指南</a>。</li>
+</ul>
+<h2 id="ice-velocity">冰川与冰盖流速</h2>
+<p>流速产品需要区别单影像对、某个时期的拼接和时间序列；比较不同产品时同时看时间窗口、质量和速度单位。</p>
+<ul>
+<li><strong><a href="https://its-live.jpl.nasa.gov/">ITS_LIVE：全球冰川流速</a></strong><br />
+  全球主要陆地冰体，1985 年以来；常用 120 m，提供影像对、月度/年度拼接和时间序列数据立方。流速由光学或 SAR 影像位移反演，常用单位为 m/年。<a href="https://its-live.jpl.nasa.gov/app/index.html">地图工具</a> · <a href="https://stac.itslive.cloud">STAC 数据接口</a>。旧 V1 的 NSIDC 下载需 Earthdata Login，新产品有云端入口，具体以所选产品说明为准。</li>
+<li><strong><a href="https://nsidc.org/grimp">MEaSUREs / GrIMP：冰盖流速</a></strong><br />
+  格陵兰 GrIMP 汇总年度、季度、月度及较短周期产品。南极可从 <a href="https://nsidc.org/data/nsidc-0484">NSIDC-0484</a>查多年份观测拼接，不能把它当成单一年份或逐年序列。<a href="https://doi.org/10.5067/D7GK8F5J8M8R">南极产品 DOI</a>。NSIDC 下载通常需免费 Earthdata 账号。</li>
+</ul>
+<p>Millan 的全球流速与厚度联合产品见<a href="#ice-thickness">上一节</a>。</p>
+<h2 id="groundwater">地下水：Wang 等（2025）指定数据</h2>
+<ul>
+<li><strong><a href="https://doi.org/10.11888/Terre.tpdc.301342">中国逐月地下水位网格（2005–2022）：数据 DOI</a></strong><br />
+  论文指定的国家青藏高原科学数据中心（TPDC）入口；当前对应<a href="https://data.tpdc.ac.cn/en/data/96e53121-8c2e-419d-92e6-ff0e495087a3">数据页面</a>。中国范围，1 km，月尺度，GeoTIFF，来自监测井资料的月平均及 IDW 插值。</li>
+</ul>
+<p><strong>这是公开的插值网格，不应写成原始井站记录全部开放。</strong> 论文原始资料包含 11,911 个监测点及 4,275,506 条观测记录，但原始资料未公开。1 km 是输出网格间距，不代表每个像元都有实测井。论文说明水位单位为 m，并统一到 1985 国家高程基准；使用时还需核对文件元数据和水位/埋深定义。2018 年前后监测站数量和分布明显变化，跨期分析应考虑观测网络变化。</p>
+<p>本轮成功读取论文，核验了数据 DOI 重定向和数据页 HTTP 响应；TPDC 页面为 JavaScript 外壳，尚未核验登录后的文件清单及下载权限。</p>
+<p>论文：Wang, M., Yao, J., Chang, H., Liu, R., Xu, N., Liu, Z., Gong, H., Zheng, H., Wang, J., Guo, X., Cao, Y., Zhao, Y., and Lu, H. (2025). <em>Underground well water level observation grid dataset from 2005 to 2022</em>. <strong>Scientific Data, 12</strong>, 728. <a href="https://doi.org/10.1038/s41597-025-04799-y">10.1038/s41597-025-04799-y</a>。</p>
+<h2 id="weather">气象、降水与陆面驱动</h2>
+<p>再分析和融合网格不是逐格直接观测；站点资料没有统一网格分辨率。降水率与累积降水量也要分清，尤其是 mm/h、mm、kg m⁻² s⁻¹ 等单位。</p>
+<ul>
+<li><strong><a href="https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels?tab=overview">ERA5：全球单层气象再分析</a></strong><br />
+  1940 年起，逐小时，大气变量下载网格通常为 0.25°；温度、降水、风、气压等。使用 CDS 账号，支持网页与 API。此链接是单层资料，高空气压层需另选产品。</li>
+<li><strong><a href="https://cds.climate.copernicus.eu/datasets/reanalysis-era5-land?tab=overview">ERA5-Land：全球陆面再分析</a></strong><br />
+  1950 年起，逐小时，0.1° 输出网格，原生分辨率约 9 km。可找土壤水分、积雪、径流、蒸发和近地面气象。使用 CDS 账号。</li>
+<li><strong><a href="https://www.ncei.noaa.gov/products/land-based-station/global-historical-climatology-network-daily">NOAA GHCN-Daily：全球站点日值</a></strong><br />
+  最高/最低气温、降水、降雪和雪深等；覆盖时段与变量完整性因站而异。<a href="https://www.ncei.noaa.gov/pub/data/ghcn/daily/">公开 HTTPS 目录</a>可按站点或年份取文件，无需登录。</li>
+<li><strong><a href="https://www.ncei.noaa.gov/products/land-based-station/integrated-surface-database">NOAA ISD / Global Hourly：全球站点小时资料</a></strong><br />
+  气温、露点、风、气压、能见度、降水和雪深等。总体记录从 1901 年起，各站覆盖和缺测不同；官方页提供公开目录、检索和 API 入口。</li>
+<li><strong><a href="https://gpm.nasa.gov/data/imerg">NASA GPM IMERG：多卫星融合降水</a></strong><br />
+  V07B，1998 年起，0.1°，有半小时、日和月产品。长期科研分析可先看 Final，近实时用途看 Early / Late。<a href="https://gpm.nasa.gov/data/directory">产品目录</a>列出不同分支与下载方式；GES DISC 通常使用 Earthdata 账号，PPS 有独立注册说明。</li>
+<li><strong><a href="https://www.chc.ucsb.edu/data">CHIRPS：卫星与站点融合降水</a></strong><br />
+  1981 年起，0.05°，60°S–60°N，适合长期降水和干旱研究。v3 已提供服务；<a href="https://data.chc.ucsb.edu/products/CHIRPS/v3.0/">v3.0 公开目录</a>无需登录。与旧 v2 比较时记录版本及所选时间产品。</li>
+<li><strong><a href="https://data.cma.cn/">中国气象数据网</a></strong><br />
+  中国地面、高空、气象卫星及天气雷达资料。常用<a href="https://m.data.cma.cn/data/detail/dataCode/SURF_CLI_CHN_MUL_DAY_V3.0.html">地面日值 V3.0 元数据</a>列有温度、气压、降水、蒸发、湿度、风、日照及地温，并说明教育科研实名注册访问。本轮官方元数据可从检索结果定位，页面直接读取失败；<strong>具体可用范围和权限需登录核对</strong>。</li>
+<li><strong><a href="https://data.tpdc.ac.cn/zh-hans/data/e60dfd96-5fd8-493f-beae-e8e5d24dece4">CMFD v2.0：中国区域气象驱动</a></strong><br />
+  中国及邻近陆地区域，1951 年起，0.1°，3 小时；温度、气压、比湿、风速、短波/长波辐射和降水率等。<a href="https://www.dess.tsinghua.edu.cn/en/info/1226/2766.htm">清华官方发布说明</a>在 2025 年已公布扩展至 2024 年；结束年份以平台当前文件为准。<a href="https://doi.org/10.11888/Atmos.tpdc.302088">稳定数据 DOI</a>。TPDC 入口本轮只读取到网页外壳，具体下载权限未实测。</li>
+</ul>
+<h2 id="supporting-data">辅助数据：地形、冰川边界、流域与储水</h2>
+<ul>
+<li><strong><a href="https://search.earthdata.nasa.gov/">NASA Earthdata Search：综合数据检索</a></strong><br />
+  按关键词、时间和区域查 NASA 地球科学数据，包括水文、冰冻圈、气象及陆表产品。检索公开，很多数据下载需免费 Earthdata 账号；<a href="https://urs.earthdata.nasa.gov/documentation/for_users/welcome">账号与访问说明</a>。</li>
+<li><strong><a href="https://earthexplorer.usgs.gov/">USGS EarthExplorer：影像与高程检索</a></strong><br />
+  按区域和日期检索，再在 Data Sets 中选择数据。适合查 Landsat 等影像及高程产品；下载和订购场景需登录 USGS 账号。</li>
+<li><strong><a href="https://portal.opentopography.org/datasets">OpenTopography：DEM 与点云</a></strong><br />
+  检索全球/区域 DEM 与高分辨率点云，包括 SRTM、NASADEM、Copernicus 等。<a href="https://opentopography.org/start">访问说明</a>区分公开和受限增值服务：部分产品有账号、学术资格、订阅或 API 限制，不能一概写成免费无限下载。</li>
+<li><strong><a href="https://www.pgc.umn.edu/data/arcticdem/">ArcticDEM / REMA：极地地表高程</a></strong><br />
+  ArcticDEM 面向北极陆地，REMA 面向南极；光学立体影像生成地表高程，包含 2 m 条带及多分辨率拼接。<a href="https://www.pgc.umn.edu/data/rema/">REMA 产品页</a> · <a href="https://www.pgc.umn.edu/guides/stereo-derived-elevation-models/pgc-dem-products-arcticdem-rema-and-earthdem/">官方产品指南</a> · <a href="https://fridge.pgc.umn.edu/">FRIDGE 地图</a>。公开 DEM 通常无需账号，部分近期阿拉斯加资料有访问限制。高程为 WGS84 椭球高；<strong>冰面高程不是冰厚或冰底高程</strong>。</li>
+<li><strong><a href="https://rgidata.org/">RGI / GLIMS：全球冰川边界与清单</a></strong><br />
+  RGI 是面向约 2000 年目标时期的全球冰川轮廓快照，排除格陵兰和南极主体冰盖；GLIMS 可查多时相轮廓。<a href="https://rgidata.org/user_guide/">RGI 用户指南</a> · <a href="https://nsidc.org/data/nsidc-0770">RGI 数据入口</a> · <a href="https://www.glims.org/">GLIMS</a>。旧 RGI 地址已迁至 rgidata.org；数据入口由官方项目页提供，NSIDC 下载页本轮未成功读取。</li>
+<li><strong><a href="https://www.hydrosheds.org/products">HydroSHEDS：流域、河网与湖泊</a></strong><br />
+  HydroBASINS 是流域边界，HydroRIVERS 是河网，HydroLAKES 是湖泊，HydroATLAS 添加水文环境属性。适合配合 SWOT 和流域研究；属于地理基础及派生数据，不是实测流量时间序列。<a href="https://www.hydrosheds.org/products/hydrobasins">HydroBASINS 下载与许可</a>。</li>
+<li><strong><a href="https://grace.jpl.nasa.gov/data/get-data/jpl_global_mascons/">GRACE / GRACE-FO：陆地储水变化</a></strong><br />
+  全球月尺度质量变化及等效水厚异常，可从 <a href="https://podaac.jpl.nasa.gov/dataset/TELLUS_GRAC-GRFO_MASCON_CRI_GRID_RL06.3_V4">JPL Mascon CRI 产品</a>进入下载，使用 Earthdata 账号。它包含多种储水成分，<strong>不是直接地下水位</strong>；JPL 产品的 0.5° 输出采样不等于 0.5° 独立空间分辨率，原生 mascon 约 3°。</li>
+</ul>
+<p><a href="#categories">回到分类导航</a></p>
+<h2 id="_1">来源与后续维护</h2>
+<p>每项链接同时作为说明来源，优先使用机构产品页和稳定 DOI。涉及论文数据时保留论文入口；网页未成功读取、需要账号或下载未实测的情况已在对应条目说明。网站能打开不代表研究区有数据，也不代表数据质量已经经过本地验证。</p>
+<p>以后增补资源时，沿用这个页面：记录名称、官方入口、用途/覆盖、访问条件、版本及核验日期。本站的文章搜索目前只搜索博客；查本页请用上面的分类跳转或浏览器页面内查找。</p>
+<p>维护源文件：<code>content/links/earth-science-data.md</code>；现有构建器 <code>python3 build.py</code> 会生成 <code>/links/earth-science-data/</code>。本轮预览仅渲染此页和链接栏目首页，沿用已有模板，无新增依赖。</p>
+</div>
+
+<div class="back-link">
+  <a href="/links/">&larr; 返回链接页</a>
+</div>
+
+      
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p class="site-stats">
+        <span id="busuanzi_container_site_pv">
+          👁 总访问量：<span id="busuanzi_value_site_pv"></span>
+        </span>
+        &middot;
+        <span id="busuanzi_container_site_uv">
+          访客数：<span id="busuanzi_value_site_uv"></span>
+        </span>
+      </p>
+      <p>&copy; 2026 hashes &middot; 使用 Python 与 Markdown 构建 &middot;
+        GitHub &middot;
+        <a href="/atom.xml" target="_blank">Atom</a> &middot;
+        <a href="/privacy/">隐私政策</a>
+      </p>
+      <!-- Edit this line to add or remove blog directory links. -->
+      <p class="footer-directory-links">
+        <span>感谢收录：</span>
+        <a href="https://blogscn.fun/" target="_blank" rel="noopener">笔墨迹</a>
+        <a href="https://bf.zzxworld.com/" target="_blank" rel="noopener">BlogFinder</a>
+        <a href="https://www.blogsclub.org/" target="_blank" rel="noopener">BlogsClub</a>
+        <a href="https://blogplanet.cn/" target="_blank" rel="noopener">博客星球</a>
+        <a href="https://bokehub.com/" target="_blank" rel="noopener">博客中心</a>
+        <a href="https://storeweb.cn/" target="_blank" rel="noopener">个站商店</a>
+        <a href="https://www.heyblog.net/" target="_blank" rel="noopener">HeyBlog</a>
+        <a href="https://www.travellings.cn/go.html" target="_blank" rel="noopener">开往</a>
+        <a href="https://www.foreverblog.cn/" target="_blank" rel="noopener">十年之约</a>
+      </p>
+    </div>
+  </footer>
+
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+      startOnLoad: true,
+      securityLevel: 'strict',
+      theme: document.documentElement.dataset.theme === 'dark' ? 'dark' : 'neutral'
+    });
+  </script>
+
+  <script>
+    (function () {
+      var toggle = document.querySelector('[data-theme-toggle]');
+      if (!toggle) return;
+
+      var order = ['system', 'light', 'dark'];
+      var labels = {
+        system: '主题：跟随系统',
+        light: '主题：浅色',
+        dark: '主题：深色'
+      };
+      var icons = {
+        system: 'fa-display',
+        light: 'fa-sun',
+        dark: 'fa-moon'
+      };
+      var media = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+
+      function currentSetting() {
+        var setting = document.documentElement.dataset.themeSetting;
+        return order.indexOf(setting) === -1 ? 'system' : setting;
+      }
+
+      function updateButton(setting) {
+        var label = labels[setting];
+        var icon = toggle.querySelector('i');
+        toggle.title = label;
+        toggle.setAttribute('aria-label', label);
+        icon.className = 'fa-solid ' + icons[setting];
+      }
+
+      function applyTheme(setting) {
+        var systemDark = media && media.matches;
+        var theme = setting === 'system' ? (systemDark ? 'dark' : 'light') : setting;
+        document.documentElement.dataset.themeSetting = setting;
+        document.documentElement.dataset.theme = theme;
+        try {
+          if (setting === 'system') localStorage.removeItem('seisamuse-theme');
+          else localStorage.setItem('seisamuse-theme', setting);
+        } catch (error) {}
+        updateButton(setting);
+        window.dispatchEvent(new CustomEvent('seisamuse-theme-change', {
+          detail: { theme: theme }
+        }));
+      }
+
+      toggle.addEventListener('click', function () {
+        var setting = currentSetting();
+        applyTheme(order[(order.indexOf(setting) + 1) % order.length]);
+      });
+
+      if (media) {
+        media.addEventListener('change', function () {
+          if (currentSetting() === 'system') applyTheme('system');
+        });
+      }
+
+      updateButton(currentSetting());
+    })();
+  </script>
+
+</body>
+</html>
