@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,8 +18,8 @@
     })();
   </script>
   <title>主页 | hashes</title>
-  <meta name="description" content="Notes on research, learning, and life.">
-  <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/atom.xml">
+  <meta name="description" content="记录研究、学习与生活。">
+  <link rel="alternate" type="application/atom+xml" title="Atom 订阅" href="/atom.xml">
   <link rel="prefetch" as="image" href="https://www.blogsclub.org/badge/www.seis-jun.xyz">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -49,12 +49,12 @@
 
   <header class="site-header">
     <div class="container masthead">
-      <a class="masthead-identity" href="/" aria-label="SEISAMUSE home">
+      <a class="masthead-identity" href="/" aria-label="SEISAMUSE 主页">
         <img src="/images/seisamuse.png" alt="" class="masthead-avatar">
         <span class="masthead-title">SEISAMUSE</span>
       </a>
 
-      <nav class="primary-nav" aria-label="Primary navigation">
+      <nav class="primary-nav" aria-label="主导航">
         <a href="/" class="active" aria-current="page">主页</a>
         <a href="/blog/">博客</a>
         <a href="/thoughts/">想法</a>
@@ -66,13 +66,13 @@
         </a>
       </nav>
 
-      <div class="masthead-actions" aria-label="Site shortcuts">
+      <div class="masthead-actions" aria-label="快捷入口">
         <form class="masthead-search" action="/search/" method="get">
           <input type="search" name="q" placeholder="搜索文章" aria-label="搜索文章">
         </form>
-        <a href="mailto:hashes@yeah.net" title="Email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-        <a href="/atom.xml" title="Atom feed" aria-label="Atom feed"><i class="fa-solid fa-rss"></i></a>
-        <button class="theme-toggle" type="button" data-theme-toggle title="Theme: system" aria-label="Theme: system">
+        <a href="mailto:hashes@yeah.net" title="邮件联系" aria-label="邮件联系"><i class="fa-solid fa-envelope"></i></a>
+        <a href="/atom.xml" title="Atom 订阅" aria-label="Atom 订阅"><i class="fa-solid fa-rss"></i></a>
+        <button class="theme-toggle" type="button" data-theme-toggle title="主题：跟随系统" aria-label="主题：跟随系统">
           <i class="fa-solid fa-display" aria-hidden="true"></i>
         </button>
       </div>
@@ -87,6 +87,29 @@
   
   <section class="feed-section recent-posts-section">
     <div class="feed-list">
+      
+      <article class="feed-card feed-card-compact feed-card-with-image">
+        <div class="feed-card-body">
+          
+          <h2><a href="/blog/2026-06-08-codex2.html">关于Codex II</a></h2>
+          <div class="feed-excerpt"><p>今天又提前把100dollar的codex Pro x5一周的量给用干了。 上次只提前了一晚上，这次提前了三天，而且中途其实人家openai刷新过一次7天用量。 上次明明感觉自己已经知道一些窍门/技巧/经验了，结果这周一样的。 这不跟大猪蹄子男人从来不改自己毛病一样。 之前听到说不珍惜token使用是因为不是用的自己的...</p></div>
+          
+          <div class="feed-tags">
+            
+            <a href="/blog/tag/codex/">codex</a>
+            
+          </div>
+          
+          <div class="feed-card-date">
+            <time datetime="2026-06-08">2026-06-08</time>
+          </div>
+        </div>
+        
+        <a class="feed-card-image" href="/blog/2026-06-08-codex2.html">
+          <img src="/images/codex2.png" alt="关于Codex II" loading="lazy">
+        </a>
+        
+      </article>
       
       <article class="feed-card feed-card-compact feed-card-with-image">
         <div class="feed-card-body">
@@ -184,32 +207,9 @@
         
       </article>
       
-      <article class="feed-card feed-card-compact feed-card-with-image">
-        <div class="feed-card-body">
-          
-          <h2><a href="/blog/2026-05-30-about-codex.html">关于Codex I</a></h2>
-          <div class="feed-excerpt"><p>纪念一下今天把100dollar的codex Pro x5一周的量给用干了。 回看了一下自己的日记，发现我是今年2月底开始入坑AI编程的。最开始尝试了Android Studio，Visual Studio Copilot，Trae，Qoder。我做了安卓app，好几个网页，感觉惊为天人。 同事和阿里云沟通给组里人开了...</p></div>
-          
-          <div class="feed-tags">
-            
-            <a href="/blog/tag/codex/">codex</a>
-            
-          </div>
-          
-          <div class="feed-card-date">
-            <time datetime="2026-05-30">2026-05-30</time>
-          </div>
-        </div>
-        
-        <a class="feed-card-image" href="/blog/2026-05-30-about-codex.html">
-          <img src="/images/codex1.png" alt="关于Codex I" loading="lazy">
-        </a>
-        
-      </article>
-      
     </div>
     
-    <nav class="home-card-pager" aria-label="Home post navigation">
+    <nav class="home-card-pager" aria-label="首页文章分页">
       
       <a class="home-card-pager-link" href="/page/27/">
         <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
@@ -235,14 +235,14 @@
     <div class="container">
       <p class="site-stats">
         <span id="busuanzi_container_site_pv">
-          👁 Total visits: <span id="busuanzi_value_site_pv"></span>
+          👁 总访问量：<span id="busuanzi_value_site_pv"></span>
         </span>
         &middot;
         <span id="busuanzi_container_site_uv">
-          Visitors: <span id="busuanzi_value_site_uv"></span>
+          访客数：<span id="busuanzi_value_site_uv"></span>
         </span>
       </p>
-      <p>&copy; 2026 hashes &middot; Built with Python &amp; Markdown &middot;
+      <p>&copy; 2026 hashes &middot; 使用 Python 与 Markdown 构建 &middot;
         GitHub &middot;
         <a href="/atom.xml" target="_blank">Atom</a> &middot;
         <a href="/privacy/">隐私政策</a>
@@ -279,9 +279,9 @@
 
       var order = ['system', 'light', 'dark'];
       var labels = {
-        system: 'Theme: system',
-        light: 'Theme: light',
-        dark: 'Theme: dark'
+        system: '主题：跟随系统',
+        light: '主题：浅色',
+        dark: '主题：深色'
       };
       var icons = {
         system: 'fa-display',

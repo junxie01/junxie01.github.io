@@ -851,6 +851,11 @@ main > .container.page-wide {
   margin-bottom: 2rem;
 }
 
+.post-content h1 {
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+
 .post-content iframe[src*="player.bilibili.com"] {
   display: block;
   width: 100%;
@@ -1732,6 +1737,10 @@ body:has(.home-main) {
 
   .home-intro-links a {
     min-height: 44px;
+  }
+
+  .home-main .feed-card .feed-excerpt {
+    font-size: 0.92rem;
   }
 
   .home-main .feed-card-featured.feed-card-with-image {

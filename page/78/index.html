@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,8 +18,8 @@
     })();
   </script>
   <title>主页 | hashes</title>
-  <meta name="description" content="Notes on research, learning, and life.">
-  <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/atom.xml">
+  <meta name="description" content="记录研究、学习与生活。">
+  <link rel="alternate" type="application/atom+xml" title="Atom 订阅" href="/atom.xml">
   <link rel="prefetch" as="image" href="https://www.blogsclub.org/badge/www.seis-jun.xyz">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -49,12 +49,12 @@
 
   <header class="site-header">
     <div class="container masthead">
-      <a class="masthead-identity" href="/" aria-label="SEISAMUSE home">
+      <a class="masthead-identity" href="/" aria-label="SEISAMUSE 主页">
         <img src="/images/seisamuse.png" alt="" class="masthead-avatar">
         <span class="masthead-title">SEISAMUSE</span>
       </a>
 
-      <nav class="primary-nav" aria-label="Primary navigation">
+      <nav class="primary-nav" aria-label="主导航">
         <a href="/" class="active" aria-current="page">主页</a>
         <a href="/blog/">博客</a>
         <a href="/thoughts/">想法</a>
@@ -66,13 +66,13 @@
         </a>
       </nav>
 
-      <div class="masthead-actions" aria-label="Site shortcuts">
+      <div class="masthead-actions" aria-label="快捷入口">
         <form class="masthead-search" action="/search/" method="get">
           <input type="search" name="q" placeholder="搜索文章" aria-label="搜索文章">
         </form>
-        <a href="mailto:hashes@yeah.net" title="Email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-        <a href="/atom.xml" title="Atom feed" aria-label="Atom feed"><i class="fa-solid fa-rss"></i></a>
-        <button class="theme-toggle" type="button" data-theme-toggle title="Theme: system" aria-label="Theme: system">
+        <a href="mailto:hashes@yeah.net" title="邮件联系" aria-label="邮件联系"><i class="fa-solid fa-envelope"></i></a>
+        <a href="/atom.xml" title="Atom 订阅" aria-label="Atom 订阅"><i class="fa-solid fa-rss"></i></a>
+        <button class="theme-toggle" type="button" data-theme-toggle title="主题：跟随系统" aria-label="主题：跟随系统">
           <i class="fa-solid fa-display" aria-hidden="true"></i>
         </button>
       </div>
@@ -87,6 +87,25 @@
   
   <section class="feed-section recent-posts-section">
     <div class="feed-list">
+      
+      <article class="feed-card feed-card-compact">
+        <div class="feed-card-body">
+          
+          <h2><a href="/blog/2007-06-13-fox.html">我是一只狐狸</a></h2>
+          <div class="feed-excerpt"><p>夏日用她火辣的热情唤醒了万物。树木焕发出了葱郁，鸟儿唱出了欢歌，忙碌的人们又找到了新的目标。于是我顿悟了也迷惑了。 我是一只狐狸，一只没有漂亮皮毛的小狐狸，生活在这世间无忧无虑也忧忧虑虑。妈妈说：“狐狸是要吃鸡的！”于是我就拼命地在林子里找鸡吃。但是作为狐狸的我就一定要吃鸡吗？就不能有一些别的追求了了吗？ 我忧虑的是，...</p></div>
+          
+          <div class="feed-tags">
+            
+            <a href="/blog/tag/狐狸/">狐狸</a>
+            
+          </div>
+          
+          <div class="feed-card-date">
+            <time datetime="2007-06-13">2007-06-13</time>
+          </div>
+        </div>
+        
+      </article>
       
       <article class="feed-card feed-card-compact">
         <div class="feed-card-body">
@@ -164,28 +183,9 @@
         
       </article>
       
-      <article class="feed-card feed-card-compact">
-        <div class="feed-card-body">
-          
-          <h2><a href="/blog/2006-10-15-qiyang.html">祈杨</a></h2>
-          <div class="feed-excerpt"><p>那一片湖我为她取名叫静。 那是我迷失的第三天，也许，因为时间对于我来说已经没有了意义。很庆幸在我生命的最后时间里我找到了这片湖。于是，湖成了我的依靠。 我已经下定决心要与湖融为一体。我站在湖边。静静的湖水浸过我的脚背，也浸透了我的心。湖面很平，找不到一丝波纹，有的只是岸边一丛不知名的茂密的树林和灰暗天幕的倒影。湖水在夕...</p></div>
-          
-          <div class="feed-tags">
-            
-            <a href="/blog/tag/祈杨/">祈杨</a>
-            
-          </div>
-          
-          <div class="feed-card-date">
-            <time datetime="2006-10-15">2006-10-15</time>
-          </div>
-        </div>
-        
-      </article>
-      
     </div>
     
-    <nav class="home-card-pager" aria-label="Home post navigation">
+    <nav class="home-card-pager" aria-label="首页文章分页">
       
       <a class="home-card-pager-link" href="/page/77/">
         <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
@@ -211,14 +211,14 @@
     <div class="container">
       <p class="site-stats">
         <span id="busuanzi_container_site_pv">
-          👁 Total visits: <span id="busuanzi_value_site_pv"></span>
+          👁 总访问量：<span id="busuanzi_value_site_pv"></span>
         </span>
         &middot;
         <span id="busuanzi_container_site_uv">
-          Visitors: <span id="busuanzi_value_site_uv"></span>
+          访客数：<span id="busuanzi_value_site_uv"></span>
         </span>
       </p>
-      <p>&copy; 2026 hashes &middot; Built with Python &amp; Markdown &middot;
+      <p>&copy; 2026 hashes &middot; 使用 Python 与 Markdown 构建 &middot;
         GitHub &middot;
         <a href="/atom.xml" target="_blank">Atom</a> &middot;
         <a href="/privacy/">隐私政策</a>
@@ -255,9 +255,9 @@
 
       var order = ['system', 'light', 'dark'];
       var labels = {
-        system: 'Theme: system',
-        light: 'Theme: light',
-        dark: 'Theme: dark'
+        system: '主题：跟随系统',
+        light: '主题：浅色',
+        dark: '主题：深色'
       };
       var icons = {
         system: 'fa-display',

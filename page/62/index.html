@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,8 +18,8 @@
     })();
   </script>
   <title>主页 | hashes</title>
-  <meta name="description" content="Notes on research, learning, and life.">
-  <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/atom.xml">
+  <meta name="description" content="记录研究、学习与生活。">
+  <link rel="alternate" type="application/atom+xml" title="Atom 订阅" href="/atom.xml">
   <link rel="prefetch" as="image" href="https://www.blogsclub.org/badge/www.seis-jun.xyz">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -49,12 +49,12 @@
 
   <header class="site-header">
     <div class="container masthead">
-      <a class="masthead-identity" href="/" aria-label="SEISAMUSE home">
+      <a class="masthead-identity" href="/" aria-label="SEISAMUSE 主页">
         <img src="/images/seisamuse.png" alt="" class="masthead-avatar">
         <span class="masthead-title">SEISAMUSE</span>
       </a>
 
-      <nav class="primary-nav" aria-label="Primary navigation">
+      <nav class="primary-nav" aria-label="主导航">
         <a href="/" class="active" aria-current="page">主页</a>
         <a href="/blog/">博客</a>
         <a href="/thoughts/">想法</a>
@@ -66,13 +66,13 @@
         </a>
       </nav>
 
-      <div class="masthead-actions" aria-label="Site shortcuts">
+      <div class="masthead-actions" aria-label="快捷入口">
         <form class="masthead-search" action="/search/" method="get">
           <input type="search" name="q" placeholder="搜索文章" aria-label="搜索文章">
         </form>
-        <a href="mailto:hashes@yeah.net" title="Email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-        <a href="/atom.xml" title="Atom feed" aria-label="Atom feed"><i class="fa-solid fa-rss"></i></a>
-        <button class="theme-toggle" type="button" data-theme-toggle title="Theme: system" aria-label="Theme: system">
+        <a href="mailto:hashes@yeah.net" title="邮件联系" aria-label="邮件联系"><i class="fa-solid fa-envelope"></i></a>
+        <a href="/atom.xml" title="Atom 订阅" aria-label="Atom 订阅"><i class="fa-solid fa-rss"></i></a>
+        <button class="theme-toggle" type="button" data-theme-toggle title="主题：跟随系统" aria-label="主题：跟随系统">
           <i class="fa-solid fa-display" aria-hidden="true"></i>
         </button>
       </div>
@@ -87,6 +87,25 @@
   
   <section class="feed-section recent-posts-section">
     <div class="feed-list">
+      
+      <article class="feed-card feed-card-compact">
+        <div class="feed-card-body">
+          
+          <h2><a href="/blog/2020-05-30-how-to-reply-to-reviewer.html">如何回复审稿人意见？</a></h2>
+          <div class="feed-excerpt"><p>SCI文章是否得以发表，生杀大权很大一部分都在peer reviewer手上。文章投出去如果收到了审稿人意见，那么恭喜，机会大大的有。那么如何回复审稿人意见就是关键了。下面是一些要点。</p></div>
+          
+          <div class="feed-tags">
+            
+            <a href="/blog/tag/paper/">paper</a>
+            
+          </div>
+          
+          <div class="feed-card-date">
+            <time datetime="2020-05-30">2020-05-30</time>
+          </div>
+        </div>
+        
+      </article>
       
       <article class="feed-card feed-card-compact">
         <div class="feed-card-body">
@@ -173,28 +192,9 @@
         
       </article>
       
-      <article class="feed-card feed-card-compact">
-        <div class="feed-card-body">
-          
-          <h2><a href="/blog/2015-07-08-chaos2.html">乱2</a></h2>
-          <div class="feed-excerpt"><p>弯弯曲曲的阳光直直的照进屋外，熟睡的我高兴地蹦起来落在了天花板。窗台上留下了10年以后我的脚印。我重重的摔在软绵绵的岩石上，像蹦极一样来回颠簸。一只尖叫的青蛙从结冰的湖面窜出，湖面结了一个窟窿，天空泛起直直的嶙峋波纹。半空中横陈着的乐者手舞足蹈的吹奏着口中的琵琶，一只只曼妙的如箭的音符射向四周，箭尖着地处开出了美丽的蝴...</p></div>
-          
-          <div class="feed-tags">
-            
-            <a href="/blog/tag/杂/">杂</a>
-            
-          </div>
-          
-          <div class="feed-card-date">
-            <time datetime="2015-07-08">2015-07-08</time>
-          </div>
-        </div>
-        
-      </article>
-      
     </div>
     
-    <nav class="home-card-pager" aria-label="Home post navigation">
+    <nav class="home-card-pager" aria-label="首页文章分页">
       
       <a class="home-card-pager-link" href="/page/61/">
         <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
@@ -220,14 +220,14 @@
     <div class="container">
       <p class="site-stats">
         <span id="busuanzi_container_site_pv">
-          👁 Total visits: <span id="busuanzi_value_site_pv"></span>
+          👁 总访问量：<span id="busuanzi_value_site_pv"></span>
         </span>
         &middot;
         <span id="busuanzi_container_site_uv">
-          Visitors: <span id="busuanzi_value_site_uv"></span>
+          访客数：<span id="busuanzi_value_site_uv"></span>
         </span>
       </p>
-      <p>&copy; 2026 hashes &middot; Built with Python &amp; Markdown &middot;
+      <p>&copy; 2026 hashes &middot; 使用 Python 与 Markdown 构建 &middot;
         GitHub &middot;
         <a href="/atom.xml" target="_blank">Atom</a> &middot;
         <a href="/privacy/">隐私政策</a>
@@ -264,9 +264,9 @@
 
       var order = ['system', 'light', 'dark'];
       var labels = {
-        system: 'Theme: system',
-        light: 'Theme: light',
-        dark: 'Theme: dark'
+        system: '主题：跟随系统',
+        light: '主题：浅色',
+        dark: '主题：深色'
       };
       var icons = {
         system: 'fa-display',

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,8 +18,8 @@
     })();
   </script>
   <title>主页 | hashes</title>
-  <meta name="description" content="Notes on research, learning, and life.">
-  <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/atom.xml">
+  <meta name="description" content="记录研究、学习与生活。">
+  <link rel="alternate" type="application/atom+xml" title="Atom 订阅" href="/atom.xml">
   <link rel="prefetch" as="image" href="https://www.blogsclub.org/badge/www.seis-jun.xyz">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -49,12 +49,12 @@
 
   <header class="site-header">
     <div class="container masthead">
-      <a class="masthead-identity" href="/" aria-label="SEISAMUSE home">
+      <a class="masthead-identity" href="/" aria-label="SEISAMUSE 主页">
         <img src="/images/seisamuse.png" alt="" class="masthead-avatar">
         <span class="masthead-title">SEISAMUSE</span>
       </a>
 
-      <nav class="primary-nav" aria-label="Primary navigation">
+      <nav class="primary-nav" aria-label="主导航">
         <a href="/" class="active" aria-current="page">主页</a>
         <a href="/blog/">博客</a>
         <a href="/thoughts/">想法</a>
@@ -66,13 +66,13 @@
         </a>
       </nav>
 
-      <div class="masthead-actions" aria-label="Site shortcuts">
+      <div class="masthead-actions" aria-label="快捷入口">
         <form class="masthead-search" action="/search/" method="get">
           <input type="search" name="q" placeholder="搜索文章" aria-label="搜索文章">
         </form>
-        <a href="mailto:hashes@yeah.net" title="Email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-        <a href="/atom.xml" title="Atom feed" aria-label="Atom feed"><i class="fa-solid fa-rss"></i></a>
-        <button class="theme-toggle" type="button" data-theme-toggle title="Theme: system" aria-label="Theme: system">
+        <a href="mailto:hashes@yeah.net" title="邮件联系" aria-label="邮件联系"><i class="fa-solid fa-envelope"></i></a>
+        <a href="/atom.xml" title="Atom 订阅" aria-label="Atom 订阅"><i class="fa-solid fa-rss"></i></a>
+        <button class="theme-toggle" type="button" data-theme-toggle title="主题：跟随系统" aria-label="主题：跟随系统">
           <i class="fa-solid fa-display" aria-hidden="true"></i>
         </button>
       </div>
@@ -87,6 +87,25 @@
   
   <section class="feed-section recent-posts-section">
     <div class="feed-list">
+      
+      <article class="feed-card feed-card-compact">
+        <div class="feed-card-body">
+          
+          <h2><a href="/blog/2009-11-24-dream-gun.html">梦-抢</a></h2>
+          <div class="feed-excerpt"><p>我跟伟终于又回到了家乡。我们两多年不见。伟一直在外地修车，现在已经是个不小的车行老板。 家乡因为建设发展，原来的面目已经全不见了。唯一能令我们有所回忆的只有初中校园了。于是我们打算到校园里面去转转，去怀念一番当年的学生时代，去体会一下那份熟悉却又陌生的感觉。 我和伟是邻居，从小一起长大。伟一直就是个小捣蛋，可我却那么听...</p></div>
+          
+          <div class="feed-tags">
+            
+            <a href="/blog/tag/梦/">梦</a>
+            
+          </div>
+          
+          <div class="feed-card-date">
+            <time datetime="2009-11-24">2009-11-24</time>
+          </div>
+        </div>
+        
+      </article>
       
       <article class="feed-card feed-card-compact">
         <div class="feed-card-body">
@@ -164,28 +183,9 @@
         
       </article>
       
-      <article class="feed-card feed-card-compact">
-        <div class="feed-card-body">
-          
-          <h2><a href="/blog/2009-10-12-middle-high.html">高一</a></h2>
-          <div class="feed-excerpt"><p>突然想起高中时好玩的事情，赶紧记下来，要是过些时候忘了岂不可惜。 整人 “男厕所是哪一边啊？”和我一同到学校报名的那天，地瓜内急，同他走近厕所。但是厕所没有标注男女。（后来证实是有标注的，不过比较隐藏避。）但是由于我和地瓜来这个学校参加过好几次竞赛，厕所男女之分我还是记得的。冷不丁的被他问到，我脑子里一愣，哈哈，平时是...</p></div>
-          
-          <div class="feed-tags">
-            
-            <a href="/blog/tag/高一/">高一</a>
-            
-          </div>
-          
-          <div class="feed-card-date">
-            <time datetime="2009-10-12">2009-10-12</time>
-          </div>
-        </div>
-        
-      </article>
-      
     </div>
     
-    <nav class="home-card-pager" aria-label="Home post navigation">
+    <nav class="home-card-pager" aria-label="首页文章分页">
       
       <a class="home-card-pager-link" href="/page/71/">
         <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
@@ -211,14 +211,14 @@
     <div class="container">
       <p class="site-stats">
         <span id="busuanzi_container_site_pv">
-          👁 Total visits: <span id="busuanzi_value_site_pv"></span>
+          👁 总访问量：<span id="busuanzi_value_site_pv"></span>
         </span>
         &middot;
         <span id="busuanzi_container_site_uv">
-          Visitors: <span id="busuanzi_value_site_uv"></span>
+          访客数：<span id="busuanzi_value_site_uv"></span>
         </span>
       </p>
-      <p>&copy; 2026 hashes &middot; Built with Python &amp; Markdown &middot;
+      <p>&copy; 2026 hashes &middot; 使用 Python 与 Markdown 构建 &middot;
         GitHub &middot;
         <a href="/atom.xml" target="_blank">Atom</a> &middot;
         <a href="/privacy/">隐私政策</a>
@@ -255,9 +255,9 @@
 
       var order = ['system', 'light', 'dark'];
       var labels = {
-        system: 'Theme: system',
-        light: 'Theme: light',
-        dark: 'Theme: dark'
+        system: '主题：跟随系统',
+        light: '主题：浅色',
+        dark: '主题：深色'
       };
       var icons = {
         system: 'fa-display',

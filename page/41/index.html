@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,8 +18,8 @@
     })();
   </script>
   <title>主页 | hashes</title>
-  <meta name="description" content="Notes on research, learning, and life.">
-  <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/atom.xml">
+  <meta name="description" content="记录研究、学习与生活。">
+  <link rel="alternate" type="application/atom+xml" title="Atom 订阅" href="/atom.xml">
   <link rel="prefetch" as="image" href="https://www.blogsclub.org/badge/www.seis-jun.xyz">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -49,12 +49,12 @@
 
   <header class="site-header">
     <div class="container masthead">
-      <a class="masthead-identity" href="/" aria-label="SEISAMUSE home">
+      <a class="masthead-identity" href="/" aria-label="SEISAMUSE 主页">
         <img src="/images/seisamuse.png" alt="" class="masthead-avatar">
         <span class="masthead-title">SEISAMUSE</span>
       </a>
 
-      <nav class="primary-nav" aria-label="Primary navigation">
+      <nav class="primary-nav" aria-label="主导航">
         <a href="/" class="active" aria-current="page">主页</a>
         <a href="/blog/">博客</a>
         <a href="/thoughts/">想法</a>
@@ -66,13 +66,13 @@
         </a>
       </nav>
 
-      <div class="masthead-actions" aria-label="Site shortcuts">
+      <div class="masthead-actions" aria-label="快捷入口">
         <form class="masthead-search" action="/search/" method="get">
           <input type="search" name="q" placeholder="搜索文章" aria-label="搜索文章">
         </form>
-        <a href="mailto:hashes@yeah.net" title="Email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-        <a href="/atom.xml" title="Atom feed" aria-label="Atom feed"><i class="fa-solid fa-rss"></i></a>
-        <button class="theme-toggle" type="button" data-theme-toggle title="Theme: system" aria-label="Theme: system">
+        <a href="mailto:hashes@yeah.net" title="邮件联系" aria-label="邮件联系"><i class="fa-solid fa-envelope"></i></a>
+        <a href="/atom.xml" title="Atom 订阅" aria-label="Atom 订阅"><i class="fa-solid fa-rss"></i></a>
+        <button class="theme-toggle" type="button" data-theme-toggle title="主题：跟随系统" aria-label="主题：跟随系统">
           <i class="fa-solid fa-display" aria-hidden="true"></i>
         </button>
       </div>
@@ -87,6 +87,25 @@
   
   <section class="feed-section recent-posts-section">
     <div class="feed-list">
+      
+      <article class="feed-card feed-card-compact">
+        <div class="feed-card-body">
+          
+          <h2><a href="/blog/2025-06-07-download-continuous-seis.html">python脚本下载连续波形数据</a></h2>
+          <div class="feed-excerpt"><p>&emsp;&emsp;这是连续波形数据下载python脚本更新。</p></div>
+          
+          <div class="feed-tags">
+            
+            <a href="/blog/tag/python/">python</a>
+            
+          </div>
+          
+          <div class="feed-card-date">
+            <time datetime="2025-06-07">2025-06-07</time>
+          </div>
+        </div>
+        
+      </article>
       
       <article class="feed-card feed-card-compact">
         <div class="feed-card-body">
@@ -170,30 +189,9 @@
         
       </article>
       
-      <article class="feed-card feed-card-compact">
-        <div class="feed-card-body">
-          
-          <h2><a href="/blog/2025-05-10-gmt-arrow.html">gmt怎么画箭头</a></h2>
-          <div class="feed-excerpt"><p>用gmt画箭头还是挺常见的。GMT document和GMT中文手册虽好，但如果网络不好不就歇菜了，还是记录一下吧，自己翻起来方便。画箭头参数是Sv(或SV)，自己调Sv之后的参数可以看效果。输入参数表示是x，y，angle，length。x，y表示箭头的起始坐标。angle是箭头指向，逆时针为正，x轴正向为0。len...</p></div>
-          
-          <div class="feed-tags">
-            
-            <a href="/blog/tag/gmt/">gmt</a>
-            
-            <a href="/blog/tag/script/">script</a>
-            
-          </div>
-          
-          <div class="feed-card-date">
-            <time datetime="2025-05-10">2025-05-10</time>
-          </div>
-        </div>
-        
-      </article>
-      
     </div>
     
-    <nav class="home-card-pager" aria-label="Home post navigation">
+    <nav class="home-card-pager" aria-label="首页文章分页">
       
       <a class="home-card-pager-link" href="/page/40/">
         <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
@@ -219,14 +217,14 @@
     <div class="container">
       <p class="site-stats">
         <span id="busuanzi_container_site_pv">
-          👁 Total visits: <span id="busuanzi_value_site_pv"></span>
+          👁 总访问量：<span id="busuanzi_value_site_pv"></span>
         </span>
         &middot;
         <span id="busuanzi_container_site_uv">
-          Visitors: <span id="busuanzi_value_site_uv"></span>
+          访客数：<span id="busuanzi_value_site_uv"></span>
         </span>
       </p>
-      <p>&copy; 2026 hashes &middot; Built with Python &amp; Markdown &middot;
+      <p>&copy; 2026 hashes &middot; 使用 Python 与 Markdown 构建 &middot;
         GitHub &middot;
         <a href="/atom.xml" target="_blank">Atom</a> &middot;
         <a href="/privacy/">隐私政策</a>
@@ -263,9 +261,9 @@
 
       var order = ['system', 'light', 'dark'];
       var labels = {
-        system: 'Theme: system',
-        light: 'Theme: light',
-        dark: 'Theme: dark'
+        system: '主题：跟随系统',
+        light: '主题：浅色',
+        dark: '主题：深色'
       };
       var icons = {
         system: 'fa-display',
