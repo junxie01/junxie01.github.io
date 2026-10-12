@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    (function () {
+      var stored = null;
+      try {
+        stored = localStorage.getItem('seisamuse-theme');
+      } catch (error) {}
+
+      var setting = stored === 'light' || stored === 'dark' ? stored : 'system';
+      var systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = setting === 'system' ? (systemDark ? 'dark' : 'light') : setting;
+      document.documentElement.dataset.theme = theme;
+      document.documentElement.dataset.themeSetting = setting;
+    })();
+  </script>
+  <title>随笔 | hashes</title>
+  <meta name="description" content="随笔">
+  <link rel="alternate" type="application/atom+xml" title="Atom 订阅" href="/atom.xml">
+  <link rel="prefetch" as="image" href="https://www.blogsclub.org/badge/www.seis-jun.xyz">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+  <!-- MathJax for LaTeX rendering -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        ignoreHtmlClass: 'mermaid'
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <!-- Umami Analytics -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="21a99622-5a23-45f4-be80-edef627a68e3"></script>
+  <!-- Busuanzi for public visitor counter -->
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container masthead">
+      <a class="masthead-identity" href="/" aria-label="SEISAMUSE 主页">
+        <img src="/images/seisamuse.png" alt="" class="masthead-avatar">
+        <span class="masthead-title">SEISAMUSE</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="主导航">
+        <a href="/">主页</a>
+        <a href="/blog/" class="active" aria-current="page">博客</a>
+        <a href="/thoughts/">想法</a>
+        <a href="/archives/">归档</a>
+        <a href="/about/">自述</a>
+        <a href="/links/">链接</a>
+        <a class="masthead-search-shortcut" href="/search/" aria-label="搜索文章" title="搜索文章">
+          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false"><circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="1.5"/><path d="m13 13 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </a>
+      </nav>
+
+      <div class="masthead-actions" aria-label="快捷入口">
+        <form class="masthead-search" action="/search/" method="get">
+          <input type="search" name="q" placeholder="搜索文章" aria-label="搜索文章">
+        </form>
+        <a href="mailto:hashes@yeah.net" title="邮件联系" aria-label="邮件联系"><i class="fa-solid fa-envelope"></i></a>
+        <a href="/atom.xml" title="Atom 订阅" aria-label="Atom 订阅"><i class="fa-solid fa-rss"></i></a>
+        <button class="theme-toggle" type="button" data-theme-toggle title="主题：跟随系统" aria-label="主题：跟随系统">
+          <i class="fa-solid fa-display" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container page-wide">
+      
+      
+<div class="main-content">
+  <article>
+    <div class="post-header">
+      <h1>随笔</h1>
+      <div class="post-meta">
+        <time>2026-10-12</time>
+         &middot; 约 695 字
+        <span id="busuanzi_container_page_pv" style="display: none;">
+          &middot; &#128065; <span id="busuanzi_value_page_pv"></span> 次浏览
+        </span>
+        
+         &middot; 分类：
+        
+          <a href="/blog/topic/随笔/">随笔</a>
+        
+        
+        
+         &middot; 标签：
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">随笔</span>
+        
+        
+      </div>
+    </div>
+
+    <div class="post-content">
+      <p><img alt="" src="https://img.seis-jun.xyz/images/asm.jpg" /></p>
+<p>这两天有些工作上的事情在打搅我的脑子，因此就没有好好想写些什么，勉强又来写流水账了。</p>
+<p>今天中午收到了快递送达的消息，才想起Blog Club寄过来的鼠标垫，已经在快递柜里面躺了两天了。赶紧小跑去快递柜拿。我还在好奇，难道除了鼠标垫还送了其他东西？到了快递柜，我一扫就得到一坨东西，有BC标志，又黑又粗但是软。然后再扫，没了。原来工作人员把鼠标垫拿出来又了放回去，单纯来提醒我啊。</p>
+<p>我把大大软软的包裹拿到办公室，迫不及待地打开，原来有两个。正好两张桌子，一张一个。好大的鼠标垫，比我之前的都大啊。老鼠标垫也退役了一个，另一个放在一边当着扩展垫。鼠标垫手感不错，就是鼻感差了些，可能需要多释放几天臭气吧。</p>
+<p>然后我就在软软的鼠标垫上用起鼠标来，感觉还是真舒服。</p>
+<p>但味道确实让人有点难受。还好，外面的桂花正开着，那味道可以治愈很多烦恼。</p>
+<p>但很奇怪，桂花已经香了很久了。记忆里桂花是不会香那么久，是不是记忆错乱了。又或者桂花真的已经可以开那么久了，去两年好像也遇到过。一般是入秋了，天气一凉，桂花就被惊醒了。结果，天气多变，又暖起来，那些还没有醒的桂花接着睡，直到天气又打了个喷嚏。这会儿的桂花就是后来才起的。他们的起床气更足，老远就可以闻到。厕所的味道也敌他们不过，连上厕所也沐浴在秋香中。</p>
+<p>国庆七天基本算是开了七天车，今天身体才算是恢复了些啊。前两天每天都睡不够，睡完起来还头晕目眩，吃完晚饭感觉会力竭。今天终于像是恢复正常了，晚饭之后还可以敲字。</p>
+<p>看样子真的老了啊。以后回老家还是别开车了。好消息是到家的高铁终于开通了，以前最快要七个多小时，现在只要五个小时了。话说老家交通真是不方便，去哪里都挺久。而且一路上全是山，以前住在老家可从来没有觉得外面是山啊。但是那趟5小时的车每天只有一趟，怕是难以抢到啊，只盼多开几趟。</p>
+<p>好了就随到这儿吧。deadline要到了，又得忙乎了。</p>
+<p>deadline才是第一生产力啊。</p>
+    </div>
+
+  <div class="post-nav">
+    
+      <a class="post-nav-prev" href="/blog/2026-10-11-the-man-sitting-on-the-wall.html">&larr; 骑在墙上的人</a>
+    
+
+    <a class="post-nav-blog" href="/blog/">返回博客</a>
+
+    
+      <span class="post-nav-next"></span>
+    
+  </div>
+  <div class="comments-section">
+  <h3>评论</h3>
+  <script>
+    (function () {
+      var giscus = document.createElement('script');
+      giscus.src = 'https://giscus.app/client.js';
+      giscus.dataset.repo = 'junxie01/junxie01.github.io';
+      giscus.dataset.repoId = 'R_kgDOSGl1Dg';
+      giscus.dataset.category = 'General';
+      giscus.dataset.categoryId = 'DIC_kwDOSGl1Ds4DAuif';
+      giscus.dataset.mapping = 'specific';
+      giscus.dataset.term = 'blog/2026-10-12-time-goes';
+      giscus.dataset.strict = '0';
+      giscus.dataset.reactionsEnabled = '1';
+      giscus.dataset.emitMetadata = '0';
+      giscus.dataset.inputPosition = 'bottom';
+      giscus.dataset.theme = document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light';
+      giscus.dataset.lang = 'zh-CN';
+      giscus.crossOrigin = 'anonymous';
+      giscus.async = true;
+      document.currentScript.parentNode.appendChild(giscus);
+
+      window.addEventListener('seisamuse-theme-change', function (event) {
+        var frame = document.querySelector('.giscus-frame');
+        if (!frame || !frame.contentWindow) return;
+        frame.contentWindow.postMessage({
+          giscus: {
+            setConfig: {
+              theme: event.detail.theme === 'dark' ? 'dark' : 'light'
+            }
+          }
+        }, 'https://giscus.app');
+      });
+    })();
+  </script>
+</div>
+</article>
+</div>
+
+      
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p class="site-stats">
+        <span id="busuanzi_container_site_pv">
+          👁 总访问量：<span id="busuanzi_value_site_pv"></span>
+        </span>
+        &middot;
+        <span id="busuanzi_container_site_uv">
+          访客数：<span id="busuanzi_value_site_uv"></span>
+        </span>
+      </p>
+      <p>&copy; 2026 hashes &middot; 使用 Python 与 Markdown 构建 &middot;
+        GitHub &middot;
+        <a href="/atom.xml" target="_blank">Atom</a> &middot;
+        <a href="/privacy/">隐私政策</a>
+      </p>
+      <!-- Edit this line to add or remove blog directory links. -->
+      <p class="footer-directory-links">
+        <span>感谢收录：</span>
+        <a href="https://blogscn.fun/" target="_blank" rel="noopener">笔墨迹</a>
+        <a href="https://bf.zzxworld.com/" target="_blank" rel="noopener">BlogFinder</a>
+        <a href="https://www.blogsclub.org/" target="_blank" rel="noopener">BlogsClub</a>
+        <a href="https://blogplanet.cn/" target="_blank" rel="noopener">博客星球</a>
+        <a href="https://bokehub.com/" target="_blank" rel="noopener">博客中心</a>
+        <a href="https://storeweb.cn/" target="_blank" rel="noopener">个站商店</a>
+        <a href="https://www.heyblog.net/" target="_blank" rel="noopener">HeyBlog</a>
+        <a href="https://www.travellings.cn/go.html" target="_blank" rel="noopener">开往</a>
+        <a href="https://www.foreverblog.cn/" target="_blank" rel="noopener">十年之约</a>
+      </p>
+    </div>
+  </footer>
+
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+      startOnLoad: true,
+      securityLevel: 'strict',
+      theme: document.documentElement.dataset.theme === 'dark' ? 'dark' : 'neutral'
+    });
+  </script>
+
+  <script>
+    (function () {
+      var toggle = document.querySelector('[data-theme-toggle]');
+      if (!toggle) return;
+
+      var order = ['system', 'light', 'dark'];
+      var labels = {
+        system: '主题：跟随系统',
+        light: '主题：浅色',
+        dark: '主题：深色'
+      };
+      var icons = {
+        system: 'fa-display',
+        light: 'fa-sun',
+        dark: 'fa-moon'
+      };
+      var media = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+
+      function currentSetting() {
+        var setting = document.documentElement.dataset.themeSetting;
+        return order.indexOf(setting) === -1 ? 'system' : setting;
+      }
+
+      function updateButton(setting) {
+        var label = labels[setting];
+        var icon = toggle.querySelector('i');
+        toggle.title = label;
+        toggle.setAttribute('aria-label', label);
+        icon.className = 'fa-solid ' + icons[setting];
+      }
+
+      function applyTheme(setting) {
+        var systemDark = media && media.matches;
+        var theme = setting === 'system' ? (systemDark ? 'dark' : 'light') : setting;
+        document.documentElement.dataset.themeSetting = setting;
+        document.documentElement.dataset.theme = theme;
+        try {
+          if (setting === 'system') localStorage.removeItem('seisamuse-theme');
+          else localStorage.setItem('seisamuse-theme', setting);
+        } catch (error) {}
+        updateButton(setting);
+        window.dispatchEvent(new CustomEvent('seisamuse-theme-change', {
+          detail: { theme: theme }
+        }));
+      }
+
+      toggle.addEventListener('click', function () {
+        var setting = currentSetting();
+        applyTheme(order[(order.indexOf(setting) + 1) % order.length]);
+      });
+
+      if (media) {
+        media.addEventListener('change', function () {
+          if (currentSetting() === 'system') applyTheme('system');
+        });
+      }
+
+      updateButton(currentSetting());
+    })();
+  </script>
+
+</body>
+</html>
