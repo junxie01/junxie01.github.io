@@ -42,8 +42,9 @@
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <!-- Umami Analytics -->
   <script defer src="https://cloud.umami.is/script.js" data-website-id="21a99622-5a23-45f4-be80-edef627a68e3"></script>
-  <!-- Busuanzi for public visitor counter -->
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <!-- Leave endpoint empty until the Worker and visitor counting are verified.
+       Then set it to https://the-deployed-worker-domain/count. -->
+  <script defer src="/scripts/article_counter_20261016.js" data-counter-endpoint=""></script>
 </head>
 <body>
 
@@ -85,13 +86,15 @@
       
 <h1 class="page-title">隐私政策</h1>
 <div class="about-content">
-  <p>更新日期：2026-09-21</p>
+  <p>更新日期：2026-10-16</p>
 <p>SEISAMUSE（www.seis-jun.xyz）是 hashes 的个人博客。这份说明介绍访问本站、发表评论或联系作者时，可能涉及的信息处理与第三方服务。</p>
 <h2 id="_1">浏览与基础服务</h2>
 <p>阅读本站无需注册本站账户。网站通过 GitHub Pages 托管；域名、网络分发及部分图片服务使用 Cloudflare。访问网页、图片或脚本时，相应服务提供方可能处理 IP 地址、请求网址、浏览器信息、访问时间等，以传输内容、维护服务和处理安全问题。</p>
 <p>相关说明：<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub 隐私声明</a>、<a href="https://www.cloudflare.com/privacypolicy/">Cloudflare 隐私政策</a>。</p>
 <h2 id="_2">访问统计与浏览器存储</h2>
 <p>本站使用 <a href="https://umami.is/privacy">Umami</a> 了解访问量、来源和页面访问情况，使用<a href="https://busuanzi.ibruce.info/">不蒜子</a>展示访问计数。加载这些第三方统计服务会向其服务器发送请求；数据处理和保存方式受对应服务的政策与实际配置约束。本站作者不能据此承诺所有第三方都不处理 IP 地址或其他访问数据。</p>
+<p>若启用浏览器兼容统计入口，当前页面的路径会明确发送给本站配置的 Cloudflare 中转服务，再由中转访问不蒜子；该路径不包含查询参数或页内锚点。中转服务提供方也会处理传输请求所需的网络信息。计数脚本不读取本站其他 Cookie 或登录凭据。</p>
+<p>启用该入口后，如果不蒜子返回匿名会话标识，中转会将其加密后保存在浏览器本地的 <code>seisamuse-counter-session</code> 项中，用于后续访问时传回相同标识。记录从建立起最多保留 30 天，访问不会延长这一期限；上游标识也可能更早过期。清除网站数据会移除它。此方式不能继承原第三方 Cookie 中的访客身份，切换入口或清除记录后可能被重新识别为访客；访客计数并不等于准确的实际人数。</p>
 <p>明暗主题偏好保存在浏览器本地的 <code>seisamuse-theme</code> 项中，供下次访问时使用。你可以通过浏览器的网站数据设置清除它。</p>
 <h2 id="_3">评论与主动联系</h2>
 <p>部分页面使用 <a href="https://giscus.app/">giscus</a> 评论系统，评论托管在 GitHub Discussions。发表评论涉及 GitHub 登录及授权，用户名、头像和评论内容可能公开展示。请不要在评论中留下密码、住址、证件号码或其他不希望公开的信息。评论的管理也受 GitHub 的规则约束。</p>
