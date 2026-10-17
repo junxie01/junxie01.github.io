@@ -42,9 +42,8 @@
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <!-- Umami Analytics -->
   <script defer src="https://cloud.umami.is/script.js" data-website-id="21a99622-5a23-45f4-be80-edef627a68e3"></script>
-  <!-- Leave endpoint empty until the Worker and visitor counting are verified.
-       Then set it to https://the-deployed-worker-domain/count. -->
-  <script defer src="/scripts/article_counter_20261016.js" data-counter-endpoint=""></script>
+  <!-- Explicit page paths preserve article counts across browser referrer policies. -->
+  <script defer src="/scripts/article_counter_20261016.js" data-counter-endpoint="https://counter.seis-jun.xyz/count"></script>
 </head>
 <body>
 
@@ -112,11 +111,11 @@
     <div class="post-content">
       <p>&emsp;&emsp;在win7下用系统的磁盘管理工具把原来的fedora14给格了，然后重启就只能进入grub，试了安装盘修复也不行。</p>
 <p>在grub中输入命令：</p>
-<div class="highlight"><pre><span></span><code>grub&gt;rootnoverify<span class="w"> </span><span class="o">(</span>hd0,0<span class="o">)</span><span class="w"> </span>
-grub&gt;makeactive<span class="w"> </span>
-grub&gt;chainloader<span class="w"> </span>+1
+<pre class="highlight"><code class="language-bash">grub&gt;rootnoverify (hd0,0) 
+grub&gt;makeactive 
+grub&gt;chainloader +1
 grub&gt;boot
-</code></pre></div>
+</code></pre>
 
 <p>&emsp;&emsp;奏效。进入了windows。然后下载clear mbr （还原清新畅快的mbr，大概格掉了grub）。</p>
 <p>然后大功告成。</p>

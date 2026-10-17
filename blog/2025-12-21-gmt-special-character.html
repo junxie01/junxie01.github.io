@@ -42,9 +42,8 @@
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <!-- Umami Analytics -->
   <script defer src="https://cloud.umami.is/script.js" data-website-id="21a99622-5a23-45f4-be80-edef627a68e3"></script>
-  <!-- Leave endpoint empty until the Worker and visitor counting are verified.
-       Then set it to https://the-deployed-worker-domain/count. -->
-  <script defer src="/scripts/article_counter_20261016.js" data-counter-endpoint=""></script>
+  <!-- Explicit page paths preserve article counts across browser referrer policies. -->
+  <script defer src="/scripts/article_counter_20261016.js" data-counter-endpoint="https://counter.seis-jun.xyz/count"></script>
 </head>
 <body>
 
@@ -115,8 +114,8 @@
 <p>最重要的是以下两个表：
 <img src="/images/a.png" alt="">
 至于是参考左边的Standard+还是右边的ISOLation1+，就要用命令</p>
-<div class="highlight"><pre><span></span><code>gmt get PS_CHAR_ENCODING
-</code></pre></div>
+<pre class="highlight"><code>gmt get PS_CHAR_ENCODING
+</code></pre>
 
 <p>查看你的编码方式了。
 另外如果了12号字体(Symbol)或34号字体(ZapfDingbats)则查下面这个表：

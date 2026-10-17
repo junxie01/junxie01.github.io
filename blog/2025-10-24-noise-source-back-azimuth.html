@@ -42,9 +42,8 @@
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <!-- Umami Analytics -->
   <script defer src="https://cloud.umami.is/script.js" data-website-id="21a99622-5a23-45f4-be80-edef627a68e3"></script>
-  <!-- Leave endpoint empty until the Worker and visitor counting are verified.
-       Then set it to https://the-deployed-worker-domain/count. -->
-  <script defer src="/scripts/article_counter_20261016.js" data-counter-endpoint=""></script>
+  <!-- Explicit page paths preserve article counts across browser referrer policies. -->
+  <script defer src="/scripts/article_counter_20261016.js" data-counter-endpoint="https://counter.seis-jun.xyz/count"></script>
 </head>
 <body>
 
@@ -284,9 +283,9 @@ $$
 <hr />
 <h2 id="_14">筛选与聚合输出</h2>
 <h3 id="_15">筛选规则</h3>
-<div class="highlight"><pre><span></span><code>DOP &gt;= 0.8
+<pre class="highlight"><code class="language-text">DOP &gt;= 0.8
 planarity_angle &gt; 60°
-</code></pre></div>
+</code></pre>
 
 <h2 id="_16">脚本</h2>
 <p><a href="/scripts/dope.py">DOPE</a></p>

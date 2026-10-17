@@ -42,9 +42,8 @@
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <!-- Umami Analytics -->
   <script defer src="https://cloud.umami.is/script.js" data-website-id="21a99622-5a23-45f4-be80-edef627a68e3"></script>
-  <!-- Leave endpoint empty until the Worker and visitor counting are verified.
-       Then set it to https://the-deployed-worker-domain/count. -->
-  <script defer src="/scripts/article_counter_20261016.js" data-counter-endpoint=""></script>
+  <!-- Explicit page paths preserve article counts across browser referrer policies. -->
+  <script defer src="/scripts/article_counter_20261016.js" data-counter-endpoint="https://counter.seis-jun.xyz/count"></script>
 </head>
 <body>
 
@@ -124,8 +123,8 @@
 <img alt="学者信息" src="/images/app2.png" />
 图中的地震分布是用npx expo start, 在expo go中展示的。
 用命令</p>
-<div class="highlight"><pre><span></span><code><span class="n">npx</span><span class="w"> </span><span class="n">expo</span><span class="w"> </span><span class="n">run</span><span class="p">:</span><span class="n">android</span><span class="w"> </span><span class="o">--</span><span class="n">variant</span><span class="w"> </span><span class="n">release</span>
-</code></pre></div>
+<pre class="highlight"><code>npx expo run:android --variant release
+</code></pre>
 
 <p>就可以生成apk文件，位置在seismic-app/andriod/app/build/outputs/apk/app-release.apk 
 下载到安卓手机就可以安装了。你可以试试我生成的<a href="https://pan.baidu.com/s/1qQWzx6n36xqXkLMVWLmolg?pwd=tyxn">apk</a>，欢迎提意见。</p>

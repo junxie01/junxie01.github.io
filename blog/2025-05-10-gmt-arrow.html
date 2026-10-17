@@ -42,9 +42,8 @@
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <!-- Umami Analytics -->
   <script defer src="https://cloud.umami.is/script.js" data-website-id="21a99622-5a23-45f4-be80-edef627a68e3"></script>
-  <!-- Leave endpoint empty until the Worker and visitor counting are verified.
-       Then set it to https://the-deployed-worker-domain/count. -->
-  <script defer src="/scripts/article_counter_20261016.js" data-counter-endpoint=""></script>
+  <!-- Explicit page paths preserve article counts across browser referrer policies. -->
+  <script defer src="/scripts/article_counter_20261016.js" data-counter-endpoint="https://counter.seis-jun.xyz/count"></script>
 </head>
 <body>
 
@@ -113,8 +112,8 @@
 
     <div class="post-content">
       <p>&emsp;&emsp;用gmt画箭头还是挺常见的。<a href="https://docs.generic-mapping-tools.org/dev/plot.html">GMT document</a>和<a href="https://docs.gmt-china.org/latest/basis/vector/">GMT中文手册</a>虽好，但如果网络不好不就歇菜了，还是记录一下吧，自己翻起来方便。画箭头参数是Sv(或SV)，自己调Sv之后的参数可以看效果。输入参数表示是x，y，angle，length。x，y表示箭头的起始坐标。angle是箭头指向，逆时针为正，x轴正向为0。length就是那个length了。</p>
-<div class="highlight"><pre><span></span><code>echo 0 0 60 0.5i | gmt psxy -R -J -O -K -Sv0.25c+e0.2c -W0.5p -Gblack &gt;&gt;$ps
-</code></pre></div>
+<pre class="highlight"><code>echo 0 0 60 0.5i | gmt psxy -R -J -O -K -Sv0.25c+e0.2c -W0.5p -Gblack &gt;&gt;$ps
+</code></pre>
     </div>
 
   <div class="post-nav">

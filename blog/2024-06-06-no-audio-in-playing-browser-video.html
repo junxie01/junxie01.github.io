@@ -42,9 +42,8 @@
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <!-- Umami Analytics -->
   <script defer src="https://cloud.umami.is/script.js" data-website-id="21a99622-5a23-45f4-be80-edef627a68e3"></script>
-  <!-- Leave endpoint empty until the Worker and visitor counting are verified.
-       Then set it to https://the-deployed-worker-domain/count. -->
-  <script defer src="/scripts/article_counter_20261016.js" data-counter-endpoint=""></script>
+  <!-- Explicit page paths preserve article counts across browser referrer policies. -->
+  <script defer src="/scripts/article_counter_20261016.js" data-counter-endpoint="https://counter.seis-jun.xyz/count"></script>
 </head>
 <body>
 
@@ -112,13 +111,13 @@
     <div class="post-content">
       <p>之前整了nodesk之后就出现了视频播放的问题。用mplayer播放视频时，卡住。用浏览器播放视频的时候卡住，关掉音频之后视频正常播放了。但是没有声音。
 然后</p>
-<div class="highlight"><pre><span></span><code><span class="n">systemctl</span><span class="w"> </span><span class="o">--</span><span class="n">user</span><span class="w"> </span><span class="n">stop</span><span class="w"> </span><span class="n">wireplumber</span>
-</code></pre></div>
+<pre class="highlight"><code>systemctl --user stop wireplumber
+</code></pre>
 
 <p>关掉了wireplumber以后mplayer和浏览器上都能正常播放了。但每次重启都得运行一次。多麻烦呀。
 然后</p>
-<div class="highlight"><pre><span></span><code><span class="n">sudo</span><span class="w"> </span><span class="n">dnf</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="o">--</span><span class="n">allowerasing</span><span class="w"> </span><span class="n">pipewire</span><span class="o">-</span><span class="n">pulseaudio</span>
-</code></pre></div>
+<pre class="highlight"><code>sudo dnf install --allowerasing pipewire-pulseaudio
+</code></pre>
 
 <p>就可以了。</p>
     </div>

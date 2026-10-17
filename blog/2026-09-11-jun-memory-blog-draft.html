@@ -42,9 +42,8 @@
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <!-- Umami Analytics -->
   <script defer src="https://cloud.umami.is/script.js" data-website-id="21a99622-5a23-45f4-be80-edef627a68e3"></script>
-  <!-- Leave endpoint empty until the Worker and visitor counting are verified.
-       Then set it to https://the-deployed-worker-domain/count. -->
-  <script defer src="/scripts/article_counter_20261016.js" data-counter-endpoint=""></script>
+  <!-- Explicit page paths preserve article counts across browser referrer policies. -->
+  <script defer src="/scripts/article_counter_20261016.js" data-counter-endpoint="https://counter.seis-jun.xyz/count"></script>
 </head>
 <body>
 
@@ -133,14 +132,14 @@
 <p>目前用的是 Markdown、SQLite 和一个本地 MCP 服务。</p>
 <p>Markdown 保存真正的记忆内容，既能直接打开，也能放进 Obsidian 阅读。SQLite 负责检索，是从 Markdown 生成的索引；索引丢了可以重建。MCP 则提供给 Codex、Qoder 一个统一的调用入口，例如查询项目简报、搜索历史决定、写入候选记忆。</p>
 <p>大致的目录是这样：</p>
-<div class="highlight"><pre><span></span><code>Mem/
+<pre class="highlight"><code class="language-text">Mem/
 ├── 00-Inbox       等待审核的候选
 ├── 10-Profile     个人偏好
 ├── 20-Projects    项目记忆
 ├── 30-Knowledge   方法、文献与参考知识
 ├── 40-Workflows   可复用工作流
 └── 90-System      协议、模板与验证记录
-</code></pre></div>
+</code></pre>
 
 <p>保存的内容，我更关心下面三类。</p>
 <p>第一类是习惯。例如中文优先，先读现有文件，再做最小修改；科研解释不能把推测写成结论。这些东西不应该每个项目都重新交代。</p>
@@ -173,9 +172,9 @@
 <p>先读取 SWED 的项目简报，说明已经完成什么、还有哪些未知，再继续当前任务。</p>
 </blockquote>
 <p>也可以在 Mem 目录里直接检查：</p>
-<div class="highlight"><pre><span></span><code>.venv/bin/junmem<span class="w"> </span>brief<span class="w"> </span>--project<span class="w"> </span>swed
-.venv/bin/junmem<span class="w"> </span>search<span class="w"> </span><span class="s2">&quot;冻结&quot;</span><span class="w"> </span>--project<span class="w"> </span>swed
-</code></pre></div>
+<pre class="highlight"><code class="language-bash">.venv/bin/junmem brief --project swed
+.venv/bin/junmem search &quot;冻结&quot; --project swed
+</code></pre>
 
 <p>关键是“没有找到记录”不能直接解释为“以前没有做过”。确实需要补查时，再去读项目文件或定位旧对话。</p>
 <p>目前跨独立 MCP 进程恢复交接已经测试通过，相关代码测试和历史检索回归也通过了。但这仍然不能保证每一个真实任务都会老老实实写交接：客户端没有加载新规则、工具调用失败，或者任务被强制中断，都可能漏写。</p>

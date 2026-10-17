@@ -1093,14 +1093,14 @@
 <p>提醒时间定在每天上午十点。</p>
 <p>到时间，如果当天还没有标记读完，就尝试发一条系统通知；已经打过卡，就不再提醒。当前定时任务已经装好，不过实际通知能不能正常弹出，还要在日常使用中确认。</p>
 <p>平时使用倒是简单。电脑登录后，本地服务会自动运行，浏览器打开：</p>
-<div class="highlight"><pre><span></span><code>http://127.0.0.1:8766
-</code></pre></div>
+<pre class="highlight"><code class="language-text">http://127.0.0.1:8766
+</code></pre>
 
 <p>把这个地址放进书签栏，每天点开就行。这个地址只指向自己的电脑，不是一个公开网站。</p>
 <p>如果哪天页面打不开，可以到项目目录手动启动。我这台电脑上的命令是：</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>paper_read
+<pre class="highlight"><code class="language-bash">cd paper_read
 ./scripts/run.sh
-</code></pre></div>
+</code></pre>
 
 <p>手动启动时，终端窗口要保持开着。</p>
 <h2 id="_4">留下一点阅读记录</h2>

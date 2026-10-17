@@ -42,9 +42,8 @@
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <!-- Umami Analytics -->
   <script defer src="https://cloud.umami.is/script.js" data-website-id="21a99622-5a23-45f4-be80-edef627a68e3"></script>
-  <!-- Leave endpoint empty until the Worker and visitor counting are verified.
-       Then set it to https://the-deployed-worker-domain/count. -->
-  <script defer src="/scripts/article_counter_20261016.js" data-counter-endpoint=""></script>
+  <!-- Explicit page paths preserve article counts across browser referrer policies. -->
+  <script defer src="/scripts/article_counter_20261016.js" data-counter-endpoint="https://counter.seis-jun.xyz/count"></script>
 </head>
 <body>
 
@@ -116,27 +115,27 @@
 <!-- less -->
 <h1 id="_1">安装插件</h1>
 <p>命令：</p>
-<div class="highlight"><pre><span></span><code>npm install hexo-blog-encrypt
-</code></pre></div>
+<pre class="highlight"><code>npm install hexo-blog-encrypt
+</code></pre>
 
 <h1 id="_2">修改配置</h1>
 <p>在本目录配置文件_config.yml加入：</p>
-<div class="highlight"><pre><span></span><code><span class="n">encrypt</span><span class="o">:</span>
-<span class="w">   </span><span class="n">enable</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
-</code></pre></div>
+<pre class="highlight"><code>encrypt:
+   enable: true
+</code></pre>
 
 <h1 id="_3">博客文章加密</h1>
 <p>写新的文章时加入：</p>
-<div class="highlight"><pre><span></span><code><span class="n">password</span><span class="o">:</span><span class="w"> </span><span class="n">xxxxx</span>
-<span class="n">message</span><span class="o">:</span><span class="w"> </span><span class="err">输入密码的提示。</span>
-</code></pre></div>
+<pre class="highlight"><code>password: xxxxx
+message: 输入密码的提示。
+</code></pre>
 
 <p>高级设置：</p>
-<div class="highlight"><pre><span></span><code><span class="n">password</span><span class="o">:</span><span class="w"> </span><span class="n">xxxx</span>
-<span class="n">abstract</span><span class="o">:</span><span class="w"> </span><span class="n">here</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">something</span><span class="w"> </span><span class="n">encrypted</span>
-<span class="n">message</span><span class="o">:</span><span class="w"> </span><span class="err">请输入密码。</span>
-<span class="n">wrong_pass_message</span><span class="o">:</span><span class="w"> </span><span class="n">Oh</span><span class="o">,</span><span class="w"> </span><span class="n">wrong</span><span class="w"> </span><span class="n">password</span><span class="o">,</span><span class="w"> </span><span class="n">please</span><span class="w"> </span><span class="k">try</span><span class="w"> </span><span class="n">again</span><span class="o">.</span>
-</code></pre></div>
+<pre class="highlight"><code>password: xxxx
+abstract: here is something encrypted
+message: 请输入密码。
+wrong_pass_message: Oh, wrong password, please try again.
+</code></pre>
     </div>
 
   <div class="post-nav">

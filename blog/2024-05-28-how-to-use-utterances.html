@@ -42,9 +42,8 @@
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <!-- Umami Analytics -->
   <script defer src="https://cloud.umami.is/script.js" data-website-id="21a99622-5a23-45f4-be80-edef627a68e3"></script>
-  <!-- Leave endpoint empty until the Worker and visitor counting are verified.
-       Then set it to https://the-deployed-worker-domain/count. -->
-  <script defer src="/scripts/article_counter_20261016.js" data-counter-endpoint=""></script>
+  <!-- Explicit page paths preserve article counts across browser referrer policies. -->
+  <script defer src="/scripts/article_counter_20261016.js" data-counter-endpoint="https://counter.seis-jun.xyz/count"></script>
 </head>
 <body>
 
@@ -118,8 +117,8 @@
 1. 在github中新建一个仓库，例如较utt_comment.
 2. 点击https://github.com/apps/utterances安装Github App 关联的仓库要选刚刚建立的那个，例如：utt_comment.
 3. 在主题配置文件_config.yml中设置：</p>
-<div class="highlight"><pre><span></span><code><span class="gh">#</span> Utterances
-<span class="gh">#</span> For more information: https://utteranc.es
+<pre class="highlight"><code># Utterances
+# For more information: https://utteranc.es
 utterances:
   enable: true
   repo: your-name/your-repo # Github repository owner and name
@@ -127,7 +126,7 @@ utterances:
   issue_term: pathname
   # Available values: github-light | github-dark | preferred-color-scheme | github-dark-orange | icy-dark | dark-blue | photon-dark | boxy-light
   theme: github-light
-</code></pre></div>
+</code></pre>
     </div>
 
   <div class="post-nav">

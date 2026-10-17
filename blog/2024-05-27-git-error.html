@@ -42,9 +42,8 @@
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <!-- Umami Analytics -->
   <script defer src="https://cloud.umami.is/script.js" data-website-id="21a99622-5a23-45f4-be80-edef627a68e3"></script>
-  <!-- Leave endpoint empty until the Worker and visitor counting are verified.
-       Then set it to https://the-deployed-worker-domain/count. -->
-  <script defer src="/scripts/article_counter_20261016.js" data-counter-endpoint=""></script>
+  <!-- Explicit page paths preserve article counts across browser referrer policies. -->
+  <script defer src="/scripts/article_counter_20261016.js" data-counter-endpoint="https://counter.seis-jun.xyz/count"></script>
 </head>
 <body>
 
@@ -111,12 +110,12 @@
 
     <div class="post-content">
       <p>运行git push origin master -f 的时候显示这个错误:</p>
-<div class="highlight"><pre><span></span><code>fatal: &#39;origin&#39; does not appear to be a git repository fatal: Could not read from remote repository.
-</code></pre></div>
+<pre class="highlight"><code>fatal: 'origin' does not appear to be a git repository fatal: Could not read from remote repository.
+</code></pre>
 
 <p>解决办法是重新关联远程仓库：</p>
-<div class="highlight"><pre><span></span><code><span class="n">git</span><span class="w"> </span><span class="n">remote</span><span class="w"> </span><span class="k">add</span><span class="w"> </span><span class="n">origin</span><span class="w"> </span><span class="n">git</span><span class="nv">@github</span><span class="p">.</span><span class="nl">com</span><span class="p">:</span><span class="o">&lt;</span><span class="n">your</span><span class="o">-</span><span class="n">account</span><span class="o">&gt;/&lt;</span><span class="n">your</span><span class="o">-</span><span class="n">repository</span><span class="o">&gt;</span><span class="p">.</span><span class="n">git</span>
-</code></pre></div>
+<pre class="highlight"><code>git remote add origin git@github.com:&lt;your-account&gt;/&lt;your-repository&gt;.git
+</code></pre>
     </div>
 
   <div class="post-nav">
