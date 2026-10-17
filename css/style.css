@@ -1202,6 +1202,7 @@ footer a:hover {
 }
 
 .masthead {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1287,7 +1288,8 @@ footer a:hover {
 }
 
 .theme-toggle:focus-visible,
-.masthead a:focus-visible {
+.masthead a:focus-visible,
+.nav-links-toggle:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
@@ -1320,7 +1322,8 @@ footer a:hover {
   position: static;
 }
 
-.primary-nav a {
+.primary-nav > a,
+.nav-links-toggle {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1334,12 +1337,16 @@ footer a:hover {
   white-space: nowrap;
 }
 
-.primary-nav a:hover,
-.primary-nav a.active {
+.primary-nav > a:hover,
+.primary-nav > a.active,
+.nav-links-toggle:hover,
+.nav-links-toggle.active,
+.nav-links[open] > .nav-links-toggle {
   color: var(--brand-ink);
 }
 
-.primary-nav a.active {
+.primary-nav > a.active,
+.nav-links-toggle.active {
   border-bottom-color: var(--brand-copper);
 }
 
@@ -1350,6 +1357,130 @@ footer a:hover {
 .masthead-search-shortcut svg {
   width: 19px;
   height: 19px;
+}
+
+.nav-links {
+  position: static;
+}
+
+.nav-links-toggle {
+  gap: 0.18rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+.nav-links-toggle::-webkit-details-marker {
+  display: none;
+}
+
+.nav-links-toggle svg {
+  width: 11px;
+  height: 11px;
+}
+
+.nav-links[open] > .nav-links-toggle svg {
+  transform: rotate(180deg);
+}
+
+.nav-links-panel {
+  position: absolute;
+  z-index: 20;
+  top: 100%;
+  right: 1.25rem;
+  width: 31rem;
+  max-width: calc(100vw - 2.5rem);
+  max-height: 75vh;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr);
+  gap: 1.2rem;
+  padding: 1.15rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--card-bg);
+  box-shadow: var(--card-shadow), 0 14px 35px color-mix(in srgb, var(--text) 10%, transparent);
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.nav-links:not([open]) > .nav-links-panel {
+  display: none;
+}
+
+.nav-links-label {
+  margin: 0 0 0.55rem;
+  color: var(--muted);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+}
+
+.nav-project-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.12rem 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-project-list a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.35rem;
+  min-height: 42px;
+  padding: 0.3rem 0;
+  border: 0;
+  color: var(--text);
+  font-size: 0.77rem;
+  line-height: 1.4;
+}
+
+.nav-project-list a span {
+  color: var(--muted);
+  font-size: 0.7rem;
+}
+
+.nav-links-categories {
+  padding-left: 1.1rem;
+  border-left: 1px solid var(--border);
+}
+
+.nav-links-categories a {
+  display: grid;
+  gap: 0.1rem;
+  padding: 0.3rem 0;
+  border: 0;
+  color: var(--text);
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.nav-links-categories small {
+  color: var(--muted);
+  font-size: 0.67rem;
+}
+
+.nav-project-list a:hover,
+.nav-links-categories a:hover,
+.nav-links-categories a[aria-current="page"] {
+  color: var(--accent);
+}
+
+.link-category-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin-bottom: 1.7rem;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 0.8rem;
+}
+
+.link-category-nav a {
+  color: var(--muted);
+}
+
+.link-category-nav a[aria-current="page"] {
+  color: var(--accent);
 }
 
 .home-shell {
@@ -2219,6 +2350,43 @@ body:has(.home-main) {
     grid-template-columns: repeat(7, minmax(0, 1fr));
     gap: 0;
     order: 0;
+    position: relative;
+  }
+
+  .nav-links {
+    position: static;
+  }
+
+  .nav-links-toggle {
+    display: flex;
+  }
+
+  .nav-links-panel {
+    left: 0;
+    right: 0;
+    width: auto;
+    max-width: none;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.9rem;
+    padding: 1rem;
+  }
+
+  .nav-links-categories {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.5rem;
+    padding: 0.75rem 0 0;
+    border-left: 0;
+    border-top: 1px solid var(--border);
+  }
+
+  .nav-links-categories .nav-links-label {
+    grid-column: 1 / -1;
+    margin: 0;
+  }
+
+  .nav-project-list a {
+    font-size: 0.86rem;
   }
 
   .masthead-search {
