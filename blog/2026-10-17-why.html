@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    (function () {
+      var stored = null;
+      try {
+        stored = localStorage.getItem('seisamuse-theme');
+      } catch (error) {}
+
+      var setting = stored === 'light' || stored === 'dark' ? stored : 'system';
+      var systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = setting === 'system' ? (systemDark ? 'dark' : 'light') : setting;
+      document.documentElement.dataset.theme = theme;
+      document.documentElement.dataset.themeSetting = setting;
+    })();
+  </script>
+  <title>为什么？ | hashes</title>
+  <meta name="description" content="为什么？">
+  <link rel="alternate" type="application/atom+xml" title="Atom 订阅" href="/atom.xml">
+  <link rel="prefetch" as="image" href="https://www.blogsclub.org/badge/www.seis-jun.xyz">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+  <!-- MathJax for LaTeX rendering -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        ignoreHtmlClass: 'mermaid'
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <!-- Umami Analytics -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="21a99622-5a23-45f4-be80-edef627a68e3"></script>
+  <!-- Explicit page paths preserve article counts across browser referrer policies. -->
+  <script defer src="/scripts/article_counter_20261016.js" data-counter-endpoint="https://counter.seis-jun.xyz/count"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container masthead">
+      <a class="masthead-identity" href="/" aria-label="SEISAMUSE 主页">
+        <img src="/images/seisamuse.png" alt="" class="masthead-avatar">
+        <span class="masthead-title">SEISAMUSE</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="主导航">
+        <a href="/">主页</a>
+        <a href="/blog/" class="active" aria-current="page">博客</a>
+        <a href="/thoughts/">想法</a>
+        <a href="/archives/">归档</a>
+        <a href="/about/">自述</a>
+        <a href="/links/">链接</a>
+        <a class="masthead-search-shortcut" href="/search/" aria-label="搜索文章" title="搜索文章">
+          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false"><circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="1.5"/><path d="m13 13 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </a>
+      </nav>
+
+      <div class="masthead-actions" aria-label="快捷入口">
+        <form class="masthead-search" action="/search/" method="get">
+          <input type="search" name="q" placeholder="搜索文章" aria-label="搜索文章">
+        </form>
+        <a href="mailto:hashes@yeah.net" title="邮件联系" aria-label="邮件联系"><i class="fa-solid fa-envelope"></i></a>
+        <a href="/atom.xml" title="Atom 订阅" aria-label="Atom 订阅"><i class="fa-solid fa-rss"></i></a>
+        <button class="theme-toggle" type="button" data-theme-toggle title="主题：跟随系统" aria-label="主题：跟随系统">
+          <i class="fa-solid fa-display" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container page-wide">
+      
+      
+<div class="main-content">
+  <article>
+    <div class="post-header">
+      <h1>为什么？</h1>
+      <div class="post-meta">
+        <time>2026-10-17</time>
+         &middot; 约 2,730 字
+        <span id="busuanzi_container_page_pv" style="display: none;">
+          &middot; &#128065; <span id="busuanzi_value_page_pv"></span> 次浏览
+        </span>
+        
+         &middot; 分类：
+        
+          <a href="/blog/topic/随笔/">随笔</a>
+        
+        
+        
+         &middot; 标签：
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">为什么</span>
+        
+        
+      </div>
+    </div>
+
+    <div class="post-content">
+      <p>最近给AI讲每次回答我要同时扮演“智慧老者”，“专门挑刺的人”，“专门捧臭脚的人”，然后以各自角度组织语言回答我的问题。今天下午就跟AI聊了不少东西，但我好像只关注我要问些啥了，没有太关心它怎么回答了。但的确聊得不亦乐乎。</p>
+<p>读下来它的回答还是有点拍马屁或者叫自说自话。不过“专门挑刺的”讲的话的确让我有些启发。</p>
+<p>记录一下今天和AI聊了些啥，当然我和AI交流的时候并不是一直问为啥，显得自己是不是有点傻，我也会说我是这样看的，这样想的，我还有这样的疑问之类。有时连珠炮的问题就出来，比AI回复的还快，至于AI给我说的啥我回头再消化一下。</p>
+<p>和AI聊的起因是想知道为什么人到了故地重游容易感动的问题，结果越扯越远，从记忆扯到情绪，从情绪扯到欲望，又从欲望扯到智慧、宇宙、宗教，最后连“我”到底是什么都开始怀疑了。</p>
+<p>看来，我的脑子就是有点不安分。</p>
+<p>我一直觉得，我们所认识的世界，并不是世界本身，而是大脑根据感官信息、记忆和经验构建出来的模型。</p>
+<p>我并不是否认客观世界的存在。我只是认为，我们很难看到它的全貌。</p>
+<p><a href="/blog/2020-06-05-history-and-inversion.html">比如历史</a>。过去的事情确实发生过，但过去就是过去了。整个物质世界时时刻刻都在变化，过去的物理状态不可能轻易重现，或者基本不可能倒着重现。即使有时间机器，想要让整个世界恢复当时的状态，恐怕实现的概率几乎为0。</p>
+<p>我们只能借助记忆、文字和各种残留下来的证据认识过去。</p>
+<p>可记忆会改变，文字会受到记录者的立场、知识和情绪影响。就连亲历一件事情的人，都不一定知道事情的全貌，更不用说几百年后的人了。</p>
+<p>所以我以前就把历史研究和地球物理<a href="/blog/2020-06-05-history-and-inversion.html">反演</a>联系起来。有限的观测，可以对应不止一种解释。即使观测没有错误，也未必能获得唯一的真实模型。</p>
+<p>那么，为什么故地重游容易感动呢？</p>
+<p>我觉得也许是眼前的事物激活了过去形成的记忆和认知模型。熟悉的东西让人觉得仿佛回到了小时候，而眼前的变化又提醒我们，过去永远也回不去了。</p>
+<p>这其中似乎既有模型的匹配，又有模型的不匹配，还有情绪和记忆的共同参与。</p>
+<p>说到情绪，我又开始想，人为什么会有情绪？</p>
+<p>是不是与需求有关？当然AI告诉我不一定，它总是这么说。“智慧老人”和“会挑刺的人”有时观点类似。</p>
+<p>人有吃喝拉撒、生老病死的生理需求，也有安全、归属、尊重、自我实现等高级需求。当现实与需求、预期不一致时，就可能产生失望、愤怒、恐惧等情绪。</p>
+<p>但还有一种情况很有意思。有时候明明说不清原因，却会突然对某个人、某个地方产生好感或者厌恶。这是不是过去的经历在神经网络中留下了某种隐性的痕迹？有些东西虽然已经想不起来了，却仍然影响着今天的反应。</p>
+<p>那么性格是不是也与这些长期形成的神经回路有关？</p>
+<p>如果一个人失去了过去的记忆，他还是原来的他吗？</p>
+<p>想到这里，我又开始怀疑自己。</p>
+<p>现在的“我”究竟有多少是真正属于我的？</p>
+<p>我的语言是别人教的，知识是别人传授的，价值观受到父母、学校、社会的影响，甚至连喜欢什么、不喜欢什么，都与过去的经历脱不开关系。</p>
+<p>把这些东西一样一样拿掉，最后还剩下什么？</p>
+<p>可能什么都没有。</p>
+<p>但反过来说，每个人的经历都不一样，由此形成的思想、性格、情绪和价值观也不一样。这个独特的组合，为什么就不能是“我”呢？</p>
+<p>也许根本不存在一个不受外界影响的纯粹自我。或者说，其实不能把存粹的我从社会环境摘出来。</p>
+<p>可是如果这样，真正的自主又是什么？</p>
+<p>我觉得这里存在一个挺有意思的矛盾。</p>
+<p>再说欲望。</p>
+<p>人的欲望可能源于各种需求，却又不完全等于需求。</p>
+<p>尤其是那些年少时求而不得的东西，有时会成为成年后的强烈执着。小时候缺少什么，长大后就拼命想得到什么。即使已经得到了，似乎也无法完全满足。</p>
+<p>是不是因为人想通过改变现在，去弥补一个已经无法改变的过去？</p>
+<p>而人的智慧又使得欲望能够不断扩展。吃饱了可以不吃，但获得了地位，还可能想要更高的地位；有了财富，还可能想要更多财富。可能吃饱了有身体会提醒你，但获得了更高的地位和财富，再也没有谁来给你敲警钟。</p>
+<p>然后我又想到了人工智能。</p>
+<p>人工智能可能具有越来越强的预测、推理和解决问题的能力，却未必有人的生理需求和欲望。</p>
+<p>那么，没有欲望的智慧会不会更安全？</p>
+<p>似乎也不一定。因为即使没有主观欲望，一个具有行动能力的AI也可能为了完成目标而采取一些我们不希望它采取的手段。已经有报道过类似的AI越狱的事情。</p>
+<p>这又把智慧、需求、目标和欲望几个概念搅在了一起。</p>
+<p>不过，我觉得人类有一个特别有意思的特点。</p>
+<p>我们不仅想知道事情是什么样的，还特别想知道为什么是这个样子。</p>
+<p>苹果为什么往下掉？</p>
+<p>因为引力。</p>
+<p>为什么有引力？</p>
+<p>爱因斯坦说物质和能量与时空的几何结构有关。</p>
+<p>为什么宇宙偏偏遵循这样的规律？</p>
+<p>然后呢？</p>
+<p>我们还可以继续问，为什么？</p>
+<p>人类似乎有一种寻找统一解释的强烈倾向。我们希望用尽可能少的规律解释尽可能多的现象，甚至希望找到一个能够解释一切的终极理论。</p>
+<p>但问题是，凭什么认为世界一定存在一个终极解释？</p>
+<p>即使找到了一个统一所有物理规律的理论，我们依然可以问，为什么偏偏是这个理论？</p>
+<p>似乎永远也问不完。</p>
+<p>这也是让我觉得科学、哲学甚至宗教很有意思的地方。</p>
+<p>科学能够不断改进我们对世界的认识，但不保证一定能够找到最后一个“为什么”。</p>
+<p>宗教则可能提供某种终极解释，让一部分人可以安心地停止追问。但一个答案能让人安心，并不意味着它就是真相。</p>
+<p>更麻烦的是，对于那些无法通过经验检验的信念，我们甚至不知道怎样才能判断它究竟对不对。</p>
+<p>有时候想这些问题，会有一种掉进虚无的感觉。</p>
+<p>好不容易想明白一点，发现下面还有一个洞，无底洞。</p>
+<p>那是不是应该打住呢？</p>
+<p>可是，如果我们只是满足吃喝、安全、享乐等基本需求，不再追问世界，不再追求知识、创造和意义，我又觉得人的生活少了点什么。似乎和动物没啥分别啊。</p>
+<p>但如果总在追问终极意义，似乎又容易忽略现实生活。</p>
+<p>甚至我有时候怀疑，自己是不是在通过思考那些宏大的哲学问题，逃避一些现实中的困难和世俗评价？</p>
+<p>比如工作上的成就、社会的认可、别人对自己的看法。</p>
+<p>当然，反过来也成立。一个人不停地追求财富、地位和成功，会不会也是在逃避人生的终极问题呢？</p>
+<p>那么，到底什么才算逃避现实？</p>
+<p>哲学思考是真实发生的，世俗生活也是真实发生的。为什么非要认为其中一种比另一种更现实？</p>
+<p>而且，我并不认为一定要比较两种生活哪一种更有价值。</p>
+<p>找到自己愿意追求的东西，不就好了吗？</p>
+<p>可问题又来了。</p>
+<p>我们所认为的“自己的价值”，有多少来自社会呢？</p>
+<p>我喜欢写博客。即使没有人看，有些东西我也愿意写。但我同样希望有人阅读，希望与人交流，也希望自己的文章能够写得更好，甚至希望有一天写出真正好的文学作品。</p>
+<p>这些愿望里既有自己的快乐，也有社会评价的影响。</p>
+<p>可是为什么一定要把它们分开呢？</p>
+<p>想到这里，我觉得佛家所说的“不着相”，还有中国古代的中庸，似乎都有值得思考的地方。</p>
+<p>不过，不执着不等于什么都不在乎。中庸也不应该是什么都接受、凡事各退一步。</p>
+<p>或许重要的不是彻底摆脱需求、欲望和社会评价，而是不要让其中某一种东西成为衡量所有事情的唯一标准。</p>
+<p>但这样说似乎又太容易了。</p>
+<p>到底什么程度才算不过分？什么时候应该坚持，什么时候应该放下？</p>
+<p>又是一个为什么。</p>
+<p>我发现自己绕了一大圈，最后还是没有找到一个能够解释所有问题的答案。</p>
+<p>甚至连那个一直在寻找答案的“我”，究竟是什么，都还没有想清楚。</p>
+<p>不过，至少有一件事我暂时还比较确定：</p>
+<p>我似乎不必因为无法完全理解世界，就否认自己已经理解的那一部分；也不必因为找不到最终的意义，就否认眼前那些具体的意义。</p>
+<p>至于终极答案到底有没有，我不知道。</p>
+<p>人为什么非要追求终极答案？我也还没有完全想明白。</p>
+<p>算了，今天先想到这里。</p>
+<p>再问下去，又要问为什么要问为什么了。</p>
+    </div>
+
+  <div class="post-nav">
+    
+      <a class="post-nav-prev" href="/blog/2026-10-17-surface-wave-event-detection.html">&larr; 基于长周期面波的全球震动事件检测</a>
+    
+
+    <a class="post-nav-blog" href="/blog/">返回博客</a>
+
+    
+      <span class="post-nav-next"></span>
+    
+  </div>
+  
+
+
+
+<div class="comments-section">
+  <h3>评论</h3>
+  
+  <script>
+    (function () {
+      var giscus = document.createElement('script');
+      giscus.src = 'https://giscus.app/client.js';
+      giscus.dataset.repo = 'junxie01/junxie01.github.io';
+      giscus.dataset.repoId = 'R_kgDOSGl1Dg';
+      giscus.dataset.category = 'General';
+      giscus.dataset.categoryId = 'DIC_kwDOSGl1Ds4DAuif';
+      giscus.dataset.mapping = 'specific';
+      giscus.dataset.term = 'blog/2026-10-17-why';
+      giscus.dataset.strict = '0';
+      giscus.dataset.reactionsEnabled = '1';
+      giscus.dataset.emitMetadata = '0';
+      giscus.dataset.inputPosition = 'bottom';
+      giscus.dataset.theme = document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light';
+      giscus.dataset.lang = 'zh-CN';
+      giscus.crossOrigin = 'anonymous';
+      giscus.async = true;
+      document.currentScript.parentNode.appendChild(giscus);
+
+      window.addEventListener('seisamuse-theme-change', function (event) {
+        var frame = document.querySelector('.giscus-frame');
+        if (!frame || !frame.contentWindow) return;
+        frame.contentWindow.postMessage({
+          giscus: {
+            setConfig: {
+              theme: event.detail.theme === 'dark' ? 'dark' : 'light'
+            }
+          }
+        }, 'https://giscus.app');
+      });
+    })();
+  </script>
+</div>
+</article>
+</div>
+
+      
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p class="site-stats">
+        <span id="busuanzi_container_site_pv">
+          👁 总访问量：<span id="busuanzi_value_site_pv"></span>
+        </span>
+        &middot;
+        <span id="busuanzi_container_site_uv">
+          访客数：<span id="busuanzi_value_site_uv"></span>
+        </span>
+      </p>
+      <p>&copy; 2026 hashes &middot; 使用 Python 与 Markdown 构建 &middot;
+        GitHub &middot;
+        <a href="/atom.xml" target="_blank">Atom</a> &middot;
+        <a href="/privacy/">隐私政策</a>
+      </p>
+      <!-- Edit this line to add or remove blog directory links. -->
+      <p class="footer-directory-links">
+        <span>感谢收录：</span>
+        <a href="https://blogscn.fun/" target="_blank" rel="noopener">笔墨迹</a>
+        <a href="https://bf.zzxworld.com/" target="_blank" rel="noopener">BlogFinder</a>
+        <a href="https://www.blogsclub.org/" target="_blank" rel="noopener">BlogsClub</a>
+        <a href="https://blogplanet.cn/" target="_blank" rel="noopener">博客星球</a>
+        <a href="https://bokehub.com/" target="_blank" rel="noopener">博客中心</a>
+        <a href="https://storeweb.cn/" target="_blank" rel="noopener">个站商店</a>
+        <a href="https://www.heyblog.net/" target="_blank" rel="noopener">HeyBlog</a>
+        <a href="https://www.travellings.cn/go.html" target="_blank" rel="noopener">开往</a>
+        <a href="https://www.foreverblog.cn/" target="_blank" rel="noopener">十年之约</a>
+      </p>
+    </div>
+  </footer>
+
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+      startOnLoad: true,
+      securityLevel: 'strict',
+      theme: document.documentElement.dataset.theme === 'dark' ? 'dark' : 'neutral'
+    });
+  </script>
+
+  <script>
+    (function () {
+      var toggle = document.querySelector('[data-theme-toggle]');
+      if (!toggle) return;
+
+      var order = ['system', 'light', 'dark'];
+      var labels = {
+        system: '主题：跟随系统',
+        light: '主题：浅色',
+        dark: '主题：深色'
+      };
+      var icons = {
+        system: 'fa-display',
+        light: 'fa-sun',
+        dark: 'fa-moon'
+      };
+      var media = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+
+      function currentSetting() {
+        var setting = document.documentElement.dataset.themeSetting;
+        return order.indexOf(setting) === -1 ? 'system' : setting;
+      }
+
+      function updateButton(setting) {
+        var label = labels[setting];
+        var icon = toggle.querySelector('i');
+        toggle.title = label;
+        toggle.setAttribute('aria-label', label);
+        icon.className = 'fa-solid ' + icons[setting];
+      }
+
+      function applyTheme(setting) {
+        var systemDark = media && media.matches;
+        var theme = setting === 'system' ? (systemDark ? 'dark' : 'light') : setting;
+        document.documentElement.dataset.themeSetting = setting;
+        document.documentElement.dataset.theme = theme;
+        try {
+          if (setting === 'system') localStorage.removeItem('seisamuse-theme');
+          else localStorage.setItem('seisamuse-theme', setting);
+        } catch (error) {}
+        updateButton(setting);
+        window.dispatchEvent(new CustomEvent('seisamuse-theme-change', {
+          detail: { theme: theme }
+        }));
+      }
+
+      toggle.addEventListener('click', function () {
+        var setting = currentSetting();
+        applyTheme(order[(order.indexOf(setting) + 1) % order.length]);
+      });
+
+      if (media) {
+        media.addEventListener('change', function () {
+          if (currentSetting() === 'system') applyTheme('system');
+        });
+      }
+
+      updateButton(currentSetting());
+    })();
+  </script>
+
+</body>
+</html>
