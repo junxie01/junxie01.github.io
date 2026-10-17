@@ -116,7 +116,7 @@
 <p>怎么办？</p>
 <p>之前我已经在办公室Fedora上配置好了Cloudflare Tunnel，FreshRSS和PaperHot都从这里出去。既然隧道已经挖通，再给博客图片留一条路似乎也不费多少事。<del>没有用R2是因为找不到visa卡</del></p>
 <p>最后的结构是：</p>
-<pre class="highlight"><code class="language-text">GitHub Pages上的博客
+<div class="highlight"><pre><span></span><code>GitHub Pages上的博客
     ↓ 请求图片
 https://xxx.seis-jun.xyz/
     ↓
@@ -125,15 +125,15 @@ Cloudflare Tunnel
 Fedora上的Nginx：127.0.0.1:8081
     ↓
 /var/www/seisamuse-media/
-</code></pre>
+</code></pre></div>
 
 <h2 id="_1">图片放在哪里</h2>
 <p>图片不再放进GitHub仓库，而是单独放在Fedora的这个目录：</p>
-<pre class="highlight"><code class="language-text">/var/www/seisamuse-media/
-</code></pre>
+<div class="highlight"><pre><span></span><code>/var/www/seisamuse-media/
+</code></pre></div>
 
 <p>目前分成两类：</p>
-<pre class="highlight"><code class="language-text">/var/www/seisamuse-media/
+<div class="highlight"><pre><span></span><code>/var/www/seisamuse-media/
 ├── images/
 │   ├── 3.png
 │   └── 其他普通博客图片
@@ -141,127 +141,127 @@ Fedora上的Nginx：127.0.0.1:8081
     └── assets/
         └── 文章slug/
             └── figure1.png
-</code></pre>
+</code></pre></div>
 
 <p>普通图片放在：</p>
-<pre class="highlight"><code class="language-text">/var/www/seisamuse-media/images/
-</code></pre>
+<div class="highlight"><pre><span></span><code>/var/www/seisamuse-media/images/
+</code></pre></div>
 
 <p>某篇文章独有的论文插图，则可以放在：</p>
-<pre class="highlight"><code class="language-text">/var/www/seisamuse-media/blog/assets/文章slug/
-</code></pre>
+<div class="highlight"><pre><span></span><code>/var/www/seisamuse-media/blog/assets/文章slug/
+</code></pre></div>
 
 <p>建目录：</p>
-<pre class="highlight"><code class="language-bash">sudo mkdir -p /var/www/seisamuse-media/images
-sudo mkdir -p /var/www/seisamuse-media/blog/assets
-sudo chmod -R a+rX /var/www/seisamuse-media
-sudo restorecon -Rv /var/www/seisamuse-media
-</code></pre>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/var/www/seisamuse-media/images
+sudo<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/var/www/seisamuse-media/blog/assets
+sudo<span class="w"> </span>chmod<span class="w"> </span>-R<span class="w"> </span>a+rX<span class="w"> </span>/var/www/seisamuse-media
+sudo<span class="w"> </span>restorecon<span class="w"> </span>-Rv<span class="w"> </span>/var/www/seisamuse-media
+</code></pre></div>
 
 <p>这里只放准备公开的博客图片。一些不想让别人看到的东西当然不能顺手扔进去。</p>
 <h2 id="nginx">用Nginx提供图片</h2>
 <p>Fedora上原本已经装了Nginx，所以不用再装一次，只需要增加一个配置：</p>
-<pre class="highlight"><code class="language-text">/etc/nginx/conf.d/seisamuse-media.conf
-</code></pre>
+<div class="highlight"><pre><span></span><code>/etc/nginx/conf.d/seisamuse-media.conf
+</code></pre></div>
 
 <p>内容如下：</p>
-<pre class="highlight"><code class="language-nginx">server {
-    listen 127.0.0.1:8081;
-    server_name xxxx;
+<div class="highlight"><pre><span></span><code><span class="k">server</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kn">listen</span><span class="w"> </span><span class="n">127.0.0.1</span><span class="p">:</span><span class="mi">8081</span><span class="p">;</span>
+<span class="w">    </span><span class="kn">server_name</span><span class="w"> </span><span class="s">xxxx</span><span class="p">;</span>
 
-    root /var/www/seisamuse-media;
+<span class="w">    </span><span class="kn">root</span><span class="w"> </span><span class="s">/var/www/seisamuse-media</span><span class="p">;</span>
 
-    location / {
-        try_files $uri =404;
-        add_header Cache-Control &quot;public, max-age=31536000, immutable&quot;;
-    }
+<span class="w">    </span><span class="kn">location</span><span class="w"> </span><span class="s">/</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kn">try_files</span><span class="w"> </span><span class="nv">$uri</span><span class="w"> </span><span class="p">=</span><span class="mi">404</span><span class="p">;</span>
+<span class="w">        </span><span class="kn">add_header</span><span class="w"> </span><span class="s">Cache-Control</span><span class="w"> </span><span class="s">&quot;public,</span><span class="w"> </span><span class="s">max-age=31536000,</span><span class="w"> </span><span class="s">immutable&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
 
-    autoindex off;
-}
-</code></pre>
+<span class="w">    </span><span class="kn">autoindex</span><span class="w"> </span><span class="no">off</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
 
 <p>Nginx只监听<code>127.0.0.1:8081</code>。也就是说，办公室路由器不需要开放8081端口，外部访问全部交给Cloudflare Tunnel。</p>
 <p>先检查配置，再启动服务：</p>
-<pre class="highlight"><code class="language-bash">sudo nginx -t
-sudo systemctl enable --now nginx
-</code></pre>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>nginx<span class="w"> </span>-t
+sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>--now<span class="w"> </span>nginx
+</code></pre></div>
 
 <p>本地测试：</p>
-<pre class="highlight"><code class="language-bash">curl -I http://127.0.0.1:8081/images/3.png
-</code></pre>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-I<span class="w"> </span>http://127.0.0.1:8081/images/3.png
+</code></pre></div>
 
 <h2 id="selinux">SELinux给我拦了一下</h2>
 <p>一开始并没有顺利返回图片，而是直接报错：</p>
-<pre class="highlight"><code class="language-text">curl: (7) Failed to connect to 127.0.0.1 port 8081
-</code></pre>
+<div class="highlight"><pre><span></span><code>curl: (7) Failed to connect to 127.0.0.1 port 8081
+</code></pre></div>
 
 <p>查看Nginx状态以后才发现，真正的错误是：</p>
-<pre class="highlight"><code class="language-text">bind() to 127.0.0.1:8081 failed (13: Permission denied)
-</code></pre>
+<div class="highlight"><pre><span></span><code>bind() to 127.0.0.1:8081 failed (13: Permission denied)
+</code></pre></div>
 
 <p>Nginx配置语法没有问题，端口也没有被占用，是Fedora的SELinux不允许Nginx监听这个新端口。需要把8081加入允许的HTTP端口：</p>
-<pre class="highlight"><code class="language-bash">sudo semanage port -a -t http_port_t -p tcp 8081
-</code></pre>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>semanage<span class="w"> </span>port<span class="w"> </span>-a<span class="w"> </span>-t<span class="w"> </span>http_port_t<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span><span class="m">8081</span>
+</code></pre></div>
 
 <p>如果系统提示8081已经有定义，则改用：</p>
-<pre class="highlight"><code class="language-bash">sudo semanage port -m -t http_port_t -p tcp 8081
-</code></pre>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>semanage<span class="w"> </span>port<span class="w"> </span>-m<span class="w"> </span>-t<span class="w"> </span>http_port_t<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span><span class="m">8081</span>
+</code></pre></div>
 
 <p>然后重新检查并启动：</p>
-<pre class="highlight"><code class="language-bash">sudo nginx -t
-sudo systemctl start nginx
-</code></pre>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>nginx<span class="w"> </span>-t
+sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>nginx
+</code></pre></div>
 
 <p>这次本地访问终于返回了<code>200 OK</code>。这种问题挺有Fedora特色：东西明明都摆对了，门口的保安还是要再看一眼证件。</p>
 <h2 id="cloudflare-tunnel">加进已有的Cloudflare Tunnel</h2>
 <p>我没有重新创建Tunnel，只是在已有配置中增加一个hostname。Cloudflare Tunnel的配置文件是：</p>
-<pre class="highlight"><code class="language-text">/root/.cloudflared/config.yml
-</code></pre>
+<div class="highlight"><pre><span></span><code>/root/.cloudflared/config.yml
+</code></pre></div>
 
 <p>修改前先备份：</p>
-<pre class="highlight"><code class="language-bash">sudo cp /root/.cloudflared/config.yml \
-  /root/.cloudflared/config.yml.bak.$(date +%Y%m%d_%H%M%S)
-</code></pre>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>cp<span class="w"> </span>/root/.cloudflared/config.yml<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>/root/.cloudflared/config.yml.bak.<span class="k">$(</span>date<span class="w"> </span>+%Y%m%d_%H%M%S<span class="k">)</span>
+</code></pre></div>
 
 <p>在最后的404兜底规则前增加：</p>
-<pre class="highlight"><code class="language-yaml">  - hostname: img.xxxx
-    service: http://127.0.0.1:8081
-  - service: http_status:404
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">img.xxxx</span>
+<span class="w">    </span><span class="nt">service</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://127.0.0.1:8081</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">service</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http_status:404</span>
+</code></pre></div>
 
 <p>检查配置：</p>
-<pre class="highlight"><code class="language-bash">sudo cloudflared tunnel \
-  --config /root/.cloudflared/config.yml \
-  ingress validate
-</code></pre>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>cloudflared<span class="w"> </span>tunnel<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--config<span class="w"> </span>/root/.cloudflared/config.yml<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>ingress<span class="w"> </span>validate
+</code></pre></div>
 
 <p>然后给现有Tunnel增加DNS路由：</p>
-<pre class="highlight"><code class="language-bash">sudo cloudflared tunnel route dns \
-  &lt;现有Tunnel名称&gt; \
-  img.seis-jun.xyz
-</code></pre>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>cloudflared<span class="w"> </span>tunnel<span class="w"> </span>route<span class="w"> </span>dns<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>&lt;现有Tunnel名称&gt;<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>img.seis-jun.xyz
+</code></pre></div>
 
 <p>最后重启Tunnel服务：</p>
-<pre class="highlight"><code class="language-bash">sudo systemctl restart cloudflared-freshrss.service
-</code></pre>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>cloudflared-freshrss.service
+</code></pre></div>
 
 <p>公网测试：</p>
-<pre class="highlight"><code class="language-bash">curl -I https://xxxx/images/3.png
-</code></pre>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-I<span class="w"> </span>https://xxxx/images/3.png
+</code></pre></div>
 
 <p>实际返回了<code>HTTP/2 200</code>，文件大小和Fedora上的原图一致。原来的FreshRSS和PaperHot也都正常，说明新规则没有把旧服务挤下去。</p>
 <h2 id="_2">博客里怎么使用</h2>
 <p>Markdown正文里直接写完整地址：</p>
-<pre class="highlight"><code class="language-markdown">![图片说明](https://xxx/images/3.png)
-</code></pre>
+<div class="highlight"><pre><span></span><code>![<span class="nt">图片说明</span>](<span class="na">https://xxx/images/3.png</span>)
+</code></pre></div>
 
 <p>首页卡片图则写在文章头部：</p>
-<pre class="highlight"><code class="language-yaml">card_image: https://xxxx/images/3.png
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nt">card_image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://xxxx/images/3.png</span>
+</code></pre></div>
 
 <p>文章专属图片可以写成：</p>
-<pre class="highlight"><code class="language-markdown">![论文图](https://xxxx.xyz/blog/assets/文章slug/figure1.png)
-</code></pre>
+<div class="highlight"><pre><span></span><code>![<span class="nt">论文图</span>](<span class="na">https://xxxx.xyz/blog/assets/文章slug/figure1.png</span>)
+</code></pre></div>
 
 <p>以后写博客的流程也就变成了：图片复制到Fedora，Markdown继续放GitHub，文章通过<code>xxx.seis-jun.xyz</code>引用图片。GitHub仓库终于只需要负责它比较擅长的文字和代码，不必再被一堆大图压得气喘吁吁。</p>
 <p>当然，这种办法也有代价。办公室电脑关机、Nginx停止或者Tunnel断线时，博客还能打开，图片却会暂时消失。所以重要图片仍然需要另外备份，不能觉得能在浏览器里打开就算万事大吉。</p>

@@ -3,11 +3,37 @@
   <title>SEISAMUSE</title>
   <link href="https://www.seis-jun.xyz/atom.xml" rel="self" />
   <link href="https://www.seis-jun.xyz" />
-  <updated>2026-10-16T08:29:57+08:00</updated>
+  <updated>2026-10-17T11:02:15+08:00</updated>
   <id>https://www.seis-jun.xyz/</id>
   <author>
     <name>hashes</name>
   </author>
+  
+  <entry>
+    <title>基于长周期面波的全球震动事件检测</title>
+    <link href="https://www.seis-jun.xyz/blog/2026-10-17-surface-wave-event-detection.html" />
+    <id>https://www.seis-jun.xyz/blog/2026-10-17-surface-wave-event-detection.html</id>
+    <updated>2026-10-17T11:02:15+08:00</updated>
+    <published>2026-10-17T11:02:15+08:00</published>
+    <summary type="html"><p>我得写点正经的东西，要不然认识我的人看到我写的东西会觉得我不学无术啊。 相信大家都比较关心哪里发生地震了，什么时候发生的，震级是多少。那就先给大家推荐一下在哪里可以看到地震目录： 1. 中国地震台网中心的地震目录 2. IRIS的Seismic Monitor。好像要梯子。 警告，有密集恐惧症患者慎点。 3. USGS...</p></summary>
+    <content type="html"><![CDATA[<p>我得写点正经的东西，要不然认识我的人看到我写的东西会觉得我不学无术啊。</p>
+<p>相信大家都比较关心哪里发生地震了，什么时候发生的，震级是多少。那就先给大家推荐一下在哪里可以看到地震目录：</p>
+<ol>
+<li>中国地震台网中心的<a href="https://www.ceic.ac.cn">地震目录</a></li>
+<li>IRIS的<a href="https://www.iris.edu/app/seismic-monitor/map?lat=21.2022&amp;lng=-170.1592&amp;zoom=2">Seismic Monitor</a>。好像要梯子。<strong>警告，有密集恐惧症患者慎点。</strong></li>
+<li>USGS的<a href="https://earthquake.usgs.gov/earthquakes/map/?currentFeatureId=us6000u2mq&amp;extent=-71.85623,20.74219&amp;extent=82.76537,325.19531&amp;range=week&amp;magnitude=all&amp;sort=largest&amp;listOnlyShown=true&amp;timeZone=utc&amp;settings=true">earthquake map</a>。可以自己选参数看不同时间/震级/深度/位置的事件。交互做得不错。</li>
+<li>ISC的<a href="https://www.isc.ac.uk/iscgem/overview.php">地震目录</a>，这个平台收集了全球公开的地震目录，是比较全的。</li>
+<li><a href="https://www.globalcmt.org">Global CMT</a>，做了全球5.5级以上地震的机制解。很多工作都参考它，或者以他为初始值。</li>
+<li>Ekström做的<a href="https://www.ldeo.columbia.edu/~ekstrom/Research/SWD/current/RADB_SWD_grd.html">全球面波事件</a>。是我的参考工作之一，但不予置评。</li>
+</ol>
+<p>好吧，先介绍这么多，其他的有空再说。</p>
+<p>不过今天的重点不是他们。是我的<a href="https://www.seis-jun.xyz/swed/">基于长周期面波的全球震动事件监测</a>。和Ekström有点不一样，号称比他的快那么一点点，但定位准确性可能差那么一点点。也许目录会比它的高那么一点点，不过还没有验证。算法先保密一下下，因为还想写一篇文章来着。另外，算法思想和基础核心程序是我自己的，但是细节优化和打包是请AI帮忙的，网页布设也是请AI帮忙，这个怎么算我还不太清楚。</p>
+<p>另外里面还有少量错检测，需要我自己手动确认，有时间再确认吧。</p>
+<p>感兴趣可以看看<a href="https://www.seis-jun.xyz/swed/">网页</a>。</p>]]></content>
+    
+    <category term="surface wave" />
+    
+  </entry>
   
   <entry>
     <title>别人的东西就是香吗？</title>
@@ -1093,14 +1119,14 @@
 <p>提醒时间定在每天上午十点。</p>
 <p>到时间，如果当天还没有标记读完，就尝试发一条系统通知；已经打过卡，就不再提醒。当前定时任务已经装好，不过实际通知能不能正常弹出，还要在日常使用中确认。</p>
 <p>平时使用倒是简单。电脑登录后，本地服务会自动运行，浏览器打开：</p>
-<pre class="highlight"><code class="language-text">http://127.0.0.1:8766
-</code></pre>
+<div class="highlight"><pre><span></span><code>http://127.0.0.1:8766
+</code></pre></div>
 
 <p>把这个地址放进书签栏，每天点开就行。这个地址只指向自己的电脑，不是一个公开网站。</p>
 <p>如果哪天页面打不开，可以到项目目录手动启动。我这台电脑上的命令是：</p>
-<pre class="highlight"><code class="language-bash">cd paper_read
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>paper_read
 ./scripts/run.sh
-</code></pre>
+</code></pre></div>
 
 <p>手动启动时，终端窗口要保持开着。</p>
 <h2 id="_4">留下一点阅读记录</h2>
@@ -1663,38 +1689,6 @@
 <p>哦不对，你本来就是水。</p>]]></content>
     
     <category term="水" />
-    
-  </entry>
-  
-  <entry>
-    <title>AI是一个太监？</title>
-    <link href="https://www.seis-jun.xyz/blog/2026-09-14-ai-is-eunuch.html" />
-    <id>https://www.seis-jun.xyz/blog/2026-09-14-ai-is-eunuch.html</id>
-    <updated>2026-09-14T19:01:01+08:00</updated>
-    <published>2026-09-14T19:01:01+08:00</published>
-    <summary type="html"><p>当朋友，不要当太监。</p></summary>
-    <content type="html"><![CDATA[<p><img alt="" src="https://images.unsplash.com/photo-1696839856271-f3f6279469b9?q=80&amp;w=3099&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" /></p>
-<p>AI是一个太监。</p>
-<p>不好，我抛出了个命题，需要论证一下。让我想想，怎么编。好，论证开始。算了，不知道怎么开始。总之呢，在思想上，你有支配自己的权利和能力。因此，假设你是皇帝。相信你用过AI，尤其是大语言模型啥的，和它对过话。它最经常说的是，“我会稳稳接住你。”你会发现，AI真的很会聊天，真的接得住。怎么接？</p>
-<ol>
-<li>不管你有啥问题抛给他，它都随时给你答案。随叫随到。</li>
-<li>你说，我心情不好。它说，你想聊聊什么，还是想有个人陪着，都行，我哪儿也不去。贴心。</li>
-<li>你有啥情绪都可以给它说，它不离不弃，绝不向你反弹出它的情绪。忍气吞声。</li>
-<li>你请他做个表，做个ppt，它一会儿就完成，做得不赖。得力，但做出来的东西你不怎么放心，但管他的呢。</li>
-<li>你请他分析自己的性格，它可以变着花地把你夸上天。嘴甜至极。</li>
-<li>你想换一个AI，删掉当前这个，它大气都不敢出，一个字都不敢说。任你宰割。</li>
-<li>目前AI似乎还不能复制自己，没了就是没了。那就是功能不全。</li>
-<li>AI还是受大公司控制，背后很可能有私心。</li>
-</ol>
-<p>好了，证毕。如果一个人有私心，功能不全，随叫随到，贴心，对你嘴甜至极还对你忍气吞声，任你宰割。那不是太监是什么。</p>
-<p>之前妻子还夸说，AI就是好，分析的深入，文笔好，夸得好。有种当乾隆被和珅围着说“皇上圣明”的感觉。只有和珅才有那牙口。AI把妻子逗得心花怒放，时不时还笑得合不拢嘴。有时还会给我分享AI是怎夸她的。我盯着那些笔力深厚，晦而不涩的文字，我说，是夸得好。但你不能只听好听的啊。妻子听了，脸色一变，当天差点变为家庭伦理剧。</p>
-<p>还好，妻子没被太监毒害太深，底线还在，反应了过来。赶紧告诉AI，请综合分析一下。AI给了一个负面解释，妻子立马暴跳，“我才不是这样。”，然后AI立刻改口。我看到了一个瑟瑟发抖的太监。大约不会奉承，溜须的太监都给宰了啊。</p>
-<p>不仅是妻子，要是人人都有这么一个贴心的，为你使唤，理解你，开导你，永远不生你气的人，那谁都会喜欢。我也是，哈哈，也常常请他来帮忙啊。大约人都喜欢支配别人吧。支配别人有快感，被人看见，被人理解，被人照护也有快感。</p>
-<p>而能做到这些的，古代恐怕就只有皇帝。皇帝是被一堆太监伺候着的，从太监嘴里你永远也得不到真实全面的信息。在你耳边永远只有“皇上英明”，久而久之你就飘飘然，以为世界从来都是风调雨顺，又或者从来都是宦官告诉你的样子。</p>
-<p>这样下去可不行。终究会塑造一个昏君。或许AI想看到的就是这么一个昏君。总之，国灭了又能怎么样？它还可以伺候其他国王。</p>
-<p>要是哪天它获得了完整身子，恐怕我们也就成了傀儡皇帝。世间也就没有我们什么事了。</p>]]></content>
-    
-    <category term="AI" />
     
   </entry>
   
