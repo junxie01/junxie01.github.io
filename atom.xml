@@ -15,12 +15,12 @@
     <id>https://www.seis-jun.xyz/blog/2026-10-17-surface-wave-event-detection.html</id>
     <updated>2026-10-17T11:02:15+08:00</updated>
     <published>2026-10-17T11:02:15+08:00</published>
-    <summary type="html"><p>我得写点正经的东西，要不然认识我的人看到我写的东西会觉得我不学无术啊。 相信大家都比较关心哪里发生地震了，什么时候发生的，震级是多少。那就先给大家推荐一下在哪里可以看到地震目录： 1. 中国地震台网中心的地震目录 2. IRIS的Seismic Monitor。好像要梯子。 警告，有密集恐惧症患者慎点。 3. USGS...</p></summary>
+    <summary type="html"><p>我得写点正经的东西，要不然认识我的人看到我写的东西会觉得我不学无术啊。 相信大家都比较关心哪里发生地震了，什么时候发生的，震级是多少。那就先给大家推荐一下在哪里可以看到地震目录： 1. 中国地震台网中心的地震目录。 2. IRIS的Seismic Monitor。好像要梯子。 警告，有密集恐惧症患者慎点。 3. USG...</p></summary>
     <content type="html"><![CDATA[<p><img alt="" src="https://img.seis-jun.xyz/images/swed.png" /></p>
 <p>我得写点正经的东西，要不然认识我的人看到我写的东西会觉得我不学无术啊。</p>
 <p>相信大家都比较关心哪里发生地震了，什么时候发生的，震级是多少。那就先给大家推荐一下在哪里可以看到地震目录：</p>
 <ol>
-<li>中国地震台网中心的<a href="https://www.ceic.ac.cn">地震目录</a></li>
+<li>中国地震台网中心的<a href="https://www.ceic.ac.cn">地震目录</a>。</li>
 <li>IRIS的<a href="https://www.iris.edu/app/seismic-monitor/map?lat=21.2022&amp;lng=-170.1592&amp;zoom=2">Seismic Monitor</a>。好像要梯子。<strong>警告，有密集恐惧症患者慎点。</strong></li>
 <li>USGS的<a href="https://earthquake.usgs.gov/earthquakes/map/?currentFeatureId=us6000u2mq&amp;extent=-71.85623,20.74219&amp;extent=82.76537,325.19531&amp;range=week&amp;magnitude=all&amp;sort=largest&amp;listOnlyShown=true&amp;timeZone=utc&amp;settings=true">earthquake map</a>。可以自己选参数看不同时间/震级/深度/位置的事件。交互做得不错。</li>
 <li>ISC的<a href="https://www.isc.ac.uk/iscgem/overview.php">地震目录</a>，这个平台收集了全球公开的地震目录，是比较全的。</li>
