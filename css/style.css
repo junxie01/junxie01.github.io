@@ -1435,11 +1435,6 @@ footer a:hover {
   line-height: 1.4;
 }
 
-.nav-project-list a span {
-  color: var(--muted);
-  font-size: 0.7rem;
-}
-
 .nav-links-categories {
   padding-left: 1.1rem;
   border-left: 1px solid var(--border);
