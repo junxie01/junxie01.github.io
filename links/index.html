@@ -129,15 +129,6 @@
       
 <h1 class="page-title">资源</h1>
 <p class="page-intro">按类别整理的研究资料、软件和阅读入口。</p>
-<nav class="link-category-nav" aria-label="链接分类">
-  
-  <a href="/links/tools/">工具</a>
-  
-  <a href="/links/" aria-current="page">资源</a>
-  
-  <a href="/links/friends/">友链</a>
-  
-</nav>
 
 
 <div class="resource-sections">
@@ -210,52 +201,6 @@
 </section>
 
 
-
-
-
-<div class="comments-section">
-  <h3>评论</h3>
-  
-  <p>
-    
-    <a href="https://github.com/junxie01/junxie01.github.io/discussions/55" target="_blank" rel="noopener">查看其他留言</a>
-    
-  </p>
-  
-  <script>
-    (function () {
-      var giscus = document.createElement('script');
-      giscus.src = 'https://giscus.app/client.js';
-      giscus.dataset.repo = 'junxie01/junxie01.github.io';
-      giscus.dataset.repoId = 'R_kgDOSGl1Dg';
-      giscus.dataset.category = 'General';
-      giscus.dataset.categoryId = 'DIC_kwDOSGl1Ds4DAuif';
-      giscus.dataset.mapping = 'number';
-      giscus.dataset.term = '54';
-      giscus.dataset.strict = '0';
-      giscus.dataset.reactionsEnabled = '1';
-      giscus.dataset.emitMetadata = '0';
-      giscus.dataset.inputPosition = 'bottom';
-      giscus.dataset.theme = document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light';
-      giscus.dataset.lang = 'zh-CN';
-      giscus.crossOrigin = 'anonymous';
-      giscus.async = true;
-      document.currentScript.parentNode.appendChild(giscus);
-
-      window.addEventListener('seisamuse-theme-change', function (event) {
-        var frame = document.querySelector('.giscus-frame');
-        if (!frame || !frame.contentWindow) return;
-        frame.contentWindow.postMessage({
-          giscus: {
-            setConfig: {
-              theme: event.detail.theme === 'dark' ? 'dark' : 'light'
-            }
-          }
-        }, 'https://giscus.app');
-      });
-    })();
-  </script>
-</div>
 
 <div id="donate-modal" class="modal-overlay" onclick="if(event.target===this)this.style.display='none'">
   <div class="modal-content">

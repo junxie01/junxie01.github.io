@@ -1461,23 +1461,6 @@ footer a:hover {
   color: var(--accent);
 }
 
-.link-category-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 1rem;
-  margin-bottom: 1.7rem;
-  font-family: system-ui, -apple-system, sans-serif;
-  font-size: 0.8rem;
-}
-
-.link-category-nav a {
-  color: var(--muted);
-}
-
-.link-category-nav a[aria-current="page"] {
-  color: var(--accent);
-}
-
 .home-shell {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 240px;
