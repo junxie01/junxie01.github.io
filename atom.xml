@@ -123,6 +123,7 @@
 <li>中国地震台网中心的<a href="https://www.ceic.ac.cn">地震目录</a>。</li>
 <li>IRIS的<a href="https://www.iris.edu/app/seismic-monitor/map?lat=21.2022&amp;lng=-170.1592&amp;zoom=2">Seismic Monitor</a>。好像要梯子。<strong>警告，有密集恐惧症患者慎点。</strong></li>
 <li>USGS的<a href="https://earthquake.usgs.gov/earthquakes/map/?currentFeatureId=us6000u2mq&amp;extent=-71.85623,20.74219&amp;extent=82.76537,325.19531&amp;range=week&amp;magnitude=all&amp;sort=largest&amp;listOnlyShown=true&amp;timeZone=utc&amp;settings=true">earthquake map</a>。可以自己选参数看不同时间/震级/深度/位置的事件。交互做得不错。</li>
+<li>看我<a href="https://www.seis-jun.xyz/earthquake_weekly/">这里</a>也可以，我是每周把usgs的数据抓来展示。</li>
 <li>ISC的<a href="https://www.isc.ac.uk/iscgem/overview.php">地震目录</a>，这个平台收集了全球公开的地震目录，是比较全的。</li>
 <li><a href="https://www.globalcmt.org">Global CMT</a>，做了全球5.5级以上地震的机制解。很多工作都参考它，或者以他为初始值。</li>
 <li>Ekström做的<a href="https://www.ldeo.columbia.edu/~ekstrom/Research/SWD/current/RADB_SWD_grd.html">全球面波事件</a>。是我的参考工作之一，但不予置评。</li>

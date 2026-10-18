@@ -311,12 +311,14 @@
       var navigation = document.querySelector('[data-nav-links]');
       if (!navigation) return;
       var trigger = navigation.querySelector('summary');
+      var hoverRegion = navigation.closest('.masthead') || navigation;
       var hover = window.matchMedia('(hover: hover) and (pointer: fine)');
 
       navigation.addEventListener('pointerenter', function (event) {
         if (event.pointerType === 'mouse' && hover.matches) navigation.open = true;
       });
-      navigation.addEventListener('pointerleave', function (event) {
+      // Header padding is part of the pointer path from the trigger to the panel.
+      hoverRegion.addEventListener('pointerleave', function (event) {
         if (event.pointerType === 'mouse' && !navigation.contains(document.activeElement)) {
           navigation.open = false;
         }
