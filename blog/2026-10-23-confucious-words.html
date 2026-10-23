@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    (function () {
+      var stored = null;
+      try {
+        stored = localStorage.getItem('seisamuse-theme');
+      } catch (error) {}
+
+      var setting = stored === 'light' || stored === 'dark' ? stored : 'system';
+      var systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = setting === 'system' ? (systemDark ? 'dark' : 'light') : setting;
+      document.documentElement.dataset.theme = theme;
+      document.documentElement.dataset.themeSetting = setting;
+    })();
+  </script>
+  <title>而立不惑知天命 | hashes</title>
+  <meta name="description" content="而立不惑知天命">
+  <link rel="alternate" type="application/atom+xml" title="Atom 订阅" href="/atom.xml">
+  <link rel="prefetch" as="image" href="https://www.blogsclub.org/badge/www.seis-jun.xyz">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+  <!-- MathJax for LaTeX rendering -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        ignoreHtmlClass: 'mermaid'
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <!-- Umami Analytics -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="21a99622-5a23-45f4-be80-edef627a68e3"></script>
+  <!-- Explicit page paths preserve article counts across browser referrer policies. -->
+  <script defer src="/scripts/article_counter_20261016.js" data-counter-endpoint="https://counter.seis-jun.xyz/count"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container masthead">
+      <a class="masthead-identity" href="/" aria-label="SEISAMUSE 主页">
+        <img src="/images/seisamuse.png" alt="" class="masthead-avatar">
+        <span class="masthead-title">SEISAMUSE</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="主导航">
+        <a href="/">主页</a>
+        <a href="/blog/" class="active" aria-current="page">博客</a>
+        <a href="/archives/">归档</a>
+        <a href="/thoughts/">想法</a>
+        <a href="/about/">自述</a>
+        <details class="nav-links" data-nav-links>
+          <summary class="nav-links-toggle" aria-controls="nav-links-panel">
+            链接
+            <svg viewBox="0 0 12 12" fill="none" aria-hidden="true" focusable="false"><path d="m3 4.5 3 3 3-3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <div class="nav-links-panel" id="nav-links-panel">
+            <div class="nav-links-projects">
+              <p class="nav-links-label">项目</p>
+              <ul class="nav-project-list">
+                
+                <li><a href="https://www.seis-jun.xyz/daily_news/" target="_blank" rel="noopener">Daily News</a></li>
+                
+                <li><a href="https://rss.seis-jun.xyz/" target="_blank" rel="noopener">RSS Reader</a></li>
+                
+                <li><a href="https://www.seis-jun.xyz/paper_weekly/" target="_blank" rel="noopener">Paper Weekly</a></li>
+                
+                <li><a href="https://www.seis-jun.xyz/earthquake_weekly/" target="_blank" rel="noopener">Earthquake Weekly</a></li>
+                
+                <li><a href="https://paper-hot.seis-jun.xyz/" target="_blank" rel="noopener">Paper Hot</a></li>
+                
+                <li><a href="https://www.seis-jun.xyz/swed/" target="_blank" rel="noopener">SWED</a></li>
+                
+              </ul>
+            </div>
+            <div class="nav-links-categories">
+              <p class="nav-links-label">收藏与分享</p>
+              
+              <a href="/links/tools/">
+                <span>工具</span>
+                <small>实用工具与脚本</small>
+              </a>
+              
+              <a href="/links/">
+                <span>资源</span>
+                <small>研究与阅读入口</small>
+              </a>
+              
+              <a href="/links/friends/">
+                <span>友链</span>
+                <small>喜欢的博客与网站</small>
+              </a>
+              
+            </div>
+          </div>
+        </details>
+        <a class="masthead-search-shortcut" href="/search/" aria-label="搜索文章" title="搜索文章">
+          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false"><circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="1.5"/><path d="m13 13 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </a>
+      </nav>
+
+      <div class="masthead-actions" aria-label="快捷入口">
+        <form class="masthead-search" action="/search/" method="get">
+          <input type="search" name="q" placeholder="搜索文章" aria-label="搜索文章">
+        </form>
+        <a href="mailto:hashes@yeah.net" title="邮件联系" aria-label="邮件联系"><i class="fa-solid fa-envelope"></i></a>
+        <a href="/atom.xml" title="Atom 订阅" aria-label="Atom 订阅"><i class="fa-solid fa-rss"></i></a>
+        <button class="theme-toggle" type="button" data-theme-toggle title="主题：跟随系统" aria-label="主题：跟随系统">
+          <i class="fa-solid fa-display" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container page-wide">
+      
+      
+<div class="main-content">
+  <article>
+    <div class="post-header">
+      <h1>而立不惑知天命</h1>
+      <div class="post-meta">
+        <time>2026-10-23</time>
+         &middot; 约 1,284 字
+        <span id="busuanzi_container_page_pv" style="display: none;">
+          &middot; &#128065; <span id="busuanzi_value_page_pv"></span> 次浏览
+        </span>
+        
+         &middot; 分类：
+        
+          <a href="/blog/topic/随笔/">随笔</a>
+        
+        
+        
+         &middot; 标签：
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">而立</span>
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">不惑</span>
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">知天命</span>
+        
+        
+      </div>
+    </div>
+
+    <div class="post-content">
+      <p><img alt="" src="https://images.unsplash.com/photo-1678435630743-b2f151cc8e83?q=80&amp;w=987&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=NHwxMjA3fDA%3D" /></p>
+<div class="highlight"><pre><span></span><code>子曰：“吾十有五而志于学，三十而立，四十而不惑，五十而知天命，六十而耳顺，七十而从心所欲，不逾矩。”
+
+---《论语·为政》
+</code></pre></div>
+
+<p>这是孔子回顾自己的修养历程所说的话。</p>
+<p>我想很多人都把这些话当作人生指标在活啊。例如三十而立，我想现在人们的理解是三十岁就应该成家“立”业。但，三十岁都还在念书没有毕业的我都见过不少。朱熹在《论语集注》里说，</p>
+<div class="highlight"><pre><span></span><code>立，能自立于斯道也。
+</code></pre></div>
+
+<p>也就是说，经过长期学习和实践，一个人开始建立稳定的志向、见识、道德原则和行事准则，能够有所坚持。
+我们把它理解成有房、有车、有工作、有地位恐怕有点不太行，大约应该是到了三十岁有了自己立身处世的根基啊。可能就是说，学了一些知识和道理，要开始大干一番了。</p>
+<p>至于四十而不惑呢，恐怕理解为自己就没有疑惑，对人生有清晰的认识也不是那么妥当，只是人家孔子逐渐明白为什么自己站在那里。如果你到了四十岁觉得自己已经看透世事，认定某种生活方式才是正确的，再也不愿意听取不同意见。我想那可不是“不惑”，是“登味”。</p>
+<p>好了，改天再讲讲“登味”。</p>
+<p>现在让我们看看独孤求败的墓碑上写的啥，</p>
+<div class="highlight"><pre><span></span><code>弱冠之前：使用锋利刚猛的剑，与河朔群雄争锋。
+三十岁之前：使用紫薇软剑，因为误伤义士而弃剑。
+四十岁之前：使用玄铁重剑，凭深厚功力横行天下。
+四十岁之后：不再拘泥于兵器，草木竹石皆可作剑，逐渐走向“无剑胜有剑”的境界。
+</code></pre></div>
+
+<p>这是人家独孤求败的武功境界经历。那你一个普通练剑之人，非要和人家顶级高手比肯定是不行的啊。人家二十岁就可以与河朔群雄争锋，我们二十岁还在寝室跟人打游戏啊。</p>
+<p>总之，我们应该有自己的人生历程和各自的境界。如果处处都好和别人比较，那可就难受了。鉴于“幸存者偏差”或者古话叫做“一将功成万骨枯”的事实，我们认识到的，见识到的人生境界，就跟我们平时看到的新闻一样。一个东西为什么能成为新闻，是因为“新”因为“少”啊。你看飞机事故其实少的很，如果有，媒体就会大肆报道。汽车事故多得很，多到多数都不能成为新闻了。</p>
+<p>电视里通常会播放国家争端、帝王计谋、变态罪犯、高智商破案等等，你觉得很有意思，也是因为平时你看不到。你平时只有柴米油盐，衣食住行，还有屎尿屁，电视里如果总是放这些给你看恐怕你也不会感兴趣。所以电视是不会讲这些的，不讲就没有了吗？但人家又有什么办法啊，如果放那些日常糟糕生活，你又不看，那他们电视台也就混不下去了。</p>
+<p>我的意思是，你从别人/媒体/书本/电视那里看到的东西通常是稀有的，少的。当作谈资、幻想可以，千万不要执着地要和这些人比啊。和他们比，没有几个能不自惭形秽的。例如看到马云或者王校长就觉得人家那才叫生活。一下子就把自己的生活打落地狱了，那活着也就整天只能喊苦了。别人的经历好的你就看看，参考参考，不好的你就思考一下为什么不好，自己能不能规避。如果一个劲儿的和别人的好来对比，那就容易难受，从需求上来说可能就叫求不得。</p>
+<p>另外，人家的苦通常也不会告诉你。甚至不会发“朋友圈”。朋友圈通常都是光鲜亮丽：今天买包，明天旅游，拍个照也要修图。包括你看孔子的话，我们也不知道他讲自己的人生感悟和境界的时候有没有修饰。但你听过孔子如何不得志，哪个君王不听自己的，又如何被人排挤的难受吗？你也不能保证独孤求败没有给自己吹水贴金。另外，我们也只看到马云有钱，马云有什么难处你也不知道。好吧，我也不知道，咱们就不举马云的例子了。在我这里，有钱人只能使金锄头，其他的管不着。我们还可以看看委员长，在外面不管怎么样也能撑面子，难受的事情才不会给大家说，人家都是写“日记”。自己的苦自己吃。</p>
+<p>如果总是拿别人的经历来当自己的标准，按照他们的活法来活恐怕就活成了指标了。我们都知道要被逼着完成指标是多么难受的事情。这个社会很长一段时间似乎不允许大家有痛苦。或者允许你把痛苦晒出来，痛苦的位置都被压缩在心里很小很窄的空间，就像马斯克会飞的车里的那个高压气罐，是容易爆炸的啊。</p>
+<p>把一个标榜或者理念活成了生命的指标，那人生也就不是人生，是工具了啊。</p>
+    </div>
+
+  <div class="post-nav">
+    
+      <a class="post-nav-prev" href="/blog/2026-10-22-what-does-patronizing-smell-likeII.html">&larr; 爹味罐头II</a>
+    
+
+    <a class="post-nav-blog" href="/blog/">返回博客</a>
+
+    
+      <span class="post-nav-next"></span>
+    
+  </div>
+  
+
+
+
+<div class="comments-section">
+  <h3>评论</h3>
+  
+  <script>
+    (function () {
+      var giscus = document.createElement('script');
+      giscus.src = 'https://giscus.app/client.js';
+      giscus.dataset.repo = 'junxie01/junxie01.github.io';
+      giscus.dataset.repoId = 'R_kgDOSGl1Dg';
+      giscus.dataset.category = 'General';
+      giscus.dataset.categoryId = 'DIC_kwDOSGl1Ds4DAuif';
+      giscus.dataset.mapping = 'specific';
+      giscus.dataset.term = 'blog/2026-10-23-confucious-words';
+      giscus.dataset.strict = '0';
+      giscus.dataset.reactionsEnabled = '1';
+      giscus.dataset.emitMetadata = '0';
+      giscus.dataset.inputPosition = 'bottom';
+      giscus.dataset.theme = document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light';
+      giscus.dataset.lang = 'zh-CN';
+      giscus.crossOrigin = 'anonymous';
+      giscus.async = true;
+      document.currentScript.parentNode.appendChild(giscus);
+
+      window.addEventListener('seisamuse-theme-change', function (event) {
+        var frame = document.querySelector('.giscus-frame');
+        if (!frame || !frame.contentWindow) return;
+        frame.contentWindow.postMessage({
+          giscus: {
+            setConfig: {
+              theme: event.detail.theme === 'dark' ? 'dark' : 'light'
+            }
+          }
+        }, 'https://giscus.app');
+      });
+    })();
+  </script>
+</div>
+</article>
+</div>
+
+      
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p class="site-stats">
+        <span id="busuanzi_container_site_pv">
+          👁 总访问量：<span id="busuanzi_value_site_pv"></span>
+        </span>
+        &middot;
+        <span id="busuanzi_container_site_uv">
+          访客数：<span id="busuanzi_value_site_uv"></span>
+        </span>
+      </p>
+      <p>&copy; 2026 hashes &middot; 使用 Python 与 Markdown 构建 &middot;
+        GitHub &middot;
+        <a href="/atom.xml" target="_blank">Atom</a> &middot;
+        <a href="/privacy/">隐私政策</a>
+      </p>
+      <!-- Edit this line to add or remove blog directory links. -->
+      <p class="footer-directory-links">
+        <span>感谢收录：</span>
+        <a href="https://blogscn.fun/" target="_blank" rel="noopener">笔墨迹</a>
+        <a href="https://bf.zzxworld.com/" target="_blank" rel="noopener">BlogFinder</a>
+        <a href="https://www.blogsclub.org/" target="_blank" rel="noopener">BlogsClub</a>
+        <a href="https://blogplanet.cn/" target="_blank" rel="noopener">博客星球</a>
+        <a href="https://bokehub.com/" target="_blank" rel="noopener">博客中心</a>
+        <a href="https://storeweb.cn/" target="_blank" rel="noopener">个站商店</a>
+        <a href="https://www.heyblog.net/" target="_blank" rel="noopener">HeyBlog</a>
+        <a href="https://www.travellings.cn/go.html" target="_blank" rel="noopener">开往</a>
+        <a href="https://www.foreverblog.cn/" target="_blank" rel="noopener">十年之约</a>
+      </p>
+    </div>
+  </footer>
+
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+      startOnLoad: true,
+      securityLevel: 'strict',
+      theme: document.documentElement.dataset.theme === 'dark' ? 'dark' : 'neutral'
+    });
+  </script>
+
+  <script>
+    (function () {
+      var navigation = document.querySelector('[data-nav-links]');
+      if (!navigation) return;
+      var trigger = navigation.querySelector('summary');
+      var hoverRegion = navigation.closest('.masthead') || navigation;
+      var hover = window.matchMedia('(hover: hover) and (pointer: fine)');
+
+      navigation.addEventListener('pointerenter', function (event) {
+        if (event.pointerType === 'mouse' && hover.matches) navigation.open = true;
+      });
+      // Header padding is part of the pointer path from the trigger to the panel.
+      hoverRegion.addEventListener('pointerleave', function (event) {
+        if (event.pointerType === 'mouse' && !navigation.contains(document.activeElement)) {
+          navigation.open = false;
+        }
+      });
+      navigation.addEventListener('focusout', function (event) {
+        if (!navigation.contains(event.relatedTarget)) navigation.open = false;
+      });
+      document.addEventListener('click', function (event) {
+        if (!navigation.contains(event.target)) navigation.open = false;
+      });
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && navigation.open) {
+          navigation.open = false;
+          if (navigation.contains(document.activeElement)) trigger.focus();
+        }
+      });
+    })();
+  </script>
+
+  <script>
+    (function () {
+      var toggle = document.querySelector('[data-theme-toggle]');
+      if (!toggle) return;
+
+      var order = ['system', 'light', 'dark'];
+      var labels = {
+        system: '主题：跟随系统',
+        light: '主题：浅色',
+        dark: '主题：深色'
+      };
+      var icons = {
+        system: 'fa-display',
+        light: 'fa-sun',
+        dark: 'fa-moon'
+      };
+      var media = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+
+      function currentSetting() {
+        var setting = document.documentElement.dataset.themeSetting;
+        return order.indexOf(setting) === -1 ? 'system' : setting;
+      }
+
+      function updateButton(setting) {
+        var label = labels[setting];
+        var icon = toggle.querySelector('i');
+        toggle.title = label;
+        toggle.setAttribute('aria-label', label);
+        icon.className = 'fa-solid ' + icons[setting];
+      }
+
+      function applyTheme(setting) {
+        var systemDark = media && media.matches;
+        var theme = setting === 'system' ? (systemDark ? 'dark' : 'light') : setting;
+        document.documentElement.dataset.themeSetting = setting;
+        document.documentElement.dataset.theme = theme;
+        try {
+          if (setting === 'system') localStorage.removeItem('seisamuse-theme');
+          else localStorage.setItem('seisamuse-theme', setting);
+        } catch (error) {}
+        updateButton(setting);
+        window.dispatchEvent(new CustomEvent('seisamuse-theme-change', {
+          detail: { theme: theme }
+        }));
+      }
+
+      toggle.addEventListener('click', function () {
+        var setting = currentSetting();
+        applyTheme(order[(order.indexOf(setting) + 1) % order.length]);
+      });
+
+      if (media) {
+        media.addEventListener('change', function () {
+          if (currentSetting() === 'system') applyTheme('system');
+        });
+      }
+
+      updateButton(currentSetting());
+    })();
+  </script>
+
+</body>
+</html>
