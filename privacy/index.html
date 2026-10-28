@@ -43,7 +43,7 @@
   <!-- Umami Analytics -->
   <script defer src="https://cloud.umami.is/script.js" data-website-id="21a99622-5a23-45f4-be80-edef627a68e3"></script>
   <!-- Explicit page paths preserve article counts across browser referrer policies. -->
-  <script defer src="/scripts/article_counter_20261016.js" data-counter-endpoint="https://counter.seis-jun.xyz/count"></script>
+  <script defer src="/scripts/article_counter_20261028.js" data-counter-endpoint="https://stats.seis-jun.xyz/count"></script>
   <script defer src="/scripts/random_post_20261028.js"></script>
 </head>
 <body>
@@ -130,15 +130,17 @@
       
 <h1 class="page-title">隐私政策</h1>
 <div class="about-content">
-  <p>更新日期：2026-10-17</p>
+  <p>更新日期：2026-10-28</p>
 <p>SEISAMUSE（www.seis-jun.xyz）是 hashes 的个人博客。这份说明介绍访问本站、发表评论或联系作者时，可能涉及的信息处理与第三方服务。</p>
 <h2 id="_1">浏览与基础服务</h2>
 <p>阅读本站无需注册本站账户。网站通过 GitHub Pages 托管；域名、网络分发及部分图片服务使用 Cloudflare。访问网页、图片或脚本时，相应服务提供方可能处理 IP 地址、请求网址、浏览器信息、访问时间等，以传输内容、维护服务和处理安全问题。</p>
 <p>相关说明：<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub 隐私声明</a>、<a href="https://www.cloudflare.com/privacypolicy/">Cloudflare 隐私政策</a>。</p>
 <h2 id="_2">访问统计与浏览器存储</h2>
-<p>本站使用 <a href="https://umami.is/privacy">Umami</a> 了解访问量、来源和页面访问情况，使用<a href="https://busuanzi.ibruce.info/">不蒜子</a>展示访问计数。加载这些第三方统计服务会向其服务器发送请求；数据处理和保存方式受对应服务的政策与实际配置约束。本站作者不能据此承诺所有第三方都不处理 IP 地址或其他访问数据。</p>
-<p>为兼容不同浏览器，当前页面的路径会明确发送给本站配置的 Cloudflare 中转服务，再由中转访问不蒜子；该路径不包含查询参数或页内锚点。中转服务提供方也会处理传输请求所需的网络信息。计数脚本不读取本站其他 Cookie 或登录凭据。</p>
-<p>如果不蒜子返回匿名会话标识，中转会将其加密后保存在浏览器本地的 <code>seisamuse-counter-session</code> 项中，用于后续访问时传回相同标识。该标识从建立起最多用于识别 30 天，访问不会延长这一期限；上游标识也可能更早过期。过期记录会在下次运行计数脚本时清理，也可通过清除网站数据移除。此方式不能继承原第三方 Cookie 中的访客身份，切换入口或清除记录后可能被重新识别为访客；访客计数并不等于准确的实际人数。</p>
+<p>本站使用 <a href="https://umami.is/privacy">Umami</a> 了解访问量、来源和页面访问情况；页面上的浏览量和访客数由本站独立的 Cloudflare Worker 与 D1 数据库提供，不再依赖原第三方计数服务。加载这些服务会向相应服务器发送请求，服务提供方的数据处理也受其政策与实际配置约束。</p>
+<p>独立计数脚本仅向 <code>stats.seis-jun.xyz</code> 发送当前页面路径、单次浏览的随机事件编号，以及可用时的随机浏览器编号。路径不含查询参数或页内锚点；脚本不读取其他 Cookie、登录凭据或浏览记录。本站计数数据库不保存 IP 地址、User-Agent 或浏览器编号原文，但 Cloudflare 在网络传输和安全防护过程中仍可能处理网络信息。</p>
+<p>随机浏览器编号保存在本地 <code>seisamuse-visitor-v2</code> 项中，从建立起有效 365 天，访问不会延长有效期。服务端仅保存其 SHA-256 摘要，用于识别同一编号。清除网站数据、编号过期、更换浏览器或设备，都可能被重新计为访客。浏览器不允许本地存储时仍可记录浏览量，但不因此把每次访问都当成新访客。</p>
+<p>历史浏览量 80,500 和历史访客数 40,500 是作者根据此前记录回忆后确认的手动估算，并非原服务的完整导出。页面会用约数标记显示历史基数加新增统计；历史访客与新浏览器编号之间无法去重，因此访客数不等于精确人数。无法确认的单篇历史浏览量不填为零，只显示切换后记录的浏览量。自动访问和拦截统计请求等情况也会影响结果。</p>
+<p>数据库保留随机事件编号、页面路径、访问时间及浏览器编号摘要，用于计数和避免重复写入，目前没有自动清理期限，必要的备份也可能包含这些记录。浏览器还会以 <code>seisamuse-counter-site-v2</code> 和 <code>seisamuse-counter-page-v2:</code> 为前缀保存最近一次成功获取的统计汇总，接口暂时不可用时可显示带缓存时间的旧值。你可以清除网站数据移除本地编号、缓存和偏好；这不会同时删除服务器上的记录。本地预览页面仅查询汇总，不写入访问记录。</p>
 <p>明暗主题偏好保存在浏览器本地的 <code>seisamuse-theme</code> 项中，供下次访问时使用。你可以通过浏览器的网站数据设置清除它。</p>
 <h2 id="_3">评论与主动联系</h2>
 <p>部分页面使用 <a href="https://giscus.app/">giscus</a> 评论系统，评论托管在 GitHub Discussions。发表评论涉及 GitHub 登录及授权，用户名、头像和评论内容可能公开展示。请不要在评论中留下密码、住址、证件号码或其他不希望公开的信息。评论的管理也受 GitHub 的规则约束。</p>
