@@ -3,22 +3,203 @@
   <title>SEISAMUSE</title>
   <link href="https://www.seis-jun.xyz/atom.xml" rel="self" />
   <link href="https://www.seis-jun.xyz" />
-  <updated>2026-10-28T20:05:04+08:00</updated>
+  <updated>2026-10-28T20:23:53+08:00</updated>
   <id>https://www.seis-jun.xyz/</id>
   <author>
     <name>hashes</name>
   </author>
   
   <entry>
-    <title>命题杂谈：什么是登味？</title>
-    <link href="https://www.seis-jun.xyz/blog/2026-10-28-post.html" />
-    <id>https://www.seis-jun.xyz/blog/2026-10-28-post.html</id>
-    <updated>2026-10-28T20:05:04+08:00</updated>
-    <published>2026-10-28T20:05:04+08:00</published>
-    <summary type="html"><p>这里写正文。</p></summary>
-    <content type="html"><![CDATA[<p>这里写正文。</p>]]></content>
+    <title>告别不蒜子，自己给博客记个数</title>
+    <link href="https://www.seis-jun.xyz/blog/2026-10-28-independent-blog-counter.html" />
+    <id>https://www.seis-jun.xyz/blog/2026-10-28-independent-blog-counter.html</id>
+    <updated>2026-10-28T20:23:53+08:00</updated>
+    <published>2026-10-28T20:23:53+08:00</published>
+    <summary type="html"><p>不蒜子好像又挂掉了。 之前已经遇到过几次。网页能打开，文章能看，偏偏浏览量那里空着。有时候浏览器还转很久，检查请求，才发现统计接口没有正常返回。以前看到过 504 Gateway Timeout，这次又得等。 本来想，免费的东西，等等也没什么。但一会儿有数字，一会儿没有，总归有点难受。于是又问 Codex：能不能用 G...</p></summary>
+    <content type="html"><![CDATA[<p>不蒜子好像又挂掉了。</p>
+<p>之前已经遇到过几次。网页能打开，文章能看，偏偏浏览量那里空着。有时候浏览器还转很久，检查请求，才发现统计接口没有正常返回。以前看到过 <code>504 Gateway Timeout</code>，这次又得等。</p>
+<p>本来想，免费的东西，等等也没什么。但一会儿有数字，一会儿没有，总归有点难受。于是又问 Codex：能不能用 GitHub、Cloudflare，或者办公室的Linux，自己记录一下？<del>ai agent 我是离不开了。</del></p>
+<p>不过有个前提：不能一换服务，之前的数字就全变成零。虽然也不是什么惊人的访问量，但好歹积累了这么久啊。</p>
+<p>最后折腾成了下面这个样子<del>AI帮忙折腾的，我自己估计得折腾很久</del>。记一下，省得下次再问一遍。</p>
+<h2 id="github-cloudflare">网页还在 GitHub，计数交给 Cloudflare</h2>
+<p>博客仍然是Markdown写文章，Python生成网页，再把静态网站部署到GitHub Pages。</p>
+<p>另外加一个 Cloudflare Worker 接收访问请求，用D1数据库保存计数。大概是这样：</p>
+<div class="mermaid">
+flowchart TD
+    A[读者打开博客] --&gt; B[GitHub Pages 提供网页]
+    B --&gt; C[浏览器加载计数脚本]
+    C --&gt; D[Cloudflare Worker 校验请求]
+    D --&gt; E[D1 保存访问记录并累计]
+    E --&gt; F[返回数字并显示在页面上]
+</div>
+
+<p>这里的 Worker 不是再转头去问不蒜子，而是操作自己的数据库。否则只是多绕了一层，原来的服务不返回，最后还是没有数字。</p>
+<p>没有把主服务放在办公室的 Fedora 上，是因为它也有自己的脾气。办公室可能停电，网络也可能断，电脑还得重启。之前图片服务就用了这台机器，不想再让访问统计也跟着它一起上下班。</p>
+<p>这也不代表换到 Cloudflare 就永远不会出问题。只是现在计数保存在哪里、如何备份，我至少能自己查了。</p>
+<h2 id="_1">先把授权弄明白</h2>
+<p>管理 Worker 和 D1 用的是 Cloudflare 的官方工具 Wrangler。这次使用的是 <code>4.154.0</code>。下面的命令都在博客项目根目录运行，默认已经有 Node.js 和 npm。</p>
+<p>一开始，授权页面显示成功了，本机却没有拿到凭据。还有一次浏览器跳到 <code>localhost:8976</code>，直接提示：</p>
+<div class="highlight"><pre><span></span><code>This site can&#39;t be reached
+localhost refused to connect
+ERR_CONNECTION_REFUSED
+</code></pre></div>
+
+<p>这个地址是登录过程临时使用的回调地址，不是博客挂了。但只看浏览器上的“授权成功”也不够，还得确认命令行真的接到了。</p>
+<p>后来换成<a href="https://developers.cloudflare.com/workers/wrangler/commands/general/">官方的设备授权方式</a>，不再依赖浏览器访问本机回调端口：</p>
+<div class="highlight"><pre><span></span><code>npx<span class="w"> </span>wrangler@4.154.0<span class="w"> </span>login<span class="w"> </span>--device<span class="w"> </span>--use-keyring<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--scopes<span class="w"> </span>account:read<span class="w"> </span>user:read<span class="w"> </span>workers_scripts:write<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>workers_routes:write<span class="w"> </span>d1:write<span class="w"> </span>zone:read
+</code></pre></div>
+
+<p>终端会给出设备码和授权页面。在浏览器里核对设备码，确认需要的权限，再点击 <code>Authorize</code>。等待中的命令不要提前关掉；这次也确实遇到过授权页报错，不能保证换一种方式就一次成功。</p>
+<p>最后终端返回 <code>Successfully logged in.</code>，再检查：</p>
+<div class="highlight"><pre><span></span><code>npx<span class="w"> </span>wrangler@4.154.0<span class="w"> </span>whoami
+</code></pre></div>
+
+<p>确认账号和权限都对，这才算连上了。<code>--use-keyring</code> 用于把凭据以加密文件配合系统钥匙串保存，不把登录密钥写进博客仓库。设备码、密钥和完整授权回调地址，也不需要贴进文章里。</p>
+<h2 id="_2">数据库、脚本和部署配置</h2>
+<p>这次新建了独立的 Worker 和 D1 数据库，都叫 <code>seisamuse-counter-d1</code>。没有覆盖原来的旧 Worker。</p>
+<p>相关文件各有分工：</p>
+<table>
+<thead>
+<tr>
+<th>文件</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>scripts/article_counter_20261028.js</code></td>
+<td>Worker 的请求处理和计数逻辑</td>
+</tr>
+<tr>
+<td><code>scripts/article_counter_schema_20261028.sql</code></td>
+<td>数据表和触发器</td>
+</tr>
+<tr>
+<td><code>scripts/article_counter_manage_20261028.py</code></td>
+<td>本地初始化、历史基数导入和备份工具</td>
+</tr>
+<tr>
+<td><code>scripts/article_counter_worker_20261028.toml</code></td>
+<td>云端绑定与部署配置</td>
+</tr>
+<tr>
+<td><code>content/scripts/article_counter_20261028.js</code></td>
+<td>浏览器端发送请求、显示数字</td>
+</tr>
+<tr>
+<td><code>data/counter_20261028/history.json</code></td>
+<td>手动确认的历史估算参数</td>
+</tr>
+</tbody>
+</table>
+<p>这些是本次配套写好的脚本，下面的命令是在已有它们的前提下记录配置，不是只复制一个 TOML 文件就能得到计数器。</p>
+<p><strong>下面创建数据库和导入初始数据的操作，只用于第一次配置的空数据库。现在的数据库已经在计数，以后维护不要整段重新执行。</strong></p>
+<p>先创建数据库：</p>
+<div class="highlight"><pre><span></span><code>npx<span class="w"> </span>wrangler@4.154.0<span class="w"> </span>d1<span class="w"> </span>create<span class="w"> </span>seisamuse-counter-d1<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--config<span class="w"> </span>scripts/article_counter_worker_20261028.toml
+</code></pre></div>
+
+<p>把返回的数据库 ID 填进 TOML。公开记录里用占位符代替实际 ID，主要配置如下：</p>
+<div class="highlight"><pre><span></span><code><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;seisamuse-counter-d1&quot;</span>
+<span class="n">account_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;替换为自己的账号ID&quot;</span>
+<span class="n">main</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;article_counter_20261028.js&quot;</span>
+<span class="n">compatibility_date</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;2026-10-28&quot;</span>
+<span class="n">workers_dev</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span>
+
+<span class="k">[vars]</span>
+<span class="n">COLLECTION_ENABLED</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;false&quot;</span>
+
+<span class="k">[[d1_databases]]</span>
+<span class="n">binding</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;DB&quot;</span>
+<span class="n">database_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;seisamuse-counter-d1&quot;</span>
+<span class="n">database_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;替换为新建数据库的ID&quot;</span>
+
+<span class="k">[[ratelimits]]</span>
+<span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;LIMITER&quot;</span>
+<span class="n">namespace_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;20261028&quot;</span>
+<span class="n">simple</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">limit</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="n">period</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">60</span><span class="w"> </span><span class="p">}</span>
+
+<span class="k">[observability]</span>
+<span class="n">enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span>
+
+<span class="k">[[routes]]</span>
+<span class="n">pattern</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;stats.seis-jun.xyz&quot;</span>
+<span class="n">custom_domain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+</code></pre></div>
+
+<p><code>main</code> 相对于这个配置文件所在的目录；<code>DB</code> 和 <code>LIMITER</code> 则对应脚本使用的绑定。域名也要换成自己账号中可用的域名，不要照抄我的地址。</p>
+<p>这里先把采集关着。数据库还没准备好，就别着急往里面写。</p>
+<p>初始化时，先从生成的 <code>site/</code> 整理页面路径，在本地创建数据库，再导入手动确认的历史基数。管理工具的处理顺序是：</p>
+<div class="highlight"><pre><span></span><code>init → import-history（先做完整备份）→ export-seed
+</code></pre></div>
+
+<p>初始化时间需要明确指定，历史参数文件中的时间也要与它一致。这次保存的是 <code>2026-10-28T09:18:11.000Z</code>，即北京时间 17:18:11。它是新库的初始化边界，不是从原统计服务导出的时间。</p>
+<p><code>export-seed</code> 生成 SQL 后，再导入刚创建的空 D1：</p>
+<div class="highlight"><pre><span></span><code>npx<span class="w"> </span>wrangler@4.154.0<span class="w"> </span>d1<span class="w"> </span>execute<span class="w"> </span>seisamuse-counter-d1<span class="w"> </span>--remote<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--config<span class="w"> </span>scripts/article_counter_worker_20261028.toml<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--file<span class="w"> </span>data/counter_20261028/initial-seed.sql
+</code></pre></div>
+
+<p>本地 <code>.sqlite</code> 文件不是直接上传就能用，D1 导入需要 SQL；这点也可以查<a href="https://developers.cloudflare.com/d1/best-practices/import-export-data/">官方的导入导出说明</a>。初始 SQL 不是日常发布文件，更不能拿它反复初始化正在使用的库。</p>
+<p>然后部署 Worker：</p>
+<div class="highlight"><pre><span></span><code>npx<span class="w"> </span>wrangler@4.154.0<span class="w"> </span>deploy<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--config<span class="w"> </span>scripts/article_counter_worker_20261028.toml
+</code></pre></div>
+
+<p>先在采集关闭的状态下检查绑定和历史基数，确认没问题，再把 <code>COLLECTION_ENABLED</code> 改为 <code>"true"</code>，重新部署。这样不至于一边测试，一边把测试访问也算进去。</p>
+<h2 id="_3">网页怎么接上，怎么检查</h2>
+<p>浏览器端的入口放在公共模板 <code>templates/base.html</code> 中，所以文章页和其他页面不需要各自抄一遍：</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">script</span> <span class="na">defer</span>
+  <span class="na">src</span><span class="o">=</span><span class="s">&quot;{{ root }}scripts/article_counter_20261028.js?v=2&quot;</span>
+  <span class="na">data-counter-endpoint</span><span class="o">=</span><span class="s">&quot;https://stats.seis-jun.xyz/count&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<p><code>?v=2</code> 是这次修改显示样式后加的版本标记，避免浏览器还沿用旧脚本。这个页面不再加载旧计数入口，也不在新接口失败后偷偷回退去请求原服务。</p>
+<p>接口分成三种，不要拿错了：</p>
+<ul>
+<li><code>POST /count</code>：正式网页提交一次浏览，写入计数。</li>
+<li><code>GET /views?path=/</code>：只查询某个路径的统计，不增加计数。</li>
+<li><code>GET /health</code>：检查服务绑定和采集开关，不查询数据库里的数值。</li>
+</ul>
+<p>平时排查可以先用这两个只读请求：</p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--max-time<span class="w"> </span><span class="m">15</span><span class="w"> </span><span class="s1">&#39;https://stats.seis-jun.xyz/health&#39;</span>
+curl<span class="w"> </span>--max-time<span class="w"> </span><span class="m">15</span><span class="w"> </span><span class="s1">&#39;https://stats.seis-jun.xyz/views?path=/&#39;</span>
+</code></pre></div>
+
+<p><code>health</code> 返回正常，并不等于数据库查询一定正常，还要看 <code>views</code>。第一次导入后，实际核对到历史浏览量是 <code>80500</code>、历史访客数是 <code>40500</code>，新增计数都是零，再开启采集。</p>
+<p>本地 <code>localhost</code> 或 <code>127.0.0.1</code> 预览只读取统计，不提交浏览。否则我自己改个排版、刷新几十次，最后还以为突然来了不少读者。</p>
+<p>正式发布一篇新文章时，Worker 会在首次计数前检查它是否确实是正式站点上能访问的 HTML 页面，成功后再登记。以后正常写文章，不需要每次手动把地址填进数据库。</p>
+<h2 id="_4">旧数据没有想象中那么好搬</h2>
+<p>这次最纠结的其实不是部署，是旧数字怎么办。</p>
+<p>我记得前几天总浏览量有八万零几百，访客数有四万零几百。最后确认，以 <strong>80,500 次浏览、40,500 位访客</strong> 作为历史起点。</p>
+<p>但这两个数是根据回忆确认的估算，不是从不蒜子后台完整导出的精确记录。新系统把历史基数和新增记录分开保存，再加起来显示，不假装这些数字全是自己从头数出来的。</p>
+<p>单篇文章更麻烦。我并没有每篇文章的可靠旧计数，因此没法把八万多次平均分给所有文章，也不能把未知的旧浏览量解释成零。<strong>现在单篇页面显示的，是新系统启用后记录到的浏览量，不是这篇文章从发表至今的累计数。</strong></p>
+<p>页面上最后只保留数字，估算来源和单篇统计的起点放在悬停提示及<a href="https://www.seis-jun.xyz/privacy/">隐私说明</a>里。去掉前面的提示词，只是改了显示方式，不是把旧数据变出来了。</p>
+<p>以后如果原服务恢复，并且确实能读到可核实的单篇记录，再单独判断能不能补回、怎样避免重复。现在没有安排自动抓取，也不为了等它恢复而停掉新的计数。这个遗憾先留着。</p>
+<p>还有，访客数也不等于精确的人数。目前是在浏览器本地保存一个有效期为 365 天的随机编号，服务端保存它的 SHA-256 摘要。同一个编号再次访问，不再新增一个访客。</p>
+<p>清除网站数据、更换浏览器或设备，都可能产生新的编号；旧访客与新编号之间也无法去重。浏览器禁止本地存储时，则只记浏览量，不把每次访问都硬算成一个新访客。这个数字适合大概看看，不适合拿来做人口普查。</p>
+<p>计数数据库不保存 IP、User-Agent 或随机浏览器编号原文，也不发送网址里的查询参数和页内锚点。不过请求经过 Cloudflare，它在网络传输和安全防护时仍可能处理网络信息，不能因此说成完全没有隐私问题。换了统计方式，隐私说明也得跟着更新。</p>
+<h2 id="_5">以后要记得备份</h2>
+<p>现在数字存进了自己的数据库，至少可以把它导出来了。完整备份用：</p>
+<div class="highlight"><pre><span></span><code>npx<span class="w"> </span>wrangler@4.154.0<span class="w"> </span>d1<span class="w"> </span><span class="nb">export</span><span class="w"> </span>seisamuse-counter-d1<span class="w"> </span>--remote<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--config<span class="w"> </span>scripts/article_counter_worker_20261028.toml<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output<span class="w"> </span>backups/counter-full-20261028-203000.sql
+</code></pre></div>
+
+<p>这个输出名只是示例，每次要换成新的日期时间。备份放在非公开目录，不跟着网页发布，也不要覆盖上一次的文件。云端导出会暂时阻塞数据库的其他请求，尽量挑访问少的时候做。</p>
+<p>还要分清楚：管理脚本的 <code>export</code> 是 JSON 汇总，不是完整备份；<code>backup/restore</code> 面向完整的本地 SQLite；云端完整备份则是上面的 D1 SQL 导出。要恢复时，先导入一个新数据库，核对好了再切换，不直接覆盖正在计数的库。</p>
+<p>这次已经导出过云端初始备份，并实际导回本地检查过完整性，两个历史基数都还在。不过定时备份目前还没设置，不能写了“以后要备份”，就当它已经每天自动备份了。</p>
+<p>以后发博客，仍然运行原来的 <code>do_deploy.bash</code>。它负责构建和发布静态网页；只有计数服务的代码或配置变了，才另外部署Worker。网页源码、数据库记录和数据库备份，是三件不同的东西。</p>
+<p>当然，这个小计数器也不是绝对准确。统计请求可能被拦截，网络会出错，机器人也可能混进来；限流不是完全防刷的保证。接口暂时不可用时，脚本最多等待八秒，有最近的成功缓存就显示缓存，并在悬停提示里注明时间，不一直等，也不自动反复重试。</p>
+<p>先这样吧。博客照常写，数字继续往下记。比起盯着数字不动，我更希望下一次打开这些配置，是为了备份，而不是又来查哪里挂了。</p>]]></content>
     
-    <category term="日记" />
+    <category term="web" />
+    
+    <category term="Cloudflare" />
+    
+    <category term="python" />
     
   </entry>
   
