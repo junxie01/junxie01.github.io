@@ -58,21 +58,18 @@
     fields.forEach(function (field) {
       if (onlySite && field === 'page_pv') return;
       var value = data[field];
-      var prefix = '';
       var description = title;
       if (field === 'page_pv' && value === null) {
         value = data.new_pv.page;
-        prefix = '切换后 ';
         description += '自 ' + data.since + ' 起记录；此前的按篇浏览量未知。';
       } else if (value === null) return;
       if (field === 'site_uv' || data.history[field === 'page_pv' ? 'page' : 'site'] === 'estimated') {
-        prefix = '≈' + prefix;
         description += field === 'site_uv' ? '历史估算基数加切换后的匿名浏览器计数，不等于精确人数。' : '包含手动估算的历史基数。';
       }
       var node = document.getElementById('busuanzi_value_' + field);
       var container = document.getElementById('busuanzi_container_' + field);
       if (node && container) {
-        node.textContent = prefix + value.toLocaleString('en-US');
+        node.textContent = value.toLocaleString('en-US');
         container.title = description;
         container.setAttribute('aria-label', description || '独立访问统计');
         container.style.display = '';
