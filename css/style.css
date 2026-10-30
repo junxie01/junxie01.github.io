@@ -13,21 +13,22 @@
 :root {
   color-scheme: light;
   --text:    #1a1a2e;
-  --bg:      #f7f3ea;
+  --bg:      #ffffff;
   --accent:  #9a4f2f;
   --muted:   #6b7280;
-  --border:  #d8cfc1;
-  --card-bg: #fffaf1;
-  --nav-bg:  #fffaf1e6;
-  --code-bg: #efe8dc;
+  --border:  #e2e5e9;
+  --card-bg: #f8f9fa;
+  --nav-bg:  #ffffffe6;
+  --code-bg: #f3f4f6;
   --max-w:   820px;
   --content-w: 820px;
   --sidebar-w: 200px;
-  --soft-bg:  #fbf7ef;
+  --soft-bg:  #f4f6f8;
+  --home-bg: var(--bg);
   --brand-ink: var(--text);
   --brand-paper: var(--soft-bg);
   --brand-copper: var(--accent);
-  --card-shadow: 0 1px 3px rgba(82, 63, 42, 0.06);
+  --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
 }
 
 html[data-theme="dark"] {
@@ -41,6 +42,7 @@ html[data-theme="dark"] {
   --nav-bg:  #1a1a2ecc;
   --code-bg: #2a2a3e;
   --soft-bg: #202038;
+  --home-bg: color-mix(in srgb, var(--accent) 4%, var(--bg));
   --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.22);
 }
 
@@ -1543,7 +1545,7 @@ footer a:hover {
 }
 
 body:has(.home-main) {
-  background: color-mix(in srgb, var(--accent) 4%, var(--bg));
+  background: var(--home-bg);
 }
 
 .home-sidebar {
@@ -2156,6 +2158,7 @@ body:has(.home-main) {
     --nav-bg:  #1a1a2ecc;
     --code-bg: #2a2a3e;
     --soft-bg: #202038;
+    --home-bg: color-mix(in srgb, var(--accent) 4%, var(--bg));
     --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.22);
   }
 
