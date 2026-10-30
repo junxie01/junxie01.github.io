@@ -721,6 +721,61 @@ main > .container.page-wide {
 }
 
 /* --- Archives --- */
+.archive-topics {
+  margin-bottom: 2rem;
+}
+
+.archive-topics-title {
+  margin: 0 0 0.55rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.archive-topic-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 0.75rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.archive-topic-list li {
+  max-width: 100%;
+}
+
+.archive-topic-list a {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  max-width: 100%;
+  color: var(--text);
+  font-size: 0.86rem;
+  line-height: 1.5;
+}
+
+.archive-topic-list a span:first-child {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.archive-topic-count {
+  flex: 0 0 auto;
+  color: var(--muted);
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 0.76rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.archive-topic-list a:hover {
+  color: var(--accent);
+}
+
+.archive-topic-list a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
 .archives-title {
   margin-top: 0;
   margin-bottom: 0.45rem;
