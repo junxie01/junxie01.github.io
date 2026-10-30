@@ -725,12 +725,6 @@ main > .container.page-wide {
   margin-bottom: 2rem;
 }
 
-.archive-topics-title {
-  margin: 0 0 0.55rem;
-  font-size: 0.9rem;
-  font-weight: 700;
-}
-
 .archive-topic-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(6.5rem, 1fr));
