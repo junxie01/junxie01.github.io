@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    (function () {
+      var stored = null;
+      try {
+        stored = localStorage.getItem('seisamuse-theme');
+      } catch (error) {}
+
+      var setting = stored === 'light' || stored === 'dark' ? stored : 'system';
+      var systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = setting === 'system' ? (systemDark ? 'dark' : 'light') : setting;
+      document.documentElement.dataset.theme = theme;
+      document.documentElement.dataset.themeSetting = setting;
+    })();
+  </script>
+  <title>袜子失踪的秘密 | hashes</title>
+  <meta name="description" content="袜子失踪的秘密">
+  <link rel="alternate" type="application/atom+xml" title="Atom 订阅" href="/atom.xml">
+  <link rel="prefetch" as="image" href="https://www.blogsclub.org/badge/www.seis-jun.xyz">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+  <!-- MathJax for LaTeX rendering -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        ignoreHtmlClass: 'mermaid'
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <!-- Umami Analytics -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="21a99622-5a23-45f4-be80-edef627a68e3"></script>
+  <!-- Explicit page paths preserve article counts across browser referrer policies. -->
+  <script defer src="/scripts/article_counter_20261028.js?v=2" data-counter-endpoint="https://stats.seis-jun.xyz/count"></script>
+  <script defer src="/scripts/random_post_20261028.js"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container masthead">
+      <a class="masthead-identity" href="/" aria-label="SEISAMUSE 主页">
+        <img src="/images/seisamuse.png" alt="" class="masthead-avatar">
+        <span class="masthead-title">SEISAMUSE</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="主导航">
+        <a href="/">主页</a>
+        <a href="/archives/">归档</a>
+        <a href="/thoughts/">想法</a>
+        <a href="/about/">自述</a>
+        <a href="/archives/" id="random-post-link" title="随机打开一篇文章">随读</a>
+        <details class="nav-links" data-nav-links>
+          <summary class="nav-links-toggle" aria-controls="nav-links-panel">
+            链接
+            <svg viewBox="0 0 12 12" fill="none" aria-hidden="true" focusable="false"><path d="m3 4.5 3 3 3-3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <div class="nav-links-panel" id="nav-links-panel">
+            <div class="nav-links-projects">
+              <p class="nav-links-label">项目</p>
+              <ul class="nav-project-list">
+                
+                <li><a href="https://www.seis-jun.xyz/daily_news/" target="_blank" rel="noopener">Daily News</a></li>
+                
+                <li><a href="https://rss.seis-jun.xyz/" target="_blank" rel="noopener">RSS Reader</a></li>
+                
+                <li><a href="https://www.seis-jun.xyz/paper_weekly/" target="_blank" rel="noopener">Paper Weekly</a></li>
+                
+                <li><a href="https://www.seis-jun.xyz/earthquake_weekly/" target="_blank" rel="noopener">Earthquake Weekly</a></li>
+                
+                <li><a href="https://paper-hot.seis-jun.xyz/" target="_blank" rel="noopener">Paper Hot</a></li>
+                
+                <li><a href="https://www.seis-jun.xyz/swed/" target="_blank" rel="noopener">SWED</a></li>
+                
+              </ul>
+            </div>
+            <div class="nav-links-categories">
+              <p class="nav-links-label">收藏与分享</p>
+              
+              <a href="/links/tools/">
+                <span>工具</span>
+                <small>实用工具与脚本</small>
+              </a>
+              
+              <a href="/links/">
+                <span>资源</span>
+                <small>研究与阅读入口</small>
+              </a>
+              
+              <a href="/links/friends/">
+                <span>友链</span>
+                <small>喜欢的博客与网站</small>
+              </a>
+              
+            </div>
+          </div>
+        </details>
+        <a class="masthead-search-shortcut" href="/search/" aria-label="搜索文章" title="搜索文章">
+          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false"><circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="1.5"/><path d="m13 13 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </a>
+      </nav>
+
+      <div class="masthead-actions" aria-label="快捷入口">
+        <form class="masthead-search" action="/search/" method="get">
+          <input type="search" name="q" placeholder="搜索文章" aria-label="搜索文章">
+        </form>
+        <a href="mailto:hashes@yeah.net" title="邮件联系" aria-label="邮件联系"><i class="fa-solid fa-envelope"></i></a>
+        <a href="/atom.xml" title="Atom 订阅" aria-label="Atom 订阅"><i class="fa-solid fa-rss"></i></a>
+        <button class="theme-toggle" type="button" data-theme-toggle title="主题：跟随系统" aria-label="主题：跟随系统">
+          <i class="fa-solid fa-display" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container page-wide">
+      
+      
+<div class="main-content">
+  <article>
+    <div class="post-header">
+      <h1>袜子失踪的秘密</h1>
+      <div class="post-meta">
+        <time>2026-11-03</time>
+         &middot; 约 651 字
+        <span id="busuanzi_container_page_pv" style="display: none;">
+          &middot; <span id="busuanzi_value_page_pv"></span> 次浏览
+        </span>
+        
+         &middot; 分类：
+        
+          <a href="/blog/topic/随笔/">随笔</a>
+        
+        
+        
+         &middot; 标签：
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">袜子</span>
+        
+        
+      </div>
+    </div>
+
+    <div class="post-content">
+      <p>所谓人生不如意十之八九。</p>
+<p>好吧，今天和小K聊天的时候居然忘记了这句老话是怎么说的。也确实不知道怎么翻译。</p>
+<p>错过了用这句老话安慰他的时机啊。是的，他最近有点depressed，大概还是毕业焦虑。还好他说他有他的Christen朋友还有上帝。真的没有办法，Nature都调查了，博士生真的大部分脑子都有“问题”。其实不是啥问题就是压力太大了。</p>
+<p>话又说回来，“人生不如意十之八九”算哪门子的安慰呢？告诉了你世界的残酷，你就能释怀吗？人家本来就是看到了世界的残酷，才depressed的啊。你给别人重复一下就起到个“强调”的作用，哪有帮到忙。这还外加一个否定别人吗？否定别人对于世界认识不够完整，没有看到大多数事情都是不如意。</p>
+<p>纸上谈兵的我会说，安慰人可能真的是要“看到”别人啊。看到别人“很难”。但是，给他说确实不容易好像也解决不了问题。对，妻子说过，为你好的两个标准。一个是直接打钱；另一个是解决你的问题。其他的都是表演。</p>
+<p>人生为啥那么难？这个我好像说过，就是因为热力学第二定律啊。就像你刚买的袜子，一双一对很开心。但是，当你把他们和一堆衣服一股脑儿放到洗衣机一起洗。洗完之后，可能你再也找不齐。你会好奇，命名洗衣机就只那么大一个桶，你把桶的每一寸都摸索一遍也找不见另一只。</p>
+<p>当然，也有可能其实另一只就在某一件衣服的袋子或者领子里。记得有一次上了一天班，回来一摸衣领，才发现，那里有一只袜子。那是货真价实地戴着袜子上了一整天班。</p>
+<p>好吧，不管怎么样，袜子总归会变成孤单一只。</p>
+<p>或许其实孤单的那一只什么时候离开了你，你也不会发现。而你能够发现那一只，正是因为另一只不见了。</p>
+<p>人生不如意十之八九。但仔细想想，如意也有一二啊。</p>
+<p>你看，有了不如意的八九，那一二不也更闪亮了吗？</p>
+<p>现在洗袜子，我已经不知道有没有少一只了。</p>
+<p>因为妻子给我买了好多一模一样的袜子。</p>
+    </div>
+
+  <div class="post-nav">
+    
+      <a class="post-nav-prev" href="/blog/2026-11-03-when-do-I-become-adult.html">&larr; 我何时成为了大人</a>
+    
+
+    <a class="post-nav-blog" href="/archives/">返回归档</a>
+
+    
+      <span class="post-nav-next"></span>
+    
+  </div>
+  
+
+
+
+<div class="comments-section">
+  <h3>评论</h3>
+  
+  <script>
+    (function () {
+      var giscus = document.createElement('script');
+      giscus.src = 'https://giscus.app/client.js';
+      giscus.dataset.repo = 'junxie01/junxie01.github.io';
+      giscus.dataset.repoId = 'R_kgDOSGl1Dg';
+      giscus.dataset.category = 'General';
+      giscus.dataset.categoryId = 'DIC_kwDOSGl1Ds4DAuif';
+      giscus.dataset.mapping = 'specific';
+      giscus.dataset.term = 'blog/2026-11-03-The-Mystery-of-the-Missing-Socks';
+      giscus.dataset.strict = '0';
+      giscus.dataset.reactionsEnabled = '1';
+      giscus.dataset.emitMetadata = '0';
+      giscus.dataset.inputPosition = 'bottom';
+      giscus.dataset.theme = document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light';
+      giscus.dataset.lang = 'zh-CN';
+      giscus.crossOrigin = 'anonymous';
+      giscus.async = true;
+      document.currentScript.parentNode.appendChild(giscus);
+
+      window.addEventListener('seisamuse-theme-change', function (event) {
+        var frame = document.querySelector('.giscus-frame');
+        if (!frame || !frame.contentWindow) return;
+        frame.contentWindow.postMessage({
+          giscus: {
+            setConfig: {
+              theme: event.detail.theme === 'dark' ? 'dark' : 'light'
+            }
+          }
+        }, 'https://giscus.app');
+      });
+    })();
+  </script>
+</div>
+</article>
+</div>
+
+      
+    </div>
+  </main>
+
+  
+
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+      startOnLoad: true,
+      securityLevel: 'strict',
+      theme: document.documentElement.dataset.theme === 'dark' ? 'dark' : 'neutral'
+    });
+  </script>
+
+  <script>
+    (function () {
+      var navigation = document.querySelector('[data-nav-links]');
+      if (!navigation) return;
+      var trigger = navigation.querySelector('summary');
+      var hoverRegion = navigation.closest('.masthead') || navigation;
+      var hover = window.matchMedia('(hover: hover) and (pointer: fine)');
+
+      navigation.addEventListener('pointerenter', function (event) {
+        if (event.pointerType === 'mouse' && hover.matches) navigation.open = true;
+      });
+      // Header padding is part of the pointer path from the trigger to the panel.
+      hoverRegion.addEventListener('pointerleave', function (event) {
+        if (event.pointerType === 'mouse' && !navigation.contains(document.activeElement)) {
+          navigation.open = false;
+        }
+      });
+      navigation.addEventListener('focusout', function (event) {
+        if (!navigation.contains(event.relatedTarget)) navigation.open = false;
+      });
+      document.addEventListener('click', function (event) {
+        if (!navigation.contains(event.target)) navigation.open = false;
+      });
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && navigation.open) {
+          navigation.open = false;
+          if (navigation.contains(document.activeElement)) trigger.focus();
+        }
+      });
+    })();
+  </script>
+
+  <script>
+    (function () {
+      var toggle = document.querySelector('[data-theme-toggle]');
+      if (!toggle) return;
+
+      var order = ['system', 'light', 'dark'];
+      var labels = {
+        system: '主题：跟随系统',
+        light: '主题：浅色',
+        dark: '主题：深色'
+      };
+      var icons = {
+        system: 'fa-display',
+        light: 'fa-sun',
+        dark: 'fa-moon'
+      };
+      var media = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+
+      function currentSetting() {
+        var setting = document.documentElement.dataset.themeSetting;
+        return order.indexOf(setting) === -1 ? 'system' : setting;
+      }
+
+      function updateButton(setting) {
+        var label = labels[setting];
+        var icon = toggle.querySelector('i');
+        toggle.title = label;
+        toggle.setAttribute('aria-label', label);
+        icon.className = 'fa-solid ' + icons[setting];
+      }
+
+      function applyTheme(setting) {
+        var systemDark = media && media.matches;
+        var theme = setting === 'system' ? (systemDark ? 'dark' : 'light') : setting;
+        document.documentElement.dataset.themeSetting = setting;
+        document.documentElement.dataset.theme = theme;
+        try {
+          if (setting === 'system') localStorage.removeItem('seisamuse-theme');
+          else localStorage.setItem('seisamuse-theme', setting);
+        } catch (error) {}
+        updateButton(setting);
+        window.dispatchEvent(new CustomEvent('seisamuse-theme-change', {
+          detail: { theme: theme }
+        }));
+      }
+
+      toggle.addEventListener('click', function () {
+        var setting = currentSetting();
+        applyTheme(order[(order.indexOf(setting) + 1) % order.length]);
+      });
+
+      if (media) {
+        media.addEventListener('change', function () {
+          if (currentSetting() === 'system') applyTheme('system');
+        });
+      }
+
+      updateButton(currentSetting());
+    })();
+  </script>
+
+</body>
+</html>
