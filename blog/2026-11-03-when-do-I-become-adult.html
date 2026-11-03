@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    (function () {
+      var stored = null;
+      try {
+        stored = localStorage.getItem('seisamuse-theme');
+      } catch (error) {}
+
+      var setting = stored === 'light' || stored === 'dark' ? stored : 'system';
+      var systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = setting === 'system' ? (systemDark ? 'dark' : 'light') : setting;
+      document.documentElement.dataset.theme = theme;
+      document.documentElement.dataset.themeSetting = setting;
+    })();
+  </script>
+  <title>合适成为了大人 | hashes</title>
+  <meta name="description" content="合适成为了大人">
+  <link rel="alternate" type="application/atom+xml" title="Atom 订阅" href="/atom.xml">
+  <link rel="prefetch" as="image" href="https://www.blogsclub.org/badge/www.seis-jun.xyz">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+  <!-- MathJax for LaTeX rendering -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        ignoreHtmlClass: 'mermaid'
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <!-- Umami Analytics -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="21a99622-5a23-45f4-be80-edef627a68e3"></script>
+  <!-- Explicit page paths preserve article counts across browser referrer policies. -->
+  <script defer src="/scripts/article_counter_20261028.js?v=2" data-counter-endpoint="https://stats.seis-jun.xyz/count"></script>
+  <script defer src="/scripts/random_post_20261028.js"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container masthead">
+      <a class="masthead-identity" href="/" aria-label="SEISAMUSE 主页">
+        <img src="/images/seisamuse.png" alt="" class="masthead-avatar">
+        <span class="masthead-title">SEISAMUSE</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="主导航">
+        <a href="/">主页</a>
+        <a href="/archives/">归档</a>
+        <a href="/thoughts/">想法</a>
+        <a href="/about/">自述</a>
+        <a href="/archives/" id="random-post-link" title="随机打开一篇文章">随读</a>
+        <details class="nav-links" data-nav-links>
+          <summary class="nav-links-toggle" aria-controls="nav-links-panel">
+            链接
+            <svg viewBox="0 0 12 12" fill="none" aria-hidden="true" focusable="false"><path d="m3 4.5 3 3 3-3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <div class="nav-links-panel" id="nav-links-panel">
+            <div class="nav-links-projects">
+              <p class="nav-links-label">项目</p>
+              <ul class="nav-project-list">
+                
+                <li><a href="https://www.seis-jun.xyz/daily_news/" target="_blank" rel="noopener">Daily News</a></li>
+                
+                <li><a href="https://rss.seis-jun.xyz/" target="_blank" rel="noopener">RSS Reader</a></li>
+                
+                <li><a href="https://www.seis-jun.xyz/paper_weekly/" target="_blank" rel="noopener">Paper Weekly</a></li>
+                
+                <li><a href="https://www.seis-jun.xyz/earthquake_weekly/" target="_blank" rel="noopener">Earthquake Weekly</a></li>
+                
+                <li><a href="https://paper-hot.seis-jun.xyz/" target="_blank" rel="noopener">Paper Hot</a></li>
+                
+                <li><a href="https://www.seis-jun.xyz/swed/" target="_blank" rel="noopener">SWED</a></li>
+                
+              </ul>
+            </div>
+            <div class="nav-links-categories">
+              <p class="nav-links-label">收藏与分享</p>
+              
+              <a href="/links/tools/">
+                <span>工具</span>
+                <small>实用工具与脚本</small>
+              </a>
+              
+              <a href="/links/">
+                <span>资源</span>
+                <small>研究与阅读入口</small>
+              </a>
+              
+              <a href="/links/friends/">
+                <span>友链</span>
+                <small>喜欢的博客与网站</small>
+              </a>
+              
+            </div>
+          </div>
+        </details>
+        <a class="masthead-search-shortcut" href="/search/" aria-label="搜索文章" title="搜索文章">
+          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false"><circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="1.5"/><path d="m13 13 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </a>
+      </nav>
+
+      <div class="masthead-actions" aria-label="快捷入口">
+        <form class="masthead-search" action="/search/" method="get">
+          <input type="search" name="q" placeholder="搜索文章" aria-label="搜索文章">
+        </form>
+        <a href="mailto:hashes@yeah.net" title="邮件联系" aria-label="邮件联系"><i class="fa-solid fa-envelope"></i></a>
+        <a href="/atom.xml" title="Atom 订阅" aria-label="Atom 订阅"><i class="fa-solid fa-rss"></i></a>
+        <button class="theme-toggle" type="button" data-theme-toggle title="主题：跟随系统" aria-label="主题：跟随系统">
+          <i class="fa-solid fa-display" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container page-wide">
+      
+      
+<div class="main-content">
+  <article>
+    <div class="post-header">
+      <h1>合适成为了大人</h1>
+      <div class="post-meta">
+        <time>2026-11-03</time>
+         &middot; 约 1,503 字
+        <span id="busuanzi_container_page_pv" style="display: none;">
+          &middot; <span id="busuanzi_value_page_pv"></span> 次浏览
+        </span>
+        
+         &middot; 分类：
+        
+          <a href="/blog/topic/ruirui-blog/">Ruirui blog</a>
+        
+        
+        
+         &middot; 标签：
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">成长</span>
+        
+        
+      </div>
+    </div>
+
+    <div class="post-content">
+      <p>很多人成为大人的瞬间，都有一个清晰的节点。爸爸说，他真正觉得自己长大、扛起责任，是妈妈生下我的那一刻，小小的新生命落在肩头，瞬间懂了何为家庭、何为担当。老公也说，在儿子降生之后，他彻底褪去稚气，心甘情愿扛起养家护家的重任。</p>
+<p>我常常被他们的瞬间打动，也常常被问起：我是从什么时候，真正觉得自己长成了大人？</p>
+<p>我的成年时刻，没有轰轰烈烈的仪式，没有长大成人的里程碑，甚至来得太早、太安静，停留在我三岁的童年时光里。</p>
+<p>我记事很早，一岁多的零碎画面都清晰鲜活，三岁的喜怒哀乐、所见所感，时至今日依然历历在目。也是在三岁那年，我第一次读懂了生活的辛苦，第一次懵懂接住了人间的疾苦，提前长出了成年人的共情与懂事。</p>
+<p>小时候，父母在军工厂做双职工，工作安稳踏实。妈妈生性勤勉，不愿安于现状，为了多挣一点收入补贴家庭，借着厂里后勤管食堂的便利，在食堂门口摆起了小摊，卖成都特色的凉拌猪头肉、凉拌竹笋。厂区有几千名职工，生意格外红火，却也格外辛苦。</p>
+<p>那是我童年最深刻的疲惫与忙碌。为了准备食材，爸爸每天凌晨三点就要骑车赶往范家河堰的杀猪场取新鲜猪头。天未破晓、万物寂静的时候，父母的一天就已经开始了。取回的猪头需要用松香仔细去毛、反复清洗、长时间熬煮，之后再由妈妈细细切配调味。后来人手实在不够，小姑姑也过来帮忙，松香自带毒性，日复一日劳作，一度让小姑的眼睛险些看不见。</p>
+<p>整整一两年的时光，我们家的凌晨永远是喧闹忙碌的。厨房的水声、煮肉的咕嘟声、大人忙碌的脚步声，贯穿了每一个深夜与凌晨。我有自己的小卧室，却从来睡不好一个安稳觉。三岁的我，本该无忧无虑、酣然入梦，却夜夜被忙碌的声响吵醒，伴着满屋的松香气味辗转难眠。</p>
+<p>身上、衣服上、头发里，永远沾着散不去的松香味道。我每天带着一身味道去上幼儿园，小小的年纪，早早浸透了生活奔波的烟火与辛苦。</p>
+<p>父母心疼我睡不好、受委屈，总想笨拙地哄我开心。他们买来五颜六色的彩虹糖，糖果里藏着仿真的小额纸币，一角、两角、一元、五元，新奇又有趣，想让甜甜的糖果、小小的“积蓄”，抚平我的烦躁与疲惫。</p>
+<p>可糖果再甜，也哄不好一个彻夜难眠、早早感知生活艰难的小孩。</p>
+<p>年纪小小的我，情绪直白又浓烈。终于有一天，我带着积攒许久的委屈和疲惫，认真地跟妈妈说：“你们再继续做这个生意，我真的活不了了，我不如去死了算了。”</p>
+<p>那句话听起来幼稚，却是我三岁时最真切的感受。我承受不住夜夜无眠的疲惫，承受不住满身洗不掉的烟火浊气，更小小年纪，就看见了父母为了生活、为了多挣几分收入，拼尽全力奔波的模样。</p>
+<p>就是那个瞬间，我第一次觉得，自己不再是懵懂无知的孩童。
+我没有玩耍任性的底气，提前窥见了生活的真相，懂得了家庭的不易，下意识开始共情家人的辛苦。别人的三岁只懂撒娇玩乐，我的三岁，已经在默默承担家庭的苦难、体谅大人的奔波。</p>
+<p>这，就是我最早长大的时刻。</p>
+<p>年岁慢慢增长，八九岁的我，对生活的不易有了更深的体会。</p>
+<p>妈妈常常要上夜班，工作地点路途遥远，每一次下班都是深夜十一二点。寒冬酷暑，她独自骑着摩托车返程，归来时浑身冰冷、满脸疲惫。我常常看着风尘仆仆、疲惫不堪的妈妈，心里满是心疼。我知道夜班有补贴，可我更看得见她熬的夜、受的累、吃的苦。</p>
+<p>也是那时，我真正读懂了何为人间疾苦。</p>
+<p>小小的心里悄悄埋下节俭和懂事的种子，我深知每一分钱都来之不易，都是父母熬着夜、受着累、起早贪黑换来的。于是我学着懂事、学着体谅，能不花的钱一分不花。哪怕只是两三块的公交车费，我也宁愿自己走路往返，把钱悄悄省下来，不愿辜负父母的辛苦付出。</p>
+<p>别人的成长，是年龄渐长、历经世事之后的通透成熟。
+而我的成年，是被童年的烟火、家人的辛苦早早催熟的。</p>
+<p>我没有等到为人妻、为人母的那一刻才学会担当。
+在三岁无数个无眠的凌晨，在满身松香的童年里，在心疼母亲深夜奔波的瞬间，我就已经悄悄长成了大人。</p>
+<p>我早早懂得生活从不是轻松顺遂，懂得所有安稳的日子，都是家人披星戴月、辛苦奔波换来的；早早学会体谅、珍惜、克制、感恩，学会接住生活的平凡苦难，心怀温柔，不负辛劳。</p>
+<p>原来成长从无定式，有人因新生长大，有人因责任成熟，而我，因早早窥见人间疾苦、体谅家人不易，在懵懂童年，提前活成了懂事温柔的大人。</p>
+    </div>
+
+  <div class="post-nav">
+    
+      <a class="post-nav-prev" href="/blog/2026-11-02-When-did-I-become-an-adult.html">&larr; When Did I Become an Adult?</a>
+    
+
+    <a class="post-nav-blog" href="/archives/">返回归档</a>
+
+    
+      <span class="post-nav-next"></span>
+    
+  </div>
+  
+
+
+
+<div class="comments-section">
+  <h3>评论</h3>
+  
+  <script>
+    (function () {
+      var giscus = document.createElement('script');
+      giscus.src = 'https://giscus.app/client.js';
+      giscus.dataset.repo = 'junxie01/junxie01.github.io';
+      giscus.dataset.repoId = 'R_kgDOSGl1Dg';
+      giscus.dataset.category = 'General';
+      giscus.dataset.categoryId = 'DIC_kwDOSGl1Ds4DAuif';
+      giscus.dataset.mapping = 'specific';
+      giscus.dataset.term = 'blog/2026-11-03-when-do-I-become-adult';
+      giscus.dataset.strict = '0';
+      giscus.dataset.reactionsEnabled = '1';
+      giscus.dataset.emitMetadata = '0';
+      giscus.dataset.inputPosition = 'bottom';
+      giscus.dataset.theme = document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light';
+      giscus.dataset.lang = 'zh-CN';
+      giscus.crossOrigin = 'anonymous';
+      giscus.async = true;
+      document.currentScript.parentNode.appendChild(giscus);
+
+      window.addEventListener('seisamuse-theme-change', function (event) {
+        var frame = document.querySelector('.giscus-frame');
+        if (!frame || !frame.contentWindow) return;
+        frame.contentWindow.postMessage({
+          giscus: {
+            setConfig: {
+              theme: event.detail.theme === 'dark' ? 'dark' : 'light'
+            }
+          }
+        }, 'https://giscus.app');
+      });
+    })();
+  </script>
+</div>
+</article>
+</div>
+
+      
+    </div>
+  </main>
+
+  
+
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+      startOnLoad: true,
+      securityLevel: 'strict',
+      theme: document.documentElement.dataset.theme === 'dark' ? 'dark' : 'neutral'
+    });
+  </script>
+
+  <script>
+    (function () {
+      var navigation = document.querySelector('[data-nav-links]');
+      if (!navigation) return;
+      var trigger = navigation.querySelector('summary');
+      var hoverRegion = navigation.closest('.masthead') || navigation;
+      var hover = window.matchMedia('(hover: hover) and (pointer: fine)');
+
+      navigation.addEventListener('pointerenter', function (event) {
+        if (event.pointerType === 'mouse' && hover.matches) navigation.open = true;
+      });
+      // Header padding is part of the pointer path from the trigger to the panel.
+      hoverRegion.addEventListener('pointerleave', function (event) {
+        if (event.pointerType === 'mouse' && !navigation.contains(document.activeElement)) {
+          navigation.open = false;
+        }
+      });
+      navigation.addEventListener('focusout', function (event) {
+        if (!navigation.contains(event.relatedTarget)) navigation.open = false;
+      });
+      document.addEventListener('click', function (event) {
+        if (!navigation.contains(event.target)) navigation.open = false;
+      });
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && navigation.open) {
+          navigation.open = false;
+          if (navigation.contains(document.activeElement)) trigger.focus();
+        }
+      });
+    })();
+  </script>
+
+  <script>
+    (function () {
+      var toggle = document.querySelector('[data-theme-toggle]');
+      if (!toggle) return;
+
+      var order = ['system', 'light', 'dark'];
+      var labels = {
+        system: '主题：跟随系统',
+        light: '主题：浅色',
+        dark: '主题：深色'
+      };
+      var icons = {
+        system: 'fa-display',
+        light: 'fa-sun',
+        dark: 'fa-moon'
+      };
+      var media = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+
+      function currentSetting() {
+        var setting = document.documentElement.dataset.themeSetting;
+        return order.indexOf(setting) === -1 ? 'system' : setting;
+      }
+
+      function updateButton(setting) {
+        var label = labels[setting];
+        var icon = toggle.querySelector('i');
+        toggle.title = label;
+        toggle.setAttribute('aria-label', label);
+        icon.className = 'fa-solid ' + icons[setting];
+      }
+
+      function applyTheme(setting) {
+        var systemDark = media && media.matches;
+        var theme = setting === 'system' ? (systemDark ? 'dark' : 'light') : setting;
+        document.documentElement.dataset.themeSetting = setting;
+        document.documentElement.dataset.theme = theme;
+        try {
+          if (setting === 'system') localStorage.removeItem('seisamuse-theme');
+          else localStorage.setItem('seisamuse-theme', setting);
+        } catch (error) {}
+        updateButton(setting);
+        window.dispatchEvent(new CustomEvent('seisamuse-theme-change', {
+          detail: { theme: theme }
+        }));
+      }
+
+      toggle.addEventListener('click', function () {
+        var setting = currentSetting();
+        applyTheme(order[(order.indexOf(setting) + 1) % order.length]);
+      });
+
+      if (media) {
+        media.addEventListener('change', function () {
+          if (currentSetting() === 'system') applyTheme('system');
+        });
+      }
+
+      updateButton(currentSetting());
+    })();
+  </script>
+
+</body>
+</html>
