@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    (function () {
+      var stored = null;
+      try {
+        stored = localStorage.getItem('seisamuse-theme');
+      } catch (error) {}
+
+      var setting = stored === 'light' || stored === 'dark' ? stored : 'system';
+      var systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = setting === 'system' ? (systemDark ? 'dark' : 'light') : setting;
+      document.documentElement.dataset.theme = theme;
+      document.documentElement.dataset.themeSetting = setting;
+    })();
+  </script>
+  <title>斐济之旅 | hashes</title>
+  <meta name="description" content="斐济之旅">
+  <link rel="alternate" type="application/atom+xml" title="Atom 订阅" href="/atom.xml">
+  <link rel="prefetch" as="image" href="https://www.blogsclub.org/badge/www.seis-jun.xyz">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+  <!-- MathJax for LaTeX rendering -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        ignoreHtmlClass: 'mermaid'
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <!-- Umami Analytics -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="21a99622-5a23-45f4-be80-edef627a68e3"></script>
+  <!-- Explicit page paths preserve article counts across browser referrer policies. -->
+  <script defer src="/scripts/article_counter_20261028.js?v=2" data-counter-endpoint="https://stats.seis-jun.xyz/count"></script>
+  <script defer src="/scripts/random_post_20261028.js"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container masthead">
+      <a class="masthead-identity" href="/" aria-label="SEISAMUSE 主页">
+        <img src="/images/seisamuse.png" alt="" class="masthead-avatar">
+        <span class="masthead-title">SEISAMUSE</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="主导航">
+        <a href="/">主页</a>
+        <a href="/archives/">归档</a>
+        <a href="/thoughts/">想法</a>
+        <a href="/about/">自述</a>
+        <a href="/archives/" id="random-post-link" title="随机打开一篇文章">随读</a>
+        <details class="nav-links" data-nav-links>
+          <summary class="nav-links-toggle" aria-controls="nav-links-panel">
+            链接
+            <svg viewBox="0 0 12 12" fill="none" aria-hidden="true" focusable="false"><path d="m3 4.5 3 3 3-3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <div class="nav-links-panel" id="nav-links-panel">
+            <div class="nav-links-projects">
+              <p class="nav-links-label">项目</p>
+              <ul class="nav-project-list">
+                
+                <li><a href="https://www.seis-jun.xyz/daily_news/" target="_blank" rel="noopener">Daily News</a></li>
+                
+                <li><a href="https://rss.seis-jun.xyz/" target="_blank" rel="noopener">RSS Reader</a></li>
+                
+                <li><a href="https://www.seis-jun.xyz/paper_weekly/" target="_blank" rel="noopener">Paper Weekly</a></li>
+                
+                <li><a href="https://www.seis-jun.xyz/earthquake_weekly/" target="_blank" rel="noopener">Earthquake Weekly</a></li>
+                
+                <li><a href="https://paper-hot.seis-jun.xyz/" target="_blank" rel="noopener">Paper Hot</a></li>
+                
+                <li><a href="https://www.seis-jun.xyz/swed/" target="_blank" rel="noopener">SWED</a></li>
+                
+              </ul>
+            </div>
+            <div class="nav-links-categories">
+              <p class="nav-links-label">收藏与分享</p>
+              
+              <a href="/links/tools/">
+                <span>工具</span>
+                <small>实用工具与脚本</small>
+              </a>
+              
+              <a href="/links/">
+                <span>资源</span>
+                <small>研究与阅读入口</small>
+              </a>
+              
+              <a href="/links/friends/">
+                <span>友链</span>
+                <small>喜欢的博客与网站</small>
+              </a>
+              
+            </div>
+          </div>
+        </details>
+        <a class="masthead-search-shortcut" href="/search/" aria-label="搜索文章" title="搜索文章">
+          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false"><circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="1.5"/><path d="m13 13 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </a>
+      </nav>
+
+      <div class="masthead-actions" aria-label="快捷入口">
+        <form class="masthead-search" action="/search/" method="get">
+          <input type="search" name="q" placeholder="搜索文章" aria-label="搜索文章">
+        </form>
+        <a href="mailto:hashes@yeah.net" title="邮件联系" aria-label="邮件联系"><i class="fa-solid fa-envelope"></i></a>
+        <a href="/atom.xml" title="Atom 订阅" aria-label="Atom 订阅"><i class="fa-solid fa-rss"></i></a>
+        <button class="theme-toggle" type="button" data-theme-toggle title="主题：跟随系统" aria-label="主题：跟随系统">
+          <i class="fa-solid fa-display" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container page-wide">
+      
+      
+<div class="main-content">
+  <article>
+    <div class="post-header">
+      <h1>斐济之旅</h1>
+      <div class="post-meta">
+        <time>2026-11-04</time>
+         &middot; 约 1,054 字
+        <span id="busuanzi_container_page_pv" style="display: none;">
+          &middot; <span id="busuanzi_value_page_pv"></span> 次浏览
+        </span>
+        
+         &middot; 分类：
+        
+          <a href="/blog/topic/随笔/">随笔</a>
+        
+        
+        
+         &middot; 标签：
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">斐济</span>
+        
+        
+      </div>
+    </div>
+
+    <div class="post-content">
+      <p>妻子在<a href="/blog/2026-11-04-global-hiking.html">博客</a>里提到了斐济之旅，但没带上我。</p>
+<p>放心，物理上带的不是别人，正是我，只是笔上给忘了。因此，我有必要也来补充说说。</p>
+<p>是的，我们是从一个鸟不怎么拉屎的地方，去到了一个鸟很爱拉屎的地方，穿的拖鞋。我都忘记为啥平时都是穿拖鞋了，反正坐飞机也是穿的拖鞋。大概是太热了吧，我怕热。坐地铁往机场赶的时候拉肚子了。然后坐了一站路赶紧下车到地铁里的厕所放飞自我，还好妻子带了纸。</p>
+<p>我们坐的好像是澳洲廉航啥的，并不是吃的少，而是如果你要订吃的，得加钱。但，不管怎么样，“空姨”和服务都比我从洛杉矶坐到加州的航班要好，尽管那次有吃的。那次给大家服务的是“空爷”，发的食物是几根萝卜条，还可以蘸酱。“空爷”说话还会喷射口水，和我高中的化学老师有得一比。</p>
+<p>没多久就到岛上，应该是主岛Nadi。我们的目的地不在主岛，妻子订的是旁边一个小岛上的度假村。至今那个度假村还在给我发邮件，欢迎我再次光临。</p>
+<p>下午到的，我们在主岛上住了一晚。那个季节还有热带气旋，飓风什么的。能不能去度假村还未可知。和我们一个时间去度假的还有我们的朋友，他们订的是另一个岛，差点回不来。第二天天气还不错，气旋旋到了我们朋友去的方向，我们才有机会坐上船。从宾馆到码头的路上遇到了当地采椰子的人。看到我们就热情地分享了一个椰子给我们，还帮我们开了盖。</p>
+<p>我们俩没有怎么坐过船，听说还有45分钟的航程，我们提前已经备了晕船药。临上船，我们吃了一颗。一上船发现，我的天，这浪几乎会把我们甩出去。多往窗外看一眼都得晕。于是，我们各自又多吃了一颗。</p>
+<p>稀里糊涂地就来到了妻子订的度假村，的确没有晕船，可能是因为嗑high了。</p>
+<p>度假村有较为热情的迎接，给我们带了花环。接待员见到我们，就来了句“KoNi Jiwa”。我们都很high，没有和他计较。他告诉我们晚上有欢迎你们的篝火晚会。我们俩迫不及待地领了钥匙，到了我们的房间。那时还早，没到晚饭时间。</p>
+<p>我们俩一倒头，就睡了。睡到了第二天上午。至今也不知道篝火晚会的火多么热。</p>
+<p>第二天，我们已经一身热带装扮，“出岛”了。大约是有点兴奋，居然忘记涂防晒霜了。好吧，其实我们不是太知道怎么玩啊。总之就是泳池泡澡，沙滩晒太阳。是的，还有捉螃蟹。是我在捉，捉得不亦乐乎，妻子看我笑话。我们俩都不怎么会游，所以海里是不敢进去游的，水只敢末到膝盖。对了，还有个好玩的，就是在沙滩上捡生锈的硬币。不知道度假了口袋还要装那么多硬币干啥，我也不知道自己捡到有啥用。对，其余时间还是看了海，也就那样，因为平时会看很多海。就像妻子说的，有点厌海了，只不过颜色稍稍比平时看的海颜色淡些。</p>
+<p>泳池就在房间外面，基本可以游到最后。整个度假度得浑身疼，对，皮也疼。回到家一周后，我就好些了，因为换了一层皮，原先的那层在一次洗澡时全揭了。</p>
+<p>妻子问我读了她的博客有什么感受，我说，有些事情是经历了才会觉得不过如此，或者果真如此。</p>
+<p>就像有些人说，一定要去拉萨才能有灵魂的洗礼一样。<del>那是缺氧，脑雾吧。</del></p>
+    </div>
+
+  <div class="post-nav">
+    
+      <a class="post-nav-prev" href="/blog/2026-11-04-fxxking-nihong.html">&larr; 历史修正主义正在扭曲日本年轻一代</a>
+    
+
+    <a class="post-nav-blog" href="/archives/">返回归档</a>
+
+    
+      <span class="post-nav-next"></span>
+    
+  </div>
+  
+
+
+
+<div class="comments-section">
+  <h3>评论</h3>
+  
+  <script>
+    (function () {
+      var giscus = document.createElement('script');
+      giscus.src = 'https://giscus.app/client.js';
+      giscus.dataset.repo = 'junxie01/junxie01.github.io';
+      giscus.dataset.repoId = 'R_kgDOSGl1Dg';
+      giscus.dataset.category = 'General';
+      giscus.dataset.categoryId = 'DIC_kwDOSGl1Ds4DAuif';
+      giscus.dataset.mapping = 'specific';
+      giscus.dataset.term = 'blog/2026-11-04-trip-to-FIJI';
+      giscus.dataset.strict = '0';
+      giscus.dataset.reactionsEnabled = '1';
+      giscus.dataset.emitMetadata = '0';
+      giscus.dataset.inputPosition = 'bottom';
+      giscus.dataset.theme = document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light';
+      giscus.dataset.lang = 'zh-CN';
+      giscus.crossOrigin = 'anonymous';
+      giscus.async = true;
+      document.currentScript.parentNode.appendChild(giscus);
+
+      window.addEventListener('seisamuse-theme-change', function (event) {
+        var frame = document.querySelector('.giscus-frame');
+        if (!frame || !frame.contentWindow) return;
+        frame.contentWindow.postMessage({
+          giscus: {
+            setConfig: {
+              theme: event.detail.theme === 'dark' ? 'dark' : 'light'
+            }
+          }
+        }, 'https://giscus.app');
+      });
+    })();
+  </script>
+</div>
+</article>
+</div>
+
+      
+    </div>
+  </main>
+
+  
+
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+      startOnLoad: true,
+      securityLevel: 'strict',
+      theme: document.documentElement.dataset.theme === 'dark' ? 'dark' : 'neutral'
+    });
+  </script>
+
+  <script>
+    (function () {
+      var navigation = document.querySelector('[data-nav-links]');
+      if (!navigation) return;
+      var trigger = navigation.querySelector('summary');
+      var hoverRegion = navigation.closest('.masthead') || navigation;
+      var hover = window.matchMedia('(hover: hover) and (pointer: fine)');
+
+      navigation.addEventListener('pointerenter', function (event) {
+        if (event.pointerType === 'mouse' && hover.matches) navigation.open = true;
+      });
+      // Header padding is part of the pointer path from the trigger to the panel.
+      hoverRegion.addEventListener('pointerleave', function (event) {
+        if (event.pointerType === 'mouse' && !navigation.contains(document.activeElement)) {
+          navigation.open = false;
+        }
+      });
+      navigation.addEventListener('focusout', function (event) {
+        if (!navigation.contains(event.relatedTarget)) navigation.open = false;
+      });
+      document.addEventListener('click', function (event) {
+        if (!navigation.contains(event.target)) navigation.open = false;
+      });
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && navigation.open) {
+          navigation.open = false;
+          if (navigation.contains(document.activeElement)) trigger.focus();
+        }
+      });
+    })();
+  </script>
+
+  <script>
+    (function () {
+      var toggle = document.querySelector('[data-theme-toggle]');
+      if (!toggle) return;
+
+      var order = ['system', 'light', 'dark'];
+      var labels = {
+        system: '主题：跟随系统',
+        light: '主题：浅色',
+        dark: '主题：深色'
+      };
+      var icons = {
+        system: 'fa-display',
+        light: 'fa-sun',
+        dark: 'fa-moon'
+      };
+      var media = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+
+      function currentSetting() {
+        var setting = document.documentElement.dataset.themeSetting;
+        return order.indexOf(setting) === -1 ? 'system' : setting;
+      }
+
+      function updateButton(setting) {
+        var label = labels[setting];
+        var icon = toggle.querySelector('i');
+        toggle.title = label;
+        toggle.setAttribute('aria-label', label);
+        icon.className = 'fa-solid ' + icons[setting];
+      }
+
+      function applyTheme(setting) {
+        var systemDark = media && media.matches;
+        var theme = setting === 'system' ? (systemDark ? 'dark' : 'light') : setting;
+        document.documentElement.dataset.themeSetting = setting;
+        document.documentElement.dataset.theme = theme;
+        try {
+          if (setting === 'system') localStorage.removeItem('seisamuse-theme');
+          else localStorage.setItem('seisamuse-theme', setting);
+        } catch (error) {}
+        updateButton(setting);
+        window.dispatchEvent(new CustomEvent('seisamuse-theme-change', {
+          detail: { theme: theme }
+        }));
+      }
+
+      toggle.addEventListener('click', function () {
+        var setting = currentSetting();
+        applyTheme(order[(order.indexOf(setting) + 1) % order.length]);
+      });
+
+      if (media) {
+        media.addEventListener('change', function () {
+          if (currentSetting() === 'system') applyTheme('system');
+        });
+      }
+
+      updateButton(currentSetting());
+    })();
+  </script>
+
+</body>
+</html>
