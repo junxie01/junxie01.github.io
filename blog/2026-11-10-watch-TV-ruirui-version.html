@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    (function () {
+      var stored = null;
+      try {
+        stored = localStorage.getItem('seisamuse-theme');
+      } catch (error) {}
+
+      var setting = stored === 'light' || stored === 'dark' ? stored : 'system';
+      var systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = setting === 'system' ? (systemDark ? 'dark' : 'light') : setting;
+      document.documentElement.dataset.theme = theme;
+      document.documentElement.dataset.themeSetting = setting;
+    })();
+  </script>
+  <title>看电视 | hashes</title>
+  <meta name="description" content="看电视">
+  <link rel="alternate" type="application/atom+xml" title="Atom 订阅" href="/atom.xml">
+  <link rel="prefetch" as="image" href="https://www.blogsclub.org/badge/www.seis-jun.xyz">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+  <!-- MathJax for LaTeX rendering -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        ignoreHtmlClass: 'mermaid'
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <!-- Umami Analytics -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="21a99622-5a23-45f4-be80-edef627a68e3"></script>
+  <!-- Explicit page paths preserve article counts across browser referrer policies. -->
+  <script defer src="/scripts/article_counter_20261028.js?v=2" data-counter-endpoint="https://stats.seis-jun.xyz/count"></script>
+  <script defer src="/scripts/random_post_20261028.js"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container masthead">
+      <a class="masthead-identity" href="/" aria-label="SEISAMUSE 主页">
+        <img src="/images/seisamuse.png" alt="" class="masthead-avatar">
+        <span class="masthead-title">SEISAMUSE</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="主导航">
+        <a href="/">主页</a>
+        <a href="/archives/">归档</a>
+        <a href="/thoughts/">想法</a>
+        <a href="/about/">自述</a>
+        <a href="/archives/" id="random-post-link" title="随机打开一篇文章">随读</a>
+        <details class="nav-links" data-nav-links>
+          <summary class="nav-links-toggle" aria-controls="nav-links-panel">
+            链接
+            <svg viewBox="0 0 12 12" fill="none" aria-hidden="true" focusable="false"><path d="m3 4.5 3 3 3-3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <div class="nav-links-panel" id="nav-links-panel">
+            <div class="nav-links-projects">
+              <p class="nav-links-label">项目</p>
+              <ul class="nav-project-list">
+                
+                <li><a href="https://www.seis-jun.xyz/daily_news/" target="_blank" rel="noopener">Daily News</a></li>
+                
+                <li><a href="https://rss.seis-jun.xyz/" target="_blank" rel="noopener">RSS Reader</a></li>
+                
+                <li><a href="https://www.seis-jun.xyz/paper_weekly/" target="_blank" rel="noopener">Paper Weekly</a></li>
+                
+                <li><a href="https://www.seis-jun.xyz/earthquake_weekly/" target="_blank" rel="noopener">Earthquake Weekly</a></li>
+                
+                <li><a href="https://paper-hot.seis-jun.xyz/" target="_blank" rel="noopener">Paper Hot</a></li>
+                
+                <li><a href="https://www.seis-jun.xyz/swed/" target="_blank" rel="noopener">SWED</a></li>
+                
+              </ul>
+            </div>
+            <div class="nav-links-categories">
+              <p class="nav-links-label">收藏与分享</p>
+              
+              <a href="/links/tools/">
+                <span>工具</span>
+                <small>实用工具与脚本</small>
+              </a>
+              
+              <a href="/links/">
+                <span>资源</span>
+                <small>研究与阅读入口</small>
+              </a>
+              
+              <a href="/links/friends/">
+                <span>友链</span>
+                <small>喜欢的博客与网站</small>
+              </a>
+              
+            </div>
+          </div>
+        </details>
+        <a class="masthead-search-shortcut" href="/search/" aria-label="搜索文章" title="搜索文章">
+          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false"><circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="1.5"/><path d="m13 13 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </a>
+      </nav>
+
+      <div class="masthead-actions" aria-label="快捷入口">
+        <form class="masthead-search" action="/search/" method="get">
+          <input type="search" name="q" placeholder="搜索文章" aria-label="搜索文章">
+        </form>
+        <a href="mailto:hashes@yeah.net" title="邮件联系" aria-label="邮件联系"><i class="fa-solid fa-envelope"></i></a>
+        <a href="/atom.xml" title="Atom 订阅" aria-label="Atom 订阅"><i class="fa-solid fa-rss"></i></a>
+        <button class="theme-toggle" type="button" data-theme-toggle title="主题：跟随系统" aria-label="主题：跟随系统">
+          <i class="fa-solid fa-display" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container page-wide">
+      
+      
+<div class="main-content">
+  <article>
+    <div class="post-header">
+      <h1>看电视</h1>
+      <div class="post-meta">
+        <time>2026-11-10</time>
+         &middot; 约 2,055 字
+        <span id="busuanzi_container_page_pv" style="display: none;">
+          &middot; <span id="busuanzi_value_page_pv"></span> 次浏览
+        </span>
+        
+         &middot; 分类：
+        
+          <a href="/blog/topic/ruirui-blog/">Ruirui blog</a>
+        
+        
+        
+         &middot; 标签：
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">电视</span>
+        
+        
+      </div>
+    </div>
+
+    <div class="post-content">
+      <p>我的童年，是从一台彩色电视机开始的。</p>
+<p>很小的时候，家里先是一台老旧的黑白电视，屏幕小小的，画面灰蒙蒙一片。两三岁的我总觉得不够好看，那台旧电视只有一个旋钮，咔嗒咔嗒转动着搜台，满屏的雪花杂音是独属于旧时光的背景音。只是年岁太小，那时播放的内容我全然记不清了，真正扎根在记忆里的温暖画面，都来自后来那台崭新的彩色电视。</p>
+<p>那台彩电，是父母最辛苦的时光换来的珍宝。小时候爸妈摆摊做小吃、卖凉拌菜（上次写过），起早贪黑忙活副业，一点点攒下的收入，在我四岁左右，换回了一台崭新的彩色电视机。我至今记得那天的模样，大大的纸箱被拆开，崭新的电视机静静立在眼前，好看得让年幼的我满心欢喜。</p>
+<p>它和老旧的黑白电视截然不同，机身侧边排布着整齐的按键，还有一方可以掀开的小门，里面藏着拨杆调台的按钮，在我眼里，是无比新奇高级的设计。电视机稳稳摆在家里的写字台上，成了整个家里最亮眼的物件。爸妈格外爱惜这来之不易的大件，特意裁了柔软的灯芯绒布料，缝制了精致的电视机罩，不看的时候便细心盖好，生怕落一点灰尘。</p>
+<p>那时候看电视需要架设室外天线，爸爸在屋外装好天线接收器，总要反复调整角度，屏幕的画面才能清晰稳定。后来厂区通了闭路信号，再也不用费力摆弄天线，随时随地都能看电视，成了我们儿时莫大的欢喜。</p>
+<p>这台电视机，陪我从四岁走到十五岁，完整盛装了我的童年与少年时光。记忆里还有一段温柔又奇妙的小事，儿时一次发高烧，我昏昏沉沉坠入梦境，梦里的电视正在播放温柔的海景，沙滩上散落着细碎的贝壳，一只可爱的小哈巴狗追着我奔跑。那场温柔的梦，时隔多年，依旧清晰如初。</p>
+<p>盛夏的暑假，是属于偷偷看电视的时光。老式显像管电视开机久了，后背会烫得灼热。妈妈下班回家的第一件事，就是伸手触摸电视后盖，以此判断我有没有偷偷看电视。摸清规律的我，总会赶在妈妈回家前，拿着吹风机对着电视后盖吹风降温，小心翼翼藏起自己的小秘密。现在回想起来只觉天真又可爱，也庆幸那台结实的老电视，从未被我折腾坏。</p>
+<p>守着这台电视机，我看完了一整个时代的经典，岁岁年年，皆是欢喜。</p>
+<p>童年的动画片，是最纯粹的快乐。我最痴迷的便是《圣斗士星矢》，星矢、冰河、雅典娜鲜活明媚，一句“天马流星拳”，刻进了我的童年骨血。当时总有频道反复播放，我一集不落全程追完，这部动画深深影响了年少的我。小学一二年级选书包，我执拗地只想要印着星矢与冰河图案的款式。除此之外，能变形的机器人动画《变形金刚》让我满心惦记，只是播出时间不固定，常常错过，看得断断续续。《黑猫警长》《舒克和贝塔》是反复翻看的经典，偶尔偶遇播出的《哆啦A梦》，零零散散的片段，也足够让我开心许久。</p>
+<p>除了动画片，两部儿童剧藏着我童年最柔软的情绪。《小龙人》是我念念不忘的白月光，小小龙人身负秘密，跨越山海苦苦寻找远在雪山的妈妈。“头上有犄角，身后有尾巴，谁也不知道，我有许多秘密”，熟悉的旋律张口即来。故事里北京四合院的孩童生活，对彼时的我而言新鲜又美好，小龙人寻母的执着与心酸，总能让年幼的我看得泪流满面。还有《好爸爸坏爸爸》，朗朗上口的歌词记忆犹新，剧中孩童贪玩不写作业、被父亲责罚的画面，让小小的我看得又紧张又好笑，朴素的日常，满是人间烟火。</p>
+<p>年岁渐长，我开始跟着大人追看古装经典，一部部老剧，惊艳了整个童年。</p>
+<p>四岁左右追看的傅艺伟版1991年《封神榜》，是我心中最惊艳的经典，无可替代。那时候剧集播出极晚，常常深夜十二点才落幕，我依旧执着守在电视机前。傅艺伟饰演的妲己，是我童年认知里最美的女子，眉眼风华，无人能及。剧中的天宫殿宇、仙袂霓裳、歌舞造型，都和寻常古装剧截然不同，奇幻又雅致。杨戬三眼通神、可化万物，哪吒自肉球降生、脚踏风火轮，姜子牙运筹帷幄，申公豹狡黠阴诡，矮小灵动的土行孙，还有比干挖心、姜皇后蒙难等经典桥段，各路妖精鬼怪、天兵天将、道法仙术，为我打开了一个恢弘瑰丽的神话天地。片尾曲《独占潇洒》悠扬绵长，“愿生命化作那朵莲花，功名利禄全抛下”，儿时不解词中深意，只觉曲调清雅动人，岁岁难忘。</p>
+<p>而后热播的《新白娘子传奇》，更是让我深陷其中。白素贞神通广大、温柔善良，小青赤诚忠义、不离不弃，忠厚善良的五鬼默默相伴。她们腾云而起、化光形变，万般法术奇妙绝伦。温柔善良的许仙，执着渡妖的法海，编织出一段缠绵婉转的爱恨痴缠。剧集独有的戏曲唱腔婉转悠扬，亦古亦今，韵味悠长，是独属于那个年代的浪漫。</p>
+<p>每年暑假循环重播的《西游记》，是几代人的集体童年记忆。我很少能赶上开篇第一集，偶然一次窥见孙悟空花果称王、跨海求师的片段，便记了许多年。那时不知这部剧仅有二十集，岁岁夏天反复翻看，各路神魔妖鬼、九九八十一难，百看不厌，怎么看都觉得新鲜精彩。</p>
+<p>印象深刻的还有1995年播出的刘晓庆版《武则天》，堪称古装剧的审美巅峰。彼时四十岁的刘晓庆，依旧将少女武媚娘的灵动娇憨、帝王的雍容霸气演绎得淋漓尽致，丰润端庄的容貌，完美契合盛唐美人的风骨。整部剧集由毛戈平操刀妆造，审美雅致惊艳，李建群老师饰演的徐才人，剧中每一位女子都风姿各异、容貌倾城。一众演员皆是戏骨，李世民沉稳睿智，陈宝国饰演的李治，将帝王的隐忍、温柔与怯懦刻画得入木三分。盛唐的华服头饰、妆容气韵，恢弘完整的剧情，将大唐风华展现得淋漓尽致，时至今日，依旧是我心中无可超越的经典，是人生最珍贵的童年回忆。</p>
+<p>一台老旧的彩色电视机，静静伫立在方寸书桌之上，装下了天马流星拳的热血、小龙人的纯粹赤诚、封神神话的恢弘奇幻，装下了白娘子的柔情、西游记的浪漫恣意，也装下了盛唐风月的绝代风华。</p>
+<p>那些守在电视机前的岁岁年年，那些天真欢喜、感动落泪、偷偷窃喜的瞬间，拼成了我最温柔、最滚烫的童年。旧电视早已落幕尘封，可那些光影故事，永远留在岁月里，温暖如初。</p>
+    </div>
+
+  <div class="post-nav">
+    
+      <a class="post-nav-prev" href="/blog/2026-11-10-watch-TV.html">&larr; 看电视</a>
+    
+
+    <a class="post-nav-blog" href="/archives/">返回归档</a>
+
+    
+      <span class="post-nav-next"></span>
+    
+  </div>
+  
+
+
+
+<div class="comments-section">
+  <h3>评论</h3>
+  
+  <script>
+    (function () {
+      var giscus = document.createElement('script');
+      giscus.src = 'https://giscus.app/client.js';
+      giscus.dataset.repo = 'junxie01/junxie01.github.io';
+      giscus.dataset.repoId = 'R_kgDOSGl1Dg';
+      giscus.dataset.category = 'General';
+      giscus.dataset.categoryId = 'DIC_kwDOSGl1Ds4DAuif';
+      giscus.dataset.mapping = 'specific';
+      giscus.dataset.term = 'blog/2026-11-10-watch-TV-ruirui-version';
+      giscus.dataset.strict = '0';
+      giscus.dataset.reactionsEnabled = '1';
+      giscus.dataset.emitMetadata = '0';
+      giscus.dataset.inputPosition = 'bottom';
+      giscus.dataset.theme = document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light';
+      giscus.dataset.lang = 'zh-CN';
+      giscus.crossOrigin = 'anonymous';
+      giscus.async = true;
+      document.currentScript.parentNode.appendChild(giscus);
+
+      window.addEventListener('seisamuse-theme-change', function (event) {
+        var frame = document.querySelector('.giscus-frame');
+        if (!frame || !frame.contentWindow) return;
+        frame.contentWindow.postMessage({
+          giscus: {
+            setConfig: {
+              theme: event.detail.theme === 'dark' ? 'dark' : 'light'
+            }
+          }
+        }, 'https://giscus.app');
+      });
+    })();
+  </script>
+</div>
+</article>
+</div>
+
+      
+    </div>
+  </main>
+
+  
+
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+      startOnLoad: true,
+      securityLevel: 'strict',
+      theme: document.documentElement.dataset.theme === 'dark' ? 'dark' : 'neutral'
+    });
+  </script>
+
+  <script>
+    (function () {
+      var navigation = document.querySelector('[data-nav-links]');
+      if (!navigation) return;
+      var trigger = navigation.querySelector('summary');
+      var hoverRegion = navigation.closest('.masthead') || navigation;
+      var hover = window.matchMedia('(hover: hover) and (pointer: fine)');
+
+      navigation.addEventListener('pointerenter', function (event) {
+        if (event.pointerType === 'mouse' && hover.matches) navigation.open = true;
+      });
+      // Header padding is part of the pointer path from the trigger to the panel.
+      hoverRegion.addEventListener('pointerleave', function (event) {
+        if (event.pointerType === 'mouse' && !navigation.contains(document.activeElement)) {
+          navigation.open = false;
+        }
+      });
+      navigation.addEventListener('focusout', function (event) {
+        if (!navigation.contains(event.relatedTarget)) navigation.open = false;
+      });
+      document.addEventListener('click', function (event) {
+        if (!navigation.contains(event.target)) navigation.open = false;
+      });
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && navigation.open) {
+          navigation.open = false;
+          if (navigation.contains(document.activeElement)) trigger.focus();
+        }
+      });
+    })();
+  </script>
+
+  <script>
+    (function () {
+      var toggle = document.querySelector('[data-theme-toggle]');
+      if (!toggle) return;
+
+      var order = ['system', 'light', 'dark'];
+      var labels = {
+        system: '主题：跟随系统',
+        light: '主题：浅色',
+        dark: '主题：深色'
+      };
+      var icons = {
+        system: 'fa-display',
+        light: 'fa-sun',
+        dark: 'fa-moon'
+      };
+      var media = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+
+      function currentSetting() {
+        var setting = document.documentElement.dataset.themeSetting;
+        return order.indexOf(setting) === -1 ? 'system' : setting;
+      }
+
+      function updateButton(setting) {
+        var label = labels[setting];
+        var icon = toggle.querySelector('i');
+        toggle.title = label;
+        toggle.setAttribute('aria-label', label);
+        icon.className = 'fa-solid ' + icons[setting];
+      }
+
+      function applyTheme(setting) {
+        var systemDark = media && media.matches;
+        var theme = setting === 'system' ? (systemDark ? 'dark' : 'light') : setting;
+        document.documentElement.dataset.themeSetting = setting;
+        document.documentElement.dataset.theme = theme;
+        try {
+          if (setting === 'system') localStorage.removeItem('seisamuse-theme');
+          else localStorage.setItem('seisamuse-theme', setting);
+        } catch (error) {}
+        updateButton(setting);
+        window.dispatchEvent(new CustomEvent('seisamuse-theme-change', {
+          detail: { theme: theme }
+        }));
+      }
+
+      toggle.addEventListener('click', function () {
+        var setting = currentSetting();
+        applyTheme(order[(order.indexOf(setting) + 1) % order.length]);
+      });
+
+      if (media) {
+        media.addEventListener('change', function () {
+          if (currentSetting() === 'system') applyTheme('system');
+        });
+      }
+
+      updateButton(currentSetting());
+    })();
+  </script>
+
+</body>
+</html>
