@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    (function () {
+      var stored = null;
+      try {
+        stored = localStorage.getItem('seisamuse-theme');
+      } catch (error) {}
+
+      var setting = stored === 'light' || stored === 'dark' ? stored : 'system';
+      var systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = setting === 'system' ? (systemDark ? 'dark' : 'light') : setting;
+      document.documentElement.dataset.theme = theme;
+      document.documentElement.dataset.themeSetting = setting;
+    })();
+  </script>
+  <title>风骚律师S02E05 | hashes</title>
+  <meta name="description" content="风骚律师S02E05">
+  <link rel="alternate" type="application/atom+xml" title="Atom 订阅" href="/atom.xml">
+  <link rel="prefetch" as="image" href="https://www.blogsclub.org/badge/www.seis-jun.xyz">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+  <!-- MathJax for LaTeX rendering -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        ignoreHtmlClass: 'mermaid'
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <!-- Umami Analytics -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="21a99622-5a23-45f4-be80-edef627a68e3"></script>
+  <!-- Explicit page paths preserve article counts across browser referrer policies. -->
+  <script defer src="/scripts/article_counter_20261028.js?v=2" data-counter-endpoint="https://stats.seis-jun.xyz/count"></script>
+  <script defer src="/scripts/random_post_20261028.js"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container masthead">
+      <a class="masthead-identity" href="/" aria-label="SEISAMUSE 主页">
+        <img src="/images/seisamuse.png" alt="" class="masthead-avatar">
+        <span class="masthead-title">SEISAMUSE</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="主导航">
+        <a href="/">主页</a>
+        <a href="/archives/">归档</a>
+        <a href="/thoughts/">想法</a>
+        <a href="/about/">自述</a>
+        <a href="/archives/" id="random-post-link" title="随机打开一篇文章">随读</a>
+        <details class="nav-links" data-nav-links>
+          <summary class="nav-links-toggle" aria-controls="nav-links-panel">
+            链接
+            <svg viewBox="0 0 12 12" fill="none" aria-hidden="true" focusable="false"><path d="m3 4.5 3 3 3-3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <div class="nav-links-panel" id="nav-links-panel">
+            <div class="nav-links-projects">
+              <p class="nav-links-label">项目</p>
+              <ul class="nav-project-list">
+                
+                <li><a href="https://www.seis-jun.xyz/daily_news/" target="_blank" rel="noopener">Daily News</a></li>
+                
+                <li><a href="https://rss.seis-jun.xyz/" target="_blank" rel="noopener">RSS Reader</a></li>
+                
+                <li><a href="https://www.seis-jun.xyz/paper_weekly/" target="_blank" rel="noopener">Paper Weekly</a></li>
+                
+                <li><a href="https://www.seis-jun.xyz/earthquake_weekly/" target="_blank" rel="noopener">Earthquake Weekly</a></li>
+                
+                <li><a href="https://paper-hot.seis-jun.xyz/" target="_blank" rel="noopener">Paper Hot</a></li>
+                
+                <li><a href="https://www.seis-jun.xyz/swed/" target="_blank" rel="noopener">SWED</a></li>
+                
+              </ul>
+            </div>
+            <div class="nav-links-categories">
+              <p class="nav-links-label">收藏与分享</p>
+              
+              <a href="/links/tools/">
+                <span>工具</span>
+                <small>实用工具与脚本</small>
+              </a>
+              
+              <a href="/links/">
+                <span>资源</span>
+                <small>研究与阅读入口</small>
+              </a>
+              
+              <a href="/links/friends/">
+                <span>友链</span>
+                <small>喜欢的博客与网站</small>
+              </a>
+              
+            </div>
+          </div>
+        </details>
+        <a class="masthead-search-shortcut" href="/search/" aria-label="搜索文章" title="搜索文章">
+          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false"><circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="1.5"/><path d="m13 13 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </a>
+      </nav>
+
+      <div class="masthead-actions" aria-label="快捷入口">
+        <form class="masthead-search" action="/search/" method="get">
+          <input type="search" name="q" placeholder="搜索文章" aria-label="搜索文章">
+        </form>
+        <a href="mailto:hashes@yeah.net" title="邮件联系" aria-label="邮件联系"><i class="fa-solid fa-envelope"></i></a>
+        <a href="/atom.xml" title="Atom 订阅" aria-label="Atom 订阅"><i class="fa-solid fa-rss"></i></a>
+        <button class="theme-toggle" type="button" data-theme-toggle title="主题：跟随系统" aria-label="主题：跟随系统">
+          <i class="fa-solid fa-display" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container page-wide">
+      
+      
+<div class="main-content">
+  <article>
+    <div class="post-header">
+      <h1>风骚律师S02E05</h1>
+      <div class="post-meta">
+        <time>2026-11-14</time>
+         &middot; 约 1,447 字
+        <span id="busuanzi_container_page_pv" style="display: none;">
+          &middot; <span id="busuanzi_value_page_pv"></span> 次浏览
+        </span>
+        
+         &middot; 分类：
+        
+          <a href="/blog/topic/随笔/">随笔</a>
+        
+        
+        
+         &middot; 标签：
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">Jimmy</span>
+        
+        
+      </div>
+    </div>
+
+    <div class="post-content">
+      <p>这一集节奏慢起来了，讲Jimmy的稍微少一些啊。</p>
+<p>但好多黑暗的背景，不知道是咋回事，难道阿梅利卡的电费比咱们贵吗？Chuck过去的家，HHM档案室晚上都那么黑。是为了显得很压抑吗？</p>
+<p>开头是Chuck换灯泡。搞得我还以为Chuck已经恢复了，我还想着果然，只要Jimmy难过，Chuck就舒服到病都好了。结果是这种插叙，或者叫回忆。搞得我自作多情了。电视剧都爱这种回忆，动画片也是，似乎不回忆一下都不足以让人搞清楚前因后果后果，这叫不留白。有时也不是那么好，打乱观影节奏。但这种时间上的切割也算是一种表达方式，好像也行。做到极致就成诺兰了。大家加油啊。</p>
+<p>原来Chuck是有老婆的，不对，是有过。请Jimmy来吃饭，Chuck给老婆事先说好这个弟弟是有点问题，到时候看我的暗号，咱们即刻就送客。结果人家一来，几句恭维、几个笑话气愤一下子就活跃了气氛，把Chuck老婆逗得哈哈笑，早都忘了什么暗号了。那是人家Jimmy的本事啊，Chuck只能干瞪眼。晚上在床上还学Jimmy冷不丁给老婆讲一个笑话，老婆猝不及防，画面一下拉开，好冷。</p>
+<p>Jimmy自从擅自行动制造麻烦就被Cliff安排了一个贴身秘书，baby sitter，一丝不苟，连夜就要Jimmy改文档格式，这简直是Boss附身啊。Slipping Jimmy这么可能服帖，马上借口悄悄就溜掉了。</p>
+<p>又来找咱们深夜还在加班的工作狂Kim，后者不生闷气只专心整理档案。Jimmy还是心好，替Kim出了个馊主意，我们来状告HHM公司说虐待你。Kim说我谢谢你大爷。这样告公司，以后这个行业还要不要混了。我自己的事我自己管，你别瞎操心。Jimmy灰溜溜。</p>
+<p>接下来有一段似乎是欢快的墨西哥歌曲做背景，蒙太奇得描绘Kim千方百计联系自己所有人脉给HHM招揽生意，一点都看不到她的难过，只看到了牛马的积极向上的工作态度。太励志了啊。但怎么让我觉得有点像是银行职员拉客户提成、提薪、提职呢？功夫不负苦心人，终于拉到一个银行大单。在停车场那叫声真的来劲。替她感到高兴啊。</p>
+<p>面见客户，Hamlin开始就来个大的恭维啊，我7岁开的第一个账户就是你们银行的。对方总裁说，是啊我老爸开公司开的好啊。编剧是在夹带私货吗？我看到的是家族企业，是阶层流动停滞。但是人家几代的努力如果抵不上你寒窗苦读，那几代人努力个毛啊。我想其实没有矛盾，麻烦就是形成了家族企业是否会对社会资源进行垄断啊。</p>
+<p>生意谈得很好，Hamlin对Kim说，这单交给小王吧，你继续整理档案。小Kim那个气啊，哦，不是我看到Kim气。导演没给Kim生气的镜头，只拉到了风中使劲摇曳的HHM旗帜，俯瞰的镜头，表明咱们Kim心动了啊。不是爱上谁，是想海扁人。</p>
+<p>晚上Hamlin就来找Chuck喝酒庆祝有大单生意。告诉Chuck这是Kim拿到的单子，但不准备让Kim官复原职，Chuck就哦了一声，感觉他对Kim其实根本不上心。凌晨，Chuck到HHM公司上班了，结果碰到还没下班的工作狂人Kim，让后者泡两杯咖啡聊聊。Kim问我在HHM还有没有前途。Chuck相理都不理，给人聊起了Jimmy。说Jimmy这个人就是不容悔改，身边人都得提他擦屁股，我都擦了无数次了，现在是你和Hamlin。然后还讲他老爸的故事，讲Jimmy小时候偷家里的钱，讲老爸生意黄了没多久就死了，Jimmy哭得最厉害。暗示Jimmy内心愧疚对不起老爸，意思就是肯定钱就是Jimmy偷的啊。编剧这里埋一个小伏笔，我估计后期肯定会闪回，说钱并不是Jimmy偷的，或者另有隐情。</p>
+<p>但Kim管你这那的，简直牛头不对马嘴。聊到最后Chuck起身自己去倒咖啡，<del>不是刚刚还说怕机器不敢去弄吗？</del>，告诉Kim说会在Hamlin那里美言几句。这简直纯纯的场面话，之前也从来不把Kim的事放心上啊。他会给Hamlin说Kim好话才有鬼嘞。</p>
+<p>这一集Mike依然爱乖孙女，自己熊猫眼怕让孙女见到害怕担心，就不见了。但最后终于惹上了犯罪团伙啊，代表就是Tuco的叔叔。那个在老白帮助下终结了炸鸡叔的狠角色。人家也把Mike大爷调查清楚了，提出了大家都好的解决办法。让Mike大爷承认枪是自己的，Tuco就能免去数年的牢狱之灾。Mike是退休老警察也不会因为带枪而待罪，最后老爷子还会提着Tuco耳朵来给Mike大爷认错，Mike大爷还可以拿到5000刀礼钱。Mike大爷不置可否。老爷子离席，没喝点的咖啡但还是付了钱，看样子也是个一丝不苟的狠角色。<del>废话，要不然怎么当老大的。</del></p>
+<p>至于Mike大爷如何摆脱Tuco家族，就听下回分解了啊。</p>
+    </div>
+
+  <div class="post-nav">
+    
+      <a class="post-nav-prev" href="/blog/2026-11-14-everything-is-ok-but-the-process.html">&larr; 上面的本意是好的，只是下面的人执行坏了</a>
+    
+
+    <a class="post-nav-blog" href="/archives/">返回归档</a>
+
+    
+      <span class="post-nav-next"></span>
+    
+  </div>
+  
+
+
+
+<div class="comments-section">
+  
+  <h3>评论</h3>
+  
+  
+  <script>
+    (function () {
+      var giscus = document.createElement('script');
+      giscus.src = 'https://giscus.app/client.js';
+      giscus.dataset.repo = 'junxie01/junxie01.github.io';
+      giscus.dataset.repoId = 'R_kgDOSGl1Dg';
+      giscus.dataset.category = 'General';
+      giscus.dataset.categoryId = 'DIC_kwDOSGl1Ds4DAuif';
+      giscus.dataset.mapping = 'specific';
+      giscus.dataset.term = 'blog/2026-11-14-better-call-saul-s02e05';
+      giscus.dataset.strict = '0';
+      giscus.dataset.reactionsEnabled = '1';
+      giscus.dataset.emitMetadata = '0';
+      giscus.dataset.inputPosition = 'bottom';
+      giscus.dataset.theme = document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light';
+      giscus.dataset.lang = 'zh-CN';
+      giscus.crossOrigin = 'anonymous';
+      giscus.async = true;
+      document.currentScript.parentNode.appendChild(giscus);
+
+      window.addEventListener('seisamuse-theme-change', function (event) {
+        var frame = document.querySelector('.giscus-frame');
+        if (!frame || !frame.contentWindow) return;
+        frame.contentWindow.postMessage({
+          giscus: {
+            setConfig: {
+              theme: event.detail.theme === 'dark' ? 'dark' : 'light'
+            }
+          }
+        }, 'https://giscus.app');
+      });
+    })();
+  </script>
+</div>
+</article>
+</div>
+
+      
+    </div>
+  </main>
+
+  
+
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+      startOnLoad: true,
+      securityLevel: 'strict',
+      theme: document.documentElement.dataset.theme === 'dark' ? 'dark' : 'neutral'
+    });
+  </script>
+
+  <script>
+    (function () {
+      var navigation = document.querySelector('[data-nav-links]');
+      if (!navigation) return;
+      var trigger = navigation.querySelector('summary');
+      var hoverRegion = navigation.closest('.masthead') || navigation;
+      var hover = window.matchMedia('(hover: hover) and (pointer: fine)');
+
+      navigation.addEventListener('pointerenter', function (event) {
+        if (event.pointerType === 'mouse' && hover.matches) navigation.open = true;
+      });
+      // Header padding is part of the pointer path from the trigger to the panel.
+      hoverRegion.addEventListener('pointerleave', function (event) {
+        if (event.pointerType === 'mouse' && !navigation.contains(document.activeElement)) {
+          navigation.open = false;
+        }
+      });
+      navigation.addEventListener('focusout', function (event) {
+        if (!navigation.contains(event.relatedTarget)) navigation.open = false;
+      });
+      document.addEventListener('click', function (event) {
+        if (!navigation.contains(event.target)) navigation.open = false;
+      });
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && navigation.open) {
+          navigation.open = false;
+          if (navigation.contains(document.activeElement)) trigger.focus();
+        }
+      });
+    })();
+  </script>
+
+  <script>
+    (function () {
+      var toggle = document.querySelector('[data-theme-toggle]');
+      if (!toggle) return;
+
+      var order = ['system', 'light', 'dark'];
+      var labels = {
+        system: '主题：跟随系统',
+        light: '主题：浅色',
+        dark: '主题：深色'
+      };
+      var icons = {
+        system: 'fa-display',
+        light: 'fa-sun',
+        dark: 'fa-moon'
+      };
+      var media = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+
+      function currentSetting() {
+        var setting = document.documentElement.dataset.themeSetting;
+        return order.indexOf(setting) === -1 ? 'system' : setting;
+      }
+
+      function updateButton(setting) {
+        var label = labels[setting];
+        var icon = toggle.querySelector('i');
+        toggle.title = label;
+        toggle.setAttribute('aria-label', label);
+        icon.className = 'fa-solid ' + icons[setting];
+      }
+
+      function applyTheme(setting) {
+        var systemDark = media && media.matches;
+        var theme = setting === 'system' ? (systemDark ? 'dark' : 'light') : setting;
+        document.documentElement.dataset.themeSetting = setting;
+        document.documentElement.dataset.theme = theme;
+        try {
+          if (setting === 'system') localStorage.removeItem('seisamuse-theme');
+          else localStorage.setItem('seisamuse-theme', setting);
+        } catch (error) {}
+        updateButton(setting);
+        window.dispatchEvent(new CustomEvent('seisamuse-theme-change', {
+          detail: { theme: theme }
+        }));
+      }
+
+      toggle.addEventListener('click', function () {
+        var setting = currentSetting();
+        applyTheme(order[(order.indexOf(setting) + 1) % order.length]);
+      });
+
+      if (media) {
+        media.addEventListener('change', function () {
+          if (currentSetting() === 'system') applyTheme('system');
+        });
+      }
+
+      updateButton(currentSetting());
+    })();
+  </script>
+
+</body>
+</html>
