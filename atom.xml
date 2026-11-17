@@ -3,11 +3,133 @@
   <title>SEISAMUSE</title>
   <link href="https://www.seis-jun.xyz/atom.xml" rel="self" />
   <link href="https://www.seis-jun.xyz" />
-  <updated>2026-11-17T18:22:30+08:00</updated>
+  <updated>2026-11-17T20:08:26+08:00</updated>
   <id>https://www.seis-jun.xyz/</id>
   <author>
     <name>hashes</name>
   </author>
+  
+  <entry>
+    <title>购物清单</title>
+    <link href="https://www.seis-jun.xyz/blog/2026-11-17-shopping-list.html" />
+    <id>https://www.seis-jun.xyz/blog/2026-11-17-shopping-list.html</id>
+    <updated>2026-11-17T20:08:26+08:00</updated>
+    <published>2026-11-17T20:08:26+08:00</published>
+    <summary type="html"><p>六岁： 十岁： 十五岁： 十八岁： 二十三岁： 二十四岁： 二十五岁： 二十六岁： 二十七岁： 三十七岁： 四十二岁： 四十五岁： 五十五岁： 五十八岁： 五十九岁： 六十岁： 六十一岁： 六十二岁： 六十八岁：</p></summary>
+    <content type="html"><![CDATA[<p>六岁：</p>
+<div class="highlight"><pre><span></span><code>一颗糖
+一个玩具
+</code></pre></div>
+
+<p>十岁：</p>
+<div class="highlight"><pre><span></span><code>一本书皮
+一盒水彩笔
+一个小熊橡皮擦
+一个修正液
+三本草稿本
+一支勾线笔
+</code></pre></div>
+
+<p>十五岁：</p>
+<div class="highlight"><pre><span></span><code>一个书包
+一套衣服
+一套课外阅读
+</code></pre></div>
+
+<p>十八岁：</p>
+<div class="highlight"><pre><span></span><code>一床被子
+一套洗漱永平
+三套衣服
+一台笔记本
+</code></pre></div>
+
+<p>二十三岁：</p>
+<div class="highlight"><pre><span></span><code>一床被子
+一套西装
+一个电饭煲
+一张电影票
+</code></pre></div>
+
+<p>二十四岁：</p>
+<div class="highlight"><pre><span></span><code>两张电影票
+两个雪糕
+一束花
+</code></pre></div>
+
+<p>二十五岁：</p>
+<div class="highlight"><pre><span></span><code>一枚戒指
+一床被子
+</code></pre></div>
+
+<p>二十六岁：</p>
+<div class="highlight"><pre><span></span><code>若干蔬菜
+若干水果
+两张电影票
+</code></pre></div>
+
+<p>二十七岁：</p>
+<div class="highlight"><pre><span></span><code>一个奶瓶
+一个温奶器
+三套宝宝衣服
+两床宝宝被子
+一箱奶粉
+</code></pre></div>
+
+<p>三十七岁：</p>
+<div class="highlight"><pre><span></span><code>一本书皮
+一盒水彩笔
+一个小熊橡皮擦
+一个修正液
+三本草稿本
+一支勾线笔
+</code></pre></div>
+
+<p>四十二岁：</p>
+<div class="highlight"><pre><span></span><code>一个书包
+一套衣服
+一套课外阅读
+一瓶药
+</code></pre></div>
+
+<p>四十五岁：</p>
+<div class="highlight"><pre><span></span><code>若干蔬菜
+若干水果
+两瓶药
+</code></pre></div>
+
+<p>五十五岁：</p>
+<div class="highlight"><pre><span></span><code>若干药品
+</code></pre></div>
+
+<p>五十八岁：</p>
+<div class="highlight"><pre><span></span><code>一个相框
+</code></pre></div>
+
+<p>五十九岁：</p>
+<div class="highlight"><pre><span></span><code>一张电影票
+</code></pre></div>
+
+<p>六十岁：</p>
+<div class="highlight"><pre><span></span><code>一张电影票
+</code></pre></div>
+
+<p>六十一岁：</p>
+<div class="highlight"><pre><span></span><code>一颗糖
+一个玩具
+</code></pre></div>
+
+<p>六十二岁：</p>
+<div class="highlight"><pre><span></span><code>一颗糖
+一个玩具
+</code></pre></div>
+
+<p>六十八岁：</p>
+<div class="highlight"><pre><span></span><code>一束花
+</code></pre></div>]]></content>
+    
+    <category term="购物清单" />
+    
+  </entry>
   
   <entry>
     <title>失物招领</title>
@@ -1909,33 +2031,6 @@ curl<span class="w"> </span>--max-time<span class="w"> </span><span class="m">15
 <p>不一定，科学也只是我们认识真相的工具，我们构建了大量的模型来认识世界，但模型不是实体，解释也不等于真相。但科学有可检验的判断，允许质疑，可以验证，这就够了啊。科学精神不仅敢于怀疑自己不相信的东西，还敢于怀疑自己非常相信的东西。科学能够帮助我们判断哪种解释更可靠，但科学方法本身并不保证每次判断都正确。</p>]]></content>
     
     <category term="医学" />
-    
-  </entry>
-  
-  <entry>
-    <title>会飞的汽车</title>
-    <link href="https://www.seis-jun.xyz/blog/2026-10-18-roadster.html" />
-    <id>https://www.seis-jun.xyz/blog/2026-10-18-roadster.html</id>
-    <updated>2026-10-18T15:31:05+08:00</updated>
-    <published>2026-10-18T15:31:05+08:00</published>
-    <summary type="html"><p>前两天，老马带着他会飞的汽车出来秀场了。 我不知道世界上其他人有没有被震撼到，反正我有。昨天不是和AI聊故地重游之感吗？看到会飞的汽车让我回到了小时候看各种科幻电影里面的飞车情形。 印象最深的是《第五元素》。也曾幻想在空中开着飞车时，一个漂亮妹子从天而降，落到自己的后座。 然后看到马斯克的飞车，突然心头一震，真的实现了...</p></summary>
-    <content type="html"><![CDATA[<p><img alt="" src="https://images.unsplash.com/photo-1598558543997-cd2a5d01c559?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=NHwxMjA3fDA%3D" /></p>
-<p>前两天，老马带着他会飞的汽车出来秀场了。</p>
-<p>我不知道世界上其他人有没有被震撼到，反正我有。昨天不是和AI聊故地重游之感吗？看到会飞的汽车让我回到了小时候看各种科幻电影里面的飞车情形。</p>
-<p>印象最深的是《第五元素》。也曾幻想在空中开着飞车时，一个漂亮妹子从天而降，落到自己的后座。</p>
-<p>然后看到马斯克的飞车，突然心头一震，真的实现了啊。小时课本说未来电脑会非常厉害，电话可以通话也可以同时看到对方，到今天手机和AI的出现也没有像会飞的车那么具体，有那么强的冲击。</p>
-<p>最震撼的有两点。一个就是遇到障碍物，直接就起飞了。另一个就是它居然可以吸附在墙上，“反重力”这几个字差点从我嘴里跑出来。一秒内100千米加速倒是没啥，我记得以前见过把火箭加速器放到车上，跑得超快但很容易死人的视频。</p>
-<p>我以为要开卖了。搜了一下价格，有人说是20万美元起步。这下感动和震撼被治好了，短期内我也就只好看热闹了。</p>
-<p>所以老马又出来秀肌肉了啊。骗钱估计是铁定能骗不少了。但人家骗钱是拿真家伙啊，不是拿PPT出来骗啊。<del>有些人做科研就是用PPT骗人啊。</del>有些人PPT做的好，演讲富有感情，自信，那就容易骗到甲方。所以，你根本就没有必要把“产品”做得多好，只需要PPT够精美，演讲人够帅，够劲，够可信就行了。</p>
-<p>老马搞这么一出，乙方还怎么活啊？到时候要去甲方那里讨钱的时候，甲方爸爸说，ppt is cheap, show me the product。这不就露馅了。给大伙儿上强度了啊。以前还是talk is cheap, show me the picture，现在看谁还敢只拿PPT出来说事。</p>
-<p>然后又稍微查了查它，名字叫Roadster。有点搞笑啊。因为ster虽然有点像steer，操控的缩写，但更正经的像是sister缩写。所以应该翻译为“马路飞姐”吗？</p>
-<p>而且它的飞，不是真的飞，是把压缩空气喷出来提供动力。那它的续航能有多久啊？不会就仅仅是视频里面那飞跃几两挡路的车的时间吧。那想买飞车的人恐怕高兴太早了啊。这辆车买回来，连早高峰帮你飞过前路上堵车的力气恐怕都没有啊。</p>
-<p>知乎上一水的骂，似乎是喷老马吹过头了啊，此外好像也没有怎么骗到甲方啊，他们的钱包捂得挺紧，老马公司的股价似乎没有迎来想象中的大涨啊。</p>
-<p>老马这车究竟是不是画饼，我也不知道。不过以前人家拿PPT吹牛，现在直接把车弄到天上去吹了。那这到底算产品，还是一张会飞的PPT啊？<del>但哪个乙方又不骗人呢？只看谁的骗术高啊。</del></p>]]></content>
-    
-    <category term="Roadster" />
-    
-    <category term="Musk" />
     
   </entry>
   
