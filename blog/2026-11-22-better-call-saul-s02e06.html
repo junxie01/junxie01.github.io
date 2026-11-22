@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    (function () {
+      var stored = null;
+      try {
+        stored = localStorage.getItem('seisamuse-theme');
+      } catch (error) {}
+
+      var setting = stored === 'light' || stored === 'dark' ? stored : 'system';
+      var systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = setting === 'system' ? (systemDark ? 'dark' : 'light') : setting;
+      document.documentElement.dataset.theme = theme;
+      document.documentElement.dataset.themeSetting = setting;
+    })();
+  </script>
+  <title>风骚律师s02e06 | hashes</title>
+  <meta name="description" content="风骚律师s02e06">
+  <link rel="alternate" type="application/atom+xml" title="Atom 订阅" href="/atom.xml">
+  <link rel="prefetch" as="image" href="https://www.blogsclub.org/badge/www.seis-jun.xyz">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+  <!-- MathJax for LaTeX rendering -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        ignoreHtmlClass: 'mermaid'
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <!-- Umami Analytics -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="21a99622-5a23-45f4-be80-edef627a68e3"></script>
+  <!-- Explicit page paths preserve article counts across browser referrer policies. -->
+  <script defer src="/scripts/article_counter_20261028.js?v=2" data-counter-endpoint="https://stats.seis-jun.xyz/count"></script>
+  <script defer src="/scripts/random_post_20261028.js"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container masthead">
+      <a class="masthead-identity" href="/" aria-label="SEISAMUSE 主页">
+        <img src="/images/seisamuse.png" alt="" class="masthead-avatar">
+        <span class="masthead-title">SEISAMUSE</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="主导航">
+        <a href="/">主页</a>
+        <a href="/archives/">归档</a>
+        <a href="/thoughts/">想法</a>
+        <a href="/about/">自述</a>
+        <a href="/archives/" id="random-post-link" title="随机打开一篇文章">随读</a>
+        <details class="nav-links" data-nav-links>
+          <summary class="nav-links-toggle" aria-controls="nav-links-panel">
+            链接
+            <svg viewBox="0 0 12 12" fill="none" aria-hidden="true" focusable="false"><path d="m3 4.5 3 3 3-3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <div class="nav-links-panel" id="nav-links-panel">
+            <div class="nav-links-projects">
+              <p class="nav-links-label">项目</p>
+              <ul class="nav-project-list">
+                
+                <li><a href="https://www.seis-jun.xyz/daily_news/" target="_blank" rel="noopener">Daily News</a></li>
+                
+                <li><a href="https://rss.seis-jun.xyz/" target="_blank" rel="noopener">RSS Reader</a></li>
+                
+                <li><a href="https://www.seis-jun.xyz/paper_weekly/" target="_blank" rel="noopener">Paper Weekly</a></li>
+                
+                <li><a href="https://www.seis-jun.xyz/earthquake_weekly/" target="_blank" rel="noopener">Earthquake Weekly</a></li>
+                
+                <li><a href="https://paper-hot.seis-jun.xyz/" target="_blank" rel="noopener">Paper Hot</a></li>
+                
+                <li><a href="https://www.seis-jun.xyz/swed/" target="_blank" rel="noopener">SWED</a></li>
+                
+              </ul>
+            </div>
+            <div class="nav-links-categories">
+              <p class="nav-links-label">收藏与分享</p>
+              
+              <a href="/links/tools/">
+                <span>工具</span>
+                <small>实用工具与脚本</small>
+              </a>
+              
+              <a href="/links/">
+                <span>资源</span>
+                <small>研究与阅读入口</small>
+              </a>
+              
+              <a href="/links/friends/">
+                <span>友链</span>
+                <small>喜欢的博客与网站</small>
+              </a>
+              
+            </div>
+          </div>
+        </details>
+        <a class="masthead-search-shortcut" href="/search/" aria-label="搜索文章" title="搜索文章">
+          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false"><circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="1.5"/><path d="m13 13 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </a>
+      </nav>
+
+      <div class="masthead-actions" aria-label="快捷入口">
+        <form class="masthead-search" action="/search/" method="get">
+          <input type="search" name="q" placeholder="搜索文章" aria-label="搜索文章">
+        </form>
+        <a href="mailto:hashes@yeah.net" title="邮件联系" aria-label="邮件联系"><i class="fa-solid fa-envelope"></i></a>
+        <a href="/atom.xml" title="Atom 订阅" aria-label="Atom 订阅"><i class="fa-solid fa-rss"></i></a>
+        <button class="theme-toggle" type="button" data-theme-toggle title="主题：跟随系统" aria-label="主题：跟随系统">
+          <i class="fa-solid fa-display" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container page-wide">
+      
+      
+<div class="main-content">
+  <article>
+    <div class="post-header">
+      <h1>风骚律师s02e06</h1>
+      <div class="post-meta">
+        <time>2026-11-22</time>
+         &middot; 约 1,429 字
+        <span id="busuanzi_container_page_pv" style="display: none;">
+          &middot; <span id="busuanzi_value_page_pv"></span> 次浏览
+        </span>
+        
+         &middot; 分类：
+        
+          <a href="/blog/topic/影评/">影评</a>
+        
+        
+        
+         &middot; 标签：
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">风骚律师</span>
+        
+        
+      </div>
+    </div>
+
+    <div class="post-content">
+      <p>这次按三个角色分别讲，不按顺序了。</p>
+<h3 id="jimmy">Jimmy</h3>
+<p>他公司给租的大house软软舒适大床上大半夜睡不着，起来看电视。频道调来调去，最后居然看到公司老掉牙的广告在半夜播放，给鬼看的吗？真气啊。那也没办法，拿装饰小球球玩高尔夫，篮球吧，玩了半天更没有睡意。然后打包到美甲店，自己窄窄的多功能小间，拖出沙发床稳稳睡得香。</p>
+<p>大早起来美甲店老板差点撞到Jimmy春光，帮Jimmy打咖啡还蛮有情有义。话说Kim送的咖啡杯是随身携带的吗？回到车上，讨厌的杯槽，还是放不进杯子。又在铺垫咱们的Jimmy真是与D&amp;M格格不入啊。</p>
+<p>回到公司，又被小保姆折腾啊，念一句让Jimmy对应找一个材料，不苟言笑，这是在当档案员了吗？接到Kim的电话，那真是开心啊。更别提和Kim又一起搭档行骗，大获成功，又在同一张床上起来。</p>
+<p>恭喜玩Kim回到车上，去tmd，杯子还是不放不进杯槽。我的地盘我做主，放不进去是吧，那你就滚一边去吧。只见Jimmy从后备箱拿出套筒扳手，三下五除二卸下了杯槽，这下辈子终于能放好了，世界安静了啊。</p>
+<h3 id="kim">Kim</h3>
+<p>憋屈的Kim，略微气愤娇羞的等着Jimmy的电话，在留言应答中等Jimmy骚气歌一曲才开开心心上班去。</p>
+<p>板着脸的Hamlin找来，原来是要谈上宗Kim要来的生意。然后是一分钟左右两人肩并肩往会议室走，脸都硬的像石头。Kim说，要是Chuck来给你说什么，我要你明白都不是我让他说的。Hamlin无话，临近到会议室，一副笑脸突然显现，就像是带上面具。随后，Kim也来一个变脸。</p>
+<p>在法庭，Kim一个人应战Sandpiper请的S&amp;C律师事务所两个资深律师。据理力争，虽败犹荣的Kim被Schweikart请吃饭。后者惜才，投来了橄榄枝。Kim显示开心，然后也有些犹豫，毕竟HHM公司对自己不薄，连学费都是他们出，还收留她十年。然而，在HHM确实看不到出路啊。Hamlin似乎不喜欢她，Chuck只口嗨，也没见帮过她。Schweikart很大方说，你来就给你合伙人待遇，你的学费我们帮你还。Kim说考虑一下，对方说，你慢慢考虑，等得。</p>
+<p>Kim回到单位又受气，于是跑去了宾馆。正在犹豫要不要打电话给Schweikart，这时收到了一个油腻男的请酒。后者才刚刚送走了美女，不知是小三还是老婆。油腻男搭讪了过来，Kim真心烦，顺势爆出了上次和Jimmy行骗时取的假名。然后就是多巴胺的召唤啊，电话摇来了”哥哥“Jimmy。</p>
+<p>两人顺利行骗得来一万刀支票，然后早上在Kim的出租小间里起床。Jimmy说我有路子帮你取出来，Kim说，我还是当做纪念吧。</p>
+<h3 id="mike">Mike</h3>
+<p>惹上了黑帮大佬Hector真麻烦，这不一回家就有黑帮小老弟蹲门口带话说，拿那五千刀，要不然有你好受。Mike大爷非是不听，气场也足，光天化日小弟怎敢造次。</p>
+<p>Mike大爷心细啊，知道他们不会善罢甘休，于是用复写纸、墨和入门垫在门口做了个小机关。晚上就派上用场，回到家门口，Mike揭开垫子一看，两双鞋印。他小心翼翼进屋，摸出手枪寻人。毕竟那是自己家，肯定比来人熟悉，锚定来人位置，他躲门后打开了电视。来人悄悄踱出门，三两下枪托爆头，两毛贼双双躺倒。</p>
+<p>你们来做甚？Mike夺了手枪，低声缓缓质问。我们是来吓唬你的。那你们得使更大点劲。按理来说，持枪入室，Mike毙了他们啥事都没有。他却放了二人，看样子还是不想把事闹大啊。</p>
+<p>Mike缓缓走到水池边洗手上毛贼的血，谁知手突然不住颤抖起来，不知是刚刚用力过度还是真的老了。他立马握住，似乎想掩盖这力不从心。</p>
+<p>在宾馆泳池边，陪着游泳的孙女玩，暂时忘却了烦恼。但一抬头，黑帮两兄弟在屋顶远远死盯着爷孙俩，手还比划着朝二人开枪。意思是，你我们惹不起，但搞死你孙女真是手拿把掐。</p>
+<p>得要出手了，Mike咬紧牙关。</p>
+<p>晚上只身来到了Hector处谈判。这让我想起只身犯险，勇闯黑帮的老白啊。Nacho上来搜身，明晃晃的手枪理都不理。人家Hector在意的只是有没有窃听器。大佬发话了，你去给我告诉警察，那枪是你的。</p>
+<p>Mike说，我是来谈钱的。</p>
+<p>晚了，你有什么资格。当初五千块你不拿，现在你就不怕你儿媳妇和孙女殒命了？</p>
+<p>Mike冷冷说，我要五万块。</p>
+<p>Hector笑了，说道，看，我就说这家伙果然有种。行，五万块给你，手枪是你的。咱们两清。</p>
+<p>会后，Nacho请缨来送五万刀。</p>
+<p>该死的巨tm讲原则的Mike大爷掏出其中的二万五递给Nacho冷冷说道，我没给你办好，还你一半。</p>
+<p>不过今后你的麻烦又回来了。</p>
+<p>不知麻烦怎么来，细听下回分解。</p>
+    </div>
+
+  <div class="post-nav">
+    
+      <a class="post-nav-prev" href="/blog/2026-11-22-levels-and-social-class.html">&larr; 一二三乘三</a>
+    
+
+    <a class="post-nav-blog" href="/archives/">返回归档</a>
+
+    
+      <span class="post-nav-next"></span>
+    
+  </div>
+  
+
+
+
+<div class="comments-section">
+  
+  <h3>评论</h3>
+  
+  
+  <script>
+    (function () {
+      var giscus = document.createElement('script');
+      giscus.src = 'https://giscus.app/client.js';
+      giscus.dataset.repo = 'junxie01/junxie01.github.io';
+      giscus.dataset.repoId = 'R_kgDOSGl1Dg';
+      giscus.dataset.category = 'General';
+      giscus.dataset.categoryId = 'DIC_kwDOSGl1Ds4DAuif';
+      giscus.dataset.mapping = 'specific';
+      giscus.dataset.term = 'blog/2026-11-22-better-call-saul-s02e06';
+      giscus.dataset.strict = '0';
+      giscus.dataset.reactionsEnabled = '1';
+      giscus.dataset.emitMetadata = '0';
+      giscus.dataset.inputPosition = 'bottom';
+      giscus.dataset.theme = document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light';
+      giscus.dataset.lang = 'zh-CN';
+      giscus.crossOrigin = 'anonymous';
+      giscus.async = true;
+      document.currentScript.parentNode.appendChild(giscus);
+
+      window.addEventListener('seisamuse-theme-change', function (event) {
+        var frame = document.querySelector('.giscus-frame');
+        if (!frame || !frame.contentWindow) return;
+        frame.contentWindow.postMessage({
+          giscus: {
+            setConfig: {
+              theme: event.detail.theme === 'dark' ? 'dark' : 'light'
+            }
+          }
+        }, 'https://giscus.app');
+      });
+    })();
+  </script>
+</div>
+</article>
+</div>
+
+      
+    </div>
+  </main>
+
+  
+
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+      startOnLoad: true,
+      securityLevel: 'strict',
+      theme: document.documentElement.dataset.theme === 'dark' ? 'dark' : 'neutral'
+    });
+  </script>
+
+  <script>
+    (function () {
+      var navigation = document.querySelector('[data-nav-links]');
+      if (!navigation) return;
+      var trigger = navigation.querySelector('summary');
+      var hoverRegion = navigation.closest('.masthead') || navigation;
+      var hover = window.matchMedia('(hover: hover) and (pointer: fine)');
+
+      navigation.addEventListener('pointerenter', function (event) {
+        if (event.pointerType === 'mouse' && hover.matches) navigation.open = true;
+      });
+      // Header padding is part of the pointer path from the trigger to the panel.
+      hoverRegion.addEventListener('pointerleave', function (event) {
+        if (event.pointerType === 'mouse' && !navigation.contains(document.activeElement)) {
+          navigation.open = false;
+        }
+      });
+      navigation.addEventListener('focusout', function (event) {
+        if (!navigation.contains(event.relatedTarget)) navigation.open = false;
+      });
+      document.addEventListener('click', function (event) {
+        if (!navigation.contains(event.target)) navigation.open = false;
+      });
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && navigation.open) {
+          navigation.open = false;
+          if (navigation.contains(document.activeElement)) trigger.focus();
+        }
+      });
+    })();
+  </script>
+
+  <script>
+    (function () {
+      var toggle = document.querySelector('[data-theme-toggle]');
+      if (!toggle) return;
+
+      var order = ['system', 'light', 'dark'];
+      var labels = {
+        system: '主题：跟随系统',
+        light: '主题：浅色',
+        dark: '主题：深色'
+      };
+      var icons = {
+        system: 'fa-display',
+        light: 'fa-sun',
+        dark: 'fa-moon'
+      };
+      var media = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+
+      function currentSetting() {
+        var setting = document.documentElement.dataset.themeSetting;
+        return order.indexOf(setting) === -1 ? 'system' : setting;
+      }
+
+      function updateButton(setting) {
+        var label = labels[setting];
+        var icon = toggle.querySelector('i');
+        toggle.title = label;
+        toggle.setAttribute('aria-label', label);
+        icon.className = 'fa-solid ' + icons[setting];
+      }
+
+      function applyTheme(setting) {
+        var systemDark = media && media.matches;
+        var theme = setting === 'system' ? (systemDark ? 'dark' : 'light') : setting;
+        document.documentElement.dataset.themeSetting = setting;
+        document.documentElement.dataset.theme = theme;
+        try {
+          if (setting === 'system') localStorage.removeItem('seisamuse-theme');
+          else localStorage.setItem('seisamuse-theme', setting);
+        } catch (error) {}
+        updateButton(setting);
+        window.dispatchEvent(new CustomEvent('seisamuse-theme-change', {
+          detail: { theme: theme }
+        }));
+      }
+
+      toggle.addEventListener('click', function () {
+        var setting = currentSetting();
+        applyTheme(order[(order.indexOf(setting) + 1) % order.length]);
+      });
+
+      if (media) {
+        media.addEventListener('change', function () {
+          if (currentSetting() === 'system') applyTheme('system');
+        });
+      }
+
+      updateButton(currentSetting());
+    })();
+  </script>
+
+</body>
+</html>
