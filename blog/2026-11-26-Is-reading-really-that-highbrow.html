@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    (function () {
+      var stored = null;
+      try {
+        stored = localStorage.getItem('seisamuse-theme');
+      } catch (error) {}
+
+      var setting = stored === 'light' || stored === 'dark' ? stored : 'system';
+      var systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = setting === 'system' ? (systemDark ? 'dark' : 'light') : setting;
+      document.documentElement.dataset.theme = theme;
+      document.documentElement.dataset.themeSetting = setting;
+    })();
+  </script>
+  <title>读书很高级吗？ | hashes</title>
+  <meta name="description" content="读书很高级吗？">
+  <link rel="alternate" type="application/atom+xml" title="Atom 订阅" href="/atom.xml">
+  <link rel="prefetch" as="image" href="https://www.blogsclub.org/badge/www.seis-jun.xyz">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+  <!-- MathJax for LaTeX rendering -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        ignoreHtmlClass: 'mermaid'
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <!-- Umami Analytics -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="21a99622-5a23-45f4-be80-edef627a68e3"></script>
+  <!-- Explicit page paths preserve article counts across browser referrer policies. -->
+  <script defer src="/scripts/article_counter_20261028.js?v=2" data-counter-endpoint="https://stats.seis-jun.xyz/count"></script>
+  <script defer src="/scripts/random_post_20261028.js"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container masthead">
+      <a class="masthead-identity" href="/" aria-label="SEISAMUSE 主页">
+        <img src="/images/seisamuse.png" alt="" class="masthead-avatar">
+        <span class="masthead-title">SEISAMUSE</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="主导航">
+        <a href="/">主页</a>
+        <a href="/archives/">归档</a>
+        <a href="/thoughts/">想法</a>
+        <a href="/about/">自述</a>
+        <a href="/archives/" id="random-post-link" title="随机打开一篇文章">随读</a>
+        <details class="nav-links" data-nav-links>
+          <summary class="nav-links-toggle" aria-controls="nav-links-panel">
+            链接
+            <svg viewBox="0 0 12 12" fill="none" aria-hidden="true" focusable="false"><path d="m3 4.5 3 3 3-3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <div class="nav-links-panel" id="nav-links-panel">
+            <div class="nav-links-projects">
+              <p class="nav-links-label">项目</p>
+              <ul class="nav-project-list">
+                
+                <li><a href="https://www.seis-jun.xyz/daily_news/" target="_blank" rel="noopener">Daily News</a></li>
+                
+                <li><a href="https://rss.seis-jun.xyz/" target="_blank" rel="noopener">RSS Reader</a></li>
+                
+                <li><a href="https://www.seis-jun.xyz/paper_weekly/" target="_blank" rel="noopener">Paper Weekly</a></li>
+                
+                <li><a href="https://www.seis-jun.xyz/earthquake_weekly/" target="_blank" rel="noopener">Earthquake Weekly</a></li>
+                
+                <li><a href="https://paper-hot.seis-jun.xyz/" target="_blank" rel="noopener">Paper Hot</a></li>
+                
+                <li><a href="https://www.seis-jun.xyz/swed/" target="_blank" rel="noopener">SWED</a></li>
+                
+              </ul>
+            </div>
+            <div class="nav-links-categories">
+              <p class="nav-links-label">收藏与分享</p>
+              
+              <a href="/links/tools/">
+                <span>工具</span>
+                <small>实用工具与脚本</small>
+              </a>
+              
+              <a href="/links/">
+                <span>资源</span>
+                <small>研究与阅读入口</small>
+              </a>
+              
+              <a href="/links/friends/">
+                <span>友链</span>
+                <small>喜欢的博客与网站</small>
+              </a>
+              
+            </div>
+          </div>
+        </details>
+        <a class="masthead-search-shortcut" href="/search/" aria-label="搜索文章" title="搜索文章">
+          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false"><circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="1.5"/><path d="m13 13 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </a>
+      </nav>
+
+      <div class="masthead-actions" aria-label="快捷入口">
+        <form class="masthead-search" action="/search/" method="get">
+          <input type="search" name="q" placeholder="搜索文章" aria-label="搜索文章">
+        </form>
+        <a href="mailto:hashes@yeah.net" title="邮件联系" aria-label="邮件联系"><i class="fa-solid fa-envelope"></i></a>
+        <a href="/atom.xml" title="Atom 订阅" aria-label="Atom 订阅"><i class="fa-solid fa-rss"></i></a>
+        <button class="theme-toggle" type="button" data-theme-toggle title="主题：跟随系统" aria-label="主题：跟随系统">
+          <i class="fa-solid fa-display" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container page-wide">
+      
+      
+<div class="main-content">
+  <article>
+    <div class="post-header">
+      <h1>读书很高级吗？</h1>
+      <div class="post-meta">
+        <time>2026-11-26</time>
+         &middot; 约 2,868 字
+        <span id="busuanzi_container_page_pv" style="display: none;">
+          &middot; <span id="busuanzi_value_page_pv"></span> 次浏览
+        </span>
+        
+         &middot; 分类：
+        
+          <a href="/blog/topic/杂谈/">杂谈</a>
+        
+        
+        
+         &middot; 标签：
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">读书</span>
+        
+        
+      </div>
+    </div>
+
+    <div class="post-content">
+      <p><img alt="" src="https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?q=80&amp;w=1674&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=NHwxMjA3fDA%3D" /></p>
+<p>有一回被博友说讨论的东西定义不清楚，聊 P 啊。听劝。这里就先把今天讨论的“读书”的定义讲清楚。</p>
+<p>我讲的“读书”就是指和书相关的事情。例如，从小到大的上学念书，现在流不流行<del>？</del>的看书，以及其他和书相关的东西和事情。</p>
+<h3 id="_1">书</h3>
+<p>好多名人都已经对书有过太多溢美之词。例如书是人类进步的阶梯，好吧，就这句在我这儿最出名，其他的还一时想不起。现在开始吹大喇叭。</p>
+<p>为啥大伙儿那么看重书的作用？是这样，我们先假设你是一个铁匠，或养猪的。你发现了很好的打铁方式，或者好的养猪法儿。简直是猪的胸衣，一套一套的。你想让别人也学会，让大家都学会大家都能打更好的铁，养更多的猪，养活更多的人，多么光荣伟大而自豪，还能挣钱，对吧。那怎么办？招徒弟呗。你能教几个啊？最好的法子不是写下来吗？写下来印它个百八十万本，你马上就上作家富豪榜了。<del>也有可能是负豪</del></p>
+<p>别人要学你的知识，花点小钱买来你出的书就好了，犯不着还跑来当你徒弟，跟你一起打铁养猪。当然，其实如果你来亲自教可能大伙儿学得稍微快那么点儿。但就算你死掉了，没法教人了，书还在，后人也能学了去。大家没事，把发生的事情记下来，就成了历史；把自己的幻想写出来就成了小说；把自己的感受写出来就成了诗或散文；把对宇宙的认识写下来就成了知识；把对人、对事、对物、对现象的想法写下来就成了思想。书出的多了，后人都可以学到，人就有文明了。</p>
+<p>所以，书里有什么？有文字、有认识、有知识、有想法。人在努力想写下来的时候，人的文字表达和语言能力也会得到锻炼提升。为啥是书，不是石头？因为书是纸做的，纸很轻啊，易于传播。当然广义的书应当把写上了知识的石头，墙壁，竹简等等都算作书。<del>简直书惨了</del>。所以，我们到底是先有文字再有书还是先有书再有文字？广义上，我想当人想写点什么的时候，只要写下来了，那书和文字都出现了。因为我们想写东西就需要脑子使劲组织自己的想法，所以写的过程还锻炼了我们的思维。所以其实人脑子的进化与书和文字脱不开干系。</p>
+<h3 id="_2">读书</h3>
+<p>书里有那么多好东西。所以为什么不读书？哦，不好意思。我的意思是到学校去上学哈，不能跑偏。</p>
+<p>所以大家都来读书，就能学到知识，提高自身对人对宇宙的认识，学到了有用知识还可以提高自己的生活水平。</p>
+<p>但普通人要读书会遇到问题，你为啥能读到书？书是有成本的啊，要写要印。手上有书的人为啥给你。当然需要你来买啊。你没钱，读个P的书。所以读书肯定很长一段时间是有权或者有钱的人的事情。另外，有权或者有钱的人也不会让你读到如何变得有权或者有钱的书，因为你读了书就变得有权或者有钱那他们自身的地位就会受到威胁。当然也不一定你读了一本书就能变得有权或有钱，因为学到知识和用知识改变你的状态还差了十万八千里。</p>
+<p>为什么让大家都来学校读书？其实，如果知识单纯要改变生活，学到真正有用的知识，那就请专家开班就行了。那你是统治者，你为啥还要专门开办学校来让人读书呢？</p>
+<p>第二个大喇叭吹响。</p>
+<p>这样的。最开始，你真不用开办学校。没必要让大家都学对吧。这样，铁匠的儿子只当铁匠，农民的儿子只当农民，医生的儿子只当医生，贵族的儿子只当贵族。长期来看没啥问题是吧。没人和你抢位置，你的儿子继续当统治者。</p>
+<p>但问题来了，大伙儿都要生娃。第一，如果农民活得不开心，或者太累了就不生娃了。这样谁来产粮食？不得大家都饿死？第二，生娃这回事很麻烦的，铁匠生了个教不会打铁的儿子，且只想画画；医生生了个儿子不想当医生，或者不会当医生，适合打铁；贵族使劲生儿子，遗产分了又分，贵族也会变农民。<del>我好像说歪了</del></p>
+<p>那你统治者的位置也就做不久了，差不多就完了，因为你掌管的地方肯定会乱的，没人种地，没人打铁，没人给人看病。你发现，有人想干的活干不了，有些活又找不到合适的人干。于是你进化了。你看到农民快养不活自己了，很多人的儿子不想干，干不了了。那就想办法让他们流通一下。让农民的儿子也能出来干干其他的，打打铁，造造轮子什么的，甚至当当官，有点权什么的。让打铁的儿子也可以画点画什么的。总之，流动起来会比之前好么一丢丢，大家活着还有点盼头。但，怎么选？选谁来流动？</p>
+<p>于是你想到了，要不咱们推选一下吧。大家觉得你好，那咱们就选你啊。你觉得自己真tmd是天才。可是慢慢地你发现，选出来的都是什么鬼。推选出来当官，对于普通人是天大利益啊，为了这个，大家啥着都能干得出来，不要人选我吗？那我就贿赂呗，你选我，我给你几袋米啊。那这样选出得来什么呢？没有米的怎么流动呢？当官的娃和其他当官的都认识，那人家不得选你的娃，难道选那不认识的娃。那长此以往还是不行啊。</p>
+<p>聪明的你又想到了，那咱们公平一点吧。既然读书能让人学知识。那咱们就挑学的好考得好的呗。咱们还不能只按打铁，养猪的学法来选。这样只能选养猪打铁的人才。咱们需要综合来选，你综合考的好，我才掐你啊。你考得好，我肯定觉得你能干嘛，能干就来当官嘛。</p>
+<p>多么tmd天才。大家不会觉得有失公允了吧。你不能被选上是因为你读书读得不好，考不好嘛，都是你自己的问题，哪能关我什么事啊。</p>
+<p>怎么综合选？那就开办学校啊。从学校里面选。真tmd天才。我们来数数学校多么tmd天才。
+1. 大家都盼着好成绩被选上，大家也就不会吵闹了，安心做事了。
+2. 娃都在学校里面呢，父母也就被安心工作了啊，娃考得好还能进步，干活都有劲儿了。
+3. 你学什么我说了算啊。那些奇奇怪怪与我不利我不高兴的东西怎么可能让你学到让你懂呢。
+4. 学生这个年纪啥P事不懂荷尔蒙还高，啥事都干得出来，把他们关起来耳朵都清净不用管了。
+5. 办学要老师，这不一下就解决好多人的就业问题了啊。
+6. 念书要买书，要交学费啊。以前还要想方设法看怎么从大伙身上要钱，用税吧，多了大家受不了。那变成学费，书本费不就简单了吗？我没逼你啊，你自己给的。
+7. 只要前面真有几个人考出去了，后面的人就愿意接着排队，接着考。
+8. 学校周边，吃喝玩乐，教学用具等等，周边伙计啥都活了。</p>
+<p>所以，不要更好了，好吗。大伙儿肯定觉得读书太好了。尤其是初期看到真的有些人儿考到了好成绩，就被选出来了啊，大家就更觉得得要使劲读书啊，不读书干P啊。怎么代表你读的好呢？当然是发个本本啊。于是有本本就是读的好嘛。</p>
+<p>当然也有一部分不用读书，也可继承啊。但那不行，他们还是在这个体系里面。大家都觉得读书好，尤其稀有的本本好，那他们也得要有本本啊。本本越稀奇越显得自己高级，且都是凭本事拿到的本本，都是自己的本事，和家里没关系呢。所以有些时候读的好真的可以流有了本本觉得了不起，但有些时候考得好也没多大用。</p>
+<h3 id="_3">看书</h3>
+<p>看书不就是拿本书，专心看吗。相对于现在的短信息的轰炸，脑子已经难以专心来做一件事情，因为书本的知识和内容都是长篇的连续的，不想短视频那样给你带来高强度短时即时反馈，让你爽。</p>
+<p>看书很高级吗？不好意思，对比这回事我觉得都是乐色啊<del>是不是我也在对比？</del>。可以看书显得你有时间，你悠闲，你能够专心。个P啊。你不爽也就不读了。你专心看书觉得高级是因为觉得自己和其他看短视频的人不同，遗世独立，是众人皆醉我独醒带来的多巴胺吗？是看到其他人都沉迷，自己能够抵住诱惑的优越吗？还是看书那个动作，那个专心的样儿让你觉得高人一等，自我陶醉high了？</p>
+<p>批得不对，但我又要开始吹喇叭了。
+1. 书的知识就一定对吗？很多书虽然被筛选显得是好书，但筛选就一定选得好吗？谁筛的？
+2. 拿一本闲书看，例如xxx，那和看短视频有啥差异。还不是享受多巴胺的快感。有本事看数学书啊。重点是你看书的动作吗？
+3. 看了书你就能成长吗？不一定，要是尽信书，不思考，读了书不实践，那读了也没啥用啊？
+4. 书是承载文字，知识的传统工具，现在发展出了电子频，视频，和看书有什么差别？重点是那纸质书飘出来墨水味吗？要不买点墨水回来当香薰得了。
+5. 多巴胺的掌控全看自己，和工具有P的关系。短视频，短讯息和毒品差别可大了。毒品染上似乎会改变大脑结构，短视频短信息似乎还没有。
+6. 拿本书是看，看电脑是看，看视频也是看，有啥差别，你不去干，无非就是颅内高潮方式不一样。</p>
+<p>行吧，先吹到这里。以后接着吹。</p>
+    </div>
+
+  <div class="post-nav">
+    
+      <a class="post-nav-prev" href="/blog/2026-11-25-didnot-honk.html">&larr; 我没有按喇叭</a>
+    
+
+    <a class="post-nav-blog" href="/archives/">返回归档</a>
+
+    
+      <span class="post-nav-next"></span>
+    
+  </div>
+  
+
+
+
+<div class="comments-section">
+  
+  <h3>评论</h3>
+  
+  
+  <script>
+    (function () {
+      var giscus = document.createElement('script');
+      giscus.src = 'https://giscus.app/client.js';
+      giscus.dataset.repo = 'junxie01/junxie01.github.io';
+      giscus.dataset.repoId = 'R_kgDOSGl1Dg';
+      giscus.dataset.category = 'General';
+      giscus.dataset.categoryId = 'DIC_kwDOSGl1Ds4DAuif';
+      giscus.dataset.mapping = 'specific';
+      giscus.dataset.term = 'blog/2026-11-26-Is-reading-really-that-highbrow';
+      giscus.dataset.strict = '0';
+      giscus.dataset.reactionsEnabled = '1';
+      giscus.dataset.emitMetadata = '0';
+      giscus.dataset.inputPosition = 'bottom';
+      giscus.dataset.theme = document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light';
+      giscus.dataset.lang = 'zh-CN';
+      giscus.crossOrigin = 'anonymous';
+      giscus.async = true;
+      document.currentScript.parentNode.appendChild(giscus);
+
+      window.addEventListener('seisamuse-theme-change', function (event) {
+        var frame = document.querySelector('.giscus-frame');
+        if (!frame || !frame.contentWindow) return;
+        frame.contentWindow.postMessage({
+          giscus: {
+            setConfig: {
+              theme: event.detail.theme === 'dark' ? 'dark' : 'light'
+            }
+          }
+        }, 'https://giscus.app');
+      });
+    })();
+  </script>
+</div>
+</article>
+</div>
+
+      
+    </div>
+  </main>
+
+  
+
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+      startOnLoad: true,
+      securityLevel: 'strict',
+      theme: document.documentElement.dataset.theme === 'dark' ? 'dark' : 'neutral'
+    });
+  </script>
+
+  <script>
+    (function () {
+      var navigation = document.querySelector('[data-nav-links]');
+      if (!navigation) return;
+      var trigger = navigation.querySelector('summary');
+      var hoverRegion = navigation.closest('.masthead') || navigation;
+      var hover = window.matchMedia('(hover: hover) and (pointer: fine)');
+
+      navigation.addEventListener('pointerenter', function (event) {
+        if (event.pointerType === 'mouse' && hover.matches) navigation.open = true;
+      });
+      // Header padding is part of the pointer path from the trigger to the panel.
+      hoverRegion.addEventListener('pointerleave', function (event) {
+        if (event.pointerType === 'mouse' && !navigation.contains(document.activeElement)) {
+          navigation.open = false;
+        }
+      });
+      navigation.addEventListener('focusout', function (event) {
+        if (!navigation.contains(event.relatedTarget)) navigation.open = false;
+      });
+      document.addEventListener('click', function (event) {
+        if (!navigation.contains(event.target)) navigation.open = false;
+      });
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && navigation.open) {
+          navigation.open = false;
+          if (navigation.contains(document.activeElement)) trigger.focus();
+        }
+      });
+    })();
+  </script>
+
+  <script>
+    (function () {
+      var toggle = document.querySelector('[data-theme-toggle]');
+      if (!toggle) return;
+
+      var order = ['system', 'light', 'dark'];
+      var labels = {
+        system: '主题：跟随系统',
+        light: '主题：浅色',
+        dark: '主题：深色'
+      };
+      var icons = {
+        system: 'fa-display',
+        light: 'fa-sun',
+        dark: 'fa-moon'
+      };
+      var media = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+
+      function currentSetting() {
+        var setting = document.documentElement.dataset.themeSetting;
+        return order.indexOf(setting) === -1 ? 'system' : setting;
+      }
+
+      function updateButton(setting) {
+        var label = labels[setting];
+        var icon = toggle.querySelector('i');
+        toggle.title = label;
+        toggle.setAttribute('aria-label', label);
+        icon.className = 'fa-solid ' + icons[setting];
+      }
+
+      function applyTheme(setting) {
+        var systemDark = media && media.matches;
+        var theme = setting === 'system' ? (systemDark ? 'dark' : 'light') : setting;
+        document.documentElement.dataset.themeSetting = setting;
+        document.documentElement.dataset.theme = theme;
+        try {
+          if (setting === 'system') localStorage.removeItem('seisamuse-theme');
+          else localStorage.setItem('seisamuse-theme', setting);
+        } catch (error) {}
+        updateButton(setting);
+        window.dispatchEvent(new CustomEvent('seisamuse-theme-change', {
+          detail: { theme: theme }
+        }));
+      }
+
+      toggle.addEventListener('click', function () {
+        var setting = currentSetting();
+        applyTheme(order[(order.indexOf(setting) + 1) % order.length]);
+      });
+
+      if (media) {
+        media.addEventListener('change', function () {
+          if (currentSetting() === 'system') applyTheme('system');
+        });
+      }
+
+      updateButton(currentSetting());
+    })();
+  </script>
+
+</body>
+</html>
