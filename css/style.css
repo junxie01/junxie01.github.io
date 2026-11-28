@@ -1059,6 +1059,10 @@ main > .container.page-wide {
   margin-top: 0;
 }
 
+.about-content + .support-section {
+  border-top: 0;
+}
+
 /* --- Donation / Support --- */
 .support-section {
   text-align: center;
