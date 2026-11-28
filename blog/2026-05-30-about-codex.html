@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    (function () {
+      var stored = null;
+      try {
+        stored = localStorage.getItem('seisamuse-theme');
+      } catch (error) {}
+
+      var setting = stored === 'light' || stored === 'dark' ? stored : 'system';
+      var systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = setting === 'system' ? (systemDark ? 'dark' : 'light') : setting;
+      document.documentElement.dataset.theme = theme;
+      document.documentElement.dataset.themeSetting = setting;
+    })();
+  </script>
+  <title>关于Codex I | hashes</title>
+  <meta name="description" content="关于Codex I">
+  <link rel="alternate" type="application/atom+xml" title="Atom 订阅" href="/atom.xml">
+  <link rel="prefetch" as="image" href="https://www.blogsclub.org/badge/www.seis-jun.xyz">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+  <!-- MathJax for LaTeX rendering -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        ignoreHtmlClass: 'mermaid'
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <!-- Umami Analytics -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="21a99622-5a23-45f4-be80-edef627a68e3"></script>
+  <!-- Explicit page paths preserve article counts across browser referrer policies. -->
+  <script defer src="/scripts/article_counter_20261028.js?v=2" data-counter-endpoint="https://stats.seis-jun.xyz/count"></script>
+  <script defer src="/scripts/random_post_20261028.js"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container masthead">
+      <a class="masthead-identity" href="/" aria-label="SEISAMUSE 主页">
+        <img src="/images/seisamuse.png" alt="" class="masthead-avatar">
+        <span class="masthead-title">SEISAMUSE</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="主导航">
+        <a href="/">主页</a>
+        <a href="/archives/">归档</a>
+        <a href="/thoughts/">想法</a>
+        <a href="/about/">自述</a>
+        <a href="/archives/" id="random-post-link" title="随机打开一篇文章">随读</a>
+        <details class="nav-links" data-nav-links>
+          <summary class="nav-links-toggle" aria-controls="nav-links-panel">
+            链接
+            <svg viewBox="0 0 12 12" fill="none" aria-hidden="true" focusable="false"><path d="m3 4.5 3 3 3-3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <div class="nav-links-panel" id="nav-links-panel">
+            <div class="nav-links-projects">
+              <p class="nav-links-label">项目</p>
+              <ul class="nav-project-list">
+                
+                <li><a href="https://www.seis-jun.xyz/daily_news/" target="_blank" rel="noopener">Daily News</a></li>
+                
+                <li><a href="https://rss.seis-jun.xyz/" target="_blank" rel="noopener">RSS Reader</a></li>
+                
+                <li><a href="https://www.seis-jun.xyz/paper_weekly/" target="_blank" rel="noopener">Paper Weekly</a></li>
+                
+                <li><a href="https://www.seis-jun.xyz/earthquake_weekly/" target="_blank" rel="noopener">Earthquake Weekly</a></li>
+                
+                <li><a href="https://paper-hot.seis-jun.xyz/" target="_blank" rel="noopener">Paper Hot</a></li>
+                
+                <li><a href="https://www.seis-jun.xyz/swed/" target="_blank" rel="noopener">SWED</a></li>
+                
+              </ul>
+            </div>
+            <div class="nav-links-categories">
+              <p class="nav-links-label">收藏与分享</p>
+              
+              <a href="/links/tools/">
+                <span>工具</span>
+                <small>实用工具与脚本</small>
+              </a>
+              
+              <a href="/links/">
+                <span>资源</span>
+                <small>研究与阅读入口</small>
+              </a>
+              
+              <a href="/links/friends/">
+                <span>友链</span>
+                <small>喜欢的博客与网站</small>
+              </a>
+              
+            </div>
+          </div>
+        </details>
+        <a class="masthead-search-shortcut" href="/search/" aria-label="搜索文章" title="搜索文章">
+          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false"><circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="1.5"/><path d="m13 13 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </a>
+      </nav>
+
+      <div class="masthead-actions" aria-label="快捷入口">
+        <form class="masthead-search" action="/search/" method="get">
+          <input type="search" name="q" placeholder="搜索文章" aria-label="搜索文章">
+        </form>
+        <a href="mailto:hashes@yeah.net" title="邮件联系" aria-label="邮件联系"><i class="fa-solid fa-envelope"></i></a>
+        <a href="/atom.xml" title="Atom 订阅" aria-label="Atom 订阅"><i class="fa-solid fa-rss"></i></a>
+        <button class="theme-toggle" type="button" data-theme-toggle title="主题：跟随系统" aria-label="主题：跟随系统">
+          <i class="fa-solid fa-display" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container page-wide">
+      
+      
+<div class="main-content">
+  <article>
+    <div class="post-header">
+      <h1>关于Codex I</h1>
+      <div class="post-meta">
+        <time>2026-05-30</time>
+         &middot; 约 1,186 字
+        <span id="busuanzi_container_page_pv" style="display: none;">
+          &middot; <span id="busuanzi_value_page_pv"></span> 次浏览
+        </span>
+        
+         &middot; 分类：
+        
+          <a href="/blog/topic/work/">work</a>
+        
+        
+        
+         &middot; 标签：
+        
+          <span style="background:var(--code-bg);padding:0.1em 0.4em;border-radius:3px;font-size:0.85em;">codex</span>
+        
+        
+      </div>
+    </div>
+
+    <div class="post-content">
+      <p><img alt="" src="/https://img.seis-jun.xyz/images/codex1.png" /></p>
+<p>纪念一下今天把100dollar的codex Pro x5一周的量给用干了。</p>
+<p>回看了一下自己的日记，发现我是今年2月底开始入坑AI编程的。最开始尝试了Android Studio，Visual Studio Copilot，Trae，Qoder。我做了安卓app，好几个网页，感觉惊为天人。</p>
+<p>同事和阿里云沟通给组里人开了team用量，我怕出风头，省着用，结果还是第二个用完的（两个账号）。</p>
+<p>openclaw出来根本不敢用，瞎担心，万一被人黑了呢？<del>不过我好像也没有啥重要的东西值得被黑</del>。中间各种尝试安装claude code还有cc，人家是要钱的而且还不好给钱<del>想用也没有招</del>，<del>国内还不怎么看得上</del>。然后就看到了codex，自己好像还有一张visa卡，心痒痒，手痒痒。于是就冲了20块的plus版。不过还是在京东上买的代充，因为人家openai不认我的visa卡。</p>
+<p>好了，感觉真的是，飞起了啊。把之前的网页啥的都让它完善优化，果然不错。然后还让它开始整我之前搞了一半的项目。不错，先plan一下，完善一下，然后开干，继续，继续，继续。。。然后一周的量就没了，完全不够用，不够用。咬咬牙坚持一下，下周就能用了，先用免费的qoder和trae替代一下吧。</p>
+<p>四月底代充的一个月plus，除了搞自己未完成的项目还帮忙做日常的工作，效率的确高。老板交代的任务，只要你精确描述需求，给定明确交付物然后很快就出结果。老板肯定觉得<del>你作弊了</del>天生丽质，代码圣体。但是。。。不够用。</p>
+<p>然后前一周咬咬牙就整了个pro。200刀的肯定玩不起了，整的是100刀的。真的，人说用度不愁了。那我还省什么省？直接5.5,extra high, fast speed开启啊。哗啦哗啦的跑，规划好，一路让他继续。</p>
+<p>我的天，这效率，会用的人岂不2天就出一篇文章了啊？这是要把其他人卷死的节奏？赶紧的，我也得用起来，落后要挨打。</p>
+<p>但是。。。问题来了。。。</p>
+<ul>
+<li>时不时的断，可能有时连不上clash吧。</li>
+<li>跑一段时间就慢了。超过50%就要compact了，但有时还是很慢，可能给的需求不清晰，它有太多发挥空间，也有可能网路还是不太行。</li>
+<li>你描述的非常清晰，但一个大项目还是很难达到你的要求。然后你继续提需求，它继续做。最后你不知道到底要什么了。</li>
+<li>一个大项目，你第二次打开它有可能就记不太清了。然后你给限制，每次修改，每次更新都保存状态，修改痕迹，然后项目会爆炸的啊。这也是慢的原因，每次它都会去读一大堆东西。</li>
+<li>你打开它写的代码，你发现，读不懂。好多的import，太多的定义，调来调去。一整个晕掉。</li>
+<li>一个月100刀，还以为token自由了，结果最后两天我还省着用，用的media，一般speed，结果还是没有挺到一周。</li>
+<li>一个大项目，你有你的想法，它有它的理解，你真的确定你想干的和它做的是一个东西吗？</li>
+<li>据说已经实锤，codex用久了openai会给你的模型降级，比如你本来以为选的是gpt5.5结果给你用的是mini.</li>
+</ul>
+<p>chatgpt估算说我的一周用量是9-45M token用量，相当于“涡轮增压 + 地板油”，把 Codex 当半自动程序员使了。这是在压榨AI牛马吗？</p>
+<p>今天用量告急，不得不好好思考，规划怎么用了。要不然AI很累，自己也很累。AI能做的就是高效实现你指定的功能，但是需要你做的决策还有整体规划一点都不少，都是你要的付出。还有一个问题，到时候如果借助它发表文章，那应该怎么声明AI的使用啊？该不会说，“此文章是我指挥AI干的”吧？或则说“在代码阶段，数据处理阶段和文章稿件都由AI辅助生成”<del>其实全是人家AI做的啊</del>。</p>
+<p>所以，以后应该怎么用？应该还是只能当个助理啊，给他明确的小的子任务，不能丢大项目的给他。有些项目/算法改进什么的要是你没有想清楚，那不可能指望AI能够干好。该干的自己还是得干，一点都少不了。</p>
+    </div>
+
+  <div class="post-nav">
+    
+      <a class="post-nav-prev" href="/blog/2026-05-26-fish-guard.html">&larr; Fish Guard</a>
+    
+
+    <a class="post-nav-blog" href="/archives/">返回归档</a>
+
+    
+      <a class="post-nav-next" href="/blog/2026-06-05-codex-skills.html">关于Codex Skills &rarr;</a>
+    
+  </div>
+</article>
+</div>
+
+      
+    </div>
+  </main>
+
+  
+
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+      startOnLoad: true,
+      securityLevel: 'strict',
+      theme: document.documentElement.dataset.theme === 'dark' ? 'dark' : 'neutral'
+    });
+  </script>
+
+  <script>
+    (function () {
+      var navigation = document.querySelector('[data-nav-links]');
+      if (!navigation) return;
+      var trigger = navigation.querySelector('summary');
+      var hoverRegion = navigation.closest('.masthead') || navigation;
+      var hover = window.matchMedia('(hover: hover) and (pointer: fine)');
+
+      navigation.addEventListener('pointerenter', function (event) {
+        if (event.pointerType === 'mouse' && hover.matches) navigation.open = true;
+      });
+      // Header padding is part of the pointer path from the trigger to the panel.
+      hoverRegion.addEventListener('pointerleave', function (event) {
+        if (event.pointerType === 'mouse' && !navigation.contains(document.activeElement)) {
+          navigation.open = false;
+        }
+      });
+      navigation.addEventListener('focusout', function (event) {
+        if (!navigation.contains(event.relatedTarget)) navigation.open = false;
+      });
+      document.addEventListener('click', function (event) {
+        if (!navigation.contains(event.target)) navigation.open = false;
+      });
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && navigation.open) {
+          navigation.open = false;
+          if (navigation.contains(document.activeElement)) trigger.focus();
+        }
+      });
+    })();
+  </script>
+
+  <script>
+    (function () {
+      var toggle = document.querySelector('[data-theme-toggle]');
+      if (!toggle) return;
+
+      var order = ['system', 'light', 'dark'];
+      var labels = {
+        system: '主题：跟随系统',
+        light: '主题：浅色',
+        dark: '主题：深色'
+      };
+      var icons = {
+        system: 'fa-display',
+        light: 'fa-sun',
+        dark: 'fa-moon'
+      };
+      var media = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+
+      function currentSetting() {
+        var setting = document.documentElement.dataset.themeSetting;
+        return order.indexOf(setting) === -1 ? 'system' : setting;
+      }
+
+      function updateButton(setting) {
+        var label = labels[setting];
+        var icon = toggle.querySelector('i');
+        toggle.title = label;
+        toggle.setAttribute('aria-label', label);
+        icon.className = 'fa-solid ' + icons[setting];
+      }
+
+      function applyTheme(setting) {
+        var systemDark = media && media.matches;
+        var theme = setting === 'system' ? (systemDark ? 'dark' : 'light') : setting;
+        document.documentElement.dataset.themeSetting = setting;
+        document.documentElement.dataset.theme = theme;
+        try {
+          if (setting === 'system') localStorage.removeItem('seisamuse-theme');
+          else localStorage.setItem('seisamuse-theme', setting);
+        } catch (error) {}
+        updateButton(setting);
+        window.dispatchEvent(new CustomEvent('seisamuse-theme-change', {
+          detail: { theme: theme }
+        }));
+      }
+
+      toggle.addEventListener('click', function () {
+        var setting = currentSetting();
+        applyTheme(order[(order.indexOf(setting) + 1) % order.length]);
+      });
+
+      if (media) {
+        media.addEventListener('change', function () {
+          if (currentSetting() === 'system') applyTheme('system');
+        });
+      }
+
+      updateButton(currentSetting());
+    })();
+  </script>
+
+</body>
+</html>
